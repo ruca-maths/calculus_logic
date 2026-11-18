@@ -1,0 +1,506 @@
+% 自動生成 (prover/build.js): OneLe  ノード数 230
+\begin{fullproof}{[N12]}{$\forall n \in \mathbb{N}\,(1_{\omega} \leq n)$}{230}\phantomsection\label{tree:OneLe}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall n\,(n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset)$\lbl{Def$\mathbb{N}$}}
+\AXC{$\varphi_{41}$\lbl{A2}}
+\BIC{$n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset$}
+\AXC{$n \in \mathbb{N} \to n \in \mathbb{N}$\lbl{A1}}
+\AXC{$\varphi_{48}$\lbl{A1}}
+\BIC{$(n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset) \to n \in \mathbb{N} \to n \in \omega$}
+\BIC{$n \in \mathbb{N} \to n \in \omega$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\varphi_{19}$\lbl{A4}}
+\AXC{$\varphi_{11} \to \varphi_{23}$\lbl{A3}}
+\AXC{$\forall n \in B_{1}\,(S(n) \in B_{1}) \to y \in B_{1} \to S(y) \in B_{1}$\lbl{A2}}
+\UIC{$\varphi_{11}$}
+\AXC{$\varphi_{11} \to (\varphi_{11} \to \varphi_{23}) \to \varphi_{68}$\lbl{A1}}
+\BIC{$(\varphi_{11} \to \varphi_{23}) \to \varphi_{68}$}
+\BIC{$\varphi_{68}$}
+\BIC{$\forall n \in B_{1}\,(S(n) \in B_{1}) \to \forall y \in B_{1}\,(S(y) \in B_{1})$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\varphi_{20}$\lbl{A4}}
+\AXC{$\varphi_{12} \to \varphi_{24}$\lbl{A3}}
+\AXC{$\forall y \in B_{1}\,(S(y) \in B_{1}) \to n \in B_{1} \to S(n) \in B_{1}$\lbl{A2}}
+\UIC{$\varphi_{12}$}
+\AXC{$\varphi_{12} \to (\varphi_{12} \to \varphi_{24}) \to \varphi_{69}$\lbl{A1}}
+\BIC{$(\varphi_{12} \to \varphi_{24}) \to \varphi_{69}$}
+\BIC{$\varphi_{69}$}
+\BIC{$\forall y \in B_{1}\,(S(y) \in B_{1}) \to \forall n \in B_{1}\,(S(n) \in B_{1})$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\varphi_{27}$\lbl{A1}}
+\AXC{$\varphi_{52}$\lbl{A2}}
+\AXC{$\varphi_{52} \to \varphi_{27} \to \varphi_{53}$\lbl{A1}}
+\BIC{$\varphi_{27} \to \varphi_{53}$}
+\BIC{$\varphi_{53}$}
+\AXC{$\varphi_{53} \to \varphi_{30}$\lbl{A1}}
+\BIC{$\varphi_{30}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\varphi_{62}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{30}$}
+\AXC{$\forall n\,(n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset)$\lbl{Def$\mathbb{N}$}}
+\AXC{$\varphi_{41}$\lbl{A2}}
+\BIC{$n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset$}
+\AXC{$(n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset) \to \varphi_{30} \to \varphi_{62} \to \varphi_{59}$\lbl{A1}}
+\BIC{$\varphi_{30} \to \varphi_{62} \to \varphi_{59}$}
+\BIC{$\varphi_{62} \to \varphi_{59}$}
+\BIC{$\varphi_{59}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{59}$}
+\AXC{$\varphi_{27}$\lbl{A1}}
+\AXC{$\varphi_{52}$\lbl{A2}}
+\AXC{$\varphi_{52} \to \varphi_{27} \to \varphi_{53}$\lbl{A1}}
+\BIC{$\varphi_{27} \to \varphi_{53}$}
+\BIC{$\varphi_{53}$}
+\AXC{$\varphi_{53} \to \varphi_{39}$\lbl{A1}}
+\BIC{$\varphi_{39}$}
+\AXC{$\varphi_{39} \to \varphi_{59} \to \varphi_{54}$\lbl{A1}}
+\BIC{$\varphi_{59} \to \varphi_{54}$}
+\BIC{$\varphi_{54}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{54}$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z)$\lbl{[O5]}}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(1_{\omega} \leq y \to y \leq z \to 1_{\omega} \leq z)$}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$\forall z\,(1_{\omega} \leq n \to n \leq z \to 1_{\omega} \leq z)$}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$1_{\omega} \leq n \to n \leq S(n) \to 1_{\omega} \leq S(n)$}
+\AXC{$\varphi_{79}$\lbl{A1}}
+\BIC{$\varphi_{54} \to n \leq S(n) \to \varphi_{60}$}
+\BIC{$n \leq S(n) \to \varphi_{60}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$z = w \to 1_{\omega} = z \to 1_{\omega} = w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to 1_{\omega} = z \to 1_{\omega} = w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to 1_{\omega} = z \to 1_{\omega} = w)$}
+\AXC{$\forall z\,\forall w\,(z = w \to 1_{\omega} = z \to 1_{\omega} = w) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{2}$\lbl{A2}}
+\BIC{$\varphi_{2}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$z = w \to 1_{\omega} < z \to 1_{\omega} < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to 1_{\omega} < z \to 1_{\omega} < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to 1_{\omega} < z \to 1_{\omega} < w)$}
+\AXC{$\forall z\,\forall w\,(z = w \to 1_{\omega} < z \to 1_{\omega} < w) \to \varphi_{3}$\lbl{A2}}
+\BIC{$\varphi_{3}$}
+\AXC{$\varphi_{3} \to \varphi_{6}$\lbl{A2}}
+\BIC{$\varphi_{6}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to 1_{\omega} = 1_{\omega}$\lbl{A2}}
+\BIC{$1_{\omega} = 1_{\omega}$}
+\AXC{$1_{\omega} = 1_{\omega} \to 1_{\omega} \leq 1_{\omega}$\lbl{A1}}
+\BIC{$1_{\omega} \leq 1_{\omega}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(S(n) = y \to y = z \to S(n) = z)$}
+\AXC{$\varphi_{33}$\lbl{A2}}
+\BIC{$\forall z\,(S(n) = S(\emptyset) \to S(\emptyset) = z \to S(n) = z)$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\forall z\,(S(n) = S(\emptyset) \to S(\emptyset) = z \to S(n) = z)$}
+\AXC{$\forall z\,(S(n) = S(\emptyset) \to S(\emptyset) = z \to S(n) = z) \to \varphi_{8}$\lbl{A2}}
+\BIC{$\varphi_{8}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall y\,(1_{\omega} = y \to y = 1_{\omega})$}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$1_{\omega} = S(\emptyset) \to S(\emptyset) = 1_{\omega}$}
+\AXC{$1_{\omega} = S(\emptyset)$\lbl{Def$1_\omega$}}
+\AXC{$1_{\omega} = S(\emptyset) \to \varphi_{17}$\lbl{A1}}
+\BIC{$\varphi_{17}$}
+\BIC{$S(\emptyset) = 1_{\omega}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$z = w \to S(n) = S(z) \to S(n) = S(w)$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to S(n) = S(z) \to S(n) = S(w))$}
+\UIC{$\forall z\,\forall w\,(z = w \to S(n) = S(z) \to S(n) = S(w))$}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\BIC{$\forall w\,(n = w \to S(n) = S(n) \to S(n) = S(w))$}
+\AXC{$\varphi_{34}$\lbl{A2}}
+\BIC{$n = \emptyset \to S(n) = S(n) \to S(n) = S(\emptyset)$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to S(n) = S(n)$\lbl{A2}}
+\BIC{$S(n) = S(n)$}
+\AXC{$\varphi_{61}$\lbl{A1}}
+\AXC{$\varphi_{61} \to \varphi_{75}$\lbl{A1}}
+\BIC{$\varphi_{75}$}
+\BIC{$(n = \emptyset \to S(n) = S(n) \to S(n) = S(\emptyset)) \to \varphi_{65}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$n = \emptyset \to S(n) = S(n) \to S(n) = S(\emptyset)$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$(n = \emptyset \to S(n) = S(n) \to S(n) = S(\emptyset)) \to \varphi_{65}$}
+\BIC{$\varphi_{65}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{8}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$S(\emptyset) = 1_{\omega}$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{65}$}
+\AXC{$\varphi_{65} \to S(\emptyset) = 1_{\omega} \to \varphi_{8} \to \varphi_{55}$\lbl{A1}}
+\BIC{$S(\emptyset) = 1_{\omega} \to \varphi_{8} \to \varphi_{55}$}
+\BIC{$\varphi_{8} \to \varphi_{55}$}
+\BIC{$\varphi_{55}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall y\,(S(n) = y \to y = S(n))$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$S(n) = 1_{\omega} \to 1_{\omega} = S(n)$}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{55}$}
+\AXC{$\varphi_{55} \to (S(n) = 1_{\omega} \to 1_{\omega} = S(n)) \to \varphi_{56}$\lbl{A1}}
+\BIC{$(S(n) = 1_{\omega} \to 1_{\omega} = S(n)) \to \varphi_{56}$}
+\BIC{$\varphi_{56}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{2}$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{6}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$1_{\omega} \leq 1_{\omega}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{56}$}
+\AXC{$\varphi_{56} \to 1_{\omega} \leq 1_{\omega} \to \varphi_{6} \to \varphi_{2} \to \varphi_{57}$\lbl{A1}}
+\BIC{$1_{\omega} \leq 1_{\omega} \to \varphi_{6} \to \varphi_{2} \to \varphi_{57}$}
+\BIC{$\varphi_{6} \to \varphi_{2} \to \varphi_{57}$}
+\BIC{$\varphi_{2} \to \varphi_{57}$}
+\BIC{$\varphi_{57}$}
+\AXC{$\varphi_{57} \to \varphi_{60} \to \varphi_{45}$\lbl{A1}}
+\BIC{$\varphi_{60} \to \varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\forall n\,(n \leq S(n))$\lbl{[N8]}}
+\AXC{$\forall n\,(n \leq S(n)) \to n \leq S(n)$\lbl{A2}}
+\BIC{$n \leq S(n)$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$n \leq S(n) \to \varphi_{60}$}
+\BIC{$\varphi_{60}$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{60} \to \varphi_{45}$}
+\BIC{$\varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\forall x\,(\mathrm{Ind}(x) \leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x))$\lbl{DefInd}}
+\AXC{$\varphi_{72}$\lbl{A2}}
+\BIC{$\mathrm{Ind}(\omega) \leftrightarrow \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega)$}
+\AXC{$\mathrm{Ind}(\omega)$\lbl{補題(ωは帰納的)}}
+\AXC{$\varphi_{77}$\lbl{A1}}
+\BIC{$(\mathrm{Ind}(\omega) \leftrightarrow \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega)) \to \varphi_{63}$}
+\BIC{$\varphi_{63}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{63}$}
+\AXC{$\varphi_{63} \to \varphi_{51}$\lbl{A1}}
+\BIC{$\varphi_{51}$}
+\AXC{$\varphi_{51} \to (\forall y \in \omega\,(S(y) \in \omega) \to n \in \omega \to S(n) \in \omega) \to \varphi_{50}$\lbl{A1}}
+\BIC{$(\forall y \in \omega\,(S(y) \in \omega) \to n \in \omega \to S(n) \in \omega) \to \varphi_{50}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\forall y \in \omega\,(S(y) \in \omega) \to n \in \omega \to S(n) \in \omega$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$(\forall y \in \omega\,(S(y) \in \omega) \to n \in \omega \to S(n) \in \omega) \to \varphi_{50}$}
+\BIC{$\varphi_{50}$}
+\AXC{$\varphi_{50} \to \varphi_{30} \to \varphi_{35}$\lbl{A1}}
+\BIC{$\varphi_{30} \to \varphi_{35}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{45}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{30}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{30} \to \varphi_{35}$}
+\BIC{$\varphi_{35}$}
+\AXC{$\forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to \varphi_{18}$\lbl{A2}}
+\AXC{$\varphi_{80}$\lbl{A1}}
+\BIC{$\varphi_{35} \to \varphi_{45} \to \varphi_{31}$}
+\BIC{$\varphi_{45} \to \varphi_{31}$}
+\BIC{$\varphi_{31}$}
+\UIC{$\forall n\,(\varphi_{31})$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\varphi_{58}$\lbl{A4}}
+\AXC{$\forall n\,(\varphi_{31}) \to \varphi_{38}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\forall n\,(\varphi_{31})$}
+\AXC{$\forall n\,(\varphi_{31}) \to (\forall n\,(\varphi_{31}) \to \varphi_{38}) \to \varphi_{58} \to \varphi_{36}$\lbl{A1}}
+\BIC{$(\forall n\,(\varphi_{31}) \to \varphi_{38}) \to \varphi_{58} \to \varphi_{36}$}
+\BIC{$\varphi_{58} \to \varphi_{36}$}
+\BIC{$\varphi_{36}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \emptyset = \emptyset$\lbl{A2}}
+\BIC{$\emptyset = \emptyset$}
+\AXC{$\forall n\,(n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset)$\lbl{Def$\mathbb{N}$}}
+\AXC{$\varphi_{64}$\lbl{A2}}
+\BIC{$\emptyset \in \mathbb{N} \leftrightarrow \emptyset \in \omega \land \emptyset \neq \emptyset$}
+\AXC{$\varphi_{71}$\lbl{A1}}
+\BIC{$\emptyset = \emptyset \to \emptyset \in \mathbb{N} \to 1_{\omega} \leq \emptyset$}
+\BIC{$\emptyset \in \mathbb{N} \to 1_{\omega} \leq \emptyset$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\emptyset \in \mathbb{N} \to 1_{\omega} \leq \emptyset$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{63}$}
+\AXC{$\varphi_{73}$\lbl{A2}}
+\AXC{$\varphi_{73} \to \varphi_{63} \to (\emptyset \in \mathbb{N} \to 1_{\omega} \leq \emptyset) \to \varphi_{25}$\lbl{A1}}
+\BIC{$\varphi_{63} \to (\emptyset \in \mathbb{N} \to 1_{\omega} \leq \emptyset) \to \varphi_{25}$}
+\BIC{$(\emptyset \in \mathbb{N} \to 1_{\omega} \leq \emptyset) \to \varphi_{25}$}
+\BIC{$\varphi_{25}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\varphi_{36}$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{25}$}
+\AXC{$\forall x\,(\mathrm{Ind}(x) \leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x))$\lbl{DefInd}}
+\AXC{$\varphi_{67}$\lbl{A2}}
+\BIC{$\mathrm{Ind}(B_{1}) \leftrightarrow \emptyset \in B_{1} \land \forall y \in B_{1}\,(S(y) \in B_{1})$}
+\AXC{$\varphi_{81}$\lbl{A1}}
+\BIC{$\varphi_{25} \to \varphi_{36} \to \varphi_{76}$}
+\BIC{$\varphi_{36} \to \varphi_{76}$}
+\BIC{$\varphi_{76}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\forall n \in B_{1}\,(S(n) \in B_{1}) \to \forall y \in B_{1}\,(S(y) \in B_{1})$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\forall y \in B_{1}\,(S(y) \in B_{1}) \to \forall n \in B_{1}\,(S(n) \in B_{1})$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{76}$}
+\BIC{$\varphi_{70}$}
+\BIC{$\varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\forall n\,(n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x))$\lbl{Def$\omega$}}
+\AXC{$\varphi_{32}$\lbl{A2}}
+\BIC{$n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x)$}
+\AXC{$\varphi_{37}$\lbl{A1}}
+\AXC{$\varphi_{37} \to (n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x)) \to \varphi_{44}$\lbl{A1}}
+\BIC{$(n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x)) \to \varphi_{44}$}
+\BIC{$\varphi_{44}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\varphi_{22}$}
+\AXC{$\forall x\,(\mathrm{Ind}(x) \to n \in x) \to \mathrm{Ind}(B_{1}) \to n \in B_{1}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{44}$}
+\AXC{$\varphi_{44} \to \varphi_{74}$\lbl{A1}}
+\BIC{$\varphi_{74}$}
+\BIC{$\varphi_{42}$}
+\AXC{$\varphi_{42} \to \varphi_{22} \to \varphi_{52} \to \varphi_{43}$\lbl{A1}}
+\BIC{$\varphi_{22} \to \varphi_{52} \to \varphi_{43}$}
+\BIC{$\varphi_{52} \to \varphi_{43}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\varphi_{58}$\lbl{A4}}
+\AXC{$\forall n\,(\varphi_{43}) \to \varphi_{49}$\lbl{A3}}
+\AXC{$\varphi_{52}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\varphi_{52} \to \varphi_{43}$}
+\BIC{$\varphi_{43}$}
+\UIC{$\forall n\,(\varphi_{43})$}
+\AXC{$\forall n\,(\varphi_{43}) \to (\forall n\,(\varphi_{43}) \to \varphi_{49}) \to \varphi_{58} \to \varphi_{46}$\lbl{A1}}
+\BIC{$(\forall n\,(\varphi_{43}) \to \varphi_{49}) \to \varphi_{58} \to \varphi_{46}$}
+\BIC{$\varphi_{58} \to \varphi_{46}$}
+\BIC{$\varphi_{46}$}
+\AXC{$\varphi_{46} \to \varphi_{47}$\lbl{A1}}
+\BIC{$\varphi_{47}$}
+\UIC{$\forall B_{1}\,(\varphi_{47})$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\varphi_{40}$\lbl{A4}}
+\AXC{$\varphi_{78}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\forall B_{1}\,(\varphi_{47})$}
+\AXC{$\varphi_{9}$\lbl{Sep}}
+\AXC{$\varphi_{66}$\lbl{A2}}
+\BIC{$\exists B_{1}\,\forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n))$}
+\AXC{$\varphi_{82}$\lbl{A1}}
+\BIC{$\forall B_{1}\,(\varphi_{47}) \to \varphi_{78} \to \varphi_{40} \to \forall n \in \omega\,(n \in \mathbb{N} \to 1_{\omega} \leq n)$}
+\BIC{$\varphi_{78} \to \varphi_{40} \to \forall n \in \omega\,(n \in \mathbb{N} \to 1_{\omega} \leq n)$}
+\BIC{$\varphi_{40} \to \forall n \in \omega\,(n \in \mathbb{N} \to 1_{\omega} \leq n)$}
+\BIC{$\forall n \in \omega\,(n \in \mathbb{N} \to 1_{\omega} \leq n)$}
+\AXC{$\varphi_{29}$\lbl{A2}}
+\BIC{$n \in \omega \to n \in \mathbb{N} \to 1_{\omega} \leq n$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$n \in \mathbb{N} \to n \in \mathbb{N}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$n \in \mathbb{N} \to n \in \omega$}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$n \in \omega \to n \in \mathbb{N} \to 1_{\omega} \leq n$}
+\AXC{$(n \in \omega \to n \in \mathbb{N} \to 1_{\omega} \leq n) \to \varphi_{28}$\lbl{A1}}
+\BIC{$\varphi_{28}$}
+\BIC{$(n \in \mathbb{N} \to n \in \mathbb{N}) \to n \in \mathbb{N} \to 1_{\omega} \leq n$}
+\BIC{$n \in \mathbb{N} \to 1_{\omega} \leq n$}
+\UIC{$\forall n \in \mathbb{N}\,(1_{\omega} \leq n)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall w\,(1_{\omega} = w \to 1_{\omega} = 1_{\omega} \to 1_{\omega} = w)$
+\item $\varphi_{2} :\equiv 1_{\omega} = S(n) \to 1_{\omega} = 1_{\omega} \to 1_{\omega} = S(n)$
+\item $\varphi_{3} :\equiv \forall w\,(1_{\omega} = w \to 1_{\omega} < 1_{\omega} \to 1_{\omega} < w)$
+\item $\varphi_{4} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(S(n) = y \to y = S(n))$
+\item $\varphi_{5} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(1_{\omega} = y \to y = 1_{\omega})$
+\item $\varphi_{6} :\equiv 1_{\omega} = S(n) \to 1_{\omega} < 1_{\omega} \to 1_{\omega} < S(n)$
+\item $\varphi_{7} :\equiv \forall y\,(S(n) = y \to y = S(n)) \to S(n) = 1_{\omega} \to 1_{\omega} = S(n)$
+\item $\varphi_{8} :\equiv S(n) = S(\emptyset) \to S(\emptyset) = 1_{\omega} \to S(n) = 1_{\omega}$
+\item $\varphi_{9} :\equiv \forall A_{2}\,\exists B_{1}\,\forall n\,(n \in B_{1} \leftrightarrow n \in A_{2} \land (n \in \mathbb{N} \to 1_{\omega} \leq n))$
+\item $\varphi_{10} :\equiv \forall B_{1}\,(\neg \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)))$
+\item $\varphi_{11} :\equiv \forall y\,(\forall n \in B_{1}\,(S(n) \in B_{1}) \to y \in B_{1} \to S(y) \in B_{1})$
+\item $\varphi_{12} :\equiv \forall n\,(\forall y \in B_{1}\,(S(y) \in B_{1}) \to n \in B_{1} \to S(n) \in B_{1})$
+\item $\varphi_{13} :\equiv \forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z) \to \forall y\,\forall z\,(1_{\omega} \leq y \to y \leq z \to 1_{\omega} \leq z)$
+\item $\varphi_{14} :\equiv \forall y\,\forall z\,(1_{\omega} \leq y \to y \leq z \to 1_{\omega} \leq z) \to \forall z\,(1_{\omega} \leq n \to n \leq z \to 1_{\omega} \leq z)$
+\item $\varphi_{15} :\equiv \forall z\,(1_{\omega} \leq n \to n \leq z \to 1_{\omega} \leq z) \to 1_{\omega} \leq n \to n \leq S(n) \to 1_{\omega} \leq S(n)$
+\item $\varphi_{16} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(S(n) = y \to y = z \to S(n) = z)$
+\item $\varphi_{17} :\equiv (1_{\omega} = S(\emptyset) \to S(\emptyset) = 1_{\omega}) \to S(\emptyset) = 1_{\omega}$
+\item $\varphi_{18} :\equiv S(n) \in B_{1} \leftrightarrow S(n) \in \omega \land (S(n) \in \mathbb{N} \to 1_{\omega} \leq S(n))$
+\item $\varphi_{19} :\equiv \forall n \in B_{1}\,(S(n) \in B_{1}) \to \forall y\,\forall n \in B_{1}\,(S(n) \in B_{1})$
+\item $\varphi_{20} :\equiv \forall y \in B_{1}\,(S(y) \in B_{1}) \to \forall n\,\forall y \in B_{1}\,(S(y) \in B_{1})$
+\item $\varphi_{21} :\equiv \forall y\,(1_{\omega} = y \to y = 1_{\omega}) \to 1_{\omega} = S(\emptyset) \to S(\emptyset) = 1_{\omega}$
+\item $\varphi_{22} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to \mathrm{Ind}(B_{1})$
+\item $\varphi_{23} :\equiv \forall y\,\forall n \in B_{1}\,(S(n) \in B_{1}) \to \forall y \in B_{1}\,(S(y) \in B_{1})$
+\item $\varphi_{24} :\equiv \forall n\,\forall y \in B_{1}\,(S(y) \in B_{1}) \to \forall n \in B_{1}\,(S(n) \in B_{1})$
+\item $\varphi_{25} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to \emptyset \in B_{1}$
+\item $\varphi_{26} :\equiv \forall z\,\forall w\,(z = w \to S(n) = S(z) \to S(n) = S(w)) \to \forall w\,(n = w \to S(n) = S(n) \to S(n) = S(w))$
+\item $\varphi_{27} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to n \in B_{1}$
+\item $\varphi_{28} :\equiv (n \in \mathbb{N} \to n \in \omega) \to (n \in \mathbb{N} \to n \in \mathbb{N}) \to n \in \mathbb{N} \to 1_{\omega} \leq n$
+\item $\varphi_{29} :\equiv \forall n \in \omega\,(n \in \mathbb{N} \to 1_{\omega} \leq n) \to n \in \omega \to n \in \mathbb{N} \to 1_{\omega} \leq n$
+\item $\varphi_{30} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to n \in \omega$
+\item $\varphi_{31} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to S(n) \in B_{1}$
+\item $\varphi_{32} :\equiv \forall n\,(n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x)) \to (n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x))$
+\item $\varphi_{33} :\equiv \forall y\,\forall z\,(S(n) = y \to y = z \to S(n) = z) \to \forall z\,(S(n) = S(\emptyset) \to S(\emptyset) = z \to S(n) = z)$
+\item $\varphi_{34} :\equiv \forall w\,(n = w \to S(n) = S(n) \to S(n) = S(w)) \to n = \emptyset \to S(n) = S(n) \to S(n) = S(\emptyset)$
+\item $\varphi_{35} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to S(n) \in \omega$
+\item $\varphi_{36} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to \forall n \in B_{1}\,(S(n) \in B_{1})$
+\item $\varphi_{37} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in \omega \to n \in \omega$
+\item $\varphi_{38} :\equiv \forall n\,\forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to \forall n \in B_{1}\,(S(n) \in B_{1})$
+\item $\varphi_{39} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to n \in \mathbb{N} \to 1_{\omega} \leq n$
+\item $\varphi_{40} :\equiv \neg \forall n \in \omega\,(n \in \mathbb{N} \to 1_{\omega} \leq n) \to \forall B_{1}\,(\neg \forall n \in \omega\,(n \in \mathbb{N} \to 1_{\omega} \leq n))$
+\item $\varphi_{41} :\equiv \forall n\,(n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset) \to (n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset)$
+\item $\varphi_{42} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in \omega \to \mathrm{Ind}(B_{1}) \to n \in B_{1}$
+\item $\varphi_{43} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in \omega \to n \in \mathbb{N} \to 1_{\omega} \leq n$
+\item $\varphi_{44} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in \omega \to \forall x\,(\mathrm{Ind}(x) \to n \in x)$
+\item $\varphi_{45} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to S(n) \in \mathbb{N} \to 1_{\omega} \leq S(n)$
+\item $\varphi_{46} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to \forall n \in \omega\,(n \in \mathbb{N} \to 1_{\omega} \leq n)$
+\item $\varphi_{47} :\equiv \neg \forall n \in \omega\,(n \in \mathbb{N} \to 1_{\omega} \leq n) \to \neg \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n))$
+\item $\varphi_{48} :\equiv (n \in \mathbb{N} \to n \in \mathbb{N}) \to (n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset) \to n \in \mathbb{N} \to n \in \omega$
+\item $\varphi_{49} :\equiv \forall n\,\forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to \forall n \in \omega\,(n \in \mathbb{N} \to 1_{\omega} \leq n)$
+\item $\varphi_{50} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to n \in \omega \to S(n) \in \omega$
+\item $\varphi_{51} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to \forall y \in \omega\,(S(y) \in \omega)$
+\item $\varphi_{52} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to (n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n))$
+\item $\varphi_{53} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)$
+\item $\varphi_{54} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to S(n) \in \mathbb{N} \to n \neq \emptyset \to 1_{\omega} \leq n$
+\item $\varphi_{55} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to S(n) \in \mathbb{N} \to n = \emptyset \to S(n) = 1_{\omega}$
+\item $\varphi_{56} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to S(n) \in \mathbb{N} \to n = \emptyset \to 1_{\omega} = S(n)$
+\item $\varphi_{57} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to S(n) \in \mathbb{N} \to n = \emptyset \to 1_{\omega} \leq S(n)$
+\item $\varphi_{58} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to \forall n\,\forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n))$
+\item $\varphi_{59} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to S(n) \in \mathbb{N} \to n \neq \emptyset \to n \in \mathbb{N}$
+\item $\varphi_{60} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to S(n) \in \mathbb{N} \to n \neq \emptyset \to 1_{\omega} \leq S(n)$
+\item $\varphi_{61} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to S(n) \in \mathbb{N} \to n = \emptyset \to n = \emptyset$
+\item $\varphi_{62} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to S(n) \in \mathbb{N} \to n \neq \emptyset \to n \neq \emptyset$
+\item $\varphi_{63} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega)$
+\item $\varphi_{64} :\equiv \forall n\,(n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset) \to (\emptyset \in \mathbb{N} \leftrightarrow \emptyset \in \omega \land \emptyset \neq \emptyset)$
+\item $\varphi_{65} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to n \in B_{1} \to S(n) \in \mathbb{N} \to n = \emptyset \to S(n) = S(\emptyset)$
+\item $\varphi_{66} :\equiv \varphi_{9} \to \exists B_{1}\,\forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n))$
+\item $\varphi_{67} :\equiv \forall x\,(\mathrm{Ind}(x) \leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x)) \to (\mathrm{Ind}(B_{1}) \leftrightarrow \emptyset \in B_{1} \land \forall y \in B_{1}\,(S(y) \in B_{1}))$
+\item $\varphi_{68} :\equiv \varphi_{19} \to \forall n \in B_{1}\,(S(n) \in B_{1}) \to \forall y \in B_{1}\,(S(y) \in B_{1})$
+\item $\varphi_{69} :\equiv \varphi_{20} \to \forall y \in B_{1}\,(S(y) \in B_{1}) \to \forall n \in B_{1}\,(S(n) \in B_{1})$
+\item $\varphi_{70} :\equiv (\forall n \in B_{1}\,(S(n) \in B_{1}) \to \forall y \in B_{1}\,(S(y) \in B_{1})) \to \varphi_{22}$
+\item $\varphi_{71} :\equiv (\emptyset \in \mathbb{N} \leftrightarrow \emptyset \in \omega \land \emptyset \neq \emptyset) \to \emptyset = \emptyset \to \emptyset \in \mathbb{N} \to 1_{\omega} \leq \emptyset$
+\item $\varphi_{72} :\equiv \forall x\,(\mathrm{Ind}(x) \leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x)) \to (\mathrm{Ind}(\omega) \leftrightarrow \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega))$
+\item $\varphi_{73} :\equiv \forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to (\emptyset \in B_{1} \leftrightarrow \emptyset \in \omega \land (\emptyset \in \mathbb{N} \to 1_{\omega} \leq \emptyset))$
+\item $\varphi_{74} :\equiv (\forall x\,(\mathrm{Ind}(x) \to n \in x) \to \mathrm{Ind}(B_{1}) \to n \in B_{1}) \to \varphi_{42}$
+\item $\varphi_{75} :\equiv S(n) = S(n) \to (n = \emptyset \to S(n) = S(n) \to S(n) = S(\emptyset)) \to \varphi_{65}$
+\item $\varphi_{76} :\equiv (\forall y \in B_{1}\,(S(y) \in B_{1}) \to \forall n \in B_{1}\,(S(n) \in B_{1})) \to \varphi_{70}$
+\item $\varphi_{77} :\equiv \mathrm{Ind}(\omega) \to (\mathrm{Ind}(\omega) \leftrightarrow \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega)) \to \varphi_{63}$
+\item $\varphi_{78} :\equiv \forall B_{1}\,(\varphi_{47}) \to \forall B_{1}\,(\neg \forall n \in \omega\,(n \in \mathbb{N} \to 1_{\omega} \leq n)) \to \varphi_{10}$
+\item $\varphi_{79} :\equiv (1_{\omega} \leq n \to n \leq S(n) \to 1_{\omega} \leq S(n)) \to \varphi_{54} \to n \leq S(n) \to \varphi_{60}$
+\item $\varphi_{80} :\equiv (\forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to \varphi_{18}) \to \varphi_{35} \to \varphi_{45} \to \varphi_{31}$
+\item $\varphi_{81} :\equiv (\mathrm{Ind}(B_{1}) \leftrightarrow \emptyset \in B_{1} \land \forall y \in B_{1}\,(S(y) \in B_{1})) \to \varphi_{25} \to \varphi_{36} \to \varphi_{76}$
+\item $\varphi_{82} :\equiv \exists B_{1}\,\forall n\,(n \in B_{1} \leftrightarrow n \in \omega \land (n \in \mathbb{N} \to 1_{\omega} \leq n)) \to \forall B_{1}\,(\varphi_{47}) \to \varphi_{78} \to \varphi_{40} \to \forall n \in \omega\,(n \in \mathbb{N} \to 1_{\omega} \leq n)$
+\end{abbrevlist}
+\end{fullproof}

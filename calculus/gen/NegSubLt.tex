@@ -1,0 +1,191 @@
+% 自動生成 (prover/build.js): NegSubLt  ノード数 86
+\begin{fullproof}{[E42]}{$\forall x\,\forall m\,\forall y\,(x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to m < y)$}{86}\phantomsection\label{tree:NegSubLt}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z = w \to m + -x < z \to m + -x < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to m + -x < z \to m + -x < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to m + -x < z \to m + -x < w)$}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\forall w\,(y - x = w \to m + -x < y - x \to m + -x < w)$}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$y - x = y + -x \to m + -x < y - x \to m + -x < y + -x$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -(y - x) = x - y)$\lbl{[F14]}}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$\forall y\,(m \in \mathbb{R} \to y \in \mathbb{R} \to -(y - m) = m - y)$}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$m \in \mathbb{R} \to x \in \mathbb{R} \to -(x - m) = m - x$}
+\AXC{$(m \in \mathbb{R} \to x \in \mathbb{R} \to -(x - m) = m - x) \to \varphi_{29}$\lbl{A1}}
+\BIC{$\varphi_{29}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to m \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{29}$}
+\BIC{$\varphi_{25}$}
+\BIC{$x \in \mathbb{R} \to \varphi_{3}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to \varphi_{5}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to \varphi_{3}$}
+\AXC{$(x \in \mathbb{R} \to \varphi_{3}) \to (x \in \mathbb{R} \to \varphi_{5}) \to \varphi_{22}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to \varphi_{5}) \to \varphi_{22}$}
+\BIC{$\varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y)$\lbl{Def$-$}}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y) \to \forall y\,(m - y = m + -y)$\lbl{A2}}
+\BIC{$\forall y\,(m - y = m + -y)$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\forall y\,(m - y = m + -y)$}
+\AXC{$\forall y\,(m - y = m + -y) \to m - x = m + -x$\lbl{A2}}
+\BIC{$m - x = m + -x$}
+\AXC{$m - x = m + -x \to \varphi_{28}$\lbl{A1}}
+\BIC{$\varphi_{28}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$z = w \to z < y - x \to w < y - x$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < y - x \to w < y - x)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < y - x \to w < y - x)$}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$\forall w\,(-(x - m) = w \to -(x - m) < y - x \to w < y - x)$}
+\AXC{$\varphi_{19}$\lbl{A2}}
+\BIC{$-(x - m) = m - x \to -(x - m) < y - x \to m - x < y - x$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{22}$}
+\BIC{$\varphi_{10}$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{28}$}
+\BIC{$(m - x = m + -x \to m - x < y - x \to m + -x < y - x) \to \varphi_{12}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$z = w \to z < y - x \to w < y - x$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < y - x \to w < y - x)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < y - x \to w < y - x)$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\forall w\,(m - x = w \to m - x < y - x \to w < y - x)$}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$m - x = m + -x \to m - x < y - x \to m + -x < y - x$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$(m - x = m + -x \to m - x < y - x \to m + -x < y - x) \to \varphi_{12}$}
+\BIC{$\varphi_{12}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y)$\lbl{Def$-$}}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$\forall y\,(v_{778} - y = v_{778} + -y)$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$v_{778} - v_{779} = v_{778} + -v_{779}$}
+\UIC{$\forall v_{779}\,(v_{778} - v_{779} = v_{778} + -v_{779})$}
+\UIC{$\forall v_{778}\,\forall v_{779}\,(v_{778} - v_{779} = v_{778} + -v_{779})$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$\forall v_{779}\,(y - v_{779} = y + -v_{779})$}
+\AXC{$\forall v_{779}\,(y - v_{779} = y + -v_{779}) \to y - x = y + -x$\lbl{A2}}
+\BIC{$y - x = y + -x$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$y - x = y + -x \to m + -x < y - x \to m + -x < y + -x$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{12}$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$y - x = y + -x$}
+\AXC{$y - x = y + -x \to \varphi_{12} \to \varphi_{27}$\lbl{A1}}
+\BIC{$\varphi_{12} \to \varphi_{27}$}
+\BIC{$\varphi_{27}$}
+\BIC{$\varphi_{13}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R}) \to x \in \mathbb{R} \to -x \in \mathbb{R}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to -x \in \mathbb{R}$}
+\AXC{$(x \in \mathbb{R} \to -x \in \mathbb{R}) \to \varphi_{24}$\lbl{A1}}
+\BIC{$\varphi_{24}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\varphi_{7}$\lbl{[E4]}}
+\AXC{$\varphi_{7} \to \varphi_{4}$\lbl{A2}}
+\BIC{$\varphi_{4}$}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\forall z\,(m \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to m + z < y + z \to m < y)$}
+\AXC{$\varphi_{23}$\lbl{A2}}
+\BIC{$m \in \mathbb{R} \to y \in \mathbb{R} \to -x \in \mathbb{R} \to m + -x < y + -x \to m < y$}
+\AXC{$\varphi_{32}$\lbl{A1}}
+\BIC{$\varphi_{31}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to m \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{31}$}
+\BIC{$\varphi_{30}$}
+\BIC{$\varphi_{9} \to \varphi_{26}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{13}$}
+\AXC{$x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{24}$}
+\BIC{$\varphi_{9}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{9} \to \varphi_{26}$}
+\BIC{$\varphi_{26}$}
+\BIC{$x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to m < y$}
+\UIC{$\varphi_{6}$}
+\UIC{$\forall m\,(\varphi_{6})$}
+\UIC{$\forall x\,\forall m\,(\varphi_{6})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall x\,\forall y\,(x - y = x + -y) \to \forall y\,(v_{778} - y = v_{778} + -y)$
+\item $\varphi_{2} :\equiv \forall y\,(v_{778} - y = v_{778} + -y) \to v_{778} - v_{779} = v_{778} + -v_{779}$
+\item $\varphi_{3} :\equiv m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to -(x - m) = m - x$
+\item $\varphi_{4} :\equiv \forall y\,\forall z\,(m \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to m + z < y + z \to m < y)$
+\item $\varphi_{5} :\equiv m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to -(x - m) < y - x$
+\item $\varphi_{6} :\equiv \forall y\,(x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to m < y)$
+\item $\varphi_{7} :\equiv \forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z < y + z \to x < y)$
+\item $\varphi_{8} :\equiv \forall v_{778}\,\forall v_{779}\,(v_{778} - v_{779} = v_{778} + -v_{779}) \to \forall v_{779}\,(y - v_{779} = y + -v_{779})$
+\item $\varphi_{9} :\equiv x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to -x \in \mathbb{R}$
+\item $\varphi_{10} :\equiv x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to m - x < y - x$
+\item $\varphi_{11} :\equiv \forall z\,\forall w\,(z = w \to z < y - x \to w < y - x) \to \forall w\,(m - x = w \to m - x < y - x \to w < y - x)$
+\item $\varphi_{12} :\equiv x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to m + -x < y - x$
+\item $\varphi_{13} :\equiv x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to m + -x < y + -x$
+\item $\varphi_{14} :\equiv \forall z\,\forall w\,(z = w \to z < y - x \to w < y - x) \to \forall w\,(-(x - m) = w \to -(x - m) < y - x \to w < y - x)$
+\item $\varphi_{15} :\equiv \forall y\,(m \in \mathbb{R} \to y \in \mathbb{R} \to -(y - m) = m - y) \to m \in \mathbb{R} \to x \in \mathbb{R} \to -(x - m) = m - x$
+\item $\varphi_{16} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -(y - x) = x - y) \to \forall y\,(m \in \mathbb{R} \to y \in \mathbb{R} \to -(y - m) = m - y)$
+\item $\varphi_{17} :\equiv \forall z\,\forall w\,(z = w \to m + -x < z \to m + -x < w) \to \forall w\,(y - x = w \to m + -x < y - x \to m + -x < w)$
+\item $\varphi_{18} :\equiv \forall w\,(m - x = w \to m - x < y - x \to w < y - x) \to m - x = m + -x \to m - x < y - x \to m + -x < y - x$
+\item $\varphi_{19} :\equiv \forall w\,(-(x - m) = w \to -(x - m) < y - x \to w < y - x) \to -(x - m) = m - x \to -(x - m) < y - x \to m - x < y - x$
+\item $\varphi_{20} :\equiv \forall w\,(y - x = w \to m + -x < y - x \to m + -x < w) \to y - x = y + -x \to m + -x < y - x \to m + -x < y + -x$
+\item $\varphi_{21} :\equiv \varphi_{4} \to \forall z\,(m \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to m + z < y + z \to m < y)$
+\item $\varphi_{22} :\equiv (-(x - m) = m - x \to -(x - m) < y - x \to m - x < y - x) \to \varphi_{10}$
+\item $\varphi_{23} :\equiv \forall z\,(m \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to m + z < y + z \to m < y) \to m \in \mathbb{R} \to y \in \mathbb{R} \to -x \in \mathbb{R} \to m + -x < y + -x \to m < y$
+\item $\varphi_{24} :\equiv (x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to x \in \mathbb{R}) \to \varphi_{9}$
+\item $\varphi_{25} :\equiv (x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to x \in \mathbb{R}) \to x \in \mathbb{R} \to \varphi_{3}$
+\item $\varphi_{26} :\equiv \varphi_{13} \to x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to m < y$
+\item $\varphi_{27} :\equiv (y - x = y + -x \to m + -x < y - x \to m + -x < y + -x) \to \varphi_{13}$
+\item $\varphi_{28} :\equiv \varphi_{10} \to (m - x = m + -x \to m - x < y - x \to m + -x < y - x) \to \varphi_{12}$
+\item $\varphi_{29} :\equiv (x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to m \in \mathbb{R}) \to \varphi_{25}$
+\item $\varphi_{30} :\equiv (x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to y \in \mathbb{R}) \to \varphi_{9} \to \varphi_{26}$
+\item $\varphi_{31} :\equiv (x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to m \in \mathbb{R}) \to \varphi_{30}$
+\item $\varphi_{32} :\equiv (m \in \mathbb{R} \to y \in \mathbb{R} \to -x \in \mathbb{R} \to m + -x < y + -x \to m < y) \to \varphi_{31}$
+\end{abbrevlist}
+\end{fullproof}

@@ -1,0 +1,29 @@
+% 自動生成 (prover/build.js): AbsAbs  ノード数 10
+\begin{fullproof}{[E29]}{$\forall x \in \mathbb{R}\,(\lvert \lvert x \rvert \rvert = \lvert x \rvert)$}{10}\phantomsection\label{tree:AbsAbs}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(0 \leq \lvert x \rvert)$\lbl{[A6]}}
+\AXC{$\forall x \in \mathbb{R}\,(0 \leq \lvert x \rvert) \to x \in \mathbb{R} \to 0 \leq \lvert x \rvert$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to 0 \leq \lvert x \rvert$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x\,(0 \leq x \to \lvert x \rvert = x)$\lbl{[A1]}}
+\AXC{$\forall x\,(0 \leq x \to \lvert x \rvert = x) \to 0 \leq \lvert x \rvert \to \lvert \lvert x \rvert \rvert = \lvert x \rvert$\lbl{A2}}
+\BIC{$0 \leq \lvert x \rvert \to \lvert \lvert x \rvert \rvert = \lvert x \rvert$}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to 0 \leq \lvert x \rvert) \to x \in \mathbb{R} \to \lvert \lvert x \rvert \rvert = \lvert x \rvert$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to 0 \leq \lvert x \rvert$}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to 0 \leq \lvert x \rvert) \to x \in \mathbb{R} \to \lvert \lvert x \rvert \rvert = \lvert x \rvert$}
+\BIC{$x \in \mathbb{R} \to \lvert \lvert x \rvert \rvert = \lvert x \rvert$}
+\UIC{$\forall x \in \mathbb{R}\,(\lvert \lvert x \rvert \rvert = \lvert x \rvert)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv (0 \leq \lvert x \rvert \to \lvert \lvert x \rvert \rvert = \lvert x \rvert) \to (x \in \mathbb{R} \to 0 \leq \lvert x \rvert) \to x \in \mathbb{R} \to \lvert \lvert x \rvert \rvert = \lvert x \rvert$
+\end{abbrevlist}
+\end{fullproof}

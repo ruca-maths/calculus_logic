@@ -1,0 +1,20 @@
+% 自動生成 (prover/build.js): Abs1  ノード数 9
+\begin{fullproof}{[E17]}{$\lvert 1 \rvert = 1$}{9}\phantomsection\label{tree:Abs1}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,(0 \leq x \to \lvert x \rvert = x)$\lbl{[A1]}}
+\AXC{$\forall x\,(0 \leq x \to \lvert x \rvert = x) \to 0 \leq 1 \to \lvert 1 \rvert = 1$\lbl{A2}}
+\BIC{$0 \leq 1 \to \lvert 1 \rvert = 1$}
+\AXC{$(0 \leq 1 \to \lvert 1 \rvert = 1) \to 0 \leq 1 \to \lvert 1 \rvert = 1$\lbl{A1}}
+\BIC{$0 \leq 1 \to \lvert 1 \rvert = 1$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$0 < 1$\lbl{[F28]}}
+\AXC{$0 < 1 \to 0 \leq 1$\lbl{A1}}
+\BIC{$0 \leq 1$}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$0 \leq 1 \to \lvert 1 \rvert = 1$}
+\BIC{$\lvert 1 \rvert = 1$}
+\end{ptree}
+\end{fullproof}

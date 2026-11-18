@@ -1,0 +1,139 @@
+% 自動生成 (prover/build.js): BandAbs  ノード数 72
+\begin{fullproof}{[E33]}{$\forall x\,\forall e\,\forall y\,(x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to y < x + e \to \lvert y - x \rvert < e)$}{72}\phantomsection\label{tree:BandAbs}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\varphi_{6}$\lbl{A1}}
+\AXC{$\varphi_{7}$\lbl{A1}}
+\AXC{$\varphi_{8}$\lbl{A1}}
+\AXC{$\forall x\,(\varphi_{3})$\lbl{[E32]}}
+\AXC{$\forall x\,(\varphi_{3}) \to \varphi_{3}$\lbl{A2}}
+\BIC{$\varphi_{3}$}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to y < x + e \to y - x < e)$}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to y < x + e \to y - x < e$}
+\AXC{$\varphi_{23}$\lbl{A1}}
+\BIC{$\varphi_{8} \to \varphi_{7} \to \varphi_{6} \to \varphi_{9} \to \varphi_{10}$}
+\BIC{$\varphi_{7} \to \varphi_{6} \to \varphi_{9} \to \varphi_{10}$}
+\BIC{$\varphi_{6} \to \varphi_{9} \to \varphi_{10}$}
+\BIC{$\varphi_{9} \to \varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall e\,(\varphi_{4})$\lbl{[E31]}}
+\AXC{$\forall x\,\forall e\,(\varphi_{4}) \to \forall e\,(\varphi_{4})$\lbl{A2}}
+\BIC{$\forall e\,(\varphi_{4})$}
+\AXC{$\forall e\,(\varphi_{4}) \to \varphi_{4}$\lbl{A2}}
+\BIC{$\varphi_{4}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\varphi_{6}$\lbl{A1}}
+\AXC{$\varphi_{7}$\lbl{A1}}
+\AXC{$\varphi_{8}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{4}$}
+\AXC{$\varphi_{4} \to x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to -e < y - x$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to -e < y - x$}
+\AXC{$\varphi_{24}$\lbl{A1}}
+\BIC{$\varphi_{8} \to \varphi_{7} \to \varphi_{6} \to \varphi_{11} \to \varphi_{14}$}
+\BIC{$\varphi_{7} \to \varphi_{6} \to \varphi_{11} \to \varphi_{14}$}
+\BIC{$\varphi_{6} \to \varphi_{11} \to \varphi_{14}$}
+\BIC{$\varphi_{11} \to \varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\forall y\,(v_{716} \in \mathbb{R} \to y \in \mathbb{R} \to v_{716} - y \in \mathbb{R})$}
+\AXC{$\varphi_{19}$\lbl{A2}}
+\BIC{$v_{716} \in \mathbb{R} \to v_{717} \in \mathbb{R} \to v_{716} - v_{717} \in \mathbb{R}$}
+\UIC{$\forall v_{717}\,(v_{716} \in \mathbb{R} \to v_{717} \in \mathbb{R} \to v_{716} - v_{717} \in \mathbb{R})$}
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \forall v_{717}\,(y \in \mathbb{R} \to v_{717} \in \mathbb{R} \to y - v_{717} \in \mathbb{R})$\lbl{A2}}
+\BIC{$\forall v_{717}\,(y \in \mathbb{R} \to v_{717} \in \mathbb{R} \to y - v_{717} \in \mathbb{R})$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\varphi_{6}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\forall v_{717}\,(y \in \mathbb{R} \to v_{717} \in \mathbb{R} \to y - v_{717} \in \mathbb{R})$}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$y \in \mathbb{R} \to x \in \mathbb{R} \to y - x \in \mathbb{R}$}
+\AXC{$(y \in \mathbb{R} \to x \in \mathbb{R} \to y - x \in \mathbb{R}) \to \varphi_{6} \to \varphi_{8} \to \varphi_{13}$\lbl{A1}}
+\BIC{$\varphi_{6} \to \varphi_{8} \to \varphi_{13}$}
+\BIC{$\varphi_{8} \to \varphi_{13}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -y < x \to x < y \to \lvert x \rvert < y)$\lbl{[A12]}}
+\AXC{$\varphi_{22}$\lbl{A2}}
+\BIC{$\varphi_{5}$}
+\AXC{$\varphi_{5} \to v_{714} \in \mathbb{R} \to \varphi_{2}$\lbl{A2}}
+\BIC{$v_{714} \in \mathbb{R} \to \varphi_{2}$}
+\UIC{$\forall v_{715}\,(v_{714} \in \mathbb{R} \to \varphi_{2})$}
+\UIC{$\forall v_{714}\,\forall v_{715}\,(v_{714} \in \mathbb{R} \to \varphi_{2})$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\forall v_{714}\,\forall v_{715}\,(v_{714} \in \mathbb{R} \to \varphi_{2})$}
+\AXC{$\forall v_{714}\,\forall v_{715}\,(v_{714} \in \mathbb{R} \to \varphi_{2}) \to \varphi_{17}$\lbl{A2}}
+\BIC{$\varphi_{17}$}
+\AXC{$\varphi_{17} \to \varphi_{12}$\lbl{A2}}
+\BIC{$\varphi_{12}$}
+\AXC{$\varphi_{12} \to \varphi_{13} \to \varphi_{7} \to \varphi_{14} \to \varphi_{10} \to \varphi_{15}$\lbl{A1}}
+\BIC{$\varphi_{13} \to \varphi_{7} \to \varphi_{14} \to \varphi_{10} \to \varphi_{15}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{9}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{9} \to \varphi_{10}$}
+\BIC{$\varphi_{10}$}
+\AXC{$\varphi_{11}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{11} \to \varphi_{14}$}
+\BIC{$\varphi_{14}$}
+\AXC{$\varphi_{7}$\lbl{A1}}
+\AXC{$\varphi_{8}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{8} \to \varphi_{13}$}
+\BIC{$\varphi_{13}$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{13} \to \varphi_{7} \to \varphi_{14} \to \varphi_{10} \to \varphi_{15}$}
+\BIC{$\varphi_{7} \to \varphi_{14} \to \varphi_{10} \to \varphi_{15}$}
+\BIC{$\varphi_{14} \to \varphi_{10} \to \varphi_{15}$}
+\BIC{$\varphi_{10} \to \varphi_{15}$}
+\BIC{$\varphi_{15}$}
+\UIC{$\forall y\,(\varphi_{15})$}
+\UIC{$\forall e\,\forall y\,(\varphi_{15})$}
+\UIC{$\forall x\,\forall e\,\forall y\,(\varphi_{15})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall v_{716}\,\forall v_{717}\,(v_{716} \in \mathbb{R} \to v_{717} \in \mathbb{R} \to v_{716} - v_{717} \in \mathbb{R})$
+\item $\varphi_{2} :\equiv v_{715} \in \mathbb{R} \to -v_{715} < v_{714} \to v_{714} < v_{715} \to \lvert v_{714} \rvert < v_{715}$
+\item $\varphi_{3} :\equiv \forall e\,\forall y\,(x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to y < x + e \to y - x < e)$
+\item $\varphi_{4} :\equiv \forall y\,(x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to -e < y - x)$
+\item $\varphi_{5} :\equiv \forall y\,(v_{714} \in \mathbb{R} \to y \in \mathbb{R} \to -y < v_{714} \to v_{714} < y \to \lvert v_{714} \rvert < y)$
+\item $\varphi_{6} :\equiv x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to y < x + e \to y \in \mathbb{R}$
+\item $\varphi_{7} :\equiv x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to y < x + e \to e \in \mathbb{R}$
+\item $\varphi_{8} :\equiv x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to y < x + e \to x \in \mathbb{R}$
+\item $\varphi_{9} :\equiv x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to y < x + e \to y < x + e$
+\item $\varphi_{10} :\equiv x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to y < x + e \to y - x < e$
+\item $\varphi_{11} :\equiv x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to y < x + e \to x - e < y$
+\item $\varphi_{12} :\equiv y - x \in \mathbb{R} \to e \in \mathbb{R} \to -e < y - x \to y - x < e \to \lvert y - x \rvert < e$
+\item $\varphi_{13} :\equiv x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to y < x + e \to y - x \in \mathbb{R}$
+\item $\varphi_{14} :\equiv x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to y < x + e \to -e < y - x$
+\item $\varphi_{15} :\equiv x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to y < x + e \to \lvert y - x \rvert < e$
+\item $\varphi_{16} :\equiv \forall v_{717}\,(y \in \mathbb{R} \to v_{717} \in \mathbb{R} \to y - v_{717} \in \mathbb{R}) \to y \in \mathbb{R} \to x \in \mathbb{R} \to y - x \in \mathbb{R}$
+\item $\varphi_{17} :\equiv \forall v_{715}\,(y - x \in \mathbb{R} \to v_{715} \in \mathbb{R} \to -v_{715} < y - x \to y - x < v_{715} \to \lvert y - x \rvert < v_{715})$
+\item $\varphi_{18} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(v_{716} \in \mathbb{R} \to y \in \mathbb{R} \to v_{716} - y \in \mathbb{R})$
+\item $\varphi_{19} :\equiv \forall y\,(v_{716} \in \mathbb{R} \to y \in \mathbb{R} \to v_{716} - y \in \mathbb{R}) \to v_{716} \in \mathbb{R} \to v_{717} \in \mathbb{R} \to v_{716} - v_{717} \in \mathbb{R}$
+\item $\varphi_{20} :\equiv \forall y\,(x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to y < x + e \to y - x < e) \to x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to y < x + e \to y - x < e$
+\item $\varphi_{21} :\equiv \varphi_{3} \to \forall y\,(x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to y < x + e \to y - x < e)$
+\item $\varphi_{22} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -y < x \to x < y \to \lvert x \rvert < y) \to \varphi_{5}$
+\item $\varphi_{23} :\equiv (x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to y < x + e \to y - x < e) \to \varphi_{8} \to \varphi_{7} \to \varphi_{6} \to \varphi_{9} \to \varphi_{10}$
+\item $\varphi_{24} :\equiv (x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to -e < y - x) \to \varphi_{8} \to \varphi_{7} \to \varphi_{6} \to \varphi_{11} \to \varphi_{14}$
+\end{abbrevlist}
+\end{fullproof}

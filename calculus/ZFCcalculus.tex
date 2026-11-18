@@ -1,0 +1,131 @@
+\documentclass[a4j,11pt,dvipdfmx,oneside]{jsreport}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs,url,bussproofs,graphicx,adjustbox,tcolorbox,hyperref,pxjahyper,titlesec,picture,tikz,enumitem,mathbbol,booktabs,longtable}
+
+\hypersetup{bookmarks=true,colorlinks=true,linkcolor=blue}
+\renewcommand{\baselinestretch}{1.05}
+
+%%% 定理環境 %%%
+\newtheorem{dfn}{定義}[chapter]
+\newtheorem{thm}[dfn]{定理}
+\newtheorem{prop}[dfn]{命題}
+\newtheorem{lem}[dfn]{補題}
+\newtheorem{cor}[dfn]{系}
+\newtheorem{eg}[dfn]{例}
+\newtheorem{rul}[dfn]{導出規則}
+\newtheorem{axm}{公理}
+\newtheorem*{rem}{注意}
+\renewcommand{\proofname}{\textbf{証明}}
+\newenvironment{textref}[1]{\begin{tcolorbox}[colback=gray!6,colframe=gray!50,boxrule=0.4pt,left=4pt,right=4pt,top=2pt,bottom=2pt,title={\small テキスト対応：#1},fonttitle=\small]\small}{\end{tcolorbox}}
+
+%%% 証明木 %%%
+% 幅が本文幅以下ならそのまま, 1.5倍以下なら縮小, それ以上なら90度回転して置く(各木の幅の比はログに PTREE として出力)
+\EnableBpAbbreviations
+\newsavebox{\ptbox}
+\newenvironment{ptree}{\par\smallskip\noindent\begin{lrbox}{\ptbox}}{\DisplayProof\end{lrbox}%
+  \typeout{PTREE ratio \the\numexpr\wd\ptbox*100/\linewidth\relax\space at line \the\inputlineno}%
+  \ifdim\wd\ptbox>1.5\linewidth
+    \begin{center}\adjustbox{angle=90,max width=\linewidth,max totalheight=0.85\textheight}{\usebox{\ptbox}}\end{center}%
+  \else
+    \begin{center}\adjustbox{max width=\linewidth}{\usebox{\ptbox}}\end{center}%
+  \fi\par\smallskip}
+\newcommand{\rl}[1]{\RightLabel{\scriptsize #1}}
+\newcommand{\hyp}[2]{[#1]^{#2}}
+% 完全展開した証明木 (prover/build.js が生成する gen/*.tex で使う)
+\newcommand{\lbl}[1]{\,{\tiny\textsf{#1}}}
+\newenvironment{fullproof}[3]{\par\medskip\noindent\textbf{完全展開した証明木}\ (#1, ノード数 #3)\par\nopagebreak\noindent{\small 証明する論理式: #2}\par\smallskip\small}{\par\medskip}
+\newenvironment{abbrevlist}{\par\noindent{\small 略記:}\begin{list}{}{\setlength{\leftmargin}{1.5em}\setlength{\itemsep}{1pt}\setlength{\parsep}{0pt}\small}\raggedright}{\end{list}}
+\newenvironment{registrylist}{\begin{list}{}{\setlength{\leftmargin}{6em}\setlength{\labelwidth}{5.5em}\setlength{\itemsep}{2pt}\renewcommand{\makelabel}[1]{\hfill##1}}\raggedright}{\end{list}}
+
+%%% 第II部から第III部の証明木への参照 (gen/stmts.tex は prover/build.js が生成する) %%%
+\makeatletter
+\newcommand{\fsdef}[4]{\@namedef{fs@lab@#1}{#2}\@namedef{fs@f@#1}{#3}\@namedef{fs@n@#1}{#4}}
+\newcommand{\fslab}[1]{\@ifundefined{fs@lab@#1}{\textbf{??#1}}{\@nameuse{fs@lab@#1}}}
+\newcommand{\fsf}[1]{\@ifundefined{fs@f@#1}{\textbf{??#1}}{$\@nameuse{fs@f@#1}$}}
+\newcommand{\tpage}[1]{p.\,\pageref{tree:#1}}
+% 定理の形式的な主張と, 完全展開した証明木の頁
+\newcommand{\fs}[1]{\par\smallskip\noindent\begingroup\small\raggedright\textsf{形式化}\quad\fsf{#1}\par\nopagebreak\hfill(完全展開した証明木: \tpage{#1}, ノード数 \@nameuse{fs@n@#1})\par\endgroup\smallskip}
+% 証明木の所在の一覧
+\newcommand{\trees}[1]{\par\smallskip\noindent\begingroup\small\textsf{完全展開した証明木}\quad\@for\@tt:=#1\do{\fslab{\@tt}~(\expandafter\tpage\expandafter{\@tt})\ \ }\par\endgroup\smallskip}
+% 補題の一覧 (ラベル, 形式的な主張, 証明木の頁)
+\newcommand{\lemlist}[1]{\begin{list}{}{\setlength{\leftmargin}{4.5em}\setlength{\labelwidth}{4em}\setlength{\itemsep}{2pt}\small\renewcommand{\makelabel}[1]{\hfill##1}}\raggedright\@for\@tt:=#1\do{\item[\fslab{\@tt}] \fsf{\@tt}\hfill\mbox{(\expandafter\tpage\expandafter{\@tt})}}\end{list}}
+\makeatother
+\input{gen/stmts}
+\input{gen/stats}
+
+%%% 記号 %%%
+\newcommand{\FV}{\mathrm{FV}}
+\newcommand{\ZFC}{\mathrm{ZFC}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\dom}{\mathrm{dom}}
+\newcommand{\ran}{\mathrm{ran}}
+\newcommand{\Fnc}{\mathrm{Fnc}}
+\newcommand{\Ind}{\mathrm{Ind}}
+\newcommand{\Emp}{\mathrm{Emp}}
+\newcommand{\Seq}{\mathrm{Seq}}
+\newcommand{\Conv}{\mathrm{Conv}}
+\newcommand{\UB}{\mathrm{UB}}
+\newcommand{\LB}{\mathrm{LB}}
+\newcommand{\IsSup}{\mathrm{IsSup}}
+\newcommand{\IsInf}{\mathrm{IsInf}}
+\newcommand{\Cut}{\mathrm{Cut}}
+\newcommand{\Taut}{\mathrm{TC}}
+\newcommand{\pair}[2]{\langle #1,#2\rangle}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\nat}[1]{\underline{#1}}
+\newcommand{\half}[1]{#1/2}
+
+\titleformat{\section}[block]{}{}{0pt}
+{
+  \definecolor{teal}{gray}{0.30}
+  \begin{picture}(0,0)
+    \put(-10,-5){\begin{tikzpicture}\fill[teal] (0pt,0pt) rectangle (5pt,19pt);\end{tikzpicture}}
+    \put(-10,-5){\color{teal}\line(1,0){\hsize}}
+  \end{picture}
+  \hspace{0pt}\sf \Large \thesection\hspace{0pt}
+}
+
+\title{ZFC 集合論における微分積分学の形式化 \\[2mm] \large ── ヒルベルト流証明体系による定義の述語論理表示と証明木 ──}
+\author{}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\include{ch00_intro}
+
+\part{形式的体系}\label{part:formal}
+\include{ch01_logic}
+\include{ch02_definitions}
+\include{ch03_zfc}
+\include{ch04_naturals}
+\include{ch05_reals}
+\include{ch06_ordered_field}
+
+\part{微分積分学 ── テキスト第1章から第4章}\label{part:text}
+\include{ch07_text1}
+\include{ch08_text2}
+\include{ch09_text3}
+\include{ch10_text4}
+
+\part{完全展開した証明木}\label{part:trees}
+\include{part3_trees}
+
+\appendix
+\include{appendix_registry}
+
+\begin{thebibliography}{99}
+  \bibitem{kuroda} 黒田紘敏, 『微分積分学入門』, 講義ノート (2023年5月29日版), \texttt{Logic/text\_calculus.pdf}.
+  \bibitem{monk} J. D. Monk, \emph{Mathematical Logic}, Graduate Texts in Mathematics 37, Springer, 1976. (\texttt{Logic/books/})
+  \bibitem{kunen2011} K. Kunen, \emph{Set Theory}, Studies in Logic 34, College Publications, 2011. (\texttt{Logic/books/kunen2011.pdf}, 日本語訳原稿 \texttt{Logic/Kunen日本語訳/kunen\_draft.tex})
+  \bibitem{kunenFoM} K. Kunen, \emph{Foundations of Mathematics}, College Publications, 2009.
+  \bibitem{shoenfield} J. R. Shoenfield, \emph{Mathematical Logic}, Addison-Wesley, 1967.
+  \bibitem{enderton} H. B. Enderton, \emph{A Mathematical Introduction to Logic}, 2nd ed., Academic Press, 2001. (\texttt{Logic/books/})
+  \bibitem{buss} S. Buss, \emph{bussproofs.sty} ユーザーガイド (\texttt{Logic/BussGuide2\_Smith2012.pdf}).
+  \bibitem{alg-d} alg-d, 『数学基礎論(数理論理学)入門』, 2025 (\texttt{Logic/zfc.pdf}).
+\end{thebibliography}
+
+\end{document}

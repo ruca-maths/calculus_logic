@@ -1,0 +1,69 @@
+% 自動生成 (prover/build.js): LimQuot  ノード数 31
+\begin{fullproof}{定理2.9}{$\forall a\,\forall \alpha\,\forall b\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \beta \neq 0 \to \forall n \in \mathbb{N}\,(b_{n} \neq 0) \to \mathrm{Conv}(a \otimes b^{\ast},\alpha \cdot \beta^{-1}))$}{31}\phantomsection\label{tree:LimQuot}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall b\,\forall \beta\,(\varphi_{3})$\lbl{定理2.9(逆数)}}
+\AXC{$\forall b\,\forall \beta\,(\varphi_{3}) \to \forall \beta\,(\varphi_{3})$\lbl{A2}}
+\BIC{$\forall \beta\,(\varphi_{3})$}
+\AXC{$\forall \beta\,(\varphi_{3}) \to \varphi_{3}$\lbl{A2}}
+\BIC{$\varphi_{3}$}
+\AXC{$\varphi_{3} \to \varphi_{10}$\lbl{A1}}
+\BIC{$\varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \beta \neq 0 \to \beta \neq 0$\lbl{A1}}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \mathrm{Conv}(b,\beta)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{10}$}
+\BIC{$\varphi_{9}$}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \varphi_{6}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{3}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,(\varphi_{1})$\lbl{定理2.7}}
+\AXC{$\forall a\,\forall \alpha\,(\varphi_{1}) \to \forall \alpha\,(\varphi_{1})$\lbl{A2}}
+\BIC{$\forall \alpha\,(\varphi_{1})$}
+\AXC{$\forall \alpha\,(\varphi_{1}) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{2}$\lbl{A2}}
+\BIC{$\varphi_{2}$}
+\AXC{$\varphi_{2} \to \varphi_{5}$\lbl{A2}}
+\BIC{$\varphi_{5}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{5}$}
+\AXC{$\varphi_{5} \to (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \varphi_{8}$\lbl{A1}}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \varphi_{8}$}
+\BIC{$\varphi_{8}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \varphi_{6}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Conv}(a,\alpha) \to \varphi_{6}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{3}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \varphi_{3}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{8}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{4}$}
+\UIC{$\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{4})$}
+\UIC{$\forall b\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{4})$}
+\UIC{$\forall \alpha\,\forall b\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{4})$}
+\UIC{$\varphi_{7}$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall b\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \mathrm{Conv}(a \otimes b,\alpha \cdot \beta))$
+\item $\varphi_{2} :\equiv \forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b^{\ast},\beta) \to \mathrm{Conv}(a \otimes b^{\ast},\alpha \cdot \beta))$
+\item $\varphi_{3} :\equiv \mathrm{Conv}(b,\beta) \to \beta \neq 0 \to \forall n \in \mathbb{N}\,(b_{n} \neq 0) \to \mathrm{Conv}(b^{\ast},\beta^{-1})$
+\item $\varphi_{4} :\equiv \beta \neq 0 \to \forall n \in \mathbb{N}\,(b_{n} \neq 0) \to \mathrm{Conv}(a \otimes b^{\ast},\alpha \cdot \beta^{-1})$
+\item $\varphi_{5} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b^{\ast},\beta^{-1}) \to \mathrm{Conv}(a \otimes b^{\ast},\alpha \cdot \beta^{-1})$
+\item $\varphi_{6} :\equiv \mathrm{Conv}(b,\beta) \to \beta \neq 0 \to \forall n \in \mathbb{N}\,(b_{n} \neq 0) \to \forall n \in \mathbb{N}\,(b_{n} \neq 0)$
+\item $\varphi_{7} :\equiv \forall a\,\forall \alpha\,\forall b\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{4})$
+\item $\varphi_{8} :\equiv (\mathrm{Conv}(a,\alpha) \to \varphi_{3}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{4}$
+\item $\varphi_{9} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \beta \neq 0 \to \beta \neq 0) \to (\mathrm{Conv}(a,\alpha) \to \varphi_{6}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{3}$
+\item $\varphi_{10} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \mathrm{Conv}(b,\beta)) \to \varphi_{9}$
+\end{abbrevlist}
+\end{fullproof}

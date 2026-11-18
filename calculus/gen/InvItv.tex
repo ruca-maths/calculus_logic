@@ -1,0 +1,1667 @@
+% 自動生成 (prover/build.js): InvItv  ノード数 619
+\begin{fullproof}{定理2.21(定義域)}{$\forall f\,(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f^{-1})))$}{619}\phantomsection\label{tree:InvItv}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z = w \to z \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1})$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1}))$}
+\UIC{$\varphi_{14}$}
+\AXC{$\varphi_{132}$\lbl{A2}}
+\BIC{$\forall w\,(x = w \to x \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1}))$}
+\AXC{$\varphi_{118}$\lbl{A2}}
+\BIC{$x = y \to x \in \mathrm{dom}(f^{-1}) \to y \in \mathrm{dom}(f^{-1})$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{143}$\lbl{A1}}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{143}) \to \varphi_{337}$\lbl{A1}}
+\BIC{$\varphi_{337}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$x = y \to x \in \mathrm{dom}(f^{-1}) \to y \in \mathrm{dom}(f^{-1})$}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{27}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{337}$}
+\BIC{$\varphi_{262}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{176}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(v_{920} = y \to y = v_{920})$\lbl{A2}}
+\BIC{$\forall y\,(v_{920} = y \to y = v_{920})$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$v_{920} = v_{921} \to v_{921} = v_{920}$}
+\UIC{$\forall v_{921}\,(v_{920} = v_{921} \to v_{921} = v_{920})$}
+\UIC{$\forall v_{920}\,\forall v_{921}\,(v_{920} = v_{921} \to v_{921} = v_{920})$}
+\AXC{$\varphi_{25}$\lbl{A2}}
+\BIC{$\forall v_{921}\,(y = v_{921} \to v_{921} = y)$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\forall v_{921}\,(y = v_{921} \to v_{921} = y)$}
+\AXC{$\forall v_{921}\,(y = v_{921} \to v_{921} = y) \to y = z \to z = y$\lbl{A2}}
+\BIC{$y = z \to z = y$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$y = z \to z = y$}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{165}$\lbl{A1}}
+\AXC{$\varphi_{339}$\lbl{A1}}
+\BIC{$(y = z \to z = y) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{166}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{166}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{166}) \to \varphi_{155} \to \varphi_{276}$\lbl{A1}}
+\BIC{$\varphi_{155} \to \varphi_{276}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to z_{1} \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1})$\lbl{A6}}
+\UIC{$\varphi_{11}$}
+\UIC{$\forall z_{1}\,(\varphi_{11})$}
+\AXC{$\varphi_{140}$\lbl{A2}}
+\BIC{$\forall w\,(z = w \to z \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1}))$}
+\AXC{$\varphi_{119}$\lbl{A2}}
+\BIC{$z = y \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathrm{dom}(f^{-1})$}
+\AXC{$\varphi_{155}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{155} \to \varphi_{276}$}
+\BIC{$\varphi_{276}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{168}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$z = w \to z \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1})$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1}))$}
+\UIC{$\varphi_{14}$}
+\AXC{$\varphi_{14} \to \varphi_{40}$\lbl{A2}}
+\BIC{$\varphi_{40}$}
+\AXC{$\varphi_{40} \to \varphi_{34}$\lbl{A2}}
+\BIC{$\varphi_{34}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall b\,\forall x\,(x \in [a,b] \leftrightarrow x \in \mathbb{R} \land a \leq x \land x \leq b)$\lbl{Def{$[a,b]$}}}
+\AXC{$\varphi_{134}$\lbl{A2}}
+\BIC{$\forall b\,\forall x\,(x \in [v_{917},b] \leftrightarrow x \in \mathbb{R} \land v_{917} \leq x \land x \leq b)$}
+\AXC{$\varphi_{145}$\lbl{A2}}
+\BIC{$\varphi_{18}$}
+\AXC{$\varphi_{18} \to \varphi_{41}$\lbl{A2}}
+\BIC{$\varphi_{41}$}
+\UIC{$\forall v_{919}\,(\varphi_{41})$}
+\UIC{$\forall v_{918}\,\forall v_{919}\,(\varphi_{41})$}
+\UIC{$\forall v_{917}\,\forall v_{918}\,\forall v_{919}\,(\varphi_{41})$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\forall v_{917}\,\forall v_{918}\,\forall v_{919}\,(\varphi_{41})$}
+\AXC{$\forall v_{917}\,\forall v_{918}\,\forall v_{919}\,(\varphi_{41}) \to \varphi_{120}$\lbl{A2}}
+\BIC{$\varphi_{120}$}
+\AXC{$\varphi_{120} \to \varphi_{146}$\lbl{A2}}
+\BIC{$\varphi_{146}$}
+\AXC{$\varphi_{146} \to \varphi_{121}$\lbl{A2}}
+\BIC{$\varphi_{121}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall b\,\forall x\,(x \in [a,b] \leftrightarrow x \in \mathbb{R} \land a \leq x \land x \leq b)$\lbl{Def{$[a,b]$}}}
+\AXC{$\varphi_{135}$\lbl{A2}}
+\BIC{$\forall b\,\forall x\,(x \in [v_{914},b] \leftrightarrow x \in \mathbb{R} \land v_{914} \leq x \land x \leq b)$}
+\AXC{$\varphi_{147}$\lbl{A2}}
+\BIC{$\varphi_{19}$}
+\AXC{$\varphi_{19} \to \varphi_{42}$\lbl{A2}}
+\BIC{$\varphi_{42}$}
+\UIC{$\forall v_{916}\,(\varphi_{42})$}
+\UIC{$\forall v_{915}\,\forall v_{916}\,(\varphi_{42})$}
+\UIC{$\forall v_{914}\,\forall v_{915}\,\forall v_{916}\,(\varphi_{42})$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\forall v_{914}\,\forall v_{915}\,\forall v_{916}\,(\varphi_{42})$}
+\AXC{$\forall v_{914}\,\forall v_{915}\,\forall v_{916}\,(\varphi_{42}) \to \varphi_{122}$\lbl{A2}}
+\BIC{$\varphi_{122}$}
+\AXC{$\varphi_{122} \to \varphi_{148}$\lbl{A2}}
+\BIC{$\varphi_{148}$}
+\AXC{$\varphi_{148} \to \varphi_{121}$\lbl{A2}}
+\BIC{$\varphi_{121}$}
+\AXC{$\varphi_{121} \to \varphi_{409}$\lbl{A1}}
+\BIC{$\varphi_{409}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{326}$\lbl{A1}}
+\AXC{$\varphi_{384}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{296}$}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{326}$\lbl{A1}}
+\AXC{$\varphi_{380}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{279}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{409}$}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{296}) \to \varphi_{374}$}
+\BIC{$\varphi_{374}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{121}$}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{326}$\lbl{A1}}
+\AXC{$\varphi_{383}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{295}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{374}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{314}$}
+\AXC{$\varphi_{396}$\lbl{A1}}
+\BIC{$\varphi_{121} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{318}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{318}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\forall f\,(\varphi_{59})$\lbl{DefContOn}}
+\AXC{$\forall f\,(\varphi_{59}) \to \varphi_{59}$\lbl{A2}}
+\BIC{$\varphi_{59}$}
+\AXC{$\varphi_{59} \to \varphi_{94}$\lbl{A2}}
+\BIC{$\varphi_{94}$}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\AXC{$\varphi_{1} \to \varphi_{94} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}$\lbl{A1}}
+\BIC{$\varphi_{94} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}$}
+\AXC{$\varphi_{3}$\lbl{[I1]}}
+\AXC{$\varphi_{79}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(f) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{Inj}(f)$}
+\AXC{$\varphi_{306}$\lbl{A1}}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}) \to \varphi_{189}$}
+\BIC{$\varphi_{189}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\forall f\,(\mathrm{RFn}(f) \to \mathrm{Inj}(f) \to \varphi_{258})$\lbl{[S26]}}
+\AXC{$\varphi_{363}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(f) \to \mathrm{Inj}(f) \to \varphi_{258}$}
+\AXC{$(\mathrm{RFn}(f) \to \mathrm{Inj}(f) \to \varphi_{258}) \to \varphi_{358}$\lbl{A1}}
+\BIC{$\varphi_{358}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{2}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{189}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{5}$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}$}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{358}$}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{5}) \to \varphi_{317}$}
+\BIC{$\varphi_{317}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\varphi_{82} \to \varphi_{75}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{317}$}
+\AXC{$\varphi_{317} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{266}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{266}$}
+\AXC{$\varphi_{393}$\lbl{A1}}
+\BIC{$(\varphi_{82} \to \varphi_{75}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{259}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{259}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\varphi_{155}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{259}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{259}) \to \varphi_{155} \to \varphi_{255}$\lbl{A1}}
+\BIC{$\varphi_{155} \to \varphi_{255}$}
+\BIC{$\varphi_{255}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{255}$}
+\AXC{$\varphi_{356}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{190}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\varphi_{82} \to \varphi_{76}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{317}$}
+\AXC{$\varphi_{317} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{266}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{266}$}
+\AXC{$\varphi_{394}$\lbl{A1}}
+\BIC{$(\varphi_{82} \to \varphi_{76}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{260}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{260}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{260}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{260}) \to \varphi_{334}$\lbl{A1}}
+\BIC{$\varphi_{334}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{27}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{334}$}
+\BIC{$\varphi_{256}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{256}$}
+\AXC{$\varphi_{357}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{191}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\varphi_{86} \to \varphi_{127}$\lbl{A2}}
+\AXC{$\varphi_{99}$\lbl{DefItv}}
+\AXC{$\varphi_{99} \to (\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86})$\lbl{A2}}
+\BIC{$\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86}$}
+\AXC{$\varphi_{7}$\lbl{A1}}
+\AXC{$\varphi_{7} \to \varphi_{362}$\lbl{A1}}
+\BIC{$\varphi_{362}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{327}$}
+\AXC{$\varphi_{405}$\lbl{A1}}
+\BIC{$(\varphi_{86} \to \varphi_{127}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{343}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{343}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\varphi_{305}$\lbl{A2}}
+\AXC{$\varphi_{127} \to \varphi_{130}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{343}$}
+\AXC{$\varphi_{406}$\lbl{A1}}
+\BIC{$(\varphi_{127} \to \varphi_{130}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{345}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{345}$}
+\AXC{$\varphi_{407}$\lbl{A1}}
+\BIC{$\varphi_{305} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{350}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{350}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{350}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{350}) \to \varphi_{415}$\lbl{A1}}
+\BIC{$\varphi_{415}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{190}$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{191}$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{415}$}
+\BIC{$\varphi_{412}$}
+\BIC{$\varphi_{408}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{318}$}
+\AXC{$\varphi_{378}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{289}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{318}$}
+\AXC{$\varphi_{375}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{279}$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\varphi_{408}$}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{289}) \to \varphi_{369}$}
+\BIC{$\varphi_{369}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{318}$}
+\AXC{$\varphi_{377}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{288}$}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{369}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{284}$}
+\AXC{$\varphi_{379}$\lbl{A1}}
+\BIC{$f(\xi) = f(\xi) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{310}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to f(\xi) = f(\xi)$\lbl{A2}}
+\BIC{$f(\xi) = f(\xi)$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$f(\xi) = f(\xi) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{310}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{310}$}
+\AXC{$\varphi_{392}$\lbl{A1}}
+\BIC{$\varphi_{85} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{312}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\varphi_{15} \to \varphi_{49}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{317}$}
+\AXC{$\varphi_{317} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{319}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{319}$}
+\AXC{$\varphi_{401}$\lbl{A1}}
+\BIC{$(\varphi_{15} \to \varphi_{49}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{324}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{324}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{324}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{324}) \to \varphi_{376}$\lbl{A1}}
+\BIC{$\varphi_{376}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{326}$\lbl{A1}}
+\AXC{$\varphi_{381}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{281}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{281}) \to \varphi_{387}$\lbl{A1}}
+\BIC{$\varphi_{387}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{34}$}
+\AXC{$\varphi_{85}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{85} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{312}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{312}$}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\varphi_{376}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{302}$}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\varphi_{387}$}
+\BIC{$\varphi_{34} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{291}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{291}$}
+\AXC{$\varphi_{371}$\lbl{A1}}
+\BIC{$\varphi_{196} \land y \notin \mathrm{dom}(f^{-1}) \to \varphi_{77}$}
+\UIC{$\forall \xi\,(\varphi_{196} \land y \notin \mathrm{dom}(f^{-1}) \to \varphi_{77})$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{67}$\lbl{A2}}
+\BIC{$\forall y\,(f(f^{-1}(z)) = y \to y = f(f^{-1}(z)))$}
+\AXC{$\varphi_{136}$\lbl{A2}}
+\BIC{$f(f^{-1}(z)) = z \to z = f(f^{-1}(z))$}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{255}$}
+\AXC{$\varphi_{354}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{184}$}
+\AXC{$\varphi_{359}$\lbl{A1}}
+\BIC{$\varphi_{293}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{185}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{177}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{185}$}
+\AXC{$\varphi_{388}$\lbl{A1}}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{177}) \to \varphi_{307}$}
+\BIC{$\varphi_{307}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{68}$\lbl{A2}}
+\BIC{$\forall y\,(f(f^{-1}(x)) = y \to y = f(f^{-1}(x)))$}
+\AXC{$\varphi_{137}$\lbl{A2}}
+\BIC{$f(f^{-1}(x)) = x \to x = f(f^{-1}(x))$}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{256}$}
+\AXC{$\varphi_{355}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{186}$}
+\AXC{$\varphi_{360}$\lbl{A1}}
+\BIC{$\varphi_{294}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{187}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{158}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{187}$}
+\AXC{$\varphi_{386}$\lbl{A1}}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{158}) \to \varphi_{308}$}
+\BIC{$\varphi_{308}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z)$\lbl{[O2]}}
+\AXC{$\varphi_{51}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(x < y \to y < z \to x < z)$}
+\AXC{$\varphi_{32}$\lbl{A2}}
+\BIC{$\forall z\,(x < y \to y < z \to x < z)$}
+\AXC{$\forall z\,(x < y \to y < z \to x < z) \to x < y \to y < z \to x < z$\lbl{A2}}
+\BIC{$x < y \to y < z \to x < z$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{177}$\lbl{A1}}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{158}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to x < z$}
+\AXC{$\varphi_{367}$\lbl{A1}}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{158}) \to \varphi_{340}$}
+\BIC{$\varphi_{340}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{178}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\varphi_{81}$\lbl{DefStrInc}}
+\AXC{$\varphi_{81} \to \varphi_{105}$\lbl{A2}}
+\BIC{$\varphi_{105}$}
+\AXC{$\varphi_{105} \to (\mathrm{StrInc}(f^{-1},\mathrm{dom}(f^{-1})) \leftrightarrow \forall x\,(\varphi_{98}))$\lbl{A2}}
+\BIC{$\mathrm{StrInc}(f^{-1},\mathrm{dom}(f^{-1})) \leftrightarrow \forall x\,(\varphi_{98})$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}$}
+\AXC{$\forall f\,(\mathrm{RFn}(f) \to \varphi_{9})$\lbl{[I2]}}
+\AXC{$\forall f\,(\mathrm{RFn}(f) \to \varphi_{9}) \to \mathrm{RFn}(f) \to \varphi_{9}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(f) \to \varphi_{9}$}
+\AXC{$\varphi_{328}$\lbl{A1}}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}) \to \varphi_{223}$}
+\BIC{$\varphi_{223}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{2}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$\varphi_{223}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{9}$}
+\AXC{$\varphi_{364}$\lbl{A1}}
+\BIC{$\varphi_{353}$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$\forall x\,(\varphi_{98}) \to \varphi_{98}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\mathrm{StrInc}(f^{-1},\mathrm{dom}(f^{-1})) \leftrightarrow \forall x\,(\varphi_{98})$}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$\varphi_{353}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{286}$}
+\AXC{$\varphi_{398}$\lbl{A1}}
+\BIC{$(\forall x\,(\varphi_{98}) \to \varphi_{98}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{283}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{283}$}
+\AXC{$\varphi_{397}$\lbl{A1}}
+\BIC{$(\varphi_{98} \to \varphi_{93}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{278}$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$\varphi_{98} \to \varphi_{93}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$(\varphi_{98} \to \varphi_{93}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{278}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{278}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{278}) \to \varphi_{385}$\lbl{A1}}
+\BIC{$\varphi_{385}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{178}$}
+\AXC{$\varphi_{155}$\lbl{A1}}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{27}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$\varphi_{385}$}
+\BIC{$\varphi_{155} \to \varphi_{349}$}
+\BIC{$\varphi_{349}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{201}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to x \in \mathbb{R})$\lbl{[S7]}}
+\AXC{$\varphi_{91}$\lbl{A2}}
+\BIC{$\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to x \in \mathbb{R})$}
+\AXC{$\varphi_{128}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(f) \to f^{-1}(z) \in \mathrm{dom}(f) \to f^{-1}(z) \in \mathbb{R}$}
+\AXC{$\varphi_{365}$\lbl{A1}}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}) \to \varphi_{351}$}
+\end{ptree}
+\noindent$\Pi_{51}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}$}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}) \to \varphi_{351}$}
+\BIC{$\varphi_{351}$}
+\end{ptree}
+\noindent$\Pi_{52}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to x \in \mathbb{R})$\lbl{[S7]}}
+\AXC{$\varphi_{91}$\lbl{A2}}
+\BIC{$\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to x \in \mathbb{R})$}
+\AXC{$\varphi_{129}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(f) \to f^{-1}(x) \in \mathrm{dom}(f) \to f^{-1}(x) \in \mathbb{R}$}
+\AXC{$\varphi_{366}$\lbl{A1}}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}) \to \varphi_{352}$}
+\end{ptree}
+\noindent$\Pi_{53}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}$}
+\AXC{$\stackrel{\Pi_{52}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}) \to \varphi_{352}$}
+\BIC{$\varphi_{352}$}
+\end{ptree}
+\noindent$\Pi_{54}$:
+\begin{ptree}
+\AXC{$\varphi_{116} \to \forall t\,(\varphi_{116})$\lbl{A4}}
+\AXC{$\forall t\,(\varphi_{116} \to \varphi_{108}) \to \forall t\,(\varphi_{116}) \to \varphi_{117}$\lbl{A3}}
+\AXC{$\varphi_{116} \to \varphi_{108}$\lbl{A2}}
+\UIC{$\forall t\,(\varphi_{116} \to \varphi_{108})$}
+\AXC{$\forall t\,(\varphi_{116} \to \varphi_{108}) \to \varphi_{403}$\lbl{A1}}
+\BIC{$\varphi_{403}$}
+\BIC{$(\varphi_{116} \to \forall t\,(\varphi_{116})) \to \varphi_{116} \to \varphi_{117}$}
+\BIC{$\varphi_{116} \to \varphi_{117}$}
+\end{ptree}
+\noindent$\Pi_{55}$:
+\begin{ptree}
+\AXC{$\varphi_{117} \to \forall c\,(\varphi_{117})$\lbl{A4}}
+\AXC{$\forall c\,(\varphi_{117} \to \varphi_{109}) \to \forall c\,(\varphi_{117}) \to \varphi_{116}$\lbl{A3}}
+\AXC{$\varphi_{117} \to \varphi_{109}$\lbl{A2}}
+\UIC{$\forall c\,(\varphi_{117} \to \varphi_{109})$}
+\AXC{$\forall c\,(\varphi_{117} \to \varphi_{109}) \to \varphi_{404}$\lbl{A1}}
+\BIC{$\varphi_{404}$}
+\BIC{$(\varphi_{117} \to \forall c\,(\varphi_{117})) \to \varphi_{117} \to \varphi_{116}$}
+\BIC{$\varphi_{117} \to \varphi_{116}$}
+\end{ptree}
+\noindent$\Pi_{56}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{54}}{\vdots}$}\noLine
+\UIC{$\varphi_{116} \to \varphi_{117}$}
+\AXC{$\stackrel{\Pi_{55}}{\vdots}$}\noLine
+\UIC{$\varphi_{117} \to \varphi_{116}$}
+\AXC{$\varphi_{117} \leftrightarrow \varphi_{117}$\lbl{A1}}
+\AXC{$(\varphi_{117} \leftrightarrow \varphi_{117}) \to (\varphi_{117} \to \varphi_{116}) \to (\varphi_{116} \to \varphi_{117}) \to (\varphi_{117} \leftrightarrow \varphi_{116})$\lbl{A1}}
+\BIC{$(\varphi_{117} \to \varphi_{116}) \to (\varphi_{116} \to \varphi_{117}) \to (\varphi_{117} \leftrightarrow \varphi_{116})$}
+\BIC{$(\varphi_{116} \to \varphi_{117}) \to (\varphi_{117} \leftrightarrow \varphi_{116})$}
+\BIC{$\varphi_{117} \leftrightarrow \varphi_{116}$}
+\end{ptree}
+\noindent$\Pi_{57}$:
+\begin{ptree}
+\AXC{$\varphi_{174}$\lbl{A4}}
+\AXC{$\forall u\,(\varphi_{162}) \to \varphi_{179}$\lbl{A3}}
+\AXC{$\varphi_{162}$\lbl{A2}}
+\UIC{$\forall u\,(\varphi_{162})$}
+\AXC{$\forall u\,(\varphi_{162}) \to (\forall u\,(\varphi_{162}) \to \varphi_{179}) \to \varphi_{174} \to \varphi_{169}$\lbl{A1}}
+\BIC{$(\forall u\,(\varphi_{162}) \to \varphi_{179}) \to \varphi_{174} \to \varphi_{169}$}
+\BIC{$\varphi_{174} \to \varphi_{169}$}
+\BIC{$\varphi_{169}$}
+\end{ptree}
+\noindent$\Pi_{58}$:
+\begin{ptree}
+\AXC{$\varphi_{175}$\lbl{A4}}
+\AXC{$\forall t\,(\varphi_{163}) \to \varphi_{180}$\lbl{A3}}
+\AXC{$\varphi_{163}$\lbl{A2}}
+\UIC{$\forall t\,(\varphi_{163})$}
+\AXC{$\forall t\,(\varphi_{163}) \to (\forall t\,(\varphi_{163}) \to \varphi_{180}) \to \varphi_{175} \to \varphi_{170}$\lbl{A1}}
+\BIC{$(\forall t\,(\varphi_{163}) \to \varphi_{180}) \to \varphi_{175} \to \varphi_{170}$}
+\BIC{$\varphi_{175} \to \varphi_{170}$}
+\BIC{$\varphi_{170}$}
+\end{ptree}
+\noindent$\Pi_{59}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall b\,\forall x\,(x \in [a,b] \leftrightarrow x \in \mathbb{R} \land a \leq x \land x \leq b)$\lbl{Def{$[a,b]$}}}
+\AXC{$\varphi_{138}$\lbl{A2}}
+\BIC{$\forall b\,\forall x\,(x \in [v_{908},b] \leftrightarrow x \in \mathbb{R} \land v_{908} \leq x \land x \leq b)$}
+\AXC{$\varphi_{149}$\lbl{A2}}
+\BIC{$\varphi_{20}$}
+\AXC{$\varphi_{20} \to \varphi_{43}$\lbl{A2}}
+\BIC{$\varphi_{43}$}
+\UIC{$\forall v_{910}\,(\varphi_{43})$}
+\UIC{$\forall v_{909}\,\forall v_{910}\,(\varphi_{43})$}
+\UIC{$\forall v_{908}\,\forall v_{909}\,\forall v_{910}\,(\varphi_{43})$}
+\end{ptree}
+\noindent$\Pi_{60}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{59}}{\vdots}$}\noLine
+\UIC{$\forall v_{908}\,\forall v_{909}\,\forall v_{910}\,(\varphi_{43})$}
+\AXC{$\forall v_{908}\,\forall v_{909}\,\forall v_{910}\,(\varphi_{43}) \to \varphi_{123}$\lbl{A2}}
+\BIC{$\varphi_{123}$}
+\AXC{$\varphi_{123} \to \varphi_{150}$\lbl{A2}}
+\BIC{$\varphi_{150}$}
+\AXC{$\varphi_{150} \to \varphi_{110}$\lbl{A2}}
+\BIC{$\varphi_{110}$}
+\end{ptree}
+\noindent$\Pi_{61}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{60}}{\vdots}$}\noLine
+\UIC{$\varphi_{110}$}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{282}$\lbl{A1}}
+\AXC{$\varphi_{390}$\lbl{A1}}
+\BIC{$\varphi_{110} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}$}
+\end{ptree}
+\noindent$\Pi_{62}$:
+\begin{ptree}
+\AXC{$\varphi_{7}$\lbl{A1}}
+\AXC{$\varphi_{7} \to (\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86}) \to \varphi_{323}$\lbl{A1}}
+\BIC{$(\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86}) \to \varphi_{323}$}
+\end{ptree}
+\noindent$\Pi_{63}$:
+\begin{ptree}
+\AXC{$\varphi_{99}$\lbl{DefItv}}
+\AXC{$\varphi_{99} \to (\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86})$\lbl{A2}}
+\BIC{$\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86}$}
+\AXC{$\stackrel{\Pi_{62}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86}) \to \varphi_{323}$}
+\BIC{$\varphi_{323}$}
+\end{ptree}
+\noindent$\Pi_{64}$:
+\begin{ptree}
+\AXC{$\varphi_{127} \to \varphi_{125}$\lbl{A2}}
+\AXC{$\varphi_{86} \to \varphi_{127}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{63}}{\vdots}$}\noLine
+\UIC{$\varphi_{323}$}
+\AXC{$\varphi_{323} \to (\varphi_{86} \to \varphi_{127}) \to \varphi_{331}$\lbl{A1}}
+\BIC{$(\varphi_{86} \to \varphi_{127}) \to \varphi_{331}$}
+\BIC{$\varphi_{331}$}
+\AXC{$\varphi_{331} \to (\varphi_{127} \to \varphi_{125}) \to \varphi_{329}$\lbl{A1}}
+\BIC{$(\varphi_{127} \to \varphi_{125}) \to \varphi_{329}$}
+\BIC{$\varphi_{329}$}
+\end{ptree}
+\noindent$\Pi_{65}$:
+\begin{ptree}
+\AXC{$\varphi_{300}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{64}}{\vdots}$}\noLine
+\UIC{$\varphi_{329}$}
+\AXC{$\varphi_{329} \to \varphi_{300} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{333}$\lbl{A1}}
+\BIC{$\varphi_{300} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{333}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{333}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{333}) \to \varphi_{413}$\lbl{A1}}
+\BIC{$\varphi_{413}$}
+\end{ptree}
+\noindent$\Pi_{66}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{190}$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{191}$}
+\AXC{$\stackrel{\Pi_{65}}{\vdots}$}\noLine
+\UIC{$\varphi_{413}$}
+\BIC{$\varphi_{410}$}
+\BIC{$\varphi_{263} \to \varphi_{272} \to \varphi_{271} \to \varphi_{264}$}
+\end{ptree}
+\noindent$\Pi_{67}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{61}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}) \to \varphi_{263}$\lbl{A1}}
+\BIC{$\varphi_{263}$}
+\AXC{$\stackrel{\Pi_{66}}{\vdots}$}\noLine
+\UIC{$\varphi_{263} \to \varphi_{272} \to \varphi_{271} \to \varphi_{264}$}
+\BIC{$\varphi_{272} \to \varphi_{271} \to \varphi_{264}$}
+\end{ptree}
+\noindent$\Pi_{68}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{61}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}) \to \varphi_{272}$\lbl{A1}}
+\BIC{$\varphi_{272}$}
+\AXC{$\stackrel{\Pi_{67}}{\vdots}$}\noLine
+\UIC{$\varphi_{272} \to \varphi_{271} \to \varphi_{264}$}
+\BIC{$\varphi_{271} \to \varphi_{264}$}
+\end{ptree}
+\noindent$\Pi_{69}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{61}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}) \to \varphi_{271}$\lbl{A1}}
+\BIC{$\varphi_{271}$}
+\AXC{$\stackrel{\Pi_{68}}{\vdots}$}\noLine
+\UIC{$\varphi_{271} \to \varphi_{264}$}
+\BIC{$\varphi_{264}$}
+\end{ptree}
+\noindent$\Pi_{70}$:
+\begin{ptree}
+\AXC{$\varphi_{269} \to \varphi_{275}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{69}}{\vdots}$}\noLine
+\UIC{$\varphi_{264}$}
+\AXC{$\varphi_{264} \to \varphi_{196} \to t \in [f^{-1}(x),f^{-1}(z)] \to t \in \mathrm{dom}(f)$\lbl{A1}}
+\BIC{$\varphi_{196} \to t \in [f^{-1}(x),f^{-1}(z)] \to t \in \mathrm{dom}(f)$}
+\UIC{$\varphi_{269}$}
+\AXC{$\varphi_{269} \to (\varphi_{269} \to \varphi_{275}) \to (\varphi_{196} \to \forall t\,(\varphi_{196})) \to \varphi_{270}$\lbl{A1}}
+\BIC{$(\varphi_{269} \to \varphi_{275}) \to (\varphi_{196} \to \forall t\,(\varphi_{196})) \to \varphi_{270}$}
+\BIC{$(\varphi_{196} \to \forall t\,(\varphi_{196})) \to \varphi_{270}$}
+\end{ptree}
+\noindent$\Pi_{71}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$\lbl{Def$\subseteq$}}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to \varphi_{133}$\lbl{A2}}
+\BIC{$\varphi_{133}$}
+\AXC{$\varphi_{133} \to \varphi_{142}$\lbl{A2}}
+\BIC{$\varphi_{142}$}
+\AXC{$\varphi_{142} \to \varphi_{270} \to \varphi_{170} \to \varphi_{169} \to \varphi_{254}$\lbl{A1}}
+\BIC{$\varphi_{270} \to \varphi_{170} \to \varphi_{169} \to \varphi_{254}$}
+\end{ptree}
+\noindent$\Pi_{72}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{57}}{\vdots}$}\noLine
+\UIC{$\varphi_{169}$}
+\AXC{$\stackrel{\Pi_{58}}{\vdots}$}\noLine
+\UIC{$\varphi_{170}$}
+\AXC{$\varphi_{196} \to \forall t\,(\varphi_{196})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{70}}{\vdots}$}\noLine
+\UIC{$(\varphi_{196} \to \forall t\,(\varphi_{196})) \to \varphi_{270}$}
+\BIC{$\varphi_{270}$}
+\AXC{$\stackrel{\Pi_{71}}{\vdots}$}\noLine
+\UIC{$\varphi_{270} \to \varphi_{170} \to \varphi_{169} \to \varphi_{254}$}
+\BIC{$\varphi_{170} \to \varphi_{169} \to \varphi_{254}$}
+\BIC{$\varphi_{169} \to \varphi_{254}$}
+\BIC{$\varphi_{254}$}
+\end{ptree}
+\noindent$\Pi_{73}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall b\,\forall x\,(x \in [a,b] \leftrightarrow x \in \mathbb{R} \land a \leq x \land x \leq b)$\lbl{Def{$[a,b]$}}}
+\AXC{$\varphi_{139}$\lbl{A2}}
+\BIC{$\forall b\,\forall x\,(x \in [v_{911},b] \leftrightarrow x \in \mathbb{R} \land v_{911} \leq x \land x \leq b)$}
+\AXC{$\varphi_{151}$\lbl{A2}}
+\BIC{$\varphi_{21}$}
+\AXC{$\varphi_{21} \to \varphi_{44}$\lbl{A2}}
+\BIC{$\varphi_{44}$}
+\UIC{$\forall v_{913}\,(\varphi_{44})$}
+\UIC{$\forall v_{912}\,\forall v_{913}\,(\varphi_{44})$}
+\UIC{$\forall v_{911}\,\forall v_{912}\,\forall v_{913}\,(\varphi_{44})$}
+\end{ptree}
+\noindent$\Pi_{74}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{73}}{\vdots}$}\noLine
+\UIC{$\forall v_{911}\,\forall v_{912}\,\forall v_{913}\,(\varphi_{44})$}
+\AXC{$\forall v_{911}\,\forall v_{912}\,\forall v_{913}\,(\varphi_{44}) \to \varphi_{124}$\lbl{A2}}
+\BIC{$\varphi_{124}$}
+\AXC{$\varphi_{124} \to \varphi_{152}$\lbl{A2}}
+\BIC{$\varphi_{152}$}
+\AXC{$\varphi_{152} \to \varphi_{110}$\lbl{A2}}
+\BIC{$\varphi_{110}$}
+\end{ptree}
+\noindent$\Pi_{75}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{74}}{\vdots}$}\noLine
+\UIC{$\varphi_{110}$}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{282}$\lbl{A1}}
+\AXC{$\varphi_{390}$\lbl{A1}}
+\BIC{$\varphi_{110} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}$}
+\end{ptree}
+\noindent$\Pi_{76}$:
+\begin{ptree}
+\AXC{$\varphi_{7}$\lbl{A1}}
+\AXC{$\varphi_{7} \to (\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86}) \to \varphi_{323}$\lbl{A1}}
+\BIC{$(\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86}) \to \varphi_{323}$}
+\end{ptree}
+\noindent$\Pi_{77}$:
+\begin{ptree}
+\AXC{$\varphi_{99}$\lbl{DefItv}}
+\AXC{$\varphi_{99} \to (\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86})$\lbl{A2}}
+\BIC{$\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86}$}
+\AXC{$\stackrel{\Pi_{76}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86}) \to \varphi_{323}$}
+\BIC{$\varphi_{323}$}
+\end{ptree}
+\noindent$\Pi_{78}$:
+\begin{ptree}
+\AXC{$\varphi_{127} \to \varphi_{125}$\lbl{A2}}
+\AXC{$\varphi_{86} \to \varphi_{127}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{77}}{\vdots}$}\noLine
+\UIC{$\varphi_{323}$}
+\AXC{$\varphi_{323} \to (\varphi_{86} \to \varphi_{127}) \to \varphi_{331}$\lbl{A1}}
+\BIC{$(\varphi_{86} \to \varphi_{127}) \to \varphi_{331}$}
+\BIC{$\varphi_{331}$}
+\AXC{$\varphi_{331} \to (\varphi_{127} \to \varphi_{125}) \to \varphi_{329}$\lbl{A1}}
+\BIC{$(\varphi_{127} \to \varphi_{125}) \to \varphi_{329}$}
+\BIC{$\varphi_{329}$}
+\end{ptree}
+\noindent$\Pi_{79}$:
+\begin{ptree}
+\AXC{$\varphi_{300}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{78}}{\vdots}$}\noLine
+\UIC{$\varphi_{329}$}
+\AXC{$\varphi_{329} \to \varphi_{300} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{333}$\lbl{A1}}
+\BIC{$\varphi_{300} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{333}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{333}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{333}) \to \varphi_{413}$\lbl{A1}}
+\BIC{$\varphi_{413}$}
+\end{ptree}
+\noindent$\Pi_{80}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{190}$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{191}$}
+\AXC{$\stackrel{\Pi_{79}}{\vdots}$}\noLine
+\UIC{$\varphi_{413}$}
+\BIC{$\varphi_{410}$}
+\BIC{$\varphi_{263} \to \varphi_{272} \to \varphi_{271} \to \varphi_{264}$}
+\end{ptree}
+\noindent$\Pi_{81}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{75}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}) \to \varphi_{263}$\lbl{A1}}
+\BIC{$\varphi_{263}$}
+\AXC{$\stackrel{\Pi_{80}}{\vdots}$}\noLine
+\UIC{$\varphi_{263} \to \varphi_{272} \to \varphi_{271} \to \varphi_{264}$}
+\BIC{$\varphi_{272} \to \varphi_{271} \to \varphi_{264}$}
+\end{ptree}
+\noindent$\Pi_{82}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{75}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}) \to \varphi_{272}$\lbl{A1}}
+\BIC{$\varphi_{272}$}
+\AXC{$\stackrel{\Pi_{81}}{\vdots}$}\noLine
+\UIC{$\varphi_{272} \to \varphi_{271} \to \varphi_{264}$}
+\BIC{$\varphi_{271} \to \varphi_{264}$}
+\end{ptree}
+\noindent$\Pi_{83}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{75}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}) \to \varphi_{271}$\lbl{A1}}
+\BIC{$\varphi_{271}$}
+\AXC{$\stackrel{\Pi_{82}}{\vdots}$}\noLine
+\UIC{$\varphi_{271} \to \varphi_{264}$}
+\BIC{$\varphi_{264}$}
+\end{ptree}
+\noindent$\Pi_{84}$:
+\begin{ptree}
+\AXC{$\forall f\,(\varphi_{59})$\lbl{DefContOn}}
+\AXC{$\forall f\,(\varphi_{59}) \to \varphi_{59}$\lbl{A2}}
+\BIC{$\varphi_{59}$}
+\AXC{$\varphi_{59} \to \varphi_{94}$\lbl{A2}}
+\BIC{$\varphi_{94}$}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\AXC{$\varphi_{1} \to \varphi_{94} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{274}$\lbl{A1}}
+\BIC{$\varphi_{94} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{274}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{274}$}
+\end{ptree}
+\noindent$\Pi_{85}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{83}}{\vdots}$}\noLine
+\UIC{$\varphi_{264}$}
+\AXC{$\varphi_{74}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{84}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{274}$}
+\AXC{$\varphi_{382}$\lbl{A1}}
+\BIC{$\varphi_{74} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{268}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{268}$}
+\AXC{$\varphi_{395}$\lbl{A1}}
+\BIC{$\varphi_{264} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{252}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{252}$}
+\end{ptree}
+\noindent$\Pi_{86}$:
+\begin{ptree}
+\AXC{$\forall f\,(\varphi_{31})$\lbl{[G3]}}
+\AXC{$\forall f\,(\varphi_{31}) \to \varphi_{31}$\lbl{A2}}
+\BIC{$\varphi_{31}$}
+\AXC{$\varphi_{31} \to \varphi_{52}$\lbl{A2}}
+\BIC{$\varphi_{52}$}
+\AXC{$\varphi_{52} \to \varphi_{240}$\lbl{A2}}
+\BIC{$\varphi_{240}$}
+\AXC{$\varphi_{240} \to \varphi_{235}$\lbl{A2}}
+\BIC{$\varphi_{235}$}
+\end{ptree}
+\noindent$\Pi_{87}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{72}}{\vdots}$}\noLine
+\UIC{$\varphi_{254}$}
+\AXC{$\stackrel{\Pi_{85}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{252}$}
+\AXC{$\stackrel{\Pi_{86}}{\vdots}$}\noLine
+\UIC{$\varphi_{235}$}
+\AXC{$\varphi_{235} \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{252}) \to \varphi_{254} \to \varphi_{368}$\lbl{A1}}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{252}) \to \varphi_{254} \to \varphi_{368}$}
+\BIC{$\varphi_{254} \to \varphi_{368}$}
+\BIC{$\varphi_{368}$}
+\end{ptree}
+\noindent$\Pi_{88}$:
+\begin{ptree}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{282}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{87}}{\vdots}$}\noLine
+\UIC{$\varphi_{368}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{290}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{290}) \to \varphi_{196} \to \varphi_{108}$\lbl{A1}}
+\BIC{$\varphi_{196} \to \varphi_{108}$}
+\UIC{$\forall t\,(\varphi_{196} \to \varphi_{108})$}
+\AXC{$\forall t\,(\varphi_{196} \to \varphi_{108}) \to \varphi_{411}$\lbl{A1}}
+\BIC{$\varphi_{411}$}
+\end{ptree}
+\noindent$\Pi_{89}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{56}}{\vdots}$}\noLine
+\UIC{$\varphi_{117} \leftrightarrow \varphi_{116}$}
+\AXC{$\varphi_{196} \to \forall t\,(\varphi_{196})$\lbl{A4}}
+\AXC{$\forall t\,(\varphi_{196} \to \varphi_{108}) \to \forall t\,(\varphi_{196}) \to \varphi_{117}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{88}}{\vdots}$}\noLine
+\UIC{$\varphi_{411}$}
+\BIC{$(\varphi_{196} \to \forall t\,(\varphi_{196})) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{297}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{297}$}
+\AXC{$\varphi_{399}$\lbl{A1}}
+\BIC{$(\varphi_{117} \leftrightarrow \varphi_{116}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{298}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{298}$}
+\end{ptree}
+\noindent$\Pi_{90}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{72}}{\vdots}$}\noLine
+\UIC{$\varphi_{254}$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}$}
+\AXC{$\forall f\,(\varphi_{59})$\lbl{DefContOn}}
+\AXC{$\forall f\,(\varphi_{59}) \to \varphi_{59}$\lbl{A2}}
+\BIC{$\varphi_{59}$}
+\AXC{$\varphi_{59} \to \varphi_{277}$\lbl{A2}}
+\BIC{$\varphi_{277}$}
+\AXC{$\varphi_{277} \to \varphi_{400}$\lbl{A1}}
+\BIC{$\varphi_{400}$}
+\BIC{$\varphi_{254} \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{298}) \to \varphi_{253}$}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{298}) \to \varphi_{253}$}
+\end{ptree}
+\noindent$\Pi_{91}$:
+\begin{ptree}
+\AXC{$\forall f\,(\varphi_{241})$\lbl{定理2.14}}
+\AXC{$\forall f\,(\varphi_{241}) \to \varphi_{241}$\lbl{A2}}
+\BIC{$\varphi_{241}$}
+\AXC{$\varphi_{241} \to \varphi_{309}$\lbl{A2}}
+\BIC{$\varphi_{309}$}
+\AXC{$\varphi_{309} \to \varphi_{341}$\lbl{A2}}
+\BIC{$\varphi_{341}$}
+\AXC{$\varphi_{341} \to \varphi_{332}$\lbl{A2}}
+\BIC{$\varphi_{332}$}
+\AXC{$\varphi_{332} \to \varphi_{253} \to \varphi_{414}$\lbl{A1}}
+\BIC{$\varphi_{253} \to \varphi_{414}$}
+\end{ptree}
+\noindent$\Pi_{92}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{89}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{298}$}
+\AXC{$\stackrel{\Pi_{90}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{298}) \to \varphi_{253}$}
+\BIC{$\varphi_{253}$}
+\AXC{$\stackrel{\Pi_{91}}{\vdots}$}\noLine
+\UIC{$\varphi_{253} \to \varphi_{414}$}
+\BIC{$\varphi_{414}$}
+\end{ptree}
+\noindent$\Pi_{93}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{191}$}
+\AXC{$\stackrel{\Pi_{53}}{\vdots}$}\noLine
+\UIC{$\varphi_{352}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{208}$}
+\AXC{$\stackrel{\Pi_{92}}{\vdots}$}\noLine
+\UIC{$\varphi_{414}$}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{207}) \to \varphi_{161} \to \varphi_{402}$}
+\end{ptree}
+\noindent$\Pi_{94}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{190}$}
+\AXC{$\stackrel{\Pi_{51}}{\vdots}$}\noLine
+\UIC{$\varphi_{351}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{207}$}
+\AXC{$\stackrel{\Pi_{93}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{207}) \to \varphi_{161} \to \varphi_{402}$}
+\BIC{$\varphi_{161} \to \varphi_{402}$}
+\end{ptree}
+\noindent$\Pi_{95}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{201}$}
+\AXC{$\varphi_{161}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{94}}{\vdots}$}\noLine
+\UIC{$\varphi_{161} \to \varphi_{402}$}
+\BIC{$\varphi_{402}$}
+\BIC{$\varphi_{389}$}
+\end{ptree}
+\noindent$\Pi_{96}$:
+\begin{ptree}
+\AXC{$z = w \to z < y \to w < y$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < y \to w < y)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < y \to w < y)$}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\forall w\,(x = w \to x < y \to w < y)$}
+\AXC{$\varphi_{104}$\lbl{A2}}
+\BIC{$x = f(f^{-1}(x)) \to x < y \to f(f^{-1}(x)) < y$}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\varphi_{308}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{193}$}
+\AXC{$\stackrel{\Pi_{95}}{\vdots}$}\noLine
+\UIC{$\varphi_{389}$}
+\BIC{$\varphi_{361}$}
+\end{ptree}
+\noindent$\Pi_{97}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to y < z_{1} \to y < w$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to y < z_{1} \to y < w)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to y < z_{1} \to y < w)$}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\BIC{$\forall w\,(z = w \to y < z \to y < w)$}
+\AXC{$\varphi_{103}$\lbl{A2}}
+\BIC{$z = f(f^{-1}(z)) \to y < z \to y < f(f^{-1}(z))$}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\varphi_{307}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{192}$}
+\AXC{$\stackrel{\Pi_{96}}{\vdots}$}\noLine
+\UIC{$\varphi_{361}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{267}$}
+\AXC{$\varphi_{416}$\lbl{A1}}
+\BIC{$\forall \xi\,(\varphi_{196} \land y \notin \mathrm{dom}(f^{-1}) \to \varphi_{77}) \to \varphi_{372} \to \varphi_{373}$}
+\end{ptree}
+\noindent$\Pi_{98}$:
+\begin{ptree}
+\AXC{$\varphi_{372}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$\forall \xi\,(\varphi_{196} \land y \notin \mathrm{dom}(f^{-1}) \to \varphi_{77})$}
+\AXC{$\stackrel{\Pi_{97}}{\vdots}$}\noLine
+\UIC{$\forall \xi\,(\varphi_{196} \land y \notin \mathrm{dom}(f^{-1}) \to \varphi_{77}) \to \varphi_{372} \to \varphi_{373}$}
+\BIC{$\varphi_{372} \to \varphi_{373}$}
+\BIC{$\varphi_{373}$}
+\end{ptree}
+\noindent$\Pi_{99}$:
+\begin{ptree}
+\AXC{$\varphi_{172}$\lbl{A1}}
+\AXC{$\varphi_{172} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{171}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{171}$}
+\AXC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{171}) \to \varphi_{370}$\lbl{A1}}
+\BIC{$\varphi_{370}$}
+\end{ptree}
+\noindent$\Pi_{100}$:
+\begin{ptree}
+\AXC{$\varphi_{196} \land y \notin \mathrm{dom}(f^{-1}) \to \forall \xi\,(\varphi_{196} \land y \notin \mathrm{dom}(f^{-1}))$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{98}}{\vdots}$}\noLine
+\UIC{$\varphi_{373}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{173}$}
+\AXC{$\stackrel{\Pi_{99}}{\vdots}$}\noLine
+\UIC{$\varphi_{370}$}
+\BIC{$\varphi_{348}$}
+\end{ptree}
+\noindent$\Pi_{101}$:
+\begin{ptree}
+\AXC{$\varphi_{159}$\lbl{A1}}
+\AXC{$\varphi_{159} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{156}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{156}$}
+\AXC{$\varphi_{391}$\lbl{A1}}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{188}) \to \varphi_{335}$}
+\end{ptree}
+\noindent$\Pi_{102}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{168}$}
+\AXC{$\stackrel{\Pi_{100}}{\vdots}$}\noLine
+\UIC{$\varphi_{348}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{188}$}
+\AXC{$\stackrel{\Pi_{101}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{188}) \to \varphi_{335}$}
+\BIC{$\varphi_{335}$}
+\end{ptree}
+\noindent$\Pi_{103}$:
+\begin{ptree}
+\AXC{$\varphi_{338}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{176}$}
+\AXC{$\stackrel{\Pi_{102}}{\vdots}$}\noLine
+\UIC{$\varphi_{335}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{167}$}
+\AXC{$\varphi_{330}$\lbl{A1}}
+\BIC{$\varphi_{10} \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{48}$}
+\UIC{$\forall z\,(\varphi_{10} \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})$}
+\AXC{$\forall z\,(\varphi_{10} \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{48}) \to \varphi_{338} \to \varphi_{320}$\lbl{A1}}
+\BIC{$\varphi_{338} \to \varphi_{320}$}
+\BIC{$\varphi_{320}$}
+\end{ptree}
+\noindent$\Pi_{104}$:
+\begin{ptree}
+\AXC{$\varphi_{10} \to \forall z\,(\varphi_{10})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{103}}{\vdots}$}\noLine
+\UIC{$\varphi_{320}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{141}$}
+\AXC{$\varphi_{336}$\lbl{A1}}
+\BIC{$\varphi_{10} \to \forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})$}
+\UIC{$\forall y\,(\varphi_{10} \to \forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48}))$}
+\AXC{$\forall y\,(\varphi_{10} \to \forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})) \to \varphi_{344} \to \varphi_{321}$\lbl{A1}}
+\BIC{$\varphi_{344} \to \varphi_{321}$}
+\end{ptree}
+\noindent$\Pi_{105}$:
+\begin{ptree}
+\AXC{$\varphi_{10} \to \forall y\,(\varphi_{10})$\lbl{A4}}
+\AXC{$\varphi_{344}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{104}}{\vdots}$}\noLine
+\UIC{$\varphi_{344} \to \varphi_{321}$}
+\BIC{$\varphi_{321}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{154}$}
+\AXC{$\varphi_{342}$\lbl{A1}}
+\BIC{$\varphi_{10} \to \forall y\,\forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})$}
+\UIC{$\forall x\,(\varphi_{10} \to \forall y\,\forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48}))$}
+\AXC{$\forall x\,(\varphi_{10} \to \forall y\,\forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})) \to \varphi_{347} \to \varphi_{322}$\lbl{A1}}
+\BIC{$\varphi_{347} \to \varphi_{322}$}
+\end{ptree}
+\noindent$\Pi_{106}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to x \in \mathbb{R})$\lbl{[S7]}}
+\AXC{$\varphi_{111}$\lbl{A2}}
+\BIC{$\forall x\,(\mathrm{RFn}(f^{-1}) \to x \in \mathrm{dom}(f^{-1}) \to x \in \mathbb{R})$}
+\AXC{$\varphi_{126}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(f^{-1}) \to u \in \mathrm{dom}(f^{-1}) \to u \in \mathbb{R}$}
+\AXC{$\varphi_{346}$\lbl{A1}}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{8}) \to \varphi_{249}$}
+\end{ptree}
+\noindent$\Pi_{107}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{317}$}
+\AXC{$\varphi_{317} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{8}$\lbl{A1}}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{8}$}
+\AXC{$\stackrel{\Pi_{106}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{8}) \to \varphi_{249}$}
+\BIC{$\varphi_{249}$}
+\end{ptree}
+\noindent$\Pi_{108}$:
+\begin{ptree}
+\AXC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{30}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{107}}{\vdots}$}\noLine
+\UIC{$\varphi_{249}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{12}$}
+\AXC{$\varphi_{244}$\lbl{A1}}
+\BIC{$\varphi_{10} \to u \in \mathrm{dom}(f^{-1}) \to u \in \mathbb{R}$}
+\UIC{$\forall u\,(\varphi_{10} \to u \in \mathrm{dom}(f^{-1}) \to u \in \mathbb{R})$}
+\end{ptree}
+\noindent$\Pi_{109}$:
+\begin{ptree}
+\AXC{$\varphi_{250}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{108}}{\vdots}$}\noLine
+\UIC{$\forall u\,(\varphi_{10} \to u \in \mathrm{dom}(f^{-1}) \to u \in \mathbb{R})$}
+\AXC{$\forall u\,(\varphi_{10} \to u \in \mathrm{dom}(f^{-1}) \to u \in \mathbb{R}) \to \varphi_{250} \to \varphi_{265}$\lbl{A1}}
+\BIC{$\varphi_{250} \to \varphi_{265}$}
+\BIC{$\varphi_{265}$}
+\end{ptree}
+\noindent$\Pi_{110}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$\lbl{Def$\subseteq$}}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to \varphi_{24}$\lbl{A2}}
+\BIC{$\varphi_{24}$}
+\AXC{$\varphi_{164}$\lbl{A2}}
+\BIC{$\mathrm{dom}(f^{-1}) \subseteq \mathbb{R} \leftrightarrow \forall u \in \mathrm{dom}(f^{-1})\,(u \in \mathbb{R})$}
+\AXC{$\varphi_{303}$\lbl{A1}}
+\BIC{$\varphi_{236}$}
+\end{ptree}
+\noindent$\Pi_{111}$:
+\begin{ptree}
+\AXC{$\varphi_{99}$\lbl{DefItv}}
+\AXC{$\varphi_{99} \to \varphi_{202}$\lbl{A2}}
+\BIC{$\varphi_{202}$}
+\AXC{$\varphi_{202} \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{23}) \to \varphi_{301}$\lbl{A1}}
+\BIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{23}) \to \varphi_{301}$}
+\end{ptree}
+\noindent$\Pi_{112}$:
+\begin{ptree}
+\AXC{$\varphi_{10} \to \forall u\,(\varphi_{10})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{109}}{\vdots}$}\noLine
+\UIC{$\varphi_{265}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{16}$}
+\AXC{$\stackrel{\Pi_{110}}{\vdots}$}\noLine
+\UIC{$\varphi_{236}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{23}$}
+\AXC{$\stackrel{\Pi_{111}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{23}) \to \varphi_{301}$}
+\BIC{$\varphi_{301}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{10} \to \forall x\,(\varphi_{10})$\lbl{A4}}
+\AXC{$\varphi_{347}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{105}}{\vdots}$}\noLine
+\UIC{$\varphi_{347} \to \varphi_{322}$}
+\BIC{$\varphi_{322}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{157}$}
+\AXC{$\stackrel{\Pi_{112}}{\vdots}$}\noLine
+\UIC{$\varphi_{301}$}
+\BIC{$\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{13}$}
+\UIC{$\forall f\,(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{13})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{ContOn}(f,\mathrm{dom}(f))$
+\item $\varphi_{2} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f))$
+\item $\varphi_{3} :\equiv \forall f\,(\mathrm{RFn}(f) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{Inj}(f))$
+\item $\varphi_{4} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{RFn}(f)$
+\item $\varphi_{5} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{Inj}(f)$
+\item $\varphi_{6} :\equiv \forall y\,(v_{920} = y \to y = v_{920}) \to v_{920} = v_{921} \to v_{921} = v_{920}$
+\item $\varphi_{7} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f))$
+\item $\varphi_{8} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{RFn}(f^{-1})$
+\item $\varphi_{9} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{StrInc}(f^{-1},\mathrm{dom}(f^{-1}))$
+\item $\varphi_{10} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \land \mathrm{Itv}(\mathrm{dom}(f)) \land \mathrm{StrInc}(f,\mathrm{dom}(f))$
+\item $\varphi_{11} :\equiv \forall w\,(z_{1} = w \to z_{1} \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1}))$
+\item $\varphi_{12} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to u \in \mathrm{dom}(f^{-1}) \to u \in \mathbb{R}$
+\item $\varphi_{13} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f^{-1}))$
+\item $\varphi_{14} :\equiv \forall z\,\forall w\,(z = w \to z \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1}))$
+\item $\varphi_{15} :\equiv \forall y\,(y \in \mathrm{dom}(f^{-1}) \leftrightarrow \exists x \in \mathrm{dom}(f)\,(y = f(x)))$
+\item $\varphi_{16} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \forall u \in \mathrm{dom}(f^{-1})\,(u \in \mathbb{R})$
+\item $\varphi_{17} :\equiv \forall z\,\forall w\,(z = w \to z < y \to w < y) \to \forall w\,(x = w \to x < y \to w < y)$
+\item $\varphi_{18} :\equiv \forall x\,(x \in [v_{917},v_{918}] \leftrightarrow x \in \mathbb{R} \land v_{917} \leq x \land x \leq v_{918})$
+\item $\varphi_{19} :\equiv \forall x\,(x \in [v_{914},v_{915}] \leftrightarrow x \in \mathbb{R} \land v_{914} \leq x \land x \leq v_{915})$
+\item $\varphi_{20} :\equiv \forall x\,(x \in [v_{908},v_{909}] \leftrightarrow x \in \mathbb{R} \land v_{908} \leq x \land x \leq v_{909})$
+\item $\varphi_{21} :\equiv \forall x\,(x \in [v_{911},v_{912}] \leftrightarrow x \in \mathbb{R} \land v_{911} \leq x \land x \leq v_{912})$
+\item $\varphi_{22} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x = y \to x = y$
+\item $\varphi_{23} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{dom}(f^{-1}) \subseteq \mathbb{R}$
+\item $\varphi_{24} :\equiv \forall y\,(\mathrm{dom}(f^{-1}) \subseteq y \leftrightarrow \forall u \in \mathrm{dom}(f^{-1})\,(u \in y))$
+\item $\varphi_{25} :\equiv \forall v_{920}\,\forall v_{921}\,(v_{920} = v_{921} \to v_{921} = v_{920}) \to \forall v_{921}\,(y = v_{921} \to v_{921} = y)$
+\item $\varphi_{26} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to y < z_{1} \to y < w) \to \forall w\,(z = w \to y < z \to y < w)$
+\item $\varphi_{27} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to x \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{28} :\equiv y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y = z \to y \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{29} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \lor x = y$
+\item $\varphi_{30} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to u \in \mathrm{dom}(f^{-1}) \to u \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{31} :\equiv \forall A\,\forall B\,\forall c\,(\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \mathrm{ContIn}(f,B,c))$
+\item $\varphi_{32} :\equiv \forall y\,\forall z\,(x < y \to y < z \to x < z) \to \forall z\,(x < y \to y < z \to x < z)$
+\item $\varphi_{33} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{34} :\equiv f(\xi) = y \to f(\xi) \in \mathrm{dom}(f^{-1}) \to y \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{35} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to x < y$
+\item $\varphi_{36} :\equiv y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to y \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{37} :\equiv t \in [f^{-1}(x),f^{-1}(z)] \to \mathrm{ContIn}(f,\mathrm{dom}(f),t)$
+\item $\varphi_{38} :\equiv t \in \mathbb{R} \to f^{-1}(x) \leq t \to t \leq f^{-1}(z) \to t \in \mathrm{dom}(f)$
+\item $\varphi_{39} :\equiv x < y \to y < z \to \mathrm{ContOn}(f,[f^{-1}(x),f^{-1}(z)])$
+\item $\varphi_{40} :\equiv \forall w\,(f(\xi) = w \to f(\xi) \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1}))$
+\item $\varphi_{41} :\equiv v_{919} \in [v_{917},v_{918}] \leftrightarrow v_{919} \in \mathbb{R} \land v_{917} \leq v_{919} \land v_{919} \leq v_{918}$
+\item $\varphi_{42} :\equiv v_{916} \in [v_{914},v_{915}] \leftrightarrow v_{916} \in \mathbb{R} \land v_{914} \leq v_{916} \land v_{916} \leq v_{915}$
+\item $\varphi_{43} :\equiv v_{910} \in [v_{908},v_{909}] \leftrightarrow v_{910} \in \mathbb{R} \land v_{908} \leq v_{910} \land v_{910} \leq v_{909}$
+\item $\varphi_{44} :\equiv v_{913} \in [v_{911},v_{912}] \leftrightarrow v_{913} \in \mathbb{R} \land v_{911} \leq v_{913} \land v_{913} \leq v_{912}$
+\item $\varphi_{45} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y = z \to y = z$
+\item $\varphi_{46} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y = z \to z = y$
+\item $\varphi_{47} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to x \leq y$
+\item $\varphi_{48} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to y \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{49} :\equiv f(\xi) \in \mathrm{dom}(f^{-1}) \leftrightarrow \exists x \in \mathrm{dom}(f)\,(f(\xi) = f(x))$
+\item $\varphi_{50} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to y \in \mathbb{R}$
+\item $\varphi_{51} :\equiv \forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z) \to \forall y\,\forall z\,(x < y \to y < z \to x < z)$
+\item $\varphi_{52} :\equiv \forall B\,\forall c\,(\mathrm{ContIn}(f,\mathrm{dom}(f),c) \to B \subseteq \mathrm{dom}(f) \to c \in B \to \mathrm{ContIn}(f,B,c))$
+\item $\varphi_{53} :\equiv y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to f(f^{-1}(z)) = z$
+\item $\varphi_{54} :\equiv y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to z = f(f^{-1}(z))$
+\item $\varphi_{55} :\equiv y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to f(f^{-1}(x)) = x$
+\item $\varphi_{56} :\equiv y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to x = f(f^{-1}(x))$
+\item $\varphi_{57} :\equiv \xi \in \mathbb{R} \to f^{-1}(x) \leq \xi \to \xi \leq f^{-1}(z) \to \xi \in \mathrm{dom}(f)$
+\item $\varphi_{58} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \lor y = z$
+\item $\varphi_{59} :\equiv \forall A\,(\mathrm{ContOn}(f,A) \leftrightarrow \mathrm{RFn}(f) \land A \subseteq \mathrm{dom}(f) \land \forall c \in A\,(\mathrm{ContIn}(f,A,c)))$
+\item $\varphi_{60} :\equiv y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to f^{-1}(z) \in \mathrm{dom}(f)$
+\item $\varphi_{61} :\equiv y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to f^{-1}(x) \in \mathrm{dom}(f)$
+\item $\varphi_{62} :\equiv y < z \to \forall t \in [f^{-1}(x),f^{-1}(z)]\,(t \in \mathrm{dom}(f))$
+\item $\varphi_{63} :\equiv x < y \to y < z \to f^{-1}(z) \in \mathrm{dom}(f) \land f(f^{-1}(z)) = z$
+\item $\varphi_{64} :\equiv x < y \to y < z \to f^{-1}(x) \in \mathrm{dom}(f) \land f(f^{-1}(x)) = x$
+\item $\varphi_{65} :\equiv y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to y < f(f^{-1}(z))$
+\item $\varphi_{66} :\equiv y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to f(f^{-1}(x)) < y$
+\item $\varphi_{67} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(f(f^{-1}(z)) = y \to y = f(f^{-1}(z)))$
+\item $\varphi_{68} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(f(f^{-1}(x)) = y \to y = f(f^{-1}(x)))$
+\item $\varphi_{69} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x = y \to y \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{70} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to y < z$
+\item $\varphi_{71} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to x < z$
+\item $\varphi_{72} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to y \leq z$
+\item $\varphi_{73} :\equiv y \leq z \to x < y \to y < z \to [f^{-1}(x),f^{-1}(z)] \subseteq \mathrm{dom}(f)$
+\item $\varphi_{74} :\equiv \forall c \in \mathrm{dom}(f)\,(\mathrm{ContIn}(f,\mathrm{dom}(f),c)) \to t \in \mathrm{dom}(f) \to \mathrm{ContIn}(f,\mathrm{dom}(f),t)$
+\item $\varphi_{75} :\equiv z \in \mathrm{dom}(f^{-1}) \to f^{-1}(z) \in \mathrm{dom}(f) \land f(f^{-1}(z)) = z$
+\item $\varphi_{76} :\equiv x \in \mathrm{dom}(f^{-1}) \to f^{-1}(x) \in \mathrm{dom}(f) \land f(f^{-1}(x)) = x$
+\item $\varphi_{77} :\equiv \neg (\xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y)$
+\item $\varphi_{78} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{79} :\equiv \varphi_{3} \to \mathrm{RFn}(f) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{Inj}(f)$
+\item $\varphi_{80} :\equiv x < y \to y < z \to t \in [f^{-1}(x),f^{-1}(z)] \to t \in \mathrm{dom}(f)$
+\item $\varphi_{81} :\equiv \forall f\,\forall A\,(\mathrm{StrInc}(f,A) \leftrightarrow \forall x\,\forall y\,(x \in A \to y \in A \to x < y \to f(x) < f(y)))$
+\item $\varphi_{82} :\equiv \forall y \in \mathrm{dom}(f^{-1})\,(f^{-1}(y) \in \mathrm{dom}(f) \land f(f^{-1}(y)) = y)$
+\item $\varphi_{83} :\equiv y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to f^{-1}(x) < f^{-1}(z)$
+\item $\varphi_{84} :\equiv \exists \xi\,(\xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y)$
+\item $\varphi_{85} :\equiv \forall x\,(\neg (x \in \mathrm{dom}(f) \land f(\xi) = f(x))) \to \neg (\xi \in \mathrm{dom}(f) \land f(\xi) = f(\xi))$
+\item $\varphi_{86} :\equiv \forall x\,\forall y\,\forall z\,(x \in \mathrm{dom}(f) \to z \in \mathrm{dom}(f) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to y \in \mathrm{dom}(f))$
+\item $\varphi_{87} :\equiv t \in [f^{-1}(x),f^{-1}(z)] \to t \in \mathrm{dom}(f) \to \mathrm{ContIn}(f,\mathrm{dom}(f),t)$
+\item $\varphi_{88} :\equiv x < y \to y < z \to t \in [f^{-1}(x),f^{-1}(z)] \to t \leq f^{-1}(z)$
+\item $\varphi_{89} :\equiv x < y \to y < z \to t \in [f^{-1}(x),f^{-1}(z)] \to f^{-1}(x) \leq t$
+\item $\varphi_{90} :\equiv y \leq z \to x < y \to y < z \to t \in [f^{-1}(x),f^{-1}(z)] \to t \in \mathbb{R}$
+\item $\varphi_{91} :\equiv \forall f\,\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to x \in \mathbb{R}) \to \forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to x \in \mathbb{R})$
+\item $\varphi_{92} :\equiv t \in [f^{-1}(x),f^{-1}(z)] \to \forall c \in \mathrm{dom}(f)\,(\mathrm{ContIn}(f,\mathrm{dom}(f),c))$
+\item $\varphi_{93} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to x < z \to f^{-1}(x) < f^{-1}(z)$
+\item $\varphi_{94} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \leftrightarrow \mathrm{RFn}(f) \land \mathrm{dom}(f) \subseteq \mathrm{dom}(f) \land \forall c \in \mathrm{dom}(f)\,(\mathrm{ContIn}(f,\mathrm{dom}(f),c))$
+\item $\varphi_{95} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \xi \in \mathbb{R}$
+\item $\varphi_{96} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to f(\xi) = y$
+\item $\varphi_{97} :\equiv t \in [f^{-1}(x),f^{-1}(z)] \to t \in [f^{-1}(x),f^{-1}(z)]$
+\item $\varphi_{98} :\equiv \forall y\,(x \in \mathrm{dom}(f^{-1}) \to y \in \mathrm{dom}(f^{-1}) \to x < y \to f^{-1}(x) < f^{-1}(y))$
+\item $\varphi_{99} :\equiv \forall I\,(\mathrm{Itv}(I) \leftrightarrow I \subseteq \mathbb{R} \land \forall x\,\forall y\,\forall z\,(x \in I \to z \in I \to y \in \mathbb{R} \to x \leq y \to y \leq z \to y \in I))$
+\item $\varphi_{100} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \xi \in \mathrm{dom}(f)$
+\item $\varphi_{101} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to f^{-1}(z) \in \mathbb{R}$
+\item $\varphi_{102} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to f^{-1}(x) \in \mathbb{R}$
+\item $\varphi_{103} :\equiv \forall w\,(z = w \to y < z \to y < w) \to z = f(f^{-1}(z)) \to y < z \to y < f(f^{-1}(z))$
+\item $\varphi_{104} :\equiv \forall w\,(x = w \to x < y \to w < y) \to x = f(f^{-1}(x)) \to x < y \to f(f^{-1}(x)) < y$
+\item $\varphi_{105} :\equiv \forall A\,(\mathrm{StrInc}(f^{-1},A) \leftrightarrow \forall x\,\forall y\,(x \in A \to y \in A \to x < y \to f^{-1}(x) < f^{-1}(y)))$
+\item $\varphi_{106} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \xi \leq f^{-1}(z)$
+\item $\varphi_{107} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to f^{-1}(x) \leq \xi$
+\item $\varphi_{108} :\equiv t \in [f^{-1}(x),f^{-1}(z)] \to \mathrm{ContIn}(f,[f^{-1}(x),f^{-1}(z)],t)$
+\item $\varphi_{109} :\equiv c \in [f^{-1}(x),f^{-1}(z)] \to \mathrm{ContIn}(f,[f^{-1}(x),f^{-1}(z)],c)$
+\item $\varphi_{110} :\equiv t \in [f^{-1}(x),f^{-1}(z)] \leftrightarrow t \in \mathbb{R} \land f^{-1}(x) \leq t \land t \leq f^{-1}(z)$
+\item $\varphi_{111} :\equiv \forall f\,\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to x \in \mathbb{R}) \to \forall x\,(\mathrm{RFn}(f^{-1}) \to x \in \mathrm{dom}(f^{-1}) \to x \in \mathbb{R})$
+\item $\varphi_{112} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to y \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{113} :\equiv t \in [f^{-1}(x),f^{-1}(z)] \to t \in \mathbb{R} \land f^{-1}(x) \leq t \land t \leq f^{-1}(z)$
+\item $\varphi_{114} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \xi < f^{-1}(z)$
+\item $\varphi_{115} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to f^{-1}(x) < \xi$
+\item $\varphi_{116} :\equiv \forall c \in [f^{-1}(x),f^{-1}(z)]\,(\mathrm{ContIn}(f,[f^{-1}(x),f^{-1}(z)],c))$
+\item $\varphi_{117} :\equiv \forall t \in [f^{-1}(x),f^{-1}(z)]\,(\mathrm{ContIn}(f,[f^{-1}(x),f^{-1}(z)],t))$
+\item $\varphi_{118} :\equiv \forall w\,(x = w \to x \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1})) \to x = y \to x \in \mathrm{dom}(f^{-1}) \to y \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{119} :\equiv \forall w\,(z = w \to z \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1})) \to z = y \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{120} :\equiv \forall v_{918}\,\forall v_{919}\,(v_{919} \in [f^{-1}(x),v_{918}] \leftrightarrow v_{919} \in \mathbb{R} \land f^{-1}(x) \leq v_{919} \land v_{919} \leq v_{918})$
+\item $\varphi_{121} :\equiv \xi \in [f^{-1}(x),f^{-1}(z)] \leftrightarrow \xi \in \mathbb{R} \land f^{-1}(x) \leq \xi \land \xi \leq f^{-1}(z)$
+\item $\varphi_{122} :\equiv \forall v_{915}\,\forall v_{916}\,(v_{916} \in [f^{-1}(x),v_{915}] \leftrightarrow v_{916} \in \mathbb{R} \land f^{-1}(x) \leq v_{916} \land v_{916} \leq v_{915})$
+\item $\varphi_{123} :\equiv \forall v_{909}\,\forall v_{910}\,(v_{910} \in [f^{-1}(x),v_{909}] \leftrightarrow v_{910} \in \mathbb{R} \land f^{-1}(x) \leq v_{910} \land v_{910} \leq v_{909})$
+\item $\varphi_{124} :\equiv \forall v_{912}\,\forall v_{913}\,(v_{913} \in [f^{-1}(x),v_{912}] \leftrightarrow v_{913} \in \mathbb{R} \land f^{-1}(x) \leq v_{913} \land v_{913} \leq v_{912})$
+\item $\varphi_{125} :\equiv \forall z\,(f^{-1}(x) \in \mathrm{dom}(f) \to z \in \mathrm{dom}(f) \to t \in \mathbb{R} \to f^{-1}(x) \leq t \to t \leq z \to t \in \mathrm{dom}(f))$
+\item $\varphi_{126} :\equiv \forall x\,(\mathrm{RFn}(f^{-1}) \to x \in \mathrm{dom}(f^{-1}) \to x \in \mathbb{R}) \to \mathrm{RFn}(f^{-1}) \to u \in \mathrm{dom}(f^{-1}) \to u \in \mathbb{R}$
+\item $\varphi_{127} :\equiv \forall y\,\forall z\,(f^{-1}(x) \in \mathrm{dom}(f) \to z \in \mathrm{dom}(f) \to y \in \mathbb{R} \to f^{-1}(x) \leq y \to y \leq z \to y \in \mathrm{dom}(f))$
+\item $\varphi_{128} :\equiv \forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to x \in \mathbb{R}) \to \mathrm{RFn}(f) \to f^{-1}(z) \in \mathrm{dom}(f) \to f^{-1}(z) \in \mathbb{R}$
+\item $\varphi_{129} :\equiv \forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to x \in \mathbb{R}) \to \mathrm{RFn}(f) \to f^{-1}(x) \in \mathrm{dom}(f) \to f^{-1}(x) \in \mathbb{R}$
+\item $\varphi_{130} :\equiv \forall z\,(f^{-1}(x) \in \mathrm{dom}(f) \to z \in \mathrm{dom}(f) \to \xi \in \mathbb{R} \to f^{-1}(x) \leq \xi \to \xi \leq z \to \xi \in \mathrm{dom}(f))$
+\item $\varphi_{131} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to f(\xi) \in \mathrm{dom}(f^{-1})$
+\item $\varphi_{132} :\equiv \varphi_{14} \to \forall w\,(x = w \to x \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1}))$
+\item $\varphi_{133} :\equiv \forall y\,([f^{-1}(x),f^{-1}(z)] \subseteq y \leftrightarrow \forall u \in [f^{-1}(x),f^{-1}(z)]\,(u \in y))$
+\item $\varphi_{134} :\equiv \forall a\,\forall b\,\forall x\,(x \in [a,b] \leftrightarrow x \in \mathbb{R} \land a \leq x \land x \leq b) \to \forall b\,\forall x\,(x \in [v_{917},b] \leftrightarrow x \in \mathbb{R} \land v_{917} \leq x \land x \leq b)$
+\item $\varphi_{135} :\equiv \forall a\,\forall b\,\forall x\,(x \in [a,b] \leftrightarrow x \in \mathbb{R} \land a \leq x \land x \leq b) \to \forall b\,\forall x\,(x \in [v_{914},b] \leftrightarrow x \in \mathbb{R} \land v_{914} \leq x \land x \leq b)$
+\item $\varphi_{136} :\equiv \forall y\,(f(f^{-1}(z)) = y \to y = f(f^{-1}(z))) \to f(f^{-1}(z)) = z \to z = f(f^{-1}(z))$
+\item $\varphi_{137} :\equiv \forall y\,(f(f^{-1}(x)) = y \to y = f(f^{-1}(x))) \to f(f^{-1}(x)) = x \to x = f(f^{-1}(x))$
+\item $\varphi_{138} :\equiv \forall a\,\forall b\,\forall x\,(x \in [a,b] \leftrightarrow x \in \mathbb{R} \land a \leq x \land x \leq b) \to \forall b\,\forall x\,(x \in [v_{908},b] \leftrightarrow x \in \mathbb{R} \land v_{908} \leq x \land x \leq b)$
+\item $\varphi_{139} :\equiv \forall a\,\forall b\,\forall x\,(x \in [a,b] \leftrightarrow x \in \mathbb{R} \land a \leq x \land x \leq b) \to \forall b\,\forall x\,(x \in [v_{911},b] \leftrightarrow x \in \mathbb{R} \land v_{911} \leq x \land x \leq b)$
+\item $\varphi_{140} :\equiv \forall z_{1}\,(\varphi_{11}) \to \forall w\,(z = w \to z \in \mathrm{dom}(f^{-1}) \to w \in \mathrm{dom}(f^{-1}))$
+\item $\varphi_{141} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})$
+\item $\varphi_{142} :\equiv [f^{-1}(x),f^{-1}(z)] \subseteq \mathrm{dom}(f) \leftrightarrow \forall u \in [f^{-1}(x),f^{-1}(z)]\,(u \in \mathrm{dom}(f))$
+\item $\varphi_{143} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{22}$
+\item $\varphi_{144} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \xi \in \mathrm{dom}(f) \land f(\xi) = f(\xi)$
+\item $\varphi_{145} :\equiv \forall b\,\forall x\,(x \in [v_{917},b] \leftrightarrow x \in \mathbb{R} \land v_{917} \leq x \land x \leq b) \to \varphi_{18}$
+\item $\varphi_{146} :\equiv \forall v_{919}\,(v_{919} \in [f^{-1}(x),f^{-1}(z)] \leftrightarrow v_{919} \in \mathbb{R} \land f^{-1}(x) \leq v_{919} \land v_{919} \leq f^{-1}(z))$
+\item $\varphi_{147} :\equiv \forall b\,\forall x\,(x \in [v_{914},b] \leftrightarrow x \in \mathbb{R} \land v_{914} \leq x \land x \leq b) \to \varphi_{19}$
+\item $\varphi_{148} :\equiv \forall v_{916}\,(v_{916} \in [f^{-1}(x),f^{-1}(z)] \leftrightarrow v_{916} \in \mathbb{R} \land f^{-1}(x) \leq v_{916} \land v_{916} \leq f^{-1}(z))$
+\item $\varphi_{149} :\equiv \forall b\,\forall x\,(x \in [v_{908},b] \leftrightarrow x \in \mathbb{R} \land v_{908} \leq x \land x \leq b) \to \varphi_{20}$
+\item $\varphi_{150} :\equiv \forall v_{910}\,(v_{910} \in [f^{-1}(x),f^{-1}(z)] \leftrightarrow v_{910} \in \mathbb{R} \land f^{-1}(x) \leq v_{910} \land v_{910} \leq f^{-1}(z))$
+\item $\varphi_{151} :\equiv \forall b\,\forall x\,(x \in [v_{911},b] \leftrightarrow x \in \mathbb{R} \land v_{911} \leq x \land x \leq b) \to \varphi_{21}$
+\item $\varphi_{152} :\equiv \forall v_{913}\,(v_{913} \in [f^{-1}(x),f^{-1}(z)] \leftrightarrow v_{913} \in \mathbb{R} \land f^{-1}(x) \leq v_{913} \land v_{913} \leq f^{-1}(z))$
+\item $\varphi_{153} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \exists x \in \mathrm{dom}(f)\,(f(\xi) = f(x))$
+\item $\varphi_{154} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \forall y\,\forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})$
+\item $\varphi_{155} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{33}$
+\item $\varphi_{156} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{29}$
+\item $\varphi_{157} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \forall x\,\forall y\,\forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})$
+\item $\varphi_{158} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{35}$
+\item $\varphi_{159} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{47}$
+\item $\varphi_{160} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \xi \in [f^{-1}(x),f^{-1}(z)]$
+\item $\varphi_{161} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{50}$
+\item $\varphi_{162} :\equiv \forall t \in [f^{-1}(x),f^{-1}(z)]\,(t \in \mathrm{dom}(f)) \to u \in [f^{-1}(x),f^{-1}(z)] \to u \in \mathrm{dom}(f)$
+\item $\varphi_{163} :\equiv \forall u \in [f^{-1}(x),f^{-1}(z)]\,(u \in \mathrm{dom}(f)) \to t \in [f^{-1}(x),f^{-1}(z)] \to t \in \mathrm{dom}(f)$
+\item $\varphi_{164} :\equiv \varphi_{24} \to (\mathrm{dom}(f^{-1}) \subseteq \mathbb{R} \leftrightarrow \forall u \in \mathrm{dom}(f^{-1})\,(u \in \mathbb{R}))$
+\item $\varphi_{165} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{45}$
+\item $\varphi_{166} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{46}$
+\item $\varphi_{167} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{48}$
+\item $\varphi_{168} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to \varphi_{28}$
+\item $\varphi_{169} :\equiv \forall t \in [f^{-1}(x),f^{-1}(z)]\,(t \in \mathrm{dom}(f)) \to \forall u \in [f^{-1}(x),f^{-1}(z)]\,(u \in \mathrm{dom}(f))$
+\item $\varphi_{170} :\equiv \forall u \in [f^{-1}(x),f^{-1}(z)]\,(u \in \mathrm{dom}(f)) \to \forall t \in [f^{-1}(x),f^{-1}(z)]\,(t \in \mathrm{dom}(f))$
+\item $\varphi_{171} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{58}$
+\item $\varphi_{172} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{72}$
+\item $\varphi_{173} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to \varphi_{36}$
+\item $\varphi_{174} :\equiv \forall t \in [f^{-1}(x),f^{-1}(z)]\,(t \in \mathrm{dom}(f)) \to \forall u\,\forall t \in [f^{-1}(x),f^{-1}(z)]\,(t \in \mathrm{dom}(f))$
+\item $\varphi_{175} :\equiv \forall u \in [f^{-1}(x),f^{-1}(z)]\,(u \in \mathrm{dom}(f)) \to \forall t\,\forall u \in [f^{-1}(x),f^{-1}(z)]\,(u \in \mathrm{dom}(f))$
+\item $\varphi_{176} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{69}$
+\item $\varphi_{177} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{70}$
+\item $\varphi_{178} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{71}$
+\item $\varphi_{179} :\equiv \forall u\,\forall t \in [f^{-1}(x),f^{-1}(z)]\,(t \in \mathrm{dom}(f)) \to \forall u \in [f^{-1}(x),f^{-1}(z)]\,(u \in \mathrm{dom}(f))$
+\item $\varphi_{180} :\equiv \forall t\,\forall u \in [f^{-1}(x),f^{-1}(z)]\,(u \in \mathrm{dom}(f)) \to \forall t \in [f^{-1}(x),f^{-1}(z)]\,(t \in \mathrm{dom}(f))$
+\item $\varphi_{181} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \xi \in \mathbb{R} \land f^{-1}(x) \leq \xi \land \xi \leq f^{-1}(z)$
+\item $\varphi_{182} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \varphi_{15}$
+\item $\varphi_{183} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{37}$
+\item $\varphi_{184} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to \varphi_{53}$
+\item $\varphi_{185} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to \varphi_{54}$
+\item $\varphi_{186} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to \varphi_{55}$
+\item $\varphi_{187} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to \varphi_{56}$
+\item $\varphi_{188} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{78}$
+\item $\varphi_{189} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{2}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{5}$
+\item $\varphi_{190} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to \varphi_{60}$
+\item $\varphi_{191} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to \varphi_{61}$
+\item $\varphi_{192} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to \varphi_{65}$
+\item $\varphi_{193} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to \varphi_{66}$
+\item $\varphi_{194} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to \varphi_{39}$
+\item $\varphi_{195} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to \varphi_{73}$
+\item $\varphi_{196} :\equiv \varphi_{10} \land x \in \mathrm{dom}(f^{-1}) \land z \in \mathrm{dom}(f^{-1}) \land y \in \mathbb{R} \land x \leq y \land y \leq z \land x < y \land y < z$
+\item $\varphi_{197} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{75}$
+\item $\varphi_{198} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to \varphi_{63}$
+\item $\varphi_{199} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{76}$
+\item $\varphi_{200} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to \varphi_{64}$
+\item $\varphi_{201} :\equiv \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to \varphi_{83}$
+\item $\varphi_{202} :\equiv \mathrm{Itv}(\mathrm{dom}(f^{-1})) \leftrightarrow \mathrm{dom}(f^{-1}) \subseteq \mathbb{R} \land \forall x\,\forall y\,\forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})$
+\item $\varphi_{203} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{82}$
+\item $\varphi_{204} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \varphi_{49}$
+\item $\varphi_{205} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to \varphi_{90}$
+\item $\varphi_{206} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{84}$
+\item $\varphi_{207} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{101}$
+\item $\varphi_{208} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{102}$
+\item $\varphi_{209} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to \varphi_{80}$
+\item $\varphi_{210} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{87}$
+\item $\varphi_{211} :\equiv y \leq z \to x < y \to y < z \to t \in [f^{-1}(x),f^{-1}(z)] \to \varphi_{86}$
+\item $\varphi_{212} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to \varphi_{62}$
+\item $\varphi_{213} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{92}$
+\item $\varphi_{214} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y$
+\item $\varphi_{215} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to \varphi_{88}$
+\item $\varphi_{216} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to \varphi_{89}$
+\item $\varphi_{217} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{93}$
+\item $\varphi_{218} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{95}$
+\item $\varphi_{219} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{96}$
+\item $\varphi_{220} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{97}$
+\item $\varphi_{221} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \varphi_{86}$
+\item $\varphi_{222} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{98}$
+\item $\varphi_{223} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{2}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{9}$
+\item $\varphi_{224} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{100}$
+\item $\varphi_{225} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \forall x\,(\varphi_{98})$
+\item $\varphi_{226} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{106}$
+\item $\varphi_{227} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{107}$
+\item $\varphi_{228} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{108}$
+\item $\varphi_{229} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{112}$
+\item $\varphi_{230} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{113}$
+\item $\varphi_{231} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{114}$
+\item $\varphi_{232} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{115}$
+\item $\varphi_{233} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{117}$
+\item $\varphi_{234} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{116}$
+\item $\varphi_{235} :\equiv \mathrm{ContIn}(f,\mathrm{dom}(f),t) \to [f^{-1}(x),f^{-1}(z)] \subseteq \mathrm{dom}(f) \to \varphi_{108}$
+\item $\varphi_{236} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{16}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{23}$
+\item $\varphi_{237} :\equiv t \in [f^{-1}(x),f^{-1}(z)] \to f^{-1}(x) \in \mathrm{dom}(f) \to f^{-1}(z) \in \mathrm{dom}(f) \to \varphi_{38}$
+\item $\varphi_{238} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{131}$
+\item $\varphi_{239} :\equiv y \leq z \to x < y \to y < z \to t \in [f^{-1}(x),f^{-1}(z)] \to \varphi_{125}$
+\item $\varphi_{240} :\equiv \forall c\,(\mathrm{ContIn}(f,\mathrm{dom}(f),c) \to [f^{-1}(x),f^{-1}(z)] \subseteq \mathrm{dom}(f) \to \varphi_{109})$
+\item $\varphi_{241} :\equiv \forall a\,\forall b\,\forall \mu\,(\mathrm{ContOn}(f,[a,b]) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mu \in \mathbb{R} \to a < b \to f(a) < \mu \to \mu < f(b) \to \exists \xi\,(\xi \in \mathbb{R} \land a < \xi \land \xi < b \land f(\xi) = \mu))$
+\item $\varphi_{242} :\equiv y \leq z \to x < y \to y < z \to t \in [f^{-1}(x),f^{-1}(z)] \to \varphi_{127}$
+\item $\varphi_{243} :\equiv f^{-1}(x) < f^{-1}(z) \to f(f^{-1}(x)) < y \to y < f(f^{-1}(z)) \to \varphi_{84}$
+\item $\varphi_{244} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{12}) \to \varphi_{10} \to u \in \mathrm{dom}(f^{-1}) \to u \in \mathbb{R}$
+\item $\varphi_{245} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \varphi_{127}$
+\item $\varphi_{246} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{144}$
+\item $\varphi_{247} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to \varphi_{130}$
+\item $\varphi_{248} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{153}$
+\item $\varphi_{249} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{30}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{12}$
+\item $\varphi_{250} :\equiv \forall u\,(\varphi_{10} \to u \in \mathrm{dom}(f^{-1}) \to u \in \mathbb{R}) \to \forall u\,(\varphi_{10}) \to \forall u \in \mathrm{dom}(f^{-1})\,(u \in \mathbb{R})$
+\item $\varphi_{251} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{160}$
+\item $\varphi_{252} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{183}$
+\item $\varphi_{253} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{194}$
+\item $\varphi_{254} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{195}$
+\item $\varphi_{255} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{198}$
+\item $\varphi_{256} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{200}$
+\item $\varphi_{257} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{181}$
+\item $\varphi_{258} :\equiv \mathrm{RFn}(f^{-1}) \land \varphi_{15} \land \forall x \in \mathrm{dom}(f)\,(f^{-1}(f(x)) = x) \land \varphi_{82}$
+\item $\varphi_{259} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{197}$
+\item $\varphi_{260} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{199}$
+\item $\varphi_{261} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{182}$
+\item $\varphi_{262} :\equiv (x = y \to x \in \mathrm{dom}(f^{-1}) \to y \in \mathrm{dom}(f^{-1})) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{176}$
+\item $\varphi_{263} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{205}$
+\item $\varphi_{264} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{209}$
+\item $\varphi_{265} :\equiv (\varphi_{10} \to \forall u\,(\varphi_{10})) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{16}$
+\item $\varphi_{266} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{203}$
+\item $\varphi_{267} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{206}$
+\item $\varphi_{268} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{210}$
+\item $\varphi_{269} :\equiv \forall t\,(\varphi_{196} \to t \in [f^{-1}(x),f^{-1}(z)] \to t \in \mathrm{dom}(f))$
+\item $\varphi_{270} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{212}$
+\item $\varphi_{271} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{215}$
+\item $\varphi_{272} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{216}$
+\item $\varphi_{273} :\equiv \xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = y \to f^{-1}(x) \in \mathrm{dom}(f) \to f^{-1}(z) \in \mathrm{dom}(f) \to \varphi_{57}$
+\item $\varphi_{274} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{213}$
+\item $\varphi_{275} :\equiv \forall t\,(\varphi_{196}) \to \forall t \in [f^{-1}(x),f^{-1}(z)]\,(t \in \mathrm{dom}(f))$
+\item $\varphi_{276} :\equiv (z = y \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathrm{dom}(f^{-1})) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{168}$
+\item $\varphi_{277} :\equiv \mathrm{ContOn}(f,[f^{-1}(x),f^{-1}(z)]) \leftrightarrow \mathrm{RFn}(f) \land [f^{-1}(x),f^{-1}(z)] \subseteq \mathrm{dom}(f) \land \varphi_{116}$
+\item $\varphi_{278} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{217}$
+\item $\varphi_{279} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{218}$
+\item $\varphi_{280} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{204}$
+\item $\varphi_{281} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{219}$
+\item $\varphi_{282} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{220}$
+\item $\varphi_{283} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{222}$
+\item $\varphi_{284} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{224}$
+\item $\varphi_{285} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to \varphi_{211}$
+\item $\varphi_{286} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{225}$
+\item $\varphi_{287} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{214}$
+\item $\varphi_{288} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{226}$
+\item $\varphi_{289} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{227}$
+\item $\varphi_{290} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{228}$
+\item $\varphi_{291} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{229}$
+\item $\varphi_{292} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{230}$
+\item $\varphi_{293} :\equiv (f(f^{-1}(z)) = z \to z = f(f^{-1}(z))) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{185}$
+\item $\varphi_{294} :\equiv (f(f^{-1}(x)) = x \to x = f(f^{-1}(x))) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{187}$
+\item $\varphi_{295} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{231}$
+\item $\varphi_{296} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{232}$
+\item $\varphi_{297} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{233}$
+\item $\varphi_{298} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{234}$
+\item $\varphi_{299} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{221}$
+\item $\varphi_{300} :\equiv \varphi_{125} \to f^{-1}(x) \in \mathrm{dom}(f) \to f^{-1}(z) \in \mathrm{dom}(f) \to \varphi_{38}$
+\item $\varphi_{301} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{157}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{13}$
+\item $\varphi_{302} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{238}$
+\item $\varphi_{303} :\equiv (\mathrm{dom}(f^{-1}) \subseteq \mathbb{R} \leftrightarrow \forall u \in \mathrm{dom}(f^{-1})\,(u \in \mathbb{R})) \to \varphi_{236}$
+\item $\varphi_{304} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to \varphi_{239}$
+\item $\varphi_{305} :\equiv \varphi_{130} \to f^{-1}(x) \in \mathrm{dom}(f) \to f^{-1}(z) \in \mathrm{dom}(f) \to \varphi_{57}$
+\item $\varphi_{306} :\equiv (\mathrm{RFn}(f) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{Inj}(f)) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}) \to \varphi_{189}$
+\item $\varphi_{307} :\equiv (z = f(f^{-1}(z)) \to y < z \to y < f(f^{-1}(z))) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{192}$
+\item $\varphi_{308} :\equiv (x = f(f^{-1}(x)) \to x < y \to f(f^{-1}(x)) < y) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{193}$
+\item $\varphi_{309} :\equiv \forall b\,\forall \mu\,(\mathrm{ContOn}(f,[f^{-1}(x),b]) \to f^{-1}(x) \in \mathbb{R} \to b \in \mathbb{R} \to \mu \in \mathbb{R} \to f^{-1}(x) < b \to f(f^{-1}(x)) < \mu \to \mu < f(b) \to \exists \xi\,(\xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < b \land f(\xi) = \mu))$
+\item $\varphi_{310} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{246}$
+\item $\varphi_{311} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{237}$
+\item $\varphi_{312} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{248}$
+\item $\varphi_{313} :\equiv x \in \mathrm{dom}(f^{-1}) \to z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to \varphi_{242}$
+\item $\varphi_{314} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{251}$
+\item $\varphi_{315} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{245}$
+\item $\varphi_{316} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{247}$
+\item $\varphi_{317} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{258}$
+\item $\varphi_{318} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{257}$
+\item $\varphi_{319} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{261}$
+\item $\varphi_{320} :\equiv (\varphi_{10} \to \forall z\,(\varphi_{10})) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{141}$
+\item $\varphi_{321} :\equiv (\varphi_{10} \to \forall y\,(\varphi_{10})) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{154}$
+\item $\varphi_{322} :\equiv (\varphi_{10} \to \forall x\,(\varphi_{10})) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{157}$
+\item $\varphi_{323} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{285}$
+\item $\varphi_{324} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{280}$
+\item $\varphi_{325} :\equiv z \in \mathrm{dom}(f^{-1}) \to y \in \mathbb{R} \to x \leq y \to y \leq z \to x < y \to y < z \to \varphi_{273}$
+\item $\varphi_{326} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{287}$
+\item $\varphi_{327} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{299}$
+\item $\varphi_{328} :\equiv (\mathrm{RFn}(f) \to \varphi_{9}) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}) \to \varphi_{223}$
+\item $\varphi_{329} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{304}$
+\item $\varphi_{330} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{167}) \to \varphi_{10} \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{48}$
+\item $\varphi_{331} :\equiv \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \varphi_{313}$
+\item $\varphi_{332} :\equiv \mathrm{ContOn}(f,[f^{-1}(x),f^{-1}(z)]) \to f^{-1}(x) \in \mathbb{R} \to f^{-1}(z) \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{243}$
+\item $\varphi_{333} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{311}$
+\item $\varphi_{334} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{27}) \to \varphi_{256}$
+\item $\varphi_{335} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{176}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{167}$
+\item $\varphi_{336} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{141}) \to \varphi_{10} \to \forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})$
+\item $\varphi_{337} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{27}) \to \varphi_{262}$
+\item $\varphi_{338} :\equiv \forall z\,(\varphi_{10} \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{48}) \to \forall z\,(\varphi_{10}) \to \forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})$
+\item $\varphi_{339} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{165}) \to (y = z \to z = y) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{166}$
+\item $\varphi_{340} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{177}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{178}$
+\item $\varphi_{341} :\equiv \forall \mu\,(\mathrm{ContOn}(f,[f^{-1}(x),f^{-1}(z)]) \to f^{-1}(x) \in \mathbb{R} \to f^{-1}(z) \in \mathbb{R} \to \mu \in \mathbb{R} \to f^{-1}(x) < f^{-1}(z) \to f(f^{-1}(x)) < \mu \to \mu < f(f^{-1}(z)) \to \exists \xi\,(\xi \in \mathbb{R} \land f^{-1}(x) < \xi \land \xi < f^{-1}(z) \land f(\xi) = \mu))$
+\item $\varphi_{342} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{154}) \to \varphi_{10} \to \forall y\,\forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})$
+\item $\varphi_{343} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{315}$
+\item $\varphi_{344} :\equiv \forall y\,(\varphi_{10} \to \forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})) \to \forall y\,(\varphi_{10}) \to \forall y\,\forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})$
+\item $\varphi_{345} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{316}$
+\item $\varphi_{346} :\equiv (\mathrm{RFn}(f^{-1}) \to u \in \mathrm{dom}(f^{-1}) \to u \in \mathbb{R}) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{8}) \to \varphi_{249}$
+\item $\varphi_{347} :\equiv \forall x\,(\varphi_{10} \to \forall y\,\forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})) \to \forall x\,(\varphi_{10}) \to \forall x\,\forall y\,\forall z\,(x \in \mathrm{dom}(f^{-1}) \to \varphi_{48})$
+\item $\varphi_{348} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{168}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{188}$
+\item $\varphi_{349} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{178}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{201}$
+\item $\varphi_{350} :\equiv \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to x \in \mathrm{dom}(f^{-1}) \to \varphi_{325}$
+\item $\varphi_{351} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{190}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{207}$
+\item $\varphi_{352} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{191}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{208}$
+\item $\varphi_{353} :\equiv (\mathrm{StrInc}(f^{-1},\mathrm{dom}(f^{-1})) \leftrightarrow \forall x\,(\varphi_{98})) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{286}$
+\item $\varphi_{354} :\equiv \varphi_{255} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{184}$
+\item $\varphi_{355} :\equiv \varphi_{256} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{186}$
+\item $\varphi_{356} :\equiv \varphi_{255} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{190}$
+\item $\varphi_{357} :\equiv \varphi_{256} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{191}$
+\item $\varphi_{358} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{5}) \to \varphi_{317}$
+\item $\varphi_{359} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{184}) \to \varphi_{293}$
+\item $\varphi_{360} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{186}) \to \varphi_{294}$
+\item $\varphi_{361} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{192}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{267}$
+\item $\varphi_{362} :\equiv (\mathrm{Itv}(\mathrm{dom}(f)) \leftrightarrow \mathrm{dom}(f) \subseteq \mathbb{R} \land \varphi_{86}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{327}$
+\item $\varphi_{363} :\equiv \forall f\,(\mathrm{RFn}(f) \to \mathrm{Inj}(f) \to \varphi_{258}) \to \mathrm{RFn}(f) \to \mathrm{Inj}(f) \to \varphi_{258}$
+\item $\varphi_{364} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{9}) \to \varphi_{353}$
+\item $\varphi_{365} :\equiv (\mathrm{RFn}(f) \to f^{-1}(z) \in \mathrm{dom}(f) \to f^{-1}(z) \in \mathbb{R}) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}) \to \varphi_{351}$
+\item $\varphi_{366} :\equiv (\mathrm{RFn}(f) \to f^{-1}(x) \in \mathrm{dom}(f) \to f^{-1}(x) \in \mathbb{R}) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}) \to \varphi_{352}$
+\item $\varphi_{367} :\equiv (x < y \to y < z \to x < z) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{158}) \to \varphi_{340}$
+\item $\varphi_{368} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{282}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{290}$
+\item $\varphi_{369} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{288}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{284}$
+\item $\varphi_{370} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{173}) \to \varphi_{348}$
+\item $\varphi_{371} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{291}) \to \varphi_{196} \land y \notin \mathrm{dom}(f^{-1}) \to \varphi_{77}$
+\item $\varphi_{372} :\equiv \forall \xi\,(\varphi_{196} \land y \notin \mathrm{dom}(f^{-1}) \to \varphi_{77}) \to \forall \xi\,(\varphi_{196} \land y \notin \mathrm{dom}(f^{-1})) \to \forall \xi\,(\varphi_{77})$
+\item $\varphi_{373} :\equiv (\varphi_{196} \land y \notin \mathrm{dom}(f^{-1}) \to \forall \xi\,(\varphi_{196} \land y \notin \mathrm{dom}(f^{-1}))) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{173}$
+\item $\varphi_{374} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{295}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{314}$
+\item $\varphi_{375} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{318}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{279}$
+\item $\varphi_{376} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{312}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{302}$
+\item $\varphi_{377} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{318}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{288}$
+\item $\varphi_{378} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{318}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{289}$
+\item $\varphi_{379} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{284}) \to f(\xi) = f(\xi) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{310}$
+\item $\varphi_{380} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{326}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{279}$
+\item $\varphi_{381} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{326}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{281}$
+\item $\varphi_{382} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{274}) \to \varphi_{74} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{268}$
+\item $\varphi_{383} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{326}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{295}$
+\item $\varphi_{384} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{326}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{296}$
+\item $\varphi_{385} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{27}) \to \varphi_{155} \to \varphi_{349}$
+\item $\varphi_{386} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{187}) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{158}) \to \varphi_{308}$
+\item $\varphi_{387} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{302}) \to \varphi_{34} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{291}$
+\item $\varphi_{388} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{185}) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{177}) \to \varphi_{307}$
+\item $\varphi_{389} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{193}) \to \varphi_{361}$
+\item $\varphi_{390} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{282}) \to \varphi_{110} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{292}$
+\item $\varphi_{391} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{156}) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{188}) \to \varphi_{335}$
+\item $\varphi_{392} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{310}) \to \varphi_{85} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{312}$
+\item $\varphi_{393} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{266}) \to (\varphi_{82} \to \varphi_{75}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{259}$
+\item $\varphi_{394} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{266}) \to (\varphi_{82} \to \varphi_{76}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{260}$
+\item $\varphi_{395} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{268}) \to \varphi_{264} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{252}$
+\item $\varphi_{396} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{314}) \to \varphi_{121} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{318}$
+\item $\varphi_{397} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{283}) \to (\varphi_{98} \to \varphi_{93}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{278}$
+\item $\varphi_{398} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{286}) \to (\forall x\,(\varphi_{98}) \to \varphi_{98}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{283}$
+\item $\varphi_{399} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{297}) \to (\varphi_{117} \leftrightarrow \varphi_{116}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{298}$
+\item $\varphi_{400} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{4}) \to \varphi_{254} \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{298}) \to \varphi_{253}$
+\item $\varphi_{401} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{319}) \to (\varphi_{15} \to \varphi_{49}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{324}$
+\item $\varphi_{402} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{201}) \to \varphi_{389}$
+\item $\varphi_{403} :\equiv (\forall t\,(\varphi_{116} \to \varphi_{108}) \to \forall t\,(\varphi_{116}) \to \varphi_{117}) \to (\varphi_{116} \to \forall t\,(\varphi_{116})) \to \varphi_{116} \to \varphi_{117}$
+\item $\varphi_{404} :\equiv (\forall c\,(\varphi_{117} \to \varphi_{109}) \to \forall c\,(\varphi_{117}) \to \varphi_{116}) \to (\varphi_{117} \to \forall c\,(\varphi_{117})) \to \varphi_{117} \to \varphi_{116}$
+\item $\varphi_{405} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{327}) \to (\varphi_{86} \to \varphi_{127}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{343}$
+\item $\varphi_{406} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{343}) \to (\varphi_{127} \to \varphi_{130}) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{345}$
+\item $\varphi_{407} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{345}) \to \varphi_{305} \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{350}$
+\item $\varphi_{408} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{279}) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{289}) \to \varphi_{369}$
+\item $\varphi_{409} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{279}) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{296}) \to \varphi_{374}$
+\item $\varphi_{410} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{190}) \to \varphi_{263} \to \varphi_{272} \to \varphi_{271} \to \varphi_{264}$
+\item $\varphi_{411} :\equiv (\forall t\,(\varphi_{196} \to \varphi_{108}) \to \forall t\,(\varphi_{196}) \to \varphi_{117}) \to (\varphi_{196} \to \forall t\,(\varphi_{196})) \to \mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{297}$
+\item $\varphi_{412} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{190}) \to \varphi_{408}$
+\item $\varphi_{413} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{191}) \to \varphi_{410}$
+\item $\varphi_{414} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{208}) \to (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{207}) \to \varphi_{161} \to \varphi_{402}$
+\item $\varphi_{415} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \varphi_{191}) \to \varphi_{412}$
+\item $\varphi_{416} :\equiv (\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \varphi_{267}) \to \forall \xi\,(\varphi_{196} \land y \notin \mathrm{dom}(f^{-1}) \to \varphi_{77}) \to \varphi_{372} \to \varphi_{373}$
+\end{abbrevlist}
+\end{fullproof}

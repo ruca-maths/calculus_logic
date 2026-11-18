@@ -1,0 +1,69 @@
+% 自動生成 (prover/build.js): NegOneSq  ノード数 32
+\begin{fullproof}{[F27]}{$-1 \cdot -1 = 1$}{32}\phantomsection\label{tree:NegOneSq}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(-1 \cdot -1 = y \to y = z \to -1 \cdot -1 = z)$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\forall z\,(-1 \cdot -1 = 1 \cdot 1 \to 1 \cdot 1 = z \to -1 \cdot -1 = z)$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$-1 \cdot -1 = 1 \cdot 1 \to 1 \cdot 1 = 1 \to -1 \cdot -1 = 1$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x \cdot 1 = x)$\lbl{(R8)}}
+\AXC{$\forall x \in \mathbb{R}\,(x \cdot 1 = x) \to 1 \in \mathbb{R} \to 1 \cdot 1 = 1$\lbl{A2}}
+\BIC{$1 \in \mathbb{R} \to 1 \cdot 1 = 1$}
+\AXC{$(1 \in \mathbb{R} \to 1 \cdot 1 = 1) \to 1 \in \mathbb{R} \to 1 \cdot 1 = 1$\lbl{A1}}
+\BIC{$1 \in \mathbb{R} \to 1 \cdot 1 = 1$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -x \cdot -y = x \cdot y)$\lbl{[F11]}}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall y\,(1 \in \mathbb{R} \to y \in \mathbb{R} \to -1 \cdot -y = 1 \cdot y)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$1 \in \mathbb{R} \to 1 \in \mathbb{R} \to -1 \cdot -1 = 1 \cdot 1$}
+\AXC{$\varphi_{3}$\lbl{A1}}
+\BIC{$1 \in \mathbb{R} \to 1 \in \mathbb{R} \to -1 \cdot -1 = 1 \cdot 1$}
+\BIC{$1 \in \mathbb{R} \to -1 \cdot -1 = 1 \cdot 1$}
+\BIC{$-1 \cdot -1 = 1 \cdot 1$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$1 \in \mathbb{R} \to 1 \cdot 1 = 1$}
+\BIC{$1 \cdot 1 = 1$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$-1 \cdot -1 = 1 \cdot 1$}
+\AXC{$-1 \cdot -1 = 1 \cdot 1 \to 1 \cdot 1 = 1 \to \varphi_{1}$\lbl{A1}}
+\BIC{$1 \cdot 1 = 1 \to \varphi_{1}$}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$-1 \cdot -1 = 1 \cdot 1 \to 1 \cdot 1 = 1 \to -1 \cdot -1 = 1$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\BIC{$-1 \cdot -1 = 1$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv (-1 \cdot -1 = 1 \cdot 1 \to 1 \cdot 1 = 1 \to -1 \cdot -1 = 1) \to -1 \cdot -1 = 1$
+\item $\varphi_{2} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(-1 \cdot -1 = y \to y = z \to -1 \cdot -1 = z)$
+\item $\varphi_{3} :\equiv (1 \in \mathbb{R} \to 1 \in \mathbb{R} \to -1 \cdot -1 = 1 \cdot 1) \to 1 \in \mathbb{R} \to 1 \in \mathbb{R} \to -1 \cdot -1 = 1 \cdot 1$
+\item $\varphi_{4} :\equiv \forall y\,(1 \in \mathbb{R} \to y \in \mathbb{R} \to -1 \cdot -y = 1 \cdot y) \to 1 \in \mathbb{R} \to 1 \in \mathbb{R} \to -1 \cdot -1 = 1 \cdot 1$
+\item $\varphi_{5} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -x \cdot -y = x \cdot y) \to \forall y\,(1 \in \mathbb{R} \to y \in \mathbb{R} \to -1 \cdot -y = 1 \cdot y)$
+\item $\varphi_{6} :\equiv \forall y\,\forall z\,(-1 \cdot -1 = y \to y = z \to -1 \cdot -1 = z) \to \forall z\,(-1 \cdot -1 = 1 \cdot 1 \to 1 \cdot 1 = z \to -1 \cdot -1 = z)$
+\item $\varphi_{7} :\equiv \forall z\,(-1 \cdot -1 = 1 \cdot 1 \to 1 \cdot 1 = z \to -1 \cdot -1 = z) \to -1 \cdot -1 = 1 \cdot 1 \to 1 \cdot 1 = 1 \to -1 \cdot -1 = 1$
+\end{abbrevlist}
+\end{fullproof}

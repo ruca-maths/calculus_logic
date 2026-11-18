@@ -1,0 +1,26 @@
+% 自動生成 (prover/build.js): ConvSeq  ノード数 11
+\begin{fullproof}{[C1]}{$\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$}{11}\phantomsection\label{tree:ConvSeq}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,(\varphi_{1})$\lbl{DefConv}}
+\AXC{$\forall a\,\forall \alpha\,(\varphi_{1}) \to \forall \alpha\,(\varphi_{1})$\lbl{A2}}
+\BIC{$\forall \alpha\,(\varphi_{1})$}
+\AXC{$\forall \alpha\,(\varphi_{1}) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)$\lbl{A1}}
+\AXC{$\varphi_{2}$\lbl{A1}}
+\BIC{$\varphi_{1} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$}
+\UIC{$\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$}
+\UIC{$\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \mathrm{Conv}(a,\alpha) \leftrightarrow \mathrm{Seq}(a) \land \alpha \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon))$
+\item $\varphi_{2} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \varphi_{1} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$
+\end{abbrevlist}
+\end{fullproof}

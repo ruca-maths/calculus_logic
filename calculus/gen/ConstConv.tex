@@ -1,0 +1,347 @@
+% 自動生成 (prover/build.js): ConstConv  ノード数 148
+\begin{fullproof}{[G4]}{$\forall c \in \mathbb{R}\,(\mathrm{Conv}(\overline{c},c))$}{148}\phantomsection\label{tree:ConstConv}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{19}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert \overline{c}(n) - c \rvert = y \to y = \lvert \overline{c}(n) - c \rvert)$}
+\AXC{$\varphi_{35}$\lbl{A2}}
+\BIC{$\lvert \overline{c}(n) - c \rvert = 0 \to 0 = \lvert \overline{c}(n) - c \rvert$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{5}$\lbl{A2}}
+\BIC{$\varphi_{5}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall x\,(0 \leq x \to \lvert x \rvert = x)$\lbl{[A1]}}
+\AXC{$\forall x\,(0 \leq x \to \lvert x \rvert = x) \to 0 \leq 0 \to \lvert 0 \rvert = 0$\lbl{A2}}
+\BIC{$0 \leq 0 \to \lvert 0 \rvert = 0$}
+\AXC{$(0 \leq 0 \to \lvert 0 \rvert = 0) \to \varphi_{37}$\lbl{A1}}
+\BIC{$\varphi_{37}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{5}$\lbl{A2}}
+\BIC{$\varphi_{5}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$z = w \to \lvert c - c \rvert = \lvert z \rvert \to \lvert c - c \rvert = \lvert w \rvert$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \lvert c - c \rvert = \lvert z \rvert \to \lvert c - c \rvert = \lvert w \rvert)$}
+\UIC{$\forall z\,\forall w\,(z = w \to \lvert c - c \rvert = \lvert z \rvert \to \lvert c - c \rvert = \lvert w \rvert)$}
+\AXC{$\varphi_{34}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to c - c = 0 \to \lvert c - c \rvert = \lvert c - c \rvert \to \lvert c - c \rvert = \lvert 0 \rvert$\lbl{A2}}
+\BIC{$c - c = 0 \to \lvert c - c \rvert = \lvert c - c \rvert \to \lvert c - c \rvert = \lvert 0 \rvert$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\varphi_{11}$\lbl{A1}}
+\AXC{$\forall x \in \mathbb{R}\,(x - x = 0)$\lbl{[F13]}}
+\AXC{$\forall x \in \mathbb{R}\,(x - x = 0) \to c \in \mathbb{R} \to c - c = 0$\lbl{A2}}
+\BIC{$c \in \mathbb{R} \to c - c = 0$}
+\AXC{$(c \in \mathbb{R} \to c - c = 0) \to \varphi_{11} \to \varphi_{7}$\lbl{A1}}
+\BIC{$\varphi_{11} \to \varphi_{7}$}
+\BIC{$\varphi_{7}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \lvert c - c \rvert = \lvert c - c \rvert$\lbl{A2}}
+\BIC{$\lvert c - c \rvert = \lvert c - c \rvert$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{7}$}
+\AXC{$\varphi_{7} \to \lvert c - c \rvert = \lvert c - c \rvert \to \varphi_{38}$\lbl{A1}}
+\BIC{$\lvert c - c \rvert = \lvert c - c \rvert \to \varphi_{38}$}
+\BIC{$\varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{17}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{17})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{17})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{17}) \to \varphi_{33}$\lbl{A2}}
+\BIC{$\varphi_{33}$}
+\AXC{$\varphi_{33} \to \overline{c}(n) = c \to \varphi_{28}$\lbl{A2}}
+\BIC{$\overline{c}(n) = c \to \varphi_{28}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\forall c \in \mathbb{R}\,(\mathrm{Seq}(\overline{c}) \land \forall n \in \mathbb{N}\,(\overline{c}(n) = c))$\lbl{[S10]}}
+\AXC{$\varphi_{36}$\lbl{A2}}
+\BIC{$c \in \mathbb{R} \to \mathrm{Seq}(\overline{c}) \land \forall n \in \mathbb{N}\,(\overline{c}(n) = c)$}
+\AXC{$\varphi_{44}$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{3}$}
+\AXC{$(c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{3}) \to \varphi_{45}$\lbl{A1}}
+\BIC{$\varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to n \in \mathbb{N}$\lbl{A1}}
+\AXC{$\forall n \in \mathbb{N}\,(\overline{c}(n) = c) \to n \in \mathbb{N} \to \overline{c}(n) = c$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{45}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{18}$}
+\AXC{$\varphi_{49}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to n \in \mathbb{N}) \to \varphi_{20}$}
+\BIC{$\varphi_{20}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \lvert \overline{c}(n) - c \rvert = \lvert \overline{c}(n) - c \rvert$\lbl{A2}}
+\BIC{$\lvert \overline{c}(n) - c \rvert = \lvert \overline{c}(n) - c \rvert$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{20}$}
+\AXC{$\varphi_{20} \to \varphi_{50}$\lbl{A1}}
+\BIC{$\varphi_{50}$}
+\BIC{$(\overline{c}(n) = c \to \varphi_{28}) \to c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\overline{c}(n) = c \to \varphi_{28}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$(\overline{c}(n) = c \to \varphi_{28}) \to c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{9}$}
+\BIC{$c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{9}$}
+\AXC{$\varphi_{52}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to \varphi_{4}) \to \varphi_{29} \to c \in \mathbb{R} \to \varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$c - c = 0 \to \lvert c - c \rvert = \lvert c - c \rvert \to \lvert c - c \rvert = \lvert 0 \rvert$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{38}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{4}$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to \varphi_{4}) \to \varphi_{29} \to c \in \mathbb{R} \to \varphi_{22}$}
+\BIC{$\varphi_{29} \to c \in \mathbb{R} \to \varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{5}$}
+\AXC{$\varphi_{5} \to \varphi_{26}$\lbl{A2}}
+\BIC{$\varphi_{26}$}
+\AXC{$\varphi_{26} \to \varphi_{29}$\lbl{A2}}
+\BIC{$\varphi_{29}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{29} \to c \in \mathbb{R} \to \varphi_{22}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{22}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{22}) \to \varphi_{6} \to \varphi_{13} \to c \in \mathbb{R} \to \varphi_{14}$\lbl{A1}}
+\BIC{$\varphi_{6} \to \varphi_{13} \to c \in \mathbb{R} \to \varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to 0 = 0$\lbl{A2}}
+\BIC{$0 = 0$}
+\AXC{$\varphi_{10}$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to 0 \leq 0$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{37}$}
+\BIC{$\varphi_{6}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{6} \to \varphi_{13} \to c \in \mathbb{R} \to \varphi_{14}$}
+\BIC{$\varphi_{13} \to c \in \mathbb{R} \to \varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{5}$}
+\AXC{$\varphi_{5} \to \varphi_{16}$\lbl{A2}}
+\BIC{$\varphi_{16}$}
+\AXC{$\varphi_{16} \to \varphi_{13}$\lbl{A2}}
+\BIC{$\varphi_{13}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{13} \to c \in \mathbb{R} \to \varphi_{14}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{14}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{14}) \to \varphi_{41}$\lbl{A1}}
+\BIC{$\varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\lvert \overline{c}(n) - c \rvert = 0 \to 0 = \lvert \overline{c}(n) - c \rvert$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{41}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{15}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{15}) \to (c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon) \to \varphi_{46}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon) \to \varphi_{46}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon) \to \varphi_{46}$}
+\BIC{$\varphi_{46}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$z = w \to z < \varepsilon \to w < \varepsilon$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < \varepsilon \to w < \varepsilon)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < \varepsilon \to w < \varepsilon)$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall w\,(0 = w \to 0 < \varepsilon \to w < \varepsilon)$}
+\AXC{$\varphi_{32}$\lbl{A2}}
+\BIC{$0 = \lvert \overline{c}(n) - c \rvert \to 0 < \varepsilon \to \lvert \overline{c}(n) - c \rvert < \varepsilon$}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{46}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{23}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{23}) \to \varphi_{30}$\lbl{A1}}
+\BIC{$\varphi_{30}$}
+\UIC{$\forall n\,(\varphi_{30})$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\varphi_{21}$\lbl{A4}}
+\AXC{$\forall n\,(\varphi_{30}) \to \varphi_{31}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\forall n\,(\varphi_{30})$}
+\AXC{$\forall n\,(\varphi_{30}) \to (\forall n\,(\varphi_{30}) \to \varphi_{31}) \to \varphi_{21} \to c \in \mathbb{R} \to \varphi_{25}$\lbl{A1}}
+\BIC{$(\forall n\,(\varphi_{30}) \to \varphi_{31}) \to \varphi_{21} \to c \in \mathbb{R} \to \varphi_{25}$}
+\BIC{$\varphi_{21} \to c \in \mathbb{R} \to \varphi_{25}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{25}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\varphi_{8} \to \neg \varphi_{12}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \varphi_{25}$}
+\AXC{$1_{\omega} \in \mathbb{N}$\lbl{[N1]}}
+\AXC{$\varphi_{47}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to \varphi_{25}) \to c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{12}$}
+\BIC{$c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{12}$}
+\AXC{$\varphi_{51}$\lbl{A1}}
+\BIC{$(\varphi_{8} \to \neg \varphi_{12}) \to c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{24}$}
+\BIC{$c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{24}$}
+\UIC{$\forall \varepsilon\,(c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{24})$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to \forall \varepsilon\,(c \in \mathbb{R})$\lbl{A4}}
+\AXC{$\varphi_{48}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\forall \varepsilon\,(c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{24})$}
+\AXC{$\forall \varepsilon\,(c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{24}) \to \varphi_{53}$\lbl{A1}}
+\BIC{$\varphi_{53}$}
+\BIC{$(c \in \mathbb{R} \to \forall \varepsilon\,(c \in \mathbb{R})) \to c \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(\varphi_{24})$}
+\BIC{$c \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(\varphi_{24})$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\forall c \in \mathbb{R}\,(\mathrm{Seq}(\overline{c}) \land \forall n \in \mathbb{N}\,(\overline{c}(n) = c))$\lbl{[S10]}}
+\AXC{$\varphi_{36}$\lbl{A2}}
+\BIC{$c \in \mathbb{R} \to \mathrm{Seq}(\overline{c}) \land \forall n \in \mathbb{N}\,(\overline{c}(n) = c)$}
+\AXC{$\varphi_{27}$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \to \mathrm{Seq}(\overline{c})$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\varphi_{39}$\lbl{DefConv}}
+\AXC{$\varphi_{39} \to \varphi_{43}$\lbl{A2}}
+\BIC{$\varphi_{43}$}
+\AXC{$\varphi_{43} \to \varphi_{42}$\lbl{A2}}
+\BIC{$\varphi_{42}$}
+\AXC{$\varphi_{42} \to (c \in \mathbb{R} \to \mathrm{Seq}(\overline{c})) \to (c \in \mathbb{R} \to c \in \mathbb{R}) \to \varphi_{40}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to \mathrm{Seq}(\overline{c})) \to (c \in \mathbb{R} \to c \in \mathbb{R}) \to \varphi_{40}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to c \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \mathrm{Seq}(\overline{c})$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to \mathrm{Seq}(\overline{c})) \to (c \in \mathbb{R} \to c \in \mathbb{R}) \to \varphi_{40}$}
+\BIC{$(c \in \mathbb{R} \to c \in \mathbb{R}) \to \varphi_{40}$}
+\BIC{$\varphi_{40}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(\varphi_{24})$}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{40}$}
+\BIC{$c \in \mathbb{R} \to \mathrm{Conv}(\overline{c},c)$}
+\UIC{$\forall c \in \mathbb{R}\,(\mathrm{Conv}(\overline{c},c))$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall w\,(c - c = w \to \lvert c - c \rvert = \lvert c - c \rvert \to \lvert c - c \rvert = \lvert w \rvert)$
+\item $\varphi_{2} :\equiv \forall z\,\forall w\,(z = w \to z < \varepsilon \to w < \varepsilon) \to \forall w\,(0 = w \to 0 < \varepsilon \to w < \varepsilon)$
+\item $\varphi_{3} :\equiv 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to \forall n \in \mathbb{N}\,(\overline{c}(n) = c)$
+\item $\varphi_{4} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to \lvert c - c \rvert = \lvert 0 \rvert$
+\item $\varphi_{5} :\equiv \forall y\,\forall z\,(\lvert \overline{c}(n) - c \rvert = y \to y = z \to \lvert \overline{c}(n) - c \rvert = z)$
+\item $\varphi_{6} :\equiv c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to \lvert 0 \rvert = 0$
+\item $\varphi_{7} :\equiv c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to c - c = 0$
+\item $\varphi_{8} :\equiv \forall N\,(\neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert \overline{c}(n) - c \rvert < \varepsilon)))$
+\item $\varphi_{9} :\equiv 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to \lvert \overline{c}(n) - c \rvert = \lvert c - c \rvert$
+\item $\varphi_{10} :\equiv 0 = 0 \to c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to 0 \leq 0$
+\item $\varphi_{11} :\equiv c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to c \in \mathbb{R}$
+\item $\varphi_{12} :\equiv 1_{\omega} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(1_{\omega} \leq n \to \lvert \overline{c}(n) - c \rvert < \varepsilon)$
+\item $\varphi_{13} :\equiv \lvert \overline{c}(n) - c \rvert = \lvert 0 \rvert \to \lvert 0 \rvert = 0 \to \lvert \overline{c}(n) - c \rvert = 0$
+\item $\varphi_{14} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to \lvert \overline{c}(n) - c \rvert = 0$
+\item $\varphi_{15} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to 0 = \lvert \overline{c}(n) - c \rvert$
+\item $\varphi_{16} :\equiv \forall z\,(\lvert \overline{c}(n) - c \rvert = \lvert 0 \rvert \to \lvert 0 \rvert = z \to \lvert \overline{c}(n) - c \rvert = z)$
+\item $\varphi_{17} :\equiv \lvert \overline{c}(n) - c \rvert = \lvert z - c \rvert \to \lvert \overline{c}(n) - c \rvert = \lvert w - c \rvert$
+\item $\varphi_{18} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to n \in \mathbb{N} \to \overline{c}(n) = c$
+\item $\varphi_{19} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(\lvert \overline{c}(n) - c \rvert = y \to y = \lvert \overline{c}(n) - c \rvert)$
+\item $\varphi_{20} :\equiv c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to \overline{c}(n) = c$
+\item $\varphi_{21} :\equiv c \in \mathbb{R} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \to \forall n\,(c \in \mathbb{R} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon)$
+\item $\varphi_{22} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to \lvert \overline{c}(n) - c \rvert = \lvert 0 \rvert$
+\item $\varphi_{23} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to \lvert \overline{c}(n) - c \rvert < \varepsilon$
+\item $\varphi_{24} :\equiv 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert \overline{c}(n) - c \rvert < \varepsilon)$
+\item $\varphi_{25} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \forall n \in \mathbb{N}\,(1_{\omega} \leq n \to \lvert \overline{c}(n) - c \rvert < \varepsilon)$
+\item $\varphi_{26} :\equiv \forall z\,(\lvert \overline{c}(n) - c \rvert = \lvert c - c \rvert \to \lvert c - c \rvert = z \to \lvert \overline{c}(n) - c \rvert = z)$
+\item $\varphi_{27} :\equiv (c \in \mathbb{R} \to \mathrm{Seq}(\overline{c}) \land \forall n \in \mathbb{N}\,(\overline{c}(n) = c)) \to c \in \mathbb{R} \to \mathrm{Seq}(\overline{c})$
+\item $\varphi_{28} :\equiv \lvert \overline{c}(n) - c \rvert = \lvert \overline{c}(n) - c \rvert \to \lvert \overline{c}(n) - c \rvert = \lvert c - c \rvert$
+\item $\varphi_{29} :\equiv \lvert \overline{c}(n) - c \rvert = \lvert c - c \rvert \to \lvert c - c \rvert = \lvert 0 \rvert \to \lvert \overline{c}(n) - c \rvert = \lvert 0 \rvert$
+\item $\varphi_{30} :\equiv c \in \mathbb{R} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to \lvert \overline{c}(n) - c \rvert < \varepsilon$
+\item $\varphi_{31} :\equiv \forall n\,(c \in \mathbb{R} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon) \to \forall n \in \mathbb{N}\,(1_{\omega} \leq n \to \lvert \overline{c}(n) - c \rvert < \varepsilon)$
+\item $\varphi_{32} :\equiv \forall w\,(0 = w \to 0 < \varepsilon \to w < \varepsilon) \to 0 = \lvert \overline{c}(n) - c \rvert \to 0 < \varepsilon \to \lvert \overline{c}(n) - c \rvert < \varepsilon$
+\item $\varphi_{33} :\equiv \forall w\,(\overline{c}(n) = w \to \lvert \overline{c}(n) - c \rvert = \lvert \overline{c}(n) - c \rvert \to \lvert \overline{c}(n) - c \rvert = \lvert w - c \rvert)$
+\item $\varphi_{34} :\equiv \forall z\,\forall w\,(z = w \to \lvert c - c \rvert = \lvert z \rvert \to \lvert c - c \rvert = \lvert w \rvert) \to \varphi_{1}$
+\item $\varphi_{35} :\equiv \forall y\,(\lvert \overline{c}(n) - c \rvert = y \to y = \lvert \overline{c}(n) - c \rvert) \to \lvert \overline{c}(n) - c \rvert = 0 \to 0 = \lvert \overline{c}(n) - c \rvert$
+\item $\varphi_{36} :\equiv \forall c \in \mathbb{R}\,(\mathrm{Seq}(\overline{c}) \land \forall n \in \mathbb{N}\,(\overline{c}(n) = c)) \to c \in \mathbb{R} \to \mathrm{Seq}(\overline{c}) \land \forall n \in \mathbb{N}\,(\overline{c}(n) = c)$
+\item $\varphi_{37} :\equiv (c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to 1_{\omega} \leq n \to 0 \leq 0) \to \varphi_{6}$
+\item $\varphi_{38} :\equiv (c - c = 0 \to \lvert c - c \rvert = \lvert c - c \rvert \to \lvert c - c \rvert = \lvert 0 \rvert) \to c \in \mathbb{R} \to \varphi_{4}$
+\item $\varphi_{39} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \leftrightarrow \mathrm{Seq}(a) \land \alpha \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{40} :\equiv (c \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(\varphi_{24})) \to c \in \mathbb{R} \to \mathrm{Conv}(\overline{c},c)$
+\item $\varphi_{41} :\equiv (\lvert \overline{c}(n) - c \rvert = 0 \to 0 = \lvert \overline{c}(n) - c \rvert) \to c \in \mathbb{R} \to \varphi_{15}$
+\item $\varphi_{42} :\equiv \mathrm{Conv}(\overline{c},c) \leftrightarrow \mathrm{Seq}(\overline{c}) \land c \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(\varphi_{24})$
+\item $\varphi_{43} :\equiv \forall \alpha\,(\mathrm{Conv}(\overline{c},\alpha) \leftrightarrow \mathrm{Seq}(\overline{c}) \land \alpha \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert \overline{c}(n) - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{44} :\equiv (c \in \mathbb{R} \to \mathrm{Seq}(\overline{c}) \land \forall n \in \mathbb{N}\,(\overline{c}(n) = c)) \to c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{3}$
+\item $\varphi_{45} :\equiv (\forall n \in \mathbb{N}\,(\overline{c}(n) = c) \to n \in \mathbb{N} \to \overline{c}(n) = c) \to c \in \mathbb{R} \to \varphi_{18}$
+\item $\varphi_{46} :\equiv (0 = \lvert \overline{c}(n) - c \rvert \to 0 < \varepsilon \to \lvert \overline{c}(n) - c \rvert < \varepsilon) \to c \in \mathbb{R} \to \varphi_{23}$
+\item $\varphi_{47} :\equiv 1_{\omega} \in \mathbb{N} \to (c \in \mathbb{R} \to \varphi_{25}) \to c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{12}$
+\item $\varphi_{48} :\equiv \forall \varepsilon\,(c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{24}) \to \forall \varepsilon\,(c \in \mathbb{R}) \to \forall \varepsilon \in \mathbb{R}\,(\varphi_{24})$
+\item $\varphi_{49} :\equiv (c \in \mathbb{R} \to \varphi_{18}) \to (c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to n \in \mathbb{N} \to n \in \mathbb{N}) \to \varphi_{20}$
+\item $\varphi_{50} :\equiv \lvert \overline{c}(n) - c \rvert = \lvert \overline{c}(n) - c \rvert \to (\overline{c}(n) = c \to \varphi_{28}) \to c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{9}$
+\item $\varphi_{51} :\equiv (c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{12}) \to (\varphi_{8} \to \neg \varphi_{12}) \to c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{24}$
+\item $\varphi_{52} :\equiv (c \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{9}) \to (c \in \mathbb{R} \to \varphi_{4}) \to \varphi_{29} \to c \in \mathbb{R} \to \varphi_{22}$
+\item $\varphi_{53} :\equiv \varphi_{48} \to (c \in \mathbb{R} \to \forall \varepsilon\,(c \in \mathbb{R})) \to c \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(\varphi_{24})$
+\end{abbrevlist}
+\end{fullproof}

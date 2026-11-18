@@ -1,0 +1,87 @@
+% 自動生成 (prover/build.js): IotaInvMono  ノード数 38
+\begin{fullproof}{[C25]}{$\forall K\,\forall n\,(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1})$}{38}\phantomsection\label{tree:IotaInvMono}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$K \in \mathbb{N} \to K \in \mathbb{N}$\lbl{A1}}
+\AXC{$\forall n \in \mathbb{N}\,(0 < \underline{n})$\lbl{[N15]}}
+\AXC{$\forall n \in \mathbb{N}\,(0 < \underline{n}) \to K \in \mathbb{N} \to 0 < \underline{K}$\lbl{A2}}
+\BIC{$K \in \mathbb{N} \to 0 < \underline{K}$}
+\AXC{$\varphi_{5}$\lbl{A1}}
+\BIC{$(K \in \mathbb{N} \to K \in \mathbb{N}) \to K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to 0 < \underline{K}$}
+\BIC{$K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to 0 < \underline{K}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R})$\lbl{[N4]}}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R}) \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$\lbl{A2}}
+\BIC{$n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$}
+\AXC{$(n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{4}$\lbl{A1}}
+\BIC{$\varphi_{4}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R})$\lbl{[N4]}}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R}) \to K \in \mathbb{N} \to \underline{K} \in \mathbb{R}$\lbl{A2}}
+\BIC{$K \in \mathbb{N} \to \underline{K} \in \mathbb{R}$}
+\AXC{$(K \in \mathbb{N} \to \underline{K} \in \mathbb{R}) \to \varphi_{2}$\lbl{A1}}
+\BIC{$\varphi_{2}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\varphi_{1}$\lbl{[E20]}}
+\AXC{$\varphi_{1} \to \varphi_{3}$\lbl{A2}}
+\BIC{$\varphi_{3}$}
+\AXC{$\varphi_{3} \to \varphi_{7}$\lbl{A2}}
+\BIC{$\varphi_{7}$}
+\AXC{$\varphi_{7} \to (K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{K} \in \mathbb{R}) \to \varphi_{10}$\lbl{A1}}
+\BIC{$(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{K} \in \mathbb{R}) \to \varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$K \in \mathbb{N} \to K \in \mathbb{N}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{2}$}
+\BIC{$K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{K} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{K} \in \mathbb{R}) \to \varphi_{10}$}
+\BIC{$\varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to 0 < \underline{K}$}
+\AXC{$K \in \mathbb{N} \to n \in \mathbb{N} \to n \in \mathbb{N}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{4}$}
+\BIC{$K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{10}$}
+\BIC{$(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to 0 < \underline{K}) \to \varphi_{9}$}
+\BIC{$\varphi_{9}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to m \leq n \to \underline{m} \leq \underline{n})$\lbl{[N16]}}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$\forall n\,(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{K} \leq \underline{n})$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{K} \leq \underline{n}$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{9}$}
+\BIC{$K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1}$}
+\UIC{$\forall n\,(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1})$}
+\UIC{$\forall K\,\forall n\,(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to y^{-1} \leq x^{-1})$
+\item $\varphi_{2} :\equiv (K \in \mathbb{N} \to K \in \mathbb{N}) \to K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{K} \in \mathbb{R}$
+\item $\varphi_{3} :\equiv \forall y\,(\underline{K} \in \mathbb{R} \to y \in \mathbb{R} \to 0 < \underline{K} \to \underline{K} \leq y \to y^{-1} \leq \underline{K}^{-1})$
+\item $\varphi_{4} :\equiv (K \in \mathbb{N} \to n \in \mathbb{N} \to n \in \mathbb{N}) \to K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n} \in \mathbb{R}$
+\item $\varphi_{5} :\equiv (K \in \mathbb{N} \to 0 < \underline{K}) \to (K \in \mathbb{N} \to K \in \mathbb{N}) \to K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to 0 < \underline{K}$
+\item $\varphi_{6} :\equiv \forall n\,(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{K} \leq \underline{n}) \to K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{K} \leq \underline{n}$
+\item $\varphi_{7} :\equiv \underline{K} \in \mathbb{R} \to \underline{n} \in \mathbb{R} \to 0 < \underline{K} \to \underline{K} \leq \underline{n} \to \underline{n}^{-1} \leq \underline{K}^{-1}$
+\item $\varphi_{8} :\equiv \forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to m \leq n \to \underline{m} \leq \underline{n}) \to \forall n\,(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{K} \leq \underline{n})$
+\item $\varphi_{9} :\equiv (K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{K} \leq \underline{n}) \to K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1}$
+\item $\varphi_{10} :\equiv (K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n} \in \mathbb{R}) \to (K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to 0 < \underline{K}) \to \varphi_{9}$
+\end{abbrevlist}
+\end{fullproof}

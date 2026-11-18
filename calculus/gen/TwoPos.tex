@@ -1,0 +1,198 @@
+% 自動生成 (prover/build.js): TwoPos  ノード数 96
+\begin{fullproof}{[F29]}{$0 < 2$}{96}\phantomsection\label{tree:TwoPos}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$0 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\varphi_{10}$\lbl{(R14)}}
+\AXC{$\varphi_{10} \to \varphi_{8}$\lbl{A2}}
+\BIC{$\varphi_{8}$}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$\forall z\,(0 \in \mathbb{R} \to 1 \in \mathbb{R} \to z \in \mathbb{R} \to 0 < 1 \to 0 + z < 1 + z)$}
+\AXC{$\varphi_{19}$\lbl{A2}}
+\BIC{$0 \in \mathbb{R} \to 1 \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 < 1 \to 0 + 1 < 1 + 1$}
+\AXC{$\varphi_{18}$\lbl{A1}}
+\BIC{$0 \in \mathbb{R} \to 1 \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 < 1 \to 0 + 1 < 1 + 1$}
+\BIC{$1 \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 < 1 \to 0 + 1 < 1 + 1$}
+\BIC{$1 \in \mathbb{R} \to 0 < 1 \to 0 + 1 < 1 + 1$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(0 + 1 = y \to y = z \to 0 + 1 = z)$}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$\forall z\,(0 + 1 = 1 + 0 \to 1 + 0 = z \to 0 + 1 = z)$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$0 + 1 = 1 + 0 \to 1 + 0 = 1 \to 0 + 1 = 1$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x + 0 = x)$\lbl{(R4)}}
+\AXC{$\forall x \in \mathbb{R}\,(x + 0 = x) \to 1 \in \mathbb{R} \to 1 + 0 = 1$\lbl{A2}}
+\BIC{$1 \in \mathbb{R} \to 1 + 0 = 1$}
+\AXC{$(1 \in \mathbb{R} \to 1 + 0 = 1) \to 1 \in \mathbb{R} \to 1 + 0 = 1$\lbl{A1}}
+\BIC{$1 \in \mathbb{R} \to 1 + 0 = 1$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$0 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)$\lbl{(R3)}}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\forall y\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to 0 + y = y + 0)$}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$0 \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 + 1 = 1 + 0$}
+\AXC{$\varphi_{13}$\lbl{A1}}
+\BIC{$0 \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 + 1 = 1 + 0$}
+\BIC{$1 \in \mathbb{R} \to 0 + 1 = 1 + 0$}
+\BIC{$0 + 1 = 1 + 0$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$1 \in \mathbb{R} \to 1 + 0 = 1$}
+\BIC{$1 + 0 = 1$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$0 + 1 = 1 + 0$}
+\AXC{$0 + 1 = 1 + 0 \to \varphi_{1}$\lbl{A1}}
+\BIC{$\varphi_{1}$}
+\BIC{$(0 + 1 = 1 + 0 \to 1 + 0 = 1 \to 0 + 1 = 1) \to 0 + 1 = 1$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$0 + 1 = 1 + 0 \to 1 + 0 = 1 \to 0 + 1 = 1$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$(0 + 1 = 1 + 0 \to 1 + 0 = 1 \to 0 + 1 = 1) \to 0 + 1 = 1$}
+\BIC{$0 + 1 = 1$}
+\AXC{$0 + 1 = 1 \to \varphi_{11}$\lbl{A1}}
+\BIC{$\varphi_{11}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$0 < 1$\lbl{[F28]}}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$1 \in \mathbb{R} \to 0 < 1 \to 0 + 1 < 1 + 1$}
+\BIC{$0 < 1 \to 0 + 1 < 1 + 1$}
+\BIC{$0 + 1 < 1 + 1$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{11}$}
+\BIC{$(0 + 1 = 1 \to 0 + 1 < 1 + 1 \to 1 < 1 + 1) \to 1 < 1 + 1$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$z = w \to z < 1 + 1 \to w < 1 + 1$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < 1 + 1 \to w < 1 + 1)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < 1 + 1 \to w < 1 + 1)$}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$\forall w\,(0 + 1 = w \to 0 + 1 < 1 + 1 \to w < 1 + 1)$}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$0 + 1 = 1 \to 0 + 1 < 1 + 1 \to 1 < 1 + 1$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$(0 + 1 = 1 \to 0 + 1 < 1 + 1 \to 1 < 1 + 1) \to 1 < 1 + 1$}
+\BIC{$1 < 1 + 1$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(2 = y \to y = 2)$\lbl{A2}}
+\BIC{$\forall y\,(2 = y \to y = 2)$}
+\AXC{$\forall y\,(2 = y \to y = 2) \to 2 = 1 + 1 \to 1 + 1 = 2$\lbl{A2}}
+\BIC{$2 = 1 + 1 \to 1 + 1 = 2$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$2 = 1 + 1 \to 1 + 1 = 2$}
+\AXC{$2 = 1 + 1$\lbl{Def$2$}}
+\AXC{$2 = 1 + 1 \to (2 = 1 + 1 \to 1 + 1 = 2) \to 1 + 1 = 2$\lbl{A1}}
+\BIC{$(2 = 1 + 1 \to 1 + 1 = 2) \to 1 + 1 = 2$}
+\BIC{$1 + 1 = 2$}
+\AXC{$\varphi_{5}$\lbl{A1}}
+\BIC{$1 < 1 + 1 \to (1 + 1 = 2 \to 1 < 1 + 1 \to 1 < 2) \to 1 < 2$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$1 < 1 + 1$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$1 < 1 + 1 \to (1 + 1 = 2 \to 1 < 1 + 1 \to 1 < 2) \to 1 < 2$}
+\BIC{$(1 + 1 = 2 \to 1 < 1 + 1 \to 1 < 2) \to 1 < 2$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$z = w \to 1 < z \to 1 < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to 1 < z \to 1 < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to 1 < z \to 1 < w)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall w\,(1 + 1 = w \to 1 < 1 + 1 \to 1 < w)$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$1 + 1 = 2 \to 1 < 1 + 1 \to 1 < 2$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$(1 + 1 = 2 \to 1 < 1 + 1 \to 1 < 2) \to 1 < 2$}
+\BIC{$1 < 2$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z)$\lbl{[O2]}}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(0 < y \to y < z \to 0 < z)$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall z\,(0 < 1 \to 1 < z \to 0 < z)$}
+\AXC{$\forall z\,(0 < 1 \to 1 < z \to 0 < z) \to 0 < 1 \to 1 < 2 \to 0 < 2$\lbl{A2}}
+\BIC{$0 < 1 \to 1 < 2 \to 0 < 2$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$1 < 2$}
+\AXC{$0 < 1$\lbl{[F28]}}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$0 < 1 \to 1 < 2 \to 0 < 2$}
+\AXC{$(0 < 1 \to 1 < 2 \to 0 < 2) \to 0 < 1 \to 1 < 2 \to 0 < 2$\lbl{A1}}
+\BIC{$0 < 1 \to 1 < 2 \to 0 < 2$}
+\BIC{$1 < 2 \to 0 < 2$}
+\BIC{$0 < 2$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv 1 + 0 = 1 \to (0 + 1 = 1 + 0 \to 1 + 0 = 1 \to 0 + 1 = 1) \to 0 + 1 = 1$
+\item $\varphi_{2} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(0 + 1 = y \to y = z \to 0 + 1 = z)$
+\item $\varphi_{3} :\equiv \forall y\,\forall z\,(0 < y \to y < z \to 0 < z) \to \forall z\,(0 < 1 \to 1 < z \to 0 < z)$
+\item $\varphi_{4} :\equiv \forall z\,\forall w\,(z = w \to 1 < z \to 1 < w) \to \forall w\,(1 + 1 = w \to 1 < 1 + 1 \to 1 < w)$
+\item $\varphi_{5} :\equiv 1 + 1 = 2 \to 1 < 1 + 1 \to (1 + 1 = 2 \to 1 < 1 + 1 \to 1 < 2) \to 1 < 2$
+\item $\varphi_{6} :\equiv \forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z) \to \forall y\,\forall z\,(0 < y \to y < z \to 0 < z)$
+\item $\varphi_{7} :\equiv \forall w\,(1 + 1 = w \to 1 < 1 + 1 \to 1 < w) \to 1 + 1 = 2 \to 1 < 1 + 1 \to 1 < 2$
+\item $\varphi_{8} :\equiv \forall y\,\forall z\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < y \to 0 + z < y + z)$
+\item $\varphi_{9} :\equiv \forall y\,\forall z\,(0 + 1 = y \to y = z \to 0 + 1 = z) \to \forall z\,(0 + 1 = 1 + 0 \to 1 + 0 = z \to 0 + 1 = z)$
+\item $\varphi_{10} :\equiv \forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x < y \to x + z < y + z)$
+\item $\varphi_{11} :\equiv 0 + 1 < 1 + 1 \to (0 + 1 = 1 \to 0 + 1 < 1 + 1 \to 1 < 1 + 1) \to 1 < 1 + 1$
+\item $\varphi_{12} :\equiv \forall z\,(0 + 1 = 1 + 0 \to 1 + 0 = z \to 0 + 1 = z) \to 0 + 1 = 1 + 0 \to 1 + 0 = 1 \to 0 + 1 = 1$
+\item $\varphi_{13} :\equiv (0 \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 + 1 = 1 + 0) \to 0 \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 + 1 = 1 + 0$
+\item $\varphi_{14} :\equiv \forall z\,\forall w\,(z = w \to z < 1 + 1 \to w < 1 + 1) \to \forall w\,(0 + 1 = w \to 0 + 1 < 1 + 1 \to w < 1 + 1)$
+\item $\varphi_{15} :\equiv \forall y\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to 0 + y = y + 0) \to 0 \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 + 1 = 1 + 0$
+\item $\varphi_{16} :\equiv \forall w\,(0 + 1 = w \to 0 + 1 < 1 + 1 \to w < 1 + 1) \to 0 + 1 = 1 \to 0 + 1 < 1 + 1 \to 1 < 1 + 1$
+\item $\varphi_{17} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x) \to \forall y\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to 0 + y = y + 0)$
+\item $\varphi_{18} :\equiv (0 \in \mathbb{R} \to 1 \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 < 1 \to 0 + 1 < 1 + 1) \to 0 \in \mathbb{R} \to 1 \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 < 1 \to 0 + 1 < 1 + 1$
+\item $\varphi_{19} :\equiv \forall z\,(0 \in \mathbb{R} \to 1 \in \mathbb{R} \to z \in \mathbb{R} \to 0 < 1 \to 0 + z < 1 + z) \to 0 \in \mathbb{R} \to 1 \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 < 1 \to 0 + 1 < 1 + 1$
+\item $\varphi_{20} :\equiv \varphi_{8} \to \forall z\,(0 \in \mathbb{R} \to 1 \in \mathbb{R} \to z \in \mathbb{R} \to 0 < 1 \to 0 + z < 1 + z)$
+\end{abbrevlist}
+\end{fullproof}

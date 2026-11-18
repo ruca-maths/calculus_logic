@@ -1,0 +1,44 @@
+% 自動生成 (prover/build.js): SubCupL  ノード数 20
+\begin{fullproof}{[C4]}{$\forall m\,\forall n\,(m \subseteq m \cup n)$}{20}\phantomsection\label{tree:SubCupL}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall u\,(u \in x \cup y \leftrightarrow u \in x \lor u \in y)$\lbl{Def$\cup$}}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall y\,\forall u\,(u \in m \cup y \leftrightarrow u \in m \lor u \in y)$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall u\,(u \in m \cup n \leftrightarrow u \in m \lor u \in n)$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$u \in m \cup n \leftrightarrow u \in m \lor u \in n$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$u \in m \cup n \leftrightarrow u \in m \lor u \in n$}
+\AXC{$(u \in m \cup n \leftrightarrow u \in m \lor u \in n) \to u \in m \to u \in m \cup n$\lbl{A1}}
+\BIC{$u \in m \to u \in m \cup n$}
+\UIC{$\forall u \in m\,(u \in m \cup n)$}
+\AXC{$\varphi_{6}$\lbl{A1}}
+\BIC{$(m \subseteq m \cup n \leftrightarrow \forall u \in m\,(u \in m \cup n)) \to m \subseteq m \cup n$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$\lbl{Def$\subseteq$}}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$\forall y\,(m \subseteq y \leftrightarrow \forall u \in m\,(u \in y))$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$m \subseteq m \cup n \leftrightarrow \forall u \in m\,(u \in m \cup n)$}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$(m \subseteq m \cup n \leftrightarrow \forall u \in m\,(u \in m \cup n)) \to m \subseteq m \cup n$}
+\BIC{$m \subseteq m \cup n$}
+\UIC{$\forall n\,(m \subseteq m \cup n)$}
+\UIC{$\forall m\,\forall n\,(m \subseteq m \cup n)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to \forall y\,(m \subseteq y \leftrightarrow \forall u \in m\,(u \in y))$
+\item $\varphi_{2} :\equiv \forall u\,(u \in m \cup n \leftrightarrow u \in m \lor u \in n) \to (u \in m \cup n \leftrightarrow u \in m \lor u \in n)$
+\item $\varphi_{3} :\equiv \forall y\,\forall u\,(u \in m \cup y \leftrightarrow u \in m \lor u \in y) \to \forall u\,(u \in m \cup n \leftrightarrow u \in m \lor u \in n)$
+\item $\varphi_{4} :\equiv \forall y\,(m \subseteq y \leftrightarrow \forall u \in m\,(u \in y)) \to (m \subseteq m \cup n \leftrightarrow \forall u \in m\,(u \in m \cup n))$
+\item $\varphi_{5} :\equiv \forall x\,\forall y\,\forall u\,(u \in x \cup y \leftrightarrow u \in x \lor u \in y) \to \forall y\,\forall u\,(u \in m \cup y \leftrightarrow u \in m \lor u \in y)$
+\item $\varphi_{6} :\equiv \forall u \in m\,(u \in m \cup n) \to (m \subseteq m \cup n \leftrightarrow \forall u \in m\,(u \in m \cup n)) \to m \subseteq m \cup n$
+\end{abbrevlist}
+\end{fullproof}

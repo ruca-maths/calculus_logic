@@ -1,0 +1,88 @@
+% 自動生成 (prover/build.js): LeLtTrans  ノード数 44
+\begin{fullproof}{[O4]}{$\forall x\,\forall y\,\forall z\,(x \leq y \to y < z \to x < z)$}{44}\phantomsection\label{tree:LeLtTrans}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to z_{1} < z \to w < z$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z_{1} < z \to w < z)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} < z \to w < z)$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$\forall w\,(y = w \to y < z \to w < z)$}
+\AXC{$\forall w\,(y = w \to y < z \to w < z) \to y = x \to y < z \to x < z$\lbl{A2}}
+\BIC{$y = x \to y < z \to x < z$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(x = y \to y = x)$\lbl{A2}}
+\BIC{$\forall y\,(x = y \to y = x)$}
+\AXC{$\forall y\,(x = y \to y = x) \to x = y \to y = x$\lbl{A2}}
+\BIC{$x = y \to y = x$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$x = y \to y = x$}
+\AXC{$x \leq y \to y < z \to x = y \to x = y$\lbl{A1}}
+\AXC{$\varphi_{3}$\lbl{A1}}
+\BIC{$(x = y \to y = x) \to x \leq y \to y < z \to x = y \to y = x$}
+\BIC{$x \leq y \to y < z \to x = y \to y = x$}
+\AXC{$(x \leq y \to y < z \to x = y \to y = x) \to \varphi_{6}$\lbl{A1}}
+\BIC{$\varphi_{6}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z)$\lbl{[O2]}}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(x < y \to y < z \to x < z)$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall z\,(x < y \to y < z \to x < z)$}
+\AXC{$\forall z\,(x < y \to y < z \to x < z) \to x < y \to y < z \to x < z$\lbl{A2}}
+\BIC{$x < y \to y < z \to x < z$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$x \leq y \to y < z \to y < z$\lbl{A1}}
+\AXC{$x \leq y \to x \leq y$\lbl{A1}}
+\AXC{$(x \leq y \to x \leq y) \to (x \leq y \to y < z \to y < z) \to \varphi_{5}$\lbl{A1}}
+\BIC{$(x \leq y \to y < z \to y < z) \to \varphi_{5}$}
+\BIC{$\varphi_{5}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$y = x \to y < z \to x < z$}
+\AXC{$x \leq y \to y < z \to x = y \to y < z$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{6}$}
+\BIC{$(y = x \to y < z \to x < z) \to x \leq y \to y < z \to x = y \to x < z$}
+\BIC{$x \leq y \to y < z \to x = y \to x < z$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to x < z$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{5}$}
+\BIC{$(x \leq y \to y < z \to x = y \to x < z) \to x \leq y \to y < z \to x < z$}
+\BIC{$x \leq y \to y < z \to x < z$}
+\UIC{$\forall z\,(x \leq y \to y < z \to x < z)$}
+\UIC{$\forall y\,\forall z\,(x \leq y \to y < z \to x < z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x \leq y \to y < z \to x < z)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} < z \to w < z) \to \forall w\,(y = w \to y < z \to w < z)$
+\item $\varphi_{2} :\equiv \forall y\,\forall z\,(x < y \to y < z \to x < z) \to \forall z\,(x < y \to y < z \to x < z)$
+\item $\varphi_{3} :\equiv (x \leq y \to y < z \to x = y \to x = y) \to (x = y \to y = x) \to x \leq y \to y < z \to x = y \to y = x$
+\item $\varphi_{4} :\equiv \forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z) \to \forall y\,\forall z\,(x < y \to y < z \to x < z)$
+\item $\varphi_{5} :\equiv (x < y \to y < z \to x < z) \to (x \leq y \to y < z \to x = y \to x < z) \to x \leq y \to y < z \to x < z$
+\item $\varphi_{6} :\equiv (x \leq y \to y < z \to x = y \to y < z) \to (y = x \to y < z \to x < z) \to x \leq y \to y < z \to x = y \to x < z$
+\end{abbrevlist}
+\end{fullproof}

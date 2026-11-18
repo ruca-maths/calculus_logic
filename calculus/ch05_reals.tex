@@ -1,0 +1,179 @@
+\chapter{実数の構成}\label{ch:reals}
+
+\begin{textref}{第2章3節 公理3.1(実数の連続性)}
+  テキストは「上限定理を証明しようと考えたら, 実数とは何かという本質まで戻らなければならない. デデキントの切断による実数の構成法まで遡る …… ここでは上限定理は認めることにする」と述べている. 本章ではまさにその構成を行い, 公理3.1 を $\ZFC$ の定理として証明する(定理\ref{thm:sup}). 構成は Kunen \cite{kunen2011} 定義 I.14.2(下側 Dedekind 切断)に従う. ただし $\Z, \Q$ は Kunen の符号化ではなく商集合として構成する(同書日本語訳原稿の付録の補助的構成と同じ).
+\end{textref}
+
+各数体系の演算は形式的には別々の関数記号 $+_\omega, +_\Z, +_\Q, +_\R$ などであるが, 混乱のおそれがないときは添字を省略する.
+
+\section{整数}
+
+\begin{dfn}
+  $\omega \times \omega$ 上の関係 $\sim_\Z$ を $\pair{a}{b} \sim_\Z \pair{c}{d} :\leftrightarrow a + d = b + c$ で定める. これは同値関係である(推移律には定理\ref{thm:omega-arith}(4)の簡約律を用いる). $\Z := (\omega \times \omega)/{\sim_\Z}$ とし, $\pair{a}{b}$ の同値類を $[a,b]$ と書く($a - b$ を表す).
+\end{dfn}
+
+\begin{lem}[演算の well-definedness]\label{lem:Z-welldef}
+  $[a,b] = [a',b']$, $[c,d] = [c',d']$ ならば $[a+c, b+d] = [a'+c', b'+d']$, $[ac + bd, ad + bc] = [a'c' + b'd', a'd' + b'c']$, かつ $a + d < b + c \leftrightarrow a' + d' < b' + c'$.
+\end{lem}
+\begin{proof}
+  和: $a + b' = b + a'$ と $c + d' = d + c'$ を辺々加えて $(a+c) + (b'+d') = (b+d) + (a'+c')$. 積: まず $[a,b] = [a',b']$ のもとで $[ac+bd, ad+bc] = [a'c+b'd, a'd+b'c]$ を示せば(対称性により第2因子についても同様), 推移律でよい. $(ac+bd) + (a'd+b'c) = (a+b')c + (b+a')d = (b+a')c + (a+b')d = (a'c + b'd) + (ad+bc)$. 順序: 定理\ref{thm:omega-arith}(5)より両辺に同じ数を加えても $<$ は保たれるので, $a+d<b+c$ の両辺に $b'+c'$ を加えて仮定の等式で書き換えればよい.
+\end{proof}
+
+\begin{dfn}
+  補題\ref{lem:Z-welldef}により, $\Z$ 上の演算と順序を
+  \begin{gather*}
+    [a,b] + [c,d] := [a+c,b+d], \quad [a,b]\cdot[c,d] := [ac+bd, ad+bc], \\
+    -[a,b] := [b,a], \quad [a,b] < [c,d] :\leftrightarrow a + d < b + c
+  \end{gather*}
+  で定める. (形式的には, 例えば $+_\Z := \{\pair{\pair{X}{Y}}{W} \in (\Z\times\Z)\times\Z \mid \exists a,b,c,d \in \omega\,(X = [a,b] \land Y = [c,d] \land W = [a+c,b+d])\}$ とし, 補題\ref{lem:Z-welldef}によりこれが関数 $\Z\times\Z \to \Z$ であることを示し, $X +_\Z Y := {+_\Z}(\pair{X}{Y})$ とする.) $n \in \omega$ を $[n,0] \in \Z$ と同一視する写像を $\iota_\Z$ と書く.
+\end{dfn}
+
+\begin{thm}\label{thm:Z}
+  $(\Z, +, \cdot, -, 0_\Z, 1_\Z, <)$ ($0_\Z = [0,0]$, $1_\Z = [1,0]$)は順序環の公理(後述の (R1)--(R8), (R10)--(R15) のうち乗法逆元に関するもの以外)をみたし, 零因子をもたない. また $\iota_\Z$ は演算と順序を保つ単射であり, 任意の $z \in \Z$ について $z = \iota_\Z(n)$ または $z = -\iota_\Z(n)$ となる $n \in \omega$ が存在する.
+\end{thm}
+\begin{proof}
+  各法則は定義を代表元で書き下すと $\omega$ の法則(定理\ref{thm:omega-arith})に帰着する. 例えば $[a,b] + (-[a,b]) = [a+b, b+a] = [0,0]$ ($a+b+0 = b+a+0$). 全順序性は $\omega$ の三分律から. 最後の主張は $a \leq b$ または $b \leq a$ に応じて定理\ref{thm:omega-arith}(6)を使う.
+\end{proof}
+
+\section{有理数}
+
+\begin{dfn}
+  $\Z^+ := \{z \in \Z \mid 0_\Z < z\}$ とし, $\Z \times \Z^+$ 上の同値関係 $\pair{a}{b} \sim_\Q \pair{c}{d} :\leftrightarrow a d = c b$ による商集合を $\Q$ とする. $\pair{a}{b}$ の類を $a/b$ と書く. 演算と順序を
+  \[ \frac{a}{b} + \frac{c}{d} := \frac{ad + cb}{bd}, \quad \frac{a}{b}\cdot\frac{c}{d} := \frac{ac}{bd}, \quad -\frac{a}{b} := \frac{-a}{b}, \quad \frac{a}{b} < \frac{c}{d} :\leftrightarrow ad < cb \]
+  で定める(分母は常に正). $a \neq 0$ のとき $(a/b)^{-1} := b/a$ ($a > 0$), $(-b)/(-a)$ ($a < 0$). $z \in \Z$ を $z/1$ と同一視する.
+\end{dfn}
+
+\begin{thm}\label{thm:Q}
+  $\Q$ は順序体である(すなわち (R1)--(R15) をみたす). さらに次が成り立つ.
+  \begin{enumerate}[label=(\arabic*)]
+    \item (アルキメデス性) 任意の $q \in \Q$ について $q < n$ となる $n \in \omega$ が存在する. 従って $r > 0$ ならば $q < n r$ となる $n \in \omega$ が存在する.
+    \item (稠密性) $p < q$ ならば $p < (p + q)/2 < q$. ここで $2 = 1 + 1$, $x/2 := x \cdot 2^{-1}$.
+  \end{enumerate}
+\end{thm}
+\begin{proof}
+  well-definedness は $\Z$ に零因子がないことと, 正の元を掛けても $<$ が保たれることによる. 体の法則は代表元の計算で $\Z$ の法則に帰着する. (1) $q = a/b$ ($b > 0$) とし, 定理\ref{thm:Z}により $a \leq n$ となる $n \in \omega$ をとると, $b \geq 1$ より $a < (n+1) b$, すなわち $q < n + 1$. 後半は $q/r$ に適用する. (2) $p < q$ の両辺に $p$, $q$ を加えて $2p < p + q < 2q$ とし, $2^{-1} > 0$ を掛ける.
+\end{proof}
+
+\section{Dedekind 切断}
+
+\begin{dfn}[切断と実数]\label{dfn:R}
+  述語記号 $\Cut$ を次で定義する.
+  \[ \Cut(x) :\leftrightarrow x \subseteq \Q \land x \neq \emptyset \land x \neq \Q \land \forall p \in \Q\,\forall q \in x\,(p < q \to p \in x) \land \forall p \in x\,\exists q \in x\,(p < q). \]
+  $\R := \{x \in \mathcal{P}(\Q) \mid \Cut(x)\}$ と定め, $\R$ の元を\textbf{実数}という. $q \in \Q$ に対して $\hat q := \{p \in \Q \mid p < q\}$ とおく. $0_\R := \hat 0$, $1_\R := \hat 1$.
+\end{dfn}
+
+\begin{lem}\label{lem:cut-basic}
+  $x \in \R$ とする.
+  \begin{enumerate}[label=(\arabic*)]
+    \item $p \in x$, $q \in \Q \setminus x$ ならば $p < q$.
+    \item $q \in \Q$ ならば $\hat q \in \R$.
+    \item (切断のアルキメデス性) $r \in \Q$, $r > 0$ ならば, $p \in x$ かつ $p + r \notin x$ となる $p$ が存在する.
+  \end{enumerate}
+\end{lem}
+\begin{proof}
+  (1) $q \leq p$ ならば下方閉性より $q \in x$ となり矛盾. 三分律より $p < q$.
+  (2) $q - 1 \in \hat q$, $q \notin \hat q$. 下方閉性は推移律. 最大元がないことは稠密性(定理\ref{thm:Q}(2)).
+  (3) $p_0 \in x$, $s \in \Q \setminus x$ をとる. 定理\ref{thm:Q}(1)より $s - p_0 < n r$ となる $n \in \omega$ がある. $K := \{k \in \omega \mid p_0 + k r \notin x\}$ は $n$ を含むので空でなく, 最小元 $k_0$ をもつ(定理\ref{thm:omega-order}(3)). $p_0 + 0 \cdot r = p_0 \in x$ より $k_0 \neq 0$ なので $k_0 = S(k)$ とかけ(定理\ref{thm:omega-order}(5)), 最小性より $p := p_0 + k r \in x$, $p + r = p_0 + k_0 r \notin x$.
+\end{proof}
+
+\begin{dfn}[順序]
+  実数の順序には, 第\ref{ch:zfc}章で一般の集合について定義した $x < y :\leftrightarrow x \subseteq y \land x \neq y$ (すなわち $x \subsetneq y$)をそのまま用いる. $x \leq y$ は $x < y \lor x = y$ (すなわち $x \subseteq y$)である.
+\end{dfn}
+
+\begin{thm}\label{thm:R-order}
+  $<$ は $\R$ 上の狭義全順序である.
+\end{thm}
+\begin{proof}
+  非反射性と推移性は $\subsetneq$ の性質から明らか. 三分律: $x, y \in \R$ で $x \not\subseteq y$ かつ $y \not\subseteq x$ と仮定すると, $p \in x \setminus y$, $q \in y \setminus x$ がとれる. 補題\ref{lem:cut-basic}(1)を $y$ と $p \notin y$, $q \in y$ に適用して $q < p$; $x$ と $q \notin x$, $p \in x$ に適用して $p < q$. これは $\Q$ の順序に矛盾する. よって $x \subseteq y$ または $y \subseteq x$ であり, $x < y \lor x = y \lor y < x$.
+\end{proof}
+
+\section{上限定理}
+
+\begin{dfn}[上界・上限]\label{dfn:ub}
+  $X \subseteq \R$ と $a \in \R$ について, 述語記号を次で定める.
+  \begin{align*}
+    \UB(a, X) &:\leftrightarrow a \in \R \land \forall x \in X\,(x \leq a) & (a \text{ は } X \text{ の上界}),\\
+    \IsSup(s, X) &:\leftrightarrow \UB(s, X) \land \forall a\,(\UB(a, X) \to s \leq a) & (s \text{ は } X \text{ の上限}).
+  \end{align*}
+  (第\ref{ch:text2}章でテキスト第2章の定義として再掲する.)
+\end{dfn}
+
+\begin{thm}[上限定理. テキスト公理 3.1(1)]\label{thm:sup}
+  \[ \ZFC \vdash \forall X\,\bigl(X \subseteq \R \land X \neq \emptyset \land \exists b\,\UB(b, X) \to \exists s\,\IsSup(s, X)\bigr). \]
+\end{thm}
+
+\begin{proof}[通常の証明]
+  $X \subseteq \R$ は空でなく, $b$ を上界とする. $s := \bigcup X$ とおく.
+  \begin{enumerate}[label=(\alph*)]
+    \item $s \in \R$: (i) $X$ の元は $\Q$ の部分集合なので $s \subseteq \Q$. (ii) $x_0 \in X$ をとると $x_0 \neq \emptyset$ なので $s \neq \emptyset$. (iii) 任意の $x \in X$ について $x \subseteq b$ だから $s \subseteq b$; $b \neq \Q$ より $s \neq \Q$. (iv) $p < q \in s$ なら $q \in x$ となる $x \in X$ があり, $x$ の下方閉性より $p \in x \subseteq s$. (v) $p \in s$ なら $p \in x \in X$ となる $x$ をとり, $x$ には $p < q$ となる $q \in x \subseteq s$ がある.
+    \item $s$ は上界: $x \in X$ ならば $x \subseteq \bigcup X = s$.
+    \item $s$ は最小: $a$ を上界とすると, すべての $x \in X$ について $x \subseteq a$ なので $s = \bigcup X \subseteq a$.
+  \end{enumerate}
+\end{proof}
+
+\begin{rem}
+  この定理は付録の基礎定理 (R16) として, 第\ref{ch:text2}章以降の完全展開した証明木の葉に用いる. 上の通常の証明は和集合の定義公理, 切断の定義, $\subseteq$ と $<$ の定義だけを用いる集合論的な議論なので, 第\ref{ch:ofield}章以降と同じ方法で完全展開できるが, その証明木の作成は今後の課題とする.
+\end{rem}
+
+\section{加法}
+
+\begin{dfn}
+  $x, y \in \R$ に対して
+  \[ x + y := \{r \in \Q \mid \exists p \in x\,\exists q \in y\,(r = p + q)\}, \qquad -x := \{p \in \Q \mid \exists r \in \Q\,(0 < r \land -p - r \notin x)\}. \]
+  $x - y := x + (-y)$.
+\end{dfn}
+
+\begin{thm}\label{thm:R-add}
+  $x, y, z \in \R$ について次が成り立つ.
+  \begin{enumerate}[label=(\arabic*)]
+    \item $x + y \in \R$, $-x \in \R$.
+    \item $(x + y) + z = x + (y + z)$, $x + y = y + x$.
+    \item $x + 0_\R = x$.
+    \item $x + (-x) = 0_\R$.
+    \item $x < y \to x + z < y + z$.
+  \end{enumerate}
+\end{thm}
+\begin{proof}
+  (1) $x + y$: $p_0 \in x, q_0 \in y$ から $p_0 + q_0 \in x + y$. $s \notin x$, $t \notin y$ をとると, 補題\ref{lem:cut-basic}(1)より $p \in x, q \in y$ に対して $p + q < s + t$ なので $s + t \notin x + y$. 下方閉性: $r' < p + q$ なら $r' = (r' - q) + q$ で $r' - q < p$ より $r' - q \in x$. 最大元なし: $p < p' \in x$ をとれば $p + q < p' + q$.
+  $-x$: $s \notin x$ をとると $p := -s - 1$ について $-p - 1 = s \notin x$ なので $p \in -x$. $a \in x$ ならば $-a \notin -x$ ($-(-a) - r = a - r < a$ は $x$ に属する). 下方閉性: $p < q \in -x$ で $-q - r \notin x$ なら, $-p - r > -q - r$ と補題\ref{lem:cut-basic}(1)の対偶から $-p - r \notin x$. 最大元なし: $q \in -x$ の証拠を $r$ とすると $q + r/2 \in -x$ (証拠 $r/2$).
+  (2) $\Q$ の結合律・交換律から, 両辺の元の形が一致することを Ext で示す.
+  (3) $p \in x$, $q < 0$ なら $p + q < p$ より $p + q \in x$. 逆に $p \in x$ なら $p < p' \in x$ をとり $p = p' + (p - p')$, $p - p' < 0$.
+  (4) $p \in x$, $q \in -x$ (証拠 $r$)なら $-q - r \notin x$ より $p < -q - r$, よって $p + q < -r < 0$. 逆に $s < 0$ に対し $r := -s/2 > 0$ として補題\ref{lem:cut-basic}(3)で $p \in x$, $p + r \notin x$ をとる. $q := -p - 2r$ とおくと $-q - r = p + r \notin x$ より $q \in -x$ であり, $p + q = -2r = s$.
+  (5) $x \subseteq y$ から $x + z \subseteq y + z$. 等号が成り立つと (2)--(4) により $x = (x+z) + (-z) = (y + z) + (-z) = y$ となり矛盾.
+\end{proof}
+
+\section{乗法}
+
+\begin{dfn}
+  $x, y \in \R$, $0_\R \leq x$, $0_\R \leq y$ のとき
+  \[ x \odot y := \{r \in \Q \mid r < 0 \lor \exists p \in x\,\exists q \in y\,(0 < p \land 0 < q \land r < p q)\} \]
+  とし, 一般の $x, y \in \R$ に対しては, $\abs{x}_0 := x$ ($0_\R \leq x$), $-x$ ($x < 0_\R$)として
+  \[ x \cdot y := \begin{cases} \abs{x}_0 \odot \abs{y}_0 & (x, y \text{ が同符号, すなわち } 0_\R \leq x \leftrightarrow 0_\R \leq y), \\ -(\abs{x}_0 \odot \abs{y}_0) & (\text{それ以外}) \end{cases} \]
+  と定める. $0_\R < x$ のとき $x^{-1} := \{p \in \Q \mid p \leq 0 \lor \exists s \in \Q\,(s \notin x \land p s < 1)\}$, $x < 0_\R$ のとき $x^{-1} := -((-x)^{-1})$ とする.
+\end{dfn}
+
+\begin{thm}\label{thm:R-mul}
+  $x, y, z \in \R$ について次が成り立つ.
+  \begin{enumerate}[label=(\arabic*)]
+    \item $x \cdot y \in \R$; $x \neq 0_\R \to x^{-1} \in \R$.
+    \item $(xy)z = x(yz)$, $xy = yx$, $x \cdot 1_\R = x$, $x(y + z) = xy + xz$.
+    \item $x \neq 0_\R \to x \cdot x^{-1} = 1_\R$.
+    \item $0_\R < x \land 0_\R < y \to 0_\R < xy$.
+    \item $0_\R \neq 1_\R$.
+  \end{enumerate}
+\end{thm}
+\begin{proof}[証明の概略]
+  (5) $0 \in \hat 1 \setminus \hat 0$. (4) $x, y > 0_\R$ なら正の $p \in x$, $q \in y$ が存在し($0_\R \subsetneq x$ と補題\ref{lem:cut-basic}(1)), $0 < pq/2 < pq$ より $pq/2 \in x \odot y \setminus 0_\R$.
+  (1)(2)(3) はまず $x, y, z \geq 0_\R$ の場合に $\odot$ について示す: $\odot$ の元の形 $r < pq$ が $\Q$ の法則で並べ替えられることと, (3) については補題\ref{lem:cut-basic}(3)の乗法版(「$r > 1$ ならば $p \in x$, $p > 0$, $p r \notin x$ となる $p$ が存在する」, 証明は同様)を用いる. 一般の場合は $x, y, z$ の符号による場合分けと, $-(-x) = x$, $(-x) \odot y = -(x \odot y)$ の形の等式に帰着させる(Rudin, \emph{Principles of Mathematical Analysis}, 第1章付録と同じ方法). \textbf{TODO}: 場合分けの各場合の検証を本文に書き下す.
+\end{proof}
+
+\section{まとめ: 完備順序体}
+
+\begin{thm}[$\R$ は完備順序体]\label{thm:complete-ordered-field}
+  第\ref{ch:ofield}章で述べる (R1)--(R16) はすべて $\ZFC$ の定理である.
+\end{thm}
+\begin{proof}
+  (R1) は定理\ref{thm:R-add}(1), \ref{thm:R-mul}(1)(5) と補題\ref{lem:cut-basic}(2). (R2)--(R5) は定理\ref{thm:R-add}. (R6)--(R10) は定理\ref{thm:R-mul}. (R11)--(R13) は定理\ref{thm:R-order}. (R14) は定理\ref{thm:R-add}(5). (R15) は定理\ref{thm:R-mul}(4). (R16) は定理\ref{thm:sup}.
+\end{proof}
+
+以後の章では, $\R$ の具体的な構成(切断であること)は一切用いず, (R1)--(R16) のみを用いる. この意味で, 以後の証明木の葉 (R$k$) はすべて本章で証明された $\ZFC$ の定理である(規則 Thm).

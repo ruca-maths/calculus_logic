@@ -1,0 +1,88 @@
+% 自動生成 (prover/build.js): AbsSubComm  ノード数 41
+\begin{fullproof}{[A13]}{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x - y \rvert = \lvert y - x \rvert)$}{41}\phantomsection\label{tree:AbsSubComm}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z = w \to \lvert z \rvert = \lvert y - x \rvert \to \lvert w \rvert = \lvert y - x \rvert$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \lvert z \rvert = \lvert y - x \rvert \to \lvert w \rvert = \lvert y - x \rvert)$}
+\UIC{$\forall z\,\forall w\,(z = w \to \lvert z \rvert = \lvert y - x \rvert \to \lvert w \rvert = \lvert y - x \rvert)$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$\varphi_{2}$}
+\AXC{$\varphi_{2} \to \varphi_{3}$\lbl{A2}}
+\BIC{$\varphi_{3}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$\forall y\,(v_{295} \in \mathbb{R} \to y \in \mathbb{R} \to v_{295} - y \in \mathbb{R})$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$v_{295} \in \mathbb{R} \to v_{296} \in \mathbb{R} \to v_{295} - v_{296} \in \mathbb{R}$}
+\UIC{$\forall v_{296}\,(v_{295} \in \mathbb{R} \to v_{296} \in \mathbb{R} \to v_{295} - v_{296} \in \mathbb{R})$}
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \forall v_{296}\,(y \in \mathbb{R} \to v_{296} \in \mathbb{R} \to y - v_{296} \in \mathbb{R})$\lbl{A2}}
+\BIC{$\forall v_{296}\,(y \in \mathbb{R} \to v_{296} \in \mathbb{R} \to y - v_{296} \in \mathbb{R})$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\forall v_{296}\,(y \in \mathbb{R} \to v_{296} \in \mathbb{R} \to y - v_{296} \in \mathbb{R})$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$y \in \mathbb{R} \to x \in \mathbb{R} \to y - x \in \mathbb{R}$}
+\AXC{$\varphi_{13}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to y \in \mathbb{R}) \to \varphi_{4}$}
+\BIC{$\varphi_{4}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert -x \rvert = \lvert x \rvert)$\lbl{[A7]}}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$y - x \in \mathbb{R} \to \lvert -(y - x) \rvert = \lvert y - x \rvert$}
+\AXC{$(y - x \in \mathbb{R} \to \lvert -(y - x) \rvert = \lvert y - x \rvert) \to \varphi_{8}$\lbl{A1}}
+\BIC{$\varphi_{8}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -(y - x) = x - y)$\lbl{[F14]}}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -(y - x) = x - y)$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to -(y - x) = x - y$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to -(y - x) = x - y) \to \varphi_{14}$\lbl{A1}}
+\BIC{$\varphi_{14}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{3}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{4}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y - x \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{8}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert -(y - x) \rvert = \lvert y - x \rvert$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{14}$}
+\BIC{$\varphi_{3} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x - y \rvert = \lvert y - x \rvert$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x - y \rvert = \lvert y - x \rvert$}
+\UIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x - y \rvert = \lvert y - x \rvert)$}
+\UIC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x - y \rvert = \lvert y - x \rvert)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall v_{295}\,\forall v_{296}\,(v_{295} \in \mathbb{R} \to v_{296} \in \mathbb{R} \to v_{295} - v_{296} \in \mathbb{R})$
+\item $\varphi_{2} :\equiv \forall w\,(-(y - x) = w \to \lvert -(y - x) \rvert = \lvert y - x \rvert \to \lvert w \rvert = \lvert y - x \rvert)$
+\item $\varphi_{3} :\equiv -(y - x) = x - y \to \lvert -(y - x) \rvert = \lvert y - x \rvert \to \lvert x - y \rvert = \lvert y - x \rvert$
+\item $\varphi_{4} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to x \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to y - x \in \mathbb{R}$
+\item $\varphi_{5} :\equiv \forall x \in \mathbb{R}\,(\lvert -x \rvert = \lvert x \rvert) \to y - x \in \mathbb{R} \to \lvert -(y - x) \rvert = \lvert y - x \rvert$
+\item $\varphi_{6} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -(y - x) = x - y) \to x \in \mathbb{R} \to y \in \mathbb{R} \to -(y - x) = x - y$
+\item $\varphi_{7} :\equiv \forall v_{296}\,(y \in \mathbb{R} \to v_{296} \in \mathbb{R} \to y - v_{296} \in \mathbb{R}) \to y \in \mathbb{R} \to x \in \mathbb{R} \to y - x \in \mathbb{R}$
+\item $\varphi_{8} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y - x \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert -(y - x) \rvert = \lvert y - x \rvert$
+\item $\varphi_{9} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(v_{295} \in \mathbb{R} \to y \in \mathbb{R} \to v_{295} - y \in \mathbb{R})$
+\item $\varphi_{10} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -(y - x) = x - y) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -(y - x) = x - y)$
+\item $\varphi_{11} :\equiv \forall y\,(v_{295} \in \mathbb{R} \to y \in \mathbb{R} \to v_{295} - y \in \mathbb{R}) \to v_{295} \in \mathbb{R} \to v_{296} \in \mathbb{R} \to v_{295} - v_{296} \in \mathbb{R}$
+\item $\varphi_{12} :\equiv \forall z\,\forall w\,(z = w \to \lvert z \rvert = \lvert y - x \rvert \to \lvert w \rvert = \lvert y - x \rvert) \to \varphi_{2}$
+\item $\varphi_{13} :\equiv (y \in \mathbb{R} \to x \in \mathbb{R} \to y - x \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to y \in \mathbb{R}) \to \varphi_{4}$
+\item $\varphi_{14} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert -(y - x) \rvert = \lvert y - x \rvert) \to \varphi_{3} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x - y \rvert = \lvert y - x \rvert$
+\end{abbrevlist}
+\end{fullproof}

@@ -1,0 +1,76 @@
+% 自動生成 (prover/build.js): InvMulL  ノード数 33
+\begin{fullproof}{[E22]}{$\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \cdot x = 1)$}{33}\phantomsection\label{tree:InvMulL}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(x^{-1} \cdot x = y \to y = z \to x^{-1} \cdot x = z)$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall y\,\forall z\,(x^{-1} \cdot x = y \to y = z \to x^{-1} \cdot x = z)$}
+\AXC{$\forall y\,\forall z\,(x^{-1} \cdot x = y \to y = z \to x^{-1} \cdot x = z) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)$\lbl{(R7)}}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall y\,(x^{-1} \in \mathbb{R} \to y \in \mathbb{R} \to x^{-1} \cdot y = y \cdot x^{-1})$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$x^{-1} \in \mathbb{R} \to x \in \mathbb{R} \to x^{-1} \cdot x = x \cdot x^{-1}$}
+\AXC{$\varphi_{9}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to x \neq 0 \to x^{-1} \in \mathbb{R}) \to \varphi_{5}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to x \neq 0 \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to x \neq 0 \to x^{-1} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to x \neq 0 \to x^{-1} \in \mathbb{R}) \to \varphi_{5}$}
+\BIC{$\varphi_{5}$}
+\BIC{$x \in \mathbb{R} \to x \neq 0 \to x^{-1} \cdot x = x \cdot x^{-1}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to x \cdot x^{-1} = 1)$\lbl{(R9)}}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to x \neq 0 \to x \cdot x^{-1} = 1$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to x \neq 0 \to x^{-1} \cdot x = x \cdot x^{-1}$}
+\AXC{$\varphi_{10}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to x \neq 0 \to x \cdot x^{-1} = 1) \to \varphi_{6}$}
+\BIC{$\varphi_{6}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to x^{-1} \cdot x = x \cdot x^{-1} \to x \cdot x^{-1} = 1 \to x^{-1} \cdot x = 1$\lbl{A2}}
+\BIC{$x^{-1} \cdot x = x \cdot x^{-1} \to x \cdot x^{-1} = 1 \to x^{-1} \cdot x = 1$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{6}$}
+\BIC{$x \in \mathbb{R} \to x \neq 0 \to x^{-1} \cdot x = 1$}
+\UIC{$\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \cdot x = 1)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall z\,(x^{-1} \cdot x = x \cdot x^{-1} \to x \cdot x^{-1} = z \to x^{-1} \cdot x = z)$
+\item $\varphi_{2} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(x^{-1} \cdot x = y \to y = z \to x^{-1} \cdot x = z)$
+\item $\varphi_{3} :\equiv \forall x \in \mathbb{R}\,(x \neq 0 \to x \cdot x^{-1} = 1) \to x \in \mathbb{R} \to x \neq 0 \to x \cdot x^{-1} = 1$
+\item $\varphi_{4} :\equiv \forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R}) \to x \in \mathbb{R} \to x \neq 0 \to x^{-1} \in \mathbb{R}$
+\item $\varphi_{5} :\equiv (x \in \mathbb{R} \to x \neq 0 \to x \in \mathbb{R}) \to x \in \mathbb{R} \to x \neq 0 \to x^{-1} \cdot x = x \cdot x^{-1}$
+\item $\varphi_{6} :\equiv (x^{-1} \cdot x = x \cdot x^{-1} \to x \cdot x^{-1} = 1 \to x^{-1} \cdot x = 1) \to x \in \mathbb{R} \to x \neq 0 \to x^{-1} \cdot x = 1$
+\item $\varphi_{7} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x) \to \forall y\,(x^{-1} \in \mathbb{R} \to y \in \mathbb{R} \to x^{-1} \cdot y = y \cdot x^{-1})$
+\item $\varphi_{8} :\equiv \forall y\,(x^{-1} \in \mathbb{R} \to y \in \mathbb{R} \to x^{-1} \cdot y = y \cdot x^{-1}) \to x^{-1} \in \mathbb{R} \to x \in \mathbb{R} \to x^{-1} \cdot x = x \cdot x^{-1}$
+\item $\varphi_{9} :\equiv (x^{-1} \in \mathbb{R} \to x \in \mathbb{R} \to x^{-1} \cdot x = x \cdot x^{-1}) \to (x \in \mathbb{R} \to x \neq 0 \to x^{-1} \in \mathbb{R}) \to \varphi_{5}$
+\item $\varphi_{10} :\equiv (x \in \mathbb{R} \to x \neq 0 \to x^{-1} \cdot x = x \cdot x^{-1}) \to (x \in \mathbb{R} \to x \neq 0 \to x \cdot x^{-1} = 1) \to \varphi_{6}$
+\end{abbrevlist}
+\end{fullproof}

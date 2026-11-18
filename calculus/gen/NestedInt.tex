@@ -1,0 +1,1497 @@
+% 自動生成 (prover/build.js): NestedInt  ノード数 646
+\begin{fullproof}{定理5.10}{$\forall a\,\forall b\,(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \exists x \in \mathbb{R}\,\forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n}))$}{646}\phantomsection\label{tree:NestedInt}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\varphi_{146}$\lbl{A4}}
+\AXC{$\forall x\,(\varphi_{139}) \to \varphi_{149}$\lbl{A3}}
+\AXC{$\varphi_{139}$\lbl{A2}}
+\UIC{$\forall x\,(\varphi_{139})$}
+\AXC{$\forall x\,(\varphi_{139}) \to (\forall x\,(\varphi_{139}) \to \varphi_{149}) \to \varphi_{146} \to \varphi_{143}$\lbl{A1}}
+\BIC{$(\forall x\,(\varphi_{139}) \to \varphi_{149}) \to \varphi_{146} \to \varphi_{143}$}
+\BIC{$\varphi_{146} \to \varphi_{143}$}
+\BIC{$\varphi_{143}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\varphi_{147}$\lbl{A4}}
+\AXC{$\forall y\,(\varphi_{140}) \to \varphi_{150}$\lbl{A3}}
+\AXC{$\varphi_{140}$\lbl{A2}}
+\UIC{$\forall y\,(\varphi_{140})$}
+\AXC{$\forall y\,(\varphi_{140}) \to (\forall y\,(\varphi_{140}) \to \varphi_{150}) \to \varphi_{147} \to \varphi_{144}$\lbl{A1}}
+\BIC{$(\forall y\,(\varphi_{140}) \to \varphi_{150}) \to \varphi_{147} \to \varphi_{144}$}
+\BIC{$\varphi_{147} \to \varphi_{144}$}
+\BIC{$\varphi_{144}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\varphi_{2}$\lbl{A1}}
+\AXC{$\varphi_{62}$\lbl{[C21]}}
+\AXC{$\varphi_{62} \to \forall m\,(\varphi_{44})$\lbl{A2}}
+\BIC{$\forall m\,(\varphi_{44})$}
+\AXC{$\forall m\,(\varphi_{44}) \to \varphi_{44}$\lbl{A2}}
+\BIC{$\varphi_{44}$}
+\AXC{$\varphi_{187}$\lbl{A2}}
+\BIC{$\mathrm{MonoDec}(b) \to m \in \mathbb{N} \to n \in \mathbb{N} \to m \leq n \to b_{n} \leq b_{m}$}
+\AXC{$\varphi_{258}$\lbl{A1}}
+\BIC{$\varphi_{2} \to \varphi_{255}$}
+\BIC{$\varphi_{255}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\varphi_{196}$\lbl{A1}}
+\AXC{$\varphi_{196} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}$\lbl{A1}}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}$}
+\AXC{$\mathrm{MonoInc}(a) \to \varphi_{69}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{255}$}
+\BIC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}) \to \varphi_{183} \to \varphi_{203}$}
+\BIC{$\varphi_{183} \to \varphi_{203}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to n \in \mathbb{N} \to a_{n} \leq b_{n}$\lbl{A2}}
+\AXC{$\mathrm{MonoInc}(a) \to \varphi_{118}$\lbl{A1}}
+\AXC{$(\mathrm{MonoInc}(a) \to \varphi_{118}) \to \varphi_{217}$\lbl{A1}}
+\BIC{$\varphi_{217}$}
+\BIC{$\mathrm{MonoInc}(a) \to \varphi_{107}$}
+\AXC{$\varphi_{251}$\lbl{A1}}
+\BIC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}) \to \varphi_{204}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\varphi_{196}$\lbl{A1}}
+\AXC{$\varphi_{196} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}$\lbl{A1}}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}) \to \varphi_{204}$}
+\BIC{$\varphi_{204}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z)$\lbl{[O5]}}
+\AXC{$\varphi_{41}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(a_{n} \leq y \to y \leq z \to a_{n} \leq z)$}
+\AXC{$\varphi_{127}$\lbl{A2}}
+\BIC{$\forall z\,(a_{n} \leq b_{n} \to b_{n} \leq z \to a_{n} \leq z)$}
+\AXC{$\varphi_{165}$\lbl{A2}}
+\BIC{$a_{n} \leq b_{n} \to b_{n} \leq b_{m} \to a_{n} \leq b_{m}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{204}$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$a_{n} \leq b_{n} \to b_{n} \leq b_{m} \to a_{n} \leq b_{m}$}
+\AXC{$(a_{n} \leq b_{n} \to b_{n} \leq b_{m} \to a_{n} \leq b_{m}) \to \varphi_{204} \to \varphi_{203} \to \varphi_{205}$\lbl{A1}}
+\BIC{$\varphi_{204} \to \varphi_{203} \to \varphi_{205}$}
+\BIC{$\varphi_{203} \to \varphi_{205}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to a_{m} \leq b_{m}$\lbl{A2}}
+\AXC{$\mathrm{MonoInc}(a) \to \varphi_{118}$\lbl{A1}}
+\AXC{$(\mathrm{MonoInc}(a) \to \varphi_{118}) \to \varphi_{218}$\lbl{A1}}
+\BIC{$\varphi_{218}$}
+\BIC{$\mathrm{MonoInc}(a) \to \varphi_{108}$}
+\AXC{$\varphi_{246}$\lbl{A1}}
+\BIC{$(\mathrm{MonoInc}(a) \to \varphi_{69}) \to \varphi_{198}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\varphi_{63}$\lbl{[C20]}}
+\AXC{$\varphi_{63} \to \varphi_{92}$\lbl{A2}}
+\BIC{$\varphi_{92}$}
+\AXC{$\varphi_{92} \to \varphi_{121}$\lbl{A2}}
+\BIC{$\varphi_{121}$}
+\AXC{$\varphi_{121} \to \mathrm{MonoInc}(v_{724}) \to v_{725} \in \mathbb{N} \to \varphi_{26}$\lbl{A2}}
+\BIC{$\mathrm{MonoInc}(v_{724}) \to v_{725} \in \mathbb{N} \to \varphi_{26}$}
+\UIC{$\forall v_{726}\,(\mathrm{MonoInc}(v_{724}) \to v_{725} \in \mathbb{N} \to \varphi_{26})$}
+\UIC{$\varphi_{159}$}
+\UIC{$\forall v_{724}\,(\varphi_{159})$}
+\AXC{$\forall v_{724}\,(\varphi_{159}) \to \varphi_{141}$\lbl{A2}}
+\BIC{$\varphi_{141}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\mathrm{MonoInc}(a) \to \mathrm{MonoInc}(a)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{141}$}
+\AXC{$\varphi_{141} \to \varphi_{93}$\lbl{A2}}
+\BIC{$\varphi_{93}$}
+\AXC{$\varphi_{202}$\lbl{A2}}
+\BIC{$\mathrm{MonoInc}(a) \to n \in \mathbb{N} \to m \in \mathbb{N} \to n \leq m \to a_{n} \leq a_{m}$}
+\AXC{$\varphi_{257}$\lbl{A1}}
+\BIC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoInc}(a)) \to \varphi_{254}$}
+\BIC{$\varphi_{254}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\varphi_{180}$\lbl{A1}}
+\AXC{$\mathrm{MonoInc}(a) \to \varphi_{69}$\lbl{A1}}
+\AXC{$\varphi_{196}$\lbl{A1}}
+\AXC{$\varphi_{196} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}$\lbl{A1}}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{254}$}
+\BIC{$(\mathrm{MonoInc}(a) \to \varphi_{69}) \to \varphi_{180} \to \varphi_{199}$}
+\BIC{$\varphi_{180} \to \varphi_{199}$}
+\BIC{$\varphi_{199}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z)$\lbl{[O5]}}
+\AXC{$\varphi_{41}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(a_{n} \leq y \to y \leq z \to a_{n} \leq z)$}
+\AXC{$\varphi_{128}$\lbl{A2}}
+\BIC{$\forall z\,(a_{n} \leq a_{m} \to a_{m} \leq z \to a_{n} \leq z)$}
+\AXC{$\varphi_{166}$\lbl{A2}}
+\BIC{$a_{n} \leq a_{m} \to a_{m} \leq b_{m} \to a_{n} \leq b_{m}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{199}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$a_{n} \leq a_{m} \to a_{m} \leq b_{m} \to a_{n} \leq b_{m}$}
+\AXC{$(a_{n} \leq a_{m} \to a_{m} \leq b_{m} \to a_{n} \leq b_{m}) \to \varphi_{199} \to \varphi_{198} \to \varphi_{200}$\lbl{A1}}
+\BIC{$\varphi_{199} \to \varphi_{198} \to \varphi_{200}$}
+\BIC{$\varphi_{198} \to \varphi_{200}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\mathrm{MonoInc}(a) \to \varphi_{69}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$(\mathrm{MonoInc}(a) \to \varphi_{69}) \to \varphi_{198}$}
+\BIC{$\varphi_{198}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{198} \to \varphi_{200}$}
+\BIC{$\varphi_{200}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(n \in \omega)$\lbl{[N7']}}
+\AXC{$\forall n \in \mathbb{N}\,(n \in \omega) \to m \in \mathbb{N} \to m \in \omega$\lbl{A2}}
+\BIC{$m \in \mathbb{N} \to m \in \omega$}
+\AXC{$(m \in \mathbb{N} \to m \in \omega) \to \varphi_{230}$\lbl{A1}}
+\BIC{$\varphi_{230}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(n \in \omega)$\lbl{[N7']}}
+\AXC{$\forall n \in \mathbb{N}\,(n \in \omega) \to n \in \mathbb{N} \to n \in \omega$\lbl{A2}}
+\BIC{$n \in \mathbb{N} \to n \in \omega$}
+\AXC{$(n \in \mathbb{N} \to n \in \omega) \to \varphi_{236}$\lbl{A1}}
+\BIC{$\varphi_{236}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\varphi_{196}$\lbl{A1}}
+\AXC{$\varphi_{196} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}$\lbl{A1}}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{236}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{158}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\forall m\,\forall n\,(m \in \omega \to n \in \omega \to m \leq n \lor n < m)$\lbl{[N11]}}
+\AXC{$\varphi_{162}$\lbl{A2}}
+\BIC{$\forall n\,(v_{722} \in \omega \to n \in \omega \to v_{722} \leq n \lor n < v_{722})$}
+\AXC{$\varphi_{172}$\lbl{A2}}
+\BIC{$v_{722} \in \omega \to v_{723} \in \omega \to v_{722} \leq v_{723} \lor v_{723} < v_{722}$}
+\UIC{$\varphi_{47}$}
+\UIC{$\forall v_{722}\,(\varphi_{47})$}
+\AXC{$\varphi_{189}$\lbl{A2}}
+\BIC{$\forall v_{723}\,(n \in \omega \to v_{723} \in \omega \to n \leq v_{723} \lor v_{723} < n)$}
+\AXC{$\varphi_{155}$\lbl{A2}}
+\BIC{$n \in \omega \to m \in \omega \to n \leq m \lor m < n$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{158}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$n \in \omega \to m \in \omega \to n \leq m \lor m < n$}
+\AXC{$(n \in \omega \to m \in \omega \to n \leq m \lor m < n) \to \varphi_{252}$\lbl{A1}}
+\BIC{$\varphi_{252}$}
+\BIC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{157}) \to \varphi_{184}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\mathrm{MonoInc}(a) \to \varphi_{69}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{230}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{157}$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{157}) \to \varphi_{184}$}
+\BIC{$\varphi_{184}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{200}$}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{184}$}
+\AXC{$\varphi_{184} \to \varphi_{200} \to \varphi_{205} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{164}$\lbl{A1}}
+\BIC{$\varphi_{200} \to \varphi_{205} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{164}$}
+\BIC{$\varphi_{205} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{164}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\varphi_{188}$\lbl{A1}}
+\AXC{$\varphi_{188} \to \varphi_{183}$\lbl{A1}}
+\BIC{$\varphi_{183}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{183} \to \varphi_{203}$}
+\BIC{$\varphi_{203}$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{203} \to \varphi_{205}$}
+\BIC{$\varphi_{205}$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{205} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{164}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{164}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(v_{727} = y \to y = v_{727})$\lbl{A2}}
+\BIC{$\forall y\,(v_{727} = y \to y = v_{727})$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$v_{727} = v_{728} \to v_{728} = v_{727}$}
+\UIC{$\forall v_{728}\,(v_{727} = v_{728} \to v_{728} = v_{727})$}
+\UIC{$\forall v_{727}\,\forall v_{728}\,(v_{727} = v_{728} \to v_{728} = v_{727})$}
+\AXC{$\varphi_{28}$\lbl{A2}}
+\BIC{$\forall v_{728}\,(y = v_{728} \to v_{728} = y)$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\varphi_{196}$\lbl{A1}}
+\AXC{$\varphi_{196} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{152}$\lbl{A1}}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{152}$}
+\AXC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{152}) \to \varphi_{214}$\lbl{A1}}
+\BIC{$\varphi_{214}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\forall v_{728}\,(y = v_{728} \to v_{728} = y)$}
+\AXC{$\forall v_{728}\,(y = v_{728} \to v_{728} = y) \to y = a_{n} \to a_{n} = y$\lbl{A2}}
+\BIC{$y = a_{n} \to a_{n} = y$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\varphi_{214}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{153}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{153}$}
+\AXC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{153}) \to \varphi_{249}$\lbl{A1}}
+\BIC{$\varphi_{249}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$z = w \to z < b_{m} \to w < b_{m}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < b_{m} \to w < b_{m})$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < b_{m} \to w < b_{m})$}
+\AXC{$\varphi_{148}$\lbl{A2}}
+\BIC{$\forall w\,(a_{n} = w \to a_{n} < b_{m} \to w < b_{m})$}
+\AXC{$\varphi_{163}$\lbl{A2}}
+\BIC{$a_{n} = y \to a_{n} < b_{m} \to y < b_{m}$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{164}$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{249}$}
+\BIC{$(a_{n} = y \to a_{n} < b_{m} \to y < b_{m}) \to \varphi_{221}$}
+\BIC{$\varphi_{221}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$z = w \to z = b_{m} \to w = b_{m}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z = b_{m} \to w = b_{m})$}
+\UIC{$\forall z\,\forall w\,(z = w \to z = b_{m} \to w = b_{m})$}
+\AXC{$\varphi_{126}$\lbl{A2}}
+\BIC{$\forall w\,(a_{n} = w \to a_{n} = b_{m} \to w = b_{m})$}
+\AXC{$\varphi_{142}$\lbl{A2}}
+\BIC{$a_{n} = y \to a_{n} = b_{m} \to y = b_{m}$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{221}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{154}$}
+\AXC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{154}) \to \varphi_{185}$\lbl{A1}}
+\BIC{$\varphi_{185}$}
+\UIC{$\forall n\,(\varphi_{185})$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\mathrm{MonoInc}(a) \to \mathrm{MonoInc}(a)$\lbl{A1}}
+\AXC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoInc}(a)) \to \varphi_{29} \to \varphi_{58}$\lbl{A1}}
+\BIC{$\varphi_{29} \to \varphi_{58}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\forall a\,(\mathrm{Seq}(a) \to \varphi_{42})$\lbl{[S16]}}
+\AXC{$\forall a\,(\mathrm{Seq}(a) \to \varphi_{42}) \to \mathrm{Seq}(a) \to \varphi_{42}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to \varphi_{42}$}
+\AXC{$(\mathrm{Seq}(a) \to \varphi_{42}) \to \varphi_{58} \to \varphi_{181}$\lbl{A1}}
+\BIC{$\varphi_{58} \to \varphi_{181}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\forall a\,(\varphi_{29})$\lbl{DefMonoInc}}
+\AXC{$\forall a\,(\varphi_{29}) \to \varphi_{29}$\lbl{A2}}
+\BIC{$\varphi_{29}$}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{29} \to \varphi_{58}$}
+\BIC{$\varphi_{58}$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\varphi_{58} \to \varphi_{181}$}
+\BIC{$\varphi_{181}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{90}$\lbl{A1}}
+\AXC{$\varphi_{134}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{181}$}
+\AXC{$\varphi_{181} \to \varphi_{192}$\lbl{A1}}
+\BIC{$\varphi_{192}$}
+\AXC{$\varphi_{192} \to \varphi_{134} \to \varphi_{190}$\lbl{A1}}
+\BIC{$\varphi_{134} \to \varphi_{190}$}
+\BIC{$\varphi_{190}$}
+\AXC{$\varphi_{190} \to \varphi_{231}$\lbl{A1}}
+\BIC{$\varphi_{231}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{135}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\varphi_{226}$\lbl{A4}}
+\AXC{$\forall n\,(\varphi_{185}) \to \varphi_{193}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\forall n\,(\varphi_{185})$}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{135}$}
+\AXC{$\varphi_{270}$\lbl{A1}}
+\BIC{$\forall n\,(\varphi_{185}) \to (\forall n\,(\varphi_{185}) \to \varphi_{193}) \to \varphi_{226} \to \varphi_{23} \to \varphi_{241}$}
+\BIC{$(\forall n\,(\varphi_{185}) \to \varphi_{193}) \to \varphi_{226} \to \varphi_{23} \to \varphi_{241}$}
+\BIC{$\varphi_{226} \to \varphi_{23} \to \varphi_{241}$}
+\BIC{$\varphi_{23} \to \varphi_{241}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\varphi_{33}$\lbl{A4}}
+\AXC{$\varphi_{23} \to \varphi_{35}$\lbl{A3}}
+\AXC{$\forall n\,(\neg (n \in \mathbb{N} \land y = a_{n})) \to \neg (j \in \mathbb{N} \land y = a_{j})$\lbl{A2}}
+\UIC{$\varphi_{23}$}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\varphi_{23} \to \varphi_{241}$}
+\BIC{$\varphi_{241}$}
+\BIC{$\varphi_{33} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{74}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{74}$}
+\AXC{$\varphi_{225}$\lbl{A1}}
+\BIC{$\varphi_{34} \land m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to y \leq b_{m}$}
+\UIC{$\forall y\,(\varphi_{34} \land m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to y \leq b_{m})$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\varphi_{229}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\forall y\,(\varphi_{34} \land m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to y \leq b_{m})$}
+\AXC{$\forall y\,(\varphi_{34} \land m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to y \leq b_{m}) \to \varphi_{229} \to \varphi_{237}$\lbl{A1}}
+\BIC{$\varphi_{229} \to \varphi_{237}$}
+\BIC{$\varphi_{237}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$\lbl{[S1]}}
+\AXC{$\varphi_{136}$\lbl{A2}}
+\BIC{$\forall n\,(\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R})$}
+\AXC{$\varphi_{124}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(b) \to m \in \mathbb{N} \to b_{m} \in \mathbb{R}$}
+\AXC{$\varphi_{243}$\lbl{A1}}
+\BIC{$\varphi_{59} \to (\mathrm{MonoInc}(a) \to \varphi_{69}) \to \mathrm{MonoInc}(a) \to \varphi_{109}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$\varphi_{38}$\lbl{DefMonoDec}}
+\AXC{$\varphi_{38} \to \varphi_{30}$\lbl{A2}}
+\BIC{$\varphi_{30}$}
+\AXC{$\varphi_{2}$\lbl{A1}}
+\AXC{$\varphi_{2} \to \varphi_{30} \to \varphi_{59}$\lbl{A1}}
+\BIC{$\varphi_{30} \to \varphi_{59}$}
+\BIC{$\varphi_{59}$}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$\varphi_{59} \to (\mathrm{MonoInc}(a) \to \varphi_{69}) \to \mathrm{MonoInc}(a) \to \varphi_{109}$}
+\BIC{$(\mathrm{MonoInc}(a) \to \varphi_{69}) \to \mathrm{MonoInc}(a) \to \varphi_{109}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a))$\lbl{DefUB}}
+\AXC{$\varphi_{168}$\lbl{A2}}
+\BIC{$\forall X\,(\mathrm{UB}(b_{m},X) \leftrightarrow b_{m} \in \mathbb{R} \land \forall x \in X\,(x \leq b_{m}))$}
+\AXC{$\varphi_{201}$\lbl{A2}}
+\BIC{$\varphi_{72}$}
+\AXC{$\varphi_{72} \to (\mathrm{MonoInc}(a) \to \varphi_{109}) \to \varphi_{253}$\lbl{A1}}
+\BIC{$(\mathrm{MonoInc}(a) \to \varphi_{109}) \to \varphi_{253}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$\mathrm{MonoInc}(a) \to \varphi_{69}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$(\mathrm{MonoInc}(a) \to \varphi_{69}) \to \mathrm{MonoInc}(a) \to \varphi_{109}$}
+\BIC{$\mathrm{MonoInc}(a) \to \varphi_{109}$}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$(\mathrm{MonoInc}(a) \to \varphi_{109}) \to \varphi_{253}$}
+\BIC{$\varphi_{253}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{143}$}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{144}$}
+\AXC{$\varphi_{34} \land m \in \mathbb{N} \to \forall y\,(\varphi_{34} \land m \in \mathbb{N})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$\varphi_{237}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{97}$}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\varphi_{253}$}
+\BIC{$\varphi_{144} \to \varphi_{143} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{56}$}
+\BIC{$\varphi_{143} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{56}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{56}$}
+\AXC{$\varphi_{223}$\lbl{A1}}
+\BIC{$\varphi_{34} \to m \in \mathbb{N} \to \mathrm{UB}(b_{m},\mathrm{ran}(a))$}
+\UIC{$\forall m\,(\varphi_{34} \to m \in \mathbb{N} \to \mathrm{UB}(b_{m},\mathrm{ran}(a)))$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$\varphi_{224}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$\forall m\,(\varphi_{34} \to m \in \mathbb{N} \to \mathrm{UB}(b_{m},\mathrm{ran}(a)))$}
+\AXC{$\forall m\,(\varphi_{34} \to m \in \mathbb{N} \to \mathrm{UB}(b_{m},\mathrm{ran}(a))) \to \varphi_{224} \to \varphi_{233}$\lbl{A1}}
+\BIC{$\varphi_{224} \to \varphi_{233}$}
+\BIC{$\varphi_{233}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\varphi_{34} \to \forall m\,(\varphi_{34})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$\varphi_{233}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{70}$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$\varphi_{25}$\lbl{A2}}
+\AXC{$\varphi_{11}$\lbl{DefSup}}
+\AXC{$\varphi_{11} \to \varphi_{7}$\lbl{A2}}
+\BIC{$\varphi_{7}$}
+\AXC{$\varphi_{7} \to \varphi_{18}$\lbl{A2}}
+\BIC{$\varphi_{18}$}
+\AXC{$\varphi_{145}$\lbl{A1}}
+\AXC{$\varphi_{145} \to \varphi_{18} \to \varphi_{160}$\lbl{A1}}
+\BIC{$\varphi_{18} \to \varphi_{160}$}
+\BIC{$\varphi_{160}$}
+\AXC{$\varphi_{160} \to \varphi_{25} \to \varphi_{169}$\lbl{A1}}
+\BIC{$\varphi_{25} \to \varphi_{169}$}
+\BIC{$\varphi_{169}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to a_{n} = a_{n}$\lbl{A2}}
+\BIC{$a_{n} = a_{n}$}
+\AXC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{88}$\lbl{A1}}
+\AXC{$\varphi_{235}$\lbl{A1}}
+\BIC{$a_{n} = a_{n} \to \varphi_{177}$}
+\BIC{$\varphi_{177}$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$\varphi_{161}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{181}$}
+\AXC{$\varphi_{181} \to \varphi_{195}$\lbl{A1}}
+\BIC{$\varphi_{195}$}
+\AXC{$\varphi_{195} \to \varphi_{161} \to \varphi_{207}$\lbl{A1}}
+\BIC{$\varphi_{161} \to \varphi_{207}$}
+\BIC{$\varphi_{207}$}
+\AXC{$\varphi_{207} \to \varphi_{182} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{132}$\lbl{A1}}
+\BIC{$\varphi_{182} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{132}$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$\varphi_{64}$\lbl{A4}}
+\AXC{$\forall u_{2}\,(\varphi_{53}) \to \varphi_{83}$\lbl{A3}}
+\AXC{$\varphi_{53}$\lbl{A2}}
+\UIC{$\forall u_{2}\,(\varphi_{53})$}
+\AXC{$\forall u_{2}\,(\varphi_{53}) \to (\forall u_{2}\,(\varphi_{53}) \to \varphi_{83}) \to \varphi_{64} \to \varphi_{65}$\lbl{A1}}
+\BIC{$(\forall u_{2}\,(\varphi_{53}) \to \varphi_{83}) \to \varphi_{64} \to \varphi_{65}$}
+\BIC{$\varphi_{64} \to \varphi_{65}$}
+\BIC{$\varphi_{65}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$\varphi_{98}$\lbl{A4}}
+\AXC{$\forall y\,(\varphi_{55}) \to \varphi_{75}$\lbl{A3}}
+\AXC{$\varphi_{55}$\lbl{A2}}
+\UIC{$\forall y\,(\varphi_{55})$}
+\AXC{$\forall y\,(\varphi_{55}) \to (\forall y\,(\varphi_{55}) \to \varphi_{75}) \to \varphi_{98} \to \varphi_{66}$\lbl{A1}}
+\BIC{$(\forall y\,(\varphi_{55}) \to \varphi_{75}) \to \varphi_{98} \to \varphi_{66}$}
+\BIC{$\varphi_{98} \to \varphi_{66}$}
+\BIC{$\varphi_{66}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$\varphi_{129}$\lbl{A4}}
+\AXC{$\forall x\,(\varphi_{85}) \to \varphi_{119}$\lbl{A3}}
+\AXC{$\varphi_{85}$\lbl{A2}}
+\UIC{$\forall x\,(\varphi_{85})$}
+\AXC{$\forall x\,(\varphi_{85}) \to (\forall x\,(\varphi_{85}) \to \varphi_{119}) \to \varphi_{129} \to \varphi_{99}$\lbl{A1}}
+\BIC{$(\forall x\,(\varphi_{85}) \to \varphi_{119}) \to \varphi_{129} \to \varphi_{99}$}
+\BIC{$\varphi_{129} \to \varphi_{99}$}
+\BIC{$\varphi_{99}$}
+\end{ptree}
+\noindent$\Pi_{51}$:
+\begin{ptree}
+\AXC{$\varphi_{100}$\lbl{A4}}
+\AXC{$\forall u_{2}\,(\varphi_{78}) \to \varphi_{122}$\lbl{A3}}
+\AXC{$\varphi_{78}$\lbl{A2}}
+\UIC{$\forall u_{2}\,(\varphi_{78})$}
+\AXC{$\forall u_{2}\,(\varphi_{78}) \to (\forall u_{2}\,(\varphi_{78}) \to \varphi_{122}) \to \varphi_{100} \to \varphi_{101}$\lbl{A1}}
+\BIC{$(\forall u_{2}\,(\varphi_{78}) \to \varphi_{122}) \to \varphi_{100} \to \varphi_{101}$}
+\BIC{$\varphi_{100} \to \varphi_{101}$}
+\BIC{$\varphi_{101}$}
+\end{ptree}
+\noindent$\Pi_{52}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$\varphi_{99}$}
+\AXC{$\stackrel{\Pi_{51}}{\vdots}$}\noLine
+\UIC{$\varphi_{101}$}
+\AXC{$\varphi_{79}$\lbl{A1}}
+\AXC{$\varphi_{79} \to \varphi_{101} \to \varphi_{99} \to \varphi_{102}$\lbl{A1}}
+\BIC{$\varphi_{101} \to \varphi_{99} \to \varphi_{102}$}
+\BIC{$\varphi_{99} \to \varphi_{102}$}
+\BIC{$\varphi_{102}$}
+\AXC{$\varphi_{102} \to \varphi_{116}$\lbl{A1}}
+\BIC{$\varphi_{116}$}
+\end{ptree}
+\noindent$\Pi_{53}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{52}}{\vdots}$}\noLine
+\UIC{$\varphi_{116}$}
+\AXC{$v_{731} \in \mathbb{R} \leftrightarrow v_{731} \in \mathbb{R}$\lbl{A1}}
+\AXC{$(v_{731} \in \mathbb{R} \leftrightarrow v_{731} \in \mathbb{R}) \to \varphi_{116} \to \varphi_{170}$\lbl{A1}}
+\BIC{$\varphi_{116} \to \varphi_{170}$}
+\BIC{$\varphi_{170}$}
+\AXC{$\varphi_{170} \to \varphi_{173}$\lbl{A1}}
+\BIC{$\varphi_{173}$}
+\end{ptree}
+\noindent$\Pi_{54}$:
+\begin{ptree}
+\AXC{$\mathrm{UB}(v_{731},v_{732}) \leftrightarrow \mathrm{UB}(v_{731},v_{732})$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{53}}{\vdots}$}\noLine
+\UIC{$\varphi_{173}$}
+\AXC{$\varphi_{173} \to (\mathrm{UB}(v_{731},v_{732}) \leftrightarrow \mathrm{UB}(v_{731},v_{732})) \to \varphi_{208}$\lbl{A1}}
+\BIC{$(\mathrm{UB}(v_{731},v_{732}) \leftrightarrow \mathrm{UB}(v_{731},v_{732})) \to \varphi_{208}$}
+\BIC{$\varphi_{208}$}
+\end{ptree}
+\noindent$\Pi_{55}$:
+\begin{ptree}
+\AXC{$\varphi_{129}$\lbl{A4}}
+\AXC{$\forall x\,(\varphi_{85}) \to \varphi_{119}$\lbl{A3}}
+\AXC{$\varphi_{85}$\lbl{A2}}
+\UIC{$\forall x\,(\varphi_{85})$}
+\AXC{$\forall x\,(\varphi_{85}) \to (\forall x\,(\varphi_{85}) \to \varphi_{119}) \to \varphi_{129} \to \varphi_{99}$\lbl{A1}}
+\BIC{$(\forall x\,(\varphi_{85}) \to \varphi_{119}) \to \varphi_{129} \to \varphi_{99}$}
+\BIC{$\varphi_{129} \to \varphi_{99}$}
+\BIC{$\varphi_{99}$}
+\end{ptree}
+\noindent$\Pi_{56}$:
+\begin{ptree}
+\AXC{$\varphi_{100}$\lbl{A4}}
+\AXC{$\forall u_{2}\,(\varphi_{78}) \to \varphi_{122}$\lbl{A3}}
+\AXC{$\varphi_{78}$\lbl{A2}}
+\UIC{$\forall u_{2}\,(\varphi_{78})$}
+\AXC{$\forall u_{2}\,(\varphi_{78}) \to (\forall u_{2}\,(\varphi_{78}) \to \varphi_{122}) \to \varphi_{100} \to \varphi_{101}$\lbl{A1}}
+\BIC{$(\forall u_{2}\,(\varphi_{78}) \to \varphi_{122}) \to \varphi_{100} \to \varphi_{101}$}
+\BIC{$\varphi_{100} \to \varphi_{101}$}
+\BIC{$\varphi_{101}$}
+\end{ptree}
+\noindent$\Pi_{57}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{55}}{\vdots}$}\noLine
+\UIC{$\varphi_{99}$}
+\AXC{$\stackrel{\Pi_{56}}{\vdots}$}\noLine
+\UIC{$\varphi_{101}$}
+\AXC{$\varphi_{79}$\lbl{A1}}
+\AXC{$\varphi_{79} \to \varphi_{101} \to \varphi_{99} \to \varphi_{102}$\lbl{A1}}
+\BIC{$\varphi_{101} \to \varphi_{99} \to \varphi_{102}$}
+\BIC{$\varphi_{99} \to \varphi_{102}$}
+\BIC{$\varphi_{102}$}
+\AXC{$\varphi_{102} \to \varphi_{116}$\lbl{A1}}
+\BIC{$\varphi_{116}$}
+\end{ptree}
+\noindent$\Pi_{58}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{57}}{\vdots}$}\noLine
+\UIC{$\varphi_{116}$}
+\AXC{$v_{731} \in \mathbb{R} \leftrightarrow v_{731} \in \mathbb{R}$\lbl{A1}}
+\AXC{$(v_{731} \in \mathbb{R} \leftrightarrow v_{731} \in \mathbb{R}) \to \varphi_{116} \to \varphi_{170}$\lbl{A1}}
+\BIC{$\varphi_{116} \to \varphi_{170}$}
+\BIC{$\varphi_{170}$}
+\AXC{$\varphi_{170} \to \varphi_{173}$\lbl{A1}}
+\BIC{$\varphi_{173}$}
+\end{ptree}
+\noindent$\Pi_{59}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{58}}{\vdots}$}\noLine
+\UIC{$\varphi_{173}$}
+\AXC{$\mathrm{UB}(v_{731},v_{732}) \leftrightarrow \mathrm{UB}(v_{731},v_{732})$\lbl{A1}}
+\AXC{$(\mathrm{UB}(v_{731},v_{732}) \leftrightarrow \mathrm{UB}(v_{731},v_{732})) \to \varphi_{173} \to \varphi_{209}$\lbl{A1}}
+\BIC{$\varphi_{173} \to \varphi_{209}$}
+\BIC{$\varphi_{209}$}
+\end{ptree}
+\noindent$\Pi_{60}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{54}}{\vdots}$}\noLine
+\UIC{$\varphi_{208}$}
+\AXC{$\varphi_{208} \to \varphi_{212}$\lbl{A1}}
+\BIC{$\varphi_{212}$}
+\AXC{$\stackrel{\Pi_{59}}{\vdots}$}\noLine
+\UIC{$\varphi_{209}$}
+\AXC{$\varphi_{209} \to \varphi_{212} \to \varphi_{244}$\lbl{A1}}
+\BIC{$\varphi_{212} \to \varphi_{244}$}
+\BIC{$\varphi_{244}$}
+\AXC{$\varphi_{244} \to (\varphi_{19} \leftrightarrow \varphi_{215})$\lbl{A1}}
+\BIC{$\varphi_{19} \leftrightarrow \varphi_{215}$}
+\end{ptree}
+\noindent$\Pi_{61}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{60}}{\vdots}$}\noLine
+\UIC{$\varphi_{19} \leftrightarrow \varphi_{215}$}
+\AXC{$(\varphi_{19} \leftrightarrow \varphi_{215}) \to \varphi_{215} \to \varphi_{19}$\lbl{A1}}
+\BIC{$\varphi_{215} \to \varphi_{19}$}
+\UIC{$\forall v_{732}\,(\varphi_{215} \to \varphi_{19})$}
+\AXC{$\stackrel{\Pi_{60}}{\vdots}$}\noLine
+\UIC{$\varphi_{19} \leftrightarrow \varphi_{215}$}
+\AXC{$(\varphi_{19} \leftrightarrow \varphi_{215}) \to \varphi_{19} \to \varphi_{215}$\lbl{A1}}
+\BIC{$\varphi_{19} \to \varphi_{215}$}
+\UIC{$\forall v_{732}\,(\varphi_{19} \to \varphi_{215})$}
+\AXC{$\forall v_{732}\,(\varphi_{19} \to \varphi_{215}) \to \varphi_{271}$\lbl{A1}}
+\BIC{$\varphi_{271}$}
+\BIC{$(\forall v_{732}\,(\varphi_{19} \to \varphi_{215}) \to \forall v_{732}\,(\varphi_{19}) \to \forall v_{732}\,(\varphi_{215})) \to \varphi_{267}$}
+\end{ptree}
+\noindent$\Pi_{62}$:
+\begin{ptree}
+\AXC{$\forall v_{732}\,(\varphi_{19} \to \varphi_{215}) \to \forall v_{732}\,(\varphi_{19}) \to \forall v_{732}\,(\varphi_{215})$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{61}}{\vdots}$}\noLine
+\UIC{$(\forall v_{732}\,(\varphi_{19} \to \varphi_{215}) \to \forall v_{732}\,(\varphi_{19}) \to \forall v_{732}\,(\varphi_{215})) \to \varphi_{267}$}
+\BIC{$\varphi_{267}$}
+\end{ptree}
+\noindent$\Pi_{63}$:
+\begin{ptree}
+\AXC{$\forall v_{732}\,(\varphi_{215} \to \varphi_{19}) \to \forall v_{732}\,(\varphi_{215}) \to \forall v_{732}\,(\varphi_{19})$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{62}}{\vdots}$}\noLine
+\UIC{$\varphi_{267}$}
+\BIC{$\forall v_{732}\,(\varphi_{19}) \leftrightarrow \forall v_{732}\,(\varphi_{215})$}
+\end{ptree}
+\noindent$\Pi_{64}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{63}}{\vdots}$}\noLine
+\UIC{$\forall v_{732}\,(\varphi_{19}) \leftrightarrow \forall v_{732}\,(\varphi_{215})$}
+\AXC{$\varphi_{260}$\lbl{A1}}
+\BIC{$\forall v_{732}\,(\varphi_{19}) \to \forall v_{732}\,(\varphi_{215})$}
+\UIC{$\forall v_{731}\,(\forall v_{732}\,(\varphi_{19}) \to \forall v_{732}\,(\varphi_{215}))$}
+\AXC{$\forall v_{731}\,(\forall v_{732}\,(\varphi_{19}) \to \forall v_{732}\,(\varphi_{215})) \to \varphi_{273}$\lbl{A1}}
+\BIC{$\varphi_{273}$}
+\end{ptree}
+\noindent$\Pi_{65}$:
+\begin{ptree}
+\AXC{$\varphi_{263}$\lbl{A3}}
+\AXC{$\varphi_{264}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{63}}{\vdots}$}\noLine
+\UIC{$\forall v_{732}\,(\varphi_{19}) \leftrightarrow \forall v_{732}\,(\varphi_{215})$}
+\AXC{$\varphi_{259}$\lbl{A1}}
+\BIC{$\forall v_{732}\,(\varphi_{215}) \to \forall v_{732}\,(\varphi_{19})$}
+\UIC{$\forall v_{731}\,(\forall v_{732}\,(\varphi_{215}) \to \forall v_{732}\,(\varphi_{19}))$}
+\AXC{$\stackrel{\Pi_{64}}{\vdots}$}\noLine
+\UIC{$\varphi_{273}$}
+\BIC{$\varphi_{264} \to \varphi_{263} \to (\forall v_{731}\,\forall v_{732}\,(\varphi_{19}) \leftrightarrow \varphi_{67})$}
+\BIC{$\varphi_{263} \to (\forall v_{731}\,\forall v_{732}\,(\varphi_{19}) \leftrightarrow \varphi_{67})$}
+\BIC{$\forall v_{731}\,\forall v_{732}\,(\varphi_{19}) \leftrightarrow \varphi_{67}$}
+\end{ptree}
+\noindent$\Pi_{66}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a))$\lbl{DefUB}}
+\AXC{$\forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a)) \to \varphi_{13}$\lbl{A2}}
+\BIC{$\varphi_{13}$}
+\end{ptree}
+\noindent$\Pi_{67}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{65}}{\vdots}$}\noLine
+\UIC{$\forall v_{731}\,\forall v_{732}\,(\varphi_{19}) \leftrightarrow \varphi_{67}$}
+\AXC{$\stackrel{\Pi_{66}}{\vdots}$}\noLine
+\UIC{$\varphi_{13}$}
+\AXC{$\varphi_{13} \to \varphi_{19}$\lbl{A2}}
+\BIC{$\varphi_{19}$}
+\UIC{$\forall v_{732}\,(\varphi_{19})$}
+\UIC{$\forall v_{731}\,\forall v_{732}\,(\varphi_{19})$}
+\AXC{$\forall v_{731}\,\forall v_{732}\,(\varphi_{19}) \to (\forall v_{731}\,\forall v_{732}\,(\varphi_{19}) \leftrightarrow \varphi_{67}) \to \varphi_{67}$\lbl{A1}}
+\BIC{$(\forall v_{731}\,\forall v_{732}\,(\varphi_{19}) \leftrightarrow \varphi_{67}) \to \varphi_{67}$}
+\BIC{$\varphi_{67}$}
+\end{ptree}
+\noindent$\Pi_{68}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{67}}{\vdots}$}\noLine
+\UIC{$\varphi_{67}$}
+\AXC{$\varphi_{67} \to \varphi_{20}$\lbl{A2}}
+\BIC{$\varphi_{20}$}
+\AXC{$\varphi_{20} \to \varphi_{15}$\lbl{A2}}
+\BIC{$\varphi_{15}$}
+\AXC{$\varphi_{11}$\lbl{DefSup}}
+\AXC{$\varphi_{11} \to \varphi_{7}$\lbl{A2}}
+\BIC{$\varphi_{7}$}
+\AXC{$\varphi_{7} \to \varphi_{18}$\lbl{A2}}
+\BIC{$\varphi_{18}$}
+\AXC{$\varphi_{145}$\lbl{A1}}
+\AXC{$\varphi_{145} \to \varphi_{250}$\lbl{A1}}
+\BIC{$\varphi_{250}$}
+\BIC{$\varphi_{15} \to \varphi_{66} \to \varphi_{65} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{91}$}
+\BIC{$\varphi_{66} \to \varphi_{65} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{91}$}
+\end{ptree}
+\noindent$\Pi_{69}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$\varphi_{65}$}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$\varphi_{66}$}
+\AXC{$\stackrel{\Pi_{68}}{\vdots}$}\noLine
+\UIC{$\varphi_{66} \to \varphi_{65} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{91}$}
+\BIC{$\varphi_{65} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{91}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{91}$}
+\end{ptree}
+\noindent$\Pi_{70}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{69}}{\vdots}$}\noLine
+\UIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{91}$}
+\AXC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{91}) \to \varphi_{222}$\lbl{A1}}
+\BIC{$\varphi_{222}$}
+\end{ptree}
+\noindent$\Pi_{71}$:
+\begin{ptree}
+\AXC{$\forall y \in \mathrm{ran}(a)\,(y \leq x) \to a_{n} \in \mathrm{ran}(a) \to a_{n} \leq x$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{70}}{\vdots}$}\noLine
+\UIC{$\varphi_{222}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{133}$}
+\AXC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{133}) \to \varphi_{256}$\lbl{A1}}
+\BIC{$\varphi_{256}$}
+\end{ptree}
+\noindent$\Pi_{72}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$\varphi_{169}$}
+\AXC{$\varphi_{54}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$\varphi_{177}$}
+\AXC{$\varphi_{177} \to \varphi_{54} \to \varphi_{182}$\lbl{A1}}
+\BIC{$\varphi_{54} \to \varphi_{182}$}
+\BIC{$\varphi_{182}$}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$\varphi_{182} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{132}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{132}$}
+\AXC{$\stackrel{\Pi_{71}}{\vdots}$}\noLine
+\UIC{$\varphi_{256}$}
+\BIC{$\varphi_{169} \to (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{57}) \to \varphi_{232}$}
+\BIC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{57}) \to \varphi_{232}$}
+\end{ptree}
+\noindent$\Pi_{73}$:
+\begin{ptree}
+\AXC{$\varphi_{61}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{70}$}
+\AXC{$\varphi_{239}$\lbl{A1}}
+\BIC{$\varphi_{61} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{57}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{57}$}
+\AXC{$\stackrel{\Pi_{72}}{\vdots}$}\noLine
+\UIC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{57}) \to \varphi_{232}$}
+\BIC{$\varphi_{232}$}
+\end{ptree}
+\noindent$\Pi_{74}$:
+\begin{ptree}
+\AXC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{88}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{73}}{\vdots}$}\noLine
+\UIC{$\varphi_{232}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{137}$}
+\AXC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{137}) \to \varphi_{175}$\lbl{A1}}
+\BIC{$\varphi_{175}$}
+\UIC{$\forall n\,(\varphi_{175})$}
+\end{ptree}
+\noindent$\Pi_{75}$:
+\begin{ptree}
+\AXC{$\varphi_{130}$\lbl{A4}}
+\AXC{$\forall x\,(\varphi_{86}) \to \varphi_{120}$\lbl{A3}}
+\AXC{$\varphi_{86}$\lbl{A2}}
+\UIC{$\forall x\,(\varphi_{86})$}
+\AXC{$\forall x\,(\varphi_{86}) \to (\forall x\,(\varphi_{86}) \to \varphi_{120}) \to \varphi_{130} \to \varphi_{103}$\lbl{A1}}
+\BIC{$(\forall x\,(\varphi_{86}) \to \varphi_{120}) \to \varphi_{130} \to \varphi_{103}$}
+\BIC{$\varphi_{130} \to \varphi_{103}$}
+\BIC{$\varphi_{103}$}
+\end{ptree}
+\noindent$\Pi_{76}$:
+\begin{ptree}
+\AXC{$\varphi_{104}$\lbl{A4}}
+\AXC{$\forall u_{1}\,(\varphi_{80}) \to \varphi_{123}$\lbl{A3}}
+\AXC{$\varphi_{80}$\lbl{A2}}
+\UIC{$\forall u_{1}\,(\varphi_{80})$}
+\AXC{$\forall u_{1}\,(\varphi_{80}) \to (\forall u_{1}\,(\varphi_{80}) \to \varphi_{123}) \to \varphi_{104} \to \varphi_{105}$\lbl{A1}}
+\BIC{$(\forall u_{1}\,(\varphi_{80}) \to \varphi_{123}) \to \varphi_{104} \to \varphi_{105}$}
+\BIC{$\varphi_{104} \to \varphi_{105}$}
+\BIC{$\varphi_{105}$}
+\end{ptree}
+\noindent$\Pi_{77}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{75}}{\vdots}$}\noLine
+\UIC{$\varphi_{103}$}
+\AXC{$\stackrel{\Pi_{76}}{\vdots}$}\noLine
+\UIC{$\varphi_{105}$}
+\AXC{$\varphi_{81}$\lbl{A1}}
+\AXC{$\varphi_{81} \to \varphi_{105} \to \varphi_{103} \to \varphi_{106}$\lbl{A1}}
+\BIC{$\varphi_{105} \to \varphi_{103} \to \varphi_{106}$}
+\BIC{$\varphi_{103} \to \varphi_{106}$}
+\BIC{$\varphi_{106}$}
+\AXC{$\varphi_{106} \to \varphi_{117}$\lbl{A1}}
+\BIC{$\varphi_{117}$}
+\end{ptree}
+\noindent$\Pi_{78}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{77}}{\vdots}$}\noLine
+\UIC{$\varphi_{117}$}
+\AXC{$v_{729} \in \mathbb{R} \leftrightarrow v_{729} \in \mathbb{R}$\lbl{A1}}
+\AXC{$(v_{729} \in \mathbb{R} \leftrightarrow v_{729} \in \mathbb{R}) \to \varphi_{117} \to \varphi_{171}$\lbl{A1}}
+\BIC{$\varphi_{117} \to \varphi_{171}$}
+\BIC{$\varphi_{171}$}
+\AXC{$\varphi_{171} \to \varphi_{174}$\lbl{A1}}
+\BIC{$\varphi_{174}$}
+\end{ptree}
+\noindent$\Pi_{79}$:
+\begin{ptree}
+\AXC{$\mathrm{UB}(v_{729},v_{730}) \leftrightarrow \mathrm{UB}(v_{729},v_{730})$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{78}}{\vdots}$}\noLine
+\UIC{$\varphi_{174}$}
+\AXC{$\varphi_{174} \to (\mathrm{UB}(v_{729},v_{730}) \leftrightarrow \mathrm{UB}(v_{729},v_{730})) \to \varphi_{210}$\lbl{A1}}
+\BIC{$(\mathrm{UB}(v_{729},v_{730}) \leftrightarrow \mathrm{UB}(v_{729},v_{730})) \to \varphi_{210}$}
+\BIC{$\varphi_{210}$}
+\end{ptree}
+\noindent$\Pi_{80}$:
+\begin{ptree}
+\AXC{$\varphi_{130}$\lbl{A4}}
+\AXC{$\forall x\,(\varphi_{86}) \to \varphi_{120}$\lbl{A3}}
+\AXC{$\varphi_{86}$\lbl{A2}}
+\UIC{$\forall x\,(\varphi_{86})$}
+\AXC{$\forall x\,(\varphi_{86}) \to (\forall x\,(\varphi_{86}) \to \varphi_{120}) \to \varphi_{130} \to \varphi_{103}$\lbl{A1}}
+\BIC{$(\forall x\,(\varphi_{86}) \to \varphi_{120}) \to \varphi_{130} \to \varphi_{103}$}
+\BIC{$\varphi_{130} \to \varphi_{103}$}
+\BIC{$\varphi_{103}$}
+\end{ptree}
+\noindent$\Pi_{81}$:
+\begin{ptree}
+\AXC{$\varphi_{104}$\lbl{A4}}
+\AXC{$\forall u_{1}\,(\varphi_{80}) \to \varphi_{123}$\lbl{A3}}
+\AXC{$\varphi_{80}$\lbl{A2}}
+\UIC{$\forall u_{1}\,(\varphi_{80})$}
+\AXC{$\forall u_{1}\,(\varphi_{80}) \to (\forall u_{1}\,(\varphi_{80}) \to \varphi_{123}) \to \varphi_{104} \to \varphi_{105}$\lbl{A1}}
+\BIC{$(\forall u_{1}\,(\varphi_{80}) \to \varphi_{123}) \to \varphi_{104} \to \varphi_{105}$}
+\BIC{$\varphi_{104} \to \varphi_{105}$}
+\BIC{$\varphi_{105}$}
+\end{ptree}
+\noindent$\Pi_{82}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{80}}{\vdots}$}\noLine
+\UIC{$\varphi_{103}$}
+\AXC{$\stackrel{\Pi_{81}}{\vdots}$}\noLine
+\UIC{$\varphi_{105}$}
+\AXC{$\varphi_{81}$\lbl{A1}}
+\AXC{$\varphi_{81} \to \varphi_{105} \to \varphi_{103} \to \varphi_{106}$\lbl{A1}}
+\BIC{$\varphi_{105} \to \varphi_{103} \to \varphi_{106}$}
+\BIC{$\varphi_{103} \to \varphi_{106}$}
+\BIC{$\varphi_{106}$}
+\AXC{$\varphi_{106} \to \varphi_{117}$\lbl{A1}}
+\BIC{$\varphi_{117}$}
+\end{ptree}
+\noindent$\Pi_{83}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{82}}{\vdots}$}\noLine
+\UIC{$\varphi_{117}$}
+\AXC{$v_{729} \in \mathbb{R} \leftrightarrow v_{729} \in \mathbb{R}$\lbl{A1}}
+\AXC{$(v_{729} \in \mathbb{R} \leftrightarrow v_{729} \in \mathbb{R}) \to \varphi_{117} \to \varphi_{171}$\lbl{A1}}
+\BIC{$\varphi_{117} \to \varphi_{171}$}
+\BIC{$\varphi_{171}$}
+\AXC{$\varphi_{171} \to \varphi_{174}$\lbl{A1}}
+\BIC{$\varphi_{174}$}
+\end{ptree}
+\noindent$\Pi_{84}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{83}}{\vdots}$}\noLine
+\UIC{$\varphi_{174}$}
+\AXC{$\mathrm{UB}(v_{729},v_{730}) \leftrightarrow \mathrm{UB}(v_{729},v_{730})$\lbl{A1}}
+\AXC{$(\mathrm{UB}(v_{729},v_{730}) \leftrightarrow \mathrm{UB}(v_{729},v_{730})) \to \varphi_{174} \to \varphi_{211}$\lbl{A1}}
+\BIC{$\varphi_{174} \to \varphi_{211}$}
+\BIC{$\varphi_{211}$}
+\end{ptree}
+\noindent$\Pi_{85}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{79}}{\vdots}$}\noLine
+\UIC{$\varphi_{210}$}
+\AXC{$\varphi_{210} \to \varphi_{213}$\lbl{A1}}
+\BIC{$\varphi_{213}$}
+\AXC{$\stackrel{\Pi_{84}}{\vdots}$}\noLine
+\UIC{$\varphi_{211}$}
+\AXC{$\varphi_{211} \to \varphi_{213} \to \varphi_{245}$\lbl{A1}}
+\BIC{$\varphi_{213} \to \varphi_{245}$}
+\BIC{$\varphi_{245}$}
+\AXC{$\varphi_{245} \to (\varphi_{21} \leftrightarrow \varphi_{216})$\lbl{A1}}
+\BIC{$\varphi_{21} \leftrightarrow \varphi_{216}$}
+\end{ptree}
+\noindent$\Pi_{86}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{85}}{\vdots}$}\noLine
+\UIC{$\varphi_{21} \leftrightarrow \varphi_{216}$}
+\AXC{$(\varphi_{21} \leftrightarrow \varphi_{216}) \to \varphi_{216} \to \varphi_{21}$\lbl{A1}}
+\BIC{$\varphi_{216} \to \varphi_{21}$}
+\UIC{$\forall v_{730}\,(\varphi_{216} \to \varphi_{21})$}
+\AXC{$\stackrel{\Pi_{85}}{\vdots}$}\noLine
+\UIC{$\varphi_{21} \leftrightarrow \varphi_{216}$}
+\AXC{$(\varphi_{21} \leftrightarrow \varphi_{216}) \to \varphi_{21} \to \varphi_{216}$\lbl{A1}}
+\BIC{$\varphi_{21} \to \varphi_{216}$}
+\UIC{$\forall v_{730}\,(\varphi_{21} \to \varphi_{216})$}
+\AXC{$\forall v_{730}\,(\varphi_{21} \to \varphi_{216}) \to \varphi_{272}$\lbl{A1}}
+\BIC{$\varphi_{272}$}
+\BIC{$(\forall v_{730}\,(\varphi_{21} \to \varphi_{216}) \to \forall v_{730}\,(\varphi_{21}) \to \forall v_{730}\,(\varphi_{216})) \to \varphi_{268}$}
+\end{ptree}
+\noindent$\Pi_{87}$:
+\begin{ptree}
+\AXC{$\forall v_{730}\,(\varphi_{21} \to \varphi_{216}) \to \forall v_{730}\,(\varphi_{21}) \to \forall v_{730}\,(\varphi_{216})$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{86}}{\vdots}$}\noLine
+\UIC{$(\forall v_{730}\,(\varphi_{21} \to \varphi_{216}) \to \forall v_{730}\,(\varphi_{21}) \to \forall v_{730}\,(\varphi_{216})) \to \varphi_{268}$}
+\BIC{$\varphi_{268}$}
+\end{ptree}
+\noindent$\Pi_{88}$:
+\begin{ptree}
+\AXC{$\forall v_{730}\,(\varphi_{216} \to \varphi_{21}) \to \forall v_{730}\,(\varphi_{216}) \to \forall v_{730}\,(\varphi_{21})$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{87}}{\vdots}$}\noLine
+\UIC{$\varphi_{268}$}
+\BIC{$\forall v_{730}\,(\varphi_{21}) \leftrightarrow \forall v_{730}\,(\varphi_{216})$}
+\end{ptree}
+\noindent$\Pi_{89}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{88}}{\vdots}$}\noLine
+\UIC{$\forall v_{730}\,(\varphi_{21}) \leftrightarrow \forall v_{730}\,(\varphi_{216})$}
+\AXC{$\varphi_{262}$\lbl{A1}}
+\BIC{$\forall v_{730}\,(\varphi_{21}) \to \forall v_{730}\,(\varphi_{216})$}
+\UIC{$\forall v_{729}\,(\forall v_{730}\,(\varphi_{21}) \to \forall v_{730}\,(\varphi_{216}))$}
+\AXC{$\forall v_{729}\,(\forall v_{730}\,(\varphi_{21}) \to \forall v_{730}\,(\varphi_{216})) \to \varphi_{274}$\lbl{A1}}
+\BIC{$\varphi_{274}$}
+\end{ptree}
+\noindent$\Pi_{90}$:
+\begin{ptree}
+\AXC{$\varphi_{265}$\lbl{A3}}
+\AXC{$\varphi_{266}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{88}}{\vdots}$}\noLine
+\UIC{$\forall v_{730}\,(\varphi_{21}) \leftrightarrow \forall v_{730}\,(\varphi_{216})$}
+\AXC{$\varphi_{261}$\lbl{A1}}
+\BIC{$\forall v_{730}\,(\varphi_{216}) \to \forall v_{730}\,(\varphi_{21})$}
+\UIC{$\forall v_{729}\,(\forall v_{730}\,(\varphi_{216}) \to \forall v_{730}\,(\varphi_{21}))$}
+\AXC{$\stackrel{\Pi_{89}}{\vdots}$}\noLine
+\UIC{$\varphi_{274}$}
+\BIC{$\varphi_{266} \to \varphi_{265} \to (\forall v_{729}\,\forall v_{730}\,(\varphi_{21}) \leftrightarrow \varphi_{68})$}
+\BIC{$\varphi_{265} \to (\forall v_{729}\,\forall v_{730}\,(\varphi_{21}) \leftrightarrow \varphi_{68})$}
+\BIC{$\forall v_{729}\,\forall v_{730}\,(\varphi_{21}) \leftrightarrow \varphi_{68}$}
+\end{ptree}
+\noindent$\Pi_{91}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a))$\lbl{DefUB}}
+\AXC{$\forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a)) \to \varphi_{14}$\lbl{A2}}
+\BIC{$\varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{92}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{90}}{\vdots}$}\noLine
+\UIC{$\forall v_{729}\,\forall v_{730}\,(\varphi_{21}) \leftrightarrow \varphi_{68}$}
+\AXC{$\stackrel{\Pi_{91}}{\vdots}$}\noLine
+\UIC{$\varphi_{14}$}
+\AXC{$\varphi_{14} \to \varphi_{21}$\lbl{A2}}
+\BIC{$\varphi_{21}$}
+\UIC{$\forall v_{730}\,(\varphi_{21})$}
+\UIC{$\forall v_{729}\,\forall v_{730}\,(\varphi_{21})$}
+\AXC{$\forall v_{729}\,\forall v_{730}\,(\varphi_{21}) \to (\forall v_{729}\,\forall v_{730}\,(\varphi_{21}) \leftrightarrow \varphi_{68}) \to \varphi_{68}$\lbl{A1}}
+\BIC{$(\forall v_{729}\,\forall v_{730}\,(\varphi_{21}) \leftrightarrow \varphi_{68}) \to \varphi_{68}$}
+\BIC{$\varphi_{68}$}
+\end{ptree}
+\noindent$\Pi_{93}$:
+\begin{ptree}
+\AXC{$\varphi_{11}$\lbl{DefSup}}
+\AXC{$\varphi_{11} \to \varphi_{7}$\lbl{A2}}
+\BIC{$\varphi_{7}$}
+\AXC{$\varphi_{7} \to \varphi_{18}$\lbl{A2}}
+\BIC{$\varphi_{18}$}
+\AXC{$\varphi_{145}$\lbl{A1}}
+\AXC{$\varphi_{145} \to \varphi_{18} \to \varphi_{16} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{45}$\lbl{A1}}
+\BIC{$\varphi_{18} \to \varphi_{16} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{45}$}
+\BIC{$\varphi_{16} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{94}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{92}}{\vdots}$}\noLine
+\UIC{$\varphi_{68}$}
+\AXC{$\varphi_{68} \to \varphi_{22}$\lbl{A2}}
+\BIC{$\varphi_{22}$}
+\AXC{$\varphi_{22} \to \varphi_{16}$\lbl{A2}}
+\BIC{$\varphi_{16}$}
+\AXC{$\stackrel{\Pi_{93}}{\vdots}$}\noLine
+\UIC{$\varphi_{16} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{45}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{95}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{94}}{\vdots}$}\noLine
+\UIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{45}$}
+\AXC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{45}) \to \varphi_{176} \to \varphi_{191}$\lbl{A1}}
+\BIC{$\varphi_{176} \to \varphi_{191}$}
+\end{ptree}
+\noindent$\Pi_{96}$:
+\begin{ptree}
+\AXC{$\varphi_{219}$\lbl{A4}}
+\AXC{$\forall n\,(\varphi_{175}) \to \varphi_{178}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{74}}{\vdots}$}\noLine
+\UIC{$\forall n\,(\varphi_{175})$}
+\AXC{$\forall n\,(\varphi_{175}) \to (\forall n\,(\varphi_{175}) \to \varphi_{178}) \to \varphi_{219} \to \varphi_{176}$\lbl{A1}}
+\BIC{$(\forall n\,(\varphi_{175}) \to \varphi_{178}) \to \varphi_{219} \to \varphi_{176}$}
+\BIC{$\varphi_{219} \to \varphi_{176}$}
+\BIC{$\varphi_{176}$}
+\AXC{$\stackrel{\Pi_{95}}{\vdots}$}\noLine
+\UIC{$\varphi_{176} \to \varphi_{191}$}
+\BIC{$\varphi_{191}$}
+\end{ptree}
+\noindent$\Pi_{97}$:
+\begin{ptree}
+\AXC{$\varphi_{87}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{70}$}
+\AXC{$\varphi_{240}$\lbl{A1}}
+\BIC{$\varphi_{87} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{77}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{77}$}
+\AXC{$(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{77}) \to \varphi_{156}$\lbl{A1}}
+\BIC{$\varphi_{156}$}
+\end{ptree}
+\noindent$\Pi_{98}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to a_{1_{\omega}} = a_{1_{\omega}}$\lbl{A2}}
+\BIC{$a_{1_{\omega}} = a_{1_{\omega}}$}
+\AXC{$1_{\omega} \in \mathbb{N}$\lbl{[N1]}}
+\AXC{$1_{\omega} \in \mathbb{N} \to \varphi_{186}$\lbl{A1}}
+\BIC{$\varphi_{186}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{84}$}
+\end{ptree}
+\noindent$\Pi_{99}$:
+\begin{ptree}
+\AXC{$\varphi_{110}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{98}}{\vdots}$}\noLine
+\UIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{84}$}
+\AXC{$\varphi_{242}$\lbl{A1}}
+\BIC{$\varphi_{110} \to \mathrm{MonoInc}(a) \to \varphi_{125}$}
+\BIC{$\mathrm{MonoInc}(a) \to \varphi_{125}$}
+\end{ptree}
+\noindent$\Pi_{100}$:
+\begin{ptree}
+\AXC{$\forall y\,(y \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(y = a_{j})) \to \varphi_{39}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{181}$}
+\AXC{$\varphi_{181} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{115}$\lbl{A1}}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{115}$}
+\AXC{$\varphi_{248}$\lbl{A1}}
+\BIC{$(\forall y\,(y \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(y = a_{j})) \to \varphi_{39}) \to \varphi_{179}$}
+\BIC{$\varphi_{179}$}
+\end{ptree}
+\noindent$\Pi_{101}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{99}}{\vdots}$}\noLine
+\UIC{$\mathrm{MonoInc}(a) \to \varphi_{125}$}
+\AXC{$\stackrel{\Pi_{100}}{\vdots}$}\noLine
+\UIC{$\varphi_{179}$}
+\AXC{$\varphi_{179} \to (\mathrm{MonoInc}(a) \to \varphi_{125}) \to \mathrm{MonoInc}(a) \to \varphi_{73}$\lbl{A1}}
+\BIC{$(\mathrm{MonoInc}(a) \to \varphi_{125}) \to \mathrm{MonoInc}(a) \to \varphi_{73}$}
+\BIC{$\mathrm{MonoInc}(a) \to \varphi_{73}$}
+\end{ptree}
+\noindent$\Pi_{102}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{101}}{\vdots}$}\noLine
+\UIC{$\mathrm{MonoInc}(a) \to \varphi_{73}$}
+\AXC{$\forall X\,\forall x \in X\,(X \neq \emptyset)$\lbl{[B2]}}
+\AXC{$\varphi_{48}$\lbl{A2}}
+\BIC{$\forall x \in \mathrm{ran}(a)\,(\mathrm{ran}(a) \neq \emptyset)$}
+\AXC{$\varphi_{111}$\lbl{A2}}
+\BIC{$a_{1_{\omega}} \in \mathrm{ran}(a) \to \mathrm{ran}(a) \neq \emptyset$}
+\AXC{$\varphi_{228}$\lbl{A1}}
+\BIC{$(\mathrm{MonoInc}(a) \to \varphi_{73}) \to \mathrm{MonoInc}(a) \to \varphi_{51}$}
+\BIC{$\mathrm{MonoInc}(a) \to \varphi_{51}$}
+\end{ptree}
+\noindent$\Pi_{103}$:
+\begin{ptree}
+\AXC{$\varphi_{31}$\lbl{(R16)}}
+\AXC{$\varphi_{31} \to \mathrm{ran}(a) \subseteq \mathbb{R} \to \mathrm{ran}(a) \neq \emptyset \to \varphi_{3}$\lbl{A2}}
+\BIC{$\mathrm{ran}(a) \subseteq \mathbb{R} \to \mathrm{ran}(a) \neq \emptyset \to \varphi_{3}$}
+\AXC{$(\mathrm{ran}(a) \subseteq \mathbb{R} \to \mathrm{ran}(a) \neq \emptyset \to \varphi_{3}) \to \varphi_{247}$\lbl{A1}}
+\BIC{$\varphi_{247}$}
+\end{ptree}
+\noindent$\Pi_{104}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{102}}{\vdots}$}\noLine
+\UIC{$\mathrm{MonoInc}(a) \to \varphi_{51}$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{181}$}
+\AXC{$\varphi_{181} \to \mathrm{MonoInc}(a) \to \varphi_{52}$\lbl{A1}}
+\BIC{$\mathrm{MonoInc}(a) \to \varphi_{52}$}
+\AXC{$\stackrel{\Pi_{103}}{\vdots}$}\noLine
+\UIC{$\varphi_{247}$}
+\BIC{$(\mathrm{MonoInc}(a) \to \varphi_{51}) \to \varphi_{220}$}
+\BIC{$\varphi_{220}$}
+\end{ptree}
+\noindent$\Pi_{105}$:
+\begin{ptree}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\AXC{$1_{\omega} \in \mathbb{N}$\lbl{[N1]}}
+\AXC{$\stackrel{\Pi_{97}}{\vdots}$}\noLine
+\UIC{$\varphi_{156}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{32}$}
+\AXC{$\varphi_{227}$\lbl{A1}}
+\BIC{$\varphi_{8} \to \mathrm{MonoInc}(a) \to \varphi_{46}$}
+\BIC{$\mathrm{MonoInc}(a) \to \varphi_{46}$}
+\AXC{$\stackrel{\Pi_{104}}{\vdots}$}\noLine
+\UIC{$\varphi_{220}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{17}$}
+\AXC{$\varphi_{269}$\lbl{A1}}
+\BIC{$\forall x\,(\varphi_{197}) \to (\forall x\,(\varphi_{197}) \to \varphi_{206}) \to \varphi_{234} \to \forall s\,(\varphi_{4}) \to \varphi_{238}$}
+\end{ptree}
+\noindent$\Pi_{106}$:
+\begin{ptree}
+\AXC{$\varphi_{167}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{96}}{\vdots}$}\noLine
+\UIC{$\varphi_{191}$}
+\AXC{$\varphi_{191} \to \varphi_{167} \to \varphi_{194}$\lbl{A1}}
+\BIC{$\varphi_{167} \to \varphi_{194}$}
+\BIC{$\varphi_{194}$}
+\AXC{$\varphi_{194} \to \varphi_{197}$\lbl{A1}}
+\BIC{$\varphi_{197}$}
+\UIC{$\forall x\,(\varphi_{197})$}
+\AXC{$\stackrel{\Pi_{105}}{\vdots}$}\noLine
+\UIC{$\forall x\,(\varphi_{197}) \to (\forall x\,(\varphi_{197}) \to \varphi_{206}) \to \varphi_{234} \to \forall s\,(\varphi_{4}) \to \varphi_{238}$}
+\BIC{$(\forall x\,(\varphi_{197}) \to \varphi_{206}) \to \varphi_{234} \to \forall s\,(\varphi_{4}) \to \varphi_{238}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{9}$\lbl{A4}}
+\AXC{$\forall s\,(\varphi_{4}) \to \varphi_{10}$\lbl{A3}}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\UIC{$\forall s\,(\varphi_{4})$}
+\AXC{$\varphi_{234}$\lbl{A4}}
+\AXC{$\forall x\,(\varphi_{197}) \to \varphi_{206}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{106}}{\vdots}$}\noLine
+\UIC{$(\forall x\,(\varphi_{197}) \to \varphi_{206}) \to \varphi_{234} \to \forall s\,(\varphi_{4}) \to \varphi_{238}$}
+\BIC{$\varphi_{234} \to \forall s\,(\varphi_{4}) \to \varphi_{238}$}
+\BIC{$\forall s\,(\varphi_{4}) \to \varphi_{238}$}
+\BIC{$\varphi_{238}$}
+\BIC{$\varphi_{9} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{138}$}
+\BIC{$\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{138}$}
+\UIC{$\forall b\,(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{138})$}
+\UIC{$\forall a\,\forall b\,(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{138})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \mathrm{IsSup}(x,\mathrm{ran}(a)) \to \mathrm{IsSup}(x,\mathrm{ran}(a))$
+\item $\varphi_{2} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \mathrm{MonoDec}(b)$
+\item $\varphi_{3} :\equiv \exists b\,(\mathrm{UB}(b,\mathrm{ran}(a))) \to \exists s\,(\mathrm{IsSup}(s,\mathrm{ran}(a)))$
+\item $\varphi_{4} :\equiv \forall x\,(\neg \mathrm{IsSup}(x,\mathrm{ran}(a))) \to \neg \mathrm{IsSup}(s,\mathrm{ran}(a))$
+\item $\varphi_{5} :\equiv \mathrm{IsSup}(x,\mathrm{ran}(a)) \to \forall w\,(\mathrm{UB}(w,\mathrm{ran}(a)) \to x \leq w)$
+\item $\varphi_{6} :\equiv \forall y\,(v_{727} = y \to y = v_{727}) \to v_{727} = v_{728} \to v_{728} = v_{727}$
+\item $\varphi_{7} :\equiv \forall X\,(\mathrm{IsSup}(x,X) \leftrightarrow \mathrm{UB}(x,X) \land \forall w\,(\mathrm{UB}(w,X) \to x \leq w))$
+\item $\varphi_{8} :\equiv \forall b\,(\neg \mathrm{UB}(b,\mathrm{ran}(a))) \to \neg \mathrm{UB}(b_{1_{\omega}},\mathrm{ran}(a))$
+\item $\varphi_{9} :\equiv \forall x\,(\neg \mathrm{IsSup}(x,\mathrm{ran}(a))) \to \forall s\,\forall x\,(\neg \mathrm{IsSup}(x,\mathrm{ran}(a)))$
+\item $\varphi_{10} :\equiv \forall s\,\forall x\,(\neg \mathrm{IsSup}(x,\mathrm{ran}(a))) \to \forall s\,(\neg \mathrm{IsSup}(s,\mathrm{ran}(a)))$
+\item $\varphi_{11} :\equiv \forall s\,\forall X\,(\mathrm{IsSup}(s,X) \leftrightarrow \mathrm{UB}(s,X) \land \forall w\,(\mathrm{UB}(w,X) \to s \leq w))$
+\item $\varphi_{12} :\equiv \mathrm{IsSup}(x,\mathrm{ran}(a)) \to \mathrm{UB}(b_{n},\mathrm{ran}(a)) \to x \leq b_{n}$
+\item $\varphi_{13} :\equiv \forall X\,(\mathrm{UB}(v_{731},X) \leftrightarrow v_{731} \in \mathbb{R} \land \forall x \in X\,(x \leq v_{731}))$
+\item $\varphi_{14} :\equiv \forall X\,(\mathrm{UB}(v_{729},X) \leftrightarrow v_{729} \in \mathbb{R} \land \forall x \in X\,(x \leq v_{729}))$
+\item $\varphi_{15} :\equiv \mathrm{UB}(x,\mathrm{ran}(a)) \leftrightarrow x \in \mathbb{R} \land \forall u_{2} \in \mathrm{ran}(a)\,(u_{2} \leq x)$
+\item $\varphi_{16} :\equiv \mathrm{UB}(x,\mathrm{ran}(a)) \leftrightarrow x \in \mathbb{R} \land \forall u_{1} \in \mathrm{ran}(a)\,(u_{1} \leq x)$
+\item $\varphi_{17} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \exists s\,(\mathrm{IsSup}(s,\mathrm{ran}(a)))$
+\item $\varphi_{18} :\equiv \mathrm{IsSup}(x,\mathrm{ran}(a)) \leftrightarrow \mathrm{UB}(x,\mathrm{ran}(a)) \land \forall w\,(\mathrm{UB}(w,\mathrm{ran}(a)) \to x \leq w)$
+\item $\varphi_{19} :\equiv \mathrm{UB}(v_{731},v_{732}) \leftrightarrow v_{731} \in \mathbb{R} \land \forall x \in v_{732}\,(x \leq v_{731})$
+\item $\varphi_{20} :\equiv \forall v_{732}\,(\mathrm{UB}(x,v_{732}) \leftrightarrow x \in \mathbb{R} \land \forall u_{2} \in v_{732}\,(u_{2} \leq x))$
+\item $\varphi_{21} :\equiv \mathrm{UB}(v_{729},v_{730}) \leftrightarrow v_{729} \in \mathbb{R} \land \forall x \in v_{730}\,(x \leq v_{729})$
+\item $\varphi_{22} :\equiv \forall v_{730}\,(\mathrm{UB}(x,v_{730}) \leftrightarrow x \in \mathbb{R} \land \forall u_{1} \in v_{730}\,(u_{1} \leq x))$
+\item $\varphi_{23} :\equiv \forall j\,(\forall n\,(\neg (n \in \mathbb{N} \land y = a_{n})) \to \neg (j \in \mathbb{N} \land y = a_{j}))$
+\item $\varphi_{24} :\equiv y \in \mathrm{ran}(a) \to (y \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(y = a_{j}))$
+\item $\varphi_{25} :\equiv \forall w\,(\mathrm{UB}(w,\mathrm{ran}(a)) \to x \leq w) \to \mathrm{UB}(b_{n},\mathrm{ran}(a)) \to x \leq b_{n}$
+\item $\varphi_{26} :\equiv v_{726} \in \mathbb{N} \to v_{725} \leq v_{726} \to v_{724}(v_{725}) \leq v_{724}(v_{726})$
+\item $\varphi_{27} :\equiv \mathrm{IsSup}(x,\mathrm{ran}(a)) \to \forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n})$
+\item $\varphi_{28} :\equiv \forall v_{727}\,\forall v_{728}\,(v_{727} = v_{728} \to v_{728} = v_{727}) \to \forall v_{728}\,(y = v_{728} \to v_{728} = y)$
+\item $\varphi_{29} :\equiv \mathrm{MonoInc}(a) \leftrightarrow \mathrm{Seq}(a) \land \forall n \in \mathbb{N}\,(a_{n} \leq a_{S(n)})$
+\item $\varphi_{30} :\equiv \mathrm{MonoDec}(b) \leftrightarrow \mathrm{Seq}(b) \land \forall n \in \mathbb{N}\,(b_{S(n)} \leq b_{n})$
+\item $\varphi_{31} :\equiv \forall X\,(X \subseteq \mathbb{R} \to X \neq \emptyset \to \exists b\,(\mathrm{UB}(b,X)) \to \exists s\,(\mathrm{IsSup}(s,X)))$
+\item $\varphi_{32} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \mathrm{UB}(b_{1_{\omega}},\mathrm{ran}(a))$
+\item $\varphi_{33} :\equiv \forall n\,(\neg (n \in \mathbb{N} \land y = a_{n})) \to \forall j\,\forall n\,(\neg (n \in \mathbb{N} \land y = a_{n}))$
+\item $\varphi_{34} :\equiv \mathrm{MonoInc}(a) \land \mathrm{MonoDec}(b) \land \forall n \in \mathbb{N}\,(a_{n} \leq b_{n})$
+\item $\varphi_{35} :\equiv \forall j\,\forall n\,(\neg (n \in \mathbb{N} \land y = a_{n})) \to \forall j\,(\neg (j \in \mathbb{N} \land y = a_{j}))$
+\item $\varphi_{36} :\equiv y \in \mathrm{ran}(a) \to \forall y\,(y \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(y = a_{j}))$
+\item $\varphi_{37} :\equiv \mathrm{IsSup}(x,\mathrm{ran}(a)) \to n \in \mathbb{N} \to n \in \mathbb{N} \land a_{n} = a_{n}$
+\item $\varphi_{38} :\equiv \forall a\,(\mathrm{MonoDec}(a) \leftrightarrow \mathrm{Seq}(a) \land \forall n \in \mathbb{N}\,(a_{S(n)} \leq a_{n}))$
+\item $\varphi_{39} :\equiv a_{1_{\omega}} \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(a_{1_{\omega}} = a_{j})$
+\item $\varphi_{40} :\equiv m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to n \leq m \to n \leq m$
+\item $\varphi_{41} :\equiv \forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z) \to \forall y\,\forall z\,(a_{n} \leq y \to y \leq z \to a_{n} \leq z)$
+\item $\varphi_{42} :\equiv \mathrm{ran}(a) \subseteq \mathbb{R} \land \forall y\,(y \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(y = a_{j}))$
+\item $\varphi_{43} :\equiv \mathrm{IsSup}(x,\mathrm{ran}(a)) \to n \in \mathbb{N} \to \exists j \in \mathbb{N}\,(a_{n} = a_{j})$
+\item $\varphi_{44} :\equiv \forall n\,(\mathrm{MonoDec}(b) \to m \in \mathbb{N} \to n \in \mathbb{N} \to m \leq n \to b_{n} \leq b_{m})$
+\item $\varphi_{45} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \mathrm{IsSup}(x,\mathrm{ran}(a)) \to x \in \mathbb{R}$
+\item $\varphi_{46} :\equiv \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \exists b\,(\mathrm{UB}(b,\mathrm{ran}(a)))$
+\item $\varphi_{47} :\equiv \forall v_{723}\,(v_{722} \in \omega \to v_{723} \in \omega \to v_{722} \leq v_{723} \lor v_{723} < v_{722})$
+\item $\varphi_{48} :\equiv \forall X\,\forall x \in X\,(X \neq \emptyset) \to \forall x \in \mathrm{ran}(a)\,(\mathrm{ran}(a) \neq \emptyset)$
+\item $\varphi_{49} :\equiv m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to m < n \to m \leq n$
+\item $\varphi_{50} :\equiv m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to n \leq m \lor m < n$
+\item $\varphi_{51} :\equiv \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \mathrm{ran}(a) \neq \emptyset$
+\item $\varphi_{52} :\equiv \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \mathrm{ran}(a) \subseteq \mathbb{R}$
+\item $\varphi_{53} :\equiv \forall y \in \mathrm{ran}(a)\,(\neg y < x \to y = x) \to u_{2} \in \mathrm{ran}(a) \to \neg u_{2} < x \to u_{2} = x$
+\item $\varphi_{54} :\equiv \forall j\,(\neg (j \in \mathbb{N} \land a_{n} = a_{j})) \to \neg (n \in \mathbb{N} \land a_{n} = a_{n})$
+\item $\varphi_{55} :\equiv \forall u_{2} \in \mathrm{ran}(a)\,(\neg u_{2} < x \to u_{2} = x) \to y \in \mathrm{ran}(a) \to \neg y < x \to y = x$
+\item $\varphi_{56} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to \mathrm{UB}(b_{m},\mathrm{ran}(a))$
+\item $\varphi_{57} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to n \in \mathbb{N} \to \mathrm{UB}(b_{n},\mathrm{ran}(a))$
+\item $\varphi_{58} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \mathrm{Seq}(a)$
+\item $\varphi_{59} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \mathrm{Seq}(b)$
+\item $\varphi_{60} :\equiv m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to m < n \to m < n$
+\item $\varphi_{61} :\equiv \forall m \in \mathbb{N}\,(\mathrm{UB}(b_{m},\mathrm{ran}(a))) \to n \in \mathbb{N} \to \mathrm{UB}(b_{n},\mathrm{ran}(a))$
+\item $\varphi_{62} :\equiv \forall a\,\forall m\,\forall n\,(\mathrm{MonoDec}(a) \to m \in \mathbb{N} \to n \in \mathbb{N} \to m \leq n \to a_{n} \leq a_{m})$
+\item $\varphi_{63} :\equiv \forall a\,\forall m\,\forall n\,(\mathrm{MonoInc}(a) \to m \in \mathbb{N} \to n \in \mathbb{N} \to m \leq n \to a_{m} \leq a_{n})$
+\item $\varphi_{64} :\equiv \forall y \in \mathrm{ran}(a)\,(\neg y < x \to y = x) \to \forall u_{2}\,\forall y \in \mathrm{ran}(a)\,(\neg y < x \to y = x)$
+\item $\varphi_{65} :\equiv \forall y \in \mathrm{ran}(a)\,(\neg y < x \to y = x) \to \forall u_{2} \in \mathrm{ran}(a)\,(\neg u_{2} < x \to u_{2} = x)$
+\item $\varphi_{66} :\equiv \forall u_{2} \in \mathrm{ran}(a)\,(\neg u_{2} < x \to u_{2} = x) \to \forall y \in \mathrm{ran}(a)\,(\neg y < x \to y = x)$
+\item $\varphi_{67} :\equiv \forall v_{731}\,\forall v_{732}\,(\varphi_{215})$
+\item $\varphi_{68} :\equiv \forall v_{729}\,\forall v_{730}\,(\varphi_{216})$
+\item $\varphi_{69} :\equiv \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to m \in \mathbb{N}$
+\item $\varphi_{70} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \forall m \in \mathbb{N}\,(\mathrm{UB}(b_{m},\mathrm{ran}(a)))$
+\item $\varphi_{71} :\equiv \mathrm{IsSup}(x,\mathrm{ran}(a)) \to x \in \mathbb{R} \land \forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n})$
+\item $\varphi_{72} :\equiv \mathrm{UB}(b_{m},\mathrm{ran}(a)) \leftrightarrow b_{m} \in \mathbb{R} \land \forall x \in \mathrm{ran}(a)\,(x \leq b_{m})$
+\item $\varphi_{73} :\equiv \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to a_{1_{\omega}} \in \mathrm{ran}(a)$
+\item $\varphi_{74} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to y \leq b_{m}$
+\item $\varphi_{75} :\equiv \forall y\,\forall u_{2} \in \mathrm{ran}(a)\,(\neg u_{2} < x \to u_{2} = x) \to \forall y \in \mathrm{ran}(a)\,(\neg y < x \to y = x)$
+\item $\varphi_{76} :\equiv \mathrm{IsSup}(x,\mathrm{ran}(a)) \to \exists x \in \mathbb{R}\,\forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n})$
+\item $\varphi_{77} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to 1_{\omega} \in \mathbb{N} \to \mathrm{UB}(b_{1_{\omega}},\mathrm{ran}(a))$
+\item $\varphi_{78} :\equiv \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731}) \to u_{2} \in v_{732} \to \neg u_{2} < v_{731} \to u_{2} = v_{731}$
+\item $\varphi_{79} :\equiv \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731}) \leftrightarrow \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731})$
+\item $\varphi_{80} :\equiv \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729}) \to u_{1} \in v_{730} \to \neg u_{1} < v_{729} \to u_{1} = v_{729}$
+\item $\varphi_{81} :\equiv \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729}) \leftrightarrow \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729})$
+\item $\varphi_{82} :\equiv \mathrm{IsSup}(x,\mathrm{ran}(a)) \to n \in \mathbb{N} \to \forall y\,(y \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(y = a_{j}))$
+\item $\varphi_{83} :\equiv \forall u_{2}\,\forall y \in \mathrm{ran}(a)\,(\neg y < x \to y = x) \to \forall u_{2} \in \mathrm{ran}(a)\,(\neg u_{2} < x \to u_{2} = x)$
+\item $\varphi_{84} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to 1_{\omega} \in \mathbb{N} \land a_{1_{\omega}} = a_{1_{\omega}}$
+\item $\varphi_{85} :\equiv \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731}) \to x \in v_{732} \to \neg x < v_{731} \to x = v_{731}$
+\item $\varphi_{86} :\equiv \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729}) \to x \in v_{730} \to \neg x < v_{729} \to x = v_{729}$
+\item $\varphi_{87} :\equiv \forall m \in \mathbb{N}\,(\mathrm{UB}(b_{m},\mathrm{ran}(a))) \to 1_{\omega} \in \mathbb{N} \to \mathrm{UB}(b_{1_{\omega}},\mathrm{ran}(a))$
+\item $\varphi_{88} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \mathrm{IsSup}(x,\mathrm{ran}(a)) \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{89} :\equiv m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to n \in \mathbb{N} \land y = a_{n}$
+\item $\varphi_{90} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to y \in \mathrm{ran}(a)$
+\item $\varphi_{91} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \mathrm{IsSup}(x,\mathrm{ran}(a)) \to \forall y \in \mathrm{ran}(a)\,(y \leq x)$
+\item $\varphi_{92} :\equiv \forall m\,\forall n\,(\mathrm{MonoInc}(v_{724}) \to m \in \mathbb{N} \to n \in \mathbb{N} \to m \leq n \to v_{724}(m) \leq v_{724}(n))$
+\item $\varphi_{93} :\equiv \forall v_{726}\,(\mathrm{MonoInc}(a) \to n \in \mathbb{N} \to v_{726} \in \mathbb{N} \to n \leq v_{726} \to a_{n} \leq a_{v_{726}})$
+\item $\varphi_{94} :\equiv m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to n \leq m \to a_{m} \leq b_{m}$
+\item $\varphi_{95} :\equiv m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to n \leq m \to a_{n} \leq a_{m}$
+\item $\varphi_{96} :\equiv m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to n \leq m \to a_{n} \leq b_{m}$
+\item $\varphi_{97} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to \forall y \in \mathrm{ran}(a)\,(y \leq b_{m})$
+\item $\varphi_{98} :\equiv \forall u_{2} \in \mathrm{ran}(a)\,(\neg u_{2} < x \to u_{2} = x) \to \forall y\,\forall u_{2} \in \mathrm{ran}(a)\,(\neg u_{2} < x \to u_{2} = x)$
+\item $\varphi_{99} :\equiv \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731}) \to \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731})$
+\item $\varphi_{100} :\equiv \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731}) \to \forall u_{2}\,\forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731})$
+\item $\varphi_{101} :\equiv \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731}) \to \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731})$
+\item $\varphi_{102} :\equiv \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731}) \leftrightarrow \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731})$
+\item $\varphi_{103} :\equiv \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729}) \to \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729})$
+\item $\varphi_{104} :\equiv \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729}) \to \forall u_{1}\,\forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729})$
+\item $\varphi_{105} :\equiv \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729}) \to \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729})$
+\item $\varphi_{106} :\equiv \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729}) \leftrightarrow \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729})$
+\item $\varphi_{107} :\equiv \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to n \in \mathbb{N} \to a_{n} \leq b_{n}$
+\item $\varphi_{108} :\equiv \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to a_{m} \leq b_{m}$
+\item $\varphi_{109} :\equiv \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to b_{m} \in \mathbb{R}$
+\item $\varphi_{110} :\equiv \forall j\,(\neg (j \in \mathbb{N} \land a_{1_{\omega}} = a_{j})) \to \neg (1_{\omega} \in \mathbb{N} \land a_{1_{\omega}} = a_{1_{\omega}})$
+\item $\varphi_{111} :\equiv \forall x \in \mathrm{ran}(a)\,(\mathrm{ran}(a) \neq \emptyset) \to a_{1_{\omega}} \in \mathrm{ran}(a) \to \mathrm{ran}(a) \neq \emptyset$
+\item $\varphi_{112} :\equiv m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to m < n \to b_{n} \leq b_{m}$
+\item $\varphi_{113} :\equiv m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to m < n \to a_{n} \leq b_{n}$
+\item $\varphi_{114} :\equiv m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to m < n \to a_{n} \leq b_{m}$
+\item $\varphi_{115} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \forall y\,(y \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(y = a_{j}))$
+\item $\varphi_{116} :\equiv \neg \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731}) \leftrightarrow \neg \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731})$
+\item $\varphi_{117} :\equiv \neg \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729}) \leftrightarrow \neg \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729})$
+\item $\varphi_{118} :\equiv \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n})$
+\item $\varphi_{119} :\equiv \forall x\,\forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731}) \to \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731})$
+\item $\varphi_{120} :\equiv \forall x\,\forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729}) \to \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729})$
+\item $\varphi_{121} :\equiv \forall n\,(\mathrm{MonoInc}(v_{724}) \to v_{725} \in \mathbb{N} \to n \in \mathbb{N} \to v_{725} \leq n \to v_{724}(v_{725}) \leq v_{724}(n))$
+\item $\varphi_{122} :\equiv \forall u_{2}\,\forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731}) \to \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731})$
+\item $\varphi_{123} :\equiv \forall u_{1}\,\forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729}) \to \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729})$
+\item $\varphi_{124} :\equiv \forall n\,(\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R}) \to \mathrm{Seq}(b) \to m \in \mathbb{N} \to b_{m} \in \mathbb{R}$
+\item $\varphi_{125} :\equiv \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \exists j \in \mathbb{N}\,(a_{1_{\omega}} = a_{j})$
+\item $\varphi_{126} :\equiv \forall z\,\forall w\,(z = w \to z = b_{m} \to w = b_{m}) \to \forall w\,(a_{n} = w \to a_{n} = b_{m} \to w = b_{m})$
+\item $\varphi_{127} :\equiv \forall y\,\forall z\,(a_{n} \leq y \to y \leq z \to a_{n} \leq z) \to \forall z\,(a_{n} \leq b_{n} \to b_{n} \leq z \to a_{n} \leq z)$
+\item $\varphi_{128} :\equiv \forall y\,\forall z\,(a_{n} \leq y \to y \leq z \to a_{n} \leq z) \to \forall z\,(a_{n} \leq a_{m} \to a_{m} \leq z \to a_{n} \leq z)$
+\item $\varphi_{129} :\equiv \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731}) \to \forall x\,\forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731})$
+\item $\varphi_{130} :\equiv \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729}) \to \forall x\,\forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729})$
+\item $\varphi_{131} :\equiv \mathrm{IsSup}(x,\mathrm{ran}(a)) \to n \in \mathbb{N} \to (a_{n} \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(a_{n} = a_{j}))$
+\item $\varphi_{132} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \mathrm{IsSup}(x,\mathrm{ran}(a)) \to n \in \mathbb{N} \to a_{n} \in \mathrm{ran}(a)$
+\item $\varphi_{133} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \mathrm{IsSup}(x,\mathrm{ran}(a)) \to a_{n} \in \mathrm{ran}(a) \to a_{n} \leq x$
+\item $\varphi_{134} :\equiv \forall y\,(y \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(y = a_{j})) \to (y \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(y = a_{j}))$
+\item $\varphi_{135} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to \exists j \in \mathbb{N}\,(y = a_{j})$
+\item $\varphi_{136} :\equiv \forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \forall n\,(\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R})$
+\item $\varphi_{137} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \mathrm{IsSup}(x,\mathrm{ran}(a)) \to n \in \mathbb{N} \to a_{n} \leq x \land x \leq b_{n}$
+\item $\varphi_{138} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \exists x \in \mathbb{R}\,\forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n})$
+\item $\varphi_{139} :\equiv \forall y \in \mathrm{ran}(a)\,(\neg y < b_{m} \to y = b_{m}) \to x \in \mathrm{ran}(a) \to \neg x < b_{m} \to x = b_{m}$
+\item $\varphi_{140} :\equiv \forall x \in \mathrm{ran}(a)\,(\neg x < b_{m} \to x = b_{m}) \to y \in \mathrm{ran}(a) \to \neg y < b_{m} \to y = b_{m}$
+\item $\varphi_{141} :\equiv \forall v_{725}\,\forall v_{726}\,(\mathrm{MonoInc}(a) \to v_{725} \in \mathbb{N} \to v_{726} \in \mathbb{N} \to v_{725} \leq v_{726} \to a_{v_{725}} \leq a_{v_{726}})$
+\item $\varphi_{142} :\equiv \forall w\,(a_{n} = w \to a_{n} = b_{m} \to w = b_{m}) \to a_{n} = y \to a_{n} = b_{m} \to y = b_{m}$
+\item $\varphi_{143} :\equiv \forall y \in \mathrm{ran}(a)\,(\neg y < b_{m} \to y = b_{m}) \to \forall x \in \mathrm{ran}(a)\,(\neg x < b_{m} \to x = b_{m})$
+\item $\varphi_{144} :\equiv \forall x \in \mathrm{ran}(a)\,(\neg x < b_{m} \to x = b_{m}) \to \forall y \in \mathrm{ran}(a)\,(\neg y < b_{m} \to y = b_{m})$
+\item $\varphi_{145} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{1}$
+\item $\varphi_{146} :\equiv \forall y \in \mathrm{ran}(a)\,(\neg y < b_{m} \to y = b_{m}) \to \forall x\,\forall y \in \mathrm{ran}(a)\,(\neg y < b_{m} \to y = b_{m})$
+\item $\varphi_{147} :\equiv \forall x \in \mathrm{ran}(a)\,(\neg x < b_{m} \to x = b_{m}) \to \forall y\,\forall x \in \mathrm{ran}(a)\,(\neg x < b_{m} \to x = b_{m})$
+\item $\varphi_{148} :\equiv \forall z\,\forall w\,(z = w \to z < b_{m} \to w < b_{m}) \to \forall w\,(a_{n} = w \to a_{n} < b_{m} \to w < b_{m})$
+\item $\varphi_{149} :\equiv \forall x\,\forall y \in \mathrm{ran}(a)\,(\neg y < b_{m} \to y = b_{m}) \to \forall x \in \mathrm{ran}(a)\,(\neg x < b_{m} \to x = b_{m})$
+\item $\varphi_{150} :\equiv \forall y\,\forall x \in \mathrm{ran}(a)\,(\neg x < b_{m} \to x = b_{m}) \to \forall y \in \mathrm{ran}(a)\,(\neg y < b_{m} \to y = b_{m})$
+\item $\varphi_{151} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to n \in \mathbb{N}$
+\item $\varphi_{152} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to y = a_{n}$
+\item $\varphi_{153} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to a_{n} = y$
+\item $\varphi_{154} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to y \leq b_{m}$
+\item $\varphi_{155} :\equiv \forall v_{723}\,(n \in \omega \to v_{723} \in \omega \to n \leq v_{723} \lor v_{723} < n) \to n \in \omega \to m \in \omega \to n \leq m \lor m < n$
+\item $\varphi_{156} :\equiv 1_{\omega} \in \mathbb{N} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{32}$
+\item $\varphi_{157} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to m \in \omega$
+\item $\varphi_{158} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to n \in \omega$
+\item $\varphi_{159} :\equiv \forall v_{725}\,\forall v_{726}\,(\mathrm{MonoInc}(v_{724}) \to v_{725} \in \mathbb{N} \to \varphi_{26})$
+\item $\varphi_{160} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{5}$
+\item $\varphi_{161} :\equiv \forall y\,(y \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(y = a_{j})) \to (a_{n} \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(a_{n} = a_{j}))$
+\item $\varphi_{162} :\equiv \forall m\,\forall n\,(m \in \omega \to n \in \omega \to m \leq n \lor n < m) \to \forall n\,(v_{722} \in \omega \to n \in \omega \to v_{722} \leq n \lor n < v_{722})$
+\item $\varphi_{163} :\equiv \forall w\,(a_{n} = w \to a_{n} < b_{m} \to w < b_{m}) \to a_{n} = y \to a_{n} < b_{m} \to y < b_{m}$
+\item $\varphi_{164} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to n \in \mathbb{N} \land y = a_{n} \to a_{n} \leq b_{m}$
+\item $\varphi_{165} :\equiv \forall z\,(a_{n} \leq b_{n} \to b_{n} \leq z \to a_{n} \leq z) \to a_{n} \leq b_{n} \to b_{n} \leq b_{m} \to a_{n} \leq b_{m}$
+\item $\varphi_{166} :\equiv \forall z\,(a_{n} \leq a_{m} \to a_{m} \leq z \to a_{n} \leq z) \to a_{n} \leq a_{m} \to a_{m} \leq b_{m} \to a_{n} \leq b_{m}$
+\item $\varphi_{167} :\equiv \forall x\,(\neg (x \in \mathbb{R} \land \forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n}))) \to \neg (x \in \mathbb{R} \land \forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n}))$
+\item $\varphi_{168} :\equiv \forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a)) \to \forall X\,(\mathrm{UB}(b_{m},X) \leftrightarrow b_{m} \in \mathbb{R} \land \forall x \in X\,(x \leq b_{m}))$
+\item $\varphi_{169} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{12}$
+\item $\varphi_{170} :\equiv v_{731} \in \mathbb{R} \to \neg \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731}) \leftrightarrow v_{731} \in \mathbb{R} \to \neg \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731})$
+\item $\varphi_{171} :\equiv v_{729} \in \mathbb{R} \to \neg \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729}) \leftrightarrow v_{729} \in \mathbb{R} \to \neg \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729})$
+\item $\varphi_{172} :\equiv \forall n\,(v_{722} \in \omega \to n \in \omega \to v_{722} \leq n \lor n < v_{722}) \to v_{722} \in \omega \to v_{723} \in \omega \to v_{722} \leq v_{723} \lor v_{723} < v_{722}$
+\item $\varphi_{173} :\equiv \neg (v_{731} \in \mathbb{R} \to \neg \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731})) \leftrightarrow \neg (v_{731} \in \mathbb{R} \to \neg \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731}))$
+\item $\varphi_{174} :\equiv \neg (v_{729} \in \mathbb{R} \to \neg \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729})) \leftrightarrow \neg (v_{729} \in \mathbb{R} \to \neg \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729}))$
+\item $\varphi_{175} :\equiv \varphi_{34} \land \mathrm{IsSup}(x,\mathrm{ran}(a)) \to n \in \mathbb{N} \to a_{n} \leq x \land x \leq b_{n}$
+\item $\varphi_{176} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{27}$
+\item $\varphi_{177} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{37}$
+\item $\varphi_{178} :\equiv \forall n\,(\varphi_{34} \land \mathrm{IsSup}(x,\mathrm{ran}(a))) \to \forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n})$
+\item $\varphi_{179} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{39}$
+\item $\varphi_{180} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{40}$
+\item $\varphi_{181} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{42}$
+\item $\varphi_{182} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{43}$
+\item $\varphi_{183} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{49}$
+\item $\varphi_{184} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{50}$
+\item $\varphi_{185} :\equiv \varphi_{34} \land m \in \mathbb{N} \land y \in \mathrm{ran}(a) \land \neg y \leq b_{m} \to \neg (n \in \mathbb{N} \land y = a_{n})$
+\item $\varphi_{186} :\equiv a_{1_{\omega}} = a_{1_{\omega}} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{84}$
+\item $\varphi_{187} :\equiv \varphi_{44} \to \mathrm{MonoDec}(b) \to m \in \mathbb{N} \to n \in \mathbb{N} \to m \leq n \to b_{n} \leq b_{m}$
+\item $\varphi_{188} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{60}$
+\item $\varphi_{189} :\equiv \forall v_{722}\,(\varphi_{47}) \to \forall v_{723}\,(n \in \omega \to v_{723} \in \omega \to n \leq v_{723} \lor v_{723} < n)$
+\item $\varphi_{190} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to \varphi_{24}$
+\item $\varphi_{191} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{71}$
+\item $\varphi_{192} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to \varphi_{36}$
+\item $\varphi_{193} :\equiv \forall n\,(\varphi_{34} \land m \in \mathbb{N} \land y \in \mathrm{ran}(a) \land \neg y \leq b_{m}) \to \forall n\,(\neg (n \in \mathbb{N} \land y = a_{n}))$
+\item $\varphi_{194} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{76}$
+\item $\varphi_{195} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{82}$
+\item $\varphi_{196} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{89}$
+\item $\varphi_{197} :\equiv \varphi_{34} \land \neg \exists x \in \mathbb{R}\,\forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n}) \to \neg \mathrm{IsSup}(x,\mathrm{ran}(a))$
+\item $\varphi_{198} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{94}$
+\item $\varphi_{199} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{95}$
+\item $\varphi_{200} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{96}$
+\item $\varphi_{201} :\equiv \forall X\,(\mathrm{UB}(b_{m},X) \leftrightarrow b_{m} \in \mathbb{R} \land \forall x \in X\,(x \leq b_{m})) \to \varphi_{72}$
+\item $\varphi_{202} :\equiv \varphi_{93} \to \mathrm{MonoInc}(a) \to n \in \mathbb{N} \to m \in \mathbb{N} \to n \leq m \to a_{n} \leq a_{m}$
+\item $\varphi_{203} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{112}$
+\item $\varphi_{204} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{113}$
+\item $\varphi_{205} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{114}$
+\item $\varphi_{206} :\equiv \forall x\,(\varphi_{34} \land \neg \exists x \in \mathbb{R}\,\forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n})) \to \forall x\,(\neg \mathrm{IsSup}(x,\mathrm{ran}(a)))$
+\item $\varphi_{207} :\equiv \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \varphi_{131}$
+\item $\varphi_{208} :\equiv \neg (v_{731} \in \mathbb{R} \to \neg \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731})) \to \mathrm{UB}(v_{731},v_{732}) \leftrightarrow \neg (v_{731} \in \mathbb{R} \to \neg \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731})) \to \mathrm{UB}(v_{731},v_{732})$
+\item $\varphi_{209} :\equiv \mathrm{UB}(v_{731},v_{732}) \to \neg (v_{731} \in \mathbb{R} \to \neg \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731})) \leftrightarrow \mathrm{UB}(v_{731},v_{732}) \to \neg (v_{731} \in \mathbb{R} \to \neg \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731}))$
+\item $\varphi_{210} :\equiv \neg (v_{729} \in \mathbb{R} \to \neg \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729})) \to \mathrm{UB}(v_{729},v_{730}) \leftrightarrow \neg (v_{729} \in \mathbb{R} \to \neg \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729})) \to \mathrm{UB}(v_{729},v_{730})$
+\item $\varphi_{211} :\equiv \mathrm{UB}(v_{729},v_{730}) \to \neg (v_{729} \in \mathbb{R} \to \neg \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729})) \leftrightarrow \mathrm{UB}(v_{729},v_{730}) \to \neg (v_{729} \in \mathbb{R} \to \neg \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729}))$
+\item $\varphi_{212} :\equiv \neg (\neg (v_{731} \in \mathbb{R} \to \neg \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731})) \to \mathrm{UB}(v_{731},v_{732})) \leftrightarrow \neg (\neg (v_{731} \in \mathbb{R} \to \neg \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731})) \to \mathrm{UB}(v_{731},v_{732}))$
+\item $\varphi_{213} :\equiv \neg (\neg (v_{729} \in \mathbb{R} \to \neg \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729})) \to \mathrm{UB}(v_{729},v_{730})) \leftrightarrow \neg (\neg (v_{729} \in \mathbb{R} \to \neg \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729})) \to \mathrm{UB}(v_{729},v_{730}))$
+\item $\varphi_{214} :\equiv (y = a_{n} \to a_{n} = y) \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{153}$
+\item $\varphi_{215} :\equiv \neg ((\mathrm{UB}(v_{731},v_{732}) \to \neg (v_{731} \in \mathbb{R} \to \neg \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731}))) \to \neg (\neg (v_{731} \in \mathbb{R} \to \neg \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731})) \to \mathrm{UB}(v_{731},v_{732})))$
+\item $\varphi_{216} :\equiv \neg ((\mathrm{UB}(v_{729},v_{730}) \to \neg (v_{729} \in \mathbb{R} \to \neg \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729}))) \to \neg (\neg (v_{729} \in \mathbb{R} \to \neg \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729})) \to \mathrm{UB}(v_{729},v_{730})))$
+\item $\varphi_{217} :\equiv (\forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to n \in \mathbb{N} \to a_{n} \leq b_{n}) \to \mathrm{MonoInc}(a) \to \varphi_{107}$
+\item $\varphi_{218} :\equiv (\forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to m \in \mathbb{N} \to a_{m} \leq b_{m}) \to \mathrm{MonoInc}(a) \to \varphi_{108}$
+\item $\varphi_{219} :\equiv \varphi_{34} \land \mathrm{IsSup}(x,\mathrm{ran}(a)) \to \forall n\,(\varphi_{34} \land \mathrm{IsSup}(x,\mathrm{ran}(a)))$
+\item $\varphi_{220} :\equiv (\mathrm{MonoInc}(a) \to \varphi_{46}) \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{17}$
+\item $\varphi_{221} :\equiv (a_{n} = y \to a_{n} = b_{m} \to y = b_{m}) \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{154}$
+\item $\varphi_{222} :\equiv (\forall y \in \mathrm{ran}(a)\,(y \leq x) \to a_{n} \in \mathrm{ran}(a) \to a_{n} \leq x) \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{133}$
+\item $\varphi_{223} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{56}) \to \varphi_{34} \to m \in \mathbb{N} \to \mathrm{UB}(b_{m},\mathrm{ran}(a))$
+\item $\varphi_{224} :\equiv \forall m\,(\varphi_{34} \to m \in \mathbb{N} \to \mathrm{UB}(b_{m},\mathrm{ran}(a))) \to \forall m\,(\varphi_{34}) \to \forall m \in \mathbb{N}\,(\mathrm{UB}(b_{m},\mathrm{ran}(a)))$
+\item $\varphi_{225} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{74}) \to \varphi_{34} \land m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to y \leq b_{m}$
+\item $\varphi_{226} :\equiv \varphi_{34} \land m \in \mathbb{N} \land y \in \mathrm{ran}(a) \land \neg y \leq b_{m} \to \forall n\,(\varphi_{34} \land m \in \mathbb{N} \land y \in \mathrm{ran}(a) \land \neg y \leq b_{m})$
+\item $\varphi_{227} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{32}) \to \varphi_{8} \to \mathrm{MonoInc}(a) \to \varphi_{46}$
+\item $\varphi_{228} :\equiv (a_{1_{\omega}} \in \mathrm{ran}(a) \to \mathrm{ran}(a) \neq \emptyset) \to (\mathrm{MonoInc}(a) \to \varphi_{73}) \to \mathrm{MonoInc}(a) \to \varphi_{51}$
+\item $\varphi_{229} :\equiv \forall y\,(\varphi_{34} \land m \in \mathbb{N} \to y \in \mathrm{ran}(a) \to y \leq b_{m}) \to \forall y\,(\varphi_{34} \land m \in \mathbb{N}) \to \forall y \in \mathrm{ran}(a)\,(y \leq b_{m})$
+\item $\varphi_{230} :\equiv (\mathrm{MonoInc}(a) \to \varphi_{69}) \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{157}$
+\item $\varphi_{231} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{90}) \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{135}$
+\item $\varphi_{232} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{88}) \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{137}$
+\item $\varphi_{233} :\equiv (\varphi_{34} \to \forall m\,(\varphi_{34})) \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{70}$
+\item $\varphi_{234} :\equiv \varphi_{34} \land \neg \exists x \in \mathbb{R}\,\forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n}) \to \forall x\,(\varphi_{34} \land \neg \exists x \in \mathbb{R}\,\forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n}))$
+\item $\varphi_{235} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{88}) \to a_{n} = a_{n} \to \varphi_{177}$
+\item $\varphi_{236} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}) \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{158}$
+\item $\varphi_{237} :\equiv (\varphi_{34} \land m \in \mathbb{N} \to \forall y\,(\varphi_{34} \land m \in \mathbb{N})) \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{97}$
+\item $\varphi_{238} :\equiv (\forall s\,(\varphi_{4}) \to \varphi_{10}) \to \varphi_{9} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{138}$
+\item $\varphi_{239} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{70}) \to \varphi_{61} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{57}$
+\item $\varphi_{240} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{70}) \to \varphi_{87} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{77}$
+\item $\varphi_{241} :\equiv (\varphi_{23} \to \varphi_{35}) \to \varphi_{33} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{74}$
+\item $\varphi_{242} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{84}) \to \varphi_{110} \to \mathrm{MonoInc}(a) \to \varphi_{125}$
+\item $\varphi_{243} :\equiv (\mathrm{Seq}(b) \to m \in \mathbb{N} \to b_{m} \in \mathbb{R}) \to \varphi_{59} \to (\mathrm{MonoInc}(a) \to \varphi_{69}) \to \mathrm{MonoInc}(a) \to \varphi_{109}$
+\item $\varphi_{244} :\equiv (\mathrm{UB}(v_{731},v_{732}) \to \neg (v_{731} \in \mathbb{R} \to \neg \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731}))) \to \neg (\neg (v_{731} \in \mathbb{R} \to \neg \forall x \in v_{732}\,(\neg x < v_{731} \to x = v_{731})) \to \mathrm{UB}(v_{731},v_{732})) \leftrightarrow (\mathrm{UB}(v_{731},v_{732}) \to \neg (v_{731} \in \mathbb{R} \to \neg \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731}))) \to \neg (\neg (v_{731} \in \mathbb{R} \to \neg \forall u_{2} \in v_{732}\,(\neg u_{2} < v_{731} \to u_{2} = v_{731})) \to \mathrm{UB}(v_{731},v_{732}))$
+\item $\varphi_{245} :\equiv (\mathrm{UB}(v_{729},v_{730}) \to \neg (v_{729} \in \mathbb{R} \to \neg \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729}))) \to \neg (\neg (v_{729} \in \mathbb{R} \to \neg \forall x \in v_{730}\,(\neg x < v_{729} \to x = v_{729})) \to \mathrm{UB}(v_{729},v_{730})) \leftrightarrow (\mathrm{UB}(v_{729},v_{730}) \to \neg (v_{729} \in \mathbb{R} \to \neg \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729}))) \to \neg (\neg (v_{729} \in \mathbb{R} \to \neg \forall u_{1} \in v_{730}\,(\neg u_{1} < v_{729} \to u_{1} = v_{729})) \to \mathrm{UB}(v_{729},v_{730}))$
+\item $\varphi_{246} :\equiv (\mathrm{MonoInc}(a) \to \varphi_{108}) \to (\mathrm{MonoInc}(a) \to \varphi_{69}) \to \varphi_{198}$
+\item $\varphi_{247} :\equiv (\mathrm{MonoInc}(a) \to \varphi_{52}) \to (\mathrm{MonoInc}(a) \to \varphi_{51}) \to \varphi_{220}$
+\item $\varphi_{248} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{115}) \to (\forall y\,(y \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(y = a_{j})) \to \varphi_{39}) \to \varphi_{179}$
+\item $\varphi_{249} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{164}) \to (a_{n} = y \to a_{n} < b_{m} \to y < b_{m}) \to \varphi_{221}$
+\item $\varphi_{250} :\equiv \varphi_{18} \to \varphi_{15} \to \varphi_{66} \to \varphi_{65} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{91}$
+\item $\varphi_{251} :\equiv (\mathrm{MonoInc}(a) \to \varphi_{107}) \to (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}) \to \varphi_{204}$
+\item $\varphi_{252} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{158}) \to (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{157}) \to \varphi_{184}$
+\item $\varphi_{253} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{97}) \to \varphi_{144} \to \varphi_{143} \to \mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{56}$
+\item $\varphi_{254} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}) \to (\mathrm{MonoInc}(a) \to \varphi_{69}) \to \varphi_{180} \to \varphi_{199}$
+\item $\varphi_{255} :\equiv (\mathrm{MonoInc}(a) \to \varphi_{69}) \to (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{151}) \to \varphi_{183} \to \varphi_{203}$
+\item $\varphi_{256} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{132}) \to \varphi_{169} \to (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{57}) \to \varphi_{232}$
+\item $\varphi_{257} :\equiv (\mathrm{MonoInc}(a) \to n \in \mathbb{N} \to m \in \mathbb{N} \to n \leq m \to a_{n} \leq a_{m}) \to (\mathrm{MonoInc}(a) \to \mathrm{MonoInc}(a)) \to \varphi_{254}$
+\item $\varphi_{258} :\equiv (\mathrm{MonoDec}(b) \to m \in \mathbb{N} \to n \in \mathbb{N} \to m \leq n \to b_{n} \leq b_{m}) \to \varphi_{2} \to \varphi_{255}$
+\item $\varphi_{259} :\equiv (\forall v_{732}\,(\varphi_{19}) \leftrightarrow \forall v_{732}\,(\varphi_{215})) \to \forall v_{732}\,(\varphi_{215}) \to \forall v_{732}\,(\varphi_{19})$
+\item $\varphi_{260} :\equiv (\forall v_{732}\,(\varphi_{19}) \leftrightarrow \forall v_{732}\,(\varphi_{215})) \to \forall v_{732}\,(\varphi_{19}) \to \forall v_{732}\,(\varphi_{215})$
+\item $\varphi_{261} :\equiv (\forall v_{730}\,(\varphi_{21}) \leftrightarrow \forall v_{730}\,(\varphi_{216})) \to \forall v_{730}\,(\varphi_{216}) \to \forall v_{730}\,(\varphi_{21})$
+\item $\varphi_{262} :\equiv (\forall v_{730}\,(\varphi_{21}) \leftrightarrow \forall v_{730}\,(\varphi_{216})) \to \forall v_{730}\,(\varphi_{21}) \to \forall v_{730}\,(\varphi_{216})$
+\item $\varphi_{263} :\equiv \forall v_{731}\,(\forall v_{732}\,(\varphi_{215}) \to \forall v_{732}\,(\varphi_{19})) \to \varphi_{67} \to \forall v_{731}\,\forall v_{732}\,(\varphi_{19})$
+\item $\varphi_{264} :\equiv \forall v_{731}\,(\forall v_{732}\,(\varphi_{19}) \to \forall v_{732}\,(\varphi_{215})) \to \forall v_{731}\,\forall v_{732}\,(\varphi_{19}) \to \varphi_{67}$
+\item $\varphi_{265} :\equiv \forall v_{729}\,(\forall v_{730}\,(\varphi_{216}) \to \forall v_{730}\,(\varphi_{21})) \to \varphi_{68} \to \forall v_{729}\,\forall v_{730}\,(\varphi_{21})$
+\item $\varphi_{266} :\equiv \forall v_{729}\,(\forall v_{730}\,(\varphi_{21}) \to \forall v_{730}\,(\varphi_{216})) \to \forall v_{729}\,\forall v_{730}\,(\varphi_{21}) \to \varphi_{68}$
+\item $\varphi_{267} :\equiv (\forall v_{732}\,(\varphi_{215} \to \varphi_{19}) \to \forall v_{732}\,(\varphi_{215}) \to \forall v_{732}\,(\varphi_{19})) \to (\forall v_{732}\,(\varphi_{19}) \leftrightarrow \forall v_{732}\,(\varphi_{215}))$
+\item $\varphi_{268} :\equiv (\forall v_{730}\,(\varphi_{216} \to \varphi_{21}) \to \forall v_{730}\,(\varphi_{216}) \to \forall v_{730}\,(\varphi_{21})) \to (\forall v_{730}\,(\varphi_{21}) \leftrightarrow \forall v_{730}\,(\varphi_{216}))$
+\item $\varphi_{269} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{17}) \to \forall x\,(\varphi_{197}) \to (\forall x\,(\varphi_{197}) \to \varphi_{206}) \to \varphi_{234} \to \forall s\,(\varphi_{4}) \to \varphi_{238}$
+\item $\varphi_{270} :\equiv (\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \varphi_{135}) \to \forall n\,(\varphi_{185}) \to (\forall n\,(\varphi_{185}) \to \varphi_{193}) \to \varphi_{226} \to \varphi_{23} \to \varphi_{241}$
+\item $\varphi_{271} :\equiv \forall v_{732}\,(\varphi_{215} \to \varphi_{19}) \to (\forall v_{732}\,(\varphi_{19} \to \varphi_{215}) \to \forall v_{732}\,(\varphi_{19}) \to \forall v_{732}\,(\varphi_{215})) \to \varphi_{267}$
+\item $\varphi_{272} :\equiv \forall v_{730}\,(\varphi_{216} \to \varphi_{21}) \to (\forall v_{730}\,(\varphi_{21} \to \varphi_{216}) \to \forall v_{730}\,(\varphi_{21}) \to \forall v_{730}\,(\varphi_{216})) \to \varphi_{268}$
+\item $\varphi_{273} :\equiv \forall v_{731}\,(\forall v_{732}\,(\varphi_{215}) \to \forall v_{732}\,(\varphi_{19})) \to \varphi_{264} \to \varphi_{263} \to (\forall v_{731}\,\forall v_{732}\,(\varphi_{19}) \leftrightarrow \varphi_{67})$
+\item $\varphi_{274} :\equiv \forall v_{729}\,(\forall v_{730}\,(\varphi_{216}) \to \forall v_{730}\,(\varphi_{21})) \to \varphi_{266} \to \varphi_{265} \to (\forall v_{729}\,\forall v_{730}\,(\varphi_{21}) \leftrightarrow \varphi_{68})$
+\end{abbrevlist}
+\end{fullproof}

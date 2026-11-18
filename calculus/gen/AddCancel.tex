@@ -1,0 +1,608 @@
+% 自動生成 (prover/build.js): AddCancel  ノード数 256
+\begin{fullproof}{[F3]}{$\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = y)$}{256}\phantomsection\label{tree:AddCancel}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$\forall z\,(x = y + 0 \to y + 0 = z \to x = z)$}
+\AXC{$\varphi_{23}$\lbl{A2}}
+\BIC{$x = y + 0 \to y + 0 = y \to x = y$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x + 0 = x)$\lbl{(R4)}}
+\AXC{$\forall x \in \mathbb{R}\,(x + 0 = x) \to y \in \mathbb{R} \to y + 0 = y$\lbl{A2}}
+\BIC{$y \in \mathbb{R} \to y + 0 = y$}
+\AXC{$(y \in \mathbb{R} \to y + 0 = y) \to \varphi_{78}$\lbl{A1}}
+\BIC{$\varphi_{78}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{28} = y \to y = z \to v_{28} = z)$}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$\forall z\,(v_{28} = v_{29} \to v_{29} = z \to v_{28} = z)$}
+\AXC{$\varphi_{24}$\lbl{A2}}
+\BIC{$v_{28} = v_{29} \to v_{29} = v_{30} \to v_{28} = v_{30}$}
+\UIC{$\forall v_{30}\,(v_{28} = v_{29} \to v_{29} = v_{30} \to v_{28} = v_{30})$}
+\UIC{$\varphi_{1}$}
+\UIC{$\forall v_{28}\,(\varphi_{1})$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x + -x = 0)$\lbl{(R5)}}
+\AXC{$\forall x \in \mathbb{R}\,(x + -x = 0) \to z \in \mathbb{R} \to z + -z = 0$\lbl{A2}}
+\BIC{$z \in \mathbb{R} \to z + -z = 0$}
+\AXC{$(z \in \mathbb{R} \to z + -z = 0) \to \varphi_{81}$\lbl{A1}}
+\BIC{$\varphi_{81}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{81}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z + -z = 0$}
+\AXC{$\varphi_{95}$\lbl{A1}}
+\BIC{$y + (z + -z) = y + (z + -z) \to \varphi_{43} \to \varphi_{57}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to y + (z + -z) = y + (z + -z)$\lbl{A2}}
+\BIC{$y + (z + -z) = y + (z + -z)$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$y + (z + -z) = y + (z + -z) \to \varphi_{43} \to \varphi_{57}$}
+\BIC{$\varphi_{43} \to \varphi_{57}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{25} = y \to y = z \to v_{25} = z)$}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\forall z\,(v_{25} = v_{26} \to v_{26} = z \to v_{25} = z)$}
+\AXC{$\varphi_{25}$\lbl{A2}}
+\BIC{$v_{25} = v_{26} \to v_{26} = v_{27} \to v_{25} = v_{27}$}
+\UIC{$\forall v_{27}\,(v_{25} = v_{26} \to v_{26} = v_{27} \to v_{25} = v_{27})$}
+\UIC{$\varphi_{2}$}
+\UIC{$\forall v_{25}\,(\varphi_{2})$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\forall v_{25}\,(\varphi_{2})$}
+\AXC{$\varphi_{58}$\lbl{A2}}
+\BIC{$\forall v_{26}\,\forall v_{27}\,(x = v_{26} \to v_{26} = v_{27} \to x = v_{27})$}
+\AXC{$\varphi_{71}$\lbl{A2}}
+\BIC{$\varphi_{18}$}
+\AXC{$\varphi_{18} \to \varphi_{44}$\lbl{A2}}
+\BIC{$\varphi_{44}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R}) \to z \in \mathbb{R} \to -z \in \mathbb{R}$\lbl{A2}}
+\BIC{$z \in \mathbb{R} \to -z \in \mathbb{R}$}
+\AXC{$(z \in \mathbb{R} \to -z \in \mathbb{R}) \to \varphi_{83}$\lbl{A1}}
+\BIC{$\varphi_{83}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{83}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to -z \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\varphi_{34}$\lbl{(R2)}}
+\AXC{$\varphi_{34} \to \varphi_{41}$\lbl{A2}}
+\BIC{$\varphi_{41}$}
+\AXC{$\varphi_{41} \to \varphi_{51}$\lbl{A2}}
+\BIC{$\varphi_{51}$}
+\AXC{$\varphi_{51} \to v_{16} \in \mathbb{R} \to v_{17} \in \mathbb{R} \to \varphi_{7}$\lbl{A2}}
+\BIC{$v_{16} \in \mathbb{R} \to v_{17} \in \mathbb{R} \to \varphi_{7}$}
+\UIC{$\forall v_{18}\,(v_{16} \in \mathbb{R} \to v_{17} \in \mathbb{R} \to \varphi_{7})$}
+\UIC{$\forall v_{17}\,\forall v_{18}\,(v_{16} \in \mathbb{R} \to v_{17} \in \mathbb{R} \to \varphi_{7})$}
+\UIC{$\forall v_{16}\,\forall v_{17}\,\forall v_{18}\,(v_{16} \in \mathbb{R} \to v_{17} \in \mathbb{R} \to \varphi_{7})$}
+\AXC{$\varphi_{89}$\lbl{A2}}
+\BIC{$\varphi_{63}$}
+\AXC{$\varphi_{63} \to \varphi_{35}$\lbl{A2}}
+\BIC{$\varphi_{35}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{35}$}
+\AXC{$\varphi_{35} \to \varphi_{52}$\lbl{A2}}
+\BIC{$\varphi_{52}$}
+\AXC{$\varphi_{52} \to \varphi_{98}$\lbl{A1}}
+\BIC{$\varphi_{98}$}
+\BIC{$\varphi_{93}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to -z \in \mathbb{R}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{93}$}
+\BIC{$\varphi_{86}$}
+\BIC{$x \in \mathbb{R} \to \varphi_{47}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{22} = y \to y = z \to v_{22} = z)$}
+\AXC{$\varphi_{19}$\lbl{A2}}
+\BIC{$\forall z\,(v_{22} = v_{23} \to v_{23} = z \to v_{22} = z)$}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\BIC{$v_{22} = v_{23} \to v_{23} = v_{24} \to v_{22} = v_{24}$}
+\UIC{$\forall v_{24}\,(v_{22} = v_{23} \to v_{23} = v_{24} \to v_{22} = v_{24})$}
+\UIC{$\varphi_{3}$}
+\UIC{$\forall v_{22}\,(\varphi_{3})$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\forall v_{22}\,(\varphi_{3})$}
+\AXC{$\varphi_{59}$\lbl{A2}}
+\BIC{$\forall v_{23}\,\forall v_{24}\,(x = v_{23} \to v_{23} = v_{24} \to x = v_{24})$}
+\AXC{$\varphi_{72}$\lbl{A2}}
+\BIC{$\varphi_{20}$}
+\AXC{$\varphi_{20} \to \varphi_{45}$\lbl{A2}}
+\BIC{$\varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x + z = y + z$\lbl{A1}}
+\AXC{$\varphi_{97}$\lbl{A1}}
+\BIC{$x + z + -z = x + z + -z \to \varphi_{65} \to x \in \mathbb{R} \to \varphi_{48}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to x + z + -z = x + z + -z$\lbl{A2}}
+\BIC{$x + z + -z = x + z + -z$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$x + z + -z = x + z + -z \to \varphi_{65} \to x \in \mathbb{R} \to \varphi_{48}$}
+\BIC{$\varphi_{65} \to x \in \mathbb{R} \to \varphi_{48}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to x + z + -z = z_{1} + -z \to x + z + -z = w + -z$\lbl{A6}}
+\UIC{$\varphi_{33}$}
+\UIC{$\forall z_{1}\,(\varphi_{33})$}
+\AXC{$\forall z_{1}\,(\varphi_{33}) \to \varphi_{60}$\lbl{A2}}
+\BIC{$\varphi_{60}$}
+\AXC{$\varphi_{60} \to \varphi_{65}$\lbl{A2}}
+\BIC{$\varphi_{65}$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{65} \to x \in \mathbb{R} \to \varphi_{48}$}
+\BIC{$x \in \mathbb{R} \to \varphi_{48}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{19} = y \to y = z \to v_{19} = z)$}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\forall z\,(v_{19} = v_{20} \to v_{20} = z \to v_{19} = z)$}
+\AXC{$\varphi_{27}$\lbl{A2}}
+\BIC{$v_{19} = v_{20} \to v_{20} = v_{21} \to v_{19} = v_{21}$}
+\UIC{$\forall v_{21}\,(v_{19} = v_{20} \to v_{20} = v_{21} \to v_{19} = v_{21})$}
+\UIC{$\varphi_{4}$}
+\UIC{$\forall v_{19}\,(\varphi_{4})$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{29}$\lbl{A2}}
+\BIC{$\forall y\,(x + z + -z = y \to y = x + z + -z)$}
+\AXC{$\forall y\,(x + z + -z = y \to y = x + z + -z) \to \varphi_{32}$\lbl{A2}}
+\BIC{$\varphi_{32}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\varphi_{34}$\lbl{(R2)}}
+\AXC{$\varphi_{34} \to \varphi_{42}$\lbl{A2}}
+\BIC{$\varphi_{42}$}
+\AXC{$\varphi_{42} \to \varphi_{53}$\lbl{A2}}
+\BIC{$\varphi_{53}$}
+\AXC{$\varphi_{53} \to v_{13} \in \mathbb{R} \to v_{14} \in \mathbb{R} \to \varphi_{8}$\lbl{A2}}
+\BIC{$v_{13} \in \mathbb{R} \to v_{14} \in \mathbb{R} \to \varphi_{8}$}
+\UIC{$\forall v_{15}\,(v_{13} \in \mathbb{R} \to v_{14} \in \mathbb{R} \to \varphi_{8})$}
+\UIC{$\forall v_{14}\,\forall v_{15}\,(v_{13} \in \mathbb{R} \to v_{14} \in \mathbb{R} \to \varphi_{8})$}
+\UIC{$\forall v_{13}\,\forall v_{14}\,\forall v_{15}\,(v_{13} \in \mathbb{R} \to v_{14} \in \mathbb{R} \to \varphi_{8})$}
+\AXC{$\varphi_{90}$\lbl{A2}}
+\BIC{$\varphi_{64}$}
+\AXC{$\varphi_{64} \to \varphi_{36}$\lbl{A2}}
+\BIC{$\varphi_{36}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{36}$}
+\AXC{$\varphi_{36} \to \varphi_{54}$\lbl{A2}}
+\BIC{$\varphi_{54}$}
+\AXC{$\varphi_{54} \to \varphi_{99}$\lbl{A1}}
+\BIC{$\varphi_{99}$}
+\BIC{$\varphi_{94}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to -z \in \mathbb{R}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{94}$}
+\BIC{$\varphi_{87}$}
+\BIC{$x \in \mathbb{R} \to \varphi_{49}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$\forall z\,(x = x + 0 \to x + 0 = z \to x = z)$}
+\AXC{$\varphi_{68}$\lbl{A2}}
+\BIC{$x = x + 0 \to x + 0 = x + (z + -z) \to x = x + (z + -z)$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to x + 0 = x + z_{1} \to x + 0 = x + w$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to x + 0 = x + z_{1} \to x + 0 = x + w)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to x + 0 = x + z_{1} \to x + 0 = x + w)$}
+\AXC{$\varphi_{66}$\lbl{A2}}
+\BIC{$\forall w\,(0 = w \to x + 0 = x + 0 \to x + 0 = x + w)$}
+\AXC{$\varphi_{74}$\lbl{A2}}
+\BIC{$0 = z + -z \to x + 0 = x + 0 \to x + 0 = x + (z + -z)$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x + -x = 0)$\lbl{(R5)}}
+\AXC{$\forall x \in \mathbb{R}\,(x + -x = 0) \to z \in \mathbb{R} \to z + -z = 0$\lbl{A2}}
+\BIC{$z \in \mathbb{R} \to z + -z = 0$}
+\AXC{$(z \in \mathbb{R} \to z + -z = 0) \to \varphi_{81}$\lbl{A1}}
+\BIC{$\varphi_{81}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{81}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z + -z = 0$}
+\AXC{$\varphi_{88}$\lbl{A1}}
+\BIC{$\varphi_{75}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\forall y\,(z + -z = y \to y = z + -z)$}
+\AXC{$\varphi_{30}$\lbl{A2}}
+\BIC{$z + -z = 0 \to 0 = z + -z$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{75}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to 0 = z + -z$}
+\AXC{$\varphi_{92}$\lbl{A1}}
+\BIC{$x + 0 = x + 0 \to \varphi_{82}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$0 = z + -z \to x + 0 = x + 0 \to x + 0 = x + (z + -z)$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to x + 0 = x + 0$\lbl{A2}}
+\BIC{$x + 0 = x + 0$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$x + 0 = x + 0 \to \varphi_{82}$}
+\BIC{$\varphi_{82}$}
+\BIC{$\varphi_{62}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(x + 0 = y \to y = x + 0)$\lbl{A2}}
+\BIC{$\forall y\,(x + 0 = y \to y = x + 0)$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\forall y\,(x + 0 = y \to y = x + 0)$}
+\AXC{$\forall y\,(x + 0 = y \to y = x + 0) \to x + 0 = x \to x = x + 0$\lbl{A2}}
+\BIC{$x + 0 = x \to x = x + 0$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x + 0 = x)$\lbl{(R4)}}
+\AXC{$\forall x \in \mathbb{R}\,(x + 0 = x) \to x \in \mathbb{R} \to x + 0 = x$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to x + 0 = x$}
+\AXC{$(x \in \mathbb{R} \to x + 0 = x) \to \varphi_{79}$\lbl{A1}}
+\BIC{$\varphi_{79}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$x + 0 = x \to x = x + 0$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{79}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x + 0 = x$}
+\AXC{$\varphi_{84}$\lbl{A1}}
+\BIC{$\varphi_{67}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = x + 0$}
+\AXC{$\varphi_{96}$\lbl{A1}}
+\BIC{$\varphi_{62} \to \varphi_{80}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$x = x + 0 \to x + 0 = x + (z + -z) \to x = x + (z + -z)$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\varphi_{62}$}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\varphi_{62} \to \varphi_{80}$}
+\BIC{$\varphi_{80}$}
+\BIC{$\varphi_{37}$}
+\AXC{$\varphi_{37} \to (x \in \mathbb{R} \to \varphi_{50}) \to \varphi_{46} \to \varphi_{38}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to \varphi_{50}) \to \varphi_{46} \to \varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{32}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to \varphi_{49}$}
+\AXC{$(x \in \mathbb{R} \to \varphi_{49}) \to \varphi_{32} \to x \in \mathbb{R} \to \varphi_{50}$\lbl{A1}}
+\BIC{$\varphi_{32} \to x \in \mathbb{R} \to \varphi_{50}$}
+\BIC{$x \in \mathbb{R} \to \varphi_{50}$}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to \varphi_{50}) \to \varphi_{46} \to \varphi_{38}$}
+\BIC{$\varphi_{46} \to \varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\forall v_{19}\,(\varphi_{4})$}
+\AXC{$\varphi_{61}$\lbl{A2}}
+\BIC{$\forall v_{20}\,\forall v_{21}\,(x = v_{20} \to v_{20} = v_{21} \to x = v_{21})$}
+\AXC{$\varphi_{73}$\lbl{A2}}
+\BIC{$\varphi_{22}$}
+\AXC{$\varphi_{22} \to \varphi_{46}$\lbl{A2}}
+\BIC{$\varphi_{46}$}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\varphi_{46} \to \varphi_{38}$}
+\BIC{$\varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{45}$}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to \varphi_{48}$}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$\varphi_{38}$}
+\AXC{$\varphi_{38} \to (x \in \mathbb{R} \to \varphi_{48}) \to \varphi_{45} \to \varphi_{39}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to \varphi_{48}) \to \varphi_{45} \to \varphi_{39}$}
+\BIC{$\varphi_{45} \to \varphi_{39}$}
+\BIC{$\varphi_{39}$}
+\AXC{$\varphi_{39} \to (x \in \mathbb{R} \to \varphi_{47}) \to \varphi_{44} \to \varphi_{40}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to \varphi_{47}) \to \varphi_{44} \to \varphi_{40}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{44}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to \varphi_{47}$}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to \varphi_{47}) \to \varphi_{44} \to \varphi_{40}$}
+\BIC{$\varphi_{44} \to \varphi_{40}$}
+\BIC{$\varphi_{40}$}
+\AXC{$\varphi_{40} \to \varphi_{57} \to \varphi_{77}$\lbl{A1}}
+\BIC{$\varphi_{57} \to \varphi_{77}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\varphi_{28}$\lbl{A6}}
+\UIC{$\forall w\,(\varphi_{28})$}
+\UIC{$\forall z_{1}\,\forall w\,(\varphi_{28})$}
+\AXC{$\forall z_{1}\,\forall w\,(\varphi_{28}) \to \varphi_{56}$\lbl{A2}}
+\BIC{$\varphi_{56}$}
+\AXC{$\varphi_{56} \to \varphi_{43}$\lbl{A2}}
+\BIC{$\varphi_{43}$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{43} \to \varphi_{57}$}
+\BIC{$\varphi_{57}$}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\varphi_{57} \to \varphi_{77}$}
+\BIC{$\varphi_{77}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\forall v_{28}\,(\varphi_{1})$}
+\AXC{$\varphi_{55}$\lbl{A2}}
+\BIC{$\forall v_{29}\,\forall v_{30}\,(x = v_{29} \to v_{29} = v_{30} \to x = v_{30})$}
+\AXC{$\varphi_{70}$\lbl{A2}}
+\BIC{$\varphi_{16}$}
+\AXC{$\varphi_{76}$\lbl{A2}}
+\BIC{$x = y + (z + -z) \to y + (z + -z) = y + 0 \to x = y + 0$}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$\varphi_{77}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = y + 0$}
+\AXC{$\varphi_{91}$\lbl{A1}}
+\BIC{$\varphi_{85}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$x = y + 0 \to y + 0 = y \to x = y$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{78}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to y + 0 = y$}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\varphi_{85}$}
+\BIC{$\varphi_{69}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = y$}
+\UIC{$\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = y)$}
+\UIC{$\varphi_{31}$}
+\UIC{$\forall x\,(\varphi_{31})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall v_{29}\,\forall v_{30}\,(v_{28} = v_{29} \to v_{29} = v_{30} \to v_{28} = v_{30})$
+\item $\varphi_{2} :\equiv \forall v_{26}\,\forall v_{27}\,(v_{25} = v_{26} \to v_{26} = v_{27} \to v_{25} = v_{27})$
+\item $\varphi_{3} :\equiv \forall v_{23}\,\forall v_{24}\,(v_{22} = v_{23} \to v_{23} = v_{24} \to v_{22} = v_{24})$
+\item $\varphi_{4} :\equiv \forall v_{20}\,\forall v_{21}\,(v_{19} = v_{20} \to v_{20} = v_{21} \to v_{19} = v_{21})$
+\item $\varphi_{5} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(x = y \to y = z \to x = z)$
+\item $\varphi_{6} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(z + -z = y \to y = z + -z)$
+\item $\varphi_{7} :\equiv v_{18} \in \mathbb{R} \to v_{16} + v_{17} + v_{18} = v_{16} + (v_{17} + v_{18})$
+\item $\varphi_{8} :\equiv v_{15} \in \mathbb{R} \to v_{13} + v_{14} + v_{15} = v_{13} + (v_{14} + v_{15})$
+\item $\varphi_{9} :\equiv \forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall z\,(x = y + 0 \to y + 0 = z \to x = z)$
+\item $\varphi_{10} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{28} = y \to y = z \to v_{28} = z)$
+\item $\varphi_{11} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{25} = y \to y = z \to v_{25} = z)$
+\item $\varphi_{12} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{22} = y \to y = z \to v_{22} = z)$
+\item $\varphi_{13} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{19} = y \to y = z \to v_{19} = z)$
+\item $\varphi_{14} :\equiv \forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall z\,(x = x + 0 \to x + 0 = z \to x = z)$
+\item $\varphi_{15} :\equiv \forall y\,\forall z\,(v_{28} = y \to y = z \to v_{28} = z) \to \forall z\,(v_{28} = v_{29} \to v_{29} = z \to v_{28} = z)$
+\item $\varphi_{16} :\equiv \forall v_{30}\,(x = y + (z + -z) \to y + (z + -z) = v_{30} \to x = v_{30})$
+\item $\varphi_{17} :\equiv \forall y\,\forall z\,(v_{25} = y \to y = z \to v_{25} = z) \to \forall z\,(v_{25} = v_{26} \to v_{26} = z \to v_{25} = z)$
+\item $\varphi_{18} :\equiv \forall v_{27}\,(x = y + z + -z \to y + z + -z = v_{27} \to x = v_{27})$
+\item $\varphi_{19} :\equiv \forall y\,\forall z\,(v_{22} = y \to y = z \to v_{22} = z) \to \forall z\,(v_{22} = v_{23} \to v_{23} = z \to v_{22} = z)$
+\item $\varphi_{20} :\equiv \forall v_{24}\,(x = x + z + -z \to x + z + -z = v_{24} \to x = v_{24})$
+\item $\varphi_{21} :\equiv \forall y\,\forall z\,(v_{19} = y \to y = z \to v_{19} = z) \to \forall z\,(v_{19} = v_{20} \to v_{20} = z \to v_{19} = z)$
+\item $\varphi_{22} :\equiv \forall v_{21}\,(x = x + (z + -z) \to x + (z + -z) = v_{21} \to x = v_{21})$
+\item $\varphi_{23} :\equiv \forall z\,(x = y + 0 \to y + 0 = z \to x = z) \to x = y + 0 \to y + 0 = y \to x = y$
+\item $\varphi_{24} :\equiv \forall z\,(v_{28} = v_{29} \to v_{29} = z \to v_{28} = z) \to v_{28} = v_{29} \to v_{29} = v_{30} \to v_{28} = v_{30}$
+\item $\varphi_{25} :\equiv \forall z\,(v_{25} = v_{26} \to v_{26} = z \to v_{25} = z) \to v_{25} = v_{26} \to v_{26} = v_{27} \to v_{25} = v_{27}$
+\item $\varphi_{26} :\equiv \forall z\,(v_{22} = v_{23} \to v_{23} = z \to v_{22} = z) \to v_{22} = v_{23} \to v_{23} = v_{24} \to v_{22} = v_{24}$
+\item $\varphi_{27} :\equiv \forall z\,(v_{19} = v_{20} \to v_{20} = z \to v_{19} = z) \to v_{19} = v_{20} \to v_{20} = v_{21} \to v_{19} = v_{21}$
+\item $\varphi_{28} :\equiv z_{1} = w \to y + (z + -z) = y + z_{1} \to y + (z + -z) = y + w$
+\item $\varphi_{29} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(x + z + -z = y \to y = x + z + -z)$
+\item $\varphi_{30} :\equiv \forall y\,(z + -z = y \to y = z + -z) \to z + -z = 0 \to 0 = z + -z$
+\item $\varphi_{31} :\equiv \forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = y)$
+\item $\varphi_{32} :\equiv x + z + -z = x + (z + -z) \to x + (z + -z) = x + z + -z$
+\item $\varphi_{33} :\equiv \forall w\,(z_{1} = w \to x + z + -z = z_{1} + -z \to x + z + -z = w + -z)$
+\item $\varphi_{34} :\equiv \forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + y + z = x + (y + z))$
+\item $\varphi_{35} :\equiv \forall v_{18}\,(y \in \mathbb{R} \to z \in \mathbb{R} \to v_{18} \in \mathbb{R} \to y + z + v_{18} = y + (z + v_{18}))$
+\item $\varphi_{36} :\equiv \forall v_{15}\,(x \in \mathbb{R} \to z \in \mathbb{R} \to v_{15} \in \mathbb{R} \to x + z + v_{15} = x + (z + v_{15}))$
+\item $\varphi_{37} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = x + (z + -z)$
+\item $\varphi_{38} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = x + z + -z$
+\item $\varphi_{39} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = y + z + -z$
+\item $\varphi_{40} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = y + (z + -z)$
+\item $\varphi_{41} :\equiv \forall y\,\forall z\,(v_{16} \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to v_{16} + y + z = v_{16} + (y + z))$
+\item $\varphi_{42} :\equiv \forall y\,\forall z\,(v_{13} \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to v_{13} + y + z = v_{13} + (y + z))$
+\item $\varphi_{43} :\equiv z + -z = 0 \to y + (z + -z) = y + (z + -z) \to y + (z + -z) = y + 0$
+\item $\varphi_{44} :\equiv x = y + z + -z \to y + z + -z = y + (z + -z) \to x = y + (z + -z)$
+\item $\varphi_{45} :\equiv x = x + z + -z \to x + z + -z = y + z + -z \to x = y + z + -z$
+\item $\varphi_{46} :\equiv x = x + (z + -z) \to x + (z + -z) = x + z + -z \to x = x + z + -z$
+\item $\varphi_{47} :\equiv y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to y + z + -z = y + (z + -z)$
+\item $\varphi_{48} :\equiv y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x + z + -z = y + z + -z$
+\item $\varphi_{49} :\equiv y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x + z + -z = x + (z + -z)$
+\item $\varphi_{50} :\equiv y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x + (z + -z) = x + z + -z$
+\item $\varphi_{51} :\equiv \forall z\,(v_{16} \in \mathbb{R} \to v_{17} \in \mathbb{R} \to z \in \mathbb{R} \to v_{16} + v_{17} + z = v_{16} + (v_{17} + z))$
+\item $\varphi_{52} :\equiv y \in \mathbb{R} \to z \in \mathbb{R} \to -z \in \mathbb{R} \to y + z + -z = y + (z + -z)$
+\item $\varphi_{53} :\equiv \forall z\,(v_{13} \in \mathbb{R} \to v_{14} \in \mathbb{R} \to z \in \mathbb{R} \to v_{13} + v_{14} + z = v_{13} + (v_{14} + z))$
+\item $\varphi_{54} :\equiv x \in \mathbb{R} \to z \in \mathbb{R} \to -z \in \mathbb{R} \to x + z + -z = x + (z + -z)$
+\item $\varphi_{55} :\equiv \forall v_{28}\,(\varphi_{1}) \to \forall v_{29}\,\forall v_{30}\,(x = v_{29} \to v_{29} = v_{30} \to x = v_{30})$
+\item $\varphi_{56} :\equiv \forall w\,(z + -z = w \to y + (z + -z) = y + (z + -z) \to y + (z + -z) = y + w)$
+\item $\varphi_{57} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to y + (z + -z) = y + 0$
+\item $\varphi_{58} :\equiv \forall v_{25}\,(\varphi_{2}) \to \forall v_{26}\,\forall v_{27}\,(x = v_{26} \to v_{26} = v_{27} \to x = v_{27})$
+\item $\varphi_{59} :\equiv \forall v_{22}\,(\varphi_{3}) \to \forall v_{23}\,\forall v_{24}\,(x = v_{23} \to v_{23} = v_{24} \to x = v_{24})$
+\item $\varphi_{60} :\equiv \forall w\,(x + z = w \to x + z + -z = x + z + -z \to x + z + -z = w + -z)$
+\item $\varphi_{61} :\equiv \forall v_{19}\,(\varphi_{4}) \to \forall v_{20}\,\forall v_{21}\,(x = v_{20} \to v_{20} = v_{21} \to x = v_{21})$
+\item $\varphi_{62} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x + 0 = x + (z + -z)$
+\item $\varphi_{63} :\equiv \forall v_{17}\,\forall v_{18}\,(y \in \mathbb{R} \to v_{17} \in \mathbb{R} \to v_{18} \in \mathbb{R} \to y + v_{17} + v_{18} = y + (v_{17} + v_{18}))$
+\item $\varphi_{64} :\equiv \forall v_{14}\,\forall v_{15}\,(x \in \mathbb{R} \to v_{14} \in \mathbb{R} \to v_{15} \in \mathbb{R} \to x + v_{14} + v_{15} = x + (v_{14} + v_{15}))$
+\item $\varphi_{65} :\equiv x + z = y + z \to x + z + -z = x + z + -z \to x + z + -z = y + z + -z$
+\item $\varphi_{66} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to x + 0 = x + z_{1} \to x + 0 = x + w) \to \forall w\,(0 = w \to x + 0 = x + 0 \to x + 0 = x + w)$
+\item $\varphi_{67} :\equiv (x + 0 = x \to x = x + 0) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = x + 0$
+\item $\varphi_{68} :\equiv \forall z\,(x = x + 0 \to x + 0 = z \to x = z) \to x = x + 0 \to x + 0 = x + (z + -z) \to x = x + (z + -z)$
+\item $\varphi_{69} :\equiv (x = y + 0 \to y + 0 = y \to x = y) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = y$
+\item $\varphi_{70} :\equiv \forall v_{29}\,\forall v_{30}\,(x = v_{29} \to v_{29} = v_{30} \to x = v_{30}) \to \varphi_{16}$
+\item $\varphi_{71} :\equiv \forall v_{26}\,\forall v_{27}\,(x = v_{26} \to v_{26} = v_{27} \to x = v_{27}) \to \varphi_{18}$
+\item $\varphi_{72} :\equiv \forall v_{23}\,\forall v_{24}\,(x = v_{23} \to v_{23} = v_{24} \to x = v_{24}) \to \varphi_{20}$
+\item $\varphi_{73} :\equiv \forall v_{20}\,\forall v_{21}\,(x = v_{20} \to v_{20} = v_{21} \to x = v_{21}) \to \varphi_{22}$
+\item $\varphi_{74} :\equiv \forall w\,(0 = w \to x + 0 = x + 0 \to x + 0 = x + w) \to 0 = z + -z \to x + 0 = x + 0 \to x + 0 = x + (z + -z)$
+\item $\varphi_{75} :\equiv (z + -z = 0 \to 0 = z + -z) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to 0 = z + -z$
+\item $\varphi_{76} :\equiv \varphi_{16} \to x = y + (z + -z) \to y + (z + -z) = y + 0 \to x = y + 0$
+\item $\varphi_{77} :\equiv (x = y + (z + -z) \to y + (z + -z) = y + 0 \to x = y + 0) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = y + 0$
+\item $\varphi_{78} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to y \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to y + 0 = y$
+\item $\varphi_{79} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x + 0 = x$
+\item $\varphi_{80} :\equiv (x = x + 0 \to x + 0 = x + (z + -z) \to x = x + (z + -z)) \to \varphi_{37}$
+\item $\varphi_{81} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z + -z = 0$
+\item $\varphi_{82} :\equiv (0 = z + -z \to x + 0 = x + 0 \to x + 0 = x + (z + -z)) \to \varphi_{62}$
+\item $\varphi_{83} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to -z \in \mathbb{R}$
+\item $\varphi_{84} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x + 0 = x) \to \varphi_{67}$
+\item $\varphi_{85} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to y + 0 = y) \to \varphi_{69}$
+\item $\varphi_{86} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to -z \in \mathbb{R}) \to x \in \mathbb{R} \to \varphi_{47}$
+\item $\varphi_{87} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to -z \in \mathbb{R}) \to x \in \mathbb{R} \to \varphi_{49}$
+\item $\varphi_{88} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z + -z = 0) \to \varphi_{75}$
+\item $\varphi_{89} :\equiv \forall v_{16}\,\forall v_{17}\,\forall v_{18}\,(v_{16} \in \mathbb{R} \to v_{17} \in \mathbb{R} \to \varphi_{7}) \to \varphi_{63}$
+\item $\varphi_{90} :\equiv \forall v_{13}\,\forall v_{14}\,\forall v_{15}\,(v_{13} \in \mathbb{R} \to v_{14} \in \mathbb{R} \to \varphi_{8}) \to \varphi_{64}$
+\item $\varphi_{91} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = y + 0) \to \varphi_{85}$
+\item $\varphi_{92} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to 0 = z + -z) \to x + 0 = x + 0 \to \varphi_{82}$
+\item $\varphi_{93} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z \in \mathbb{R}) \to \varphi_{86}$
+\item $\varphi_{94} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z \in \mathbb{R}) \to \varphi_{87}$
+\item $\varphi_{95} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to z + -z = 0) \to y + (z + -z) = y + (z + -z) \to \varphi_{43} \to \varphi_{57}$
+\item $\varphi_{96} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = x + 0) \to \varphi_{62} \to \varphi_{80}$
+\item $\varphi_{97} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x + z = y + z) \to x + z + -z = x + z + -z \to \varphi_{65} \to x \in \mathbb{R} \to \varphi_{48}$
+\item $\varphi_{98} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to y \in \mathbb{R}) \to \varphi_{93}$
+\item $\varphi_{99} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x \in \mathbb{R}) \to \varphi_{94}$
+\end{abbrevlist}
+\end{fullproof}

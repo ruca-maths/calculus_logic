@@ -1,0 +1,361 @@
+% 自動生成 (prover/build.js): ErrChain  ノード数 163
+\begin{fullproof}{[C27]}{$\forall x\,\forall y\,\forall z\,\forall e\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to \lvert x - z \rvert < e + e)$}{163}\phantomsection\label{tree:ErrChain}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{41}$\lbl{A2}}
+\BIC{$\forall y\,(v_{738} \in \mathbb{R} \to y \in \mathbb{R} \to v_{738} - y \in \mathbb{R})$}
+\AXC{$\varphi_{45}$\lbl{A2}}
+\BIC{$v_{738} \in \mathbb{R} \to v_{739} \in \mathbb{R} \to v_{738} - v_{739} \in \mathbb{R}$}
+\UIC{$\forall v_{739}\,(v_{738} \in \mathbb{R} \to v_{739} \in \mathbb{R} \to v_{738} - v_{739} \in \mathbb{R})$}
+\UIC{$\varphi_{4}$}
+\AXC{$\varphi_{4} \to \forall v_{739}\,(y \in \mathbb{R} \to v_{739} \in \mathbb{R} \to y - v_{739} \in \mathbb{R})$\lbl{A2}}
+\BIC{$\forall v_{739}\,(y \in \mathbb{R} \to v_{739} \in \mathbb{R} \to y - v_{739} \in \mathbb{R})$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to \varphi_{31}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to \varphi_{32}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall v_{739}\,(y \in \mathbb{R} \to v_{739} \in \mathbb{R} \to y - v_{739} \in \mathbb{R})$}
+\AXC{$\varphi_{39}$\lbl{A2}}
+\BIC{$y \in \mathbb{R} \to z \in \mathbb{R} \to y - z \in \mathbb{R}$}
+\AXC{$\varphi_{66}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to \varphi_{32}) \to (x \in \mathbb{R} \to \varphi_{31}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{21}$}
+\BIC{$(x \in \mathbb{R} \to \varphi_{31}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{21}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{21}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$\lbl{[A5]}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R}) \to y - z \in \mathbb{R} \to \lvert y - z \rvert \in \mathbb{R}$\lbl{A2}}
+\BIC{$y - z \in \mathbb{R} \to \lvert y - z \rvert \in \mathbb{R}$}
+\AXC{$\varphi_{62}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{21}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{27}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to \varphi_{33}$\lbl{A1}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{37}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$}
+\AXC{$\varphi_{34}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}$}
+\AXC{$\varphi_{67}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to \varphi_{33}) \to (x \in \mathbb{R} \to \varphi_{32}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}$}
+\BIC{$(x \in \mathbb{R} \to \varphi_{32}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to \varphi_{32}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to \varphi_{32}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$\lbl{[A5]}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R}) \to x - y \in \mathbb{R} \to \lvert x - y \rvert \in \mathbb{R}$\lbl{A2}}
+\BIC{$x - y \in \mathbb{R} \to \lvert x - y \rvert \in \mathbb{R}$}
+\AXC{$\varphi_{63}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{28}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{28}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{28}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\varphi_{40}$\lbl{[E7]}}
+\AXC{$\varphi_{40} \to \varphi_{44}$\lbl{A2}}
+\BIC{$\varphi_{44}$}
+\AXC{$\varphi_{44} \to \varphi_{47}$\lbl{A2}}
+\BIC{$\varphi_{47}$}
+\AXC{$\varphi_{47} \to \varphi_{49}$\lbl{A2}}
+\BIC{$\varphi_{49}$}
+\AXC{$\varphi_{59}$\lbl{A2}}
+\BIC{$v_{740} \in \mathbb{R} \to v_{741} \in \mathbb{R} \to v_{742} \in \mathbb{R} \to v_{743} \in \mathbb{R} \to \varphi_{3}$}
+\UIC{$\varphi_{50}$}
+\UIC{$\forall v_{742}\,(\varphi_{50})$}
+\UIC{$\forall v_{741}\,\forall v_{742}\,(\varphi_{50})$}
+\UIC{$\forall v_{740}\,\forall v_{741}\,\forall v_{742}\,(\varphi_{50})$}
+\AXC{$\forall v_{740}\,\forall v_{741}\,\forall v_{742}\,(\varphi_{50}) \to \varphi_{53}$\lbl{A2}}
+\BIC{$\varphi_{53}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to \varphi_{30}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{28}$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{53}$}
+\AXC{$\varphi_{53} \to \varphi_{52}$\lbl{A2}}
+\BIC{$\varphi_{52}$}
+\AXC{$\varphi_{52} \to \varphi_{54}$\lbl{A2}}
+\BIC{$\varphi_{54}$}
+\AXC{$\varphi_{64}$\lbl{A2}}
+\BIC{$\lvert x - y \rvert \in \mathbb{R} \to e \in \mathbb{R} \to \lvert y - z \rvert \in \mathbb{R} \to e \in \mathbb{R} \to \varphi_{13}$}
+\AXC{$\varphi_{71}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{28}) \to (x \in \mathbb{R} \to \varphi_{30}) \to \varphi_{70}$}
+\BIC{$(x \in \mathbb{R} \to \varphi_{30}) \to \varphi_{70}$}
+\BIC{$\varphi_{70}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to \varphi_{30}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{21}$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{21}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{27}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{27}$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{70}$}
+\BIC{$(x \in \mathbb{R} \to \varphi_{30}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{24}) \to \varphi_{57}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{24}) \to \varphi_{57}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to \varphi_{16}$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to \varphi_{16})$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to \varphi_{16})$}
+\AXC{$\forall z_{1}\,\forall w\,(z_{1} = w \to \varphi_{16}) \to \varphi_{48}$\lbl{A2}}
+\BIC{$\varphi_{48}$}
+\AXC{$\varphi_{48} \to x - y + (y - z) = x - z \to \varphi_{38}$\lbl{A2}}
+\BIC{$x - y + (y - z) = x - z \to \varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \lvert a + b \rvert \leq \lvert a \rvert + \lvert b \rvert)$\lbl{命題1.2}}
+\AXC{$\varphi_{51}$\lbl{A2}}
+\BIC{$\varphi_{10}$}
+\AXC{$\varphi_{10} \to \varphi_{26}$\lbl{A2}}
+\BIC{$\varphi_{26}$}
+\AXC{$\varphi_{26} \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}) \to \varphi_{60}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}) \to \varphi_{60}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{21}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}) \to \varphi_{60}$}
+\BIC{$\varphi_{60}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \varphi_{7}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\varphi_{9}$\lbl{[F16]}}
+\AXC{$\varphi_{9} \to \varphi_{18}$\lbl{A2}}
+\BIC{$\varphi_{18}$}
+\AXC{$\varphi_{18} \to \varphi_{25}$\lbl{A2}}
+\BIC{$\varphi_{25}$}
+\AXC{$\varphi_{25} \to v_{735} \in \mathbb{R} \to v_{736} \in \mathbb{R} \to \varphi_{2}$\lbl{A2}}
+\BIC{$v_{735} \in \mathbb{R} \to v_{736} \in \mathbb{R} \to \varphi_{2}$}
+\UIC{$\forall v_{737}\,(v_{735} \in \mathbb{R} \to v_{736} \in \mathbb{R} \to \varphi_{2})$}
+\UIC{$\forall v_{736}\,\forall v_{737}\,(v_{735} \in \mathbb{R} \to v_{736} \in \mathbb{R} \to \varphi_{2})$}
+\UIC{$\forall v_{735}\,\forall v_{736}\,\forall v_{737}\,(v_{735} \in \mathbb{R} \to v_{736} \in \mathbb{R} \to \varphi_{2})$}
+\AXC{$\varphi_{56}$\lbl{A2}}
+\BIC{$\varphi_{36}$}
+\AXC{$\varphi_{36} \to \varphi_{19}$\lbl{A2}}
+\BIC{$\varphi_{19}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to \varphi_{31}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to \varphi_{33}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{19}$}
+\AXC{$\varphi_{19} \to x \in \mathbb{R} \to z \in \mathbb{R} \to y \in \mathbb{R} \to x - z = x - y + (y - z)$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to z \in \mathbb{R} \to y \in \mathbb{R} \to x - z = x - y + (y - z)$}
+\AXC{$\varphi_{68}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to \varphi_{33}) \to \varphi_{65}$}
+\BIC{$\varphi_{65}$}
+\BIC{$(x \in \mathbb{R} \to \varphi_{32}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to \varphi_{32}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to \varphi_{32}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \varphi_{14}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \varphi_{14}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \varphi_{14}) \to \varphi_{55}$\lbl{A1}}
+\BIC{$\varphi_{55}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(x - z = y \to y = x - z)$\lbl{A2}}
+\BIC{$\forall y\,(x - z = y \to y = x - z)$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$x - z = x - y + (y - z) \to x - y + (y - z) = x - z$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{55}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \varphi_{15}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \varphi_{15}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \varphi_{15}) \to \varphi_{69}$\lbl{A1}}
+\BIC{$\varphi_{69}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$x - y + (y - z) = x - z \to \varphi_{38}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \varphi_{7}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{69}$}
+\BIC{$(x - y + (y - z) = x - z \to \varphi_{38}) \to \varphi_{61}$}
+\BIC{$\varphi_{61}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to \varphi_{8}$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to \varphi_{8})$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to \varphi_{8})$}
+\AXC{$\forall z_{1}\,\forall w\,(z_{1} = w \to \varphi_{8}) \to \varphi_{46}$\lbl{A2}}
+\BIC{$\varphi_{46}$}
+\AXC{$\varphi_{46} \to x - y + (y - z) = x - z \to \varphi_{35}$\lbl{A2}}
+\BIC{$x - y + (y - z) = x - z \to \varphi_{35}$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{61}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \varphi_{17}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x \leq y \to y < z \to x < z)$\lbl{[O4]}}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{744} \leq y \to y < z \to v_{744} < z)$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\forall z\,(v_{744} \leq v_{745} \to v_{745} < z \to v_{744} < z)$}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$v_{744} \leq v_{745} \to v_{745} < v_{746} \to v_{744} < v_{746}$}
+\UIC{$\forall v_{746}\,(v_{744} \leq v_{745} \to v_{745} < v_{746} \to v_{744} < v_{746})$}
+\UIC{$\varphi_{1}$}
+\UIC{$\forall v_{744}\,(\varphi_{1})$}
+\AXC{$\forall v_{744}\,(\varphi_{1}) \to \varphi_{5}$\lbl{A2}}
+\BIC{$\varphi_{5}$}
+\AXC{$\varphi_{5} \to \varphi_{43}$\lbl{A2}}
+\BIC{$\varphi_{43}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \varphi_{17}$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{43}$}
+\AXC{$\varphi_{43} \to \varphi_{42}$\lbl{A2}}
+\BIC{$\varphi_{42}$}
+\AXC{$\varphi_{42} \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \varphi_{17}) \to \varphi_{58}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \varphi_{17}) \to \varphi_{58}$}
+\BIC{$\varphi_{58}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{23}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{24}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{24}) \to \varphi_{57}$}
+\BIC{$\varphi_{57}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \varphi_{13}$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{58}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{29}$}
+\UIC{$\forall e\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{29})$}
+\UIC{$\forall z\,\forall e\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{29})$}
+\UIC{$\forall y\,\forall z\,\forall e\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{29})$}
+\UIC{$\forall x\,\forall y\,\forall z\,\forall e\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{29})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall v_{745}\,\forall v_{746}\,(v_{744} \leq v_{745} \to v_{745} < v_{746} \to v_{744} < v_{746})$
+\item $\varphi_{2} :\equiv v_{737} \in \mathbb{R} \to v_{735} - v_{736} = v_{735} - v_{737} + (v_{737} - v_{736})$
+\item $\varphi_{3} :\equiv v_{740} < v_{741} \to v_{742} < v_{743} \to v_{740} + v_{742} < v_{741} + v_{743}$
+\item $\varphi_{4} :\equiv \forall v_{738}\,\forall v_{739}\,(v_{738} \in \mathbb{R} \to v_{739} \in \mathbb{R} \to v_{738} - v_{739} \in \mathbb{R})$
+\item $\varphi_{5} :\equiv \forall v_{745}\,\forall v_{746}\,(\lvert x - z \rvert \leq v_{745} \to v_{745} < v_{746} \to \lvert x - z \rvert < v_{746})$
+\item $\varphi_{6} :\equiv \forall x\,\forall y\,\forall z\,(x \leq y \to y < z \to x < z) \to \forall y\,\forall z\,(v_{744} \leq y \to y < z \to v_{744} < z)$
+\item $\varphi_{7} :\equiv \lvert y - z \rvert < e \to \lvert x - y + (y - z) \rvert \leq \lvert x - y \rvert + \lvert y - z \rvert$
+\item $\varphi_{8} :\equiv \lvert z_{1} \rvert = \lvert x - y \rvert + \lvert y - z \rvert \to \lvert w \rvert = \lvert x - y \rvert + \lvert y - z \rvert$
+\item $\varphi_{9} :\equiv \forall a\,\forall b\,\forall x\,(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - b = a - x + (x - b))$
+\item $\varphi_{10} :\equiv \forall b\,(x - y \in \mathbb{R} \to b \in \mathbb{R} \to \lvert x - y + b \rvert \leq \lvert x - y \rvert + \lvert b \rvert)$
+\item $\varphi_{11} :\equiv \forall y\,\forall z\,(v_{744} \leq y \to y < z \to v_{744} < z) \to \forall z\,(v_{744} \leq v_{745} \to v_{745} < z \to v_{744} < z)$
+\item $\varphi_{12} :\equiv \forall y\,(x - z = y \to y = x - z) \to x - z = x - y + (y - z) \to x - y + (y - z) = x - z$
+\item $\varphi_{13} :\equiv \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to \lvert x - y \rvert + \lvert y - z \rvert < e + e$
+\item $\varphi_{14} :\equiv e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to x - z = x - y + (y - z)$
+\item $\varphi_{15} :\equiv e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to x - y + (y - z) = x - z$
+\item $\varphi_{16} :\equiv \lvert z_{1} \rvert < \lvert x - y \rvert + \lvert y - z \rvert \to \lvert w \rvert < \lvert x - y \rvert + \lvert y - z \rvert$
+\item $\varphi_{17} :\equiv \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to \lvert x - z \rvert \leq \lvert x - y \rvert + \lvert y - z \rvert$
+\item $\varphi_{18} :\equiv \forall b\,\forall x\,(v_{735} \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to v_{735} - b = v_{735} - x + (x - b))$
+\item $\varphi_{19} :\equiv \forall v_{737}\,(x \in \mathbb{R} \to z \in \mathbb{R} \to v_{737} \in \mathbb{R} \to x - z = x - v_{737} + (v_{737} - z))$
+\item $\varphi_{20} :\equiv \forall z\,(v_{744} \leq v_{745} \to v_{745} < z \to v_{744} < z) \to v_{744} \leq v_{745} \to v_{745} < v_{746} \to v_{744} < v_{746}$
+\item $\varphi_{21} :\equiv z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to y - z \in \mathbb{R}$
+\item $\varphi_{22} :\equiv z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to x - y \in \mathbb{R}$
+\item $\varphi_{23} :\equiv z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to \lvert y - z \rvert < e$
+\item $\varphi_{24} :\equiv z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to \lvert x - y \rvert < e$
+\item $\varphi_{25} :\equiv \forall x\,(v_{735} \in \mathbb{R} \to v_{736} \in \mathbb{R} \to x \in \mathbb{R} \to v_{735} - v_{736} = v_{735} - x + (x - v_{736}))$
+\item $\varphi_{26} :\equiv x - y \in \mathbb{R} \to y - z \in \mathbb{R} \to \lvert x - y + (y - z) \rvert \leq \lvert x - y \rvert + \lvert y - z \rvert$
+\item $\varphi_{27} :\equiv z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to \lvert y - z \rvert \in \mathbb{R}$
+\item $\varphi_{28} :\equiv z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to \lvert x - y \rvert \in \mathbb{R}$
+\item $\varphi_{29} :\equiv z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to \lvert x - z \rvert < e + e$
+\item $\varphi_{30} :\equiv y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to e \in \mathbb{R}$
+\item $\varphi_{31} :\equiv y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to z \in \mathbb{R}$
+\item $\varphi_{32} :\equiv y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to y \in \mathbb{R}$
+\item $\varphi_{33} :\equiv y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to x \in \mathbb{R}$
+\item $\varphi_{34} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}$
+\item $\varphi_{35} :\equiv \lvert x - y + (y - z) \rvert = \lvert x - y \rvert + \lvert y - z \rvert \to \lvert x - z \rvert = \lvert x - y \rvert + \lvert y - z \rvert$
+\item $\varphi_{36} :\equiv \forall v_{736}\,\forall v_{737}\,(x \in \mathbb{R} \to v_{736} \in \mathbb{R} \to v_{737} \in \mathbb{R} \to x - v_{736} = x - v_{737} + (v_{737} - v_{736}))$
+\item $\varphi_{37} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$
+\item $\varphi_{38} :\equiv \lvert x - y + (y - z) \rvert < \lvert x - y \rvert + \lvert y - z \rvert \to \lvert x - z \rvert < \lvert x - y \rvert + \lvert y - z \rvert$
+\item $\varphi_{39} :\equiv \forall v_{739}\,(y \in \mathbb{R} \to v_{739} \in \mathbb{R} \to y - v_{739} \in \mathbb{R}) \to y \in \mathbb{R} \to z \in \mathbb{R} \to y - z \in \mathbb{R}$
+\item $\varphi_{40} :\equiv \forall x\,\forall y\,\forall u\,\forall v\,(x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u < v \to x + u < y + v)$
+\item $\varphi_{41} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(v_{738} \in \mathbb{R} \to y \in \mathbb{R} \to v_{738} - y \in \mathbb{R})$
+\item $\varphi_{42} :\equiv \lvert x - z \rvert \leq \lvert x - y \rvert + \lvert y - z \rvert \to \lvert x - y \rvert + \lvert y - z \rvert < e + e \to \lvert x - z \rvert < e + e$
+\item $\varphi_{43} :\equiv \forall v_{746}\,(\lvert x - z \rvert \leq \lvert x - y \rvert + \lvert y - z \rvert \to \lvert x - y \rvert + \lvert y - z \rvert < v_{746} \to \lvert x - z \rvert < v_{746})$
+\item $\varphi_{44} :\equiv \forall y\,\forall u\,\forall v\,(v_{740} \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to v_{740} < y \to u < v \to v_{740} + u < y + v)$
+\item $\varphi_{45} :\equiv \forall y\,(v_{738} \in \mathbb{R} \to y \in \mathbb{R} \to v_{738} - y \in \mathbb{R}) \to v_{738} \in \mathbb{R} \to v_{739} \in \mathbb{R} \to v_{738} - v_{739} \in \mathbb{R}$
+\item $\varphi_{46} :\equiv \forall w\,(x - y + (y - z) = w \to \lvert x - y + (y - z) \rvert = \lvert x - y \rvert + \lvert y - z \rvert \to \lvert w \rvert = \lvert x - y \rvert + \lvert y - z \rvert)$
+\item $\varphi_{47} :\equiv \forall u\,\forall v\,(v_{740} \in \mathbb{R} \to v_{741} \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to v_{740} < v_{741} \to u < v \to v_{740} + u < v_{741} + v)$
+\item $\varphi_{48} :\equiv \forall w\,(x - y + (y - z) = w \to \lvert x - y + (y - z) \rvert < \lvert x - y \rvert + \lvert y - z \rvert \to \lvert w \rvert < \lvert x - y \rvert + \lvert y - z \rvert)$
+\item $\varphi_{49} :\equiv \forall v\,(v_{740} \in \mathbb{R} \to v_{741} \in \mathbb{R} \to v_{742} \in \mathbb{R} \to v \in \mathbb{R} \to v_{740} < v_{741} \to v_{742} < v \to v_{740} + v_{742} < v_{741} + v)$
+\item $\varphi_{50} :\equiv \forall v_{743}\,(v_{740} \in \mathbb{R} \to v_{741} \in \mathbb{R} \to v_{742} \in \mathbb{R} \to v_{743} \in \mathbb{R} \to \varphi_{3})$
+\item $\varphi_{51} :\equiv \forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \lvert a + b \rvert \leq \lvert a \rvert + \lvert b \rvert) \to \varphi_{10}$
+\item $\varphi_{52} :\equiv \forall v_{742}\,\forall v_{743}\,(\lvert x - y \rvert \in \mathbb{R} \to e \in \mathbb{R} \to v_{742} \in \mathbb{R} \to v_{743} \in \mathbb{R} \to \lvert x - y \rvert < e \to v_{742} < v_{743} \to \lvert x - y \rvert + v_{742} < e + v_{743})$
+\item $\varphi_{53} :\equiv \forall v_{741}\,\forall v_{742}\,\forall v_{743}\,(\lvert x - y \rvert \in \mathbb{R} \to v_{741} \in \mathbb{R} \to v_{742} \in \mathbb{R} \to v_{743} \in \mathbb{R} \to \lvert x - y \rvert < v_{741} \to v_{742} < v_{743} \to \lvert x - y \rvert + v_{742} < v_{741} + v_{743})$
+\item $\varphi_{54} :\equiv \forall v_{743}\,(\lvert x - y \rvert \in \mathbb{R} \to e \in \mathbb{R} \to \lvert y - z \rvert \in \mathbb{R} \to v_{743} \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < v_{743} \to \lvert x - y \rvert + \lvert y - z \rvert < e + v_{743})$
+\item $\varphi_{55} :\equiv (x - z = x - y + (y - z) \to x - y + (y - z) = x - z) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \varphi_{15}$
+\item $\varphi_{56} :\equiv \forall v_{735}\,\forall v_{736}\,\forall v_{737}\,(v_{735} \in \mathbb{R} \to v_{736} \in \mathbb{R} \to \varphi_{2}) \to \varphi_{36}$
+\item $\varphi_{57} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{23}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \varphi_{13}$
+\item $\varphi_{58} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \varphi_{13}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{29}$
+\item $\varphi_{59} :\equiv \varphi_{49} \to v_{740} \in \mathbb{R} \to v_{741} \in \mathbb{R} \to v_{742} \in \mathbb{R} \to v_{743} \in \mathbb{R} \to \varphi_{3}$
+\item $\varphi_{60} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{21}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \varphi_{7}$
+\item $\varphi_{61} :\equiv (x - y + (y - z) = x - z \to \varphi_{35}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \varphi_{17}$
+\item $\varphi_{62} :\equiv (y - z \in \mathbb{R} \to \lvert y - z \rvert \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{21}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{27}$
+\item $\varphi_{63} :\equiv (x - y \in \mathbb{R} \to \lvert x - y \rvert \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{28}$
+\item $\varphi_{64} :\equiv \varphi_{54} \to \lvert x - y \rvert \in \mathbb{R} \to e \in \mathbb{R} \to \lvert y - z \rvert \in \mathbb{R} \to e \in \mathbb{R} \to \varphi_{13}$
+\item $\varphi_{65} :\equiv (x \in \mathbb{R} \to \varphi_{31}) \to (x \in \mathbb{R} \to \varphi_{32}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \varphi_{14}$
+\item $\varphi_{66} :\equiv (y \in \mathbb{R} \to z \in \mathbb{R} \to y - z \in \mathbb{R}) \to (x \in \mathbb{R} \to \varphi_{32}) \to (x \in \mathbb{R} \to \varphi_{31}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{21}$
+\item $\varphi_{67} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to (x \in \mathbb{R} \to \varphi_{33}) \to (x \in \mathbb{R} \to \varphi_{32}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{22}$
+\item $\varphi_{68} :\equiv (x \in \mathbb{R} \to z \in \mathbb{R} \to y \in \mathbb{R} \to x - z = x - y + (y - z)) \to (x \in \mathbb{R} \to \varphi_{33}) \to \varphi_{65}$
+\item $\varphi_{69} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \varphi_{7}) \to (x - y + (y - z) = x - z \to \varphi_{38}) \to \varphi_{61}$
+\item $\varphi_{70} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{27}) \to (x \in \mathbb{R} \to \varphi_{30}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{24}) \to \varphi_{57}$
+\item $\varphi_{71} :\equiv (\lvert x - y \rvert \in \mathbb{R} \to e \in \mathbb{R} \to \lvert y - z \rvert \in \mathbb{R} \to e \in \mathbb{R} \to \varphi_{13}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{28}) \to (x \in \mathbb{R} \to \varphi_{30}) \to \varphi_{70}$
+\end{abbrevlist}
+\end{fullproof}

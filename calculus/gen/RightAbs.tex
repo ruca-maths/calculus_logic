@@ -1,0 +1,209 @@
+% 自動生成 (prover/build.js): RightAbs  ノード数 87
+\begin{fullproof}{[H3]}{$\forall x\,\forall c\,\forall d\,(x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 < \lvert x - c \rvert \land \lvert x - c \rvert < d)$}{87}\phantomsection\label{tree:RightAbs}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\varphi_{5}$\lbl{[E32]}}
+\AXC{$\varphi_{5} \to \varphi_{4}$\lbl{A2}}
+\BIC{$\varphi_{4}$}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\forall y\,(c \in \mathbb{R} \to d \in \mathbb{R} \to y \in \mathbb{R} \to y < c + d \to y - c < d)$}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to x < c + d \to x - c < d$}
+\AXC{$(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to x < c + d \to x - c < d) \to \varphi_{28}$\lbl{A1}}
+\BIC{$\varphi_{28}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to d \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to c \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{28}$}
+\BIC{$\varphi_{27}$}
+\BIC{$\varphi_{25}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to x < c + d$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{25}$}
+\BIC{$\varphi_{20}$}
+\BIC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to x - c < d$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x < y \to 0 < y - x)$\lbl{[F24]}}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$\forall y\,(c \in \mathbb{R} \to y \in \mathbb{R} \to c < y \to 0 < y - c)$}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$c \in \mathbb{R} \to x \in \mathbb{R} \to c < x \to 0 < x - c$}
+\AXC{$(c \in \mathbb{R} \to x \in \mathbb{R} \to c < x \to 0 < x - c) \to \varphi_{26}$\lbl{A1}}
+\BIC{$\varphi_{26}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to c \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{26}$}
+\BIC{$\varphi_{24}$}
+\BIC{$\varphi_{18}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to c < x$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{18}$}
+\BIC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 < x - c$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\forall x\,(0 \leq x \to \lvert x \rvert = x)$\lbl{[A1]}}
+\AXC{$\forall x\,(0 \leq x \to \lvert x \rvert = x) \to 0 \leq x - c \to \lvert x - c \rvert = x - c$\lbl{A2}}
+\BIC{$0 \leq x - c \to \lvert x - c \rvert = x - c$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$0 \leq x - c \to \lvert x - c \rvert = x - c$}
+\AXC{$(0 \leq x - c \to \lvert x - c \rvert = x - c) \to \varphi_{21}$\lbl{A1}}
+\BIC{$\varphi_{21}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 < x - c$}
+\AXC{$\varphi_{19}$\lbl{A1}}
+\BIC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 \leq x - c$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{21}$}
+\BIC{$\varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert x - c \rvert = y \to y = \lvert x - c \rvert)$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\lvert x - c \rvert = x - c \to x - c = \lvert x - c \rvert$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{9}$}
+\AXC{$\varphi_{9} \to (\lvert x - c \rvert = x - c \to x - c = \lvert x - c \rvert) \to \varphi_{10}$\lbl{A1}}
+\BIC{$(\lvert x - c \rvert = x - c \to x - c = \lvert x - c \rvert) \to \varphi_{10}$}
+\BIC{$\varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to x - c < d$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{10}$}
+\AXC{$\varphi_{10} \to \varphi_{22}$\lbl{A1}}
+\BIC{$\varphi_{22}$}
+\BIC{$(x - c = \lvert x - c \rvert \to x - c < d \to \lvert x - c \rvert < d) \to \varphi_{7}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$z = w \to z < d \to w < d$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < d \to w < d)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < d \to w < d)$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall w\,(x - c = w \to x - c < d \to w < d)$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$x - c = \lvert x - c \rvert \to x - c < d \to \lvert x - c \rvert < d$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$(x - c = \lvert x - c \rvert \to x - c < d \to \lvert x - c \rvert < d) \to \varphi_{7}$}
+\BIC{$\varphi_{7}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert x - c \rvert = y \to y = \lvert x - c \rvert)$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\lvert x - c \rvert = x - c \to x - c = \lvert x - c \rvert$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{9}$}
+\AXC{$\varphi_{9} \to (\lvert x - c \rvert = x - c \to x - c = \lvert x - c \rvert) \to \varphi_{10}$\lbl{A1}}
+\BIC{$(\lvert x - c \rvert = x - c \to x - c = \lvert x - c \rvert) \to \varphi_{10}$}
+\BIC{$\varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 < x - c$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{10}$}
+\AXC{$\varphi_{10} \to \varphi_{23}$\lbl{A1}}
+\BIC{$\varphi_{23}$}
+\BIC{$(x - c = \lvert x - c \rvert \to 0 < x - c \to 0 < \lvert x - c \rvert) \to \varphi_{8}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$z = w \to 0 < z \to 0 < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to 0 < z \to 0 < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to 0 < z \to 0 < w)$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall w\,(x - c = w \to 0 < x - c \to 0 < w)$}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\BIC{$x - c = \lvert x - c \rvert \to 0 < x - c \to 0 < \lvert x - c \rvert$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$(x - c = \lvert x - c \rvert \to 0 < x - c \to 0 < \lvert x - c \rvert) \to \varphi_{8}$}
+\BIC{$\varphi_{8}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{7}$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{8}$}
+\AXC{$\varphi_{8} \to \varphi_{7} \to x \in \mathbb{R} \to \varphi_{11}$\lbl{A1}}
+\BIC{$\varphi_{7} \to x \in \mathbb{R} \to \varphi_{11}$}
+\BIC{$x \in \mathbb{R} \to \varphi_{11}$}
+\UIC{$\forall d\,(x \in \mathbb{R} \to \varphi_{11})$}
+\UIC{$\forall c\,\forall d\,(x \in \mathbb{R} \to \varphi_{11})$}
+\UIC{$\forall x\,\forall c\,\forall d\,(x \in \mathbb{R} \to \varphi_{11})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(\lvert x - c \rvert = y \to y = \lvert x - c \rvert)$
+\item $\varphi_{2} :\equiv \forall z\,\forall w\,(z = w \to z < d \to w < d) \to \forall w\,(x - c = w \to x - c < d \to w < d)$
+\item $\varphi_{3} :\equiv \forall z\,\forall w\,(z = w \to 0 < z \to 0 < w) \to \forall w\,(x - c = w \to 0 < x - c \to 0 < w)$
+\item $\varphi_{4} :\equiv \forall e\,\forall y\,(c \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to y < c + e \to y - c < e)$
+\item $\varphi_{5} :\equiv \forall x\,\forall e\,\forall y\,(x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to y < x + e \to y - x < e)$
+\item $\varphi_{6} :\equiv \forall y\,(\lvert x - c \rvert = y \to y = \lvert x - c \rvert) \to \lvert x - c \rvert = x - c \to x - c = \lvert x - c \rvert$
+\item $\varphi_{7} :\equiv x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to \lvert x - c \rvert < d$
+\item $\varphi_{8} :\equiv x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 < \lvert x - c \rvert$
+\item $\varphi_{9} :\equiv x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to \lvert x - c \rvert = x - c$
+\item $\varphi_{10} :\equiv x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to x - c = \lvert x - c \rvert$
+\item $\varphi_{11} :\equiv c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 < \lvert x - c \rvert \land \lvert x - c \rvert < d$
+\item $\varphi_{12} :\equiv \forall w\,(x - c = w \to x - c < d \to w < d) \to x - c = \lvert x - c \rvert \to x - c < d \to \lvert x - c \rvert < d$
+\item $\varphi_{13} :\equiv \forall w\,(x - c = w \to 0 < x - c \to 0 < w) \to x - c = \lvert x - c \rvert \to 0 < x - c \to 0 < \lvert x - c \rvert$
+\item $\varphi_{14} :\equiv \forall y\,(c \in \mathbb{R} \to y \in \mathbb{R} \to c < y \to 0 < y - c) \to c \in \mathbb{R} \to x \in \mathbb{R} \to c < x \to 0 < x - c$
+\item $\varphi_{15} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x < y \to 0 < y - x) \to \forall y\,(c \in \mathbb{R} \to y \in \mathbb{R} \to c < y \to 0 < y - c)$
+\item $\varphi_{16} :\equiv \forall y\,(c \in \mathbb{R} \to d \in \mathbb{R} \to y \in \mathbb{R} \to y < c + d \to y - c < d) \to c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to x < c + d \to x - c < d$
+\item $\varphi_{17} :\equiv \varphi_{4} \to \forall y\,(c \in \mathbb{R} \to d \in \mathbb{R} \to y \in \mathbb{R} \to y < c + d \to y - c < d)$
+\item $\varphi_{18} :\equiv (x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to c < x) \to x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 < x - c$
+\item $\varphi_{19} :\equiv (x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 < x - c) \to x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 \leq x - c$
+\item $\varphi_{20} :\equiv (x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to x < c + d) \to x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to x - c < d$
+\item $\varphi_{21} :\equiv (x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 \leq x - c) \to \varphi_{9}$
+\item $\varphi_{22} :\equiv (x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to x - c < d) \to (x - c = \lvert x - c \rvert \to x - c < d \to \lvert x - c \rvert < d) \to \varphi_{7}$
+\item $\varphi_{23} :\equiv (x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 < x - c) \to (x - c = \lvert x - c \rvert \to 0 < x - c \to 0 < \lvert x - c \rvert) \to \varphi_{8}$
+\item $\varphi_{24} :\equiv (x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to x \in \mathbb{R}) \to \varphi_{18}$
+\item $\varphi_{25} :\equiv (x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to x \in \mathbb{R}) \to \varphi_{20}$
+\item $\varphi_{26} :\equiv (x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to c \in \mathbb{R}) \to \varphi_{24}$
+\item $\varphi_{27} :\equiv (x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to d \in \mathbb{R}) \to \varphi_{25}$
+\item $\varphi_{28} :\equiv (x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to c \in \mathbb{R}) \to \varphi_{27}$
+\end{abbrevlist}
+\end{fullproof}

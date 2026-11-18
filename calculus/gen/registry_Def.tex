@@ -1,0 +1,49 @@
+\begin{registrylist}
+\item[Def$\subseteq$] $\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$
+\item[Def$<$] $\forall x\,\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y)$
+\item[Def$\emptyset$] $\forall u\,(u \notin \emptyset)$
+\item[Def$\cup$] $\forall x\,\forall y\,\forall u\,(u \in x \cup y \leftrightarrow u \in x \lor u \in y)$
+\item[Def$\bigcup$] $\forall X\,\forall u\,(u \in \textstyle\bigcup X \leftrightarrow \exists Y \in X\,(u \in Y))$
+\item[Def$S$] $\forall x\,\forall u\,(u \in S(x) \leftrightarrow u \in x \lor u = x)$
+\item[DefInd] $\forall x\,(\mathrm{Ind}(x) \leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x))$
+\item[Def$\omega$] $\forall n\,(n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x))$
+\item[Def$-$] $\forall x\,\forall y\,(x - y = x + -y)$
+\item[Def$\lvert\cdot\rvert$] $\forall x\,(0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x)$
+\item[Def$2$] $2 = 1 + 1$
+\item[DefUB] $\forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a))$
+\item[DefLB] $\forall a\,\forall X\,(\mathrm{LB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(a \leq x))$
+\item[DefSup] $\forall s\,\forall X\,(\mathrm{IsSup}(s,X) \leftrightarrow \mathrm{UB}(s,X) \land \forall w\,(\mathrm{UB}(w,X) \to s \leq w))$
+\item[DefInf] $\forall s\,\forall X\,(\mathrm{IsInf}(s,X) \leftrightarrow \mathrm{LB}(s,X) \land \forall w\,(\mathrm{LB}(w,X) \to w \leq s))$
+\item[DefBddAb] $\forall X\,(\mathrm{BddAb}(X) \leftrightarrow \exists a\,(\mathrm{UB}(a,X)))$
+\item[DefBddBe] $\forall X\,(\mathrm{BddBe}(X) \leftrightarrow \exists a\,(\mathrm{LB}(a,X)))$
+\item[Def$X_a$] $\forall a\,\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$
+\item[Def$\ominus$] $\forall X\,\forall y\,(y \in \ominus X \leftrightarrow y \in \mathbb{R} \land -y \in X)$
+\item[DefConv] $\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \leftrightarrow \mathrm{Seq}(a) \land \alpha \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)))$
+\item[DefCgt] $\forall a\,(\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha)))$
+\item[Def$\mathrm{DvgP}$] $\forall a\,(\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \forall K \in \mathbb{R}\,(0 < K \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to K < a_{n})))$
+\item[DefSeqBdd] $\forall a\,(\mathrm{SeqBdd}(a) \leftrightarrow \mathrm{Seq}(a) \land \exists M \in \mathbb{R}\,\forall n \in \mathbb{N}\,(\lvert a_{n} \rvert \leq M))$
+\item[DefMonoInc] $\forall a\,(\mathrm{MonoInc}(a) \leftrightarrow \mathrm{Seq}(a) \land \forall n \in \mathbb{N}\,(a_{n} \leq a_{S(n)}))$
+\item[DefMonoDec] $\forall a\,(\mathrm{MonoDec}(a) \leftrightarrow \mathrm{Seq}(a) \land \forall n \in \mathbb{N}\,(a_{S(n)} \leq a_{n}))$
+\item[DefCauchy] $\forall a\,(\mathrm{Cauchy}(a) \leftrightarrow \mathrm{Seq}(a) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - a_{n} \rvert < \varepsilon)))$
+\item[DefPNbhd] $\forall f\,\forall c\,(\mathrm{PNbhd}(f,c) \leftrightarrow \exists r\,(r \in \mathbb{R} \land 0 < r \land \forall x \in \mathbb{R}\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < r \to x \in \mathrm{dom}(f))))$
+\item[DefFLim] $\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathbb{R} \land \alpha \in \mathbb{R} \land \mathrm{PNbhd}(f,c) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < \delta \to \lvert f(x) - \alpha \rvert < \varepsilon))))$
+\item[Def$\mathbb{N}$] $\forall n\,(n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset)$
+\item[Def$1_\omega$] $1_{\omega} = S(\emptyset)$
+\item[DefSubIdx] $\forall s\,(\mathrm{SubIdx}(s) \leftrightarrow \mathrm{NSeq}(s) \land \forall k \in \mathbb{N}\,(s_{k} < s_{S(k)}))$
+\item[DefSubSeq] $\forall b\,\forall a\,(\mathrm{SubSeq}(b,a) \leftrightarrow \mathrm{Seq}(b) \land \exists s\,(\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}})))$
+\item[DefRNbhd] $\forall f\,\forall c\,(\mathrm{RNbhd}(f,c) \leftrightarrow \exists r\,(r \in \mathbb{R} \land 0 < r \land \forall x \in \mathbb{R}\,(c < x \to x < c + r \to x \in \mathrm{dom}(f))))$
+\item[DefLNbhd] $\forall f\,\forall c\,(\mathrm{LNbhd}(f,c) \leftrightarrow \exists r\,(r \in \mathbb{R} \land 0 < r \land \forall x \in \mathbb{R}\,(c - r < x \to x < c \to x \in \mathrm{dom}(f))))$
+\item[DefFLimR] $\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLimR}(f,c,\alpha) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathbb{R} \land \alpha \in \mathbb{R} \land \mathrm{RNbhd}(f,c) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(c < x \to x < c + \delta \to \lvert f(x) - \alpha \rvert < \varepsilon))))$
+\item[DefFLimL] $\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLimL}(f,c,\alpha) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathbb{R} \land \alpha \in \mathbb{R} \land \mathrm{LNbhd}(f,c) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(c - \delta < x \to x < c \to \lvert f(x) - \alpha \rvert < \varepsilon))))$
+\item[DefFLimInf] $\forall f\,\forall \alpha\,(\mathrm{FLimInf}(f,\alpha) \leftrightarrow \mathrm{RFn}(f) \land \alpha \in \mathbb{R} \land \exists r \in \mathbb{R}\,\forall x \in \mathbb{R}\,(r < x \to x \in \mathrm{dom}(f)) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists L \in \mathbb{R}\,\forall x \in \mathrm{dom}(f)\,(L < x \to \lvert f(x) - \alpha \rvert < \varepsilon)))$
+\item[DefContIn] $\forall f\,\forall A\,\forall c\,(\mathrm{ContIn}(f,A,c) \leftrightarrow \mathrm{RFn}(f) \land A \subseteq \mathrm{dom}(f) \land c \in A \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in A\,(\lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon))))$
+\item[DefCont] $\forall f\,\forall c\,(\mathrm{Cont}(f,c) \leftrightarrow \mathrm{ContIn}(f,\mathrm{dom}(f),c))$
+\item[DefContOn] $\forall f\,\forall A\,(\mathrm{ContOn}(f,A) \leftrightarrow \mathrm{RFn}(f) \land A \subseteq \mathrm{dom}(f) \land \forall c \in A\,(\mathrm{ContIn}(f,A,c)))$
+\item[DefRCont] $\forall f\,\forall c\,(\mathrm{RCont}(f,c) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathrm{dom}(f) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(c \leq x \to x < c + \delta \to \lvert f(x) - f(c) \rvert < \varepsilon))))$
+\item[DefLCont] $\forall f\,\forall c\,(\mathrm{LCont}(f,c) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathrm{dom}(f) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(c - \delta < x \to x \leq c \to \lvert f(x) - f(c) \rvert < \varepsilon))))$
+\item[Def{$[a,b]$}] $\forall a\,\forall b\,\forall x\,(x \in [a,b] \leftrightarrow x \in \mathbb{R} \land a \leq x \land x \leq b)$
+\item[DefUC] $\forall f\,\forall A\,(\mathrm{UC}(f,A) \leftrightarrow \mathrm{RFn}(f) \land A \subseteq \mathrm{dom}(f) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x\,\forall y\,(x \in A \to y \in A \to \lvert x - y \rvert < \delta \to \lvert f(x) - f(y) \rvert < \varepsilon))))$
+\item[DefStrInc] $\forall f\,\forall A\,(\mathrm{StrInc}(f,A) \leftrightarrow \forall x\,\forall y\,(x \in A \to y \in A \to x < y \to f(x) < f(y)))$
+\item[DefItv] $\forall I\,(\mathrm{Itv}(I) \leftrightarrow I \subseteq \mathbb{R} \land \forall x\,\forall y\,\forall z\,(x \in I \to z \in I \to y \in \mathbb{R} \to x \leq y \to y \leq z \to y \in I))$
+\item[DefInj] $\forall f\,(\mathrm{Inj}(f) \leftrightarrow \forall x\,\forall y\,(x \in \mathrm{dom}(f) \to y \in \mathrm{dom}(f) \to f(x) = f(y) \to x = y))$
+\end{registrylist}

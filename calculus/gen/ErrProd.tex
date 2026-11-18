@@ -1,0 +1,1298 @@
+% 自動生成 (prover/build.js): ErrProd  ノード数 516
+\begin{fullproof}{[C15]}{$\forall x\,\forall y\,\forall \alpha\,\forall \beta\,\forall M\,\forall h\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert x \cdot y - \alpha \cdot \beta \rvert \leq (M + \lvert \beta \rvert) \cdot h)$}{516}\phantomsection\label{tree:ErrProd}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{117}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{117})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{117})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{117}) \to \varphi_{180}$\lbl{A2}}
+\BIC{$\varphi_{180}$}
+\AXC{$\varphi_{180} \to M \cdot h + \lvert \beta \rvert \cdot h = (M + \lvert \beta \rvert) \cdot h \to \varphi_{142}$\lbl{A2}}
+\BIC{$M \cdot h + \lvert \beta \rvert \cdot h = (M + \lvert \beta \rvert) \cdot h \to \varphi_{142}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{123}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{123})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{123})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{123}) \to \varphi_{195}$\lbl{A2}}
+\BIC{$\varphi_{195}$}
+\AXC{$\varphi_{195} \to M \cdot h + \lvert \beta \rvert \cdot h = (M + \lvert \beta \rvert) \cdot h \to \varphi_{155}$\lbl{A2}}
+\BIC{$M \cdot h + \lvert \beta \rvert \cdot h = (M + \lvert \beta \rvert) \cdot h \to \varphi_{155}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{92}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$}
+\AXC{$\varphi_{81}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to \alpha \in \mathbb{R} \to x - \alpha \in \mathbb{R}$}
+\AXC{$(x \in \mathbb{R} \to \alpha \in \mathbb{R} \to x - \alpha \in \mathbb{R}) \to \varphi_{229}$\lbl{A1}}
+\BIC{$\varphi_{229}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{62}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{229}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{62}) \to \varphi_{171}$}
+\BIC{$\varphi_{171}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(0 \leq \lvert x \rvert)$\lbl{[A6]}}
+\AXC{$\forall x \in \mathbb{R}\,(0 \leq \lvert x \rvert) \to x - \alpha \in \mathbb{R} \to 0 \leq \lvert x - \alpha \rvert$\lbl{A2}}
+\BIC{$x - \alpha \in \mathbb{R} \to 0 \leq \lvert x - \alpha \rvert$}
+\AXC{$(x - \alpha \in \mathbb{R} \to 0 \leq \lvert x - \alpha \rvert) \to \varphi_{171} \to \varphi_{159}$\lbl{A1}}
+\BIC{$\varphi_{171} \to \varphi_{159}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(0 \leq \lvert x \rvert)$\lbl{[A6]}}
+\AXC{$\forall x \in \mathbb{R}\,(0 \leq \lvert x \rvert) \to \beta \in \mathbb{R} \to 0 \leq \lvert \beta \rvert$\lbl{A2}}
+\BIC{$\beta \in \mathbb{R} \to 0 \leq \lvert \beta \rvert$}
+\AXC{$\varphi_{216}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}) \to \varphi_{150}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}) \to \varphi_{150}$}
+\BIC{$\varphi_{150}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$\lbl{[A5]}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R}) \to x - \alpha \in \mathbb{R} \to \lvert x - \alpha \rvert \in \mathbb{R}$\lbl{A2}}
+\BIC{$x - \alpha \in \mathbb{R} \to \lvert x - \alpha \rvert \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{171}$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$x - \alpha \in \mathbb{R} \to \lvert x - \alpha \rvert \in \mathbb{R}$}
+\AXC{$(x - \alpha \in \mathbb{R} \to \lvert x - \alpha \rvert \in \mathbb{R}) \to \varphi_{171} \to \varphi_{187}$\lbl{A1}}
+\BIC{$\varphi_{171} \to \varphi_{187}$}
+\BIC{$\varphi_{187}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$\lbl{[A5]}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R}) \to \beta \in \mathbb{R} \to \lvert \beta \rvert \in \mathbb{R}$\lbl{A2}}
+\BIC{$\beta \in \mathbb{R} \to \lvert \beta \rvert \in \mathbb{R}$}
+\AXC{$\varphi_{220}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}) \to \varphi_{172}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}) \to \varphi_{172}$}
+\BIC{$\varphi_{172}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\varphi_{105}$\lbl{[E12]}}
+\AXC{$\varphi_{105} \to \varphi_{133}$\lbl{A2}}
+\BIC{$\varphi_{133}$}
+\AXC{$\varphi_{133} \to \varphi_{138}$\lbl{A2}}
+\BIC{$\varphi_{138}$}
+\AXC{$\varphi_{138} \to \varphi_{206}$\lbl{A2}}
+\BIC{$\varphi_{206}$}
+\AXC{$\varphi_{206} \to \lvert \beta \rvert \in \mathbb{R} \to \varphi_{182}$\lbl{A2}}
+\BIC{$\lvert \beta \rvert \in \mathbb{R} \to \varphi_{182}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{187}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{172}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{172}$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\lvert \beta \rvert \in \mathbb{R} \to \varphi_{182}$}
+\AXC{$(\lvert \beta \rvert \in \mathbb{R} \to \varphi_{182}) \to \varphi_{172} \to \varphi_{172} \to \varphi_{187} \to \varphi_{254}$\lbl{A1}}
+\BIC{$\varphi_{172} \to \varphi_{172} \to \varphi_{187} \to \varphi_{254}$}
+\BIC{$\varphi_{172} \to \varphi_{187} \to \varphi_{254}$}
+\BIC{$\varphi_{187} \to \varphi_{254}$}
+\BIC{$\varphi_{254}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{171}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{171} \to \varphi_{159}$}
+\BIC{$\varphi_{159}$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{150}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{254}$}
+\BIC{$\varphi_{150} \to \varphi_{159} \to \varphi_{167} \to \varphi_{158} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{153}$}
+\BIC{$\varphi_{159} \to \varphi_{167} \to \varphi_{158} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{153}$}
+\BIC{$\varphi_{167} \to \varphi_{158} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{153}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \lvert \beta \rvert = \lvert \beta \rvert$\lbl{A2}}
+\BIC{$\lvert \beta \rvert = \lvert \beta \rvert$}
+\AXC{$\lvert \beta \rvert = \lvert \beta \rvert \to \varphi_{167}$\lbl{A1}}
+\BIC{$\varphi_{167}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{167} \to \varphi_{158} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{153}$}
+\BIC{$\varphi_{158} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{153}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{102}$\lbl{A2}}
+\BIC{$\forall y\,(v_{689} \in \mathbb{R} \to y \in \mathbb{R} \to v_{689} - y \in \mathbb{R})$}
+\AXC{$\varphi_{119}$\lbl{A2}}
+\BIC{$v_{689} \in \mathbb{R} \to v_{690} \in \mathbb{R} \to v_{689} - v_{690} \in \mathbb{R}$}
+\UIC{$\forall v_{690}\,(v_{689} \in \mathbb{R} \to v_{690} \in \mathbb{R} \to v_{689} - v_{690} \in \mathbb{R})$}
+\UIC{$\varphi_{8}$}
+\AXC{$\varphi_{8} \to \forall v_{690}\,(y \in \mathbb{R} \to v_{690} \in \mathbb{R} \to y - v_{690} \in \mathbb{R})$\lbl{A2}}
+\BIC{$\forall v_{690}\,(y \in \mathbb{R} \to v_{690} \in \mathbb{R} \to y - v_{690} \in \mathbb{R})$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\forall v_{690}\,(y \in \mathbb{R} \to v_{690} \in \mathbb{R} \to y - v_{690} \in \mathbb{R})$}
+\AXC{$\varphi_{100}$\lbl{A2}}
+\BIC{$y \in \mathbb{R} \to \beta \in \mathbb{R} \to y - \beta \in \mathbb{R}$}
+\AXC{$(y \in \mathbb{R} \to \beta \in \mathbb{R} \to y - \beta \in \mathbb{R}) \to \varphi_{230}$\lbl{A1}}
+\BIC{$\varphi_{230}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{54}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{230}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}) \to \varphi_{173}$}
+\BIC{$\varphi_{173}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(0 \leq \lvert x \rvert)$\lbl{[A6]}}
+\AXC{$\forall x \in \mathbb{R}\,(0 \leq \lvert x \rvert) \to y - \beta \in \mathbb{R} \to 0 \leq \lvert y - \beta \rvert$\lbl{A2}}
+\BIC{$y - \beta \in \mathbb{R} \to 0 \leq \lvert y - \beta \rvert$}
+\AXC{$(y - \beta \in \mathbb{R} \to 0 \leq \lvert y - \beta \rvert) \to \varphi_{173} \to \varphi_{161}$\lbl{A1}}
+\BIC{$\varphi_{173} \to \varphi_{161}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(0 \leq \lvert x \rvert)$\lbl{[A6]}}
+\AXC{$\forall x \in \mathbb{R}\,(0 \leq \lvert x \rvert) \to x \in \mathbb{R} \to 0 \leq \lvert x \rvert$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to 0 \leq \lvert x \rvert$}
+\AXC{$\varphi_{215}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}) \to \varphi_{147}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}) \to \varphi_{147}$}
+\BIC{$\varphi_{147}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$\lbl{[A5]}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R}) \to y - \beta \in \mathbb{R} \to \lvert y - \beta \rvert \in \mathbb{R}$\lbl{A2}}
+\BIC{$y - \beta \in \mathbb{R} \to \lvert y - \beta \rvert \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{173}$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$y - \beta \in \mathbb{R} \to \lvert y - \beta \rvert \in \mathbb{R}$}
+\AXC{$(y - \beta \in \mathbb{R} \to \lvert y - \beta \rvert \in \mathbb{R}) \to \varphi_{173} \to \varphi_{188}$\lbl{A1}}
+\BIC{$\varphi_{173} \to \varphi_{188}$}
+\BIC{$\varphi_{188}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$\lbl{[A5]}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R}) \to x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}$}
+\AXC{$\varphi_{218}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}) \to \varphi_{168}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}) \to \varphi_{168}$}
+\BIC{$\varphi_{168}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{168}$}
+\AXC{$\varphi_{105}$\lbl{[E12]}}
+\AXC{$\varphi_{105} \to \varphi_{129}$\lbl{A2}}
+\BIC{$\varphi_{129}$}
+\AXC{$\varphi_{129} \to \varphi_{128}$\lbl{A2}}
+\BIC{$\varphi_{128}$}
+\AXC{$\varphi_{128} \to \varphi_{181}$\lbl{A2}}
+\BIC{$\varphi_{181}$}
+\AXC{$\varphi_{181} \to \varphi_{174}$\lbl{A2}}
+\BIC{$\varphi_{174}$}
+\AXC{$\varphi_{174} \to \varphi_{168} \to \varphi_{255}$\lbl{A1}}
+\BIC{$\varphi_{168} \to \varphi_{255}$}
+\BIC{$\varphi_{255}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{188}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{55}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\varphi_{255}$}
+\BIC{$\varphi_{188} \to \varphi_{253}$}
+\BIC{$\varphi_{253}$}
+\BIC{$\varphi_{147} \to \varphi_{161} \to \varphi_{146} \to \varphi_{160} \to \varphi_{199}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\varphi_{178}$\lbl{A1}}
+\AXC{$\varphi_{178} \to \varphi_{160}$\lbl{A1}}
+\BIC{$\varphi_{160}$}
+\AXC{$\varphi_{146}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{173}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{173} \to \varphi_{161}$}
+\BIC{$\varphi_{161}$}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{147}$}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{147} \to \varphi_{161} \to \varphi_{146} \to \varphi_{160} \to \varphi_{199}$}
+\BIC{$\varphi_{161} \to \varphi_{146} \to \varphi_{160} \to \varphi_{199}$}
+\BIC{$\varphi_{146} \to \varphi_{160} \to \varphi_{199}$}
+\BIC{$\varphi_{160} \to \varphi_{199}$}
+\BIC{$\varphi_{199}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{120}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \beta \rvert \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{127}$\lbl{A2}}
+\BIC{$\lvert \beta \rvert \in \mathbb{R} \to h \in \mathbb{R} \to \lvert \beta \rvert \cdot h \in \mathbb{R}$}
+\AXC{$(\lvert \beta \rvert \in \mathbb{R} \to h \in \mathbb{R} \to \lvert \beta \rvert \cdot h \in \mathbb{R}) \to \varphi_{231}$\lbl{A1}}
+\BIC{$\varphi_{231}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{172}$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{231}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{189}$}
+\BIC{$\varphi_{189}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{187}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{172}$}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{120}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \beta \rvert \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{136}$\lbl{A2}}
+\BIC{$\lvert \beta \rvert \in \mathbb{R} \to \lvert x - \alpha \rvert \in \mathbb{R} \to \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \in \mathbb{R}$}
+\AXC{$\varphi_{243}$\lbl{A1}}
+\BIC{$\varphi_{172} \to \varphi_{187} \to \varphi_{203}$}
+\BIC{$\varphi_{187} \to \varphi_{203}$}
+\BIC{$\varphi_{203}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{93}$\lbl{A2}}
+\BIC{$\forall y\,(M \in \mathbb{R} \to y \in \mathbb{R} \to M \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{78}$\lbl{A2}}
+\BIC{$M \in \mathbb{R} \to h \in \mathbb{R} \to M \cdot h \in \mathbb{R}$}
+\AXC{$(M \in \mathbb{R} \to h \in \mathbb{R} \to M \cdot h \in \mathbb{R}) \to \varphi_{228}$\lbl{A1}}
+\BIC{$\varphi_{228}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{55}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\varphi_{228}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{169}$}
+\BIC{$\varphi_{169}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{188}$}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{168}$}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{115}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert x \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{135}$\lbl{A2}}
+\BIC{$\lvert x \rvert \in \mathbb{R} \to \lvert y - \beta \rvert \in \mathbb{R} \to \lvert x \rvert \cdot \lvert y - \beta \rvert \in \mathbb{R}$}
+\AXC{$\varphi_{242}$\lbl{A1}}
+\BIC{$\varphi_{168} \to \varphi_{188} \to \varphi_{202}$}
+\BIC{$\varphi_{188} \to \varphi_{202}$}
+\BIC{$\varphi_{202}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\varphi_{80}$\lbl{[F21]}}
+\AXC{$\varphi_{80} \to \varphi_{96}$\lbl{A2}}
+\BIC{$\varphi_{96}$}
+\AXC{$\varphi_{96} \to \varphi_{106}$\lbl{A2}}
+\BIC{$\varphi_{106}$}
+\AXC{$\varphi_{106} \to \varphi_{121}$\lbl{A2}}
+\BIC{$\varphi_{121}$}
+\AXC{$\varphi_{211}$\lbl{A2}}
+\BIC{$v_{691} \in \mathbb{R} \to v_{692} \in \mathbb{R} \to v_{693} \in \mathbb{R} \to v_{694} \in \mathbb{R} \to \varphi_{3}$}
+\UIC{$\varphi_{130}$}
+\UIC{$\forall v_{693}\,(\varphi_{130})$}
+\UIC{$\forall v_{692}\,\forall v_{693}\,(\varphi_{130})$}
+\UIC{$\forall v_{691}\,\forall v_{692}\,\forall v_{693}\,(\varphi_{130})$}
+\AXC{$\forall v_{691}\,\forall v_{692}\,\forall v_{693}\,(\varphi_{130}) \to \varphi_{207}$\lbl{A2}}
+\BIC{$\varphi_{207}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\varphi_{202}$}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\varphi_{207}$}
+\AXC{$\varphi_{207} \to \varphi_{208}$\lbl{A2}}
+\BIC{$\varphi_{208}$}
+\AXC{$\varphi_{208} \to \varphi_{212}$\lbl{A2}}
+\BIC{$\varphi_{212}$}
+\AXC{$\varphi_{212} \to \lvert x \rvert \cdot \lvert y - \beta \rvert \in \mathbb{R} \to M \cdot h \in \mathbb{R} \to \varphi_{210}$\lbl{A2}}
+\BIC{$\lvert x \rvert \cdot \lvert y - \beta \rvert \in \mathbb{R} \to M \cdot h \in \mathbb{R} \to \varphi_{210}$}
+\AXC{$\varphi_{256}$\lbl{A1}}
+\BIC{$\varphi_{202} \to \varphi_{169} \to \varphi_{203} \to \varphi_{189} \to \varphi_{241}$}
+\BIC{$\varphi_{169} \to \varphi_{203} \to \varphi_{189} \to \varphi_{241}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{199}$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\varphi_{189}$}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{203}$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{169}$}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\varphi_{169} \to \varphi_{203} \to \varphi_{189} \to \varphi_{241}$}
+\BIC{$\varphi_{203} \to \varphi_{189} \to \varphi_{241}$}
+\BIC{$\varphi_{189} \to \varphi_{241}$}
+\BIC{$\varphi_{241}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{153}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{204}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\varphi_{177}$\lbl{A1}}
+\AXC{$\varphi_{177} \to \varphi_{158}$\lbl{A1}}
+\BIC{$\varphi_{158}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{158} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{153}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{153}$}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{153}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{204}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{204}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{7}$\lbl{A2}}
+\BIC{$\varphi_{7}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{94}$\lbl{A2}}
+\BIC{$\forall y\,(M \in \mathbb{R} \to y \in \mathbb{R} \to M + y \in \mathbb{R})$}
+\AXC{$\varphi_{103}$\lbl{A2}}
+\BIC{$M \in \mathbb{R} \to \lvert \beta \rvert \in \mathbb{R} \to M + \lvert \beta \rvert \in \mathbb{R}$}
+\AXC{$(M \in \mathbb{R} \to \lvert \beta \rvert \in \mathbb{R} \to M + \lvert \beta \rvert \in \mathbb{R}) \to \varphi_{232}$\lbl{A1}}
+\BIC{$\varphi_{232}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{172}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{55}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$\varphi_{232}$}
+\BIC{$\varphi_{172} \to \varphi_{190}$}
+\BIC{$\varphi_{190}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)$\lbl{(R7)}}
+\AXC{$\varphi_{82}$\lbl{A2}}
+\BIC{$\forall y\,(h \in \mathbb{R} \to y \in \mathbb{R} \to h \cdot y = y \cdot h)$}
+\AXC{$\forall y\,(h \in \mathbb{R} \to y \in \mathbb{R} \to h \cdot y = y \cdot h) \to \varphi_{23}$\lbl{A2}}
+\BIC{$\varphi_{23}$}
+\AXC{$\varphi_{23} \to \varphi_{237}$\lbl{A1}}
+\BIC{$\varphi_{237}$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{7}$\lbl{A2}}
+\BIC{$\varphi_{7}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\forall y\,(h \cdot (M + \lvert \beta \rvert) = y \to y = h \cdot (M + \lvert \beta \rvert))$}
+\AXC{$\forall y\,(h \cdot (M + \lvert \beta \rvert) = y \to y = h \cdot (M + \lvert \beta \rvert)) \to \varphi_{67}$\lbl{A2}}
+\BIC{$\varphi_{67}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$\varphi_{42}$\lbl{(R10)}}
+\AXC{$\varphi_{42} \to \varphi_{30}$\lbl{A2}}
+\BIC{$\varphi_{30}$}
+\AXC{$\varphi_{30} \to \varphi_{15}$\lbl{A2}}
+\BIC{$\varphi_{15}$}
+\AXC{$\varphi_{15} \to h \in \mathbb{R} \to \varphi_{28}$\lbl{A2}}
+\BIC{$h \in \mathbb{R} \to \varphi_{28}$}
+\AXC{$\varphi_{247}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{238}$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{238}$}
+\BIC{$\varphi_{238}$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{172}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{55}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$\varphi_{238}$}
+\BIC{$\varphi_{172} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{162}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{162}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$\varphi_{67}$}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{162}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{162}) \to \varphi_{67} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{163}$\lbl{A1}}
+\BIC{$\varphi_{67} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{163}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{163}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{7}$\lbl{A2}}
+\BIC{$\varphi_{7}$}
+\end{ptree}
+\noindent$\Pi_{51}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$\varphi_{7}$}
+\AXC{$\varphi_{7} \to \varphi_{111}$\lbl{A2}}
+\BIC{$\varphi_{111}$}
+\AXC{$\varphi_{111} \to M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + \lvert \beta \rvert \cdot h \to \varphi_{88}$\lbl{A2}}
+\BIC{$M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + \lvert \beta \rvert \cdot h \to \varphi_{88}$}
+\end{ptree}
+\noindent$\Pi_{52}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{22}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{22})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{22})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{22}) \to \varphi_{112}$\lbl{A2}}
+\BIC{$\varphi_{112}$}
+\AXC{$\varphi_{112} \to \lvert \beta \rvert \cdot h = h \cdot \lvert \beta \rvert \to \varphi_{89}$\lbl{A2}}
+\BIC{$\lvert \beta \rvert \cdot h = h \cdot \lvert \beta \rvert \to \varphi_{89}$}
+\end{ptree}
+\noindent$\Pi_{53}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)$\lbl{(R7)}}
+\AXC{$\varphi_{122}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \beta \rvert \cdot y = y \cdot \lvert \beta \rvert)$}
+\AXC{$\varphi_{131}$\lbl{A2}}
+\BIC{$\lvert \beta \rvert \in \mathbb{R} \to h \in \mathbb{R} \to \lvert \beta \rvert \cdot h = h \cdot \lvert \beta \rvert$}
+\AXC{$(\lvert \beta \rvert \in \mathbb{R} \to h \in \mathbb{R} \to \lvert \beta \rvert \cdot h = h \cdot \lvert \beta \rvert) \to \varphi_{235}$\lbl{A1}}
+\BIC{$\varphi_{235}$}
+\end{ptree}
+\noindent$\Pi_{54}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{172}$}
+\AXC{$\stackrel{\Pi_{53}}{\vdots}$}\noLine
+\UIC{$\varphi_{235}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{196}$}
+\BIC{$\varphi_{196}$}
+\AXC{$\varphi_{196} \to \varphi_{222}$\lbl{A1}}
+\BIC{$\varphi_{222}$}
+\end{ptree}
+\noindent$\Pi_{55}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{52}}{\vdots}$}\noLine
+\UIC{$\lvert \beta \rvert \cdot h = h \cdot \lvert \beta \rvert \to \varphi_{89}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to h \cdot M + \lvert \beta \rvert \cdot h = h \cdot M + \lvert \beta \rvert \cdot h$\lbl{A2}}
+\BIC{$h \cdot M + \lvert \beta \rvert \cdot h = h \cdot M + \lvert \beta \rvert \cdot h$}
+\AXC{$\stackrel{\Pi_{54}}{\vdots}$}\noLine
+\UIC{$\varphi_{222}$}
+\BIC{$(\lvert \beta \rvert \cdot h = h \cdot \lvert \beta \rvert \to \varphi_{89}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{183}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{183}$}
+\end{ptree}
+\noindent$\Pi_{56}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{71}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{71})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{71})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{71}) \to \varphi_{113}$\lbl{A2}}
+\BIC{$\varphi_{113}$}
+\AXC{$\varphi_{113} \to M \cdot h = h \cdot M \to \varphi_{90}$\lbl{A2}}
+\BIC{$M \cdot h = h \cdot M \to \varphi_{90}$}
+\end{ptree}
+\noindent$\Pi_{57}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)$\lbl{(R7)}}
+\AXC{$\varphi_{83}$\lbl{A2}}
+\BIC{$\forall y\,(M \in \mathbb{R} \to y \in \mathbb{R} \to M \cdot y = y \cdot M)$}
+\AXC{$\varphi_{73}$\lbl{A2}}
+\BIC{$M \in \mathbb{R} \to h \in \mathbb{R} \to M \cdot h = h \cdot M$}
+\AXC{$(M \in \mathbb{R} \to h \in \mathbb{R} \to M \cdot h = h \cdot M) \to \varphi_{227}$\lbl{A1}}
+\BIC{$\varphi_{227}$}
+\end{ptree}
+\noindent$\Pi_{58}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{55}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{57}}{\vdots}$}\noLine
+\UIC{$\varphi_{227}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{156}$}
+\BIC{$\varphi_{156}$}
+\end{ptree}
+\noindent$\Pi_{59}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to M \cdot h + \lvert \beta \rvert \cdot h = M \cdot h + \lvert \beta \rvert \cdot h$\lbl{A2}}
+\BIC{$M \cdot h + \lvert \beta \rvert \cdot h = M \cdot h + \lvert \beta \rvert \cdot h$}
+\AXC{$\stackrel{\Pi_{58}}{\vdots}$}\noLine
+\UIC{$\varphi_{156}$}
+\AXC{$\varphi_{156} \to \varphi_{221}$\lbl{A1}}
+\BIC{$\varphi_{221}$}
+\BIC{$(M \cdot h = h \cdot M \to \varphi_{90}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{184}$}
+\end{ptree}
+\noindent$\Pi_{60}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{56}}{\vdots}$}\noLine
+\UIC{$M \cdot h = h \cdot M \to \varphi_{90}$}
+\AXC{$\stackrel{\Pi_{59}}{\vdots}$}\noLine
+\UIC{$(M \cdot h = h \cdot M \to \varphi_{90}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{184}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{184}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{184}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{183}) \to \varphi_{217}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{183}) \to \varphi_{217}$}
+\end{ptree}
+\noindent$\Pi_{61}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{51}}{\vdots}$}\noLine
+\UIC{$M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + \lvert \beta \rvert \cdot h \to \varphi_{88}$}
+\AXC{$\stackrel{\Pi_{55}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{183}$}
+\AXC{$\stackrel{\Pi_{60}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{183}) \to \varphi_{217}$}
+\BIC{$\varphi_{217}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{185}$}
+\end{ptree}
+\noindent$\Pi_{62}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{163}$}
+\AXC{$\stackrel{\Pi_{61}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{185}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{185}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{163}) \to \varphi_{214}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{163}) \to \varphi_{214}$}
+\BIC{$\varphi_{214}$}
+\end{ptree}
+\noindent$\Pi_{63}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$\varphi_{7}$}
+\AXC{$\varphi_{7} \to \varphi_{110}$\lbl{A2}}
+\BIC{$\varphi_{110}$}
+\AXC{$\varphi_{110} \to M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + h \cdot \lvert \beta \rvert \to \varphi_{70}$\lbl{A2}}
+\BIC{$M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + h \cdot \lvert \beta \rvert \to \varphi_{70}$}
+\AXC{$\stackrel{\Pi_{62}}{\vdots}$}\noLine
+\UIC{$\varphi_{214}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{164}$}
+\end{ptree}
+\noindent$\Pi_{64}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{63}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{164}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{164}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{151}) \to \varphi_{213}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{151}) \to \varphi_{213}$}
+\end{ptree}
+\noindent$\Pi_{65}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\varphi_{190}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$\varphi_{237}$}
+\BIC{$\varphi_{190} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{151}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{151}$}
+\AXC{$\stackrel{\Pi_{64}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{151}) \to \varphi_{213}$}
+\BIC{$\varphi_{213}$}
+\end{ptree}
+\noindent$\Pi_{66}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\varphi_{7}$}
+\AXC{$\varphi_{7} \to \varphi_{86}$\lbl{A2}}
+\BIC{$\varphi_{86}$}
+\AXC{$\varphi_{86} \to M \cdot h + \lvert \beta \rvert \cdot h = h \cdot (M + \lvert \beta \rvert) \to \varphi_{50}$\lbl{A2}}
+\BIC{$M \cdot h + \lvert \beta \rvert \cdot h = h \cdot (M + \lvert \beta \rvert) \to \varphi_{50}$}
+\AXC{$\stackrel{\Pi_{65}}{\vdots}$}\noLine
+\UIC{$\varphi_{213}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{165}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{165}) \to \varphi_{249}$\lbl{A1}}
+\BIC{$\varphi_{249}$}
+\end{ptree}
+\noindent$\Pi_{67}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$M \cdot h + \lvert \beta \rvert \cdot h = (M + \lvert \beta \rvert) \cdot h \to \varphi_{155}$}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{204}$}
+\AXC{$\stackrel{\Pi_{66}}{\vdots}$}\noLine
+\UIC{$\varphi_{249}$}
+\BIC{$(M \cdot h + \lvert \beta \rvert \cdot h = (M + \lvert \beta \rvert) \cdot h \to \varphi_{155}) \to \varphi_{224}$}
+\BIC{$\varphi_{224}$}
+\end{ptree}
+\noindent$\Pi_{68}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{118}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{118})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{118})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{118}) \to \varphi_{154}$\lbl{A2}}
+\BIC{$\varphi_{154}$}
+\AXC{$\varphi_{154} \to \lvert \beta \cdot (x - \alpha) \rvert = \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \to \varphi_{144}$\lbl{A2}}
+\BIC{$\lvert \beta \cdot (x - \alpha) \rvert = \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \to \varphi_{144}$}
+\end{ptree}
+\noindent$\Pi_{69}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{125}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{125})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{125})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{125}) \to \varphi_{179}$\lbl{A2}}
+\BIC{$\varphi_{179}$}
+\AXC{$\varphi_{179} \to \lvert \beta \cdot (x - \alpha) \rvert = \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \to \varphi_{157}$\lbl{A2}}
+\BIC{$\lvert \beta \cdot (x - \alpha) \rvert = \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \to \varphi_{157}$}
+\end{ptree}
+\noindent$\Pi_{70}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{114}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{114})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{114})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{114}) \to \varphi_{143}$\lbl{A2}}
+\BIC{$\varphi_{143}$}
+\AXC{$\varphi_{143} \to \lvert x \cdot (y - \beta) \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert \to \varphi_{140}$\lbl{A2}}
+\BIC{$\lvert x \cdot (y - \beta) \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert \to \varphi_{140}$}
+\end{ptree}
+\noindent$\Pi_{71}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{97}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{97})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{97})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{97}) \to \varphi_{193}$\lbl{A2}}
+\BIC{$\varphi_{193}$}
+\AXC{$\varphi_{193} \to x \cdot (y - \beta) + \beta \cdot (x - \alpha) = x \cdot y - \alpha \cdot \beta \to \varphi_{141}$\lbl{A2}}
+\BIC{$x \cdot (y - \beta) + \beta \cdot (x - \alpha) = x \cdot y - \alpha \cdot \beta \to \varphi_{141}$}
+\end{ptree}
+\noindent$\Pi_{72}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{109}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{109})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{109})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{109}) \to \varphi_{200}$\lbl{A2}}
+\BIC{$\varphi_{200}$}
+\AXC{$\varphi_{200} \to x \cdot (y - \beta) + \beta \cdot (x - \alpha) = x \cdot y - \alpha \cdot \beta \to \varphi_{152}$\lbl{A2}}
+\BIC{$x \cdot (y - \beta) + \beta \cdot (x - \alpha) = x \cdot y - \alpha \cdot \beta \to \varphi_{152}$}
+\end{ptree}
+\noindent$\Pi_{73}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{98}$\lbl{A2}}
+\BIC{$\forall y\,(\beta \in \mathbb{R} \to y \in \mathbb{R} \to \beta \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{116}$\lbl{A2}}
+\BIC{$\beta \in \mathbb{R} \to x - \alpha \in \mathbb{R} \to \beta \cdot (x - \alpha) \in \mathbb{R}$}
+\AXC{$(\beta \in \mathbb{R} \to x - \alpha \in \mathbb{R} \to \beta \cdot (x - \alpha) \in \mathbb{R}) \to \varphi_{234}$\lbl{A1}}
+\BIC{$\varphi_{234}$}
+\end{ptree}
+\noindent$\Pi_{74}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{171}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{73}}{\vdots}$}\noLine
+\UIC{$\varphi_{234}$}
+\BIC{$\varphi_{171} \to \varphi_{192}$}
+\BIC{$\varphi_{192}$}
+\end{ptree}
+\noindent$\Pi_{75}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{95}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{104}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to y - \beta \in \mathbb{R} \to x \cdot (y - \beta) \in \mathbb{R}$}
+\AXC{$(x \in \mathbb{R} \to y - \beta \in \mathbb{R} \to x \cdot (y - \beta) \in \mathbb{R}) \to \varphi_{233}$\lbl{A1}}
+\BIC{$\varphi_{233}$}
+\end{ptree}
+\noindent$\Pi_{76}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{173}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{75}}{\vdots}$}\noLine
+\UIC{$\varphi_{233}$}
+\BIC{$\varphi_{173} \to \varphi_{191}$}
+\BIC{$\varphi_{191}$}
+\end{ptree}
+\noindent$\Pi_{77}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \lvert a + b \rvert \leq \lvert a \rvert + \lvert b \rvert)$\lbl{命題1.2}}
+\AXC{$\varphi_{175}$\lbl{A2}}
+\BIC{$\varphi_{84}$}
+\AXC{$\varphi_{84} \to x \cdot (y - \beta) \in \mathbb{R} \to \beta \cdot (x - \alpha) \in \mathbb{R} \to \varphi_{39}$\lbl{A2}}
+\BIC{$x \cdot (y - \beta) \in \mathbb{R} \to \beta \cdot (x - \alpha) \in \mathbb{R} \to \varphi_{39}$}
+\end{ptree}
+\noindent$\Pi_{78}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{74}}{\vdots}$}\noLine
+\UIC{$\varphi_{192}$}
+\AXC{$\stackrel{\Pi_{76}}{\vdots}$}\noLine
+\UIC{$\varphi_{191}$}
+\AXC{$\stackrel{\Pi_{77}}{\vdots}$}\noLine
+\UIC{$x \cdot (y - \beta) \in \mathbb{R} \to \beta \cdot (x - \alpha) \in \mathbb{R} \to \varphi_{39}$}
+\AXC{$\varphi_{246}$\lbl{A1}}
+\BIC{$\varphi_{191} \to \varphi_{192} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{145}$}
+\BIC{$\varphi_{192} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{145}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{145}$}
+\end{ptree}
+\noindent$\Pi_{79}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(v_{687} = y \to y = v_{687})$\lbl{A2}}
+\BIC{$\forall y\,(v_{687} = y \to y = v_{687})$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$v_{687} = v_{688} \to v_{688} = v_{687}$}
+\UIC{$\forall v_{688}\,(v_{687} = v_{688} \to v_{688} = v_{687})$}
+\UIC{$\forall v_{687}\,\forall v_{688}\,(v_{687} = v_{688} \to v_{688} = v_{687})$}
+\AXC{$\varphi_{85}$\lbl{A2}}
+\BIC{$\forall v_{688}\,(x \cdot y - \alpha \cdot \beta = v_{688} \to v_{688} = x \cdot y - \alpha \cdot \beta)$}
+\AXC{$\varphi_{186}$\lbl{A2}}
+\BIC{$\varphi_{101}$}
+\end{ptree}
+\noindent$\Pi_{80}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(\varphi_{107})$\lbl{[F18]}}
+\AXC{$\forall x\,\forall y\,(\varphi_{107}) \to \forall y\,(\varphi_{107})$\lbl{A2}}
+\BIC{$\forall y\,(\varphi_{107})$}
+\AXC{$\forall y\,(\varphi_{107}) \to \varphi_{107}$\lbl{A2}}
+\BIC{$\varphi_{107}$}
+\AXC{$\varphi_{107} \to \varphi_{108}$\lbl{A2}}
+\BIC{$\varphi_{108}$}
+\AXC{$\varphi_{108} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{45}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{81}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{80}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{45}$}
+\AXC{$\varphi_{252}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}) \to \varphi_{245}$}
+\BIC{$\varphi_{245}$}
+\end{ptree}
+\noindent$\Pi_{82}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{62}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{54}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{81}}{\vdots}$}\noLine
+\UIC{$\varphi_{245}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{62}) \to \varphi_{219}$}
+\BIC{$\varphi_{219}$}
+\end{ptree}
+\noindent$\Pi_{83}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{79}}{\vdots}$}\noLine
+\UIC{$\varphi_{101}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{82}}{\vdots}$}\noLine
+\UIC{$\varphi_{219}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{148}$}
+\AXC{$\varphi_{236}$\lbl{A1}}
+\BIC{$\varphi_{101} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{149}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{149}$}
+\end{ptree}
+\noindent$\Pi_{84}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{78}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{145}$}
+\AXC{$\stackrel{\Pi_{83}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{149}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{149}) \to \varphi_{250}$\lbl{A1}}
+\BIC{$\varphi_{250}$}
+\BIC{$(x \cdot (y - \beta) + \beta \cdot (x - \alpha) = x \cdot y - \alpha \cdot \beta \to \varphi_{152}) \to \varphi_{225}$}
+\end{ptree}
+\noindent$\Pi_{85}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{72}}{\vdots}$}\noLine
+\UIC{$x \cdot (y - \beta) + \beta \cdot (x - \alpha) = x \cdot y - \alpha \cdot \beta \to \varphi_{152}$}
+\AXC{$\stackrel{\Pi_{84}}{\vdots}$}\noLine
+\UIC{$(x \cdot (y - \beta) + \beta \cdot (x - \alpha) = x \cdot y - \alpha \cdot \beta \to \varphi_{152}) \to \varphi_{225}$}
+\BIC{$\varphi_{225}$}
+\end{ptree}
+\noindent$\Pi_{86}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \cdot y \rvert = \lvert x \rvert \cdot \lvert y \rvert)$\lbl{[A17]}}
+\AXC{$\varphi_{132}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \cdot y \rvert = \lvert x \rvert \cdot \lvert y \rvert)$}
+\AXC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \cdot y \rvert = \lvert x \rvert \cdot \lvert y \rvert) \to \varphi_{24}$\lbl{A2}}
+\BIC{$\varphi_{24}$}
+\end{ptree}
+\noindent$\Pi_{87}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{173}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{86}}{\vdots}$}\noLine
+\UIC{$\varphi_{24}$}
+\AXC{$\varphi_{24} \to \varphi_{239}$\lbl{A1}}
+\BIC{$\varphi_{239}$}
+\BIC{$\varphi_{173} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{166}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{166}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{166}) \to \varphi_{248}$\lbl{A1}}
+\BIC{$\varphi_{248}$}
+\end{ptree}
+\noindent$\Pi_{88}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{70}}{\vdots}$}\noLine
+\UIC{$\lvert x \cdot (y - \beta) \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert \to \varphi_{140}$}
+\AXC{$\stackrel{\Pi_{71}}{\vdots}$}\noLine
+\UIC{$x \cdot (y - \beta) + \beta \cdot (x - \alpha) = x \cdot y - \alpha \cdot \beta \to \varphi_{141}$}
+\AXC{$\stackrel{\Pi_{85}}{\vdots}$}\noLine
+\UIC{$\varphi_{225}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{194}$}
+\AXC{$\stackrel{\Pi_{87}}{\vdots}$}\noLine
+\UIC{$\varphi_{248}$}
+\BIC{$(\lvert x \cdot (y - \beta) \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert \to \varphi_{140}) \to \varphi_{223}$}
+\BIC{$\varphi_{223}$}
+\end{ptree}
+\noindent$\Pi_{89}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \cdot y \rvert = \lvert x \rvert \cdot \lvert y \rvert)$\lbl{[A17]}}
+\AXC{$\varphi_{134}$\lbl{A2}}
+\BIC{$\forall y\,(\beta \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \beta \cdot y \rvert = \lvert \beta \rvert \cdot \lvert y \rvert)$}
+\AXC{$\forall y\,(\beta \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \beta \cdot y \rvert = \lvert \beta \rvert \cdot \lvert y \rvert) \to \varphi_{40}$\lbl{A2}}
+\BIC{$\varphi_{40}$}
+\end{ptree}
+\noindent$\Pi_{90}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{171}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{89}}{\vdots}$}\noLine
+\UIC{$\varphi_{40}$}
+\AXC{$\varphi_{40} \to \varphi_{240}$\lbl{A1}}
+\BIC{$\varphi_{240}$}
+\BIC{$\varphi_{171} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{176}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{176}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{176}) \to \varphi_{251}$\lbl{A1}}
+\BIC{$\varphi_{251}$}
+\end{ptree}
+\noindent$\Pi_{91}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{99}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{99})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{99})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{99}) \to \varphi_{139}$\lbl{A2}}
+\BIC{$\varphi_{139}$}
+\AXC{$\varphi_{139} \to \lvert x \cdot (y - \beta) \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert \to \varphi_{137}$\lbl{A2}}
+\BIC{$\lvert x \cdot (y - \beta) \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert \to \varphi_{137}$}
+\AXC{$\stackrel{\Pi_{88}}{\vdots}$}\noLine
+\UIC{$\varphi_{223}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{198}$}
+\AXC{$\stackrel{\Pi_{90}}{\vdots}$}\noLine
+\UIC{$\varphi_{251}$}
+\BIC{$(\lvert \beta \cdot (x - \alpha) \rvert = \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \to \varphi_{157}) \to \varphi_{226}$}
+\end{ptree}
+\noindent$\Pi_{92}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{69}}{\vdots}$}\noLine
+\UIC{$\lvert \beta \cdot (x - \alpha) \rvert = \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \to \varphi_{157}$}
+\AXC{$\stackrel{\Pi_{91}}{\vdots}$}\noLine
+\UIC{$(\lvert \beta \cdot (x - \alpha) \rvert = \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \to \varphi_{157}) \to \varphi_{226}$}
+\BIC{$\varphi_{226}$}
+\end{ptree}
+\noindent$\Pi_{93}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z)$\lbl{[O5]}}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{695} \leq y \to y \leq z \to v_{695} \leq z)$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall z\,(v_{695} \leq v_{696} \to v_{696} \leq z \to v_{695} \leq z)$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$v_{695} \leq v_{696} \to v_{696} \leq v_{697} \to v_{695} \leq v_{697}$}
+\UIC{$\forall v_{697}\,(v_{695} \leq v_{696} \to v_{696} \leq v_{697} \to v_{695} \leq v_{697})$}
+\UIC{$\varphi_{2}$}
+\UIC{$\forall v_{695}\,(\varphi_{2})$}
+\AXC{$\forall v_{695}\,(\varphi_{2}) \to \varphi_{68}$\lbl{A2}}
+\BIC{$\varphi_{68}$}
+\AXC{$\varphi_{68} \to \varphi_{201}$\lbl{A2}}
+\BIC{$\varphi_{201}$}
+\end{ptree}
+\noindent$\Pi_{94}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{68}}{\vdots}$}\noLine
+\UIC{$\lvert \beta \cdot (x - \alpha) \rvert = \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \to \varphi_{144}$}
+\AXC{$\stackrel{\Pi_{92}}{\vdots}$}\noLine
+\UIC{$\varphi_{226}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{205}$}
+\AXC{$\stackrel{\Pi_{93}}{\vdots}$}\noLine
+\UIC{$\varphi_{201}$}
+\AXC{$\varphi_{201} \to \varphi_{209}$\lbl{A2}}
+\BIC{$\varphi_{209}$}
+\AXC{$\varphi_{209} \to \varphi_{244}$\lbl{A1}}
+\BIC{$\varphi_{244}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{197}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{170}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$M \cdot h + \lvert \beta \rvert \cdot h = (M + \lvert \beta \rvert) \cdot h \to \varphi_{142}$}
+\AXC{$\stackrel{\Pi_{67}}{\vdots}$}\noLine
+\UIC{$\varphi_{224}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{197}$}
+\AXC{$\stackrel{\Pi_{94}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{197}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{170}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{170}$}
+\UIC{$\forall h\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{170})$}
+\UIC{$\forall M\,\forall h\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{170})$}
+\UIC{$\forall \beta\,\forall M\,\forall h\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{170})$}
+\UIC{$\forall \alpha\,\forall \beta\,\forall M\,\forall h\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{170})$}
+\UIC{$\forall y\,\forall \alpha\,\forall \beta\,\forall M\,\forall h\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{170})$}
+\UIC{$\forall x\,\forall y\,\forall \alpha\,\forall \beta\,\forall M\,\forall h\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{170})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall y\,(v_{687} = y \to y = v_{687}) \to v_{687} = v_{688} \to v_{688} = v_{687}$
+\item $\varphi_{2} :\equiv \forall v_{696}\,\forall v_{697}\,(v_{695} \leq v_{696} \to v_{696} \leq v_{697} \to v_{695} \leq v_{697})$
+\item $\varphi_{3} :\equiv v_{691} \leq v_{692} \to v_{693} \leq v_{694} \to v_{691} + v_{693} \leq v_{692} + v_{694}$
+\item $\varphi_{4} :\equiv \forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z) \to \forall y\,\forall z\,(v_{695} \leq y \to y \leq z \to v_{695} \leq z)$
+\item $\varphi_{5} :\equiv \forall y\,\forall z\,(v_{695} \leq y \to y \leq z \to v_{695} \leq z) \to \forall z\,(v_{695} \leq v_{696} \to v_{696} \leq z \to v_{695} \leq z)$
+\item $\varphi_{6} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(h \cdot (M + \lvert \beta \rvert) = y \to y = h \cdot (M + \lvert \beta \rvert))$
+\item $\varphi_{7} :\equiv \forall y\,\forall z\,(M \cdot h + \lvert \beta \rvert \cdot h = y \to y = z \to M \cdot h + \lvert \beta \rvert \cdot h = z)$
+\item $\varphi_{8} :\equiv \forall v_{689}\,\forall v_{690}\,(v_{689} \in \mathbb{R} \to v_{690} \in \mathbb{R} \to v_{689} - v_{690} \in \mathbb{R})$
+\item $\varphi_{9} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert x \rvert \leq M$
+\item $\varphi_{10} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to 0 \leq \lvert x \rvert$
+\item $\varphi_{11} :\equiv \forall z\,(v_{695} \leq v_{696} \to v_{696} \leq z \to v_{695} \leq z) \to v_{695} \leq v_{696} \to v_{696} \leq v_{697} \to v_{695} \leq v_{697}$
+\item $\varphi_{12} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to 0 \leq \lvert \beta \rvert$
+\item $\varphi_{13} :\equiv \lvert y - \beta \rvert < h \to x \cdot y - \alpha \cdot \beta = x \cdot (y - \beta) + \beta \cdot (x - \alpha)$
+\item $\varphi_{14} :\equiv \lvert y - \beta \rvert < h \to x \cdot (y - \beta) + \beta \cdot (x - \alpha) = x \cdot y - \alpha \cdot \beta$
+\item $\varphi_{15} :\equiv \forall z\,(h \in \mathbb{R} \to M \in \mathbb{R} \to z \in \mathbb{R} \to h \cdot (M + z) = h \cdot M + h \cdot z)$
+\item $\varphi_{16} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to M \cdot h = h \cdot M$
+\item $\varphi_{17} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert x - \alpha \rvert \leq h$
+\item $\varphi_{18} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to 0 \leq \lvert x - \alpha \rvert$
+\item $\varphi_{19} :\equiv \lvert \beta \rvert \leq \lvert \beta \rvert \to \lvert x - \alpha \rvert \leq h \to \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \leq \lvert \beta \rvert \cdot h$
+\item $\varphi_{20} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert y - \beta \rvert \leq h$
+\item $\varphi_{21} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to 0 \leq \lvert y - \beta \rvert$
+\item $\varphi_{22} :\equiv h \cdot M + \lvert \beta \rvert \cdot h = h \cdot M + z \to h \cdot M + \lvert \beta \rvert \cdot h = h \cdot M + w$
+\item $\varphi_{23} :\equiv h \in \mathbb{R} \to M + \lvert \beta \rvert \in \mathbb{R} \to h \cdot (M + \lvert \beta \rvert) = (M + \lvert \beta \rvert) \cdot h$
+\item $\varphi_{24} :\equiv x \in \mathbb{R} \to y - \beta \in \mathbb{R} \to \lvert x \cdot (y - \beta) \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert$
+\item $\varphi_{25} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert \beta \rvert \leq \lvert \beta \rvert$
+\item $\varphi_{26} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert x \rvert \in \mathbb{R}$
+\item $\varphi_{27} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to M \cdot h \in \mathbb{R}$
+\item $\varphi_{28} :\equiv M \in \mathbb{R} \to \lvert \beta \rvert \in \mathbb{R} \to h \cdot (M + \lvert \beta \rvert) = h \cdot M + h \cdot \lvert \beta \rvert$
+\item $\varphi_{29} :\equiv \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to x \cdot (y - \beta) \in \mathbb{R}$
+\item $\varphi_{30} :\equiv \forall y\,\forall z\,(h \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to h \cdot (y + z) = h \cdot y + h \cdot z)$
+\item $\varphi_{31} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to x - \alpha \in \mathbb{R}$
+\item $\varphi_{32} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert \beta \rvert \in \mathbb{R}$
+\item $\varphi_{33} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to y - \beta \in \mathbb{R}$
+\item $\varphi_{34} :\equiv \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \beta \cdot (x - \alpha) \in \mathbb{R}$
+\item $\varphi_{35} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert x - \alpha \rvert < h$
+\item $\varphi_{36} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert y - \beta \rvert < h$
+\item $\varphi_{37} :\equiv 0 \leq \lvert y - \beta \rvert \to \lvert x \rvert \leq M \to \lvert y - \beta \rvert \leq h \to \lvert x \rvert \cdot \lvert y - \beta \rvert \leq M \cdot h$
+\item $\varphi_{38} :\equiv \lvert x \cdot (y - \beta) + \beta \cdot (x - \alpha) \rvert = \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{39} :\equiv \lvert x \cdot (y - \beta) + \beta \cdot (x - \alpha) \rvert \leq \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{40} :\equiv \beta \in \mathbb{R} \to x - \alpha \in \mathbb{R} \to \lvert \beta \cdot (x - \alpha) \rvert = \lvert \beta \rvert \cdot \lvert x - \alpha \rvert$
+\item $\varphi_{41} :\equiv \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to h \cdot (M + \lvert \beta \rvert) = (M + \lvert \beta \rvert) \cdot h$
+\item $\varphi_{42} :\equiv \forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x \cdot (y + z) = x \cdot y + x \cdot z)$
+\item $\varphi_{43} :\equiv \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \leq \lvert \beta \rvert \cdot h$
+\item $\varphi_{44} :\equiv \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert \beta \rvert \cdot h = h \cdot \lvert \beta \rvert$
+\item $\varphi_{45} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to x \cdot y - \alpha \cdot \beta = x \cdot (y - \beta) + \beta \cdot (x - \alpha)$
+\item $\varphi_{46} :\equiv \lvert x \cdot (y - \beta) + \beta \cdot (x - \alpha) \rvert < \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{47} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert x - \alpha \rvert \in \mathbb{R}$
+\item $\varphi_{48} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert y - \beta \rvert \in \mathbb{R}$
+\item $\varphi_{49} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert \beta \rvert \cdot h \in \mathbb{R}$
+\item $\varphi_{50} :\equiv h \cdot (M + \lvert \beta \rvert) = (M + \lvert \beta \rvert) \cdot h \to M \cdot h + \lvert \beta \rvert \cdot h = (M + \lvert \beta \rvert) \cdot h$
+\item $\varphi_{51} :\equiv 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to M + \lvert \beta \rvert \in \mathbb{R}$
+\item $\varphi_{52} :\equiv h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to x \in \mathbb{R}$
+\item $\varphi_{53} :\equiv h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to h \in \mathbb{R}$
+\item $\varphi_{54} :\equiv h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to y \in \mathbb{R}$
+\item $\varphi_{55} :\equiv h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to M \in \mathbb{R}$
+\item $\varphi_{56} :\equiv \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert x \rvert \cdot \lvert y - \beta \rvert \leq M \cdot h$
+\item $\varphi_{57} :\equiv \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to h \cdot (M + \lvert \beta \rvert) = h \cdot M + h \cdot \lvert \beta \rvert$
+\item $\varphi_{58} :\equiv \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to h \cdot M + h \cdot \lvert \beta \rvert = h \cdot (M + \lvert \beta \rvert)$
+\item $\varphi_{59} :\equiv \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to M \cdot h + \lvert \beta \rvert \cdot h = h \cdot (M + \lvert \beta \rvert)$
+\item $\varphi_{60} :\equiv \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to M \cdot h + \lvert \beta \rvert \cdot h = (M + \lvert \beta \rvert) \cdot h$
+\item $\varphi_{61} :\equiv \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert x \cdot (y - \beta) \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert$
+\item $\varphi_{62} :\equiv h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \alpha \in \mathbb{R}$
+\item $\varphi_{63} :\equiv h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \beta \in \mathbb{R}$
+\item $\varphi_{64} :\equiv \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert x \cdot y - \alpha \cdot \beta \rvert \leq (M + \lvert \beta \rvert) \cdot h$
+\item $\varphi_{65} :\equiv \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert x \rvert \cdot \lvert y - \beta \rvert \in \mathbb{R}$
+\item $\varphi_{66} :\equiv \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert \beta \cdot (x - \alpha) \rvert = \lvert \beta \rvert \cdot \lvert x - \alpha \rvert$
+\item $\varphi_{67} :\equiv h \cdot (M + \lvert \beta \rvert) = h \cdot M + h \cdot \lvert \beta \rvert \to h \cdot M + h \cdot \lvert \beta \rvert = h \cdot (M + \lvert \beta \rvert)$
+\item $\varphi_{68} :\equiv \forall v_{696}\,\forall v_{697}\,(\lvert x \cdot y - \alpha \cdot \beta \rvert \leq v_{696} \to v_{696} \leq v_{697} \to \lvert x \cdot y - \alpha \cdot \beta \rvert \leq v_{697})$
+\item $\varphi_{69} :\equiv \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \in \mathbb{R}$
+\item $\varphi_{70} :\equiv h \cdot M + h \cdot \lvert \beta \rvert = h \cdot (M + \lvert \beta \rvert) \to M \cdot h + \lvert \beta \rvert \cdot h = h \cdot (M + \lvert \beta \rvert)$
+\item $\varphi_{71} :\equiv M \cdot h + \lvert \beta \rvert \cdot h = z + \lvert \beta \rvert \cdot h \to M \cdot h + \lvert \beta \rvert \cdot h = w + \lvert \beta \rvert \cdot h$
+\item $\varphi_{72} :\equiv \lvert y - \beta \rvert < h \to \lvert x \cdot y - \alpha \cdot \beta \rvert \leq \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{73} :\equiv \forall y\,(M \in \mathbb{R} \to y \in \mathbb{R} \to M \cdot y = y \cdot M) \to M \in \mathbb{R} \to h \in \mathbb{R} \to M \cdot h = h \cdot M$
+\item $\varphi_{74} :\equiv \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to h \cdot M + \lvert \beta \rvert \cdot h = h \cdot M + h \cdot \lvert \beta \rvert$
+\item $\varphi_{75} :\equiv \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + \lvert \beta \rvert \cdot h$
+\item $\varphi_{76} :\equiv \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + h \cdot \lvert \beta \rvert$
+\item $\varphi_{77} :\equiv \lvert y - \beta \rvert < h \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \leq (M + \lvert \beta \rvert) \cdot h$
+\item $\varphi_{78} :\equiv \forall y\,(M \in \mathbb{R} \to y \in \mathbb{R} \to M \cdot y \in \mathbb{R}) \to M \in \mathbb{R} \to h \in \mathbb{R} \to M \cdot h \in \mathbb{R}$
+\item $\varphi_{79} :\equiv \lvert y - \beta \rvert < h \to \lvert x \cdot y - \alpha \cdot \beta \rvert \leq \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{80} :\equiv \forall x\,\forall y\,\forall u\,\forall v\,(x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x \leq y \to u \leq v \to x + u \leq y + v)$
+\item $\varphi_{81} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to x \in \mathbb{R} \to \alpha \in \mathbb{R} \to x - \alpha \in \mathbb{R}$
+\item $\varphi_{82} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x) \to \forall y\,(h \in \mathbb{R} \to y \in \mathbb{R} \to h \cdot y = y \cdot h)$
+\item $\varphi_{83} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x) \to \forall y\,(M \in \mathbb{R} \to y \in \mathbb{R} \to M \cdot y = y \cdot M)$
+\item $\varphi_{84} :\equiv \forall b\,(x \cdot (y - \beta) \in \mathbb{R} \to b \in \mathbb{R} \to \lvert x \cdot (y - \beta) + b \rvert \leq \lvert x \cdot (y - \beta) \rvert + \lvert b \rvert)$
+\item $\varphi_{85} :\equiv \forall v_{687}\,\forall v_{688}\,(v_{687} = v_{688} \to v_{688} = v_{687}) \to \forall v_{688}\,(x \cdot y - \alpha \cdot \beta = v_{688} \to v_{688} = x \cdot y - \alpha \cdot \beta)$
+\item $\varphi_{86} :\equiv \forall z\,(M \cdot h + \lvert \beta \rvert \cdot h = h \cdot (M + \lvert \beta \rvert) \to h \cdot (M + \lvert \beta \rvert) = z \to M \cdot h + \lvert \beta \rvert \cdot h = z)$
+\item $\varphi_{87} :\equiv \lvert y - \beta \rvert < h \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \leq M \cdot h + \lvert \beta \rvert \cdot h$
+\item $\varphi_{88} :\equiv h \cdot M + \lvert \beta \rvert \cdot h = h \cdot M + h \cdot \lvert \beta \rvert \to M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + h \cdot \lvert \beta \rvert$
+\item $\varphi_{89} :\equiv h \cdot M + \lvert \beta \rvert \cdot h = h \cdot M + \lvert \beta \rvert \cdot h \to h \cdot M + \lvert \beta \rvert \cdot h = h \cdot M + h \cdot \lvert \beta \rvert$
+\item $\varphi_{90} :\equiv M \cdot h + \lvert \beta \rvert \cdot h = M \cdot h + \lvert \beta \rvert \cdot h \to M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + \lvert \beta \rvert \cdot h$
+\item $\varphi_{91} :\equiv \lvert y - \beta \rvert < h \to \lvert x \cdot y - \alpha \cdot \beta \rvert \leq \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert$
+\item $\varphi_{92} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$
+\item $\varphi_{93} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(M \in \mathbb{R} \to y \in \mathbb{R} \to M \cdot y \in \mathbb{R})$
+\item $\varphi_{94} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y \in \mathbb{R}) \to \forall y\,(M \in \mathbb{R} \to y \in \mathbb{R} \to M + y \in \mathbb{R})$
+\item $\varphi_{95} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$
+\item $\varphi_{96} :\equiv \forall y\,\forall u\,\forall v\,(v_{691} \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to v_{691} \leq y \to u \leq v \to v_{691} + u \leq y + v)$
+\item $\varphi_{97} :\equiv \lvert z \rvert = \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert \to \lvert w \rvert = \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{98} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(\beta \in \mathbb{R} \to y \in \mathbb{R} \to \beta \cdot y \in \mathbb{R})$
+\item $\varphi_{99} :\equiv \lvert x \cdot y - \alpha \cdot \beta \rvert = z + \lvert \beta \cdot (x - \alpha) \rvert \to \lvert x \cdot y - \alpha \cdot \beta \rvert = w + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{100} :\equiv \forall v_{690}\,(y \in \mathbb{R} \to v_{690} \in \mathbb{R} \to y - v_{690} \in \mathbb{R}) \to y \in \mathbb{R} \to \beta \in \mathbb{R} \to y - \beta \in \mathbb{R}$
+\item $\varphi_{101} :\equiv x \cdot y - \alpha \cdot \beta = x \cdot (y - \beta) + \beta \cdot (x - \alpha) \to x \cdot (y - \beta) + \beta \cdot (x - \alpha) = x \cdot y - \alpha \cdot \beta$
+\item $\varphi_{102} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(v_{689} \in \mathbb{R} \to y \in \mathbb{R} \to v_{689} - y \in \mathbb{R})$
+\item $\varphi_{103} :\equiv \forall y\,(M \in \mathbb{R} \to y \in \mathbb{R} \to M + y \in \mathbb{R}) \to M \in \mathbb{R} \to \lvert \beta \rvert \in \mathbb{R} \to M + \lvert \beta \rvert \in \mathbb{R}$
+\item $\varphi_{104} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to x \in \mathbb{R} \to y - \beta \in \mathbb{R} \to x \cdot (y - \beta) \in \mathbb{R}$
+\item $\varphi_{105} :\equiv \forall x\,\forall y\,\forall u\,\forall v\,(x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to 0 \leq x \to 0 \leq u \to x \leq y \to u \leq v \to x \cdot u \leq y \cdot v)$
+\item $\varphi_{106} :\equiv \forall u\,\forall v\,(v_{691} \in \mathbb{R} \to v_{692} \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to v_{691} \leq v_{692} \to u \leq v \to v_{691} + u \leq v_{692} + v)$
+\item $\varphi_{107} :\equiv \forall a\,\forall b\,(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y - a \cdot b = x \cdot (y - b) + b \cdot (x - a))$
+\item $\varphi_{108} :\equiv \forall b\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y - \alpha \cdot b = x \cdot (y - b) + b \cdot (x - \alpha))$
+\item $\varphi_{109} :\equiv \lvert z \rvert < \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert \to \lvert w \rvert < \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{110} :\equiv \forall z\,(M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + h \cdot \lvert \beta \rvert \to h \cdot M + h \cdot \lvert \beta \rvert = z \to M \cdot h + \lvert \beta \rvert \cdot h = z)$
+\item $\varphi_{111} :\equiv \forall z\,(M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + \lvert \beta \rvert \cdot h \to h \cdot M + \lvert \beta \rvert \cdot h = z \to M \cdot h + \lvert \beta \rvert \cdot h = z)$
+\item $\varphi_{112} :\equiv \forall w\,(\lvert \beta \rvert \cdot h = w \to h \cdot M + \lvert \beta \rvert \cdot h = h \cdot M + \lvert \beta \rvert \cdot h \to h \cdot M + \lvert \beta \rvert \cdot h = h \cdot M + w)$
+\item $\varphi_{113} :\equiv \forall w\,(M \cdot h = w \to M \cdot h + \lvert \beta \rvert \cdot h = M \cdot h + \lvert \beta \rvert \cdot h \to M \cdot h + \lvert \beta \rvert \cdot h = w + \lvert \beta \rvert \cdot h)$
+\item $\varphi_{114} :\equiv \lvert x \cdot y - \alpha \cdot \beta \rvert < z + \lvert \beta \cdot (x - \alpha) \rvert \to \lvert x \cdot y - \alpha \cdot \beta \rvert < w + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{115} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(\lvert x \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \cdot y \in \mathbb{R})$
+\item $\varphi_{116} :\equiv \forall y\,(\beta \in \mathbb{R} \to y \in \mathbb{R} \to \beta \cdot y \in \mathbb{R}) \to \beta \in \mathbb{R} \to x - \alpha \in \mathbb{R} \to \beta \cdot (x - \alpha) \in \mathbb{R}$
+\item $\varphi_{117} :\equiv \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert = z \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert = w$
+\item $\varphi_{118} :\equiv \lvert x \cdot y - \alpha \cdot \beta \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert + z \to \lvert x \cdot y - \alpha \cdot \beta \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert + w$
+\item $\varphi_{119} :\equiv \forall y\,(v_{689} \in \mathbb{R} \to y \in \mathbb{R} \to v_{689} - y \in \mathbb{R}) \to v_{689} \in \mathbb{R} \to v_{690} \in \mathbb{R} \to v_{689} - v_{690} \in \mathbb{R}$
+\item $\varphi_{120} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(\lvert \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \beta \rvert \cdot y \in \mathbb{R})$
+\item $\varphi_{121} :\equiv \forall v\,(v_{691} \in \mathbb{R} \to v_{692} \in \mathbb{R} \to v_{693} \in \mathbb{R} \to v \in \mathbb{R} \to v_{691} \leq v_{692} \to v_{693} \leq v \to v_{691} + v_{693} \leq v_{692} + v)$
+\item $\varphi_{122} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x) \to \forall y\,(\lvert \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \beta \rvert \cdot y = y \cdot \lvert \beta \rvert)$
+\item $\varphi_{123} :\equiv \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert < z \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert < w$
+\item $\varphi_{124} :\equiv \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \leq \lvert \beta \rvert \cdot h \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \leq M \cdot h + \lvert \beta \rvert \cdot h$
+\item $\varphi_{125} :\equiv \lvert x \cdot y - \alpha \cdot \beta \rvert < \lvert x \rvert \cdot \lvert y - \beta \rvert + z \to \lvert x \cdot y - \alpha \cdot \beta \rvert < \lvert x \rvert \cdot \lvert y - \beta \rvert + w$
+\item $\varphi_{126} :\equiv \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \leq (M + \lvert \beta \rvert) \cdot h \to \lvert x \cdot y - \alpha \cdot \beta \rvert \leq (M + \lvert \beta \rvert) \cdot h$
+\item $\varphi_{127} :\equiv \forall y\,(\lvert \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \beta \rvert \cdot y \in \mathbb{R}) \to \lvert \beta \rvert \in \mathbb{R} \to h \in \mathbb{R} \to \lvert \beta \rvert \cdot h \in \mathbb{R}$
+\item $\varphi_{128} :\equiv \forall u\,\forall v\,(\lvert x \rvert \in \mathbb{R} \to M \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to 0 \leq \lvert x \rvert \to 0 \leq u \to \lvert x \rvert \leq M \to u \leq v \to \lvert x \rvert \cdot u \leq M \cdot v)$
+\item $\varphi_{129} :\equiv \forall y\,\forall u\,\forall v\,(\lvert x \rvert \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to 0 \leq \lvert x \rvert \to 0 \leq u \to \lvert x \rvert \leq y \to u \leq v \to \lvert x \rvert \cdot u \leq y \cdot v)$
+\item $\varphi_{130} :\equiv \forall v_{694}\,(v_{691} \in \mathbb{R} \to v_{692} \in \mathbb{R} \to v_{693} \in \mathbb{R} \to v_{694} \in \mathbb{R} \to \varphi_{3})$
+\item $\varphi_{131} :\equiv \forall y\,(\lvert \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \beta \rvert \cdot y = y \cdot \lvert \beta \rvert) \to \lvert \beta \rvert \in \mathbb{R} \to h \in \mathbb{R} \to \lvert \beta \rvert \cdot h = h \cdot \lvert \beta \rvert$
+\item $\varphi_{132} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \cdot y \rvert = \lvert x \rvert \cdot \lvert y \rvert) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \cdot y \rvert = \lvert x \rvert \cdot \lvert y \rvert)$
+\item $\varphi_{133} :\equiv \forall y\,\forall u\,\forall v\,(\lvert \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to 0 \leq \lvert \beta \rvert \to 0 \leq u \to \lvert \beta \rvert \leq y \to u \leq v \to \lvert \beta \rvert \cdot u \leq y \cdot v)$
+\item $\varphi_{134} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \cdot y \rvert = \lvert x \rvert \cdot \lvert y \rvert) \to \forall y\,(\beta \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \beta \cdot y \rvert = \lvert \beta \rvert \cdot \lvert y \rvert)$
+\item $\varphi_{135} :\equiv \forall y\,(\lvert x \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \cdot y \in \mathbb{R}) \to \lvert x \rvert \in \mathbb{R} \to \lvert y - \beta \rvert \in \mathbb{R} \to \lvert x \rvert \cdot \lvert y - \beta \rvert \in \mathbb{R}$
+\item $\varphi_{136} :\equiv \forall y\,(\lvert \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \beta \rvert \cdot y \in \mathbb{R}) \to \lvert \beta \rvert \in \mathbb{R} \to \lvert x - \alpha \rvert \in \mathbb{R} \to \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \in \mathbb{R}$
+\item $\varphi_{137} :\equiv \lvert x \cdot y - \alpha \cdot \beta \rvert = \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert \to \lvert x \cdot y - \alpha \cdot \beta \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{138} :\equiv \forall u\,\forall v\,(\lvert \beta \rvert \in \mathbb{R} \to \lvert \beta \rvert \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to 0 \leq \lvert \beta \rvert \to 0 \leq u \to \lvert \beta \rvert \leq \lvert \beta \rvert \to u \leq v \to \lvert \beta \rvert \cdot u \leq \lvert \beta \rvert \cdot v)$
+\item $\varphi_{139} :\equiv \forall w\,(\lvert x \cdot (y - \beta) \rvert = w \to \lvert x \cdot y - \alpha \cdot \beta \rvert = \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert \to \lvert x \cdot y - \alpha \cdot \beta \rvert = w + \lvert \beta \cdot (x - \alpha) \rvert)$
+\item $\varphi_{140} :\equiv \lvert x \cdot y - \alpha \cdot \beta \rvert < \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert \to \lvert x \cdot y - \alpha \cdot \beta \rvert < \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{141} :\equiv \varphi_{38} \to \lvert x \cdot y - \alpha \cdot \beta \rvert = \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{142} :\equiv \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert = M \cdot h + \lvert \beta \rvert \cdot h \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert = (M + \lvert \beta \rvert) \cdot h$
+\item $\varphi_{143} :\equiv \forall w\,(\lvert x \cdot (y - \beta) \rvert = w \to \lvert x \cdot y - \alpha \cdot \beta \rvert < \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert \to \lvert x \cdot y - \alpha \cdot \beta \rvert < w + \lvert \beta \cdot (x - \alpha) \rvert)$
+\item $\varphi_{144} :\equiv \lvert x \cdot y - \alpha \cdot \beta \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \cdot (x - \alpha) \rvert \to \lvert x \cdot y - \alpha \cdot \beta \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert$
+\item $\varphi_{145} :\equiv h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \varphi_{39}$
+\item $\varphi_{146} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{9}$
+\item $\varphi_{147} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{10}$
+\item $\varphi_{148} :\equiv \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \varphi_{13}$
+\item $\varphi_{149} :\equiv \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \varphi_{14}$
+\item $\varphi_{150} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{12}$
+\item $\varphi_{151} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \varphi_{41}$
+\item $\varphi_{152} :\equiv \varphi_{46} \to \lvert x \cdot y - \alpha \cdot \beta \rvert < \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert$
+\item $\varphi_{153} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \varphi_{43}$
+\item $\varphi_{154} :\equiv \forall w\,(\lvert \beta \cdot (x - \alpha) \rvert = w \to \lvert x \cdot y - \alpha \cdot \beta \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \cdot (x - \alpha) \rvert \to \lvert x \cdot y - \alpha \cdot \beta \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert + w)$
+\item $\varphi_{155} :\equiv \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert < M \cdot h + \lvert \beta \rvert \cdot h \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert < (M + \lvert \beta \rvert) \cdot h$
+\item $\varphi_{156} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{16}$
+\item $\varphi_{157} :\equiv \lvert x \cdot y - \alpha \cdot \beta \rvert < \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \cdot (x - \alpha) \rvert \to \lvert x \cdot y - \alpha \cdot \beta \rvert < \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert$
+\item $\varphi_{158} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{17}$
+\item $\varphi_{159} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{18}$
+\item $\varphi_{160} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{20}$
+\item $\varphi_{161} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{21}$
+\item $\varphi_{162} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \varphi_{57}$
+\item $\varphi_{163} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \varphi_{58}$
+\item $\varphi_{164} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \varphi_{59}$
+\item $\varphi_{165} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \varphi_{60}$
+\item $\varphi_{166} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \varphi_{61}$
+\item $\varphi_{167} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{25}$
+\item $\varphi_{168} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{26}$
+\item $\varphi_{169} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{27}$
+\item $\varphi_{170} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \varphi_{64}$
+\item $\varphi_{171} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{31}$
+\item $\varphi_{172} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{32}$
+\item $\varphi_{173} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{33}$
+\item $\varphi_{174} :\equiv \lvert x \rvert \in \mathbb{R} \to M \in \mathbb{R} \to \lvert y - \beta \rvert \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq \lvert x \rvert \to \varphi_{37}$
+\item $\varphi_{175} :\equiv \forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \lvert a + b \rvert \leq \lvert a \rvert + \lvert b \rvert) \to \varphi_{84}$
+\item $\varphi_{176} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \varphi_{66}$
+\item $\varphi_{177} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{35}$
+\item $\varphi_{178} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{36}$
+\item $\varphi_{179} :\equiv \forall w\,(\lvert \beta \cdot (x - \alpha) \rvert = w \to \lvert x \cdot y - \alpha \cdot \beta \rvert < \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \cdot (x - \alpha) \rvert \to \lvert x \cdot y - \alpha \cdot \beta \rvert < \lvert x \rvert \cdot \lvert y - \beta \rvert + w)$
+\item $\varphi_{180} :\equiv \forall w\,(M \cdot h + \lvert \beta \rvert \cdot h = w \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert = M \cdot h + \lvert \beta \rvert \cdot h \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert = w)$
+\item $\varphi_{181} :\equiv \forall v\,(\lvert x \rvert \in \mathbb{R} \to M \in \mathbb{R} \to \lvert y - \beta \rvert \in \mathbb{R} \to v \in \mathbb{R} \to 0 \leq \lvert x \rvert \to 0 \leq \lvert y - \beta \rvert \to \lvert x \rvert \leq M \to \lvert y - \beta \rvert \leq v \to \lvert x \rvert \cdot \lvert y - \beta \rvert \leq M \cdot v)$
+\item $\varphi_{182} :\equiv \lvert \beta \rvert \in \mathbb{R} \to \lvert x - \alpha \rvert \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq \lvert \beta \rvert \to 0 \leq \lvert x - \alpha \rvert \to \varphi_{19}$
+\item $\varphi_{183} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \varphi_{74}$
+\item $\varphi_{184} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \varphi_{75}$
+\item $\varphi_{185} :\equiv \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \varphi_{76}$
+\item $\varphi_{186} :\equiv \forall v_{688}\,(x \cdot y - \alpha \cdot \beta = v_{688} \to v_{688} = x \cdot y - \alpha \cdot \beta) \to \varphi_{101}$
+\item $\varphi_{187} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{47}$
+\item $\varphi_{188} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{48}$
+\item $\varphi_{189} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{49}$
+\item $\varphi_{190} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to \varphi_{51}$
+\item $\varphi_{191} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \varphi_{29}$
+\item $\varphi_{192} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \varphi_{34}$
+\item $\varphi_{193} :\equiv \forall w\,(x \cdot (y - \beta) + \beta \cdot (x - \alpha) = w \to \varphi_{38} \to \lvert w \rvert = \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert)$
+\item $\varphi_{194} :\equiv \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \varphi_{72}$
+\item $\varphi_{195} :\equiv \forall w\,(M \cdot h + \lvert \beta \rvert \cdot h = w \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert < M \cdot h + \lvert \beta \rvert \cdot h \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert < w)$
+\item $\varphi_{196} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \varphi_{44}$
+\item $\varphi_{197} :\equiv \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \varphi_{77}$
+\item $\varphi_{198} :\equiv \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \varphi_{79}$
+\item $\varphi_{199} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \varphi_{56}$
+\item $\varphi_{200} :\equiv \forall w\,(x \cdot (y - \beta) + \beta \cdot (x - \alpha) = w \to \varphi_{46} \to \lvert w \rvert < \lvert x \cdot (y - \beta) \rvert + \lvert \beta \cdot (x - \alpha) \rvert)$
+\item $\varphi_{201} :\equiv \forall v_{697}\,(\lvert x \cdot y - \alpha \cdot \beta \rvert \leq \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \leq v_{697} \to \lvert x \cdot y - \alpha \cdot \beta \rvert \leq v_{697})$
+\item $\varphi_{202} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \varphi_{65}$
+\item $\varphi_{203} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \varphi_{69}$
+\item $\varphi_{204} :\equiv \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \varphi_{87}$
+\item $\varphi_{205} :\equiv \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \varphi_{91}$
+\item $\varphi_{206} :\equiv \forall v\,(\lvert \beta \rvert \in \mathbb{R} \to \lvert \beta \rvert \in \mathbb{R} \to \lvert x - \alpha \rvert \in \mathbb{R} \to v \in \mathbb{R} \to 0 \leq \lvert \beta \rvert \to 0 \leq \lvert x - \alpha \rvert \to \lvert \beta \rvert \leq \lvert \beta \rvert \to \lvert x - \alpha \rvert \leq v \to \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \leq \lvert \beta \rvert \cdot v)$
+\item $\varphi_{207} :\equiv \forall v_{692}\,\forall v_{693}\,\forall v_{694}\,(\lvert x \rvert \cdot \lvert y - \beta \rvert \in \mathbb{R} \to v_{692} \in \mathbb{R} \to v_{693} \in \mathbb{R} \to v_{694} \in \mathbb{R} \to \lvert x \rvert \cdot \lvert y - \beta \rvert \leq v_{692} \to v_{693} \leq v_{694} \to \lvert x \rvert \cdot \lvert y - \beta \rvert + v_{693} \leq v_{692} + v_{694})$
+\item $\varphi_{208} :\equiv \forall v_{693}\,\forall v_{694}\,(\lvert x \rvert \cdot \lvert y - \beta \rvert \in \mathbb{R} \to M \cdot h \in \mathbb{R} \to v_{693} \in \mathbb{R} \to v_{694} \in \mathbb{R} \to \lvert x \rvert \cdot \lvert y - \beta \rvert \leq M \cdot h \to v_{693} \leq v_{694} \to \lvert x \rvert \cdot \lvert y - \beta \rvert + v_{693} \leq M \cdot h + v_{694})$
+\item $\varphi_{209} :\equiv \lvert x \cdot y - \alpha \cdot \beta \rvert \leq \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \to \varphi_{126}$
+\item $\varphi_{210} :\equiv \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \in \mathbb{R} \to \lvert \beta \rvert \cdot h \in \mathbb{R} \to \lvert x \rvert \cdot \lvert y - \beta \rvert \leq M \cdot h \to \varphi_{124}$
+\item $\varphi_{211} :\equiv \varphi_{121} \to v_{691} \in \mathbb{R} \to v_{692} \in \mathbb{R} \to v_{693} \in \mathbb{R} \to v_{694} \in \mathbb{R} \to \varphi_{3}$
+\item $\varphi_{212} :\equiv \forall v_{694}\,(\lvert x \rvert \cdot \lvert y - \beta \rvert \in \mathbb{R} \to M \cdot h \in \mathbb{R} \to \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \in \mathbb{R} \to v_{694} \in \mathbb{R} \to \lvert x \rvert \cdot \lvert y - \beta \rvert \leq M \cdot h \to \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \leq v_{694} \to \lvert x \rvert \cdot \lvert y - \beta \rvert + \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \leq M \cdot h + v_{694})$
+\item $\varphi_{213} :\equiv (M \cdot h + \lvert \beta \rvert \cdot h = h \cdot (M + \lvert \beta \rvert) \to \varphi_{50}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{165}$
+\item $\varphi_{214} :\equiv (M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + h \cdot \lvert \beta \rvert \to \varphi_{70}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{164}$
+\item $\varphi_{215} :\equiv (x \in \mathbb{R} \to 0 \leq \lvert x \rvert) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}) \to \varphi_{147}$
+\item $\varphi_{216} :\equiv (\beta \in \mathbb{R} \to 0 \leq \lvert \beta \rvert) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}) \to \varphi_{150}$
+\item $\varphi_{217} :\equiv (M \cdot h + \lvert \beta \rvert \cdot h = h \cdot M + \lvert \beta \rvert \cdot h \to \varphi_{88}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{185}$
+\item $\varphi_{218} :\equiv (x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}) \to \varphi_{168}$
+\item $\varphi_{219} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{148}$
+\item $\varphi_{220} :\equiv (\beta \in \mathbb{R} \to \lvert \beta \rvert \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}) \to \varphi_{172}$
+\item $\varphi_{221} :\equiv M \cdot h + \lvert \beta \rvert \cdot h = M \cdot h + \lvert \beta \rvert \cdot h \to (M \cdot h = h \cdot M \to \varphi_{90}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{184}$
+\item $\varphi_{222} :\equiv h \cdot M + \lvert \beta \rvert \cdot h = h \cdot M + \lvert \beta \rvert \cdot h \to (\lvert \beta \rvert \cdot h = h \cdot \lvert \beta \rvert \to \varphi_{89}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{183}$
+\item $\varphi_{223} :\equiv (\lvert x \cdot (y - \beta) \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert \to \varphi_{137}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{198}$
+\item $\varphi_{224} :\equiv (M \cdot h + \lvert \beta \rvert \cdot h = (M + \lvert \beta \rvert) \cdot h \to \varphi_{142}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{197}$
+\item $\varphi_{225} :\equiv (x \cdot (y - \beta) + \beta \cdot (x - \alpha) = x \cdot y - \alpha \cdot \beta \to \varphi_{141}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{194}$
+\item $\varphi_{226} :\equiv (\lvert \beta \cdot (x - \alpha) \rvert = \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \to \varphi_{144}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{205}$
+\item $\varphi_{227} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{55}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{156}$
+\item $\varphi_{228} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{55}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{169}$
+\item $\varphi_{229} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{62}) \to \varphi_{171}$
+\item $\varphi_{230} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{54}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}) \to \varphi_{173}$
+\item $\varphi_{231} :\equiv \varphi_{172} \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{189}$
+\item $\varphi_{232} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{55}) \to \varphi_{172} \to \varphi_{190}$
+\item $\varphi_{233} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}) \to \varphi_{173} \to \varphi_{191}$
+\item $\varphi_{234} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}) \to \varphi_{171} \to \varphi_{192}$
+\item $\varphi_{235} :\equiv \varphi_{172} \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{196}$
+\item $\varphi_{236} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{148}) \to \varphi_{101} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{149}$
+\item $\varphi_{237} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{190} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{151}$
+\item $\varphi_{238} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{55}) \to \varphi_{172} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{162}$
+\item $\varphi_{239} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}) \to \varphi_{173} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{166}$
+\item $\varphi_{240} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{63}) \to \varphi_{171} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{176}$
+\item $\varphi_{241} :\equiv \varphi_{199} \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{153}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{204}$
+\item $\varphi_{242} :\equiv (\lvert x \rvert \in \mathbb{R} \to \lvert y - \beta \rvert \in \mathbb{R} \to \lvert x \rvert \cdot \lvert y - \beta \rvert \in \mathbb{R}) \to \varphi_{168} \to \varphi_{188} \to \varphi_{202}$
+\item $\varphi_{243} :\equiv (\lvert \beta \rvert \in \mathbb{R} \to \lvert x - \alpha \rvert \in \mathbb{R} \to \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \in \mathbb{R}) \to \varphi_{172} \to \varphi_{187} \to \varphi_{203}$
+\item $\varphi_{244} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{205}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{197}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{170}$
+\item $\varphi_{245} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{54}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{62}) \to \varphi_{219}$
+\item $\varphi_{246} :\equiv (x \cdot (y - \beta) \in \mathbb{R} \to \beta \cdot (x - \alpha) \in \mathbb{R} \to \varphi_{39}) \to \varphi_{191} \to \varphi_{192} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{145}$
+\item $\varphi_{247} :\equiv (h \in \mathbb{R} \to \varphi_{28}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{238}$
+\item $\varphi_{248} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{194}) \to (\lvert x \cdot (y - \beta) \rvert = \lvert x \rvert \cdot \lvert y - \beta \rvert \to \varphi_{140}) \to \varphi_{223}$
+\item $\varphi_{249} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{204}) \to (M \cdot h + \lvert \beta \rvert \cdot h = (M + \lvert \beta \rvert) \cdot h \to \varphi_{155}) \to \varphi_{224}$
+\item $\varphi_{250} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{145}) \to (x \cdot (y - \beta) + \beta \cdot (x - \alpha) = x \cdot y - \alpha \cdot \beta \to \varphi_{152}) \to \varphi_{225}$
+\item $\varphi_{251} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{198}) \to (\lvert \beta \cdot (x - \alpha) \rvert = \lvert \beta \rvert \cdot \lvert x - \alpha \rvert \to \varphi_{157}) \to \varphi_{226}$
+\item $\varphi_{252} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{45}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{52}) \to \varphi_{245}$
+\item $\varphi_{253} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{147} \to \varphi_{161} \to \varphi_{146} \to \varphi_{160} \to \varphi_{199}$
+\item $\varphi_{254} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{53}) \to \varphi_{150} \to \varphi_{159} \to \varphi_{167} \to \varphi_{158} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{153}$
+\item $\varphi_{255} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to \varphi_{55}) \to \varphi_{188} \to \varphi_{253}$
+\item $\varphi_{256} :\equiv (\lvert x \rvert \cdot \lvert y - \beta \rvert \in \mathbb{R} \to M \cdot h \in \mathbb{R} \to \varphi_{210}) \to \varphi_{202} \to \varphi_{169} \to \varphi_{203} \to \varphi_{189} \to \varphi_{241}$
+\end{abbrevlist}
+\end{fullproof}

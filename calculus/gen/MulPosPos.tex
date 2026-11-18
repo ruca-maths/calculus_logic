@@ -1,0 +1,17 @@
+% 自動生成 (prover/build.js): MulPosPos  ノード数 7
+\begin{fullproof}{[E11]}{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y)$}{7}\phantomsection\label{tree:MulPosPos}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y)$\lbl{(R15)}}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y)$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y$}
+\UIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y)$}
+\UIC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y$
+\item $\varphi_{2} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y)$
+\end{abbrevlist}
+\end{fullproof}

@@ -1,0 +1,466 @@
+% 自動生成 (prover/build.js): LogDom  ノード数 206
+\begin{fullproof}{定理(対数関数の定義域)}{$\forall y\,(y \in \mathrm{dom}(\log) \leftrightarrow y \in \mathbb{R} \land 0 < y)$}{206}\phantomsection\label{tree:LogDom}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\varphi_{25}$\lbl{A1}}
+\AXC{$\varphi_{25} \to y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to \exp(x) = y$\lbl{A1}}
+\BIC{$y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to \exp(x) = y$}
+\AXC{$\varphi_{56}$\lbl{A1}}
+\BIC{$\varphi_{39}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\varphi_{63}$\lbl{[S27]}}
+\AXC{$\varphi_{63} \to \mathrm{dom}(\exp) = \mathbb{R}$\lbl{A1}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R}$}
+\AXC{$\mathrm{dom}(\exp) = \mathbb{R} \to \varphi_{6}$\lbl{A1}}
+\BIC{$\varphi_{6}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall y\,(\mathrm{dom}(\exp) = y \to y = \mathrm{dom}(\exp))$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R} \to \mathbb{R} = \mathrm{dom}(\exp)$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{6}$}
+\BIC{$\mathbb{R} = \mathrm{dom}(\exp)$}
+\AXC{$\varphi_{58}$\lbl{A1}}
+\BIC{$(y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to x \in \mathbb{R}) \to \varphi_{49}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\varphi_{25}$\lbl{A1}}
+\AXC{$\varphi_{25} \to y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to x \in \mathbb{R}$\lbl{A1}}
+\BIC{$y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to x \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$(y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to x \in \mathbb{R}) \to \varphi_{49}$}
+\BIC{$\varphi_{49}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$z = w \to x \in z \to x \in w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to x \in z \to x \in w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to x \in z \to x \in w)$}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$\forall w\,(\mathbb{R} = w \to x \in \mathbb{R} \to x \in w)$}
+\AXC{$\varphi_{27}$\lbl{A2}}
+\BIC{$\mathbb{R} = \mathrm{dom}(\exp) \to x \in \mathbb{R} \to x \in \mathrm{dom}(\exp)$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{49}$}
+\BIC{$y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to x \in \mathrm{dom}(\exp)$}
+\AXC{$\varphi_{61}$\lbl{A1}}
+\BIC{$\varphi_{53}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$z = w \to \mathrm{StrInc}(\exp,z) \to \mathrm{StrInc}(\exp,w)$\lbl{A6}}
+\UIC{$\varphi_{2}$}
+\UIC{$\forall z\,(\varphi_{2})$}
+\AXC{$\forall z\,(\varphi_{2}) \to \varphi_{5}$\lbl{A2}}
+\BIC{$\varphi_{5}$}
+\AXC{$\varphi_{5} \to \varphi_{9}$\lbl{A2}}
+\BIC{$\varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\varphi_{63}$\lbl{[S27]}}
+\AXC{$\varphi_{63} \to \mathrm{dom}(\exp) = \mathbb{R}$\lbl{A1}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R}$}
+\AXC{$\mathrm{dom}(\exp) = \mathbb{R} \to \varphi_{6}$\lbl{A1}}
+\BIC{$\varphi_{6}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall y\,(\mathrm{dom}(\exp) = y \to y = \mathrm{dom}(\exp))$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R} \to \mathbb{R} = \mathrm{dom}(\exp)$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{6}$}
+\BIC{$\mathbb{R} = \mathrm{dom}(\exp)$}
+\AXC{$\mathbb{R} = \mathrm{dom}(\exp) \to \varphi_{43}$\lbl{A1}}
+\BIC{$\varphi_{43}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\varphi_{63}$\lbl{[S27]}}
+\AXC{$\varphi_{63} \to \mathrm{RFn}(\exp)$\lbl{A1}}
+\BIC{$\mathrm{RFn}(\exp)$}
+\AXC{$\varphi_{1}$\lbl{[I1]}}
+\AXC{$\varphi_{31}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(\exp) \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)$}
+\AXC{$\varphi_{35}$\lbl{A1}}
+\BIC{$\mathrm{RFn}(\exp) \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)$}
+\BIC{$\mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{9}$}
+\AXC{$\varphi_{63}$\lbl{[S27]}}
+\AXC{$\varphi_{63} \to \mathrm{StrInc}(\exp,\mathbb{R})$\lbl{A1}}
+\BIC{$\mathrm{StrInc}(\exp,\mathbb{R})$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{43}$}
+\BIC{$\varphi_{9} \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp))$}
+\BIC{$\mathrm{StrInc}(\exp,\mathrm{dom}(\exp))$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)$}
+\BIC{$\mathrm{Inj}(\exp)$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\mathrm{Inj}(\exp)$}
+\AXC{$\varphi_{63}$\lbl{[S27]}}
+\AXC{$\varphi_{63} \to \mathrm{RFn}(\exp)$\lbl{A1}}
+\BIC{$\mathrm{RFn}(\exp)$}
+\AXC{$\varphi_{60}$\lbl{[S26]}}
+\AXC{$\varphi_{60} \to \mathrm{RFn}(\exp) \to \mathrm{Inj}(\exp) \to \varphi_{62}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(\exp) \to \mathrm{Inj}(\exp) \to \varphi_{62}$}
+\AXC{$\varphi_{67}$\lbl{A1}}
+\BIC{$\mathrm{RFn}(\exp) \to \mathrm{Inj}(\exp) \to \varphi_{62}$}
+\BIC{$\mathrm{Inj}(\exp) \to \varphi_{62}$}
+\BIC{$\varphi_{62}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{62}$}
+\AXC{$\varphi_{64}$\lbl{A1}}
+\BIC{$\forall y\,(y \in \mathrm{dom}(\log) \leftrightarrow \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x)))$}
+\AXC{$\varphi_{51}$\lbl{A2}}
+\BIC{$y \in \mathrm{dom}(\log) \leftrightarrow \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x))$}
+\AXC{$(y \in \mathrm{dom}(\log) \leftrightarrow \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x))) \to \varphi_{55}$\lbl{A1}}
+\BIC{$\varphi_{55}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall y\,(\exp(x) = y \to y = \exp(x))$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$\exp(x) = y \to y = \exp(x)$}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{39}$}
+\BIC{$y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to y = \exp(x)$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{53}$}
+\BIC{$\varphi_{29}$}
+\AXC{$\varphi_{29} \to \varphi_{15} \to \varphi_{30}$\lbl{A1}}
+\BIC{$\varphi_{15} \to \varphi_{30}$}
+\BIC{$\varphi_{30}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{55}$}
+\BIC{$y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to y \in \mathrm{dom}(\log)$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\varphi_{63}$\lbl{[S27]}}
+\AXC{$\varphi_{63} \to \forall y \in \mathbb{R}\,(0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y))$\lbl{A1}}
+\BIC{$\forall y \in \mathbb{R}\,(0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y))$}
+\AXC{$\varphi_{48}$\lbl{A2}}
+\BIC{$y \in \mathbb{R} \to 0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y)$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$y \in \mathbb{R} \to 0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y)$}
+\AXC{$(y \in \mathbb{R} \to 0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y)) \to \varphi_{42}$\lbl{A1}}
+\BIC{$\varphi_{42}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$y \in \mathbb{R} \land 0 < y \to y \in \mathbb{R} \land 0 < y$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{42}$}
+\BIC{$y \in \mathbb{R} \land 0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y)$}
+\AXC{$(y \in \mathbb{R} \land 0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y)) \to \varphi_{65}$\lbl{A1}}
+\BIC{$\varphi_{65}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\varphi_{38}$\lbl{A4}}
+\AXC{$\forall x\,(\varphi_{20}) \to \varphi_{28}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to y \in \mathrm{dom}(\log)$}
+\AXC{$\varphi_{54}$\lbl{A1}}
+\BIC{$\varphi_{20}$}
+\UIC{$\forall x\,(\varphi_{20})$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{65}$}
+\BIC{$(\forall x\,(\varphi_{20}) \to \varphi_{28}) \to \varphi_{38} \to y \in \mathbb{R} \land 0 < y \to y \in \mathrm{dom}(\log)$}
+\BIC{$\varphi_{38} \to y \in \mathbb{R} \land 0 < y \to y \in \mathrm{dom}(\log)$}
+\BIC{$y \in \mathbb{R} \land 0 < y \to y \in \mathrm{dom}(\log)$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\varphi_{63}$\lbl{[S27]}}
+\AXC{$\varphi_{63} \to \mathrm{dom}(\exp) = \mathbb{R}$\lbl{A1}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R}$}
+\AXC{$\mathrm{dom}(\exp) = \mathbb{R} \to \varphi_{18} \to \varphi_{50}$\lbl{A1}}
+\BIC{$\varphi_{18} \to \varphi_{50}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$y \in \mathrm{dom}(\log) \to \varphi_{13}$\lbl{A1}}
+\AXC{$(y \in \mathrm{dom}(\log) \to \varphi_{13}) \to \varphi_{18}$\lbl{A1}}
+\BIC{$\varphi_{18}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{18} \to \varphi_{50}$}
+\BIC{$\varphi_{50}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$z = w \to x \in z \to x \in w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to x \in z \to x \in w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to x \in z \to x \in w)$}
+\AXC{$\varphi_{22}$\lbl{A2}}
+\BIC{$\forall w\,(\mathrm{dom}(\exp) = w \to x \in \mathrm{dom}(\exp) \to x \in w)$}
+\AXC{$\varphi_{34}$\lbl{A2}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R} \to x \in \mathrm{dom}(\exp) \to x \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{50}$}
+\BIC{$y \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\exp) \land y = \exp(x) \to x \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\varphi_{63}$\lbl{[S27]}}
+\AXC{$\varphi_{63} \to \forall x \in \mathbb{R}\,(0 < \exp(x))$\lbl{A1}}
+\BIC{$\forall x \in \mathbb{R}\,(0 < \exp(x))$}
+\AXC{$\forall x \in \mathbb{R}\,(0 < \exp(x)) \to x \in \mathbb{R} \to 0 < \exp(x)$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to 0 < \exp(x)$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$y \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\exp) \land y = \exp(x) \to x \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to 0 < \exp(x)$}
+\AXC{$(x \in \mathbb{R} \to 0 < \exp(x)) \to \varphi_{52}$\lbl{A1}}
+\BIC{$\varphi_{52}$}
+\BIC{$\varphi_{19}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to f(x) \in \mathbb{R})$\lbl{[S6]}}
+\AXC{$\varphi_{45}$\lbl{A2}}
+\BIC{$\forall x\,(\mathrm{RFn}(\exp) \to x \in \mathrm{dom}(\exp) \to \exp(x) \in \mathbb{R})$}
+\AXC{$\varphi_{46}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(\exp) \to x \in \mathrm{dom}(\exp) \to \exp(x) \in \mathbb{R}$}
+\AXC{$\varphi_{59}$\lbl{A1}}
+\BIC{$\mathrm{RFn}(\exp) \to \varphi_{18} \to \varphi_{23}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$y \in \mathrm{dom}(\log) \to \varphi_{13}$\lbl{A1}}
+\AXC{$(y \in \mathrm{dom}(\log) \to \varphi_{13}) \to \varphi_{18}$\lbl{A1}}
+\BIC{$\varphi_{18}$}
+\AXC{$\varphi_{63}$\lbl{[S27]}}
+\AXC{$\varphi_{63} \to \mathrm{RFn}(\exp)$\lbl{A1}}
+\BIC{$\mathrm{RFn}(\exp)$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\mathrm{RFn}(\exp) \to \varphi_{18} \to \varphi_{23}$}
+\BIC{$\varphi_{18} \to \varphi_{23}$}
+\BIC{$\varphi_{23}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(v_{922} = y \to y = v_{922})$\lbl{A2}}
+\BIC{$\forall y\,(v_{922} = y \to y = v_{922})$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$v_{922} = v_{923} \to v_{923} = v_{922}$}
+\UIC{$\forall v_{923}\,(v_{922} = v_{923} \to v_{923} = v_{922})$}
+\UIC{$\forall v_{922}\,\forall v_{923}\,(v_{922} = v_{923} \to v_{923} = v_{922})$}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\BIC{$\forall v_{923}\,(y = v_{923} \to v_{923} = y)$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$y = \exp(x) \to \exp(x) = y$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$y \in \mathrm{dom}(\log) \to \varphi_{13}$\lbl{A1}}
+\AXC{$(y \in \mathrm{dom}(\log) \to \varphi_{13}) \to \varphi_{16}$\lbl{A1}}
+\BIC{$\varphi_{16}$}
+\AXC{$\varphi_{16} \to (y = \exp(x) \to \exp(x) = y) \to \varphi_{17}$\lbl{A1}}
+\BIC{$(y = \exp(x) \to \exp(x) = y) \to \varphi_{17}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$y = \exp(x) \to \exp(x) = y$}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$(y = \exp(x) \to \exp(x) = y) \to \varphi_{17}$}
+\BIC{$\varphi_{17}$}
+\AXC{$\varphi_{17} \to \varphi_{41} \to \varphi_{57}$\lbl{A1}}
+\BIC{$\varphi_{41} \to \varphi_{57}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$z = w \to z \in \mathbb{R} \to w \in \mathbb{R}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z \in \mathbb{R} \to w \in \mathbb{R})$}
+\UIC{$\forall z\,\forall w\,(z = w \to z \in \mathbb{R} \to w \in \mathbb{R})$}
+\AXC{$\varphi_{37}$\lbl{A2}}
+\BIC{$\forall w\,(\exp(x) = w \to \exp(x) \in \mathbb{R} \to w \in \mathbb{R})$}
+\AXC{$\varphi_{44}$\lbl{A2}}
+\BIC{$\exp(x) = y \to \exp(x) \in \mathbb{R} \to y \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{19}$}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{23}$}
+\AXC{$\varphi_{23} \to \varphi_{19} \to \varphi_{41}$\lbl{A1}}
+\BIC{$\varphi_{19} \to \varphi_{41}$}
+\BIC{$\varphi_{41}$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{41} \to \varphi_{57}$}
+\BIC{$\varphi_{57}$}
+\BIC{$(\exp(x) = y \to 0 < \exp(x) \to 0 < y) \to \varphi_{24}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$z = w \to 0 < z \to 0 < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to 0 < z \to 0 < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to 0 < z \to 0 < w)$}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\forall w\,(\exp(x) = w \to 0 < \exp(x) \to 0 < w)$}
+\AXC{$\varphi_{33}$\lbl{A2}}
+\BIC{$\exp(x) = y \to 0 < \exp(x) \to 0 < y$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$(\exp(x) = y \to 0 < \exp(x) \to 0 < y) \to \varphi_{24}$}
+\BIC{$\varphi_{24}$}
+\AXC{$\varphi_{24} \to \varphi_{26}$\lbl{A1}}
+\BIC{$\varphi_{26}$}
+\UIC{$\forall x\,(\varphi_{26})$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{62}$}
+\AXC{$\varphi_{64}$\lbl{A1}}
+\BIC{$\forall y\,(y \in \mathrm{dom}(\log) \leftrightarrow \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x)))$}
+\AXC{$\varphi_{51}$\lbl{A2}}
+\BIC{$y \in \mathrm{dom}(\log) \leftrightarrow \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x))$}
+\AXC{$(y \in \mathrm{dom}(\log) \leftrightarrow \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x))) \to \varphi_{47}$\lbl{A1}}
+\BIC{$\varphi_{47}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\forall x\,(\varphi_{26})$}
+\AXC{$y \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{47}$}
+\BIC{$y \in \mathrm{dom}(\log) \to \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x))$}
+\AXC{$(y \in \mathrm{dom}(\log) \to \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x))) \to \varphi_{66}$\lbl{A1}}
+\BIC{$\varphi_{66}$}
+\BIC{$(\forall x\,(\varphi_{26}) \to \varphi_{32}) \to \varphi_{40} \to y \in \mathrm{dom}(\log) \to y \in \mathbb{R} \land 0 < y$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\varphi_{40}$\lbl{A4}}
+\AXC{$\forall x\,(\varphi_{26}) \to \varphi_{32}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$(\forall x\,(\varphi_{26}) \to \varphi_{32}) \to \varphi_{40} \to y \in \mathrm{dom}(\log) \to y \in \mathbb{R} \land 0 < y$}
+\BIC{$\varphi_{40} \to y \in \mathrm{dom}(\log) \to y \in \mathbb{R} \land 0 < y$}
+\BIC{$y \in \mathrm{dom}(\log) \to y \in \mathbb{R} \land 0 < y$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$y \in \mathbb{R} \land 0 < y \to y \in \mathrm{dom}(\log)$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$y \in \mathrm{dom}(\log) \to y \in \mathbb{R} \land 0 < y$}
+\AXC{$(y \in \mathrm{dom}(\log) \to y \in \mathbb{R} \land 0 < y) \to \varphi_{36}$\lbl{A1}}
+\BIC{$\varphi_{36}$}
+\BIC{$y \in \mathrm{dom}(\log) \leftrightarrow y \in \mathbb{R} \land 0 < y$}
+\UIC{$\forall y\,(y \in \mathrm{dom}(\log) \leftrightarrow y \in \mathbb{R} \land 0 < y)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall f\,(\mathrm{RFn}(f) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{Inj}(f))$
+\item $\varphi_{2} :\equiv \forall w\,(z = w \to \mathrm{StrInc}(\exp,z) \to \mathrm{StrInc}(\exp,w))$
+\item $\varphi_{3} :\equiv \forall y\,(v_{922} = y \to y = v_{922}) \to v_{922} = v_{923} \to v_{923} = v_{922}$
+\item $\varphi_{4} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(\mathrm{dom}(\exp) = y \to y = \mathrm{dom}(\exp))$
+\item $\varphi_{5} :\equiv \forall w\,(\mathbb{R} = w \to \mathrm{StrInc}(\exp,\mathbb{R}) \to \mathrm{StrInc}(\exp,w))$
+\item $\varphi_{6} :\equiv (\mathrm{dom}(\exp) = \mathbb{R} \to \mathbb{R} = \mathrm{dom}(\exp)) \to \mathbb{R} = \mathrm{dom}(\exp)$
+\item $\varphi_{7} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(\exp(x) = y \to y = \exp(x))$
+\item $\varphi_{8} :\equiv \forall v_{923}\,(y = v_{923} \to v_{923} = y) \to y = \exp(x) \to \exp(x) = y$
+\item $\varphi_{9} :\equiv \mathbb{R} = \mathrm{dom}(\exp) \to \mathrm{StrInc}(\exp,\mathbb{R}) \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp))$
+\item $\varphi_{10} :\equiv \forall v_{922}\,\forall v_{923}\,(v_{922} = v_{923} \to v_{923} = v_{922}) \to \forall v_{923}\,(y = v_{923} \to v_{923} = y)$
+\item $\varphi_{11} :\equiv \forall y\,(\mathrm{dom}(\exp) = y \to y = \mathrm{dom}(\exp)) \to \mathrm{dom}(\exp) = \mathbb{R} \to \mathbb{R} = \mathrm{dom}(\exp)$
+\item $\varphi_{12} :\equiv \forall y\,(\exp(x) = y \to y = \exp(x)) \to \exp(x) = y \to y = \exp(x)$
+\item $\varphi_{13} :\equiv x \in \mathrm{dom}(\exp) \land y = \exp(x) \to x \in \mathrm{dom}(\exp) \land y = \exp(x)$
+\item $\varphi_{14} :\equiv \forall z\,\forall w\,(z = w \to x \in z \to x \in w) \to \forall w\,(\mathbb{R} = w \to x \in \mathbb{R} \to x \in w)$
+\item $\varphi_{15} :\equiv \forall x\,(\neg (x \in \mathrm{dom}(\exp) \land y = \exp(x))) \to \neg (x \in \mathrm{dom}(\exp) \land y = \exp(x))$
+\item $\varphi_{16} :\equiv y \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\exp) \land y = \exp(x) \to y = \exp(x)$
+\item $\varphi_{17} :\equiv y \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\exp) \land y = \exp(x) \to \exp(x) = y$
+\item $\varphi_{18} :\equiv y \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\exp) \land y = \exp(x) \to x \in \mathrm{dom}(\exp)$
+\item $\varphi_{19} :\equiv y \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\exp) \land y = \exp(x) \to 0 < \exp(x)$
+\item $\varphi_{20} :\equiv y \in \mathbb{R} \land 0 < y \land y \notin \mathrm{dom}(\log) \to \neg (x \in \mathbb{R} \land \exp(x) = y)$
+\item $\varphi_{21} :\equiv \forall z\,\forall w\,(z = w \to 0 < z \to 0 < w) \to \forall w\,(\exp(x) = w \to 0 < \exp(x) \to 0 < w)$
+\item $\varphi_{22} :\equiv \forall z\,\forall w\,(z = w \to x \in z \to x \in w) \to \forall w\,(\mathrm{dom}(\exp) = w \to x \in \mathrm{dom}(\exp) \to x \in w)$
+\item $\varphi_{23} :\equiv y \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\exp) \land y = \exp(x) \to \exp(x) \in \mathbb{R}$
+\item $\varphi_{24} :\equiv y \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\exp) \land y = \exp(x) \to y \in \mathbb{R} \land 0 < y$
+\item $\varphi_{25} :\equiv y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to x \in \mathbb{R} \land \exp(x) = y$
+\item $\varphi_{26} :\equiv y \in \mathrm{dom}(\log) \land \neg (y \in \mathbb{R} \land 0 < y) \to \neg (x \in \mathrm{dom}(\exp) \land y = \exp(x))$
+\item $\varphi_{27} :\equiv \forall w\,(\mathbb{R} = w \to x \in \mathbb{R} \to x \in w) \to \mathbb{R} = \mathrm{dom}(\exp) \to x \in \mathbb{R} \to x \in \mathrm{dom}(\exp)$
+\item $\varphi_{28} :\equiv \forall x\,(y \in \mathbb{R} \land 0 < y \land y \notin \mathrm{dom}(\log)) \to \forall x\,(\neg (x \in \mathbb{R} \land \exp(x) = y))$
+\item $\varphi_{29} :\equiv y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to x \in \mathrm{dom}(\exp) \land y = \exp(x)$
+\item $\varphi_{30} :\equiv y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x))$
+\item $\varphi_{31} :\equiv \varphi_{1} \to \mathrm{RFn}(\exp) \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)$
+\item $\varphi_{32} :\equiv \forall x\,(y \in \mathrm{dom}(\log) \land \neg (y \in \mathbb{R} \land 0 < y)) \to \forall x\,(\neg (x \in \mathrm{dom}(\exp) \land y = \exp(x)))$
+\item $\varphi_{33} :\equiv \forall w\,(\exp(x) = w \to 0 < \exp(x) \to 0 < w) \to \exp(x) = y \to 0 < \exp(x) \to 0 < y$
+\item $\varphi_{34} :\equiv \forall w\,(\mathrm{dom}(\exp) = w \to x \in \mathrm{dom}(\exp) \to x \in w) \to \mathrm{dom}(\exp) = \mathbb{R} \to x \in \mathrm{dom}(\exp) \to x \in \mathbb{R}$
+\item $\varphi_{35} :\equiv (\mathrm{RFn}(\exp) \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)) \to \mathrm{RFn}(\exp) \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)$
+\item $\varphi_{36} :\equiv (y \in \mathbb{R} \land 0 < y \to y \in \mathrm{dom}(\log)) \to (y \in \mathrm{dom}(\log) \leftrightarrow y \in \mathbb{R} \land 0 < y)$
+\item $\varphi_{37} :\equiv \forall z\,\forall w\,(z = w \to z \in \mathbb{R} \to w \in \mathbb{R}) \to \forall w\,(\exp(x) = w \to \exp(x) \in \mathbb{R} \to w \in \mathbb{R})$
+\item $\varphi_{38} :\equiv y \in \mathbb{R} \land 0 < y \land y \notin \mathrm{dom}(\log) \to \forall x\,(y \in \mathbb{R} \land 0 < y \land y \notin \mathrm{dom}(\log))$
+\item $\varphi_{39} :\equiv (\exp(x) = y \to y = \exp(x)) \to y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to y = \exp(x)$
+\item $\varphi_{40} :\equiv y \in \mathrm{dom}(\log) \land \neg (y \in \mathbb{R} \land 0 < y) \to \forall x\,(y \in \mathrm{dom}(\log) \land \neg (y \in \mathbb{R} \land 0 < y))$
+\item $\varphi_{41} :\equiv y \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\exp) \land y = \exp(x) \to \exp(x) \in \mathbb{R} \land 0 < \exp(x)$
+\item $\varphi_{42} :\equiv (y \in \mathbb{R} \land 0 < y \to y \in \mathbb{R} \land 0 < y) \to y \in \mathbb{R} \land 0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y)$
+\item $\varphi_{43} :\equiv \mathrm{StrInc}(\exp,\mathbb{R}) \to \varphi_{9} \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp))$
+\item $\varphi_{44} :\equiv \forall w\,(\exp(x) = w \to \exp(x) \in \mathbb{R} \to w \in \mathbb{R}) \to \exp(x) = y \to \exp(x) \in \mathbb{R} \to y \in \mathbb{R}$
+\item $\varphi_{45} :\equiv \forall f\,\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to f(x) \in \mathbb{R}) \to \forall x\,(\mathrm{RFn}(\exp) \to x \in \mathrm{dom}(\exp) \to \exp(x) \in \mathbb{R})$
+\item $\varphi_{46} :\equiv \forall x\,(\mathrm{RFn}(\exp) \to x \in \mathrm{dom}(\exp) \to \exp(x) \in \mathbb{R}) \to \mathrm{RFn}(\exp) \to x \in \mathrm{dom}(\exp) \to \exp(x) \in \mathbb{R}$
+\item $\varphi_{47} :\equiv (y \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log)) \to y \in \mathrm{dom}(\log) \to \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x))$
+\item $\varphi_{48} :\equiv \forall y \in \mathbb{R}\,(0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y)) \to y \in \mathbb{R} \to 0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y)$
+\item $\varphi_{49} :\equiv (\mathbb{R} = \mathrm{dom}(\exp) \to x \in \mathbb{R} \to x \in \mathrm{dom}(\exp)) \to y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to x \in \mathrm{dom}(\exp)$
+\item $\varphi_{50} :\equiv (\mathrm{dom}(\exp) = \mathbb{R} \to x \in \mathrm{dom}(\exp) \to x \in \mathbb{R}) \to y \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\exp) \land y = \exp(x) \to x \in \mathbb{R}$
+\item $\varphi_{51} :\equiv \forall y\,(y \in \mathrm{dom}(\log) \leftrightarrow \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x))) \to (y \in \mathrm{dom}(\log) \leftrightarrow \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x)))$
+\item $\varphi_{52} :\equiv (y \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\exp) \land y = \exp(x) \to x \in \mathbb{R}) \to \varphi_{19}$
+\item $\varphi_{53} :\equiv (y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to y = \exp(x)) \to \varphi_{29}$
+\item $\varphi_{54} :\equiv (y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to y \in \mathrm{dom}(\log)) \to \varphi_{20}$
+\item $\varphi_{55} :\equiv \varphi_{30} \to y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to y \in \mathrm{dom}(\log)$
+\item $\varphi_{56} :\equiv (y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to \exp(x) = y) \to \varphi_{39}$
+\item $\varphi_{57} :\equiv (\exp(x) = y \to \exp(x) \in \mathbb{R} \to y \in \mathbb{R}) \to (\exp(x) = y \to 0 < \exp(x) \to 0 < y) \to \varphi_{24}$
+\item $\varphi_{58} :\equiv \mathbb{R} = \mathrm{dom}(\exp) \to (y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to x \in \mathbb{R}) \to \varphi_{49}$
+\item $\varphi_{59} :\equiv (\mathrm{RFn}(\exp) \to x \in \mathrm{dom}(\exp) \to \exp(x) \in \mathbb{R}) \to \mathrm{RFn}(\exp) \to \varphi_{18} \to \varphi_{23}$
+\item $\varphi_{60} :\equiv \forall f\,(\mathrm{RFn}(f) \to \mathrm{Inj}(f) \to \mathrm{RFn}(f^{-1}) \land \forall y\,(y \in \mathrm{dom}(f^{-1}) \leftrightarrow \exists x \in \mathrm{dom}(f)\,(y = f(x))) \land \forall x \in \mathrm{dom}(f)\,(f^{-1}(f(x)) = x) \land \forall y \in \mathrm{dom}(f^{-1})\,(f^{-1}(y) \in \mathrm{dom}(f) \land f(f^{-1}(y)) = y))$
+\item $\varphi_{61} :\equiv (y \in \mathbb{R} \land 0 < y \to x \in \mathbb{R} \land \exp(x) = y \to x \in \mathrm{dom}(\exp)) \to \varphi_{53}$
+\item $\varphi_{62} :\equiv \mathrm{RFn}(\log) \land \forall y\,(y \in \mathrm{dom}(\log) \leftrightarrow \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x))) \land \forall x \in \mathrm{dom}(\exp)\,(\log(\exp(x)) = x) \land \forall y \in \mathrm{dom}(\log)\,(\log(y) \in \mathrm{dom}(\exp) \land \exp(\log(y)) = y)$
+\item $\varphi_{63} :\equiv \mathrm{RFn}(\exp) \land \mathrm{dom}(\exp) = \mathbb{R} \land \forall x \in \mathbb{R}\,(0 < \exp(x)) \land \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \exp(x + y) = \exp(x) \cdot \exp(y)) \land \mathrm{StrInc}(\exp,\mathbb{R}) \land \mathrm{ContOn}(\exp,\mathbb{R}) \land \forall y \in \mathbb{R}\,(0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y))$
+\item $\varphi_{64} :\equiv \varphi_{62} \to \forall y\,(y \in \mathrm{dom}(\log) \leftrightarrow \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x)))$
+\item $\varphi_{65} :\equiv \forall x\,(\varphi_{20}) \to (\forall x\,(\varphi_{20}) \to \varphi_{28}) \to \varphi_{38} \to y \in \mathbb{R} \land 0 < y \to y \in \mathrm{dom}(\log)$
+\item $\varphi_{66} :\equiv \forall x\,(\varphi_{26}) \to (\forall x\,(\varphi_{26}) \to \varphi_{32}) \to \varphi_{40} \to y \in \mathrm{dom}(\log) \to y \in \mathbb{R} \land 0 < y$
+\item $\varphi_{67} :\equiv (\mathrm{RFn}(\exp) \to \mathrm{Inj}(\exp) \to \varphi_{62}) \to \mathrm{RFn}(\exp) \to \mathrm{Inj}(\exp) \to \varphi_{62}$
+\end{abbrevlist}
+\end{fullproof}

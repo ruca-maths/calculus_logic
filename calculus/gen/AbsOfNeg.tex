@@ -1,0 +1,34 @@
+% 自動生成 (prover/build.js): AbsOfNeg  ノード数 14
+\begin{fullproof}{[A3]}{$\forall x\,(x < 0 \to \lvert x \rvert = -x)$}{14}\phantomsection\label{tree:AbsOfNeg}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \leq y \to \neg y < x)$\lbl{[O7]}}
+\AXC{$\forall x\,\forall y\,(x \leq y \to \neg y < x) \to \forall y\,(0 \leq y \to \neg y < 0)$\lbl{A2}}
+\BIC{$\forall y\,(0 \leq y \to \neg y < 0)$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x\,(0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x)$\lbl{Def$\lvert\cdot\rvert$}}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x$}
+\AXC{$x < 0 \to x < 0$\lbl{A1}}
+\AXC{$(x < 0 \to x < 0) \to \varphi_{1}$\lbl{A1}}
+\BIC{$\varphi_{1}$}
+\BIC{$(0 \leq x \to \neg x < 0) \to x < 0 \to \lvert x \rvert = -x$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall y\,(0 \leq y \to \neg y < 0)$}
+\AXC{$\forall y\,(0 \leq y \to \neg y < 0) \to 0 \leq x \to \neg x < 0$\lbl{A2}}
+\BIC{$0 \leq x \to \neg x < 0$}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$(0 \leq x \to \neg x < 0) \to x < 0 \to \lvert x \rvert = -x$}
+\BIC{$x < 0 \to \lvert x \rvert = -x$}
+\UIC{$\forall x\,(x < 0 \to \lvert x \rvert = -x)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv 0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x \to (0 \leq x \to \neg x < 0) \to x < 0 \to \lvert x \rvert = -x$
+\item $\varphi_{2} :\equiv \forall x\,(0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x) \to 0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x$
+\end{abbrevlist}
+\end{fullproof}

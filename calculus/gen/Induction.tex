@@ -1,0 +1,278 @@
+% 自動生成 (prover/build.js): Induction  ノード数 111
+\begin{fullproof}{定理(数学的帰納法)}{$\mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \forall n \in \omega\,(\mathrm{Phi}(n))$}{111}\phantomsection\label{tree:Induction}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,(\mathrm{Ind}(x) \leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x))$\lbl{DefInd}}
+\AXC{$\varphi_{35}$\lbl{A2}}
+\BIC{$\mathrm{Ind}(\omega) \leftrightarrow \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega)$}
+\AXC{$\mathrm{Ind}(\omega)$\lbl{補題(ωは帰納的)}}
+\AXC{$\varphi_{46}$\lbl{A1}}
+\BIC{$(\mathrm{Ind}(\omega) \leftrightarrow \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega)) \to \varphi_{45}$}
+\BIC{$\varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{45}$}
+\AXC{$\varphi_{45} \to \varphi_{43}$\lbl{A1}}
+\BIC{$\varphi_{43}$}
+\AXC{$\varphi_{43} \to (\forall y \in \omega\,(S(y) \in \omega) \to y \in \omega \to S(y) \in \omega) \to \varphi_{41}$\lbl{A1}}
+\BIC{$(\forall y \in \omega\,(S(y) \in \omega) \to y \in \omega \to S(y) \in \omega) \to \varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall y \in \omega\,(S(y) \in \omega) \to y \in \omega \to S(y) \in \omega$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$(\forall y \in \omega\,(S(y) \in \omega) \to y \in \omega \to S(y) \in \omega) \to \varphi_{41}$}
+\BIC{$\varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\AXC{$\mathrm{Phi}(\emptyset) \to \varphi_{12}$\lbl{A1}}
+\AXC{$(\mathrm{Phi}(\emptyset) \to \varphi_{12}) \to \varphi_{10} \to \mathrm{Phi}(\emptyset) \to \varphi_{10}$\lbl{A1}}
+\BIC{$\varphi_{10} \to \mathrm{Phi}(\emptyset) \to \varphi_{10}$}
+\BIC{$\mathrm{Phi}(\emptyset) \to \varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\mathrm{Phi}(\emptyset) \to \varphi_{27}$\lbl{A1}}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\AXC{$\varphi_{39}$\lbl{A1}}
+\AXC{$\varphi_{39} \to \varphi_{5} \to \varphi_{36}$\lbl{A1}}
+\BIC{$\varphi_{5} \to \varphi_{36}$}
+\BIC{$\varphi_{36}$}
+\AXC{$\varphi_{36} \to (\mathrm{Phi}(\emptyset) \to \varphi_{27}) \to \varphi_{37}$\lbl{A1}}
+\BIC{$(\mathrm{Phi}(\emptyset) \to \varphi_{27}) \to \varphi_{37}$}
+\BIC{$\varphi_{37}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{41}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\mathrm{Phi}(\emptyset) \to \varphi_{10}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{37}$}
+\AXC{$\varphi_{37} \to (\mathrm{Phi}(\emptyset) \to \varphi_{10}) \to \varphi_{41} \to \varphi_{42} \to \mathrm{Phi}(\emptyset) \to \varphi_{28}$\lbl{A1}}
+\BIC{$(\mathrm{Phi}(\emptyset) \to \varphi_{10}) \to \varphi_{41} \to \varphi_{42} \to \mathrm{Phi}(\emptyset) \to \varphi_{28}$}
+\BIC{$\varphi_{41} \to \varphi_{42} \to \mathrm{Phi}(\emptyset) \to \varphi_{28}$}
+\BIC{$\varphi_{42} \to \mathrm{Phi}(\emptyset) \to \varphi_{28}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\AXC{$\varphi_{39}$\lbl{A1}}
+\AXC{$\varphi_{39} \to \varphi_{17} \to \varphi_{42}$\lbl{A1}}
+\BIC{$\varphi_{17} \to \varphi_{42}$}
+\BIC{$\varphi_{42}$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{42} \to \mathrm{Phi}(\emptyset) \to \varphi_{28}$}
+\BIC{$\mathrm{Phi}(\emptyset) \to \varphi_{28}$}
+\AXC{$(\mathrm{Phi}(\emptyset) \to \varphi_{28}) \to \varphi_{24} \to y \in B \to S(y) \in B$\lbl{A1}}
+\BIC{$\varphi_{24} \to y \in B \to S(y) \in B$}
+\UIC{$\forall y\,(\varphi_{24} \to y \in B \to S(y) \in B)$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\varphi_{48}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\forall y\,(\varphi_{24} \to y \in B \to S(y) \in B)$}
+\AXC{$\forall y\,(\varphi_{24} \to y \in B \to S(y) \in B) \to \varphi_{48} \to (\varphi_{24} \to \forall y\,(\varphi_{24})) \to \varphi_{32}$\lbl{A1}}
+\BIC{$\varphi_{48} \to (\varphi_{24} \to \forall y\,(\varphi_{24})) \to \varphi_{32}$}
+\BIC{$(\varphi_{24} \to \forall y\,(\varphi_{24})) \to \varphi_{32}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{45}$}
+\AXC{$\varphi_{23}$\lbl{A2}}
+\AXC{$\varphi_{39}$\lbl{A1}}
+\AXC{$\varphi_{39} \to \varphi_{23} \to \varphi_{44}$\lbl{A1}}
+\BIC{$\varphi_{23} \to \varphi_{44}$}
+\BIC{$\varphi_{44}$}
+\AXC{$\varphi_{44} \to \varphi_{45} \to (\mathrm{Phi}(\emptyset) \to \mathrm{Phi}(\emptyset)) \to \mathrm{Phi}(\emptyset) \to \varphi_{26}$\lbl{A1}}
+\BIC{$\varphi_{45} \to (\mathrm{Phi}(\emptyset) \to \mathrm{Phi}(\emptyset)) \to \mathrm{Phi}(\emptyset) \to \varphi_{26}$}
+\BIC{$(\mathrm{Phi}(\emptyset) \to \mathrm{Phi}(\emptyset)) \to \mathrm{Phi}(\emptyset) \to \varphi_{26}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\forall x\,(\mathrm{Ind}(x) \leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x))$\lbl{DefInd}}
+\AXC{$\varphi_{31}$\lbl{A2}}
+\BIC{$\mathrm{Ind}(B) \leftrightarrow \emptyset \in B \land \forall y \in B\,(S(y) \in B)$}
+\AXC{$\varphi_{52}$\lbl{A1}}
+\BIC{$(\mathrm{Phi}(\emptyset) \to \varphi_{26}) \to \varphi_{32} \to \mathrm{Phi}(\emptyset) \to \varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\mathrm{Phi}(\emptyset) \to \mathrm{Phi}(\emptyset)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Phi}(\emptyset) \to \mathrm{Phi}(\emptyset)) \to \mathrm{Phi}(\emptyset) \to \varphi_{26}$}
+\BIC{$\mathrm{Phi}(\emptyset) \to \varphi_{26}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Phi}(\emptyset) \to \varphi_{26}) \to \varphi_{32} \to \mathrm{Phi}(\emptyset) \to \varphi_{22}$}
+\BIC{$\varphi_{32} \to \mathrm{Phi}(\emptyset) \to \varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\varphi_{24} \to \forall y\,(\varphi_{24})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$(\varphi_{24} \to \forall y\,(\varphi_{24})) \to \varphi_{32}$}
+\BIC{$\varphi_{32}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{32} \to \mathrm{Phi}(\emptyset) \to \varphi_{22}$}
+\BIC{$\mathrm{Phi}(\emptyset) \to \varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\forall n\,(n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x))$\lbl{Def$\omega$}}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x)$}
+\AXC{$\mathrm{Phi}(\emptyset) \to \varphi_{30}$\lbl{A1}}
+\AXC{$\varphi_{50}$\lbl{A1}}
+\BIC{$(n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x)) \to \varphi_{40}$}
+\BIC{$\varphi_{40}$}
+\AXC{$\varphi_{51}$\lbl{A1}}
+\BIC{$(\forall x\,(\mathrm{Ind}(x) \to n \in x) \to \mathrm{Ind}(B) \to n \in B) \to \varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\forall x\,(\mathrm{Ind}(x) \to n \in x) \to \mathrm{Ind}(B) \to n \in B$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$(\forall x\,(\mathrm{Ind}(x) \to n \in x) \to \mathrm{Ind}(B) \to n \in B) \to \varphi_{38}$}
+\BIC{$\varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\mathrm{Phi}(\emptyset) \to \varphi_{22}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{38}$}
+\AXC{$\varphi_{38} \to (\mathrm{Phi}(\emptyset) \to \varphi_{22}) \to \varphi_{34} \to \mathrm{Phi}(\emptyset) \to \varphi_{29}$\lbl{A1}}
+\BIC{$(\mathrm{Phi}(\emptyset) \to \varphi_{22}) \to \varphi_{34} \to \mathrm{Phi}(\emptyset) \to \varphi_{29}$}
+\BIC{$\varphi_{34} \to \mathrm{Phi}(\emptyset) \to \varphi_{29}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\AXC{$\varphi_{39}$\lbl{A1}}
+\AXC{$\varphi_{39} \to \varphi_{4} \to \varphi_{34}$\lbl{A1}}
+\BIC{$\varphi_{4} \to \varphi_{34}$}
+\BIC{$\varphi_{34}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{34} \to \mathrm{Phi}(\emptyset) \to \varphi_{29}$}
+\BIC{$\mathrm{Phi}(\emptyset) \to \varphi_{29}$}
+\AXC{$(\mathrm{Phi}(\emptyset) \to \varphi_{29}) \to \varphi_{24} \to n \in \omega \to \mathrm{Phi}(n)$\lbl{A1}}
+\BIC{$\varphi_{24} \to n \in \omega \to \mathrm{Phi}(n)$}
+\UIC{$\forall n\,(\varphi_{24} \to n \in \omega \to \mathrm{Phi}(n))$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\varphi_{47}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\forall n\,(\varphi_{24} \to n \in \omega \to \mathrm{Phi}(n))$}
+\AXC{$\forall n\,(\varphi_{24} \to n \in \omega \to \mathrm{Phi}(n)) \to \varphi_{47} \to (\varphi_{24} \to \forall n\,(\varphi_{24})) \to \varphi_{33}$\lbl{A1}}
+\BIC{$\varphi_{47} \to (\varphi_{24} \to \forall n\,(\varphi_{24})) \to \varphi_{33}$}
+\BIC{$(\varphi_{24} \to \forall n\,(\varphi_{24})) \to \varphi_{33}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\varphi_{24} \to \forall n\,(\varphi_{24})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$(\varphi_{24} \to \forall n\,(\varphi_{24})) \to \varphi_{33}$}
+\BIC{$\varphi_{33}$}
+\AXC{$\varphi_{33} \to \varphi_{19} \to \neg \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x))$\lbl{A1}}
+\BIC{$\varphi_{19} \to \neg \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x))$}
+\UIC{$\forall B\,(\varphi_{19} \to \neg \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)))$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\forall a\,\exists y\,\forall x\,(x \in y \leftrightarrow x \in a \land \mathrm{Phi}(x))$\lbl{Sep}}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$\exists y\,\forall x\,(x \in y \leftrightarrow x \in \omega \land \mathrm{Phi}(x))$}
+\AXC{$\exists y\,\forall x\,(x \in y \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to \mathrm{Phi}(\emptyset) \to \varphi_{16}$\lbl{A1}}
+\BIC{$\mathrm{Phi}(\emptyset) \to \varphi_{16}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\varphi_{49}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\forall B\,(\varphi_{19} \to \neg \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)))$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\mathrm{Phi}(\emptyset) \to \varphi_{16}$}
+\AXC{$\varphi_{54}$\lbl{A1}}
+\BIC{$\forall B\,(\varphi_{19} \to \neg \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x))) \to \varphi_{49} \to \varphi_{53}$}
+\BIC{$\varphi_{49} \to \varphi_{53}$}
+\BIC{$\varphi_{53}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{20}$\lbl{A4}}
+\AXC{$\forall y\,(\varphi_{13}) \to \varphi_{21}$\lbl{A3}}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\UIC{$\forall y\,(\varphi_{13})$}
+\AXC{$\varphi_{19} \to \forall B\,(\varphi_{19})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{53}$}
+\BIC{$\forall y\,(\varphi_{13}) \to (\forall y\,(\varphi_{13}) \to \varphi_{21}) \to \varphi_{20} \to \mathrm{Phi}(\emptyset) \to \varphi_{3}$}
+\BIC{$(\forall y\,(\varphi_{13}) \to \varphi_{21}) \to \varphi_{20} \to \mathrm{Phi}(\emptyset) \to \varphi_{3}$}
+\BIC{$\varphi_{20} \to \mathrm{Phi}(\emptyset) \to \varphi_{3}$}
+\BIC{$\mathrm{Phi}(\emptyset) \to \varphi_{3}$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to \forall y \in B\,(S(y) \in B)$
+\item $\varphi_{2} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to \forall n \in \omega\,(\mathrm{Phi}(n))$
+\item $\varphi_{3} :\equiv \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \forall n \in \omega\,(\mathrm{Phi}(n))$
+\item $\varphi_{4} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to (n \in B \leftrightarrow n \in \omega \land \mathrm{Phi}(n))$
+\item $\varphi_{5} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to (y \in B \leftrightarrow y \in \omega \land \mathrm{Phi}(y))$
+\item $\varphi_{6} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to y \in B \to y \in \omega \land \mathrm{Phi}(y)$
+\item $\varphi_{7} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to n \in \omega \to \mathrm{Ind}(B) \to n \in B$
+\item $\varphi_{8} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x))$
+\item $\varphi_{9} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to n \in \omega \to \forall x\,(\mathrm{Ind}(x) \to n \in x)$
+\item $\varphi_{10} :\equiv \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to y \in \omega \to \mathrm{Phi}(y) \to \mathrm{Phi}(S(y))$
+\item $\varphi_{11} :\equiv \forall n\,(n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x)) \to (n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x))$
+\item $\varphi_{12} :\equiv \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n)))$
+\item $\varphi_{13} :\equiv \forall B\,(\neg \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x))) \to \neg \forall x\,(x \in y \leftrightarrow x \in \omega \land \mathrm{Phi}(x))$
+\item $\varphi_{14} :\equiv \forall a\,\exists y\,\forall x\,(x \in y \leftrightarrow x \in a \land \mathrm{Phi}(x)) \to \exists y\,\forall x\,(x \in y \leftrightarrow x \in \omega \land \mathrm{Phi}(x))$
+\item $\varphi_{15} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to y \in B \to y \in \omega \to S(y) \in \omega$
+\item $\varphi_{16} :\equiv \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \exists y\,\forall x\,(x \in y \leftrightarrow x \in \omega \land \mathrm{Phi}(x))$
+\item $\varphi_{17} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to (S(y) \in B \leftrightarrow S(y) \in \omega \land \mathrm{Phi}(S(y)))$
+\item $\varphi_{18} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to y \in B \to \forall y \in \omega\,(S(y) \in \omega)$
+\item $\varphi_{19} :\equiv \mathrm{Phi}(\emptyset) \land \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \land \neg \forall n \in \omega\,(\mathrm{Phi}(n))$
+\item $\varphi_{20} :\equiv \forall B\,(\neg \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x))) \to \forall y\,\forall B\,(\neg \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)))$
+\item $\varphi_{21} :\equiv \forall y\,\forall B\,(\neg \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x))) \to \forall y\,(\neg \forall x\,(x \in y \leftrightarrow x \in \omega \land \mathrm{Phi}(x)))$
+\item $\varphi_{22} :\equiv \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to \mathrm{Ind}(B)$
+\item $\varphi_{23} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to (\emptyset \in B \leftrightarrow \emptyset \in \omega \land \mathrm{Phi}(\emptyset))$
+\item $\varphi_{24} :\equiv \mathrm{Phi}(\emptyset) \land \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \land \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x))$
+\item $\varphi_{25} :\equiv \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega)$
+\item $\varphi_{26} :\equiv \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to \emptyset \in B$
+\item $\varphi_{27} :\equiv \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to y \in B \to y \in B$
+\item $\varphi_{28} :\equiv \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to y \in B \to S(y) \in B$
+\item $\varphi_{29} :\equiv \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to n \in \omega \to \mathrm{Phi}(n)$
+\item $\varphi_{30} :\equiv \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)) \to n \in \omega \to n \in \omega$
+\item $\varphi_{31} :\equiv \forall x\,(\mathrm{Ind}(x) \leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x)) \to (\mathrm{Ind}(B) \leftrightarrow \emptyset \in B \land \forall y \in B\,(S(y) \in B))$
+\item $\varphi_{32} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{1}$
+\item $\varphi_{33} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{2}$
+\item $\varphi_{34} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{4}$
+\item $\varphi_{35} :\equiv \forall x\,(\mathrm{Ind}(x) \leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x)) \to (\mathrm{Ind}(\omega) \leftrightarrow \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega))$
+\item $\varphi_{36} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{5}$
+\item $\varphi_{37} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{6}$
+\item $\varphi_{38} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{7}$
+\item $\varphi_{39} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{8}$
+\item $\varphi_{40} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{9}$
+\item $\varphi_{41} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{15}$
+\item $\varphi_{42} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{17}$
+\item $\varphi_{43} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{18}$
+\item $\varphi_{44} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{23}$
+\item $\varphi_{45} :\equiv \mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \varphi_{25}$
+\item $\varphi_{46} :\equiv \mathrm{Ind}(\omega) \to (\mathrm{Ind}(\omega) \leftrightarrow \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega)) \to \varphi_{45}$
+\item $\varphi_{47} :\equiv \forall n\,(\varphi_{24} \to n \in \omega \to \mathrm{Phi}(n)) \to \forall n\,(\varphi_{24}) \to \forall n \in \omega\,(\mathrm{Phi}(n))$
+\item $\varphi_{48} :\equiv \forall y\,(\varphi_{24} \to y \in B \to S(y) \in B) \to \forall y\,(\varphi_{24}) \to \forall y \in B\,(S(y) \in B)$
+\item $\varphi_{49} :\equiv \forall B\,(\varphi_{19} \to \neg \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x))) \to \forall B\,(\varphi_{19}) \to \forall B\,(\neg \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x)))$
+\item $\varphi_{50} :\equiv (\mathrm{Phi}(\emptyset) \to \varphi_{30}) \to (n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x)) \to \varphi_{40}$
+\item $\varphi_{51} :\equiv \varphi_{40} \to (\forall x\,(\mathrm{Ind}(x) \to n \in x) \to \mathrm{Ind}(B) \to n \in B) \to \varphi_{38}$
+\item $\varphi_{52} :\equiv (\mathrm{Ind}(B) \leftrightarrow \emptyset \in B \land \forall y \in B\,(S(y) \in B)) \to (\mathrm{Phi}(\emptyset) \to \varphi_{26}) \to \varphi_{32} \to \mathrm{Phi}(\emptyset) \to \varphi_{22}$
+\item $\varphi_{53} :\equiv (\varphi_{19} \to \forall B\,(\varphi_{19})) \to \forall y\,(\varphi_{13}) \to (\forall y\,(\varphi_{13}) \to \varphi_{21}) \to \varphi_{20} \to \mathrm{Phi}(\emptyset) \to \varphi_{3}$
+\item $\varphi_{54} :\equiv (\mathrm{Phi}(\emptyset) \to \varphi_{16}) \to \forall B\,(\varphi_{19} \to \neg \forall x\,(x \in B \leftrightarrow x \in \omega \land \mathrm{Phi}(x))) \to \varphi_{49} \to \varphi_{53}$
+\end{abbrevlist}
+\end{fullproof}

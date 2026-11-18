@@ -1,0 +1,115 @@
+% 自動生成 (prover/build.js): InvLe  ノード数 50
+\begin{fullproof}{[E20]}{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to y^{-1} \leq x^{-1})$}{50}\phantomsection\label{tree:InvLe}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x = y \to x = y$\lbl{A1}}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x = y \to x = y) \to \varphi_{15}$\lbl{A1}}
+\BIC{$\varphi_{15}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to x^{-1} = x^{-1}$\lbl{A2}}
+\BIC{$x^{-1} = x^{-1}$}
+\AXC{$\varphi_{4}$\lbl{A1}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x = y \to x^{-1} \leq x^{-1}$}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{15}$}
+\BIC{$(x = y \to x^{-1} < x^{-1} \to y^{-1} < x^{-1}) \to \varphi_{8}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$z = w \to z^{-1} < x^{-1} \to w^{-1} < x^{-1}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z^{-1} < x^{-1} \to w^{-1} < x^{-1})$}
+\UIC{$\forall z\,\forall w\,(z = w \to z^{-1} < x^{-1} \to w^{-1} < x^{-1})$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall w\,(x = w \to x^{-1} < x^{-1} \to w^{-1} < x^{-1})$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$x = y \to x^{-1} < x^{-1} \to y^{-1} < x^{-1}$}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$(x = y \to x^{-1} < x^{-1} \to y^{-1} < x^{-1}) \to \varphi_{8}$}
+\BIC{$\varphi_{8}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\varphi_{2}$\lbl{[E19]}}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x < y \to y^{-1} < x^{-1})$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x < y \to y^{-1} < x^{-1}$}
+\AXC{$\varphi_{17}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to x \in \mathbb{R}) \to \varphi_{16}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to x \in \mathbb{R}) \to \varphi_{16}$}
+\BIC{$\varphi_{16}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to 0 < x$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{16}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to 0 < x) \to \varphi_{10}$}
+\BIC{$\varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x \leq y$\lbl{A1}}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x \leq y) \to \varphi_{14}$\lbl{A1}}
+\BIC{$\varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to x < y$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{10}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to y^{-1} < x^{-1}$}
+\AXC{$\varphi_{13}$\lbl{A1}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to y^{-1} \leq x^{-1}$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{14}$}
+\BIC{$\varphi_{9}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$z = w \to z^{-1} = x^{-1} \to w^{-1} = x^{-1}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z^{-1} = x^{-1} \to w^{-1} = x^{-1})$}
+\UIC{$\forall z\,\forall w\,(z = w \to z^{-1} = x^{-1} \to w^{-1} = x^{-1})$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall w\,(x = w \to x^{-1} = x^{-1} \to w^{-1} = x^{-1})$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$x = y \to x^{-1} = x^{-1} \to y^{-1} = x^{-1}$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{8}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x = y \to y^{-1} \leq x^{-1}$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{9}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to y^{-1} \leq x^{-1}$}
+\UIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to y^{-1} \leq x^{-1})$}
+\UIC{$\varphi_{1}$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to y^{-1} \leq x^{-1})$
+\item $\varphi_{2} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x < y \to y^{-1} < x^{-1})$
+\item $\varphi_{3} :\equiv \forall w\,(x = w \to x^{-1} = x^{-1} \to w^{-1} = x^{-1}) \to x = y \to x^{-1} = x^{-1} \to y^{-1} = x^{-1}$
+\item $\varphi_{4} :\equiv x^{-1} = x^{-1} \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x = y \to x^{-1} \leq x^{-1}$
+\item $\varphi_{5} :\equiv \forall z\,\forall w\,(z = w \to z^{-1} = x^{-1} \to w^{-1} = x^{-1}) \to \forall w\,(x = w \to x^{-1} = x^{-1} \to w^{-1} = x^{-1})$
+\item $\varphi_{6} :\equiv \forall w\,(x = w \to x^{-1} < x^{-1} \to w^{-1} < x^{-1}) \to x = y \to x^{-1} < x^{-1} \to y^{-1} < x^{-1}$
+\item $\varphi_{7} :\equiv \forall z\,\forall w\,(z = w \to z^{-1} < x^{-1} \to w^{-1} < x^{-1}) \to \forall w\,(x = w \to x^{-1} < x^{-1} \to w^{-1} < x^{-1})$
+\item $\varphi_{8} :\equiv (x = y \to x^{-1} = x^{-1} \to y^{-1} = x^{-1}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x = y \to y^{-1} \leq x^{-1}$
+\item $\varphi_{9} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x = y \to y^{-1} \leq x^{-1}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to y^{-1} \leq x^{-1}$
+\item $\varphi_{10} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to x < y) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to y^{-1} < x^{-1}$
+\item $\varphi_{11} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x < y \to y^{-1} < x^{-1}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x < y \to y^{-1} < x^{-1}$
+\item $\varphi_{12} :\equiv \varphi_{2} \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x < y \to y^{-1} < x^{-1})$
+\item $\varphi_{13} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to y^{-1} < x^{-1}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to y^{-1} \leq x^{-1}$
+\item $\varphi_{14} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to y^{-1} \leq x^{-1}) \to \varphi_{9}$
+\item $\varphi_{15} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x = y \to x^{-1} \leq x^{-1}) \to (x = y \to x^{-1} < x^{-1} \to y^{-1} < x^{-1}) \to \varphi_{8}$
+\item $\varphi_{16} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to y \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to 0 < x) \to \varphi_{10}$
+\item $\varphi_{17} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x < y \to y^{-1} < x^{-1}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to x < y \to x \in \mathbb{R}) \to \varphi_{16}$
+\end{abbrevlist}
+\end{fullproof}

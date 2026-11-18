@@ -1,0 +1,157 @@
+% 自動生成 (prover/build.js): FLimSeq  ノード数 66
+\begin{fullproof}{定理1.7}{$\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathbb{R} \land \alpha \in \mathbb{R} \land \mathrm{PNbhd}(f,c) \land \forall a\,(\mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c) \to \mathrm{Conv}(f \circ a,\alpha)))$}{66}\phantomsection\label{tree:FLimSeq}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall c\,(\varphi_{11})$\lbl{定理1.7(⇐)}}
+\AXC{$\forall f\,\forall c\,(\varphi_{11}) \to \forall c\,(\varphi_{11})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{11})$}
+\AXC{$\forall c\,(\varphi_{11}) \to \varphi_{11}$\lbl{A2}}
+\BIC{$\varphi_{11}$}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(f) \to c \in \mathbb{R} \to \alpha \in \mathbb{R} \to \mathrm{PNbhd}(f,c) \to \varphi_{7}$}
+\AXC{$\varphi_{23}$\lbl{A1}}
+\BIC{$(\varphi_{10} \to \mathrm{RFn}(f)) \to \varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\varphi_{10} \to \varphi_{10}$\lbl{A1}}
+\AXC{$(\varphi_{10} \to \varphi_{10}) \to \varphi_{10} \to c \in \mathbb{R}$\lbl{A1}}
+\BIC{$\varphi_{10} \to c \in \mathbb{R}$}
+\AXC{$\varphi_{10} \to \varphi_{10}$\lbl{A1}}
+\AXC{$(\varphi_{10} \to \varphi_{10}) \to \varphi_{10} \to \mathrm{RFn}(f)$\lbl{A1}}
+\BIC{$\varphi_{10} \to \mathrm{RFn}(f)$}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$(\varphi_{10} \to \mathrm{RFn}(f)) \to \varphi_{22}$}
+\BIC{$\varphi_{22}$}
+\BIC{$(\varphi_{10} \to \alpha \in \mathbb{R}) \to (\varphi_{10} \to \mathrm{PNbhd}(f,c)) \to \varphi_{19}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\varphi_{10} \to \varphi_{10}$\lbl{A1}}
+\AXC{$(\varphi_{10} \to \varphi_{10}) \to \varphi_{10} \to \alpha \in \mathbb{R}$\lbl{A1}}
+\BIC{$\varphi_{10} \to \alpha \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$(\varphi_{10} \to \alpha \in \mathbb{R}) \to (\varphi_{10} \to \mathrm{PNbhd}(f,c)) \to \varphi_{19}$}
+\BIC{$(\varphi_{10} \to \mathrm{PNbhd}(f,c)) \to \varphi_{19}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\varphi_{10} \to \varphi_{10}$\lbl{A1}}
+\AXC{$(\varphi_{10} \to \varphi_{10}) \to \varphi_{10} \to \mathrm{PNbhd}(f,c)$\lbl{A1}}
+\BIC{$\varphi_{10} \to \mathrm{PNbhd}(f,c)$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$(\varphi_{10} \to \mathrm{PNbhd}(f,c)) \to \varphi_{19}$}
+\BIC{$\varphi_{19}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\varphi_{10} \to \varphi_{10}$\lbl{A1}}
+\AXC{$(\varphi_{10} \to \varphi_{10}) \to \varphi_{10} \to \forall a\,(\mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \varphi_{2})$\lbl{A1}}
+\BIC{$\varphi_{10} \to \forall a\,(\mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \varphi_{2})$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{19}$}
+\BIC{$\varphi_{10} \to \mathrm{FLim}(f,c,\alpha)$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall f\,(\varphi_{4})$\lbl{定理1.7(⇒)}}
+\AXC{$\forall f\,(\varphi_{4}) \to \varphi_{4}$\lbl{A2}}
+\BIC{$\varphi_{4}$}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$\forall \alpha\,\forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{2})$}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$\forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{2})$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{2}$}
+\AXC{$\varphi_{20}$\lbl{A1}}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \varphi_{1} \to \varphi_{16}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \varphi_{1} \to \varphi_{16}$}
+\BIC{$\varphi_{1} \to \varphi_{16}$}
+\BIC{$\varphi_{16}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\varphi_{5} \to \varphi_{8}$\lbl{A3}}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \varphi_{3}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{16}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \varphi_{2}$}
+\UIC{$\varphi_{5}$}
+\AXC{$\varphi_{5} \to (\varphi_{5} \to \varphi_{8}) \to \varphi_{9}$\lbl{A1}}
+\BIC{$(\varphi_{5} \to \varphi_{8}) \to \varphi_{9}$}
+\BIC{$\varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall c\,\forall \alpha\,(\varphi_{13})$\lbl{DefFLim}}
+\AXC{$\forall f\,\forall c\,\forall \alpha\,(\varphi_{13}) \to \forall c\,\forall \alpha\,(\varphi_{13})$\lbl{A2}}
+\BIC{$\forall c\,\forall \alpha\,(\varphi_{13})$}
+\AXC{$\forall c\,\forall \alpha\,(\varphi_{13}) \to \forall \alpha\,(\varphi_{13})$\lbl{A2}}
+\BIC{$\forall \alpha\,(\varphi_{13})$}
+\AXC{$\forall \alpha\,(\varphi_{13}) \to \varphi_{13}$\lbl{A2}}
+\BIC{$\varphi_{13}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{13}$}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)$\lbl{A1}}
+\AXC{$\varphi_{21}$\lbl{A1}}
+\BIC{$\varphi_{13} \to \varphi_{6} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{10}$}
+\BIC{$\varphi_{6} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \forall a\,(\mathrm{FLim}(f,c,\alpha))$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{9}$}
+\BIC{$\varphi_{6}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{6} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{10}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{10}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{10} \to \mathrm{FLim}(f,c,\alpha)$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{10}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{10}) \to \varphi_{17}$\lbl{A1}}
+\BIC{$\varphi_{17}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \leftrightarrow \varphi_{10}$}
+\UIC{$\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \leftrightarrow \varphi_{10})$}
+\UIC{$\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \leftrightarrow \varphi_{10})$}
+\UIC{$\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \leftrightarrow \varphi_{10})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \mathrm{Conv}(a,c)$
+\item $\varphi_{2} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c) \to \mathrm{Conv}(f \circ a,\alpha)$
+\item $\varphi_{3} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c)$
+\item $\varphi_{4} :\equiv \forall c\,\forall \alpha\,\forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{2})$
+\item $\varphi_{5} :\equiv \forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \varphi_{2})$
+\item $\varphi_{6} :\equiv \mathrm{FLim}(f,c,\alpha) \to \forall a\,(\mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \varphi_{2})$
+\item $\varphi_{7} :\equiv \forall a\,(\mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \varphi_{2}) \to \mathrm{FLim}(f,c,\alpha)$
+\item $\varphi_{8} :\equiv \forall a\,(\mathrm{FLim}(f,c,\alpha)) \to \forall a\,(\mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \varphi_{2})$
+\item $\varphi_{9} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \forall a\,(\mathrm{FLim}(f,c,\alpha))) \to \varphi_{6}$
+\item $\varphi_{10} :\equiv \mathrm{RFn}(f) \land c \in \mathbb{R} \land \alpha \in \mathbb{R} \land \mathrm{PNbhd}(f,c) \land \forall a\,(\mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \varphi_{2})$
+\item $\varphi_{11} :\equiv \forall \alpha\,(\mathrm{RFn}(f) \to c \in \mathbb{R} \to \alpha \in \mathbb{R} \to \mathrm{PNbhd}(f,c) \to \varphi_{7})$
+\item $\varphi_{12} :\equiv \forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{2}) \to \mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{2}$
+\item $\varphi_{13} :\equiv \mathrm{FLim}(f,c,\alpha) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathbb{R} \land \alpha \in \mathbb{R} \land \mathrm{PNbhd}(f,c) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < \delta \to \lvert f(x) - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{14} :\equiv \forall \alpha\,\forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{2}) \to \forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{2})$
+\item $\varphi_{15} :\equiv \varphi_{4} \to \forall \alpha\,\forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{2})$
+\item $\varphi_{16} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \varphi_{3}) \to \mathrm{FLim}(f,c,\alpha) \to \mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \varphi_{2}$
+\item $\varphi_{17} :\equiv (\varphi_{10} \to \mathrm{FLim}(f,c,\alpha)) \to (\mathrm{FLim}(f,c,\alpha) \leftrightarrow \varphi_{10})$
+\item $\varphi_{18} :\equiv \varphi_{11} \to \mathrm{RFn}(f) \to c \in \mathbb{R} \to \alpha \in \mathbb{R} \to \mathrm{PNbhd}(f,c) \to \varphi_{7}$
+\item $\varphi_{19} :\equiv (\varphi_{10} \to \forall a\,(\mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \varphi_{2})) \to \varphi_{10} \to \mathrm{FLim}(f,c,\alpha)$
+\item $\varphi_{20} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{2}) \to (\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \varphi_{1} \to \varphi_{16}$
+\item $\varphi_{21} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \varphi_{13} \to \varphi_{6} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{10}$
+\item $\varphi_{22} :\equiv (\varphi_{10} \to c \in \mathbb{R}) \to (\varphi_{10} \to \alpha \in \mathbb{R}) \to (\varphi_{10} \to \mathrm{PNbhd}(f,c)) \to \varphi_{19}$
+\item $\varphi_{23} :\equiv (\mathrm{RFn}(f) \to c \in \mathbb{R} \to \alpha \in \mathbb{R} \to \mathrm{PNbhd}(f,c) \to \varphi_{7}) \to (\varphi_{10} \to \mathrm{RFn}(f)) \to \varphi_{22}$
+\end{abbrevlist}
+\end{fullproof}

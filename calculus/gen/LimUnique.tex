@@ -1,0 +1,541 @@
+% 自動生成 (prover/build.js): LimUnique  ノード数 209
+\begin{fullproof}{命題1.3}{$\forall a\,\forall \alpha\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha = \beta)$}{209}\phantomsection\label{tree:LimUnique}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z = w \to \lvert \alpha - \beta \rvert < z \to \lvert \alpha - \beta \rvert < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \lvert \alpha - \beta \rvert < z \to \lvert \alpha - \beta \rvert < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to \lvert \alpha - \beta \rvert < z \to \lvert \alpha - \beta \rvert < w)$}
+\AXC{$\forall z\,\forall w\,(z = w \to \lvert \alpha - \beta \rvert < z \to \lvert \alpha - \beta \rvert < w) \to \varphi_{38}$\lbl{A2}}
+\BIC{$\varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\varphi_{31} \to N \in \mathbb{N} \to N \leq N \to \varphi_{24}$\lbl{A2}}
+\AXC{$\varphi_{67}$\lbl{A1}}
+\AXC{$\varphi_{67} \to \varphi_{66}$\lbl{A1}}
+\BIC{$\varphi_{66}$}
+\AXC{$\varphi_{66} \to (\varphi_{31} \to N \in \mathbb{N} \to N \leq N \to \varphi_{24}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{65}$\lbl{A1}}
+\BIC{$(\varphi_{31} \to N \in \mathbb{N} \to N \leq N \to \varphi_{24}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{65}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \varphi_{65}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\varphi_{67}$\lbl{A1}}
+\AXC{$\varphi_{67} \to \varphi_{48}$\lbl{A1}}
+\BIC{$\varphi_{48}$}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \varphi_{65}$}
+\AXC{$(\mathrm{Conv}(a,\alpha) \to \varphi_{65}) \to \varphi_{48} \to N = N \to \varphi_{63}$\lbl{A1}}
+\BIC{$\varphi_{48} \to N = N \to \varphi_{63}$}
+\BIC{$N = N \to \varphi_{63}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to N = N$\lbl{A2}}
+\BIC{$N = N$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$N = N \to \varphi_{63}$}
+\BIC{$\varphi_{63}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})$\lbl{[C2]}}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}$}
+\AXC{$(\mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}) \to \varphi_{15}$\lbl{A1}}
+\BIC{$\varphi_{15}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \mathrm{Conv}(a,\beta)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{15}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})$\lbl{[C2]}}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}$}
+\AXC{$(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \varphi_{12}$\lbl{A1}}
+\BIC{$\varphi_{12}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{12}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{25}$\lbl{A2}}
+\BIC{$\forall y\,(\alpha \in \mathbb{R} \to y \in \mathbb{R} \to \alpha - y \in \mathbb{R})$}
+\AXC{$\varphi_{23}$\lbl{A2}}
+\BIC{$\alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \alpha - \beta \in \mathbb{R}$}
+\AXC{$(\alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \alpha - \beta \in \mathbb{R}) \to \varphi_{64}$\lbl{A1}}
+\BIC{$\varphi_{64}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{64}$}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}) \to \varphi_{50}$}
+\BIC{$\varphi_{50}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$\lbl{[A5]}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R}) \to \alpha - \beta \in \mathbb{R} \to \lvert \alpha - \beta \rvert \in \mathbb{R}$\lbl{A2}}
+\BIC{$\alpha - \beta \in \mathbb{R} \to \lvert \alpha - \beta \rvert \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{50}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\alpha - \beta \in \mathbb{R} \to \lvert \alpha - \beta \rvert \in \mathbb{R}$}
+\AXC{$(\alpha - \beta \in \mathbb{R} \to \lvert \alpha - \beta \rvert \in \mathbb{R}) \to \varphi_{50} \to \varphi_{54}$\lbl{A1}}
+\BIC{$\varphi_{50} \to \varphi_{54}$}
+\BIC{$\varphi_{54}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$2^{-1} \in \mathbb{R}$\lbl{[F31]}}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{54}$}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{33}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert \alpha - \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \alpha - \beta \rvert \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{39}$\lbl{A2}}
+\BIC{$\lvert \alpha - \beta \rvert \in \mathbb{R} \to 2^{-1} \in \mathbb{R} \to \lvert \alpha - \beta \rvert \cdot 2^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{72}$\lbl{A1}}
+\BIC{$\varphi_{54} \to 2^{-1} \in \mathbb{R} \to \mathrm{Conv}(a,\alpha) \to \varphi_{53}$}
+\BIC{$2^{-1} \in \mathbb{R} \to \mathrm{Conv}(a,\alpha) \to \varphi_{53}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \varphi_{53}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$\lbl{[C1]}}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$}
+\AXC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \varphi_{10}$\lbl{A1}}
+\BIC{$\varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$\lbl{[S1]}}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to N \in \mathbb{N} \to a_{N} \in \mathbb{R}$}
+\AXC{$(\mathrm{Seq}(a) \to N \in \mathbb{N} \to a_{N} \in \mathbb{R}) \to \varphi_{70}$\lbl{A1}}
+\BIC{$\varphi_{70}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\varphi_{67}$\lbl{A1}}
+\AXC{$\varphi_{67} \to \varphi_{48}$\lbl{A1}}
+\BIC{$\varphi_{48}$}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{10}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \mathrm{Seq}(a)$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{70}$}
+\BIC{$\varphi_{48} \to \varphi_{51}$}
+\BIC{$\varphi_{51}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\varphi_{37}$\lbl{[C10]}}
+\AXC{$\varphi_{37} \to \forall \alpha\,\forall \beta\,(\varphi_{41})$\lbl{A2}}
+\BIC{$\forall \alpha\,\forall \beta\,(\varphi_{41})$}
+\AXC{$\forall \alpha\,\forall \beta\,(\varphi_{41}) \to \forall \beta\,(\varphi_{41})$\lbl{A2}}
+\BIC{$\forall \beta\,(\varphi_{41})$}
+\AXC{$\forall \beta\,(\varphi_{41}) \to \varphi_{41}$\lbl{A2}}
+\BIC{$\varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{51}$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{41}$}
+\AXC{$\varphi_{41} \to a_{N} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \varphi_{60}$\lbl{A2}}
+\BIC{$a_{N} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \varphi_{60}$}
+\AXC{$\varphi_{77}$\lbl{A1}}
+\BIC{$\varphi_{51} \to (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}) \to \varphi_{76}$}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}) \to \varphi_{76}$}
+\BIC{$\varphi_{76}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \varphi_{53}$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{76}$}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \varphi_{53}) \to (\mathrm{Conv}(a,\alpha) \to \varphi_{59}) \to \varphi_{71}$}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \varphi_{59}) \to \varphi_{71}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{63}$}
+\AXC{$\varphi_{63} \to \mathrm{Conv}(a,\alpha) \to \varphi_{58}$\lbl{A1}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \varphi_{58}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{63}$}
+\AXC{$\varphi_{63} \to \mathrm{Conv}(a,\alpha) \to \varphi_{59}$\lbl{A1}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \varphi_{59}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Conv}(a,\alpha) \to \varphi_{59}) \to \varphi_{71}$}
+\BIC{$\varphi_{71}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \varphi_{57}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\forall e \in \mathbb{R}\,(e \cdot 2^{-1} + e \cdot 2^{-1} = e)$\lbl{[F36]}}
+\AXC{$\forall e \in \mathbb{R}\,(e \cdot 2^{-1} + e \cdot 2^{-1} = e) \to \varphi_{19}$\lbl{A2}}
+\BIC{$\varphi_{19}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{54}$}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{19}$}
+\AXC{$\varphi_{19} \to \varphi_{54} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \varphi_{55}$\lbl{A1}}
+\BIC{$\varphi_{54} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \varphi_{55}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \varphi_{55}$}
+\AXC{$\varphi_{75}$\lbl{A1}}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \varphi_{57}) \to \varphi_{69}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \varphi_{57}$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \varphi_{57}) \to \varphi_{69}$}
+\BIC{$\varphi_{69}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{38}$}
+\AXC{$\varphi_{38} \to \lvert \alpha - \beta \rvert \cdot 2^{-1} + \lvert \alpha - \beta \rvert \cdot 2^{-1} = \lvert \alpha - \beta \rvert \to \varphi_{28}$\lbl{A2}}
+\BIC{$\lvert \alpha - \beta \rvert \cdot 2^{-1} + \lvert \alpha - \beta \rvert \cdot 2^{-1} = \lvert \alpha - \beta \rvert \to \varphi_{28}$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{69}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \varphi_{52}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \varphi_{52}$}
+\AXC{$(\mathrm{Conv}(a,\alpha) \to \varphi_{52}) \to \neg \lvert \alpha - \beta \rvert < \lvert \alpha - \beta \rvert \to \varphi_{46}$\lbl{A1}}
+\BIC{$\neg \lvert \alpha - \beta \rvert < \lvert \alpha - \beta \rvert \to \varphi_{46}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\forall x\,(\neg x < x)$\lbl{[O1]}}
+\AXC{$\forall x\,(\neg x < x) \to \neg \lvert \alpha - \beta \rvert < \lvert \alpha - \beta \rvert$\lbl{A2}}
+\BIC{$\neg \lvert \alpha - \beta \rvert < \lvert \alpha - \beta \rvert$}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\neg \lvert \alpha - \beta \rvert < \lvert \alpha - \beta \rvert \to \varphi_{46}$}
+\BIC{$\varphi_{46}$}
+\AXC{$\varphi_{46} \to \varphi_{47}$\lbl{A1}}
+\BIC{$\varphi_{47}$}
+\UIC{$\forall N\,(\varphi_{47})$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \neq y \to x - y \neq 0)$\lbl{[A15]}}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\BIC{$\forall y\,(\alpha \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \neq y \to \alpha - y \neq 0)$}
+\AXC{$\varphi_{27}$\lbl{A2}}
+\BIC{$\alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \alpha \neq \beta \to \alpha - \beta \neq 0$}
+\AXC{$(\alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \alpha \neq \beta \to \alpha - \beta \neq 0) \to \varphi_{45}$\lbl{A1}}
+\BIC{$\varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{45}$}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}) \to \varphi_{21}$}
+\BIC{$\varphi_{21}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{25}$\lbl{A2}}
+\BIC{$\forall y\,(\alpha \in \mathbb{R} \to y \in \mathbb{R} \to \alpha - y \in \mathbb{R})$}
+\AXC{$\varphi_{23}$\lbl{A2}}
+\BIC{$\alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \alpha - \beta \in \mathbb{R}$}
+\AXC{$\varphi_{49}$\lbl{A1}}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}) \to \varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}) \to \varphi_{22}$}
+\BIC{$\varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\varphi_{22}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \alpha - \beta \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to 0 < \lvert x \rvert)$\lbl{[A14]}}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$\alpha - \beta \in \mathbb{R} \to \alpha - \beta \neq 0 \to 0 < \lvert \alpha - \beta \rvert$}
+\AXC{$(\alpha - \beta \in \mathbb{R} \to \alpha - \beta \neq 0 \to 0 < \lvert \alpha - \beta \rvert) \to \varphi_{43}$\lbl{A1}}
+\BIC{$\varphi_{43}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \alpha - \beta \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\varphi_{43}$}
+\BIC{$\varphi_{29}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$\lbl{[A5]}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R}) \to \alpha - \beta \in \mathbb{R} \to \lvert \alpha - \beta \rvert \in \mathbb{R}$\lbl{A2}}
+\BIC{$\alpha - \beta \in \mathbb{R} \to \lvert \alpha - \beta \rvert \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\alpha - \beta \in \mathbb{R} \to \lvert \alpha - \beta \rvert \in \mathbb{R}$}
+\AXC{$(\alpha - \beta \in \mathbb{R} \to \lvert \alpha - \beta \rvert \in \mathbb{R}) \to \varphi_{30}$\lbl{A1}}
+\BIC{$\varphi_{30}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \alpha - \beta \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\varphi_{30}$}
+\BIC{$\varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\varphi_{9}$}
+\AXC{$\forall e \in \mathbb{R}\,(0 < e \to 0 < e \cdot 2^{-1})$\lbl{[F35]}}
+\AXC{$\varphi_{34}$\lbl{A2}}
+\BIC{$\lvert \alpha - \beta \rvert \in \mathbb{R} \to 0 < \lvert \alpha - \beta \rvert \to 0 < \lvert \alpha - \beta \rvert \cdot 2^{-1}$}
+\AXC{$\varphi_{62}$\lbl{A1}}
+\BIC{$\varphi_{9} \to \varphi_{6} \to \varphi_{13}$}
+\BIC{$\varphi_{6} \to \varphi_{13}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \alpha \neq \beta$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{21}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \alpha - \beta \neq 0$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{29}$}
+\BIC{$\varphi_{6}$}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$\varphi_{6} \to \varphi_{13}$}
+\BIC{$\varphi_{13}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$2^{-1} \in \mathbb{R}$\lbl{[F31]}}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\varphi_{9}$}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{33}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert \alpha - \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \alpha - \beta \rvert \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{39}$\lbl{A2}}
+\BIC{$\lvert \alpha - \beta \rvert \in \mathbb{R} \to 2^{-1} \in \mathbb{R} \to \lvert \alpha - \beta \rvert \cdot 2^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{61}$\lbl{A1}}
+\BIC{$\varphi_{9} \to 2^{-1} \in \mathbb{R} \to \varphi_{14}$}
+\BIC{$2^{-1} \in \mathbb{R} \to \varphi_{14}$}
+\BIC{$\varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,(\varphi_{42})$\lbl{[C9]}}
+\AXC{$\forall a\,\forall \alpha\,(\varphi_{42}) \to \forall \alpha\,(\varphi_{42})$\lbl{A2}}
+\BIC{$\forall \alpha\,(\varphi_{42})$}
+\AXC{$\forall \alpha\,(\varphi_{42}) \to \varphi_{42}$\lbl{A2}}
+\BIC{$\varphi_{42}$}
+\AXC{$\varphi_{42} \to \forall \beta\,(\varphi_{40})$\lbl{A2}}
+\BIC{$\forall \beta\,(\varphi_{40})$}
+\AXC{$\forall \beta\,(\varphi_{40}) \to \varphi_{40}$\lbl{A2}}
+\BIC{$\varphi_{40}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$\varphi_{40}$}
+\AXC{$\varphi_{40} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \varphi_{56}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \varphi_{56}$}
+\AXC{$\varphi_{73}$\lbl{A1}}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \varphi_{68}$}
+\BIC{$\varphi_{68}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\forall N\,(\varphi_{47})$}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$\varphi_{13}$}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\varphi_{14}$}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \mathrm{Conv}(a,\beta)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\varphi_{68}$}
+\BIC{$\varphi_{14} \to \varphi_{13} \to \varphi_{44}$}
+\BIC{$\varphi_{13} \to \varphi_{44}$}
+\BIC{$\varphi_{44}$}
+\AXC{$\varphi_{44} \to \varphi_{74}$\lbl{A1}}
+\BIC{$\varphi_{74}$}
+\BIC{$(\forall N\,(\varphi_{47}) \to \varphi_{3} \to \forall N\,(\neg (N \in \mathbb{N} \land \varphi_{31}))) \to \varphi_{36}$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$\forall N\,(\varphi_{47}) \to \varphi_{3} \to \forall N\,(\neg (N \in \mathbb{N} \land \varphi_{31}))$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$(\forall N\,(\varphi_{47}) \to \varphi_{3} \to \forall N\,(\neg (N \in \mathbb{N} \land \varphi_{31}))) \to \varphi_{36}$}
+\BIC{$\varphi_{36}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \land \mathrm{Conv}(a,\beta) \land \alpha \neq \beta \land \neg 0 < 0 \to \varphi_{3}$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$\varphi_{36}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to 0 < 0$}
+\AXC{$\varphi_{35}$\lbl{A1}}
+\BIC{$\varphi_{16}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\forall x\,(\neg x < x)$\lbl{[O1]}}
+\AXC{$\forall x\,(\neg x < x) \to \neg 0 < 0$\lbl{A2}}
+\BIC{$\neg 0 < 0$}
+\AXC{$\varphi_{4}$\lbl{A1}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \neg 0 < 0$}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\varphi_{16}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha = \beta$}
+\UIC{$\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha = \beta)$}
+\UIC{$\forall \alpha\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha = \beta)$}
+\UIC{$\varphi_{1}$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall a\,\forall \alpha\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha = \beta)$
+\item $\varphi_{2} :\equiv \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$
+\item $\varphi_{3} :\equiv \forall N\,(\mathrm{Conv}(a,\alpha) \land \mathrm{Conv}(a,\beta) \land \alpha \neq \beta \land \neg 0 < 0)$
+\item $\varphi_{4} :\equiv \neg 0 < 0 \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \neg 0 < 0$
+\item $\varphi_{5} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$
+\item $\varphi_{6} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to 0 < \lvert \alpha - \beta \rvert$
+\item $\varphi_{7} :\equiv \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}$
+\item $\varphi_{8} :\equiv \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}$
+\item $\varphi_{9} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \lvert \alpha - \beta \rvert \in \mathbb{R}$
+\item $\varphi_{10} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \mathrm{Seq}(a)$
+\item $\varphi_{11} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})$
+\item $\varphi_{12} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}$
+\item $\varphi_{13} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to 0 < \lvert \alpha - \beta \rvert \cdot 2^{-1}$
+\item $\varphi_{14} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \lvert \alpha - \beta \rvert \cdot 2^{-1} \in \mathbb{R}$
+\item $\varphi_{15} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \mathrm{Conv}(a,\beta)) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}$
+\item $\varphi_{16} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \neg 0 < 0) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha = \beta$
+\item $\varphi_{17} :\equiv \forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \mathrm{Seq}(a) \to N \in \mathbb{N} \to a_{N} \in \mathbb{R}$
+\item $\varphi_{18} :\equiv \forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$
+\item $\varphi_{19} :\equiv \lvert \alpha - \beta \rvert \in \mathbb{R} \to \lvert \alpha - \beta \rvert \cdot 2^{-1} + \lvert \alpha - \beta \rvert \cdot 2^{-1} = \lvert \alpha - \beta \rvert$
+\item $\varphi_{20} :\equiv \forall x \in \mathbb{R}\,(x \neq 0 \to 0 < \lvert x \rvert) \to \alpha - \beta \in \mathbb{R} \to \alpha - \beta \neq 0 \to 0 < \lvert \alpha - \beta \rvert$
+\item $\varphi_{21} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \alpha \neq \beta) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \alpha - \beta \neq 0$
+\item $\varphi_{22} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \alpha - \beta \in \mathbb{R}$
+\item $\varphi_{23} :\equiv \forall y\,(\alpha \in \mathbb{R} \to y \in \mathbb{R} \to \alpha - y \in \mathbb{R}) \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \alpha - \beta \in \mathbb{R}$
+\item $\varphi_{24} :\equiv \lvert a_{N} - \alpha \rvert < \lvert \alpha - \beta \rvert \cdot 2^{-1} \land \lvert a_{N} - \beta \rvert < \lvert \alpha - \beta \rvert \cdot 2^{-1}$
+\item $\varphi_{25} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(\alpha \in \mathbb{R} \to y \in \mathbb{R} \to \alpha - y \in \mathbb{R})$
+\item $\varphi_{26} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \neq y \to x - y \neq 0) \to \forall y\,(\alpha \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \neq y \to \alpha - y \neq 0)$
+\item $\varphi_{27} :\equiv \forall y\,(\alpha \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \neq y \to \alpha - y \neq 0) \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \alpha \neq \beta \to \alpha - \beta \neq 0$
+\item $\varphi_{28} :\equiv \lvert \alpha - \beta \rvert < \lvert \alpha - \beta \rvert \cdot 2^{-1} + \lvert \alpha - \beta \rvert \cdot 2^{-1} \to \lvert \alpha - \beta \rvert < \lvert \alpha - \beta \rvert$
+\item $\varphi_{29} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \alpha - \beta \neq 0) \to \varphi_{6}$
+\item $\varphi_{30} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \alpha - \beta \in \mathbb{R}) \to \varphi_{9}$
+\item $\varphi_{31} :\equiv \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \lvert \alpha - \beta \rvert \cdot 2^{-1} \land \lvert a_{n} - \beta \rvert < \lvert \alpha - \beta \rvert \cdot 2^{-1})$
+\item $\varphi_{32} :\equiv \lvert a_{N} - \beta \rvert < \lvert \alpha - \beta \rvert \cdot 2^{-1} \to \lvert \alpha - \beta \rvert < \lvert \alpha - \beta \rvert \cdot 2^{-1} + \lvert \alpha - \beta \rvert \cdot 2^{-1}$
+\item $\varphi_{33} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(\lvert \alpha - \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \alpha - \beta \rvert \cdot y \in \mathbb{R})$
+\item $\varphi_{34} :\equiv \forall e \in \mathbb{R}\,(0 < e \to 0 < e \cdot 2^{-1}) \to \lvert \alpha - \beta \rvert \in \mathbb{R} \to 0 < \lvert \alpha - \beta \rvert \to 0 < \lvert \alpha - \beta \rvert \cdot 2^{-1}$
+\item $\varphi_{35} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to 0 < 0) \to \varphi_{16}$
+\item $\varphi_{36} :\equiv (\mathrm{Conv}(a,\alpha) \land \mathrm{Conv}(a,\beta) \land \alpha \neq \beta \land \neg 0 < 0 \to \varphi_{3}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to 0 < 0$
+\item $\varphi_{37} :\equiv \forall x\,\forall \alpha\,\forall \beta\,\forall \varepsilon\,(x \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \lvert x - \alpha \rvert < \varepsilon \to \lvert x - \beta \rvert < \varepsilon \to \lvert \alpha - \beta \rvert < \varepsilon + \varepsilon)$
+\item $\varphi_{38} :\equiv \forall w\,(\lvert \alpha - \beta \rvert \cdot 2^{-1} + \lvert \alpha - \beta \rvert \cdot 2^{-1} = w \to \lvert \alpha - \beta \rvert < \lvert \alpha - \beta \rvert \cdot 2^{-1} + \lvert \alpha - \beta \rvert \cdot 2^{-1} \to \lvert \alpha - \beta \rvert < w)$
+\item $\varphi_{39} :\equiv \forall y\,(\lvert \alpha - \beta \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \alpha - \beta \rvert \cdot y \in \mathbb{R}) \to \lvert \alpha - \beta \rvert \in \mathbb{R} \to 2^{-1} \in \mathbb{R} \to \lvert \alpha - \beta \rvert \cdot 2^{-1} \in \mathbb{R}$
+\item $\varphi_{40} :\equiv \forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert a_{n} - \beta \rvert < \varepsilon))$
+\item $\varphi_{41} :\equiv \forall \varepsilon\,(a_{N} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \lvert a_{N} - \alpha \rvert < \varepsilon \to \lvert a_{N} - \beta \rvert < \varepsilon \to \lvert \alpha - \beta \rvert < \varepsilon + \varepsilon)$
+\item $\varphi_{42} :\equiv \forall b\,\forall \beta\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \beta \rvert < \varepsilon))$
+\item $\varphi_{43} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \alpha - \beta \in \mathbb{R}) \to \varphi_{29}$
+\item $\varphi_{44} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \exists N \in \mathbb{N}\,(\varphi_{31})$
+\item $\varphi_{45} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}) \to (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}) \to \varphi_{21}$
+\item $\varphi_{46} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to 0 < 0$
+\item $\varphi_{47} :\equiv \mathrm{Conv}(a,\alpha) \land \mathrm{Conv}(a,\beta) \land \alpha \neq \beta \land \neg 0 < 0 \to \neg (N \in \mathbb{N} \land \varphi_{31})$
+\item $\varphi_{48} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to N \in \mathbb{N}$
+\item $\varphi_{49} :\equiv (\alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \alpha - \beta \in \mathbb{R}) \to (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}) \to \varphi_{22}$
+\item $\varphi_{50} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to \alpha - \beta \in \mathbb{R}$
+\item $\varphi_{51} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to a_{N} \in \mathbb{R}$
+\item $\varphi_{52} :\equiv \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to \lvert \alpha - \beta \rvert < \lvert \alpha - \beta \rvert$
+\item $\varphi_{53} :\equiv \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to \lvert \alpha - \beta \rvert \cdot 2^{-1} \in \mathbb{R}$
+\item $\varphi_{54} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to \lvert \alpha - \beta \rvert \in \mathbb{R}$
+\item $\varphi_{55} :\equiv N \in \mathbb{N} \land \varphi_{31} \to \lvert \alpha - \beta \rvert \cdot 2^{-1} + \lvert \alpha - \beta \rvert \cdot 2^{-1} = \lvert \alpha - \beta \rvert$
+\item $\varphi_{56} :\equiv \lvert \alpha - \beta \rvert \cdot 2^{-1} \in \mathbb{R} \to 0 < \lvert \alpha - \beta \rvert \cdot 2^{-1} \to \exists N \in \mathbb{N}\,(\varphi_{31})$
+\item $\varphi_{57} :\equiv N \in \mathbb{N} \land \varphi_{31} \to \lvert \alpha - \beta \rvert < \lvert \alpha - \beta \rvert \cdot 2^{-1} + \lvert \alpha - \beta \rvert \cdot 2^{-1}$
+\item $\varphi_{58} :\equiv \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to \lvert a_{N} - \beta \rvert < \lvert \alpha - \beta \rvert \cdot 2^{-1}$
+\item $\varphi_{59} :\equiv \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to \lvert a_{N} - \alpha \rvert < \lvert \alpha - \beta \rvert \cdot 2^{-1}$
+\item $\varphi_{60} :\equiv \lvert \alpha - \beta \rvert \cdot 2^{-1} \in \mathbb{R} \to \lvert a_{N} - \alpha \rvert < \lvert \alpha - \beta \rvert \cdot 2^{-1} \to \varphi_{32}$
+\item $\varphi_{61} :\equiv (\lvert \alpha - \beta \rvert \in \mathbb{R} \to 2^{-1} \in \mathbb{R} \to \lvert \alpha - \beta \rvert \cdot 2^{-1} \in \mathbb{R}) \to \varphi_{9} \to 2^{-1} \in \mathbb{R} \to \varphi_{14}$
+\item $\varphi_{62} :\equiv (\lvert \alpha - \beta \rvert \in \mathbb{R} \to 0 < \lvert \alpha - \beta \rvert \to 0 < \lvert \alpha - \beta \rvert \cdot 2^{-1}) \to \varphi_{9} \to \varphi_{6} \to \varphi_{13}$
+\item $\varphi_{63} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to \varphi_{24}$
+\item $\varphi_{64} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}) \to (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}) \to \varphi_{50}$
+\item $\varphi_{65} :\equiv \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to N \in \mathbb{N} \to N \leq N \to \varphi_{24}$
+\item $\varphi_{66} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to \varphi_{31}$
+\item $\varphi_{67} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to N \in \mathbb{N} \land \varphi_{31} \to N \in \mathbb{N} \land \varphi_{31}$
+\item $\varphi_{68} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \mathrm{Conv}(a,\beta)) \to \varphi_{14} \to \varphi_{13} \to \varphi_{44}$
+\item $\varphi_{69} :\equiv (\lvert \alpha - \beta \rvert \cdot 2^{-1} + \lvert \alpha - \beta \rvert \cdot 2^{-1} = \lvert \alpha - \beta \rvert \to \varphi_{28}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{52}$
+\item $\varphi_{70} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \mathrm{Seq}(a)) \to \varphi_{48} \to \varphi_{51}$
+\item $\varphi_{71} :\equiv (\mathrm{Conv}(a,\alpha) \to \varphi_{58}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \varphi_{57}$
+\item $\varphi_{72} :\equiv (\lvert \alpha - \beta \rvert \in \mathbb{R} \to 2^{-1} \in \mathbb{R} \to \lvert \alpha - \beta \rvert \cdot 2^{-1} \in \mathbb{R}) \to \varphi_{54} \to 2^{-1} \in \mathbb{R} \to \mathrm{Conv}(a,\alpha) \to \varphi_{53}$
+\item $\varphi_{73} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \varphi_{56}) \to (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \varphi_{68}$
+\item $\varphi_{74} :\equiv \forall N\,(\varphi_{47}) \to (\forall N\,(\varphi_{47}) \to \varphi_{3} \to \forall N\,(\neg (N \in \mathbb{N} \land \varphi_{31}))) \to \varphi_{36}$
+\item $\varphi_{75} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \varphi_{55}) \to (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \neq \beta \to \varphi_{57}) \to \varphi_{69}$
+\item $\varphi_{76} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \beta \in \mathbb{R}) \to (\mathrm{Conv}(a,\alpha) \to \varphi_{53}) \to (\mathrm{Conv}(a,\alpha) \to \varphi_{59}) \to \varphi_{71}$
+\item $\varphi_{77} :\equiv (a_{N} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \varphi_{60}) \to \varphi_{51} \to (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha \in \mathbb{R}) \to \varphi_{76}$
+\end{abbrevlist}
+\end{fullproof}

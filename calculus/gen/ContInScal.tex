@@ -1,0 +1,1093 @@
+% 自動生成 (prover/build.js): ContInScal  ノード数 416
+\begin{fullproof}{定理2.3(定数倍)}{$\forall l\,\forall f\,\forall A\,\forall c\,(l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}((l f),A,c))$}{416}\phantomsection\label{tree:ContInScal}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\varphi_{22}$\lbl{A6}}
+\UIC{$\forall w\,(\varphi_{22})$}
+\UIC{$\forall z\,\forall w\,(\varphi_{22})$}
+\AXC{$\forall z\,\forall w\,(\varphi_{22}) \to \varphi_{82}$\lbl{A2}}
+\BIC{$\varphi_{82}$}
+\AXC{$\varphi_{82} \to l \cdot f(c) = (l f)(c) \to \varphi_{73}$\lbl{A2}}
+\BIC{$l \cdot f(c) = (l f)(c) \to \varphi_{73}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\AXC{$\varphi_{95}$\lbl{[G1]}}
+\AXC{$\varphi_{153}$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29})$}
+\AXC{$\varphi_{150}$\lbl{A2}}
+\BIC{$\forall c\,\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29})$}
+\AXC{$\varphi_{148}$\lbl{A2}}
+\BIC{$\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29})$}
+\AXC{$\varphi_{146}$\lbl{A2}}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29}$}
+\AXC{$\varphi_{201}$\lbl{A1}}
+\BIC{$\varphi_{1} \to \varphi_{2} \to (l \in \mathbb{R} \to \varphi_{69}) \to \varphi_{147}$}
+\BIC{$\varphi_{2} \to (l \in \mathbb{R} \to \varphi_{69}) \to \varphi_{147}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{8}$\lbl{A1}}
+\AXC{$l \in \mathbb{R} \to \varphi_{69}$\lbl{A1}}
+\AXC{$\varphi_{2}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{2} \to (l \in \mathbb{R} \to \varphi_{69}) \to \varphi_{147}$}
+\BIC{$(l \in \mathbb{R} \to \varphi_{69}) \to \varphi_{147}$}
+\BIC{$\varphi_{147}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\varphi_{13}$\lbl{定理2.1(2)}}
+\AXC{$\varphi_{13} \to \varphi_{10}$\lbl{A2}}
+\BIC{$\varphi_{10}$}
+\AXC{$\varphi_{10} \to \varphi_{42}$\lbl{A2}}
+\BIC{$\varphi_{42}$}
+\AXC{$\varphi_{42} \to l \in \mathbb{R} \to \varphi_{25}$\lbl{A2}}
+\BIC{$l \in \mathbb{R} \to \varphi_{25}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{25}) \to (l \in \mathbb{R} \to l \in \mathbb{R}) \to \varphi_{157}$\lbl{A1}}
+\BIC{$(l \in \mathbb{R} \to l \in \mathbb{R}) \to \varphi_{157}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29}$}
+\AXC{$l \in \mathbb{R} \to l \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$(l \in \mathbb{R} \to l \in \mathbb{R}) \to \varphi_{157}$}
+\BIC{$\varphi_{157}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{64}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{63}$\lbl{A2}}
+\BIC{$\forall y\,((l f) \circ a(n) = y \to y = (l f) \circ a(n))$}
+\AXC{$\forall y\,((l f) \circ a(n) = y \to y = (l f) \circ a(n)) \to \varphi_{100}$\lbl{A2}}
+\BIC{$\varphi_{100}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{43}$\lbl{A2}}
+\BIC{$\varphi_{43}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{57}$\lbl{A2}}
+\BIC{$\forall y\,(l \odot f \circ a(n) = y \to y = l \odot f \circ a(n))$}
+\AXC{$\forall y\,(l \odot f \circ a(n) = y \to y = l \odot f \circ a(n)) \to \varphi_{91}$\lbl{A2}}
+\BIC{$\varphi_{91}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{34}$\lbl{A2}}
+\BIC{$\varphi_{34}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$z = w \to l \cdot f \circ a(n) = l \cdot z \to l \cdot f \circ a(n) = l \cdot w$\lbl{A6}}
+\UIC{$\varphi_{36}$}
+\UIC{$\forall z\,(\varphi_{36})$}
+\AXC{$\forall z\,(\varphi_{36}) \to \varphi_{97}$\lbl{A2}}
+\BIC{$\varphi_{97}$}
+\AXC{$\varphi_{97} \to f \circ a(n) = f(a_{n}) \to \varphi_{88}$\lbl{A2}}
+\BIC{$f \circ a(n) = f(a_{n}) \to \varphi_{88}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A$\lbl{A2}}
+\AXC{$l \in \mathbb{R} \to \varphi_{69}$\lbl{A1}}
+\AXC{$\varphi_{169}$\lbl{A1}}
+\BIC{$(\forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A) \to l \in \mathbb{R} \to \varphi_{61}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{61}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{61}) \to \varphi_{152}$\lbl{A1}}
+\BIC{$\varphi_{152}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{152}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{26}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{139})$\lbl{DefContIn}}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{139}) \to \forall A\,\forall c\,(\varphi_{139})$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,(\varphi_{139})$}
+\AXC{$\forall A\,\forall c\,(\varphi_{139}) \to \forall c\,(\varphi_{139})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{139})$}
+\AXC{$\forall c\,(\varphi_{139}) \to \varphi_{139}$\lbl{A2}}
+\BIC{$\varphi_{139}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{139}$}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\AXC{$\varphi_{171}$\lbl{A1}}
+\BIC{$\varphi_{139} \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}(f)$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}(f)$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y)$\lbl{[B5]}}
+\AXC{$\varphi_{37}$\lbl{A2}}
+\BIC{$\forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y)$}
+\AXC{$\varphi_{50}$\lbl{A2}}
+\BIC{$\forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f))$}
+\AXC{$\varphi_{85}$\lbl{A2}}
+\BIC{$A \subseteq \mathrm{dom}(f) \to a_{n} \in A \to a_{n} \in \mathrm{dom}(f)$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$A \subseteq \mathrm{dom}(f) \to a_{n} \in A \to a_{n} \in \mathrm{dom}(f)$}
+\AXC{$(A \subseteq \mathrm{dom}(f) \to a_{n} \in A \to a_{n} \in \mathrm{dom}(f)) \to \varphi_{172}$\lbl{A1}}
+\BIC{$\varphi_{172}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{26}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}(f)$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{172}$}
+\BIC{$\varphi_{155}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{44}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\varphi_{159}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{44}$}
+\AXC{$\varphi_{156}$\lbl{A1}}
+\BIC{$\varphi_{54} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)$}
+\UIC{$\forall n\,(\varphi_{54} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f))$}
+\AXC{$\forall n\,(\varphi_{54} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)) \to \varphi_{159} \to \varphi_{175}$\lbl{A1}}
+\BIC{$\varphi_{159} \to \varphi_{175}$}
+\BIC{$\varphi_{175}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{139})$\lbl{DefContIn}}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{139}) \to \forall A\,\forall c\,(\varphi_{139})$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,(\varphi_{139})$}
+\AXC{$\forall A\,\forall c\,(\varphi_{139}) \to \forall c\,(\varphi_{139})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{139})$}
+\AXC{$\forall c\,(\varphi_{139}) \to \varphi_{139}$\lbl{A2}}
+\BIC{$\varphi_{139}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{139}$}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\AXC{$\varphi_{1} \to \varphi_{139} \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}(f)$\lbl{A1}}
+\BIC{$\varphi_{139} \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}(f)$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}(f)$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{94})$\lbl{[S8]}}
+\AXC{$\varphi_{170}$\lbl{A2}}
+\BIC{$\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{94})$}
+\AXC{$\varphi_{166}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{94}$}
+\AXC{$(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{94}) \to \varphi_{190}$\lbl{A1}}
+\BIC{$\varphi_{190}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\varphi_{54} \to \forall n\,(\varphi_{54})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{175}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{53}$}
+\AXC{$\varphi_{2}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}(f)$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{190}$}
+\BIC{$\varphi_{2} \to \varphi_{173}$}
+\BIC{$\varphi_{173}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{125}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\varphi_{92}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{125}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{125}) \to l \in \mathbb{R} \to \varphi_{114}$\lbl{A1}}
+\BIC{$l \in \mathbb{R} \to \varphi_{114}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{114}) \to \varphi_{92} \to l \in \mathbb{R} \to \varphi_{108}$\lbl{A1}}
+\BIC{$\varphi_{92} \to l \in \mathbb{R} \to \varphi_{108}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{108}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{108}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{108}) \to \varphi_{158}$\lbl{A1}}
+\BIC{$\varphi_{158}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{77}$}
+\AXC{$\varphi_{199}$\lbl{A1}}
+\BIC{$\varphi_{187}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$\lbl{[C1]}}
+\AXC{$\varphi_{38}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{Conv}(f \circ a,\alpha) \to \mathrm{Seq}(f \circ a))$}
+\AXC{$\varphi_{83}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(f \circ a,f(c)) \to \mathrm{Seq}(f \circ a)$}
+\AXC{$(\mathrm{Conv}(f \circ a,f(c)) \to \mathrm{Seq}(f \circ a)) \to \varphi_{151}$\lbl{A1}}
+\BIC{$\varphi_{151}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\varphi_{76}$\lbl{[S3]}}
+\AXC{$\varphi_{76} \to \varphi_{70}$\lbl{A2}}
+\BIC{$\varphi_{70}$}
+\AXC{$\varphi_{70} \to l \in \mathbb{R} \to \mathrm{Seq}(f \circ a) \to \varphi_{84}$\lbl{A2}}
+\BIC{$l \in \mathbb{R} \to \mathrm{Seq}(f \circ a) \to \varphi_{84}$}
+\AXC{$(l \in \mathbb{R} \to \mathrm{Seq}(f \circ a) \to \varphi_{84}) \to \varphi_{182}$\lbl{A1}}
+\BIC{$\varphi_{182}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29}$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\varphi_{151}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{27}$}
+\AXC{$l \in \mathbb{R} \to l \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{182}$}
+\BIC{$(l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{27}) \to l \in \mathbb{R} \to \varphi_{134}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{134}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\varphi_{118}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{134}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{134}) \to l \in \mathbb{R} \to \varphi_{131}$\lbl{A1}}
+\BIC{$l \in \mathbb{R} \to \varphi_{131}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{131}) \to \varphi_{118} \to l \in \mathbb{R} \to \varphi_{129}$\lbl{A1}}
+\BIC{$\varphi_{118} \to l \in \mathbb{R} \to \varphi_{129}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{129}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{129}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{129}) \to \varphi_{163}$\lbl{A1}}
+\BIC{$\varphi_{163}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{117}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{117}) \to \varphi_{196}$\lbl{A1}}
+\BIC{$\varphi_{196}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$f \circ a(n) = f(a_{n}) \to \varphi_{88}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to l \cdot f \circ a(n) = l \cdot f \circ a(n)$\lbl{A2}}
+\BIC{$l \cdot f \circ a(n) = l \cdot f \circ a(n)$}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{187}$}
+\BIC{$(f \circ a(n) = f(a_{n}) \to \varphi_{88}) \to l \in \mathbb{R} \to \varphi_{106}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{106}$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\varphi_{196}$}
+\BIC{$(l \odot f \circ a(n) = l \cdot f \circ a(n) \to \varphi_{87}) \to l \in \mathbb{R} \to \varphi_{109}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{34}$}
+\AXC{$\varphi_{34} \to \varphi_{101}$\lbl{A2}}
+\BIC{$\varphi_{101}$}
+\AXC{$\varphi_{101} \to l \odot f \circ a(n) = l \cdot f \circ a(n) \to \varphi_{87}$\lbl{A2}}
+\BIC{$l \odot f \circ a(n) = l \cdot f \circ a(n) \to \varphi_{87}$}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$(l \odot f \circ a(n) = l \cdot f \circ a(n) \to \varphi_{87}) \to l \in \mathbb{R} \to \varphi_{109}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{109}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{43}$\lbl{A2}}
+\BIC{$\varphi_{43}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{43}$}
+\AXC{$\varphi_{43} \to \varphi_{104}$\lbl{A2}}
+\BIC{$\varphi_{104}$}
+\AXC{$\varphi_{104} \to (l f) \circ a(n) = (l f)(a_{n}) \to \varphi_{89}$\lbl{A2}}
+\BIC{$(l f) \circ a(n) = (l f)(a_{n}) \to \varphi_{89}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\forall l\,\forall f\,(l \in \mathbb{R} \to \mathrm{RFn}(f) \to \varphi_{105})$\lbl{[S19]}}
+\AXC{$\varphi_{178}$\lbl{A2}}
+\BIC{$\forall f\,(l \in \mathbb{R} \to \mathrm{RFn}(f) \to \varphi_{105})$}
+\AXC{$\varphi_{176}$\lbl{A2}}
+\BIC{$l \in \mathbb{R} \to \mathrm{RFn}(f) \to \varphi_{105}$}
+\AXC{$(l \in \mathbb{R} \to \mathrm{RFn}(f) \to \varphi_{105}) \to (l \in \mathbb{R} \to l \in \mathbb{R}) \to \varphi_{143}$\lbl{A1}}
+\BIC{$(l \in \mathbb{R} \to l \in \mathbb{R}) \to \varphi_{143}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}(f)$}
+\AXC{$l \in \mathbb{R} \to l \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$(l \in \mathbb{R} \to l \in \mathbb{R}) \to \varphi_{143}$}
+\BIC{$\varphi_{143}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{105}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{105}$}
+\AXC{$(l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{105}) \to l \in \mathbb{R} \to \varphi_{9}$\lbl{A1}}
+\BIC{$l \in \mathbb{R} \to \varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\varphi_{79}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{9}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{9}) \to \varphi_{79} \to l \in \mathbb{R} \to \varphi_{20}$\lbl{A1}}
+\BIC{$\varphi_{79} \to l \in \mathbb{R} \to \varphi_{20}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{20}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A$\lbl{A2}}
+\AXC{$l \in \mathbb{R} \to \varphi_{69}$\lbl{A1}}
+\AXC{$\varphi_{169}$\lbl{A1}}
+\BIC{$(\forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A) \to l \in \mathbb{R} \to \varphi_{61}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{61}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{61}) \to \varphi_{152}$\lbl{A1}}
+\BIC{$\varphi_{152}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\varphi_{152}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{26}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$\forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y)$\lbl{[B5]}}
+\AXC{$\varphi_{37}$\lbl{A2}}
+\BIC{$\forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y)$}
+\AXC{$\varphi_{50}$\lbl{A2}}
+\BIC{$\forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f))$}
+\AXC{$\varphi_{85}$\lbl{A2}}
+\BIC{$A \subseteq \mathrm{dom}(f) \to a_{n} \in A \to a_{n} \in \mathrm{dom}(f)$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$A \subseteq \mathrm{dom}(f) \to a_{n} \in A \to a_{n} \in \mathrm{dom}(f)$}
+\AXC{$(A \subseteq \mathrm{dom}(f) \to a_{n} \in A \to a_{n} \in \mathrm{dom}(f)) \to \varphi_{172}$\lbl{A1}}
+\BIC{$\varphi_{172}$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{26}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}(f)$}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$\varphi_{172}$}
+\BIC{$\varphi_{155}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{44}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{20}$}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{44}$}
+\AXC{$\varphi_{185}$\lbl{A1}}
+\BIC{$\varphi_{149}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{65}$}
+\AXC{$\varphi_{161}$\lbl{A1}}
+\BIC{$\varphi_{54} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}((l f))$}
+\UIC{$\forall n\,(\varphi_{54} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}((l f)))$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$\varphi_{167}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\forall n\,(\varphi_{54} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}((l f)))$}
+\AXC{$\forall n\,(\varphi_{54} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}((l f))) \to \varphi_{167} \to \varphi_{179}$\lbl{A1}}
+\BIC{$\varphi_{167} \to \varphi_{179}$}
+\BIC{$\varphi_{179}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$\varphi_{54} \to \forall n\,(\varphi_{54})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$\varphi_{179}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{71}$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{105}$}
+\AXC{$(l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{105}) \to l \in \mathbb{R} \to \varphi_{41}$\lbl{A1}}
+\BIC{$l \in \mathbb{R} \to \varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$\varphi_{122}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{41}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{41}) \to \varphi_{122} \to l \in \mathbb{R} \to \varphi_{80}$\lbl{A1}}
+\BIC{$\varphi_{122} \to l \in \mathbb{R} \to \varphi_{80}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{80}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{80}) \to \varphi_{192}$\lbl{A1}}
+\BIC{$\varphi_{192}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$\varphi_{68}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{71}$}
+\AXC{$\varphi_{189}$\lbl{A1}}
+\BIC{$\varphi_{68} \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{65}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{65}$}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$\varphi_{192}$}
+\BIC{$\varphi_{160}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{105}$}
+\AXC{$\varphi_{145}$\lbl{A1}}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}((l f))$}
+\end{ptree}
+\noindent$\Pi_{51}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{94})$\lbl{[S8]}}
+\AXC{$\forall f\,\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{94}) \to \forall a\,(\varphi_{137})$\lbl{A2}}
+\BIC{$\forall a\,(\varphi_{137})$}
+\AXC{$\forall a\,(\varphi_{137}) \to \varphi_{137}$\lbl{A2}}
+\BIC{$\varphi_{137}$}
+\end{ptree}
+\noindent$\Pi_{52}$:
+\begin{ptree}
+\AXC{$\varphi_{2}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}((l f))$}
+\AXC{$\stackrel{\Pi_{51}}{\vdots}$}\noLine
+\UIC{$\varphi_{137}$}
+\AXC{$\varphi_{137} \to \varphi_{195}$\lbl{A1}}
+\BIC{$\varphi_{195}$}
+\BIC{$\varphi_{2} \to \varphi_{183}$}
+\BIC{$\varphi_{183}$}
+\end{ptree}
+\noindent$\Pi_{53}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{71}$}
+\AXC{$\stackrel{\Pi_{52}}{\vdots}$}\noLine
+\UIC{$\varphi_{183}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{135}$}
+\end{ptree}
+\noindent$\Pi_{54}$:
+\begin{ptree}
+\AXC{$\varphi_{120}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{53}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{135}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{135}) \to l \in \mathbb{R} \to \varphi_{132}$\lbl{A1}}
+\BIC{$l \in \mathbb{R} \to \varphi_{132}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{132}) \to \varphi_{120} \to l \in \mathbb{R} \to \varphi_{130}$\lbl{A1}}
+\BIC{$\varphi_{120} \to l \in \mathbb{R} \to \varphi_{130}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{130}$}
+\end{ptree}
+\noindent$\Pi_{55}$:
+\begin{ptree}
+\AXC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{54}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{130}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{130}) \to \varphi_{164}$\lbl{A1}}
+\BIC{$\varphi_{164}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{119}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{119}) \to \varphi_{197}$\lbl{A1}}
+\BIC{$\varphi_{197}$}
+\end{ptree}
+\noindent$\Pi_{56}$:
+\begin{ptree}
+\AXC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$\varphi_{160}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{107}$}
+\AXC{$\stackrel{\Pi_{55}}{\vdots}$}\noLine
+\UIC{$\varphi_{197}$}
+\BIC{$((l f) \circ a(n) = (l f)(a_{n}) \to \varphi_{89}) \to l \in \mathbb{R} \to \varphi_{113}$}
+\end{ptree}
+\noindent$\Pi_{57}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$(l f) \circ a(n) = (l f)(a_{n}) \to \varphi_{89}$}
+\AXC{$\stackrel{\Pi_{56}}{\vdots}$}\noLine
+\UIC{$((l f) \circ a(n) = (l f)(a_{n}) \to \varphi_{89}) \to l \in \mathbb{R} \to \varphi_{113}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{113}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{113}) \to \varphi_{198}$\lbl{A1}}
+\BIC{$\varphi_{198}$}
+\end{ptree}
+\noindent$\Pi_{58}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{91}$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{109}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{109}) \to \varphi_{91} \to l \in \mathbb{R} \to \varphi_{110}$\lbl{A1}}
+\BIC{$\varphi_{91} \to l \in \mathbb{R} \to \varphi_{110}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{110}$}
+\AXC{$\stackrel{\Pi_{57}}{\vdots}$}\noLine
+\UIC{$\varphi_{198}$}
+\BIC{$((l f) \circ a(n) = l \cdot f(a_{n}) \to \varphi_{93}) \to l \in \mathbb{R} \to \varphi_{123}$}
+\end{ptree}
+\noindent$\Pi_{59}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{43}$}
+\AXC{$\varphi_{43} \to \varphi_{96}$\lbl{A2}}
+\BIC{$\varphi_{96}$}
+\AXC{$\varphi_{96} \to (l f) \circ a(n) = l \cdot f(a_{n}) \to \varphi_{93}$\lbl{A2}}
+\BIC{$(l f) \circ a(n) = l \cdot f(a_{n}) \to \varphi_{93}$}
+\AXC{$\stackrel{\Pi_{58}}{\vdots}$}\noLine
+\UIC{$((l f) \circ a(n) = l \cdot f(a_{n}) \to \varphi_{93}) \to l \in \mathbb{R} \to \varphi_{123}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{123}$}
+\end{ptree}
+\noindent$\Pi_{60}$:
+\begin{ptree}
+\AXC{$\varphi_{184}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{100}$}
+\AXC{$\stackrel{\Pi_{59}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{123}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{123}) \to \varphi_{100} \to l \in \mathbb{R} \to \varphi_{124}$\lbl{A1}}
+\BIC{$\varphi_{100} \to l \in \mathbb{R} \to \varphi_{124}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{124}$}
+\AXC{$\varphi_{181}$\lbl{A1}}
+\BIC{$\varphi_{54} \to n \in \mathbb{N} \to l \odot f \circ a(n) = (l f) \circ a(n)$}
+\UIC{$\forall n\,(\varphi_{54} \to n \in \mathbb{N} \to l \odot f \circ a(n) = (l f) \circ a(n))$}
+\AXC{$\varphi_{203}$\lbl{A1}}
+\BIC{$\varphi_{184} \to (\varphi_{54} \to \forall n\,(\varphi_{54})) \to l \in \mathbb{R} \to \varphi_{126}$}
+\BIC{$(\varphi_{54} \to \forall n\,(\varphi_{54})) \to l \in \mathbb{R} \to \varphi_{126}$}
+\end{ptree}
+\noindent$\Pi_{61}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{53}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{135}$}
+\AXC{$\varphi_{177}$\lbl{A1}}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{28}$}
+\AXC{$\varphi_{48}$\lbl{[C13]}}
+\AXC{$\varphi_{48} \to \varphi_{98}$\lbl{A2}}
+\BIC{$\varphi_{98}$}
+\AXC{$\varphi_{98} \to \varphi_{136}$\lbl{A2}}
+\BIC{$\varphi_{136}$}
+\AXC{$\varphi_{136} \to \varphi_{144}$\lbl{A2}}
+\BIC{$\varphi_{144}$}
+\AXC{$\varphi_{144} \to \varphi_{202}$\lbl{A1}}
+\BIC{$\varphi_{202}$}
+\BIC{$(l \in \mathbb{R} \to \varphi_{126}) \to \varphi_{162}$}
+\end{ptree}
+\noindent$\Pi_{62}$:
+\begin{ptree}
+\AXC{$\varphi_{54} \to \forall n\,(\varphi_{54})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{60}}{\vdots}$}\noLine
+\UIC{$(\varphi_{54} \to \forall n\,(\varphi_{54})) \to l \in \mathbb{R} \to \varphi_{126}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{126}$}
+\AXC{$\stackrel{\Pi_{61}}{\vdots}$}\noLine
+\UIC{$(l \in \mathbb{R} \to \varphi_{126}) \to \varphi_{162}$}
+\BIC{$\varphi_{162}$}
+\end{ptree}
+\noindent$\Pi_{63}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{139})$\lbl{DefContIn}}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{139}) \to \forall A\,\forall c\,(\varphi_{139})$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,(\varphi_{139})$}
+\AXC{$\forall A\,\forall c\,(\varphi_{139}) \to \forall c\,(\varphi_{139})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{139})$}
+\AXC{$\forall c\,(\varphi_{139}) \to \varphi_{139}$\lbl{A2}}
+\BIC{$\varphi_{139}$}
+\end{ptree}
+\noindent$\Pi_{64}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{63}}{\vdots}$}\noLine
+\UIC{$\varphi_{139}$}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\AXC{$\varphi_{1} \to \varphi_{139} \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to c \in A$\lbl{A1}}
+\BIC{$\varphi_{139} \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to c \in A$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to c \in A$}
+\end{ptree}
+\noindent$\Pi_{65}$:
+\begin{ptree}
+\AXC{$\forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y)$\lbl{[B5]}}
+\AXC{$\varphi_{37}$\lbl{A2}}
+\BIC{$\forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y)$}
+\AXC{$\varphi_{50}$\lbl{A2}}
+\BIC{$\forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f))$}
+\AXC{$\varphi_{58}$\lbl{A2}}
+\BIC{$A \subseteq \mathrm{dom}(f) \to c \in A \to c \in \mathrm{dom}(f)$}
+\end{ptree}
+\noindent$\Pi_{66}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{65}}{\vdots}$}\noLine
+\UIC{$A \subseteq \mathrm{dom}(f) \to c \in A \to c \in \mathrm{dom}(f)$}
+\AXC{$(A \subseteq \mathrm{dom}(f) \to c \in A \to c \in \mathrm{dom}(f)) \to \varphi_{140}$\lbl{A1}}
+\BIC{$\varphi_{140}$}
+\end{ptree}
+\noindent$\Pi_{67}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{64}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to c \in A$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}(f)$}
+\AXC{$\stackrel{\Pi_{66}}{\vdots}$}\noLine
+\UIC{$\varphi_{140}$}
+\BIC{$\varphi_{115}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{18}$}
+\end{ptree}
+\noindent$\Pi_{68}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{67}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{18}$}
+\AXC{$(l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{18}) \to \varphi_{138}$\lbl{A1}}
+\BIC{$\varphi_{138}$}
+\end{ptree}
+\noindent$\Pi_{69}$:
+\begin{ptree}
+\AXC{$\varphi_{102}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{41}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{41}) \to \varphi_{102} \to l \in \mathbb{R} \to \varphi_{31}$\lbl{A1}}
+\BIC{$\varphi_{102} \to l \in \mathbb{R} \to \varphi_{31}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{31}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{31}) \to \varphi_{154}$\lbl{A1}}
+\BIC{$\varphi_{154}$}
+\end{ptree}
+\noindent$\Pi_{70}$:
+\begin{ptree}
+\AXC{$\varphi_{51}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{9}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{9}) \to \varphi_{51} \to l \in \mathbb{R} \to \varphi_{6}$\lbl{A1}}
+\BIC{$\varphi_{51} \to l \in \mathbb{R} \to \varphi_{6}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{6}$}
+\AXC{$\stackrel{\Pi_{68}}{\vdots}$}\noLine
+\UIC{$\varphi_{138}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{19}$}
+\AXC{$\stackrel{\Pi_{69}}{\vdots}$}\noLine
+\UIC{$\varphi_{154}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{45}$}
+\AXC{$\varphi_{180}$\lbl{A1}}
+\BIC{$\varphi_{142}$}
+\end{ptree}
+\noindent$\Pi_{71}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$\forall y\,((l f)(c) = y \to y = (l f)(c))$}
+\AXC{$\varphi_{99}$\lbl{A2}}
+\BIC{$(l f)(c) = l \cdot f(c) \to l \cdot f(c) = (l f)(c)$}
+\AXC{$\stackrel{\Pi_{70}}{\vdots}$}\noLine
+\UIC{$\varphi_{142}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{46}$}
+\AXC{$\varphi_{200}$\lbl{A1}}
+\BIC{$\varphi_{194}$}
+\end{ptree}
+\noindent$\Pi_{72}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$l \cdot f(c) = (l f)(c) \to \varphi_{73}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{64}$}
+\AXC{$\stackrel{\Pi_{62}}{\vdots}$}\noLine
+\UIC{$\varphi_{162}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{67}$}
+\AXC{$\stackrel{\Pi_{71}}{\vdots}$}\noLine
+\UIC{$\varphi_{194}$}
+\BIC{$\varphi_{165}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{75}$}
+\AXC{$\varphi_{168}$\lbl{A1}}
+\BIC{$l \in \mathbb{R} \land \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{75}$}
+\UIC{$\varphi_{111}$}
+\end{ptree}
+\noindent$\Pi_{73}$:
+\begin{ptree}
+\AXC{$\forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y)$\lbl{[B5]}}
+\AXC{$\varphi_{37}$\lbl{A2}}
+\BIC{$\forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y)$}
+\AXC{$\varphi_{50}$\lbl{A2}}
+\BIC{$\forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f))$}
+\AXC{$\varphi_{59}$\lbl{A2}}
+\BIC{$A \subseteq \mathrm{dom}(f) \to u \in A \to u \in \mathrm{dom}(f)$}
+\end{ptree}
+\noindent$\Pi_{74}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{73}}{\vdots}$}\noLine
+\UIC{$A \subseteq \mathrm{dom}(f) \to u \in A \to u \in \mathrm{dom}(f)$}
+\AXC{$(A \subseteq \mathrm{dom}(f) \to u \in A \to u \in \mathrm{dom}(f)) \to \varphi_{128}$\lbl{A1}}
+\BIC{$\varphi_{128}$}
+\end{ptree}
+\noindent$\Pi_{75}$:
+\begin{ptree}
+\AXC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to u \in A \to u \in A$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}(f)$}
+\AXC{$\stackrel{\Pi_{74}}{\vdots}$}\noLine
+\UIC{$\varphi_{128}$}
+\BIC{$(l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to u \in A \to u \in A) \to \varphi_{4}$}
+\BIC{$\varphi_{4}$}
+\end{ptree}
+\noindent$\Pi_{76}$:
+\begin{ptree}
+\AXC{$\varphi_{52}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{9}$}
+\AXC{$(l \in \mathbb{R} \to \varphi_{9}) \to \varphi_{52} \to l \in \mathbb{R} \to \varphi_{7}$\lbl{A1}}
+\BIC{$\varphi_{52} \to l \in \mathbb{R} \to \varphi_{7}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{7}$}
+\AXC{$\stackrel{\Pi_{75}}{\vdots}$}\noLine
+\UIC{$\varphi_{4}$}
+\AXC{$\varphi_{4} \to (l \in \mathbb{R} \to \varphi_{7}) \to \varphi_{14}$\lbl{A1}}
+\BIC{$(l \in \mathbb{R} \to \varphi_{7}) \to \varphi_{14}$}
+\BIC{$\varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{77}$:
+\begin{ptree}
+\AXC{$\varphi_{12}$\lbl{A4}}
+\AXC{$\forall u\,(\varphi_{15}) \to \varphi_{21}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{76}}{\vdots}$}\noLine
+\UIC{$\varphi_{14}$}
+\AXC{$\varphi_{14} \to \varphi_{15}$\lbl{A1}}
+\BIC{$\varphi_{15}$}
+\UIC{$\forall u\,(\varphi_{15})$}
+\AXC{$\forall u\,(\varphi_{15}) \to (\forall u\,(\varphi_{15}) \to \varphi_{21}) \to \varphi_{12} \to l \in \mathbb{R} \to \varphi_{3}$\lbl{A1}}
+\BIC{$(\forall u\,(\varphi_{15}) \to \varphi_{21}) \to \varphi_{12} \to l \in \mathbb{R} \to \varphi_{3}$}
+\BIC{$\varphi_{12} \to l \in \mathbb{R} \to \varphi_{3}$}
+\BIC{$l \in \mathbb{R} \to \varphi_{3}$}
+\end{ptree}
+\noindent$\Pi_{78}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{77}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \varphi_{3}$}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$\lbl{Def$\subseteq$}}
+\AXC{$\varphi_{39}$\lbl{A2}}
+\BIC{$\forall y\,(A \subseteq y \leftrightarrow \forall u \in A\,(u \in y))$}
+\AXC{$\varphi_{86}$\lbl{A2}}
+\BIC{$A \subseteq \mathrm{dom}((l f)) \leftrightarrow \forall u \in A\,(u \in \mathrm{dom}((l f)))$}
+\AXC{$\varphi_{141}$\lbl{A1}}
+\BIC{$\varphi_{103}$}
+\BIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}((l f))$}
+\end{ptree}
+\noindent$\Pi_{79}$:
+\begin{ptree}
+\AXC{$\varphi_{127}$\lbl{[G2]}}
+\AXC{$\varphi_{188}$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,(\mathrm{RFn}((l f)) \to A \subseteq \mathrm{dom}((l f)) \to \varphi_{121})$}
+\AXC{$\varphi_{193}$\lbl{A2}}
+\BIC{$\forall c\,(\mathrm{RFn}((l f)) \to A \subseteq \mathrm{dom}((l f)) \to \varphi_{121})$}
+\AXC{$\varphi_{191}$\lbl{A2}}
+\BIC{$\mathrm{RFn}((l f)) \to A \subseteq \mathrm{dom}((l f)) \to \varphi_{121}$}
+\end{ptree}
+\noindent$\Pi_{80}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{79}}{\vdots}$}\noLine
+\UIC{$\mathrm{RFn}((l f)) \to A \subseteq \mathrm{dom}((l f)) \to \varphi_{121}$}
+\AXC{$(\mathrm{RFn}((l f)) \to A \subseteq \mathrm{dom}((l f)) \to \varphi_{121}) \to \varphi_{186}$\lbl{A1}}
+\BIC{$\varphi_{186}$}
+\end{ptree}
+\noindent$\Pi_{81}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{78}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}((l f))$}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}((l f))$}
+\AXC{$\stackrel{\Pi_{80}}{\vdots}$}\noLine
+\UIC{$\varphi_{186}$}
+\BIC{$\varphi_{174}$}
+\BIC{$(l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to c \in A) \to \varphi_{112} \to \varphi_{5}$}
+\end{ptree}
+\noindent$\Pi_{82}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{64}}{\vdots}$}\noLine
+\UIC{$l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to c \in A$}
+\AXC{$\stackrel{\Pi_{81}}{\vdots}$}\noLine
+\UIC{$(l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to c \in A) \to \varphi_{112} \to \varphi_{5}$}
+\BIC{$\varphi_{112} \to \varphi_{5}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{11}$\lbl{A4}}
+\AXC{$\varphi_{111} \to \varphi_{116}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{72}}{\vdots}$}\noLine
+\UIC{$\varphi_{111}$}
+\AXC{$\varphi_{111} \to (\varphi_{111} \to \varphi_{116}) \to \varphi_{11} \to \varphi_{112}$\lbl{A1}}
+\BIC{$(\varphi_{111} \to \varphi_{116}) \to \varphi_{11} \to \varphi_{112}$}
+\BIC{$\varphi_{11} \to \varphi_{112}$}
+\BIC{$\varphi_{112}$}
+\AXC{$\stackrel{\Pi_{82}}{\vdots}$}\noLine
+\UIC{$\varphi_{112} \to \varphi_{5}$}
+\BIC{$\varphi_{5}$}
+\UIC{$\forall c\,(\varphi_{5})$}
+\UIC{$\forall A\,\forall c\,(\varphi_{5})$}
+\UIC{$\forall f\,\forall A\,\forall c\,(\varphi_{5})$}
+\UIC{$\forall l\,\forall f\,\forall A\,\forall c\,(\varphi_{5})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)$
+\item $\varphi_{2} :\equiv l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \mathrm{Seq}(a)$
+\item $\varphi_{3} :\equiv \mathrm{ContIn}(f,A,c) \to \forall u \in A\,(u \in \mathrm{dom}((l f)))$
+\item $\varphi_{4} :\equiv l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to u \in A \to u \in \mathrm{dom}(f)$
+\item $\varphi_{5} :\equiv l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}((l f),A,c)$
+\item $\varphi_{6} :\equiv \mathrm{ContIn}(f,A,c) \to (c \in \mathrm{dom}((l f)) \leftrightarrow c \in \mathrm{dom}(f))$
+\item $\varphi_{7} :\equiv \mathrm{ContIn}(f,A,c) \to (u \in \mathrm{dom}((l f)) \leftrightarrow u \in \mathrm{dom}(f))$
+\item $\varphi_{8} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Conv}(a,c)$
+\item $\varphi_{9} :\equiv \mathrm{ContIn}(f,A,c) \to \forall x\,(x \in \mathrm{dom}((l f)) \leftrightarrow x \in \mathrm{dom}(f))$
+\item $\varphi_{10} :\equiv \forall a\,\forall \alpha\,(l \in \mathbb{R} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(l \odot a,l \cdot \alpha))$
+\item $\varphi_{11} :\equiv l \in \mathbb{R} \land \mathrm{ContIn}(f,A,c) \to \forall a\,(l \in \mathbb{R} \land \mathrm{ContIn}(f,A,c))$
+\item $\varphi_{12} :\equiv l \in \mathbb{R} \land \mathrm{ContIn}(f,A,c) \to \forall u\,(l \in \mathbb{R} \land \mathrm{ContIn}(f,A,c))$
+\item $\varphi_{13} :\equiv \forall c\,\forall a\,\forall \alpha\,(c \in \mathbb{R} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(c \odot a,c \cdot \alpha))$
+\item $\varphi_{14} :\equiv l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to u \in A \to u \in \mathrm{dom}((l f))$
+\item $\varphi_{15} :\equiv l \in \mathbb{R} \land \mathrm{ContIn}(f,A,c) \to u \in A \to u \in \mathrm{dom}((l f))$
+\item $\varphi_{16} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,((l f)(c) = y \to y = (l f)(c))$
+\item $\varphi_{17} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{18} :\equiv \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to c \in \mathrm{dom}(f)$
+\item $\varphi_{19} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to c \in \mathrm{dom}((l f))$
+\item $\varphi_{20} :\equiv \mathrm{ContIn}(f,A,c) \to (a_{n} \in \mathrm{dom}((l f)) \leftrightarrow a_{n} \in \mathrm{dom}(f))$
+\item $\varphi_{21} :\equiv \forall u\,(l \in \mathbb{R} \land \mathrm{ContIn}(f,A,c)) \to \forall u \in A\,(u \in \mathrm{dom}((l f)))$
+\item $\varphi_{22} :\equiv z = w \to \mathrm{Conv}((l f) \circ a,z) \to \mathrm{Conv}((l f) \circ a,w)$
+\item $\varphi_{23} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to l \cdot f \circ a(n) = l \cdot f(a_{n})$
+\item $\varphi_{24} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to (l f)(a_{n}) = l \cdot f(a_{n})$
+\item $\varphi_{25} :\equiv \mathrm{Conv}(f \circ a,f(c)) \to \mathrm{Conv}(l \odot f \circ a,l \cdot f(c))$
+\item $\varphi_{26} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to a_{n} \in A$
+\item $\varphi_{27} :\equiv \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Seq}(f \circ a)$
+\item $\varphi_{28} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Seq}((l f) \circ a)$
+\item $\varphi_{29} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Conv}(f \circ a,f(c))$
+\item $\varphi_{30} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to n \in \mathbb{N} \to f \circ a(n) = f(a_{n})$
+\item $\varphi_{31} :\equiv \mathrm{ContIn}(f,A,c) \to c \in \mathrm{dom}((l f)) \to (l f)(c) = l \cdot f(c)$
+\item $\varphi_{32} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to l \odot f \circ a(n) = l \cdot f(a_{n})$
+\item $\varphi_{33} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to l \cdot f(a_{n}) = l \odot f \circ a(n)$
+\item $\varphi_{34} :\equiv \forall y\,\forall z\,(l \odot f \circ a(n) = y \to y = z \to l \odot f \circ a(n) = z)$
+\item $\varphi_{35} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to (l f) \circ a(n) = l \cdot f(a_{n})$
+\item $\varphi_{36} :\equiv \forall w\,(z = w \to l \cdot f \circ a(n) = l \cdot z \to l \cdot f \circ a(n) = l \cdot w)$
+\item $\varphi_{37} :\equiv \forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y) \to \forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y)$
+\item $\varphi_{38} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \forall \alpha\,(\mathrm{Conv}(f \circ a,\alpha) \to \mathrm{Seq}(f \circ a))$
+\item $\varphi_{39} :\equiv \forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to \forall y\,(A \subseteq y \leftrightarrow \forall u \in A\,(u \in y))$
+\item $\varphi_{40} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n}))$
+\item $\varphi_{41} :\equiv \mathrm{ContIn}(f,A,c) \to \forall x \in \mathrm{dom}((l f))\,((l f)(x) = l \cdot f(x))$
+\item $\varphi_{42} :\equiv \forall \alpha\,(l \in \mathbb{R} \to \mathrm{Conv}(f \circ a,\alpha) \to \mathrm{Conv}(l \odot f \circ a,l \cdot \alpha))$
+\item $\varphi_{43} :\equiv \forall y\,\forall z\,((l f) \circ a(n) = y \to y = z \to (l f) \circ a(n) = z)$
+\item $\varphi_{44} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)$
+\item $\varphi_{45} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to (l f)(c) = l \cdot f(c)$
+\item $\varphi_{46} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to l \cdot f(c) = (l f)(c)$
+\item $\varphi_{47} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to l \odot f \circ a(n) = l \cdot f \circ a(n)$
+\item $\varphi_{48} :\equiv \forall a\,\forall b\,\forall \alpha\,(\mathrm{Seq}(b) \to \forall n \in \mathbb{N}\,(a_{n} = b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha))$
+\item $\varphi_{49} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to (l f) \circ a(n) = (l f)(a_{n})$
+\item $\varphi_{50} :\equiv \forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y) \to \forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f))$
+\item $\varphi_{51} :\equiv \forall x\,(x \in \mathrm{dom}((l f)) \leftrightarrow x \in \mathrm{dom}(f)) \to (c \in \mathrm{dom}((l f)) \leftrightarrow c \in \mathrm{dom}(f))$
+\item $\varphi_{52} :\equiv \forall x\,(x \in \mathrm{dom}((l f)) \leftrightarrow x \in \mathrm{dom}(f)) \to (u \in \mathrm{dom}((l f)) \leftrightarrow u \in \mathrm{dom}(f))$
+\item $\varphi_{53} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f))$
+\item $\varphi_{54} :\equiv l \in \mathbb{R} \land \mathrm{ContIn}(f,A,c) \land \mathrm{Seq}(a) \land \forall n \in \mathbb{N}\,(a_{n} \in A) \land \mathrm{Conv}(a,c)$
+\item $\varphi_{55} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to (l f) \circ a(n) = l \odot f \circ a(n)$
+\item $\varphi_{56} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to l \odot f \circ a(n) = (l f) \circ a(n)$
+\item $\varphi_{57} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(l \odot f \circ a(n) = y \to y = l \odot f \circ a(n))$
+\item $\varphi_{58} :\equiv \forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f)) \to A \subseteq \mathrm{dom}(f) \to c \in A \to c \in \mathrm{dom}(f)$
+\item $\varphi_{59} :\equiv \forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f)) \to A \subseteq \mathrm{dom}(f) \to u \in A \to u \in \mathrm{dom}(f)$
+\item $\varphi_{60} :\equiv \mathrm{Conv}(a,c) \to \mathrm{Seq}(f \circ a) \land \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n}))$
+\item $\varphi_{61} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A$
+\item $\varphi_{62} :\equiv \mathrm{Conv}(a,c) \to \forall n \in \mathbb{N}\,(l \odot f \circ a(n) = (l f) \circ a(n))$
+\item $\varphi_{63} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,((l f) \circ a(n) = y \to y = (l f) \circ a(n))$
+\item $\varphi_{64} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Conv}(l \odot f \circ a,l \cdot f(c))$
+\item $\varphi_{65} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}((l f))$
+\item $\varphi_{66} :\equiv \mathrm{Conv}(l \odot f \circ a,l \cdot f(c)) \to \mathrm{Conv}((l f) \circ a,l \cdot f(c))$
+\item $\varphi_{67} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Conv}((l f) \circ a,l \cdot f(c))$
+\item $\varphi_{68} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}((l f))) \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}((l f))$
+\item $\varphi_{69} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \forall n \in \mathbb{N}\,(a_{n} \in A)$
+\item $\varphi_{70} :\equiv \forall a\,(l \in \mathbb{R} \to \mathrm{Seq}(a) \to \mathrm{Seq}(l \odot a) \land \forall n \in \mathbb{N}\,(l \odot a(n) = l \cdot a_{n}))$
+\item $\varphi_{71} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}((l f)))$
+\item $\varphi_{72} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to n \in \mathbb{N} \to l \odot f \circ a(n) = l \cdot f \circ a(n)$
+\item $\varphi_{73} :\equiv \mathrm{Conv}((l f) \circ a,l \cdot f(c)) \to \mathrm{Conv}((l f) \circ a,(l f)(c))$
+\item $\varphi_{74} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to n \in \mathbb{N} \to (l f) \circ a(n) = (l f)(a_{n})$
+\item $\varphi_{75} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Conv}((l f) \circ a,(l f)(c))$
+\item $\varphi_{76} :\equiv \forall c\,\forall a\,(c \in \mathbb{R} \to \mathrm{Seq}(a) \to \mathrm{Seq}(c \odot a) \land \forall n \in \mathbb{N}\,(c \odot a(n) = c \cdot a_{n}))$
+\item $\varphi_{77} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to f \circ a(n) = f(a_{n})$
+\item $\varphi_{78} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to \forall n \in \mathbb{N}\,(l \odot f \circ a(n) = l \cdot f \circ a(n))$
+\item $\varphi_{79} :\equiv \forall x\,(x \in \mathrm{dom}((l f)) \leftrightarrow x \in \mathrm{dom}(f)) \to (a_{n} \in \mathrm{dom}((l f)) \leftrightarrow a_{n} \in \mathrm{dom}(f))$
+\item $\varphi_{80} :\equiv \mathrm{ContIn}(f,A,c) \to a_{n} \in \mathrm{dom}((l f)) \to (l f)(a_{n}) = l \cdot f(a_{n})$
+\item $\varphi_{81} :\equiv \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to \forall n \in \mathbb{N}\,((l f) \circ a(n) = (l f)(a_{n}))$
+\item $\varphi_{82} :\equiv \forall w\,(l \cdot f(c) = w \to \mathrm{Conv}((l f) \circ a,l \cdot f(c)) \to \mathrm{Conv}((l f) \circ a,w))$
+\item $\varphi_{83} :\equiv \forall \alpha\,(\mathrm{Conv}(f \circ a,\alpha) \to \mathrm{Seq}(f \circ a)) \to \mathrm{Conv}(f \circ a,f(c)) \to \mathrm{Seq}(f \circ a)$
+\item $\varphi_{84} :\equiv \mathrm{Seq}(l \odot f \circ a) \land \forall n \in \mathbb{N}\,(l \odot f \circ a(n) = l \cdot f \circ a(n))$
+\item $\varphi_{85} :\equiv \forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f)) \to A \subseteq \mathrm{dom}(f) \to a_{n} \in A \to a_{n} \in \mathrm{dom}(f)$
+\item $\varphi_{86} :\equiv \forall y\,(A \subseteq y \leftrightarrow \forall u \in A\,(u \in y)) \to (A \subseteq \mathrm{dom}((l f)) \leftrightarrow \forall u \in A\,(u \in \mathrm{dom}((l f))))$
+\item $\varphi_{87} :\equiv l \cdot f \circ a(n) = l \cdot f(a_{n}) \to l \odot f \circ a(n) = l \cdot f(a_{n})$
+\item $\varphi_{88} :\equiv l \cdot f \circ a(n) = l \cdot f \circ a(n) \to l \cdot f \circ a(n) = l \cdot f(a_{n})$
+\item $\varphi_{89} :\equiv (l f)(a_{n}) = l \cdot f(a_{n}) \to (l f) \circ a(n) = l \cdot f(a_{n})$
+\item $\varphi_{90} :\equiv \mathrm{Seq}((l f) \circ a) \land \forall n \in \mathbb{N}\,((l f) \circ a(n) = (l f)(a_{n}))$
+\item $\varphi_{91} :\equiv l \odot f \circ a(n) = l \cdot f(a_{n}) \to l \cdot f(a_{n}) = l \odot f \circ a(n)$
+\item $\varphi_{92} :\equiv \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n})) \to n \in \mathbb{N} \to f \circ a(n) = f(a_{n})$
+\item $\varphi_{93} :\equiv l \cdot f(a_{n}) = l \odot f \circ a(n) \to (l f) \circ a(n) = l \odot f \circ a(n)$
+\item $\varphi_{94} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f)) \to \mathrm{Seq}(f \circ a) \land \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n}))$
+\item $\varphi_{95} :\equiv \forall f\,\forall A\,\forall c\,\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29})$
+\item $\varphi_{96} :\equiv \forall z\,((l f) \circ a(n) = l \cdot f(a_{n}) \to l \cdot f(a_{n}) = z \to (l f) \circ a(n) = z)$
+\item $\varphi_{97} :\equiv \forall w\,(f \circ a(n) = w \to l \cdot f \circ a(n) = l \cdot f \circ a(n) \to l \cdot f \circ a(n) = l \cdot w)$
+\item $\varphi_{98} :\equiv \forall b\,\forall \alpha\,(\mathrm{Seq}(b) \to \forall n \in \mathbb{N}\,(l \odot f \circ a(n) = b_{n}) \to \mathrm{Conv}(l \odot f \circ a,\alpha) \to \mathrm{Conv}(b,\alpha))$
+\item $\varphi_{99} :\equiv \forall y\,((l f)(c) = y \to y = (l f)(c)) \to (l f)(c) = l \cdot f(c) \to l \cdot f(c) = (l f)(c)$
+\item $\varphi_{100} :\equiv (l f) \circ a(n) = l \odot f \circ a(n) \to l \odot f \circ a(n) = (l f) \circ a(n)$
+\item $\varphi_{101} :\equiv \forall z\,(l \odot f \circ a(n) = l \cdot f \circ a(n) \to l \cdot f \circ a(n) = z \to l \odot f \circ a(n) = z)$
+\item $\varphi_{102} :\equiv \forall x \in \mathrm{dom}((l f))\,((l f)(x) = l \cdot f(x)) \to c \in \mathrm{dom}((l f)) \to (l f)(c) = l \cdot f(c)$
+\item $\varphi_{103} :\equiv (l \in \mathbb{R} \to \varphi_{3}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}((l f))$
+\item $\varphi_{104} :\equiv \forall z\,((l f) \circ a(n) = (l f)(a_{n}) \to (l f)(a_{n}) = z \to (l f) \circ a(n) = z)$
+\item $\varphi_{105} :\equiv \mathrm{RFn}((l f)) \land \forall x\,(x \in \mathrm{dom}((l f)) \leftrightarrow x \in \mathrm{dom}(f)) \land \forall x \in \mathrm{dom}((l f))\,((l f)(x) = l \cdot f(x))$
+\item $\varphi_{106} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{23}$
+\item $\varphi_{107} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{24}$
+\item $\varphi_{108} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{30}$
+\item $\varphi_{109} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{32}$
+\item $\varphi_{110} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{33}$
+\item $\varphi_{111} :\equiv \forall a\,(l \in \mathbb{R} \land \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{75})$
+\item $\varphi_{112} :\equiv l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \forall a\,(\mathrm{Seq}(a) \to \varphi_{75})$
+\item $\varphi_{113} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{35}$
+\item $\varphi_{114} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{40}$
+\item $\varphi_{115} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to c \in A) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{18}$
+\item $\varphi_{116} :\equiv \forall a\,(l \in \mathbb{R} \land \mathrm{ContIn}(f,A,c)) \to \forall a\,(\mathrm{Seq}(a) \to \varphi_{75})$
+\item $\varphi_{117} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{47}$
+\item $\varphi_{118} :\equiv \forall n \in \mathbb{N}\,(l \odot f \circ a(n) = l \cdot f \circ a(n)) \to n \in \mathbb{N} \to l \odot f \circ a(n) = l \cdot f \circ a(n)$
+\item $\varphi_{119} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{49}$
+\item $\varphi_{120} :\equiv \forall n \in \mathbb{N}\,((l f) \circ a(n) = (l f)(a_{n})) \to n \in \mathbb{N} \to (l f) \circ a(n) = (l f)(a_{n})$
+\item $\varphi_{121} :\equiv c \in A \to \forall a\,(\mathrm{Seq}(a) \to \varphi_{75}) \to \mathrm{ContIn}((l f),A,c)$
+\item $\varphi_{122} :\equiv \forall x \in \mathrm{dom}((l f))\,((l f)(x) = l \cdot f(x)) \to a_{n} \in \mathrm{dom}((l f)) \to (l f)(a_{n}) = l \cdot f(a_{n})$
+\item $\varphi_{123} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{55}$
+\item $\varphi_{124} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{56}$
+\item $\varphi_{125} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{60}$
+\item $\varphi_{126} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{62}$
+\item $\varphi_{127} :\equiv \forall f\,\forall A\,\forall c\,(\mathrm{RFn}(f) \to A \subseteq \mathrm{dom}(f) \to c \in A \to \forall a\,(\mathrm{Seq}(a) \to \varphi_{29}) \to \mathrm{ContIn}(f,A,c))$
+\item $\varphi_{128} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}(f)) \to (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to u \in A \to u \in A) \to \varphi_{4}$
+\item $\varphi_{129} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{72}$
+\item $\varphi_{130} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{74}$
+\item $\varphi_{131} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{78}$
+\item $\varphi_{132} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{81}$
+\item $\varphi_{133} :\equiv \forall n\,(\varphi_{54}) \to \forall n \in \mathbb{N}\,(l \odot f \circ a(n) = (l f) \circ a(n))$
+\item $\varphi_{134} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varphi_{84}$
+\item $\varphi_{135} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varphi_{90}$
+\item $\varphi_{136} :\equiv \forall \alpha\,(\mathrm{Seq}((l f) \circ a) \to \forall n \in \mathbb{N}\,(l \odot f \circ a(n) = (l f) \circ a(n)) \to \mathrm{Conv}(l \odot f \circ a,\alpha) \to \mathrm{Conv}((l f) \circ a,\alpha))$
+\item $\varphi_{137} :\equiv \mathrm{RFn}((l f)) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}((l f))) \to \varphi_{90}$
+\item $\varphi_{138} :\equiv (l \in \mathbb{R} \to \varphi_{6}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{19}$
+\item $\varphi_{139} :\equiv \mathrm{ContIn}(f,A,c) \leftrightarrow \mathrm{RFn}(f) \land A \subseteq \mathrm{dom}(f) \land c \in A \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in A\,(\lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon)))$
+\item $\varphi_{140} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}(f)) \to \varphi_{115}$
+\item $\varphi_{141} :\equiv (A \subseteq \mathrm{dom}((l f)) \leftrightarrow \forall u \in A\,(u \in \mathrm{dom}((l f)))) \to \varphi_{103}$
+\item $\varphi_{142} :\equiv ((l f)(c) = l \cdot f(c) \to l \cdot f(c) = (l f)(c)) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{46}$
+\item $\varphi_{143} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}(f)) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{105}$
+\item $\varphi_{144} :\equiv \mathrm{Seq}((l f) \circ a) \to \forall n \in \mathbb{N}\,(l \odot f \circ a(n) = (l f) \circ a(n)) \to \varphi_{66}$
+\item $\varphi_{145} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{105}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}((l f))$
+\item $\varphi_{146} :\equiv \forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29}) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29}$
+\item $\varphi_{147} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{8}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29}$
+\item $\varphi_{148} :\equiv \forall c\,\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29}) \to \forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29})$
+\item $\varphi_{149} :\equiv (l \in \mathbb{R} \to \varphi_{20}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{65}$
+\item $\varphi_{150} :\equiv \forall A\,\forall c\,\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29}) \to \forall c\,\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29})$
+\item $\varphi_{151} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{27}$
+\item $\varphi_{152} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{26}$
+\item $\varphi_{153} :\equiv \varphi_{95} \to \forall A\,\forall c\,\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29})$
+\item $\varphi_{154} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{19}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{45}$
+\item $\varphi_{155} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{26}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{44}$
+\item $\varphi_{156} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{44}) \to \varphi_{54} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)$
+\item $\varphi_{157} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{64}$
+\item $\varphi_{158} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{77}$
+\item $\varphi_{159} :\equiv \forall n\,(\varphi_{54} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)) \to \forall n\,(\varphi_{54}) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f))$
+\item $\varphi_{160} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}) \to l \in \mathbb{R} \to \varphi_{107}$
+\item $\varphi_{161} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{65}) \to \varphi_{54} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}((l f))$
+\item $\varphi_{162} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{64}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{67}$
+\item $\varphi_{163} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}) \to l \in \mathbb{R} \to \varphi_{117}$
+\item $\varphi_{164} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}) \to l \in \mathbb{R} \to \varphi_{119}$
+\item $\varphi_{165} :\equiv (l \cdot f(c) = (l f)(c) \to \varphi_{73}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{75}$
+\item $\varphi_{166} :\equiv \forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{94}) \to \mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{94}$
+\item $\varphi_{167} :\equiv \forall n\,(\varphi_{54} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}((l f))) \to \forall n\,(\varphi_{54}) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}((l f)))$
+\item $\varphi_{168} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{75}) \to l \in \mathbb{R} \land \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{75}$
+\item $\varphi_{169} :\equiv (l \in \mathbb{R} \to \varphi_{69}) \to (\forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A) \to l \in \mathbb{R} \to \varphi_{61}$
+\item $\varphi_{170} :\equiv \forall f\,\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{94}) \to \forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{94})$
+\item $\varphi_{171} :\equiv \varphi_{1} \to \varphi_{139} \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}(f)$
+\item $\varphi_{172} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}(f)) \to \varphi_{155}$
+\item $\varphi_{173} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{53}) \to l \in \mathbb{R} \to \varphi_{125}$
+\item $\varphi_{174} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to A \subseteq \mathrm{dom}((l f))) \to (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to c \in A) \to \varphi_{112} \to \varphi_{5}$
+\item $\varphi_{175} :\equiv (\varphi_{54} \to \forall n\,(\varphi_{54})) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{53}$
+\item $\varphi_{176} :\equiv \forall f\,(l \in \mathbb{R} \to \mathrm{RFn}(f) \to \varphi_{105}) \to l \in \mathbb{R} \to \mathrm{RFn}(f) \to \varphi_{105}$
+\item $\varphi_{177} :\equiv (l \in \mathbb{R} \to \varphi_{135}) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{28}$
+\item $\varphi_{178} :\equiv \forall l\,\forall f\,(l \in \mathbb{R} \to \mathrm{RFn}(f) \to \varphi_{105}) \to \forall f\,(l \in \mathbb{R} \to \mathrm{RFn}(f) \to \varphi_{105})$
+\item $\varphi_{179} :\equiv (\varphi_{54} \to \forall n\,(\varphi_{54})) \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{71}$
+\item $\varphi_{180} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{45}) \to \varphi_{142}$
+\item $\varphi_{181} :\equiv (l \in \mathbb{R} \to \varphi_{124}) \to \varphi_{54} \to n \in \mathbb{N} \to l \odot f \circ a(n) = (l f) \circ a(n)$
+\item $\varphi_{182} :\equiv (l \in \mathbb{R} \to l \in \mathbb{R}) \to (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \varphi_{27}) \to l \in \mathbb{R} \to \varphi_{134}$
+\item $\varphi_{183} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{71}) \to l \in \mathbb{R} \to \varphi_{135}$
+\item $\varphi_{184} :\equiv \forall n\,(\varphi_{54} \to n \in \mathbb{N} \to l \odot f \circ a(n) = (l f) \circ a(n)) \to \varphi_{133}$
+\item $\varphi_{185} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{44}) \to \varphi_{149}$
+\item $\varphi_{186} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}((l f))) \to \varphi_{174}$
+\item $\varphi_{187} :\equiv l \cdot f \circ a(n) = l \cdot f \circ a(n) \to (f \circ a(n) = f(a_{n}) \to \varphi_{88}) \to l \in \mathbb{R} \to \varphi_{106}$
+\item $\varphi_{188} :\equiv \varphi_{127} \to \forall A\,\forall c\,(\mathrm{RFn}((l f)) \to A \subseteq \mathrm{dom}((l f)) \to \varphi_{121})$
+\item $\varphi_{189} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{71}) \to \varphi_{68} \to l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{65}$
+\item $\varphi_{190} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}(f)) \to \varphi_{2} \to \varphi_{173}$
+\item $\varphi_{191} :\equiv \forall c\,(\mathrm{RFn}((l f)) \to A \subseteq \mathrm{dom}((l f)) \to \varphi_{121}) \to \mathrm{RFn}((l f)) \to A \subseteq \mathrm{dom}((l f)) \to \varphi_{121}$
+\item $\varphi_{192} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{65}) \to \varphi_{160}$
+\item $\varphi_{193} :\equiv \forall A\,\forall c\,(\mathrm{RFn}((l f)) \to A \subseteq \mathrm{dom}((l f)) \to \varphi_{121}) \to \forall c\,(\mathrm{RFn}((l f)) \to A \subseteq \mathrm{dom}((l f)) \to \varphi_{121})$
+\item $\varphi_{194} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{67}) \to \varphi_{165}$
+\item $\varphi_{195} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{RFn}((l f))) \to \varphi_{2} \to \varphi_{183}$
+\item $\varphi_{196} :\equiv (l \in \mathbb{R} \to \varphi_{106}) \to (l \odot f \circ a(n) = l \cdot f \circ a(n) \to \varphi_{87}) \to l \in \mathbb{R} \to \varphi_{109}$
+\item $\varphi_{197} :\equiv (l \in \mathbb{R} \to \varphi_{107}) \to ((l f) \circ a(n) = (l f)(a_{n}) \to \varphi_{89}) \to l \in \mathbb{R} \to \varphi_{113}$
+\item $\varphi_{198} :\equiv (l \in \mathbb{R} \to \varphi_{110}) \to ((l f) \circ a(n) = l \cdot f(a_{n}) \to \varphi_{93}) \to l \in \mathbb{R} \to \varphi_{123}$
+\item $\varphi_{199} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{77}) \to \varphi_{187}$
+\item $\varphi_{200} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{46}) \to \varphi_{194}$
+\item $\varphi_{201} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{29}) \to \varphi_{1} \to \varphi_{2} \to (l \in \mathbb{R} \to \varphi_{69}) \to \varphi_{147}$
+\item $\varphi_{202} :\equiv (l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{28}) \to (l \in \mathbb{R} \to \varphi_{126}) \to \varphi_{162}$
+\item $\varphi_{203} :\equiv \forall n\,(\varphi_{54} \to n \in \mathbb{N} \to l \odot f \circ a(n) = (l f) \circ a(n)) \to \varphi_{184} \to (\varphi_{54} \to \forall n\,(\varphi_{54})) \to l \in \mathbb{R} \to \varphi_{126}$
+\end{abbrevlist}
+\end{fullproof}

@@ -1,0 +1,451 @@
+% 自動生成 (prover/build.js): SubLeAnti  ノード数 198
+\begin{fullproof}{[E51]}{$\forall z\,\forall x\,\forall y\,(z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z - y \leq z - x)$}{198}\phantomsection\label{tree:SubLeAnti}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to z - y < z_{1} \to z - y < w$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z - y < z_{1} \to z - y < w)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z - y < z_{1} \to z - y < w)$}
+\AXC{$\varphi_{29}$\lbl{A2}}
+\BIC{$\forall w\,(-x + z = w \to z - y < -x + z \to z - y < w)$}
+\AXC{$\varphi_{42}$\lbl{A2}}
+\BIC{$-x + z = z - x \to z - y < -x + z \to z - y < z - x$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x)$\lbl{[F23]}}
+\AXC{$\varphi_{31}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x)$}
+\AXC{$\varphi_{28}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x) \to \varphi_{56}$\lbl{A1}}
+\BIC{$\varphi_{56}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{56}$}
+\BIC{$(z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to y \in \mathbb{R}) \to \varphi_{37}$}
+\BIC{$\varphi_{37}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R}) \to x \in \mathbb{R} \to -x \in \mathbb{R}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to -x \in \mathbb{R}$}
+\AXC{$(x \in \mathbb{R} \to -x \in \mathbb{R}) \to \varphi_{43}$\lbl{A1}}
+\BIC{$\varphi_{43}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{43}$}
+\BIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R}) \to y \in \mathbb{R} \to -y \in \mathbb{R}$\lbl{A2}}
+\BIC{$y \in \mathbb{R} \to -y \in \mathbb{R}$}
+\AXC{$(y \in \mathbb{R} \to -y \in \mathbb{R}) \to \varphi_{44}$\lbl{A1}}
+\BIC{$\varphi_{44}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{44}$}
+\BIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\varphi_{15}$\lbl{[F19]}}
+\AXC{$\varphi_{15} \to \varphi_{21}$\lbl{A2}}
+\BIC{$\varphi_{21}$}
+\AXC{$\varphi_{21} \to \varphi_{23}$\lbl{A2}}
+\BIC{$\varphi_{23}$}
+\AXC{$\varphi_{23} \to v_{879} \in \mathbb{R} \to \varphi_{20}$\lbl{A2}}
+\BIC{$v_{879} \in \mathbb{R} \to \varphi_{20}$}
+\UIC{$\forall v_{881}\,(v_{879} \in \mathbb{R} \to \varphi_{20})$}
+\UIC{$\forall v_{880}\,\forall v_{881}\,(v_{879} \in \mathbb{R} \to \varphi_{20})$}
+\UIC{$\forall v_{879}\,\forall v_{880}\,\forall v_{881}\,(v_{879} \in \mathbb{R} \to \varphi_{20})$}
+\AXC{$\forall v_{879}\,\forall v_{880}\,\forall v_{881}\,(v_{879} \in \mathbb{R} \to \varphi_{20}) \to \varphi_{32}$\lbl{A2}}
+\BIC{$\varphi_{32}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{32}$}
+\AXC{$\varphi_{32} \to \varphi_{33}$\lbl{A2}}
+\BIC{$\varphi_{33}$}
+\AXC{$\varphi_{33} \to \varphi_{27}$\lbl{A2}}
+\BIC{$\varphi_{27}$}
+\AXC{$\varphi_{27} \to (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \in \mathbb{R}) \to \varphi_{60}$\lbl{A1}}
+\BIC{$(z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \in \mathbb{R}) \to \varphi_{60}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$(z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \in \mathbb{R}) \to \varphi_{60}$}
+\BIC{$\varphi_{60}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{60}$}
+\BIC{$(z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z \in \mathbb{R}) \to \varphi_{48}$}
+\BIC{$\varphi_{48}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{886} = y \to y = z \to v_{886} = z)$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$\forall z\,(v_{886} = v_{887} \to v_{887} = z \to v_{886} = z)$}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\BIC{$v_{886} = v_{887} \to v_{887} = v_{888} \to v_{886} = v_{888}$}
+\UIC{$\forall v_{888}\,(v_{886} = v_{887} \to v_{887} = v_{888} \to v_{886} = v_{888})$}
+\UIC{$\varphi_{2}$}
+\UIC{$\forall v_{886}\,(\varphi_{2})$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\forall v_{886}\,(\varphi_{2})$}
+\AXC{$\forall v_{886}\,(\varphi_{2}) \to \varphi_{6}$\lbl{A2}}
+\BIC{$\varphi_{6}$}
+\AXC{$\varphi_{6} \to \varphi_{16}$\lbl{A2}}
+\BIC{$\varphi_{16}$}
+\AXC{$\varphi_{16} \to -y + z = z + -y \to z + -y = z - y \to -y + z = z - y$\lbl{A2}}
+\BIC{$-y + z = z + -y \to z + -y = z - y \to -y + z = z - y$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(v_{884} = y \to y = v_{884})$\lbl{A2}}
+\BIC{$\forall y\,(v_{884} = y \to y = v_{884})$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$v_{884} = v_{885} \to v_{885} = v_{884}$}
+\UIC{$\forall v_{885}\,(v_{884} = v_{885} \to v_{885} = v_{884})$}
+\UIC{$\forall v_{884}\,\forall v_{885}\,(v_{884} = v_{885} \to v_{885} = v_{884})$}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\forall v_{885}\,(z - y = v_{885} \to v_{885} = z - y)$}
+\AXC{$\varphi_{22}$\lbl{A2}}
+\BIC{$z - y = z + -y \to z + -y = z - y$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y)$\lbl{Def$-$}}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y) \to \forall y\,(z - y = z + -y)$\lbl{A2}}
+\BIC{$\forall y\,(z - y = z + -y)$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$z - y = z + -y \to z + -y = z - y$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\forall y\,(z - y = z + -y)$}
+\AXC{$\forall y\,(z - y = z + -y) \to z - y = z + -y$\lbl{A2}}
+\BIC{$z - y = z + -y$}
+\AXC{$\varphi_{24}$\lbl{A1}}
+\BIC{$(z - y = z + -y \to z + -y = z - y) \to z + -y = z - y$}
+\BIC{$z + -y = z - y$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)$\lbl{(R3)}}
+\AXC{$\varphi_{30}$\lbl{A2}}
+\BIC{$\forall y\,(v_{882} \in \mathbb{R} \to y \in \mathbb{R} \to v_{882} + y = y + v_{882})$}
+\AXC{$\varphi_{38}$\lbl{A2}}
+\BIC{$v_{882} \in \mathbb{R} \to v_{883} \in \mathbb{R} \to v_{882} + v_{883} = v_{883} + v_{882}$}
+\UIC{$\varphi_{10}$}
+\UIC{$\forall v_{882}\,(\varphi_{10})$}
+\AXC{$\forall v_{882}\,(\varphi_{10}) \to \varphi_{19}$\lbl{A2}}
+\BIC{$\varphi_{19}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{19}$}
+\AXC{$\varphi_{19} \to -y \in \mathbb{R} \to z \in \mathbb{R} \to -y + z = z + -y$\lbl{A2}}
+\BIC{$-y \in \mathbb{R} \to z \in \mathbb{R} \to -y + z = z + -y$}
+\AXC{$\varphi_{57}$\lbl{A1}}
+\BIC{$(z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \in \mathbb{R}) \to \varphi_{46}$}
+\BIC{$\varphi_{46}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$z + -y = z - y$}
+\AXC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{46}$}
+\BIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y + z = z + -y$}
+\AXC{$\varphi_{54}$\lbl{A1}}
+\BIC{$z + -y = z - y \to \varphi_{49}$}
+\BIC{$\varphi_{49}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$-y + z = z + -y \to z + -y = z - y \to -y + z = z - y$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{49}$}
+\BIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y + z = z - y$}
+\AXC{$\varphi_{63}$\lbl{A1}}
+\BIC{$\varphi_{61}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to x \leq y$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{37}$}
+\BIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{48}$}
+\BIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y + z \leq -x + z$}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{61}$}
+\BIC{$\varphi_{53}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to z_{1} < -x + z \to w < -x + z$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z_{1} < -x + z \to w < -x + z)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} < -x + z \to w < -x + z)$}
+\AXC{$\varphi_{41}$\lbl{A2}}
+\BIC{$\forall w\,(-y + z = w \to -y + z < -x + z \to w < -x + z)$}
+\AXC{$\varphi_{52}$\lbl{A2}}
+\BIC{$-y + z = z - y \to -y + z < -x + z \to z - y < -x + z$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{53}$}
+\BIC{$\varphi_{50}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to z_{1} = -x + z \to w = -x + z$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z_{1} = -x + z \to w = -x + z)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} = -x + z \to w = -x + z)$}
+\AXC{$\varphi_{34}$\lbl{A2}}
+\BIC{$\forall w\,(-y + z = w \to -y + z = -x + z \to w = -x + z)$}
+\AXC{$\varphi_{45}$\lbl{A2}}
+\BIC{$-y + z = z - y \to -y + z = -x + z \to z - y = -x + z$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{50}$}
+\BIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z - y \leq -x + z$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{889} = y \to y = z \to v_{889} = z)$}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$\forall z\,(v_{889} = v_{890} \to v_{890} = z \to v_{889} = z)$}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$v_{889} = v_{890} \to v_{890} = v_{891} \to v_{889} = v_{891}$}
+\UIC{$\forall v_{891}\,(v_{889} = v_{890} \to v_{890} = v_{891} \to v_{889} = v_{891})$}
+\UIC{$\varphi_{3}$}
+\UIC{$\forall v_{889}\,(\varphi_{3})$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\forall v_{889}\,(\varphi_{3})$}
+\AXC{$\forall v_{889}\,(\varphi_{3}) \to \varphi_{7}$\lbl{A2}}
+\BIC{$\varphi_{7}$}
+\AXC{$\varphi_{7} \to \varphi_{18}$\lbl{A2}}
+\BIC{$\varphi_{18}$}
+\AXC{$\varphi_{18} \to -x + z = z + -x \to z + -x = z - x \to -x + z = z - x$\lbl{A2}}
+\BIC{$-x + z = z + -x \to z + -x = z - x \to -x + z = z - x$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(z - x = y \to y = z - x)$\lbl{A2}}
+\BIC{$\forall y\,(z - x = y \to y = z - x)$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$z - x = z + -x \to z + -x = z - x$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y)$\lbl{Def$-$}}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y) \to \forall y\,(z - y = z + -y)$\lbl{A2}}
+\BIC{$\forall y\,(z - y = z + -y)$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$z - x = z + -x \to z + -x = z - x$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\forall y\,(z - y = z + -y)$}
+\AXC{$\forall y\,(z - y = z + -y) \to z - x = z + -x$\lbl{A2}}
+\BIC{$z - x = z + -x$}
+\AXC{$\varphi_{25}$\lbl{A1}}
+\BIC{$(z - x = z + -x \to z + -x = z - x) \to z + -x = z - x$}
+\BIC{$z + -x = z - x$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)$\lbl{(R3)}}
+\AXC{$\varphi_{35}$\lbl{A2}}
+\BIC{$\forall y\,(-x \in \mathbb{R} \to y \in \mathbb{R} \to -x + y = y + -x)$}
+\AXC{$\varphi_{39}$\lbl{A2}}
+\BIC{$-x \in \mathbb{R} \to z \in \mathbb{R} \to -x + z = z + -x$}
+\AXC{$\varphi_{58}$\lbl{A1}}
+\BIC{$(z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x \in \mathbb{R}) \to \varphi_{47}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$(z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x \in \mathbb{R}) \to \varphi_{47}$}
+\BIC{$\varphi_{47}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$z + -x = z - x$}
+\AXC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{47}$}
+\BIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x + z = z + -x$}
+\AXC{$\varphi_{55}$\lbl{A1}}
+\BIC{$z + -x = z - x \to \varphi_{51}$}
+\BIC{$\varphi_{51}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$-x + z = z + -x \to z + -x = z - x \to -x + z = z - x$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\varphi_{51}$}
+\BIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x + z = z - x$}
+\AXC{$\varphi_{62}$\lbl{A1}}
+\BIC{$\varphi_{59}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$-x + z = z - x \to z - y < -x + z \to z - y < z - x$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z - y \leq -x + z$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{59}$}
+\BIC{$(-x + z = z - x \to z - y < -x + z \to z - y < z - x) \to \varphi_{40}$}
+\BIC{$\varphi_{40}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$z_{1} = w \to z - y = z_{1} \to z - y = w$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z - y = z_{1} \to z - y = w)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z - y = z_{1} \to z - y = w)$}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\BIC{$\forall w\,(-x + z = w \to z - y = -x + z \to z - y = w)$}
+\AXC{$\varphi_{36}$\lbl{A2}}
+\BIC{$-x + z = z - x \to z - y = -x + z \to z - y = z - x$}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\varphi_{40}$}
+\BIC{$z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z - y \leq z - x$}
+\UIC{$\forall y\,(z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z - y \leq z - x)$}
+\UIC{$\varphi_{12}$}
+\UIC{$\forall z\,(\varphi_{12})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall y\,(v_{884} = y \to y = v_{884}) \to v_{884} = v_{885} \to v_{885} = v_{884}$
+\item $\varphi_{2} :\equiv \forall v_{887}\,\forall v_{888}\,(v_{886} = v_{887} \to v_{887} = v_{888} \to v_{886} = v_{888})$
+\item $\varphi_{3} :\equiv \forall v_{890}\,\forall v_{891}\,(v_{889} = v_{890} \to v_{890} = v_{891} \to v_{889} = v_{891})$
+\item $\varphi_{4} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{886} = y \to y = z \to v_{886} = z)$
+\item $\varphi_{5} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{889} = y \to y = z \to v_{889} = z)$
+\item $\varphi_{6} :\equiv \forall v_{887}\,\forall v_{888}\,(-y + z = v_{887} \to v_{887} = v_{888} \to -y + z = v_{888})$
+\item $\varphi_{7} :\equiv \forall v_{890}\,\forall v_{891}\,(-x + z = v_{890} \to v_{890} = v_{891} \to -x + z = v_{891})$
+\item $\varphi_{8} :\equiv \forall y\,\forall z\,(v_{886} = y \to y = z \to v_{886} = z) \to \forall z\,(v_{886} = v_{887} \to v_{887} = z \to v_{886} = z)$
+\item $\varphi_{9} :\equiv \forall y\,\forall z\,(v_{889} = y \to y = z \to v_{889} = z) \to \forall z\,(v_{889} = v_{890} \to v_{890} = z \to v_{889} = z)$
+\item $\varphi_{10} :\equiv \forall v_{883}\,(v_{882} \in \mathbb{R} \to v_{883} \in \mathbb{R} \to v_{882} + v_{883} = v_{883} + v_{882})$
+\item $\varphi_{11} :\equiv \forall y\,(z - x = y \to y = z - x) \to z - x = z + -x \to z + -x = z - x$
+\item $\varphi_{12} :\equiv \forall x\,\forall y\,(z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z - y \leq z - x)$
+\item $\varphi_{13} :\equiv \forall z\,(v_{886} = v_{887} \to v_{887} = z \to v_{886} = z) \to v_{886} = v_{887} \to v_{887} = v_{888} \to v_{886} = v_{888}$
+\item $\varphi_{14} :\equiv \forall z\,(v_{889} = v_{890} \to v_{890} = z \to v_{889} = z) \to v_{889} = v_{890} \to v_{890} = v_{891} \to v_{889} = v_{891}$
+\item $\varphi_{15} :\equiv \forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x \leq y \to x + z \leq y + z)$
+\item $\varphi_{16} :\equiv \forall v_{888}\,(-y + z = z + -y \to z + -y = v_{888} \to -y + z = v_{888})$
+\item $\varphi_{17} :\equiv \forall v_{884}\,\forall v_{885}\,(v_{884} = v_{885} \to v_{885} = v_{884}) \to \forall v_{885}\,(z - y = v_{885} \to v_{885} = z - y)$
+\item $\varphi_{18} :\equiv \forall v_{891}\,(-x + z = z + -x \to z + -x = v_{891} \to -x + z = v_{891})$
+\item $\varphi_{19} :\equiv \forall v_{883}\,(-y \in \mathbb{R} \to v_{883} \in \mathbb{R} \to -y + v_{883} = v_{883} + -y)$
+\item $\varphi_{20} :\equiv v_{880} \in \mathbb{R} \to v_{881} \in \mathbb{R} \to v_{879} \leq v_{880} \to v_{879} + v_{881} \leq v_{880} + v_{881}$
+\item $\varphi_{21} :\equiv \forall y\,\forall z\,(v_{879} \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to v_{879} \leq y \to v_{879} + z \leq y + z)$
+\item $\varphi_{22} :\equiv \forall v_{885}\,(z - y = v_{885} \to v_{885} = z - y) \to z - y = z + -y \to z + -y = z - y$
+\item $\varphi_{23} :\equiv \forall z\,(v_{879} \in \mathbb{R} \to v_{880} \in \mathbb{R} \to z \in \mathbb{R} \to v_{879} \leq v_{880} \to v_{879} + z \leq v_{880} + z)$
+\item $\varphi_{24} :\equiv z - y = z + -y \to (z - y = z + -y \to z + -y = z - y) \to z + -y = z - y$
+\item $\varphi_{25} :\equiv z - x = z + -x \to (z - x = z + -x \to z + -x = z - x) \to z + -x = z - x$
+\item $\varphi_{26} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z - y = z_{1} \to z - y = w) \to \forall w\,(-x + z = w \to z - y = -x + z \to z - y = w)$
+\item $\varphi_{27} :\equiv -y \in \mathbb{R} \to -x \in \mathbb{R} \to z \in \mathbb{R} \to -y \leq -x \to -y + z \leq -x + z$
+\item $\varphi_{28} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x) \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x$
+\item $\varphi_{29} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z - y < z_{1} \to z - y < w) \to \forall w\,(-x + z = w \to z - y < -x + z \to z - y < w)$
+\item $\varphi_{30} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x) \to \forall y\,(v_{882} \in \mathbb{R} \to y \in \mathbb{R} \to v_{882} + y = y + v_{882})$
+\item $\varphi_{31} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x)$
+\item $\varphi_{32} :\equiv \forall v_{880}\,\forall v_{881}\,(-y \in \mathbb{R} \to v_{880} \in \mathbb{R} \to v_{881} \in \mathbb{R} \to -y \leq v_{880} \to -y + v_{881} \leq v_{880} + v_{881})$
+\item $\varphi_{33} :\equiv \forall v_{881}\,(-y \in \mathbb{R} \to -x \in \mathbb{R} \to v_{881} \in \mathbb{R} \to -y \leq -x \to -y + v_{881} \leq -x + v_{881})$
+\item $\varphi_{34} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} = -x + z \to w = -x + z) \to \forall w\,(-y + z = w \to -y + z = -x + z \to w = -x + z)$
+\item $\varphi_{35} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x) \to \forall y\,(-x \in \mathbb{R} \to y \in \mathbb{R} \to -x + y = y + -x)$
+\item $\varphi_{36} :\equiv \forall w\,(-x + z = w \to z - y = -x + z \to z - y = w) \to -x + z = z - x \to z - y = -x + z \to z - y = z - x$
+\item $\varphi_{37} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to x \leq y) \to z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x$
+\item $\varphi_{38} :\equiv \forall y\,(v_{882} \in \mathbb{R} \to y \in \mathbb{R} \to v_{882} + y = y + v_{882}) \to v_{882} \in \mathbb{R} \to v_{883} \in \mathbb{R} \to v_{882} + v_{883} = v_{883} + v_{882}$
+\item $\varphi_{39} :\equiv \forall y\,(-x \in \mathbb{R} \to y \in \mathbb{R} \to -x + y = y + -x) \to -x \in \mathbb{R} \to z \in \mathbb{R} \to -x + z = z + -x$
+\item $\varphi_{40} :\equiv (-x + z = z - x \to z - y = -x + z \to z - y = z - x) \to z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z - y \leq z - x$
+\item $\varphi_{41} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} < -x + z \to w < -x + z) \to \forall w\,(-y + z = w \to -y + z < -x + z \to w < -x + z)$
+\item $\varphi_{42} :\equiv \forall w\,(-x + z = w \to z - y < -x + z \to z - y < w) \to -x + z = z - x \to z - y < -x + z \to z - y < z - x$
+\item $\varphi_{43} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to x \in \mathbb{R}) \to z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x \in \mathbb{R}$
+\item $\varphi_{44} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to y \in \mathbb{R}) \to z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \in \mathbb{R}$
+\item $\varphi_{45} :\equiv \forall w\,(-y + z = w \to -y + z = -x + z \to w = -x + z) \to -y + z = z - y \to -y + z = -x + z \to z - y = -x + z$
+\item $\varphi_{46} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z \in \mathbb{R}) \to z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y + z = z + -y$
+\item $\varphi_{47} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z \in \mathbb{R}) \to z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x + z = z + -x$
+\item $\varphi_{48} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x) \to z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y + z \leq -x + z$
+\item $\varphi_{49} :\equiv (-y + z = z + -y \to z + -y = z - y \to -y + z = z - y) \to z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y + z = z - y$
+\item $\varphi_{50} :\equiv (-y + z = z - y \to -y + z = -x + z \to z - y = -x + z) \to z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z - y \leq -x + z$
+\item $\varphi_{51} :\equiv (-x + z = z + -x \to z + -x = z - x \to -x + z = z - x) \to z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x + z = z - x$
+\item $\varphi_{52} :\equiv \forall w\,(-y + z = w \to -y + z < -x + z \to w < -x + z) \to -y + z = z - y \to -y + z < -x + z \to z - y < -x + z$
+\item $\varphi_{53} :\equiv (-y + z = z - y \to -y + z < -x + z \to z - y < -x + z) \to \varphi_{50}$
+\item $\varphi_{54} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y + z = z + -y) \to z + -y = z - y \to \varphi_{49}$
+\item $\varphi_{55} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x + z = z + -x) \to z + -x = z - x \to \varphi_{51}$
+\item $\varphi_{56} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to x \in \mathbb{R}) \to (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to y \in \mathbb{R}) \to \varphi_{37}$
+\item $\varphi_{57} :\equiv (-y \in \mathbb{R} \to z \in \mathbb{R} \to -y + z = z + -y) \to (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \in \mathbb{R}) \to \varphi_{46}$
+\item $\varphi_{58} :\equiv (-x \in \mathbb{R} \to z \in \mathbb{R} \to -x + z = z + -x) \to (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x \in \mathbb{R}) \to \varphi_{47}$
+\item $\varphi_{59} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z - y \leq -x + z) \to (-x + z = z - x \to z - y < -x + z \to z - y < z - x) \to \varphi_{40}$
+\item $\varphi_{60} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x \in \mathbb{R}) \to (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z \in \mathbb{R}) \to \varphi_{48}$
+\item $\varphi_{61} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y + z \leq -x + z) \to \varphi_{53}$
+\item $\varphi_{62} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -x + z = z - x) \to \varphi_{59}$
+\item $\varphi_{63} :\equiv (z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y + z = z - y) \to \varphi_{61}$
+\end{abbrevlist}
+\end{fullproof}

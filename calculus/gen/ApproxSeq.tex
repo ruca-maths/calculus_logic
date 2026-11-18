@@ -1,0 +1,2192 @@
+% 自動生成 (prover/build.js): ApproxSeq  ノード数 818
+\begin{fullproof}{[H1]}{$\forall c\,\forall r\,(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \exists a\,(\mathrm{Seq}(a) \land \mathrm{Conv}(a,c) \land \forall n \in \mathbb{N}\,(0 < \lvert a_{n} - c \rvert \land \lvert a_{n} - c \rvert < r)))$}{818}\phantomsection\label{tree:ApproxSeq}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z = w \to r \cdot (\underline{n} + 1)^{-1} < z \to r \cdot (\underline{n} + 1)^{-1} < w$\lbl{A6}}
+\UIC{$\varphi_{7}$}
+\UIC{$\forall z\,(\varphi_{7})$}
+\AXC{$\forall z\,(\varphi_{7}) \to \varphi_{31}$\lbl{A2}}
+\BIC{$\varphi_{31}$}
+\AXC{$\varphi_{31} \to \varphi_{21}$\lbl{A2}}
+\BIC{$\varphi_{21}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$z = w \to (\underline{n} + 1)^{-1} < z \to (\underline{n} + 1)^{-1} < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to (\underline{n} + 1)^{-1} < z \to (\underline{n} + 1)^{-1} < w)$}
+\UIC{$\varphi_{3}$}
+\AXC{$\varphi_{3} \to \varphi_{8}$\lbl{A2}}
+\BIC{$\varphi_{8}$}
+\AXC{$\varphi_{176}$\lbl{A2}}
+\BIC{$1^{-1} = 1 \to (\underline{n} + 1)^{-1} < 1^{-1} \to (\underline{n} + 1)^{-1} < 1$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(0 < \underline{n})$\lbl{[N15]}}
+\AXC{$\forall n \in \mathbb{N}\,(0 < \underline{n}) \to n \in \mathbb{N} \to 0 < \underline{n}$\lbl{A2}}
+\BIC{$n \in \mathbb{N} \to 0 < \underline{n}$}
+\AXC{$(n \in \mathbb{N} \to 0 < \underline{n}) \to \varphi_{153}$\lbl{A1}}
+\BIC{$\varphi_{153}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R})$\lbl{[N4]}}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R}) \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$\lbl{A2}}
+\BIC{$n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$}
+\AXC{$(n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{163}$\lbl{A1}}
+\BIC{$\varphi_{163}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to n \in \mathbb{N}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{163}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y \to x < x + y)$\lbl{[E3]}}
+\AXC{$\varphi_{127}$\lbl{A2}}
+\BIC{$\forall y\,(1 \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y \to 1 < 1 + y)$}
+\AXC{$\varphi_{147}$\lbl{A2}}
+\BIC{$1 \in \mathbb{R} \to \underline{n} \in \mathbb{R} \to 0 < \underline{n} \to 1 < 1 + \underline{n}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$1 \in \mathbb{R} \to \underline{n} \in \mathbb{R} \to 0 < \underline{n} \to 1 < 1 + \underline{n}$}
+\AXC{$(1 \in \mathbb{R} \to \underline{n} \in \mathbb{R} \to 0 < \underline{n} \to 1 < 1 + \underline{n}) \to \varphi_{221}$\lbl{A1}}
+\BIC{$\varphi_{221}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{172}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{172}$}
+\BIC{$\varphi_{172}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)$\lbl{(R3)}}
+\AXC{$\varphi_{90}$\lbl{A2}}
+\BIC{$\forall y\,(1 \in \mathbb{R} \to y \in \mathbb{R} \to 1 + y = y + 1)$}
+\AXC{$\varphi_{118}$\lbl{A2}}
+\BIC{$1 \in \mathbb{R} \to \underline{n} \in \mathbb{R} \to 1 + \underline{n} = \underline{n} + 1$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$1 \in \mathbb{R} \to \underline{n} \in \mathbb{R} \to 1 + \underline{n} = \underline{n} + 1$}
+\AXC{$(1 \in \mathbb{R} \to \underline{n} \in \mathbb{R} \to 1 + \underline{n} = \underline{n} + 1) \to 1 \in \mathbb{R} \to \varphi_{184}$\lbl{A1}}
+\BIC{$1 \in \mathbb{R} \to \varphi_{184}$}
+\BIC{$\varphi_{184}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{184}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 + \underline{n} = \underline{n} + 1$}
+\AXC{$\varphi_{234}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 < 1 + \underline{n}) \to \varphi_{177}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to n \in \mathbb{N}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{153}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n}$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{172}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 < 1 + \underline{n}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 < 1 + \underline{n}) \to \varphi_{177}$}
+\BIC{$\varphi_{177}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{130}$\lbl{A2}}
+\BIC{$\forall y\,(\underline{n} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{n} + y \in \mathbb{R})$}
+\AXC{$\varphi_{137}$\lbl{A2}}
+\BIC{$\underline{n} \in \mathbb{R} \to 1 \in \mathbb{R} \to \underline{n} + 1 \in \mathbb{R}$}
+\AXC{$\varphi_{220}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{54}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{54}$}
+\BIC{$\varphi_{54}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\varphi_{9}$\lbl{[E19]}}
+\AXC{$\varphi_{178}$\lbl{A2}}
+\BIC{$\forall y\,(1 \in \mathbb{R} \to y \in \mathbb{R} \to 0 < 1 \to 1 < y \to y^{-1} < 1^{-1})$}
+\AXC{$\varphi_{197}$\lbl{A2}}
+\BIC{$1 \in \mathbb{R} \to \varphi_{53}$}
+\AXC{$(1 \in \mathbb{R} \to \varphi_{53}) \to \varphi_{240}$\lbl{A1}}
+\BIC{$\varphi_{240}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \in \mathbb{R}) \to \varphi_{217}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \in \mathbb{R}) \to \varphi_{217}$}
+\BIC{$\varphi_{217}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$0 < 1$\lbl{[F28]}}
+\AXC{$0 < 1 \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < 1$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < 1$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{217}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 < \underline{n} + 1) \to \varphi_{26}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$z = w \to 1 < z \to 1 < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to 1 < z \to 1 < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to 1 < z \to 1 < w)$}
+\AXC{$\varphi_{32}$\lbl{A2}}
+\BIC{$\forall w\,(1 + \underline{n} = w \to 1 < 1 + \underline{n} \to 1 < w)$}
+\AXC{$\varphi_{141}$\lbl{A2}}
+\BIC{$1 + \underline{n} = \underline{n} + 1 \to 1 < 1 + \underline{n} \to 1 < \underline{n} + 1$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{177}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 < \underline{n} + 1$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 < \underline{n} + 1) \to \varphi_{26}$}
+\BIC{$\varphi_{26}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$1^{-1} = 1 \to (\underline{n} + 1)^{-1} < 1^{-1} \to (\underline{n} + 1)^{-1} < 1$}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{26}$}
+\AXC{$1^{-1} = 1$\lbl{[E35]}}
+\AXC{$1^{-1} = 1 \to \varphi_{26} \to \varphi_{181}$\lbl{A1}}
+\BIC{$\varphi_{26} \to \varphi_{181}$}
+\BIC{$\varphi_{181}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} < 1$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(0 < \underline{n})$\lbl{[N15]}}
+\AXC{$\forall n \in \mathbb{N}\,(0 < \underline{n}) \to n \in \mathbb{N} \to 0 < \underline{n}$\lbl{A2}}
+\BIC{$n \in \mathbb{N} \to 0 < \underline{n}$}
+\AXC{$(n \in \mathbb{N} \to 0 < \underline{n}) \to \varphi_{153}$\lbl{A1}}
+\BIC{$\varphi_{153}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x + y)$\lbl{[E5]}}
+\AXC{$\varphi_{186}$\lbl{A2}}
+\BIC{$\forall y\,(\underline{n} \in \mathbb{R} \to y \in \mathbb{R} \to 0 < \underline{n} \to 0 < y \to 0 < \underline{n} + y)$}
+\AXC{$\varphi_{192}$\lbl{A2}}
+\BIC{$\underline{n} \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 < \underline{n} \to 0 < 1 \to 0 < \underline{n} + 1$}
+\AXC{$\varphi_{275}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{215}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{215}$}
+\BIC{$\varphi_{215}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n}) \to \varphi_{156}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to n \in \mathbb{N}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{153}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n}$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n}) \to \varphi_{156}$}
+\BIC{$\varphi_{156}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$0 < 1$\lbl{[F28]}}
+\AXC{$0 < 1 \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < 1$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < 1$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{156}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n} + 1$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x < y \to x \neq y)$\lbl{[F26]}}
+\AXC{$\forall x\,\forall y\,(x < y \to x \neq y) \to \forall y\,(0 < y \to 0 \neq y)$\lbl{A2}}
+\BIC{$\forall y\,(0 < y \to 0 \neq y)$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\forall y\,(0 < y \to 0 \neq y)$}
+\AXC{$\forall y\,(0 < y \to 0 \neq y) \to 0 < \underline{n} + 1 \to 0 \neq \underline{n} + 1$\lbl{A2}}
+\BIC{$0 < \underline{n} + 1 \to 0 \neq \underline{n} + 1$}
+\AXC{$(0 < \underline{n} + 1 \to 0 \neq \underline{n} + 1) \to \varphi_{175}$\lbl{A1}}
+\BIC{$\varphi_{175}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n} + 1$}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{175}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 \neq \underline{n} + 1$}
+\AXC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 \neq \underline{n} + 1) \to \varphi_{106}$\lbl{A1}}
+\BIC{$\varphi_{106}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \in \mathbb{R}$}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{135}$\lbl{A2}}
+\BIC{$\underline{n} + 1 \in \mathbb{R} \to \underline{n} + 1 \neq 0 \to (\underline{n} + 1)^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{238}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \in \mathbb{R}) \to \varphi_{185}$}
+\BIC{$\varphi_{185}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$\forall y\,(\underline{n} + 1 = y \to y = \underline{n} + 1)$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\underline{n} + 1 = 0 \to 0 = \underline{n} + 1$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{106}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \neq 0$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{185}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\varphi_{58}$\lbl{[E8]}}
+\AXC{$\varphi_{58} \to \varphi_{173}$\lbl{A2}}
+\BIC{$\varphi_{173}$}
+\AXC{$\varphi_{173} \to \varphi_{171}$\lbl{A2}}
+\BIC{$\varphi_{171}$}
+\AXC{$\varphi_{171} \to (\underline{n} + 1)^{-1} \in \mathbb{R} \to 1 \in \mathbb{R} \to \varphi_{47}$\lbl{A2}}
+\BIC{$(\underline{n} + 1)^{-1} \in \mathbb{R} \to 1 \in \mathbb{R} \to \varphi_{47}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$(\underline{n} + 1)^{-1} \in \mathbb{R} \to 1 \in \mathbb{R} \to \varphi_{47}$}
+\AXC{$((\underline{n} + 1)^{-1} \in \mathbb{R} \to 1 \in \mathbb{R} \to \varphi_{47}) \to \varphi_{278}$\lbl{A1}}
+\BIC{$\varphi_{278}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\varphi_{278}$}
+\BIC{$1 \in \mathbb{R} \to \varphi_{224}$}
+\BIC{$\varphi_{224}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r$\lbl{A1}}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{224}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r) \to \varphi_{191}$}
+\BIC{$\varphi_{191}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x \cdot 1 = x)$\lbl{(R8)}}
+\AXC{$\forall x \in \mathbb{R}\,(x \cdot 1 = x) \to r \in \mathbb{R} \to r \cdot 1 = r$\lbl{A2}}
+\BIC{$r \in \mathbb{R} \to r \cdot 1 = r$}
+\AXC{$(r \in \mathbb{R} \to r \cdot 1 = r) \to \varphi_{145}$\lbl{A1}}
+\BIC{$\varphi_{145}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\varphi_{145}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \cdot 1 = r$}
+\AXC{$\varphi_{247}$\lbl{A1}}
+\BIC{$\varphi_{46} \to \varphi_{21} \to \varphi_{27}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{59}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert \pi_{c,r}(n) - c \rvert = y \to y = \lvert \pi_{c,r}(n) - c \rvert)$}
+\AXC{$\forall y\,(\lvert \pi_{c,r}(n) - c \rvert = y \to y = \lvert \pi_{c,r}(n) - c \rvert) \to \varphi_{123}$\lbl{A2}}
+\BIC{$\varphi_{123}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{22}$\lbl{A2}}
+\BIC{$\varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \in \mathbb{R}$}
+\AXC{$\forall x \in \mathbb{R}\,(0 < x \to 0 < x^{-1})$\lbl{[F34]}}
+\AXC{$\varphi_{128}$\lbl{A2}}
+\BIC{$\underline{n} + 1 \in \mathbb{R} \to 0 < \underline{n} + 1 \to 0 < (\underline{n} + 1)^{-1}$}
+\AXC{$\varphi_{235}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \in \mathbb{R}) \to \varphi_{182}$}
+\BIC{$\varphi_{182}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y)$\lbl{(R15)}}
+\AXC{$\varphi_{165}$\lbl{A2}}
+\BIC{$\forall y\,(r \in \mathbb{R} \to y \in \mathbb{R} \to 0 < r \to 0 < y \to 0 < r \cdot y)$}
+\AXC{$\varphi_{204}$\lbl{A2}}
+\BIC{$r \in \mathbb{R} \to \varphi_{95}$}
+\AXC{$\varphi_{289}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \in \mathbb{R}) \to \varphi_{231}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \in \mathbb{R}) \to \varphi_{231}$}
+\BIC{$\varphi_{231}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\varphi_{231}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r) \to \varphi_{190}$}
+\BIC{$\varphi_{190}$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n} + 1$}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\varphi_{182}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < (\underline{n} + 1)^{-1}$}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$\varphi_{190}$}
+\BIC{$\varphi_{28}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\forall x\,(0 \leq x \to \lvert x \rvert = x)$\lbl{[A1]}}
+\AXC{$\forall x\,(0 \leq x \to \lvert x \rvert = x) \to \varphi_{38}$\lbl{A2}}
+\BIC{$\varphi_{38}$}
+\AXC{$\varphi_{38} \to \varphi_{15} \to c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{16}$\lbl{A1}}
+\BIC{$\varphi_{15} \to c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{16}$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$z = w \to \lvert \pi_{c,r}(n) - c \rvert = \lvert z \rvert \to \lvert \pi_{c,r}(n) - c \rvert = \lvert w \rvert$\lbl{A6}}
+\UIC{$\varphi_{52}$}
+\UIC{$\forall z\,(\varphi_{52})$}
+\AXC{$\forall z\,(\varphi_{52}) \to \varphi_{166}$\lbl{A2}}
+\BIC{$\varphi_{166}$}
+\AXC{$\varphi_{166} \to \pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} \to \varphi_{140}$\lbl{A2}}
+\BIC{$\pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} \to \varphi_{140}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{91}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z)$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$\forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z)$}
+\AXC{$\forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z) \to \varphi_{167}$\lbl{A2}}
+\BIC{$\varphi_{167}$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{103}$\lbl{A2}}
+\BIC{$\forall y\,(r \in \mathbb{R} \to y \in \mathbb{R} \to r \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{157}$\lbl{A2}}
+\BIC{$r \in \mathbb{R} \to (\underline{n} + 1)^{-1} \in \mathbb{R} \to r \cdot (\underline{n} + 1)^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{248}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \in \mathbb{R}) \to \varphi_{194}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \in \mathbb{R}) \to \varphi_{194}$}
+\BIC{$\varphi_{194}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$\varphi_{194}$}
+\BIC{$\varphi_{43}$}
+\end{ptree}
+\noindent$\Pi_{51}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y - y = x)$\lbl{[E38]}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y - y = x) \to \varphi_{129}$\lbl{A2}}
+\BIC{$\varphi_{129}$}
+\AXC{$\varphi_{129} \to \varphi_{119}$\lbl{A2}}
+\BIC{$\varphi_{119}$}
+\end{ptree}
+\noindent$\Pi_{52}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{91}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z)$}
+\end{ptree}
+\noindent$\Pi_{53}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{52}}{\vdots}$}\noLine
+\UIC{$\forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z)$}
+\AXC{$\forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z) \to \varphi_{168}$\lbl{A2}}
+\BIC{$\varphi_{168}$}
+\end{ptree}
+\noindent$\Pi_{54}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)$\lbl{(R3)}}
+\AXC{$\varphi_{92}$\lbl{A2}}
+\BIC{$\forall y\,(c \in \mathbb{R} \to y \in \mathbb{R} \to c + y = y + c)$}
+\AXC{$\forall y\,(c \in \mathbb{R} \to y \in \mathbb{R} \to c + y = y + c) \to c \in \mathbb{R} \to \varphi_{84}$\lbl{A2}}
+\BIC{$c \in \mathbb{R} \to \varphi_{84}$}
+\end{ptree}
+\noindent$\Pi_{55}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$\varphi_{43}$}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to c \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{54}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \varphi_{84}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{84}) \to \varphi_{223}$\lbl{A1}}
+\BIC{$\varphi_{223}$}
+\BIC{$\varphi_{43} \to c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{35}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{35}$}
+\end{ptree}
+\noindent$\Pi_{56}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\varphi_{29}$\lbl{A2}}
+\BIC{$c + r \cdot (\underline{n} + 1)^{-1} - c = c + r \cdot (\underline{n} + 1)^{-1} - c$}
+\AXC{$\stackrel{\Pi_{55}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{35}$}
+\AXC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{35}) \to \varphi_{284}$\lbl{A1}}
+\BIC{$\varphi_{284}$}
+\BIC{$\varphi_{259}$}
+\end{ptree}
+\noindent$\Pi_{57}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{56}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{56})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{56})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{56}) \to \varphi_{187}$\lbl{A2}}
+\BIC{$\varphi_{187}$}
+\AXC{$\varphi_{187} \to c + r \cdot (\underline{n} + 1)^{-1} = r \cdot (\underline{n} + 1)^{-1} + c \to \varphi_{180}$\lbl{A2}}
+\BIC{$c + r \cdot (\underline{n} + 1)^{-1} = r \cdot (\underline{n} + 1)^{-1} + c \to \varphi_{180}$}
+\AXC{$\stackrel{\Pi_{56}}{\vdots}$}\noLine
+\UIC{$\varphi_{259}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{39}$}
+\end{ptree}
+\noindent$\Pi_{58}$:
+\begin{ptree}
+\AXC{$z = w \to \pi_{c,r}(n) - c = z - c \to \pi_{c,r}(n) - c = w - c$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \pi_{c,r}(n) - c = z - c \to \pi_{c,r}(n) - c = w - c)$}
+\UIC{$\varphi_{23}$}
+\AXC{$\varphi_{23} \to \varphi_{120}$\lbl{A2}}
+\BIC{$\varphi_{120}$}
+\AXC{$\varphi_{120} \to \pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1} \to \varphi_{126}$\lbl{A2}}
+\BIC{$\pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1} \to \varphi_{126}$}
+\end{ptree}
+\noindent$\Pi_{59}$:
+\begin{ptree}
+\AXC{$\forall c\,\forall r\,(c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{45})$\lbl{[S22]}}
+\AXC{$\varphi_{222}$\lbl{A2}}
+\BIC{$\forall r\,(c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{45})$}
+\AXC{$\forall r\,(c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{45}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{45}$\lbl{A2}}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{45}$}
+\AXC{$\varphi_{264}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to c \in \mathbb{R}) \to \varphi_{201}$}
+\end{ptree}
+\noindent$\Pi_{60}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to r \in \mathbb{R}$\lbl{A1}}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to c \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{59}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to c \in \mathbb{R}) \to \varphi_{201}$}
+\BIC{$\varphi_{201}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{61}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{60}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{45}$}
+\AXC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{45}) \to c \in \mathbb{R} \to \varphi_{60}$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \to \varphi_{60}$}
+\end{ptree}
+\noindent$\Pi_{62}$:
+\begin{ptree}
+\AXC{$\varphi_{158}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{61}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \varphi_{60}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{60}) \to \varphi_{158} \to c \in \mathbb{R} \to \varphi_{48}$\lbl{A1}}
+\BIC{$\varphi_{158} \to c \in \mathbb{R} \to \varphi_{48}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{48}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{48}) \to \varphi_{256}$\lbl{A1}}
+\BIC{$\varphi_{256}$}
+\end{ptree}
+\noindent$\Pi_{63}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{58}}{\vdots}$}\noLine
+\UIC{$\pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1} \to \varphi_{126}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \pi_{c,r}(n) - c = \pi_{c,r}(n) - c$\lbl{A2}}
+\BIC{$\pi_{c,r}(n) - c = \pi_{c,r}(n) - c$}
+\AXC{$\stackrel{\Pi_{62}}{\vdots}$}\noLine
+\UIC{$\varphi_{256}$}
+\BIC{$(\pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1} \to \varphi_{126}) \to c \in \mathbb{R} \to \varphi_{85}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{85}$}
+\end{ptree}
+\noindent$\Pi_{64}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{57}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{39}$}
+\AXC{$\stackrel{\Pi_{63}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \varphi_{85}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{85}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{39}) \to \varphi_{243}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{39}) \to \varphi_{243}$}
+\BIC{$\varphi_{243}$}
+\end{ptree}
+\noindent$\Pi_{65}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{53}}{\vdots}$}\noLine
+\UIC{$\varphi_{168}$}
+\AXC{$\varphi_{168} \to \pi_{c,r}(n) - c = c + r \cdot (\underline{n} + 1)^{-1} - c \to \varphi_{170}$\lbl{A2}}
+\BIC{$\pi_{c,r}(n) - c = c + r \cdot (\underline{n} + 1)^{-1} - c \to \varphi_{170}$}
+\AXC{$\stackrel{\Pi_{64}}{\vdots}$}\noLine
+\UIC{$\varphi_{243}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{86}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{86}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{34}) \to \varphi_{225}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{34}) \to \varphi_{225}$}
+\end{ptree}
+\noindent$\Pi_{66}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to c \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$\varphi_{43}$}
+\AXC{$\stackrel{\Pi_{51}}{\vdots}$}\noLine
+\UIC{$\varphi_{119}$}
+\AXC{$\varphi_{119} \to \varphi_{43} \to \varphi_{202}$\lbl{A1}}
+\BIC{$\varphi_{43} \to \varphi_{202}$}
+\BIC{$\varphi_{202}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{34}$}
+\AXC{$\stackrel{\Pi_{65}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{34}) \to \varphi_{225}$}
+\BIC{$\varphi_{225}$}
+\end{ptree}
+\noindent$\Pi_{67}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$\varphi_{167}$}
+\AXC{$\varphi_{167} \to \pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} + c - c \to \varphi_{125}$\lbl{A2}}
+\BIC{$\pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} + c - c \to \varphi_{125}$}
+\AXC{$\stackrel{\Pi_{66}}{\vdots}$}\noLine
+\UIC{$\varphi_{225}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{49}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{49}) \to \varphi_{267}$\lbl{A1}}
+\BIC{$\varphi_{267}$}
+\end{ptree}
+\noindent$\Pi_{68}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$\pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} \to \varphi_{140}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \lvert \pi_{c,r}(n) - c \rvert = \lvert \pi_{c,r}(n) - c \rvert$\lbl{A2}}
+\BIC{$\lvert \pi_{c,r}(n) - c \rvert = \lvert \pi_{c,r}(n) - c \rvert$}
+\AXC{$\stackrel{\Pi_{67}}{\vdots}$}\noLine
+\UIC{$\varphi_{267}$}
+\BIC{$(\pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} \to \varphi_{140}) \to c \in \mathbb{R} \to \varphi_{87}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{87}$}
+\end{ptree}
+\noindent$\Pi_{69}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$\varphi_{28}$}
+\AXC{$\varphi_{28} \to \varphi_{15}$\lbl{A1}}
+\BIC{$\varphi_{15}$}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\varphi_{15} \to c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{16}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{16}$}
+\AXC{$\stackrel{\Pi_{68}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \varphi_{87}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{87}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{16}) \to \varphi_{227}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{16}) \to \varphi_{227}$}
+\BIC{$\varphi_{227}$}
+\end{ptree}
+\noindent$\Pi_{70}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$\varphi_{22}$}
+\AXC{$\varphi_{22} \to \varphi_{164}$\lbl{A2}}
+\BIC{$\varphi_{164}$}
+\AXC{$\varphi_{164} \to \lvert \pi_{c,r}(n) - c \rvert = \lvert r \cdot (\underline{n} + 1)^{-1} \rvert \to \varphi_{124}$\lbl{A2}}
+\BIC{$\lvert \pi_{c,r}(n) - c \rvert = \lvert r \cdot (\underline{n} + 1)^{-1} \rvert \to \varphi_{124}$}
+\AXC{$\stackrel{\Pi_{69}}{\vdots}$}\noLine
+\UIC{$\varphi_{227}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{66}$}
+\end{ptree}
+\noindent$\Pi_{71}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$\varphi_{123}$}
+\AXC{$\stackrel{\Pi_{70}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \varphi_{66}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{66}) \to \varphi_{123} \to c \in \mathbb{R} \to \varphi_{67}$\lbl{A1}}
+\BIC{$\varphi_{123} \to c \in \mathbb{R} \to \varphi_{67}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{67}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{67}) \to \varphi_{27} \to \varphi_{218}$\lbl{A1}}
+\BIC{$\varphi_{27} \to \varphi_{218}$}
+\end{ptree}
+\noindent$\Pi_{72}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{21}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} < 1$}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\varphi_{191}$}
+\BIC{$\varphi_{46}$}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\varphi_{46} \to \varphi_{21} \to \varphi_{27}$}
+\BIC{$\varphi_{21} \to \varphi_{27}$}
+\BIC{$\varphi_{27}$}
+\AXC{$\stackrel{\Pi_{71}}{\vdots}$}\noLine
+\UIC{$\varphi_{27} \to \varphi_{218}$}
+\BIC{$\varphi_{218}$}
+\end{ptree}
+\noindent$\Pi_{73}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{59}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert \pi_{c,r}(n) - c \rvert = y \to y = \lvert \pi_{c,r}(n) - c \rvert)$}
+\AXC{$\forall y\,(\lvert \pi_{c,r}(n) - c \rvert = y \to y = \lvert \pi_{c,r}(n) - c \rvert) \to \varphi_{123}$\lbl{A2}}
+\BIC{$\varphi_{123}$}
+\end{ptree}
+\noindent$\Pi_{74}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$\varphi_{28}$}
+\AXC{$\stackrel{\Pi_{73}}{\vdots}$}\noLine
+\UIC{$\varphi_{123}$}
+\AXC{$\stackrel{\Pi_{70}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \varphi_{66}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{66}) \to \varphi_{123} \to c \in \mathbb{R} \to \varphi_{67}$\lbl{A1}}
+\BIC{$\varphi_{123} \to c \in \mathbb{R} \to \varphi_{67}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{67}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{67}) \to \varphi_{28} \to \varphi_{219}$\lbl{A1}}
+\BIC{$\varphi_{28} \to \varphi_{219}$}
+\BIC{$\varphi_{219}$}
+\end{ptree}
+\noindent$\Pi_{75}$:
+\begin{ptree}
+\AXC{$z = w \to 0 < z \to 0 < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to 0 < z \to 0 < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to 0 < z \to 0 < w)$}
+\AXC{$\forall z\,\forall w\,(z = w \to 0 < z \to 0 < w) \to \varphi_{10}$\lbl{A2}}
+\BIC{$\varphi_{10}$}
+\AXC{$\varphi_{10} \to \varphi_{146}$\lbl{A2}}
+\BIC{$\varphi_{146}$}
+\AXC{$\stackrel{\Pi_{74}}{\vdots}$}\noLine
+\UIC{$\varphi_{219}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \lvert \pi_{c,r}(n) - c \rvert$}
+\AXC{$\varphi_{237}$\lbl{A1}}
+\BIC{$\varphi_{216}$}
+\end{ptree}
+\noindent$\Pi_{76}$:
+\begin{ptree}
+\AXC{$z = w \to z < r \to w < r$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < r \to w < r)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < r \to w < r)$}
+\AXC{$\forall z\,\forall w\,(z = w \to z < r \to w < r) \to \varphi_{6}$\lbl{A2}}
+\BIC{$\varphi_{6}$}
+\AXC{$\varphi_{6} \to \varphi_{144}$\lbl{A2}}
+\BIC{$\varphi_{144}$}
+\AXC{$\stackrel{\Pi_{72}}{\vdots}$}\noLine
+\UIC{$\varphi_{218}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \lvert \pi_{c,r}(n) - c \rvert < r$}
+\AXC{$\stackrel{\Pi_{75}}{\vdots}$}\noLine
+\UIC{$\varphi_{216}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{116}$}
+\end{ptree}
+\noindent$\Pi_{77}$:
+\begin{ptree}
+\AXC{$\forall n\,(\varphi_{142}) \to \varphi_{161}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{76}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \varphi_{116}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{116}) \to \varphi_{142}$\lbl{A1}}
+\BIC{$\varphi_{142}$}
+\UIC{$\forall n\,(\varphi_{142})$}
+\AXC{$\forall n\,(\varphi_{142}) \to (\forall n\,(\varphi_{142}) \to \varphi_{161}) \to \varphi_{13} \to c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{96}$\lbl{A1}}
+\BIC{$(\forall n\,(\varphi_{142}) \to \varphi_{161}) \to \varphi_{13} \to c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{96}$}
+\BIC{$\varphi_{13} \to c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{96}$}
+\end{ptree}
+\noindent$\Pi_{78}$:
+\begin{ptree}
+\AXC{$z = w \to z < \varepsilon \to w < \varepsilon$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < \varepsilon \to w < \varepsilon)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < \varepsilon \to w < \varepsilon)$}
+\AXC{$\forall z\,\forall w\,(z = w \to z < \varepsilon \to w < \varepsilon) \to \varphi_{14}$\lbl{A2}}
+\BIC{$\varphi_{14}$}
+\AXC{$\varphi_{14} \to \varphi_{155}$\lbl{A2}}
+\BIC{$\varphi_{155}$}
+\end{ptree}
+\noindent$\Pi_{79}$:
+\begin{ptree}
+\AXC{$z = w \to r \cdot (\underline{n} + 1)^{-1} < z \to r \cdot (\underline{n} + 1)^{-1} < w$\lbl{A6}}
+\UIC{$\varphi_{7}$}
+\UIC{$\forall z\,(\varphi_{7})$}
+\AXC{$\forall z\,(\varphi_{7}) \to \varphi_{115}$\lbl{A2}}
+\BIC{$\varphi_{115}$}
+\AXC{$\varphi_{115} \to r \cdot (\varepsilon \cdot r^{-1}) = \varepsilon \to \varphi_{36}$\lbl{A2}}
+\BIC{$r \cdot (\varepsilon \cdot r^{-1}) = \varepsilon \to \varphi_{36}$}
+\end{ptree}
+\noindent$\Pi_{80}$:
+\begin{ptree}
+\AXC{$\forall K\,\forall n\,(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1})$\lbl{[C25]}}
+\AXC{$\varphi_{169}$\lbl{A2}}
+\BIC{$\forall n\,(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1})$}
+\AXC{$\varphi_{148}$\lbl{A2}}
+\BIC{$K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1}$}
+\end{ptree}
+\noindent$\Pi_{81}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{80}}{\vdots}$}\noLine
+\UIC{$K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1}$}
+\AXC{$(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1}) \to \varphi_{302}$\lbl{A1}}
+\BIC{$\varphi_{302}$}
+\end{ptree}
+\noindent$\Pi_{82}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{98}$\lbl{A1}}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{72}$\lbl{A1}}
+\AXC{$\varphi_{228}$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{80}$}
+\AXC{$\stackrel{\Pi_{81}}{\vdots}$}\noLine
+\UIC{$\varphi_{302}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{98}) \to \varphi_{236}$}
+\BIC{$\varphi_{236}$}
+\end{ptree}
+\noindent$\Pi_{83}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R})$\lbl{[N4]}}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R}) \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$\lbl{A2}}
+\BIC{$n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$}
+\AXC{$(n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{232}$\lbl{A1}}
+\BIC{$\varphi_{232}$}
+\end{ptree}
+\noindent$\Pi_{84}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{98}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{83}}{\vdots}$}\noLine
+\UIC{$\varphi_{232}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{88}$}
+\end{ptree}
+\noindent$\Pi_{85}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x < x + 1)$\lbl{[N13]}}
+\AXC{$\forall x \in \mathbb{R}\,(x < x + 1) \to \underline{n} \in \mathbb{R} \to \underline{n} < \underline{n} + 1$\lbl{A2}}
+\BIC{$\underline{n} \in \mathbb{R} \to \underline{n} < \underline{n} + 1$}
+\AXC{$(\underline{n} \in \mathbb{R} \to \underline{n} < \underline{n} + 1) \to \varphi_{245}$\lbl{A1}}
+\BIC{$\varphi_{245}$}
+\end{ptree}
+\noindent$\Pi_{86}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(0 < \underline{n})$\lbl{[N15]}}
+\AXC{$\forall n \in \mathbb{N}\,(0 < \underline{n}) \to n \in \mathbb{N} \to 0 < \underline{n}$\lbl{A2}}
+\BIC{$n \in \mathbb{N} \to 0 < \underline{n}$}
+\AXC{$(n \in \mathbb{N} \to 0 < \underline{n}) \to \varphi_{229}$\lbl{A1}}
+\BIC{$\varphi_{229}$}
+\end{ptree}
+\noindent$\Pi_{87}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{98}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{86}}{\vdots}$}\noLine
+\UIC{$\varphi_{229}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{74}$}
+\end{ptree}
+\noindent$\Pi_{88}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{130}$\lbl{A2}}
+\BIC{$\forall y\,(\underline{n} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{n} + y \in \mathbb{R})$}
+\AXC{$\varphi_{137}$\lbl{A2}}
+\BIC{$\underline{n} \in \mathbb{R} \to 1 \in \mathbb{R} \to \underline{n} + 1 \in \mathbb{R}$}
+\AXC{$(\underline{n} \in \mathbb{R} \to 1 \in \mathbb{R} \to \underline{n} + 1 \in \mathbb{R}) \to \varphi_{253}$\lbl{A1}}
+\BIC{$\varphi_{253}$}
+\end{ptree}
+\noindent$\Pi_{89}$:
+\begin{ptree}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{84}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{88}$}
+\AXC{$\stackrel{\Pi_{88}}{\vdots}$}\noLine
+\UIC{$\varphi_{253}$}
+\BIC{$1 \in \mathbb{R} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{63}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{63}$}
+\end{ptree}
+\noindent$\Pi_{90}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{84}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{88}$}
+\AXC{$\varphi_{9}$\lbl{[E19]}}
+\AXC{$\varphi_{9} \to \varphi_{77}$\lbl{A2}}
+\BIC{$\varphi_{77}$}
+\AXC{$\varphi_{77} \to \underline{n} \in \mathbb{R} \to \varphi_{112}$\lbl{A2}}
+\BIC{$\underline{n} \in \mathbb{R} \to \varphi_{112}$}
+\AXC{$\varphi_{315}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{88}) \to \varphi_{308}$}
+\BIC{$\varphi_{308}$}
+\end{ptree}
+\noindent$\Pi_{91}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{87}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{74}$}
+\AXC{$\stackrel{\Pi_{89}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{63}$}
+\AXC{$\stackrel{\Pi_{90}}{\vdots}$}\noLine
+\UIC{$\varphi_{308}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{74}) \to \varphi_{257}$}
+\BIC{$\varphi_{257}$}
+\end{ptree}
+\noindent$\Pi_{92}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z)$\lbl{[O3]}}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z) \to \varphi_{4}$\lbl{A2}}
+\BIC{$\varphi_{4}$}
+\AXC{$\varphi_{4} \to \varphi_{44}$\lbl{A2}}
+\BIC{$\varphi_{44}$}
+\AXC{$\varphi_{44} \to \varphi_{110}$\lbl{A2}}
+\BIC{$\varphi_{110}$}
+\end{ptree}
+\noindent$\Pi_{93}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{92}}{\vdots}$}\noLine
+\UIC{$\varphi_{110}$}
+\AXC{$\varphi_{110} \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{104}) \to \varphi_{261}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{104}) \to \varphi_{261}$}
+\end{ptree}
+\noindent$\Pi_{94}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{84}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{88}$}
+\AXC{$\stackrel{\Pi_{85}}{\vdots}$}\noLine
+\UIC{$\varphi_{245}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{73}$}
+\AXC{$\stackrel{\Pi_{91}}{\vdots}$}\noLine
+\UIC{$\varphi_{257}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{104}$}
+\AXC{$\stackrel{\Pi_{93}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{104}) \to \varphi_{261}$}
+\BIC{$\varphi_{261}$}
+\end{ptree}
+\noindent$\Pi_{95}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z)$\lbl{[O2]}}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z) \to \varphi_{5}$\lbl{A2}}
+\BIC{$\varphi_{5}$}
+\AXC{$\varphi_{5} \to \varphi_{55}$\lbl{A2}}
+\BIC{$\varphi_{55}$}
+\AXC{$\varphi_{55} \to \varphi_{121}$\lbl{A2}}
+\BIC{$\varphi_{121}$}
+\end{ptree}
+\noindent$\Pi_{96}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{95}}{\vdots}$}\noLine
+\UIC{$\varphi_{121}$}
+\AXC{$\varphi_{121} \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{105}) \to \varphi_{263}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{105}) \to \varphi_{263}$}
+\end{ptree}
+\noindent$\Pi_{97}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{37}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{82}}{\vdots}$}\noLine
+\UIC{$\varphi_{236}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{79}$}
+\AXC{$\stackrel{\Pi_{94}}{\vdots}$}\noLine
+\UIC{$\varphi_{261}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{105}$}
+\AXC{$\stackrel{\Pi_{96}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{105}) \to \varphi_{263}$}
+\BIC{$\varphi_{263}$}
+\end{ptree}
+\noindent$\Pi_{98}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(r = y \to y = r)$\lbl{A2}}
+\BIC{$\forall y\,(r = y \to y = r)$}
+\AXC{$\forall y\,(r = y \to y = r) \to r = 0 \to 0 = r$\lbl{A2}}
+\BIC{$r = 0 \to 0 = r$}
+\end{ptree}
+\noindent$\Pi_{99}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x < y \to x \neq y)$\lbl{[F26]}}
+\AXC{$\forall x\,\forall y\,(x < y \to x \neq y) \to \forall y\,(0 < y \to 0 \neq y)$\lbl{A2}}
+\BIC{$\forall y\,(0 < y \to 0 \neq y)$}
+\AXC{$\forall y\,(0 < y \to 0 \neq y) \to 0 < r \to 0 \neq r$\lbl{A2}}
+\BIC{$0 < r \to 0 \neq r$}
+\end{ptree}
+\noindent$\Pi_{100}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{98}}{\vdots}$}\noLine
+\UIC{$r = 0 \to 0 = r$}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{99}}{\vdots}$}\noLine
+\UIC{$0 < r \to 0 \neq r$}
+\AXC{$(0 < r \to 0 \neq r) \to \varphi_{61}$\lbl{A1}}
+\BIC{$\varphi_{61}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 \neq r$}
+\AXC{$\varphi_{101}$\lbl{A1}}
+\BIC{$(r = 0 \to 0 = r) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to r \neq 0$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to r \neq 0$}
+\end{ptree}
+\noindent$\Pi_{101}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}$\lbl{A1}}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{33}$\lbl{A2}}
+\BIC{$r \in \mathbb{R} \to r \neq 0 \to r^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{279}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to \varphi_{209}$}
+\BIC{$\varphi_{209}$}
+\end{ptree}
+\noindent$\Pi_{102}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{111}$\lbl{A2}}
+\BIC{$\forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to \varepsilon \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{131}$\lbl{A2}}
+\BIC{$\varepsilon \in \mathbb{R} \to r^{-1} \in \mathbb{R} \to \varepsilon \cdot r^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{288}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{244}$}
+\end{ptree}
+\noindent$\Pi_{103}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{102}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{244}$}
+\BIC{$\varphi_{244}$}
+\end{ptree}
+\noindent$\Pi_{104}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{100}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to r \neq 0$}
+\AXC{$\stackrel{\Pi_{101}}{\vdots}$}\noLine
+\UIC{$\varphi_{209}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{40}$}
+\AXC{$\stackrel{\Pi_{103}}{\vdots}$}\noLine
+\UIC{$\varphi_{244}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{68}$}
+\end{ptree}
+\noindent$\Pi_{105}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x + y)$\lbl{[E5]}}
+\AXC{$\varphi_{186}$\lbl{A2}}
+\BIC{$\forall y\,(\underline{n} \in \mathbb{R} \to y \in \mathbb{R} \to 0 < \underline{n} \to 0 < y \to 0 < \underline{n} + y)$}
+\AXC{$\varphi_{192}$\lbl{A2}}
+\BIC{$\underline{n} \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 < \underline{n} \to 0 < 1 \to 0 < \underline{n} + 1$}
+\end{ptree}
+\noindent$\Pi_{106}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{105}}{\vdots}$}\noLine
+\UIC{$\underline{n} \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 < \underline{n} \to 0 < 1 \to 0 < \underline{n} + 1$}
+\AXC{$(\underline{n} \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 < \underline{n} \to 0 < 1 \to 0 < \underline{n} + 1) \to \varphi_{304}$\lbl{A1}}
+\BIC{$\varphi_{304}$}
+\end{ptree}
+\noindent$\Pi_{107}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{87}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{74}$}
+\AXC{$1 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{84}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{88}$}
+\AXC{$\stackrel{\Pi_{106}}{\vdots}$}\noLine
+\UIC{$\varphi_{304}$}
+\BIC{$1 \in \mathbb{R} \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{74}) \to \varphi_{233}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{74}) \to \varphi_{233}$}
+\BIC{$\varphi_{233}$}
+\end{ptree}
+\noindent$\Pi_{108}$:
+\begin{ptree}
+\AXC{$0 < 1$\lbl{[F28]}}
+\AXC{$0 < 1 \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{50}$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{50}$}
+\AXC{$\stackrel{\Pi_{107}}{\vdots}$}\noLine
+\UIC{$\varphi_{233}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{51}$}
+\end{ptree}
+\noindent$\Pi_{109}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x < y \to x \neq y)$\lbl{[F26]}}
+\AXC{$\forall x\,\forall y\,(x < y \to x \neq y) \to \forall y\,(0 < y \to 0 \neq y)$\lbl{A2}}
+\BIC{$\forall y\,(0 < y \to 0 \neq y)$}
+\end{ptree}
+\noindent$\Pi_{110}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{109}}{\vdots}$}\noLine
+\UIC{$\forall y\,(0 < y \to 0 \neq y)$}
+\AXC{$\forall y\,(0 < y \to 0 \neq y) \to 0 < \underline{n} + 1 \to 0 \neq \underline{n} + 1$\lbl{A2}}
+\BIC{$0 < \underline{n} + 1 \to 0 \neq \underline{n} + 1$}
+\AXC{$(0 < \underline{n} + 1 \to 0 \neq \underline{n} + 1) \to \varphi_{241}$\lbl{A1}}
+\BIC{$\varphi_{241}$}
+\end{ptree}
+\noindent$\Pi_{111}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{108}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{51}$}
+\AXC{$\stackrel{\Pi_{110}}{\vdots}$}\noLine
+\UIC{$\varphi_{241}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{41}$}
+\AXC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{41}) \to \varphi_{208}$\lbl{A1}}
+\BIC{$\varphi_{208}$}
+\end{ptree}
+\noindent$\Pi_{112}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{89}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{63}$}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{135}$\lbl{A2}}
+\BIC{$\underline{n} + 1 \in \mathbb{R} \to \underline{n} + 1 \neq 0 \to (\underline{n} + 1)^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{300}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{63}) \to \varphi_{249}$}
+\BIC{$\varphi_{249}$}
+\end{ptree}
+\noindent$\Pi_{113}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$\forall y\,(\underline{n} + 1 = y \to y = \underline{n} + 1)$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\underline{n} + 1 = 0 \to 0 = \underline{n} + 1$}
+\AXC{$\stackrel{\Pi_{111}}{\vdots}$}\noLine
+\UIC{$\varphi_{208}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{42}$}
+\AXC{$\stackrel{\Pi_{112}}{\vdots}$}\noLine
+\UIC{$\varphi_{249}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{81}$}
+\end{ptree}
+\noindent$\Pi_{114}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{113}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{81}$}
+\AXC{$\varphi_{58}$\lbl{[E8]}}
+\AXC{$\varphi_{58} \to \varphi_{173}$\lbl{A2}}
+\BIC{$\varphi_{173}$}
+\AXC{$\varphi_{173} \to \varphi_{198}$\lbl{A2}}
+\BIC{$\varphi_{198}$}
+\AXC{$\varphi_{198} \to \varphi_{196}$\lbl{A2}}
+\BIC{$\varphi_{196}$}
+\AXC{$\varphi_{196} \to \varphi_{314}$\lbl{A1}}
+\BIC{$\varphi_{314}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{68}) \to \varphi_{299}$}
+\end{ptree}
+\noindent$\Pi_{115}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{104}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{68}$}
+\AXC{$\stackrel{\Pi_{114}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{68}) \to \varphi_{299}$}
+\BIC{$\varphi_{299}$}
+\end{ptree}
+\noindent$\Pi_{116}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r$\lbl{A1}}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{115}}{\vdots}$}\noLine
+\UIC{$\varphi_{299}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r) \to \varphi_{269}$}
+\BIC{$\varphi_{269}$}
+\end{ptree}
+\noindent$\Pi_{117}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{72}$\lbl{A1}}
+\AXC{$\varphi_{255}$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{97}$}
+\AXC{$\stackrel{\Pi_{97}}{\vdots}$}\noLine
+\UIC{$\varphi_{263}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{107}$}
+\AXC{$\stackrel{\Pi_{116}}{\vdots}$}\noLine
+\UIC{$\varphi_{269}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{132}$}
+\end{ptree}
+\noindent$\Pi_{118}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{2}$\lbl{A2}}
+\BIC{$\varphi_{2}$}
+\end{ptree}
+\noindent$\Pi_{119}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y^{-1} \cdot y = x)$\lbl{[E23]}}
+\AXC{$\varphi_{159}$\lbl{A2}}
+\BIC{$\forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to \varepsilon \cdot y^{-1} \cdot y = \varepsilon)$}
+\AXC{$\varphi_{160}$\lbl{A2}}
+\BIC{$\varepsilon \in \mathbb{R} \to r \in \mathbb{R} \to r \neq 0 \to \varepsilon \cdot r^{-1} \cdot r = \varepsilon$}
+\end{ptree}
+\noindent$\Pi_{120}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{119}}{\vdots}$}\noLine
+\UIC{$\varepsilon \in \mathbb{R} \to r \in \mathbb{R} \to r \neq 0 \to \varepsilon \cdot r^{-1} \cdot r = \varepsilon$}
+\AXC{$(\varepsilon \in \mathbb{R} \to r \in \mathbb{R} \to r \neq 0 \to \varepsilon \cdot r^{-1} \cdot r = \varepsilon) \to \varphi_{287}$\lbl{A1}}
+\BIC{$\varphi_{287}$}
+\end{ptree}
+\noindent$\Pi_{121}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}$\lbl{A1}}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{120}}{\vdots}$}\noLine
+\UIC{$\varphi_{287}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to \varphi_{210}$}
+\BIC{$\varphi_{210}$}
+\end{ptree}
+\noindent$\Pi_{122}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)$\lbl{(R7)}}
+\AXC{$\varphi_{93}$\lbl{A2}}
+\BIC{$\forall y\,(r \in \mathbb{R} \to y \in \mathbb{R} \to r \cdot y = y \cdot r)$}
+\AXC{$\forall y\,(r \in \mathbb{R} \to y \in \mathbb{R} \to r \cdot y = y \cdot r) \to \varphi_{30}$\lbl{A2}}
+\BIC{$\varphi_{30}$}
+\end{ptree}
+\noindent$\Pi_{123}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{122}}{\vdots}$}\noLine
+\UIC{$\varphi_{30}$}
+\AXC{$\varphi_{30} \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to \varphi_{262}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to \varphi_{262}$}
+\BIC{$\varphi_{262}$}
+\end{ptree}
+\noindent$\Pi_{124}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{104}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{68}$}
+\AXC{$\stackrel{\Pi_{123}}{\vdots}$}\noLine
+\UIC{$\varphi_{262}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{113}$}
+\AXC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{113}) \to \varphi_{286}$\lbl{A1}}
+\BIC{$\varphi_{286}$}
+\end{ptree}
+\noindent$\Pi_{125}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{118}}{\vdots}$}\noLine
+\UIC{$\varphi_{2}$}
+\AXC{$\varphi_{2} \to \varphi_{75}$\lbl{A2}}
+\BIC{$\varphi_{75}$}
+\AXC{$\varphi_{75} \to \varphi_{78}$\lbl{A2}}
+\BIC{$\varphi_{78}$}
+\AXC{$\stackrel{\Pi_{100}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to r \neq 0$}
+\AXC{$\stackrel{\Pi_{121}}{\vdots}$}\noLine
+\UIC{$\varphi_{210}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{69}$}
+\AXC{$\stackrel{\Pi_{124}}{\vdots}$}\noLine
+\UIC{$\varphi_{286}$}
+\BIC{$\varphi_{78} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{70}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{70}$}
+\AXC{$\varphi_{306}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{132}) \to \varphi_{226}$}
+\end{ptree}
+\noindent$\Pi_{126}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{117}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{132}$}
+\AXC{$\stackrel{\Pi_{125}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{132}) \to \varphi_{226}$}
+\BIC{$\varphi_{226}$}
+\end{ptree}
+\noindent$\Pi_{127}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{59}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert \pi_{c,r}(n) - c \rvert = y \to y = \lvert \pi_{c,r}(n) - c \rvert)$}
+\AXC{$\forall y\,(\lvert \pi_{c,r}(n) - c \rvert = y \to y = \lvert \pi_{c,r}(n) - c \rvert) \to \varphi_{123}$\lbl{A2}}
+\BIC{$\varphi_{123}$}
+\end{ptree}
+\noindent$\Pi_{128}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{22}$\lbl{A2}}
+\BIC{$\varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{129}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{89}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{63}$}
+\AXC{$\forall x \in \mathbb{R}\,(0 < x \to 0 < x^{-1})$\lbl{[F34]}}
+\AXC{$\varphi_{128}$\lbl{A2}}
+\BIC{$\underline{n} + 1 \in \mathbb{R} \to 0 < \underline{n} + 1 \to 0 < (\underline{n} + 1)^{-1}$}
+\AXC{$\varphi_{298}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{63}) \to \varphi_{246}$}
+\BIC{$\varphi_{246}$}
+\end{ptree}
+\noindent$\Pi_{130}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y)$\lbl{(R15)}}
+\AXC{$\varphi_{165}$\lbl{A2}}
+\BIC{$\forall y\,(r \in \mathbb{R} \to y \in \mathbb{R} \to 0 < r \to 0 < y \to 0 < r \cdot y)$}
+\AXC{$\varphi_{204}$\lbl{A2}}
+\BIC{$r \in \mathbb{R} \to \varphi_{95}$}
+\AXC{$\varphi_{313}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to \varphi_{295}$}
+\end{ptree}
+\noindent$\Pi_{131}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{130}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to \varphi_{295}$}
+\BIC{$\varphi_{295}$}
+\end{ptree}
+\noindent$\Pi_{132}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{113}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{81}$}
+\AXC{$\stackrel{\Pi_{131}}{\vdots}$}\noLine
+\UIC{$\varphi_{295}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r) \to \varphi_{252}$}
+\BIC{$\varphi_{252}$}
+\end{ptree}
+\noindent$\Pi_{133}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{108}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{51}$}
+\AXC{$\stackrel{\Pi_{129}}{\vdots}$}\noLine
+\UIC{$\varphi_{246}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{71}$}
+\AXC{$\stackrel{\Pi_{132}}{\vdots}$}\noLine
+\UIC{$\varphi_{252}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{89}$}
+\AXC{$\varphi_{254}$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{76}$}
+\end{ptree}
+\noindent$\Pi_{134}$:
+\begin{ptree}
+\AXC{$\forall x\,(0 \leq x \to \lvert x \rvert = x)$\lbl{[A1]}}
+\AXC{$\forall x\,(0 \leq x \to \lvert x \rvert = x) \to \varphi_{38}$\lbl{A2}}
+\BIC{$\varphi_{38}$}
+\AXC{$\varphi_{38} \to \varphi_{266}$\lbl{A1}}
+\BIC{$\varphi_{266}$}
+\end{ptree}
+\noindent$\Pi_{135}$:
+\begin{ptree}
+\AXC{$z = w \to \lvert \pi_{c,r}(n) - c \rvert = \lvert z \rvert \to \lvert \pi_{c,r}(n) - c \rvert = \lvert w \rvert$\lbl{A6}}
+\UIC{$\varphi_{52}$}
+\UIC{$\forall z\,(\varphi_{52})$}
+\AXC{$\forall z\,(\varphi_{52}) \to \varphi_{166}$\lbl{A2}}
+\BIC{$\varphi_{166}$}
+\AXC{$\varphi_{166} \to \pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} \to \varphi_{140}$\lbl{A2}}
+\BIC{$\pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} \to \varphi_{140}$}
+\end{ptree}
+\noindent$\Pi_{136}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{91}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z)$}
+\end{ptree}
+\noindent$\Pi_{137}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{136}}{\vdots}$}\noLine
+\UIC{$\forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z)$}
+\AXC{$\forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z) \to \varphi_{167}$\lbl{A2}}
+\BIC{$\varphi_{167}$}
+\end{ptree}
+\noindent$\Pi_{138}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{103}$\lbl{A2}}
+\BIC{$\forall y\,(r \in \mathbb{R} \to y \in \mathbb{R} \to r \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{157}$\lbl{A2}}
+\BIC{$r \in \mathbb{R} \to (\underline{n} + 1)^{-1} \in \mathbb{R} \to r \cdot (\underline{n} + 1)^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{301}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to \varphi_{260}$}
+\end{ptree}
+\noindent$\Pi_{139}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{138}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to \varphi_{260}$}
+\BIC{$\varphi_{260}$}
+\end{ptree}
+\noindent$\Pi_{140}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{113}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{81}$}
+\AXC{$\stackrel{\Pi_{139}}{\vdots}$}\noLine
+\UIC{$\varphi_{260}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{102}$}
+\end{ptree}
+\noindent$\Pi_{141}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y - y = x)$\lbl{[E38]}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y - y = x) \to \varphi_{129}$\lbl{A2}}
+\BIC{$\varphi_{129}$}
+\AXC{$\varphi_{129} \to \varphi_{119}$\lbl{A2}}
+\BIC{$\varphi_{119}$}
+\end{ptree}
+\noindent$\Pi_{142}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{65}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{140}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{102}$}
+\AXC{$\stackrel{\Pi_{141}}{\vdots}$}\noLine
+\UIC{$\varphi_{119}$}
+\AXC{$\varphi_{119} \to \varphi_{294}$\lbl{A1}}
+\BIC{$\varphi_{294}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{65}) \to c \in \mathbb{R} \to \varphi_{205}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{205}$}
+\end{ptree}
+\noindent$\Pi_{143}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{91}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z)$}
+\end{ptree}
+\noindent$\Pi_{144}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{143}}{\vdots}$}\noLine
+\UIC{$\forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z)$}
+\AXC{$\forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z) \to \varphi_{168}$\lbl{A2}}
+\BIC{$\varphi_{168}$}
+\end{ptree}
+\noindent$\Pi_{145}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{56}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{56})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{56})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{56}) \to \varphi_{187}$\lbl{A2}}
+\BIC{$\varphi_{187}$}
+\AXC{$\varphi_{187} \to c + r \cdot (\underline{n} + 1)^{-1} = r \cdot (\underline{n} + 1)^{-1} + c \to \varphi_{180}$\lbl{A2}}
+\BIC{$c + r \cdot (\underline{n} + 1)^{-1} = r \cdot (\underline{n} + 1)^{-1} + c \to \varphi_{180}$}
+\end{ptree}
+\noindent$\Pi_{146}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)$\lbl{(R3)}}
+\AXC{$\varphi_{92}$\lbl{A2}}
+\BIC{$\forall y\,(c \in \mathbb{R} \to y \in \mathbb{R} \to c + y = y + c)$}
+\AXC{$\forall y\,(c \in \mathbb{R} \to y \in \mathbb{R} \to c + y = y + c) \to c \in \mathbb{R} \to \varphi_{84}$\lbl{A2}}
+\BIC{$c \in \mathbb{R} \to \varphi_{84}$}
+\end{ptree}
+\noindent$\Pi_{147}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{65}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{146}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \varphi_{84}$}
+\AXC{$\varphi_{307}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{65}) \to \varphi_{273}$}
+\BIC{$\varphi_{273}$}
+\end{ptree}
+\noindent$\Pi_{148}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{140}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{102}$}
+\AXC{$\stackrel{\Pi_{147}}{\vdots}$}\noLine
+\UIC{$\varphi_{273}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{206}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{206}) \to \varphi_{292}$\lbl{A1}}
+\BIC{$\varphi_{292}$}
+\end{ptree}
+\noindent$\Pi_{149}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{145}}{\vdots}$}\noLine
+\UIC{$c + r \cdot (\underline{n} + 1)^{-1} = r \cdot (\underline{n} + 1)^{-1} + c \to \varphi_{180}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\varphi_{29}$\lbl{A2}}
+\BIC{$c + r \cdot (\underline{n} + 1)^{-1} - c = c + r \cdot (\underline{n} + 1)^{-1} - c$}
+\AXC{$\stackrel{\Pi_{148}}{\vdots}$}\noLine
+\UIC{$\varphi_{292}$}
+\BIC{$\varphi_{285}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{193}$}
+\end{ptree}
+\noindent$\Pi_{150}$:
+\begin{ptree}
+\AXC{$\varphi_{158}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{61}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \varphi_{60}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{60}) \to \varphi_{158} \to c \in \mathbb{R} \to \varphi_{48}$\lbl{A1}}
+\BIC{$\varphi_{158} \to c \in \mathbb{R} \to \varphi_{48}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{48}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{48}) \to \varphi_{251}$\lbl{A1}}
+\BIC{$\varphi_{251}$}
+\end{ptree}
+\noindent$\Pi_{151}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \pi_{c,r}(n) - c = \pi_{c,r}(n) - c$\lbl{A2}}
+\BIC{$\pi_{c,r}(n) - c = \pi_{c,r}(n) - c$}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{98}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{150}}{\vdots}$}\noLine
+\UIC{$\varphi_{251}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{133}$}
+\AXC{$\varphi_{303}$\lbl{A1}}
+\BIC{$\pi_{c,r}(n) - c = \pi_{c,r}(n) - c \to \varphi_{270}$}
+\BIC{$\varphi_{270}$}
+\end{ptree}
+\noindent$\Pi_{152}$:
+\begin{ptree}
+\AXC{$z = w \to \pi_{c,r}(n) - c = z - c \to \pi_{c,r}(n) - c = w - c$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \pi_{c,r}(n) - c = z - c \to \pi_{c,r}(n) - c = w - c)$}
+\UIC{$\varphi_{23}$}
+\AXC{$\varphi_{23} \to \varphi_{120}$\lbl{A2}}
+\BIC{$\varphi_{120}$}
+\AXC{$\varphi_{120} \to \pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1} \to \varphi_{126}$\lbl{A2}}
+\BIC{$\pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1} \to \varphi_{126}$}
+\AXC{$\stackrel{\Pi_{151}}{\vdots}$}\noLine
+\UIC{$\varphi_{270}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{150}$}
+\end{ptree}
+\noindent$\Pi_{153}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{149}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{193}$}
+\AXC{$\stackrel{\Pi_{152}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{150}$}
+\AXC{$\varphi_{312}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{193}) \to \varphi_{281}$}
+\BIC{$\varphi_{281}$}
+\end{ptree}
+\noindent$\Pi_{154}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{142}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \varphi_{205}$}
+\AXC{$\stackrel{\Pi_{144}}{\vdots}$}\noLine
+\UIC{$\varphi_{168}$}
+\AXC{$\varphi_{168} \to \pi_{c,r}(n) - c = c + r \cdot (\underline{n} + 1)^{-1} - c \to \varphi_{170}$\lbl{A2}}
+\BIC{$\pi_{c,r}(n) - c = c + r \cdot (\underline{n} + 1)^{-1} - c \to \varphi_{170}$}
+\AXC{$\stackrel{\Pi_{153}}{\vdots}$}\noLine
+\UIC{$\varphi_{281}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{151}$}
+\AXC{$\varphi_{310}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to \varphi_{205}) \to \varphi_{271}$}
+\BIC{$\varphi_{271}$}
+\end{ptree}
+\noindent$\Pi_{155}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{137}}{\vdots}$}\noLine
+\UIC{$\varphi_{167}$}
+\AXC{$\varphi_{167} \to \pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} + c - c \to \varphi_{125}$\lbl{A2}}
+\BIC{$\pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} + c - c \to \varphi_{125}$}
+\AXC{$\stackrel{\Pi_{154}}{\vdots}$}\noLine
+\UIC{$\varphi_{271}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{134}$}
+\AXC{$\varphi_{305}$\lbl{A1}}
+\BIC{$\lvert \pi_{c,r}(n) - c \rvert = \lvert \pi_{c,r}(n) - c \rvert \to \varphi_{277}$}
+\end{ptree}
+\noindent$\Pi_{156}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \lvert \pi_{c,r}(n) - c \rvert = \lvert \pi_{c,r}(n) - c \rvert$\lbl{A2}}
+\BIC{$\lvert \pi_{c,r}(n) - c \rvert = \lvert \pi_{c,r}(n) - c \rvert$}
+\AXC{$\stackrel{\Pi_{155}}{\vdots}$}\noLine
+\UIC{$\lvert \pi_{c,r}(n) - c \rvert = \lvert \pi_{c,r}(n) - c \rvert \to \varphi_{277}$}
+\BIC{$\varphi_{277}$}
+\end{ptree}
+\noindent$\Pi_{157}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{133}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{76}$}
+\AXC{$\stackrel{\Pi_{134}}{\vdots}$}\noLine
+\UIC{$\varphi_{266}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{200}$}
+\AXC{$\stackrel{\Pi_{135}}{\vdots}$}\noLine
+\UIC{$\pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} \to \varphi_{140}$}
+\AXC{$\stackrel{\Pi_{156}}{\vdots}$}\noLine
+\UIC{$\varphi_{277}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{152}$}
+\AXC{$\varphi_{311}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to \varphi_{200}) \to \varphi_{276}$}
+\BIC{$\varphi_{276}$}
+\end{ptree}
+\noindent$\Pi_{158}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{128}}{\vdots}$}\noLine
+\UIC{$\varphi_{22}$}
+\AXC{$\varphi_{22} \to \varphi_{164}$\lbl{A2}}
+\BIC{$\varphi_{164}$}
+\AXC{$\varphi_{164} \to \lvert \pi_{c,r}(n) - c \rvert = \lvert r \cdot (\underline{n} + 1)^{-1} \rvert \to \varphi_{124}$\lbl{A2}}
+\BIC{$\lvert \pi_{c,r}(n) - c \rvert = \lvert r \cdot (\underline{n} + 1)^{-1} \rvert \to \varphi_{124}$}
+\AXC{$\stackrel{\Pi_{157}}{\vdots}$}\noLine
+\UIC{$\varphi_{276}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{138}$}
+\AXC{$\varphi_{293}$\lbl{A1}}
+\BIC{$\varphi_{123} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{139}$}
+\end{ptree}
+\noindent$\Pi_{159}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{127}}{\vdots}$}\noLine
+\UIC{$\varphi_{123}$}
+\AXC{$\stackrel{\Pi_{158}}{\vdots}$}\noLine
+\UIC{$\varphi_{123} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{139}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{139}$}
+\AXC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{139}) \to \varphi_{290}$\lbl{A1}}
+\BIC{$\varphi_{290}$}
+\end{ptree}
+\noindent$\Pi_{160}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{78}}{\vdots}$}\noLine
+\UIC{$\varphi_{155}$}
+\AXC{$\stackrel{\Pi_{79}}{\vdots}$}\noLine
+\UIC{$r \cdot (\varepsilon \cdot r^{-1}) = \varepsilon \to \varphi_{36}$}
+\AXC{$\stackrel{\Pi_{126}}{\vdots}$}\noLine
+\UIC{$\varphi_{226}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{99}$}
+\AXC{$\stackrel{\Pi_{159}}{\vdots}$}\noLine
+\UIC{$\varphi_{290}$}
+\BIC{$\varphi_{155} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{108}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{108}$}
+\AXC{$\varphi_{265}$\lbl{A1}}
+\BIC{$\varphi_{122} \to n \in \mathbb{N} \to K \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon$}
+\UIC{$\forall n\,(\varphi_{122} \to n \in \mathbb{N} \to K \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon)$}
+\end{ptree}
+\noindent$\Pi_{161}$:
+\begin{ptree}
+\AXC{$\varphi_{268}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{160}}{\vdots}$}\noLine
+\UIC{$\forall n\,(\varphi_{122} \to n \in \mathbb{N} \to K \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon)$}
+\AXC{$\forall n\,(\varphi_{122} \to n \in \mathbb{N} \to K \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon) \to \varphi_{268} \to \varphi_{283}$\lbl{A1}}
+\BIC{$\varphi_{268} \to \varphi_{283}$}
+\BIC{$\varphi_{283}$}
+\end{ptree}
+\noindent$\Pi_{162}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{72}$\lbl{A1}}
+\AXC{$\varphi_{228}$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{80}$}
+\AXC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{80}) \to \varphi_{274}$\lbl{A1}}
+\BIC{$\varphi_{274}$}
+\end{ptree}
+\noindent$\Pi_{163}$:
+\begin{ptree}
+\AXC{$\varphi_{188}$\lbl{A2}}
+\AXC{$\varphi_{122} \to \forall n\,(\varphi_{122})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{161}}{\vdots}$}\noLine
+\UIC{$\varphi_{283}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{114}$}
+\AXC{$\stackrel{\Pi_{162}}{\vdots}$}\noLine
+\UIC{$\varphi_{274}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{136}$}
+\AXC{$\varphi_{296}$\lbl{A1}}
+\BIC{$\varphi_{188} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{143}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{143}$}
+\AXC{$\varphi_{280}$\lbl{A1}}
+\BIC{$\varphi_{179} \to \neg (K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1})$}
+\UIC{$\forall K\,(\varphi_{179} \to \neg (K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1}))$}
+\end{ptree}
+\noindent$\Pi_{164}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(0 < x \to 0 < x^{-1})$\lbl{[F34]}}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$r \in \mathbb{R} \to 0 < r \to 0 < r^{-1}$}
+\AXC{$(r \in \mathbb{R} \to 0 < r \to 0 < r^{-1}) \to \varphi_{212}$\lbl{A1}}
+\BIC{$\varphi_{212}$}
+\end{ptree}
+\noindent$\Pi_{165}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{33}$\lbl{A2}}
+\BIC{$r \in \mathbb{R} \to r \neq 0 \to r^{-1} \in \mathbb{R}$}
+\AXC{$(r \in \mathbb{R} \to r \neq 0 \to r^{-1} \in \mathbb{R}) \to \varphi_{213}$\lbl{A1}}
+\BIC{$\varphi_{213}$}
+\end{ptree}
+\noindent$\Pi_{166}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{100}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to r \neq 0$}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to r \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{165}}{\vdots}$}\noLine
+\UIC{$\varphi_{213}$}
+\BIC{$\varphi_{154}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to r^{-1} \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{167}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y)$\lbl{(R15)}}
+\AXC{$\varphi_{174}$\lbl{A2}}
+\BIC{$\forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to 0 < \varepsilon \to 0 < y \to 0 < \varepsilon \cdot y)$}
+\AXC{$\varphi_{189}$\lbl{A2}}
+\BIC{$\varepsilon \in \mathbb{R} \to r^{-1} \in \mathbb{R} \to 0 < \varepsilon \to 0 < r^{-1} \to 0 < \varepsilon \cdot r^{-1}$}
+\AXC{$\varphi_{291}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{258}$}
+\end{ptree}
+\noindent$\Pi_{168}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{167}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{258}$}
+\BIC{$\varphi_{258}$}
+\end{ptree}
+\noindent$\Pi_{169}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{166}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to r^{-1} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{168}}{\vdots}$}\noLine
+\UIC{$\varphi_{258}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon) \to \varphi_{195}$}
+\BIC{$\varphi_{195}$}
+\end{ptree}
+\noindent$\Pi_{170}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r$\lbl{A1}}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to r \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{164}}{\vdots}$}\noLine
+\UIC{$\varphi_{212}$}
+\BIC{$\varphi_{149}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < r^{-1}$}
+\AXC{$\stackrel{\Pi_{169}}{\vdots}$}\noLine
+\UIC{$\varphi_{195}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon \cdot r^{-1}$}
+\end{ptree}
+\noindent$\Pi_{171}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{111}$\lbl{A2}}
+\BIC{$\forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to \varepsilon \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{131}$\lbl{A2}}
+\BIC{$\varepsilon \in \mathbb{R} \to r^{-1} \in \mathbb{R} \to \varepsilon \cdot r^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{242}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{203}$}
+\end{ptree}
+\noindent$\Pi_{172}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{171}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{203}$}
+\BIC{$\varphi_{203}$}
+\end{ptree}
+\noindent$\Pi_{173}$:
+\begin{ptree}
+\AXC{$\forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists K \in \mathbb{N}\,(\underline{K}^{-1} < \varepsilon))$\lbl{[C24]}}
+\AXC{$\forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists K \in \mathbb{N}\,(\underline{K}^{-1} < \varepsilon)) \to \varphi_{94}$\lbl{A2}}
+\BIC{$\varphi_{94}$}
+\AXC{$\varphi_{94} \to \varphi_{62} \to \varphi_{211}$\lbl{A1}}
+\BIC{$\varphi_{62} \to \varphi_{211}$}
+\end{ptree}
+\noindent$\Pi_{174}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{166}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to r^{-1} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{172}}{\vdots}$}\noLine
+\UIC{$\varphi_{203}$}
+\BIC{$\varphi_{62}$}
+\AXC{$\stackrel{\Pi_{173}}{\vdots}$}\noLine
+\UIC{$\varphi_{62} \to \varphi_{211}$}
+\BIC{$\varphi_{211}$}
+\end{ptree}
+\noindent$\Pi_{175}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{170}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon \cdot r^{-1}$}
+\AXC{$\stackrel{\Pi_{174}}{\vdots}$}\noLine
+\UIC{$\varphi_{211}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{100}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{100}) \to \varphi_{316}$\lbl{A1}}
+\BIC{$\varphi_{316}$}
+\end{ptree}
+\noindent$\Pi_{176}$:
+\begin{ptree}
+\AXC{$\varphi_{179} \to \forall K\,(\varphi_{179})$\lbl{A4}}
+\AXC{$\varphi_{282}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{163}}{\vdots}$}\noLine
+\UIC{$\forall K\,(\varphi_{179} \to \neg (K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1}))$}
+\AXC{$\stackrel{\Pi_{175}}{\vdots}$}\noLine
+\UIC{$\varphi_{316}$}
+\BIC{$\varphi_{282} \to (\varphi_{179} \to \forall K\,(\varphi_{179})) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{109}$}
+\BIC{$(\varphi_{179} \to \forall K\,(\varphi_{179})) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{109}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{109}$}
+\AXC{$\varphi_{230}$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r \to \varphi_{109}$}
+\UIC{$\forall \varepsilon\,(c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r \to \varphi_{109})$}
+\AXC{$\varphi_{309}$\lbl{A1}}
+\BIC{$\varphi_{239} \to \varphi_{19} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{117}$}
+\end{ptree}
+\noindent$\Pi_{177}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{60}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{45}$}
+\AXC{$\varphi_{207}$\lbl{A1}}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \mathrm{Seq}(\pi_{c,r})$}
+\end{ptree}
+\noindent$\Pi_{178}$:
+\begin{ptree}
+\AXC{$\varphi_{183}$\lbl{DefConv}}
+\AXC{$\varphi_{183} \to \varphi_{199}$\lbl{A2}}
+\BIC{$\varphi_{199}$}
+\AXC{$\varphi_{199} \to (\mathrm{Conv}(\pi_{c,r},c) \leftrightarrow \mathrm{Seq}(\pi_{c,r}) \land c \in \mathbb{R} \land \varphi_{117})$\lbl{A2}}
+\BIC{$\mathrm{Conv}(\pi_{c,r},c) \leftrightarrow \mathrm{Seq}(\pi_{c,r}) \land c \in \mathbb{R} \land \varphi_{117}$}
+\end{ptree}
+\noindent$\Pi_{179}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{178}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(\pi_{c,r},c) \leftrightarrow \mathrm{Seq}(\pi_{c,r}) \land c \in \mathbb{R} \land \varphi_{117}$}
+\AXC{$(\mathrm{Conv}(\pi_{c,r},c) \leftrightarrow \mathrm{Seq}(\pi_{c,r}) \land c \in \mathbb{R} \land \varphi_{117}) \to \varphi_{250}$\lbl{A1}}
+\BIC{$\varphi_{250}$}
+\end{ptree}
+\noindent$\Pi_{180}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to c \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{177}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \mathrm{Seq}(\pi_{c,r})$}
+\AXC{$\stackrel{\Pi_{179}}{\vdots}$}\noLine
+\UIC{$\varphi_{250}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to c \in \mathbb{R}) \to \varphi_{214}$}
+\BIC{$\varphi_{214}$}
+\end{ptree}
+\noindent$\Pi_{181}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{177}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \mathrm{Seq}(\pi_{c,r})$}
+\AXC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \mathrm{Seq}(\pi_{c,r})) \to \varphi_{272}$\lbl{A1}}
+\BIC{$\varphi_{272}$}
+\end{ptree}
+\noindent$\Pi_{182}$:
+\begin{ptree}
+\AXC{$\varphi_{19}$\lbl{A4}}
+\AXC{$\varphi_{239}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{176}}{\vdots}$}\noLine
+\UIC{$\varphi_{239} \to \varphi_{19} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{117}$}
+\BIC{$\varphi_{19} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{117}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{117}$}
+\AXC{$\stackrel{\Pi_{180}}{\vdots}$}\noLine
+\UIC{$\varphi_{214}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \mathrm{Conv}(\pi_{c,r},c)$}
+\AXC{$\stackrel{\Pi_{181}}{\vdots}$}\noLine
+\UIC{$\varphi_{272}$}
+\BIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{96}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{162}$}
+\end{ptree}
+\noindent$\Pi_{183}$:
+\begin{ptree}
+\AXC{$\varphi_{13}$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{77}}{\vdots}$}\noLine
+\UIC{$\varphi_{13} \to c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{96}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{96}$}
+\AXC{$\stackrel{\Pi_{182}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{96}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{162}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{162}$}
+\AXC{$\varphi_{297}$\lbl{A1}}
+\BIC{$(\varphi_{83} \to \neg \varphi_{162}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{82}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{83} \to \neg \varphi_{162}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{183}}{\vdots}$}\noLine
+\UIC{$(\varphi_{83} \to \neg \varphi_{162}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{82}$}
+\BIC{$c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{82}$}
+\UIC{$\forall r\,(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{82})$}
+\UIC{$\forall c\,\forall r\,(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{82})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(\underline{n} + 1 = y \to y = \underline{n} + 1)$
+\item $\varphi_{2} :\equiv \forall y\,\forall z\,(r \cdot (\varepsilon \cdot r^{-1}) = y \to y = z \to r \cdot (\varepsilon \cdot r^{-1}) = z)$
+\item $\varphi_{3} :\equiv \forall z\,\forall w\,(z = w \to (\underline{n} + 1)^{-1} < z \to (\underline{n} + 1)^{-1} < w)$
+\item $\varphi_{4} :\equiv \forall y\,\forall z\,((\underline{n} + 1)^{-1} < y \to y \leq z \to (\underline{n} + 1)^{-1} < z)$
+\item $\varphi_{5} :\equiv \forall y\,\forall z\,((\underline{n} + 1)^{-1} < y \to y < z \to (\underline{n} + 1)^{-1} < z)$
+\item $\varphi_{6} :\equiv \forall w\,(r \cdot (\underline{n} + 1)^{-1} = w \to r \cdot (\underline{n} + 1)^{-1} < r \to w < r)$
+\item $\varphi_{7} :\equiv \forall w\,(z = w \to r \cdot (\underline{n} + 1)^{-1} < z \to r \cdot (\underline{n} + 1)^{-1} < w)$
+\item $\varphi_{8} :\equiv \forall w\,(1^{-1} = w \to (\underline{n} + 1)^{-1} < 1^{-1} \to (\underline{n} + 1)^{-1} < w)$
+\item $\varphi_{9} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x < y \to y^{-1} < x^{-1})$
+\item $\varphi_{10} :\equiv \forall w\,(r \cdot (\underline{n} + 1)^{-1} = w \to 0 < r \cdot (\underline{n} + 1)^{-1} \to 0 < w)$
+\item $\varphi_{11} :\equiv \forall y\,(\underline{n} + 1 = y \to y = \underline{n} + 1) \to \underline{n} + 1 = 0 \to 0 = \underline{n} + 1$
+\item $\varphi_{12} :\equiv n \in \mathbb{N} \to K \leq n \to \lvert r \cdot (\underline{n} + 1)^{-1} \rvert = r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{13} :\equiv c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r \to \forall n\,(c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r)$
+\item $\varphi_{14} :\equiv \forall w\,(r \cdot (\underline{n} + 1)^{-1} = w \to r \cdot (\underline{n} + 1)^{-1} < \varepsilon \to w < \varepsilon)$
+\item $\varphi_{15} :\equiv c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 \leq r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{16} :\equiv 0 < r \to n \in \mathbb{N} \to \lvert r \cdot (\underline{n} + 1)^{-1} \rvert = r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{17} :\equiv \forall N\,(\neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon)))$
+\item $\varphi_{18} :\equiv K \leq n \to c + r \cdot (\underline{n} + 1)^{-1} - c = r \cdot (\underline{n} + 1)^{-1} + c - c$
+\item $\varphi_{19} :\equiv c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r \to \forall \varepsilon\,(c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r)$
+\item $\varphi_{20} :\equiv \forall x \in \mathbb{R}\,(0 < x \to 0 < x^{-1}) \to r \in \mathbb{R} \to 0 < r \to 0 < r^{-1}$
+\item $\varphi_{21} :\equiv r \cdot 1 = r \to r \cdot (\underline{n} + 1)^{-1} < r \cdot 1 \to r \cdot (\underline{n} + 1)^{-1} < r$
+\item $\varphi_{22} :\equiv \forall y\,\forall z\,(\lvert \pi_{c,r}(n) - c \rvert = y \to y = z \to \lvert \pi_{c,r}(n) - c \rvert = z)$
+\item $\varphi_{23} :\equiv \forall z\,\forall w\,(z = w \to \pi_{c,r}(n) - c = z - c \to \pi_{c,r}(n) - c = w - c)$
+\item $\varphi_{24} :\equiv n \in \mathbb{N} \to K \leq n \to r \cdot (\underline{n} + 1)^{-1} + c - c = r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{25} :\equiv n \in \mathbb{N} \to K \leq n \to c + r \cdot (\underline{n} + 1)^{-1} = r \cdot (\underline{n} + 1)^{-1} + c$
+\item $\varphi_{26} :\equiv c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} < 1^{-1}$
+\item $\varphi_{27} :\equiv c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \cdot (\underline{n} + 1)^{-1} < r$
+\item $\varphi_{28} :\equiv c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{29} :\equiv \forall x\,(x = x) \to c + r \cdot (\underline{n} + 1)^{-1} - c = c + r \cdot (\underline{n} + 1)^{-1} - c$
+\item $\varphi_{30} :\equiv r \in \mathbb{R} \to \varepsilon \cdot r^{-1} \in \mathbb{R} \to r \cdot (\varepsilon \cdot r^{-1}) = \varepsilon \cdot r^{-1} \cdot r$
+\item $\varphi_{31} :\equiv \forall w\,(r \cdot 1 = w \to r \cdot (\underline{n} + 1)^{-1} < r \cdot 1 \to r \cdot (\underline{n} + 1)^{-1} < w)$
+\item $\varphi_{32} :\equiv \forall z\,\forall w\,(z = w \to 1 < z \to 1 < w) \to \forall w\,(1 + \underline{n} = w \to 1 < 1 + \underline{n} \to 1 < w)$
+\item $\varphi_{33} :\equiv \forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R}) \to r \in \mathbb{R} \to r \neq 0 \to r^{-1} \in \mathbb{R}$
+\item $\varphi_{34} :\equiv 0 < r \to n \in \mathbb{N} \to r \cdot (\underline{n} + 1)^{-1} + c - c = r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{35} :\equiv 0 < r \to n \in \mathbb{N} \to c + r \cdot (\underline{n} + 1)^{-1} = r \cdot (\underline{n} + 1)^{-1} + c$
+\item $\varphi_{36} :\equiv r \cdot (\underline{n} + 1)^{-1} < r \cdot (\varepsilon \cdot r^{-1}) \to r \cdot (\underline{n} + 1)^{-1} < \varepsilon$
+\item $\varphi_{37} :\equiv 0 < \varepsilon \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to K \leq n$
+\item $\varphi_{38} :\equiv 0 \leq r \cdot (\underline{n} + 1)^{-1} \to \lvert r \cdot (\underline{n} + 1)^{-1} \rvert = r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{39} :\equiv n \in \mathbb{N} \to c + r \cdot (\underline{n} + 1)^{-1} - c = r \cdot (\underline{n} + 1)^{-1} + c - c$
+\item $\varphi_{40} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to r^{-1} \in \mathbb{R}$
+\item $\varphi_{41} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to 0 \neq \underline{n} + 1$
+\item $\varphi_{42} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \underline{n} + 1 \neq 0$
+\item $\varphi_{43} :\equiv c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \cdot (\underline{n} + 1)^{-1} \in \mathbb{R}$
+\item $\varphi_{44} :\equiv \forall z\,((\underline{n} + 1)^{-1} < \underline{n}^{-1} \to \underline{n}^{-1} \leq z \to (\underline{n} + 1)^{-1} < z)$
+\item $\varphi_{45} :\equiv \mathrm{Seq}(\pi_{c,r}) \land \forall n \in \mathbb{N}\,(\pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1})$
+\item $\varphi_{46} :\equiv c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \cdot (\underline{n} + 1)^{-1} < r \cdot 1$
+\item $\varphi_{47} :\equiv r \in \mathbb{R} \to 0 < r \to (\underline{n} + 1)^{-1} < 1 \to r \cdot (\underline{n} + 1)^{-1} < r \cdot 1$
+\item $\varphi_{48} :\equiv r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{49} :\equiv r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{50} :\equiv 0 < \varepsilon \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to 0 < 1$
+\item $\varphi_{51} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to 0 < \underline{n} + 1$
+\item $\varphi_{52} :\equiv \forall w\,(z = w \to \lvert \pi_{c,r}(n) - c \rvert = \lvert z \rvert \to \lvert \pi_{c,r}(n) - c \rvert = \lvert w \rvert)$
+\item $\varphi_{53} :\equiv \underline{n} + 1 \in \mathbb{R} \to 0 < 1 \to 1 < \underline{n} + 1 \to (\underline{n} + 1)^{-1} < 1^{-1}$
+\item $\varphi_{54} :\equiv 1 \in \mathbb{R} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \in \mathbb{R}$
+\item $\varphi_{55} :\equiv \forall z\,((\underline{n} + 1)^{-1} < \underline{K}^{-1} \to \underline{K}^{-1} < z \to (\underline{n} + 1)^{-1} < z)$
+\item $\varphi_{56} :\equiv c + r \cdot (\underline{n} + 1)^{-1} - c = z - c \to c + r \cdot (\underline{n} + 1)^{-1} - c = w - c$
+\item $\varphi_{57} :\equiv (\underline{n} + 1)^{-1} < \varepsilon \cdot r^{-1} \to r \cdot (\underline{n} + 1)^{-1} < r \cdot (\varepsilon \cdot r^{-1})$
+\item $\varphi_{58} :\equiv \forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \cdot x < z \cdot y)$
+\item $\varphi_{59} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(\lvert \pi_{c,r}(n) - c \rvert = y \to y = \lvert \pi_{c,r}(n) - c \rvert)$
+\item $\varphi_{60} :\equiv r \in \mathbb{R} \to 0 < r \to \forall n \in \mathbb{N}\,(\pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1})$
+\item $\varphi_{61} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 \neq r$
+\item $\varphi_{62} :\equiv c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varepsilon \cdot r^{-1} \in \mathbb{R}$
+\item $\varphi_{63} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \underline{n} + 1 \in \mathbb{R}$
+\item $\varphi_{64} :\equiv 0 < \varepsilon \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to r \in \mathbb{R}$
+\item $\varphi_{65} :\equiv 0 < \varepsilon \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to c \in \mathbb{R}$
+\item $\varphi_{66} :\equiv r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \lvert \pi_{c,r}(n) - c \rvert = r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{67} :\equiv r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \cdot (\underline{n} + 1)^{-1} = \lvert \pi_{c,r}(n) - c \rvert$
+\item $\varphi_{68} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \varepsilon \cdot r^{-1} \in \mathbb{R}$
+\item $\varphi_{69} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \varepsilon \cdot r^{-1} \cdot r = \varepsilon$
+\item $\varphi_{70} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to r \cdot (\varepsilon \cdot r^{-1}) = \varepsilon$
+\item $\varphi_{71} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to 0 < (\underline{n} + 1)^{-1}$
+\item $\varphi_{72} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1}$
+\item $\varphi_{73} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \underline{n} < \underline{n} + 1$
+\item $\varphi_{74} :\equiv 0 < \varepsilon \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to 0 < \underline{n}$
+\item $\varphi_{75} :\equiv \forall z\,(r \cdot (\varepsilon \cdot r^{-1}) = \varepsilon \cdot r^{-1} \cdot r \to \varepsilon \cdot r^{-1} \cdot r = z \to r \cdot (\varepsilon \cdot r^{-1}) = z)$
+\item $\varphi_{76} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to 0 \leq r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{77} :\equiv \forall y\,(\underline{n} \in \mathbb{R} \to y \in \mathbb{R} \to 0 < \underline{n} \to \underline{n} < y \to y^{-1} < \underline{n}^{-1})$
+\item $\varphi_{78} :\equiv r \cdot (\varepsilon \cdot r^{-1}) = \varepsilon \cdot r^{-1} \cdot r \to \varepsilon \cdot r^{-1} \cdot r = \varepsilon \to r \cdot (\varepsilon \cdot r^{-1}) = \varepsilon$
+\item $\varphi_{79} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1}$
+\item $\varphi_{80} :\equiv 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to K \in \mathbb{N}$
+\item $\varphi_{81} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to (\underline{n} + 1)^{-1} \in \mathbb{R}$
+\item $\varphi_{82} :\equiv \exists a\,(\mathrm{Seq}(a) \land \mathrm{Conv}(a,c) \land \forall n \in \mathbb{N}\,(0 < \lvert a_{n} - c \rvert \land \lvert a_{n} - c \rvert < r))$
+\item $\varphi_{83} :\equiv \forall a\,(\neg (\mathrm{Seq}(a) \land \mathrm{Conv}(a,c) \land \forall n \in \mathbb{N}\,(0 < \lvert a_{n} - c \rvert \land \lvert a_{n} - c \rvert < r)))$
+\item $\varphi_{84} :\equiv r \cdot (\underline{n} + 1)^{-1} \in \mathbb{R} \to c + r \cdot (\underline{n} + 1)^{-1} = r \cdot (\underline{n} + 1)^{-1} + c$
+\item $\varphi_{85} :\equiv r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \pi_{c,r}(n) - c = c + r \cdot (\underline{n} + 1)^{-1} - c$
+\item $\varphi_{86} :\equiv r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} + c - c$
+\item $\varphi_{87} :\equiv r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \lvert \pi_{c,r}(n) - c \rvert = \lvert r \cdot (\underline{n} + 1)^{-1} \rvert$
+\item $\varphi_{88} :\equiv 0 < \varepsilon \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \underline{n} \in \mathbb{R}$
+\item $\varphi_{89} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to 0 < r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{90} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x) \to \forall y\,(1 \in \mathbb{R} \to y \in \mathbb{R} \to 1 + y = y + 1)$
+\item $\varphi_{91} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(\pi_{c,r}(n) - c = y \to y = z \to \pi_{c,r}(n) - c = z)$
+\item $\varphi_{92} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x) \to \forall y\,(c \in \mathbb{R} \to y \in \mathbb{R} \to c + y = y + c)$
+\item $\varphi_{93} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x) \to \forall y\,(r \in \mathbb{R} \to y \in \mathbb{R} \to r \cdot y = y \cdot r)$
+\item $\varphi_{94} :\equiv \varepsilon \cdot r^{-1} \in \mathbb{R} \to 0 < \varepsilon \cdot r^{-1} \to \exists K \in \mathbb{N}\,(\underline{K}^{-1} < \varepsilon \cdot r^{-1})$
+\item $\varphi_{95} :\equiv (\underline{n} + 1)^{-1} \in \mathbb{R} \to 0 < r \to 0 < (\underline{n} + 1)^{-1} \to 0 < r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{96} :\equiv 0 < r \to \forall n \in \mathbb{N}\,(0 < \lvert \pi_{c,r}(n) - c \rvert \land \lvert \pi_{c,r}(n) - c \rvert < r)$
+\item $\varphi_{97} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \underline{K}^{-1} < \varepsilon \cdot r^{-1}$
+\item $\varphi_{98} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{99} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to r \cdot (\underline{n} + 1)^{-1} < \varepsilon$
+\item $\varphi_{100} :\equiv r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists K \in \mathbb{N}\,(\underline{K}^{-1} < \varepsilon \cdot r^{-1})$
+\item $\varphi_{101} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 \neq r) \to (r = 0 \to 0 = r) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to r \neq 0$
+\item $\varphi_{102} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to r \cdot (\underline{n} + 1)^{-1} \in \mathbb{R}$
+\item $\varphi_{103} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(r \in \mathbb{R} \to y \in \mathbb{R} \to r \cdot y \in \mathbb{R})$
+\item $\varphi_{104} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to (\underline{n} + 1)^{-1} < \underline{n}^{-1}$
+\item $\varphi_{105} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to (\underline{n} + 1)^{-1} < \underline{K}^{-1}$
+\item $\varphi_{106} :\equiv (\underline{n} + 1 = 0 \to 0 = \underline{n} + 1) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \neq 0$
+\item $\varphi_{107} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to (\underline{n} + 1)^{-1} < \varepsilon \cdot r^{-1}$
+\item $\varphi_{108} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon$
+\item $\varphi_{109} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon)$
+\item $\varphi_{110} :\equiv (\underline{n} + 1)^{-1} < \underline{n}^{-1} \to \underline{n}^{-1} \leq \underline{K}^{-1} \to (\underline{n} + 1)^{-1} < \underline{K}^{-1}$
+\item $\varphi_{111} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to \varepsilon \cdot y \in \mathbb{R})$
+\item $\varphi_{112} :\equiv \underline{n} + 1 \in \mathbb{R} \to 0 < \underline{n} \to \underline{n} < \underline{n} + 1 \to (\underline{n} + 1)^{-1} < \underline{n}^{-1}$
+\item $\varphi_{113} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to r \cdot (\varepsilon \cdot r^{-1}) = \varepsilon \cdot r^{-1} \cdot r$
+\item $\varphi_{114} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to \forall n \in \mathbb{N}\,(K \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon)$
+\item $\varphi_{115} :\equiv \forall w\,(r \cdot (\varepsilon \cdot r^{-1}) = w \to r \cdot (\underline{n} + 1)^{-1} < r \cdot (\varepsilon \cdot r^{-1}) \to r \cdot (\underline{n} + 1)^{-1} < w)$
+\item $\varphi_{116} :\equiv r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \lvert \pi_{c,r}(n) - c \rvert \land \lvert \pi_{c,r}(n) - c \rvert < r$
+\item $\varphi_{117} :\equiv \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon))$
+\item $\varphi_{118} :\equiv \forall y\,(1 \in \mathbb{R} \to y \in \mathbb{R} \to 1 + y = y + 1) \to 1 \in \mathbb{R} \to \underline{n} \in \mathbb{R} \to 1 + \underline{n} = \underline{n} + 1$
+\item $\varphi_{119} :\equiv r \cdot (\underline{n} + 1)^{-1} \in \mathbb{R} \to c \in \mathbb{R} \to r \cdot (\underline{n} + 1)^{-1} + c - c = r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{120} :\equiv \forall w\,(\pi_{c,r}(n) = w \to \pi_{c,r}(n) - c = \pi_{c,r}(n) - c \to \pi_{c,r}(n) - c = w - c)$
+\item $\varphi_{121} :\equiv (\underline{n} + 1)^{-1} < \underline{K}^{-1} \to \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to (\underline{n} + 1)^{-1} < \varepsilon \cdot r^{-1}$
+\item $\varphi_{122} :\equiv c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land (K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1})$
+\item $\varphi_{123} :\equiv \lvert \pi_{c,r}(n) - c \rvert = r \cdot (\underline{n} + 1)^{-1} \to r \cdot (\underline{n} + 1)^{-1} = \lvert \pi_{c,r}(n) - c \rvert$
+\item $\varphi_{124} :\equiv \lvert r \cdot (\underline{n} + 1)^{-1} \rvert = r \cdot (\underline{n} + 1)^{-1} \to \lvert \pi_{c,r}(n) - c \rvert = r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{125} :\equiv r \cdot (\underline{n} + 1)^{-1} + c - c = r \cdot (\underline{n} + 1)^{-1} \to \pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{126} :\equiv \pi_{c,r}(n) - c = \pi_{c,r}(n) - c \to \pi_{c,r}(n) - c = c + r \cdot (\underline{n} + 1)^{-1} - c$
+\item $\varphi_{127} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y \to x < x + y) \to \forall y\,(1 \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y \to 1 < 1 + y)$
+\item $\varphi_{128} :\equiv \forall x \in \mathbb{R}\,(0 < x \to 0 < x^{-1}) \to \underline{n} + 1 \in \mathbb{R} \to 0 < \underline{n} + 1 \to 0 < (\underline{n} + 1)^{-1}$
+\item $\varphi_{129} :\equiv \forall y\,(r \cdot (\underline{n} + 1)^{-1} \in \mathbb{R} \to y \in \mathbb{R} \to r \cdot (\underline{n} + 1)^{-1} + y - y = r \cdot (\underline{n} + 1)^{-1})$
+\item $\varphi_{130} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y \in \mathbb{R}) \to \forall y\,(\underline{n} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{n} + y \in \mathbb{R})$
+\item $\varphi_{131} :\equiv \forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to \varepsilon \cdot y \in \mathbb{R}) \to \varepsilon \in \mathbb{R} \to r^{-1} \in \mathbb{R} \to \varepsilon \cdot r^{-1} \in \mathbb{R}$
+\item $\varphi_{132} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to r \cdot (\underline{n} + 1)^{-1} < r \cdot (\varepsilon \cdot r^{-1})$
+\item $\varphi_{133} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{134} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{135} :\equiv \forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R}) \to \underline{n} + 1 \in \mathbb{R} \to \underline{n} + 1 \neq 0 \to (\underline{n} + 1)^{-1} \in \mathbb{R}$
+\item $\varphi_{136} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to K \in \mathbb{N} \land \forall n \in \mathbb{N}\,(K \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon)$
+\item $\varphi_{137} :\equiv \forall y\,(\underline{n} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{n} + y \in \mathbb{R}) \to \underline{n} \in \mathbb{R} \to 1 \in \mathbb{R} \to \underline{n} + 1 \in \mathbb{R}$
+\item $\varphi_{138} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \lvert \pi_{c,r}(n) - c \rvert = r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{139} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to r \cdot (\underline{n} + 1)^{-1} = \lvert \pi_{c,r}(n) - c \rvert$
+\item $\varphi_{140} :\equiv \lvert \pi_{c,r}(n) - c \rvert = \lvert \pi_{c,r}(n) - c \rvert \to \lvert \pi_{c,r}(n) - c \rvert = \lvert r \cdot (\underline{n} + 1)^{-1} \rvert$
+\item $\varphi_{141} :\equiv \forall w\,(1 + \underline{n} = w \to 1 < 1 + \underline{n} \to 1 < w) \to 1 + \underline{n} = \underline{n} + 1 \to 1 < 1 + \underline{n} \to 1 < \underline{n} + 1$
+\item $\varphi_{142} :\equiv c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r \to n \in \mathbb{N} \to 0 < \lvert \pi_{c,r}(n) - c \rvert \land \lvert \pi_{c,r}(n) - c \rvert < r$
+\item $\varphi_{143} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon)$
+\item $\varphi_{144} :\equiv r \cdot (\underline{n} + 1)^{-1} = \lvert \pi_{c,r}(n) - c \rvert \to r \cdot (\underline{n} + 1)^{-1} < r \to \lvert \pi_{c,r}(n) - c \rvert < r$
+\item $\varphi_{145} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \in \mathbb{R}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \cdot 1 = r$
+\item $\varphi_{146} :\equiv r \cdot (\underline{n} + 1)^{-1} = \lvert \pi_{c,r}(n) - c \rvert \to 0 < r \cdot (\underline{n} + 1)^{-1} \to 0 < \lvert \pi_{c,r}(n) - c \rvert$
+\item $\varphi_{147} :\equiv \forall y\,(1 \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y \to 1 < 1 + y) \to 1 \in \mathbb{R} \to \underline{n} \in \mathbb{R} \to 0 < \underline{n} \to 1 < 1 + \underline{n}$
+\item $\varphi_{148} :\equiv \forall n\,(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1}) \to K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1}$
+\item $\varphi_{149} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < r^{-1}$
+\item $\varphi_{150} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \pi_{c,r}(n) - c = c + r \cdot (\underline{n} + 1)^{-1} - c$
+\item $\varphi_{151} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} + c - c$
+\item $\varphi_{152} :\equiv K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to K \leq n \to \lvert \pi_{c,r}(n) - c \rvert = \lvert r \cdot (\underline{n} + 1)^{-1} \rvert$
+\item $\varphi_{153} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to n \in \mathbb{N}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n}$
+\item $\varphi_{154} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to r \neq 0) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to r^{-1} \in \mathbb{R}$
+\item $\varphi_{155} :\equiv r \cdot (\underline{n} + 1)^{-1} = \lvert \pi_{c,r}(n) - c \rvert \to r \cdot (\underline{n} + 1)^{-1} < \varepsilon \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon$
+\item $\varphi_{156} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < 1) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n} + 1$
+\item $\varphi_{157} :\equiv \forall y\,(r \in \mathbb{R} \to y \in \mathbb{R} \to r \cdot y \in \mathbb{R}) \to r \in \mathbb{R} \to (\underline{n} + 1)^{-1} \in \mathbb{R} \to r \cdot (\underline{n} + 1)^{-1} \in \mathbb{R}$
+\item $\varphi_{158} :\equiv \forall n \in \mathbb{N}\,(\pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1}) \to n \in \mathbb{N} \to \pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1}$
+\item $\varphi_{159} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y^{-1} \cdot y = x) \to \forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to \varepsilon \cdot y^{-1} \cdot y = \varepsilon)$
+\item $\varphi_{160} :\equiv \forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to \varepsilon \cdot y^{-1} \cdot y = \varepsilon) \to \varepsilon \in \mathbb{R} \to r \in \mathbb{R} \to r \neq 0 \to \varepsilon \cdot r^{-1} \cdot r = \varepsilon$
+\item $\varphi_{161} :\equiv \forall n\,(c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r) \to \forall n \in \mathbb{N}\,(0 < \lvert \pi_{c,r}(n) - c \rvert \land \lvert \pi_{c,r}(n) - c \rvert < r)$
+\item $\varphi_{162} :\equiv \mathrm{Seq}(\pi_{c,r}) \land \mathrm{Conv}(\pi_{c,r},c) \land \forall n \in \mathbb{N}\,(0 < \lvert \pi_{c,r}(n) - c \rvert \land \lvert \pi_{c,r}(n) - c \rvert < r)$
+\item $\varphi_{163} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to n \in \mathbb{N}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$
+\item $\varphi_{164} :\equiv \forall z\,(\lvert \pi_{c,r}(n) - c \rvert = \lvert r \cdot (\underline{n} + 1)^{-1} \rvert \to \lvert r \cdot (\underline{n} + 1)^{-1} \rvert = z \to \lvert \pi_{c,r}(n) - c \rvert = z)$
+\item $\varphi_{165} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y) \to \forall y\,(r \in \mathbb{R} \to y \in \mathbb{R} \to 0 < r \to 0 < y \to 0 < r \cdot y)$
+\item $\varphi_{166} :\equiv \forall w\,(\pi_{c,r}(n) - c = w \to \lvert \pi_{c,r}(n) - c \rvert = \lvert \pi_{c,r}(n) - c \rvert \to \lvert \pi_{c,r}(n) - c \rvert = \lvert w \rvert)$
+\item $\varphi_{167} :\equiv \forall z\,(\pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} + c - c \to r \cdot (\underline{n} + 1)^{-1} + c - c = z \to \pi_{c,r}(n) - c = z)$
+\item $\varphi_{168} :\equiv \forall z\,(\pi_{c,r}(n) - c = c + r \cdot (\underline{n} + 1)^{-1} - c \to c + r \cdot (\underline{n} + 1)^{-1} - c = z \to \pi_{c,r}(n) - c = z)$
+\item $\varphi_{169} :\equiv \forall K\,\forall n\,(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1}) \to \forall n\,(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1})$
+\item $\varphi_{170} :\equiv c + r \cdot (\underline{n} + 1)^{-1} - c = r \cdot (\underline{n} + 1)^{-1} + c - c \to \pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} + c - c$
+\item $\varphi_{171} :\equiv \forall z\,((\underline{n} + 1)^{-1} \in \mathbb{R} \to 1 \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to (\underline{n} + 1)^{-1} < 1 \to z \cdot (\underline{n} + 1)^{-1} < z \cdot 1)$
+\item $\varphi_{172} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 < 1 + \underline{n}$
+\item $\varphi_{173} :\equiv \forall y\,\forall z\,((\underline{n} + 1)^{-1} \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to (\underline{n} + 1)^{-1} < y \to z \cdot (\underline{n} + 1)^{-1} < z \cdot y)$
+\item $\varphi_{174} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y) \to \forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to 0 < \varepsilon \to 0 < y \to 0 < \varepsilon \cdot y)$
+\item $\varphi_{175} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n} + 1) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 \neq \underline{n} + 1$
+\item $\varphi_{176} :\equiv \varphi_{8} \to 1^{-1} = 1 \to (\underline{n} + 1)^{-1} < 1^{-1} \to (\underline{n} + 1)^{-1} < 1$
+\item $\varphi_{177} :\equiv (1 + \underline{n} = \underline{n} + 1 \to 1 < 1 + \underline{n} \to 1 < \underline{n} + 1) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 < \underline{n} + 1$
+\item $\varphi_{178} :\equiv \varphi_{9} \to \forall y\,(1 \in \mathbb{R} \to y \in \mathbb{R} \to 0 < 1 \to 1 < y \to y^{-1} < 1^{-1})$
+\item $\varphi_{179} :\equiv c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon)$
+\item $\varphi_{180} :\equiv c + r \cdot (\underline{n} + 1)^{-1} - c = c + r \cdot (\underline{n} + 1)^{-1} - c \to c + r \cdot (\underline{n} + 1)^{-1} - c = r \cdot (\underline{n} + 1)^{-1} + c - c$
+\item $\varphi_{181} :\equiv (1^{-1} = 1 \to (\underline{n} + 1)^{-1} < 1^{-1} \to (\underline{n} + 1)^{-1} < 1) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} < 1$
+\item $\varphi_{182} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n} + 1) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < (\underline{n} + 1)^{-1}$
+\item $\varphi_{183} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \leftrightarrow \mathrm{Seq}(a) \land \alpha \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{184} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 + \underline{n} = \underline{n} + 1$
+\item $\varphi_{185} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \neq 0) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} \in \mathbb{R}$
+\item $\varphi_{186} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x + y) \to \forall y\,(\underline{n} \in \mathbb{R} \to y \in \mathbb{R} \to 0 < \underline{n} \to 0 < y \to 0 < \underline{n} + y)$
+\item $\varphi_{187} :\equiv \forall w\,(c + r \cdot (\underline{n} + 1)^{-1} = w \to c + r \cdot (\underline{n} + 1)^{-1} - c = c + r \cdot (\underline{n} + 1)^{-1} - c \to c + r \cdot (\underline{n} + 1)^{-1} - c = w - c)$
+\item $\varphi_{188} :\equiv \varphi_{17} \to \neg (K \in \mathbb{N} \land \forall n \in \mathbb{N}\,(K \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon))$
+\item $\varphi_{189} :\equiv \forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to 0 < \varepsilon \to 0 < y \to 0 < \varepsilon \cdot y) \to \varepsilon \in \mathbb{R} \to r^{-1} \in \mathbb{R} \to 0 < \varepsilon \to 0 < r^{-1} \to 0 < \varepsilon \cdot r^{-1}$
+\item $\varphi_{190} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < (\underline{n} + 1)^{-1}) \to \varphi_{28}$
+\item $\varphi_{191} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} < 1) \to \varphi_{46}$
+\item $\varphi_{192} :\equiv \forall y\,(\underline{n} \in \mathbb{R} \to y \in \mathbb{R} \to 0 < \underline{n} \to 0 < y \to 0 < \underline{n} + y) \to \underline{n} \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 < \underline{n} \to 0 < 1 \to 0 < \underline{n} + 1$
+\item $\varphi_{193} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to n \in \mathbb{N} \to \varphi_{18}$
+\item $\varphi_{194} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} \in \mathbb{R}) \to \varphi_{43}$
+\item $\varphi_{195} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < r^{-1}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon \cdot r^{-1}$
+\item $\varphi_{196} :\equiv (\underline{n} + 1)^{-1} \in \mathbb{R} \to \varepsilon \cdot r^{-1} \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{57}$
+\item $\varphi_{197} :\equiv \forall y\,(1 \in \mathbb{R} \to y \in \mathbb{R} \to 0 < 1 \to 1 < y \to y^{-1} < 1^{-1}) \to 1 \in \mathbb{R} \to \varphi_{53}$
+\item $\varphi_{198} :\equiv \forall z\,((\underline{n} + 1)^{-1} \in \mathbb{R} \to \varepsilon \cdot r^{-1} \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to (\underline{n} + 1)^{-1} < \varepsilon \cdot r^{-1} \to z \cdot (\underline{n} + 1)^{-1} < z \cdot (\varepsilon \cdot r^{-1}))$
+\item $\varphi_{199} :\equiv \forall \alpha\,(\mathrm{Conv}(\pi_{c,r},\alpha) \leftrightarrow \mathrm{Seq}(\pi_{c,r}) \land \alpha \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert \pi_{c,r}(n) - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{200} :\equiv r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to \varphi_{12}$
+\item $\varphi_{201} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to r \in \mathbb{R}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{45}$
+\item $\varphi_{202} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to c \in \mathbb{R}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{34}$
+\item $\varphi_{203} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to r^{-1} \in \mathbb{R}) \to \varphi_{62}$
+\item $\varphi_{204} :\equiv \forall y\,(r \in \mathbb{R} \to y \in \mathbb{R} \to 0 < r \to 0 < y \to 0 < r \cdot y) \to r \in \mathbb{R} \to \varphi_{95}$
+\item $\varphi_{205} :\equiv r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to \varphi_{24}$
+\item $\varphi_{206} :\equiv r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1} \to \varphi_{25}$
+\item $\varphi_{207} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{45}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \mathrm{Seq}(\pi_{c,r})$
+\item $\varphi_{208} :\equiv (\underline{n} + 1 = 0 \to 0 = \underline{n} + 1) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{42}$
+\item $\varphi_{209} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to r \neq 0) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{40}$
+\item $\varphi_{210} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to r \neq 0) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{69}$
+\item $\varphi_{211} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon \cdot r^{-1}) \to c \in \mathbb{R} \to \varphi_{100}$
+\item $\varphi_{212} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to r \in \mathbb{R}) \to \varphi_{149}$
+\item $\varphi_{213} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to r \in \mathbb{R}) \to \varphi_{154}$
+\item $\varphi_{214} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{117}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \mathrm{Conv}(\pi_{c,r},c)$
+\item $\varphi_{215} :\equiv 1 \in \mathbb{R} \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \underline{n}) \to \varphi_{156}$
+\item $\varphi_{216} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \lvert \pi_{c,r}(n) - c \rvert < r) \to c \in \mathbb{R} \to \varphi_{116}$
+\item $\varphi_{217} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < 1) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 < \underline{n} + 1) \to \varphi_{26}$
+\item $\varphi_{218} :\equiv \varphi_{144} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \lvert \pi_{c,r}(n) - c \rvert < r$
+\item $\varphi_{219} :\equiv \varphi_{146} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \lvert \pi_{c,r}(n) - c \rvert$
+\item $\varphi_{220} :\equiv (\underline{n} \in \mathbb{R} \to 1 \in \mathbb{R} \to \underline{n} + 1 \in \mathbb{R}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{54}$
+\item $\varphi_{221} :\equiv 1 \in \mathbb{R} \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{172}$
+\item $\varphi_{222} :\equiv \forall c\,\forall r\,(c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{45}) \to \forall r\,(c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{45})$
+\item $\varphi_{223} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to c \in \mathbb{R}) \to \varphi_{43} \to c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{35}$
+\item $\varphi_{224} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \in \mathbb{R}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r) \to \varphi_{191}$
+\item $\varphi_{225} :\equiv (\pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} + c - c \to \varphi_{125}) \to c \in \mathbb{R} \to \varphi_{49}$
+\item $\varphi_{226} :\equiv (r \cdot (\varepsilon \cdot r^{-1}) = \varepsilon \to \varphi_{36}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{99}$
+\item $\varphi_{227} :\equiv (\lvert \pi_{c,r}(n) - c \rvert = \lvert r \cdot (\underline{n} + 1)^{-1} \rvert \to \varphi_{124}) \to c \in \mathbb{R} \to \varphi_{66}$
+\item $\varphi_{228} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{72}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{80}$
+\item $\varphi_{229} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{98}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{74}$
+\item $\varphi_{230} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{109}) \to c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r \to \varphi_{109}$
+\item $\varphi_{231} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} \in \mathbb{R}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r) \to \varphi_{190}$
+\item $\varphi_{232} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{98}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{88}$
+\item $\varphi_{233} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{50}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{51}$
+\item $\varphi_{234} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 + \underline{n} = \underline{n} + 1) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 1 < 1 + \underline{n}) \to \varphi_{177}$
+\item $\varphi_{235} :\equiv (\underline{n} + 1 \in \mathbb{R} \to 0 < \underline{n} + 1 \to 0 < (\underline{n} + 1)^{-1}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \in \mathbb{R}) \to \varphi_{182}$
+\item $\varphi_{236} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{37}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{79}$
+\item $\varphi_{237} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to 0 < \lvert \pi_{c,r}(n) - c \rvert) \to \varphi_{216}$
+\item $\varphi_{238} :\equiv (\underline{n} + 1 \in \mathbb{R} \to \underline{n} + 1 \neq 0 \to (\underline{n} + 1)^{-1} \in \mathbb{R}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \in \mathbb{R}) \to \varphi_{185}$
+\item $\varphi_{239} :\equiv \forall \varepsilon\,(c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r \to \varphi_{109}) \to \forall \varepsilon\,(c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r) \to \varphi_{117}$
+\item $\varphi_{240} :\equiv 1 \in \mathbb{R} \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} + 1 \in \mathbb{R}) \to \varphi_{217}$
+\item $\varphi_{241} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{51}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{41}$
+\item $\varphi_{242} :\equiv (\varepsilon \in \mathbb{R} \to r^{-1} \in \mathbb{R} \to \varepsilon \cdot r^{-1} \in \mathbb{R}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{203}$
+\item $\varphi_{243} :\equiv (\pi_{c,r}(n) - c = c + r \cdot (\underline{n} + 1)^{-1} - c \to \varphi_{170}) \to c \in \mathbb{R} \to \varphi_{86}$
+\item $\varphi_{244} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{40}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{68}$
+\item $\varphi_{245} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{88}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{73}$
+\item $\varphi_{246} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{51}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{71}$
+\item $\varphi_{247} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \cdot 1 = r) \to \varphi_{46} \to \varphi_{21} \to \varphi_{27}$
+\item $\varphi_{248} :\equiv (r \in \mathbb{R} \to (\underline{n} + 1)^{-1} \in \mathbb{R} \to r \cdot (\underline{n} + 1)^{-1} \in \mathbb{R}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \in \mathbb{R}) \to \varphi_{194}$
+\item $\varphi_{249} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{42}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{81}$
+\item $\varphi_{250} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \mathrm{Seq}(\pi_{c,r})) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to c \in \mathbb{R}) \to \varphi_{214}$
+\item $\varphi_{251} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{98}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{133}$
+\item $\varphi_{252} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{71}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{89}$
+\item $\varphi_{253} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{88}) \to 1 \in \mathbb{R} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{63}$
+\item $\varphi_{254} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{89}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{76}$
+\item $\varphi_{255} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{72}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{97}$
+\item $\varphi_{256} :\equiv \pi_{c,r}(n) - c = \pi_{c,r}(n) - c \to (\pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1} \to \varphi_{126}) \to c \in \mathbb{R} \to \varphi_{85}$
+\item $\varphi_{257} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{73}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{104}$
+\item $\varphi_{258} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to r^{-1} \in \mathbb{R}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon) \to \varphi_{195}$
+\item $\varphi_{259} :\equiv (c + r \cdot (\underline{n} + 1)^{-1} = r \cdot (\underline{n} + 1)^{-1} + c \to \varphi_{180}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{39}$
+\item $\varphi_{260} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{81}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{102}$
+\item $\varphi_{261} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{79}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{105}$
+\item $\varphi_{262} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{68}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{113}$
+\item $\varphi_{263} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{97}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{107}$
+\item $\varphi_{264} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{45}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to c \in \mathbb{R}) \to \varphi_{201}$
+\item $\varphi_{265} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{108}) \to \varphi_{122} \to n \in \mathbb{N} \to K \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon$
+\item $\varphi_{266} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{76}) \to c \in \mathbb{R} \to \varphi_{200}$
+\item $\varphi_{267} :\equiv \lvert \pi_{c,r}(n) - c \rvert = \lvert \pi_{c,r}(n) - c \rvert \to (\pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} \to \varphi_{140}) \to c \in \mathbb{R} \to \varphi_{87}$
+\item $\varphi_{268} :\equiv \forall n\,(\varphi_{122} \to n \in \mathbb{N} \to K \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon) \to \forall n\,(\varphi_{122}) \to \forall n \in \mathbb{N}\,(K \leq n \to \lvert \pi_{c,r}(n) - c \rvert < \varepsilon)$
+\item $\varphi_{269} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{107}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{132}$
+\item $\varphi_{270} :\equiv (\pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1} \to \varphi_{126}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{150}$
+\item $\varphi_{271} :\equiv (\pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} + c - c \to \varphi_{125}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{134}$
+\item $\varphi_{272} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \mathrm{Conv}(\pi_{c,r},c)) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{96}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{162}$
+\item $\varphi_{273} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{102}) \to c \in \mathbb{R} \to \varphi_{206}$
+\item $\varphi_{274} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{114}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{136}$
+\item $\varphi_{275} :\equiv (\underline{n} \in \mathbb{R} \to 1 \in \mathbb{R} \to 0 < \underline{n} \to 0 < 1 \to 0 < \underline{n} + 1) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{215}$
+\item $\varphi_{276} :\equiv (\lvert \pi_{c,r}(n) - c \rvert = \lvert r \cdot (\underline{n} + 1)^{-1} \rvert \to \varphi_{124}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{138}$
+\item $\varphi_{277} :\equiv (\pi_{c,r}(n) - c = r \cdot (\underline{n} + 1)^{-1} \to \varphi_{140}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{152}$
+\item $\varphi_{278} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to (\underline{n} + 1)^{-1} \in \mathbb{R}) \to 1 \in \mathbb{R} \to \varphi_{224}$
+\item $\varphi_{279} :\equiv (r \in \mathbb{R} \to r \neq 0 \to r^{-1} \in \mathbb{R}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to \varphi_{209}$
+\item $\varphi_{280} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{143}) \to \varphi_{179} \to \neg (K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1})$
+\item $\varphi_{281} :\equiv (\pi_{c,r}(n) - c = c + r \cdot (\underline{n} + 1)^{-1} - c \to \varphi_{170}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{151}$
+\item $\varphi_{282} :\equiv \forall K\,(\varphi_{179} \to \neg (K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1})) \to \forall K\,(\varphi_{179}) \to \forall K\,(\neg (K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1}))$
+\item $\varphi_{283} :\equiv (\varphi_{122} \to \forall n\,(\varphi_{122})) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{114}$
+\item $\varphi_{284} :\equiv c + r \cdot (\underline{n} + 1)^{-1} - c = c + r \cdot (\underline{n} + 1)^{-1} - c \to \varphi_{259}$
+\item $\varphi_{285} :\equiv (c + r \cdot (\underline{n} + 1)^{-1} = r \cdot (\underline{n} + 1)^{-1} + c \to \varphi_{180}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{193}$
+\item $\varphi_{286} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{69}) \to \varphi_{78} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{70}$
+\item $\varphi_{287} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to \varphi_{210}$
+\item $\varphi_{288} :\equiv (\varepsilon \in \mathbb{R} \to r^{-1} \in \mathbb{R} \to \varepsilon \cdot r^{-1} \in \mathbb{R}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{244}$
+\item $\varphi_{289} :\equiv (r \in \mathbb{R} \to \varphi_{95}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to n \in \mathbb{N} \to r \in \mathbb{R}) \to \varphi_{231}$
+\item $\varphi_{290} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{99}) \to \varphi_{155} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{108}$
+\item $\varphi_{291} :\equiv (\varepsilon \in \mathbb{R} \to r^{-1} \in \mathbb{R} \to 0 < \varepsilon \to 0 < r^{-1} \to 0 < \varepsilon \cdot r^{-1}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{258}$
+\item $\varphi_{292} :\equiv c + r \cdot (\underline{n} + 1)^{-1} - c = c + r \cdot (\underline{n} + 1)^{-1} - c \to \varphi_{285}$
+\item $\varphi_{293} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{138}) \to \varphi_{123} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{139}$
+\item $\varphi_{294} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{102}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{65}) \to c \in \mathbb{R} \to \varphi_{205}$
+\item $\varphi_{295} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{81}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r) \to \varphi_{252}$
+\item $\varphi_{296} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{136}) \to \varphi_{188} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{143}$
+\item $\varphi_{297} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{162}) \to (\varphi_{83} \to \neg \varphi_{162}) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{82}$
+\item $\varphi_{298} :\equiv (\underline{n} + 1 \in \mathbb{R} \to 0 < \underline{n} + 1 \to 0 < (\underline{n} + 1)^{-1}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{63}) \to \varphi_{246}$
+\item $\varphi_{299} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to 0 < r) \to \varphi_{269}$
+\item $\varphi_{300} :\equiv (\underline{n} + 1 \in \mathbb{R} \to \underline{n} + 1 \neq 0 \to (\underline{n} + 1)^{-1} \in \mathbb{R}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{63}) \to \varphi_{249}$
+\item $\varphi_{301} :\equiv (r \in \mathbb{R} \to (\underline{n} + 1)^{-1} \in \mathbb{R} \to r \cdot (\underline{n} + 1)^{-1} \in \mathbb{R}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to \varphi_{260}$
+\item $\varphi_{302} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{80}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{98}) \to \varphi_{236}$
+\item $\varphi_{303} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{133}) \to \pi_{c,r}(n) - c = \pi_{c,r}(n) - c \to \varphi_{270}$
+\item $\varphi_{304} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{88}) \to 1 \in \mathbb{R} \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{74}) \to \varphi_{233}$
+\item $\varphi_{305} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{134}) \to \lvert \pi_{c,r}(n) - c \rvert = \lvert \pi_{c,r}(n) - c \rvert \to \varphi_{277}$
+\item $\varphi_{306} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{70}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{132}) \to \varphi_{226}$
+\item $\varphi_{307} :\equiv (c \in \mathbb{R} \to \varphi_{84}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{65}) \to \varphi_{273}$
+\item $\varphi_{308} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{63}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{74}) \to \varphi_{257}$
+\item $\varphi_{309} :\equiv \forall \varepsilon\,(c \in \mathbb{R} \land r \in \mathbb{R} \land 0 < r \to \varphi_{109}) \to \varphi_{239} \to \varphi_{19} \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{117}$
+\item $\varphi_{310} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{151}) \to (c \in \mathbb{R} \to \varphi_{205}) \to \varphi_{271}$
+\item $\varphi_{311} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{152}) \to (c \in \mathbb{R} \to \varphi_{200}) \to \varphi_{276}$
+\item $\varphi_{312} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{150}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{193}) \to \varphi_{281}$
+\item $\varphi_{313} :\equiv (r \in \mathbb{R} \to \varphi_{95}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{64}) \to \varphi_{295}$
+\item $\varphi_{314} :\equiv (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{81}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{68}) \to \varphi_{299}$
+\item $\varphi_{315} :\equiv (\underline{n} \in \mathbb{R} \to \varphi_{112}) \to (c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varepsilon \in \mathbb{R} \to \varphi_{88}) \to \varphi_{308}$
+\item $\varphi_{316} :\equiv \forall K\,(\varphi_{179} \to \neg (K \in \mathbb{N} \land \underline{K}^{-1} < \varepsilon \cdot r^{-1})) \to \varphi_{282} \to (\varphi_{179} \to \forall K\,(\varphi_{179})) \to c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \varphi_{109}$
+\end{abbrevlist}
+\end{fullproof}

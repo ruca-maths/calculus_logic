@@ -1,0 +1,56 @@
+% 自動生成 (prover/build.js): AddLtLt  ノード数 29
+\begin{fullproof}{[E7]}{$\forall x\,\forall y\,\forall u\,\forall v\,(x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u < v \to x + u < y + v)$}{29}\phantomsection\label{tree:AddLtLt}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall u\,\forall v\,(\varphi_{8})$\lbl{[F20]}}
+\AXC{$\forall x\,\forall y\,\forall u\,\forall v\,(\varphi_{8}) \to \forall y\,\forall u\,\forall v\,(\varphi_{8})$\lbl{A2}}
+\BIC{$\forall y\,\forall u\,\forall v\,(\varphi_{8})$}
+\AXC{$\forall y\,\forall u\,\forall v\,(\varphi_{8}) \to \forall u\,\forall v\,(\varphi_{8})$\lbl{A2}}
+\BIC{$\forall u\,\forall v\,(\varphi_{8})$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\varphi_{7}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall u\,\forall v\,(\varphi_{8})$}
+\AXC{$\forall u\,\forall v\,(\varphi_{8}) \to \forall v\,(\varphi_{8})$\lbl{A2}}
+\BIC{$\forall v\,(\varphi_{8})$}
+\AXC{$\forall v\,(\varphi_{8}) \to \varphi_{8}$\lbl{A2}}
+\BIC{$\varphi_{8}$}
+\AXC{$\varphi_{8} \to \varphi_{7} \to \varphi_{6} \to \varphi_{5} \to \varphi_{4} \to \varphi_{3} \to \varphi_{1} \to \varphi_{9}$\lbl{A1}}
+\BIC{$\varphi_{7} \to \varphi_{6} \to \varphi_{5} \to \varphi_{4} \to \varphi_{3} \to \varphi_{1} \to \varphi_{9}$}
+\BIC{$\varphi_{6} \to \varphi_{5} \to \varphi_{4} \to \varphi_{3} \to \varphi_{1} \to \varphi_{9}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{2}$\lbl{A1}}
+\AXC{$\varphi_{2} \to \varphi_{1}$\lbl{A1}}
+\BIC{$\varphi_{1}$}
+\AXC{$\varphi_{3}$\lbl{A1}}
+\AXC{$\varphi_{4}$\lbl{A1}}
+\AXC{$\varphi_{5}$\lbl{A1}}
+\AXC{$\varphi_{6}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{6} \to \varphi_{5} \to \varphi_{4} \to \varphi_{3} \to \varphi_{1} \to \varphi_{9}$}
+\BIC{$\varphi_{5} \to \varphi_{4} \to \varphi_{3} \to \varphi_{1} \to \varphi_{9}$}
+\BIC{$\varphi_{4} \to \varphi_{3} \to \varphi_{1} \to \varphi_{9}$}
+\BIC{$\varphi_{3} \to \varphi_{1} \to \varphi_{9}$}
+\BIC{$\varphi_{1} \to \varphi_{9}$}
+\BIC{$\varphi_{9}$}
+\UIC{$\forall v\,(\varphi_{9})$}
+\UIC{$\forall u\,\forall v\,(\varphi_{9})$}
+\UIC{$\forall y\,\forall u\,\forall v\,(\varphi_{9})$}
+\UIC{$\forall x\,\forall y\,\forall u\,\forall v\,(\varphi_{9})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u < v \to u \leq v$
+\item $\varphi_{2} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u < v \to u < v$
+\item $\varphi_{3} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u < v \to x < y$
+\item $\varphi_{4} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u < v \to v \in \mathbb{R}$
+\item $\varphi_{5} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u < v \to u \in \mathbb{R}$
+\item $\varphi_{6} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u < v \to y \in \mathbb{R}$
+\item $\varphi_{7} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u < v \to x \in \mathbb{R}$
+\item $\varphi_{8} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u \leq v \to x + u < y + v$
+\item $\varphi_{9} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u < v \to x + u < y + v$
+\end{abbrevlist}
+\end{fullproof}

@@ -1,0 +1,101 @@
+% 自動生成 (prover/build.js): SubLtSelf  ノード数 47
+\begin{fullproof}{[E34]}{$\forall x\,\forall e\,(x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x)$}{47}\phantomsection\label{tree:SubLtSelf}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to e \in \mathbb{R} \to x - e \in \mathbb{R}$}
+\AXC{$\varphi_{14}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x \in \mathbb{R}) \to \varphi_{7}$}
+\BIC{$\varphi_{7}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y \to x < x + y)$\lbl{[E3]}}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\forall y\,(x - e \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y \to x - e < x - e + y)$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$x - e \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x - e + e$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$x - e \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x - e + e$}
+\AXC{$(x - e \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x - e + e) \to \varphi_{15}$\lbl{A1}}
+\BIC{$\varphi_{15}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to e \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to e \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{7}$}
+\BIC{$x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{15}$}
+\BIC{$(x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to e \in \mathbb{R}) \to \varphi_{8}$}
+\BIC{$\varphi_{8}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y + y = x)$\lbl{[F12]}}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y + y = x)$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to e \in \mathbb{R} \to x - e + e = x$}
+\AXC{$\varphi_{13}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x \in \mathbb{R}) \to \varphi_{6}$}
+\BIC{$\varphi_{6}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to 0 < e$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{8}$}
+\BIC{$x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x - e + e$}
+\AXC{$x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to e \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{6}$}
+\BIC{$x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e + e = x$}
+\AXC{$\varphi_{16}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x - e + e) \to \varphi_{9}$}
+\BIC{$\varphi_{9}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$z = w \to x - e < z \to x - e < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to x - e < z \to x - e < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to x - e < z \to x - e < w)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall w\,(x - e + e = w \to x - e < x - e + e \to x - e < w)$}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\BIC{$x - e + e = x \to x - e < x - e + e \to x - e < x$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{9}$}
+\BIC{$x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x$}
+\UIC{$\forall e\,(x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x)$}
+\UIC{$\forall x\,\forall e\,(x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y + y = x) \to x \in \mathbb{R} \to e \in \mathbb{R} \to x - e + e = x$
+\item $\varphi_{2} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to x \in \mathbb{R} \to e \in \mathbb{R} \to x - e \in \mathbb{R}$
+\item $\varphi_{3} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y + y = x) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y + y = x)$
+\item $\varphi_{4} :\equiv \forall z\,\forall w\,(z = w \to x - e < z \to x - e < w) \to \forall w\,(x - e + e = w \to x - e < x - e + e \to x - e < w)$
+\item $\varphi_{5} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$
+\item $\varphi_{6} :\equiv (x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to e \in \mathbb{R}) \to x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e + e = x$
+\item $\varphi_{7} :\equiv (x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to e \in \mathbb{R}) \to x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e \in \mathbb{R}$
+\item $\varphi_{8} :\equiv (x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to 0 < e) \to x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x - e + e$
+\item $\varphi_{9} :\equiv (x - e + e = x \to x - e < x - e + e \to x - e < x) \to x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x$
+\item $\varphi_{10} :\equiv \forall w\,(x - e + e = w \to x - e < x - e + e \to x - e < w) \to x - e + e = x \to x - e < x - e + e \to x - e < x$
+\item $\varphi_{11} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y \to x < x + y) \to \forall y\,(x - e \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y \to x - e < x - e + y)$
+\item $\varphi_{12} :\equiv \forall y\,(x - e \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y \to x - e < x - e + y) \to x - e \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x - e + e$
+\item $\varphi_{13} :\equiv (x \in \mathbb{R} \to e \in \mathbb{R} \to x - e + e = x) \to (x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x \in \mathbb{R}) \to \varphi_{6}$
+\item $\varphi_{14} :\equiv (x \in \mathbb{R} \to e \in \mathbb{R} \to x - e \in \mathbb{R}) \to (x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x \in \mathbb{R}) \to \varphi_{7}$
+\item $\varphi_{15} :\equiv (x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e \in \mathbb{R}) \to (x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to e \in \mathbb{R}) \to \varphi_{8}$
+\item $\varphi_{16} :\equiv (x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e + e = x) \to (x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x - e + e) \to \varphi_{9}$
+\end{abbrevlist}
+\end{fullproof}

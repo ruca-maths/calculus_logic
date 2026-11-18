@@ -1,0 +1,19 @@
+% 自動生成 (prover/build.js): InvTwoR  ノード数 9
+\begin{fullproof}{[F31]}{$2^{-1} \in \mathbb{R}$}{9}\phantomsection\label{tree:InvTwoR}
+\noindent 主木:
+\begin{ptree}
+\AXC{$2 \neq 0$\lbl{[F30]}}
+\AXC{$2 \in \mathbb{R}$\lbl{[F2]}}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$2 \in \mathbb{R} \to 2 \neq 0 \to 2^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\BIC{$2 \in \mathbb{R} \to 2 \neq 0 \to 2^{-1} \in \mathbb{R}$}
+\BIC{$2 \neq 0 \to 2^{-1} \in \mathbb{R}$}
+\BIC{$2^{-1} \in \mathbb{R}$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv (2 \in \mathbb{R} \to 2 \neq 0 \to 2^{-1} \in \mathbb{R}) \to 2 \in \mathbb{R} \to 2 \neq 0 \to 2^{-1} \in \mathbb{R}$
+\item $\varphi_{2} :\equiv \forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R}) \to 2 \in \mathbb{R} \to 2 \neq 0 \to 2^{-1} \in \mathbb{R}$
+\end{abbrevlist}
+\end{fullproof}

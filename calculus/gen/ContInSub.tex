@@ -1,0 +1,355 @@
+% 自動生成 (prover/build.js): ContInSub  ノード数 159
+\begin{fullproof}{[G3]}{$\forall f\,\forall A\,\forall B\,\forall c\,(\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \mathrm{ContIn}(f,B,c))$}{159}\phantomsection\label{tree:ContInSub}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y)$\lbl{[B5]}}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$\forall Y\,\forall x\,(B \subseteq Y \to x \in B \to x \in Y)$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall x\,(B \subseteq A \to x \in B \to x \in A)$}
+\AXC{$\forall x\,(B \subseteq A \to x \in B \to x \in A) \to B \subseteq A \to x \in B \to x \in A$\lbl{A2}}
+\BIC{$B \subseteq A \to x \in B \to x \in A$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\varphi_{37}$\lbl{A1}}
+\AXC{$\mathrm{ContIn}(f,A,c) \to B \subseteq A \to B \subseteq A$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$B \subseteq A \to x \in B \to x \in A$}
+\AXC{$(B \subseteq A \to x \in B \to x \in A) \to \varphi_{58}$\lbl{A1}}
+\BIC{$\varphi_{58}$}
+\BIC{$\varphi_{37} \to \mathrm{ContIn}(f,A,c) \to \varphi_{41}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\varphi_{24}$\lbl{A2}}
+\AXC{$\varphi_{46}$\lbl{A1}}
+\AXC{$\varphi_{46} \to \varphi_{51}$\lbl{A1}}
+\BIC{$\varphi_{51}$}
+\AXC{$\varphi_{51} \to \varphi_{24} \to \varphi_{49}$\lbl{A1}}
+\BIC{$\varphi_{24} \to \varphi_{49}$}
+\BIC{$\varphi_{49}$}
+\AXC{$\varphi_{49} \to (\mathrm{ContIn}(f,A,c) \to \varphi_{41}) \to \varphi_{59}$\lbl{A1}}
+\BIC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{41}) \to \varphi_{59}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\mathrm{ContIn}(f,A,c) \to B \subseteq A \to \varphi_{40}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{41}$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{41}) \to \varphi_{59}$}
+\BIC{$\varphi_{59}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to \varphi_{31}$}
+\AXC{$\varphi_{60}$\lbl{A1}}
+\BIC{$\varphi_{25} \to x \in B \to \lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon$}
+\UIC{$\varphi_{43}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\varphi_{25} \to \forall x\,(\varphi_{25})$\lbl{A4}}
+\AXC{$\varphi_{43} \to \varphi_{44}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{43}$}
+\AXC{$\varphi_{43} \to (\varphi_{43} \to \varphi_{44}) \to \varphi_{62}$\lbl{A1}}
+\BIC{$(\varphi_{43} \to \varphi_{44}) \to \varphi_{62}$}
+\BIC{$\varphi_{62}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to \varphi_{34}$}
+\AXC{$\varphi_{46}$\lbl{A1}}
+\AXC{$\varphi_{46} \to \varphi_{61}$\lbl{A1}}
+\BIC{$\varphi_{61}$}
+\BIC{$\varphi_{47}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall \delta\,(\neg \varphi_{20}) \to \neg \varphi_{20}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{47}$}
+\AXC{$\varphi_{47} \to (\forall \delta\,(\neg \varphi_{20}) \to \neg \varphi_{20}) \to \varphi_{50}$\lbl{A1}}
+\BIC{$(\forall \delta\,(\neg \varphi_{20}) \to \neg \varphi_{20}) \to \varphi_{50}$}
+\BIC{$\varphi_{50}$}
+\AXC{$\varphi_{50} \to \varphi_{29} \to \neg \varphi_{19}$\lbl{A1}}
+\BIC{$\varphi_{29} \to \neg \varphi_{19}$}
+\UIC{$\forall \delta\,(\varphi_{29} \to \neg \varphi_{19})$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{38})$\lbl{DefContIn}}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{38}) \to \forall A\,\forall c\,(\varphi_{38})$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,(\varphi_{38})$}
+\AXC{$\forall A\,\forall c\,(\varphi_{38}) \to \forall c\,(\varphi_{38})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{38})$}
+\AXC{$\forall c\,(\varphi_{38}) \to \varphi_{38}$\lbl{A2}}
+\BIC{$\varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\varphi_{48}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{38}$}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)$\lbl{A1}}
+\AXC{$\varphi_{57}$\lbl{A1}}
+\BIC{$\varphi_{38} \to \mathrm{ContIn}(f,A,c) \to \varphi_{36}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{36}$}
+\AXC{$\varphi_{63}$\lbl{A1}}
+\BIC{$\varphi_{48} \to \mathrm{ContIn}(f,A,c) \to \varphi_{33}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{33}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\varphi_{8}$\lbl{A1}}
+\AXC{$\varphi_{5}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{33}$}
+\AXC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{33}) \to \varphi_{5} \to \varphi_{8} \to \varphi_{26}$\lbl{A1}}
+\BIC{$\varphi_{5} \to \varphi_{8} \to \varphi_{26}$}
+\BIC{$\varphi_{8} \to \varphi_{26}$}
+\BIC{$\varphi_{26}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\forall \delta\,(\varphi_{29} \to \neg \varphi_{19}) \to \forall \delta\,(\varphi_{29}) \to \forall \delta\,(\neg \varphi_{19})$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\forall \delta\,(\varphi_{29} \to \neg \varphi_{19})$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{26}$}
+\AXC{$\varphi_{26} \to \forall \delta\,(\varphi_{29} \to \neg \varphi_{19}) \to \varphi_{64}$\lbl{A1}}
+\BIC{$\forall \delta\,(\varphi_{29} \to \neg \varphi_{19}) \to \varphi_{64}$}
+\BIC{$\varphi_{64}$}
+\BIC{$(\varphi_{29} \to \forall \delta\,(\varphi_{29})) \to \varphi_{27}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\varphi_{29} \to \forall \delta\,(\varphi_{29})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$(\varphi_{29} \to \forall \delta\,(\varphi_{29})) \to \varphi_{27}$}
+\BIC{$\varphi_{27}$}
+\AXC{$\varphi_{27} \to \varphi_{28}$\lbl{A1}}
+\BIC{$\varphi_{28}$}
+\UIC{$\forall \varepsilon\,(\varphi_{28})$}
+\AXC{$\forall \varepsilon\,(\varphi_{28}) \to (\forall \varepsilon\,(\varphi_{28}) \to \varphi_{32}) \to \varphi_{13} \to \varphi_{30}$\lbl{A1}}
+\BIC{$(\forall \varepsilon\,(\varphi_{28}) \to \varphi_{32}) \to \varphi_{13} \to \varphi_{30}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y)$\lbl{[B5]}}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$\forall Y\,\forall x\,(B \subseteq Y \to x \in B \to x \in Y)$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall x\,(B \subseteq A \to x \in B \to x \in A)$}
+\AXC{$\forall x\,(B \subseteq A \to x \in B \to x \in A) \to B \subseteq A \to u \in B \to u \in A$\lbl{A2}}
+\BIC{$B \subseteq A \to u \in B \to u \in A$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\mathrm{ContIn}(f,A,c) \to B \subseteq A \to B \subseteq A$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$B \subseteq A \to u \in B \to u \in A$}
+\AXC{$\varphi_{42}$\lbl{A1}}
+\BIC{$(\mathrm{ContIn}(f,A,c) \to B \subseteq A \to B \subseteq A) \to \varphi_{21}$}
+\BIC{$\varphi_{21}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{38})$\lbl{DefContIn}}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{38}) \to \forall A\,\forall c\,(\varphi_{38})$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,(\varphi_{38})$}
+\AXC{$\forall A\,\forall c\,(\varphi_{38}) \to \forall c\,(\varphi_{38})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{38})$}
+\AXC{$\forall c\,(\varphi_{38}) \to \varphi_{38}$\lbl{A2}}
+\BIC{$\varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y)$\lbl{[B5]}}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y)$}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$\forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f))$}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$A \subseteq \mathrm{dom}(f) \to u \in A \to u \in \mathrm{dom}(f)$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$A \subseteq \mathrm{dom}(f) \to u \in A \to u \in \mathrm{dom}(f)$}
+\AXC{$(A \subseteq \mathrm{dom}(f) \to u \in A \to u \in \mathrm{dom}(f)) \to \varphi_{35}$\lbl{A1}}
+\BIC{$\varphi_{35}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{38}$}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)$\lbl{A1}}
+\AXC{$\varphi_{53}$\lbl{A1}}
+\BIC{$\varphi_{45}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to A \subseteq \mathrm{dom}(f)$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{35}$}
+\BIC{$\varphi_{23}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to u \in B \to u \in B$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{21}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to u \in B \to u \in A$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{23}$}
+\BIC{$\varphi_{2}$}
+\AXC{$\varphi_{2} \to \varphi_{3}$\lbl{A1}}
+\BIC{$\varphi_{3}$}
+\UIC{$\forall u\,(\varphi_{3})$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$\lbl{Def$\subseteq$}}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$\forall y\,(B \subseteq y \leftrightarrow \forall u \in B\,(u \in y))$}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$B \subseteq \mathrm{dom}(f) \leftrightarrow \forall u \in B\,(u \in \mathrm{dom}(f))$}
+\AXC{$(B \subseteq \mathrm{dom}(f) \leftrightarrow \forall u \in B\,(u \in \mathrm{dom}(f))) \to \varphi_{22}$\lbl{A1}}
+\BIC{$\varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\varphi_{10}$\lbl{A4}}
+\AXC{$\forall u\,(\varphi_{3}) \to \varphi_{6}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\forall u\,(\varphi_{3})$}
+\AXC{$\forall u\,(\varphi_{3}) \to (\forall u\,(\varphi_{3}) \to \varphi_{6}) \to \varphi_{10} \to \varphi_{4}$\lbl{A1}}
+\BIC{$(\forall u\,(\varphi_{3}) \to \varphi_{6}) \to \varphi_{10} \to \varphi_{4}$}
+\BIC{$\varphi_{10} \to \varphi_{4}$}
+\BIC{$\varphi_{4}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{22}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to B \subseteq \mathrm{dom}(f)$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{38})$\lbl{DefContIn}}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{38}) \to \forall A\,\forall c\,(\varphi_{38})$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,(\varphi_{38})$}
+\AXC{$\forall A\,\forall c\,(\varphi_{38}) \to \forall c\,(\varphi_{38})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{38})$}
+\AXC{$\forall c\,(\varphi_{38}) \to \varphi_{38}$\lbl{A2}}
+\BIC{$\varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{38})$\lbl{DefContIn}}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{38}) \to \forall A\,\forall c\,(\varphi_{38})$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,(\varphi_{38})$}
+\AXC{$\forall A\,\forall c\,(\varphi_{38}) \to \forall c\,(\varphi_{39})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{39})$}
+\AXC{$\forall c\,(\varphi_{39}) \to \varphi_{39}$\lbl{A2}}
+\BIC{$\varphi_{39}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{38}$}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)$\lbl{A1}}
+\AXC{$\varphi_{52}$\lbl{A1}}
+\BIC{$\varphi_{38} \to \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \mathrm{RFn}(f)$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \mathrm{RFn}(f)$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{39}$}
+\AXC{$\varphi_{39} \to \varphi_{56}$\lbl{A1}}
+\BIC{$\varphi_{56}$}
+\BIC{$\varphi_{55}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to c \in B$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to B \subseteq \mathrm{dom}(f)$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{55}$}
+\BIC{$\varphi_{54}$}
+\BIC{$\varphi_{30} \to \varphi_{1}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{13}$\lbl{A4}}
+\AXC{$\forall \varepsilon\,(\varphi_{28}) \to \varphi_{32}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$(\forall \varepsilon\,(\varphi_{28}) \to \varphi_{32}) \to \varphi_{13} \to \varphi_{30}$}
+\BIC{$\varphi_{13} \to \varphi_{30}$}
+\BIC{$\varphi_{30}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{30} \to \varphi_{1}$}
+\BIC{$\varphi_{1}$}
+\UIC{$\forall c\,(\varphi_{1})$}
+\UIC{$\forall B\,\forall c\,(\varphi_{1})$}
+\UIC{$\forall A\,\forall B\,\forall c\,(\varphi_{1})$}
+\UIC{$\forall f\,\forall A\,\forall B\,\forall c\,(\varphi_{1})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \mathrm{ContIn}(f,B,c)$
+\item $\varphi_{2} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to u \in B \to u \in \mathrm{dom}(f)$
+\item $\varphi_{3} :\equiv \mathrm{ContIn}(f,A,c) \land B \subseteq A \land c \in B \to u \in B \to u \in \mathrm{dom}(f)$
+\item $\varphi_{4} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \forall u \in B\,(u \in \mathrm{dom}(f))$
+\item $\varphi_{5} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$
+\item $\varphi_{6} :\equiv \forall u\,(\mathrm{ContIn}(f,A,c) \land B \subseteq A \land c \in B) \to \forall u \in B\,(u \in \mathrm{dom}(f))$
+\item $\varphi_{7} :\equiv \forall Y\,\forall x\,(B \subseteq Y \to x \in B \to x \in Y) \to \forall x\,(B \subseteq A \to x \in B \to x \in A)$
+\item $\varphi_{8} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon$
+\item $\varphi_{9} :\equiv \forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y) \to \forall Y\,\forall x\,(B \subseteq Y \to x \in B \to x \in Y)$
+\item $\varphi_{10} :\equiv \mathrm{ContIn}(f,A,c) \land B \subseteq A \land c \in B \to \forall u\,(\mathrm{ContIn}(f,A,c) \land B \subseteq A \land c \in B)$
+\item $\varphi_{11} :\equiv \forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y) \to \forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y)$
+\item $\varphi_{12} :\equiv \forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to \forall y\,(B \subseteq y \leftrightarrow \forall u \in B\,(u \in y))$
+\item $\varphi_{13} :\equiv \mathrm{ContIn}(f,A,c) \land B \subseteq A \land c \in B \to \forall \varepsilon\,(\mathrm{ContIn}(f,A,c) \land B \subseteq A \land c \in B)$
+\item $\varphi_{14} :\equiv \forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y) \to \forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f))$
+\item $\varphi_{15} :\equiv \forall y\,(B \subseteq y \leftrightarrow \forall u \in B\,(u \in y)) \to (B \subseteq \mathrm{dom}(f) \leftrightarrow \forall u \in B\,(u \in \mathrm{dom}(f)))$
+\item $\varphi_{16} :\equiv \forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f)) \to A \subseteq \mathrm{dom}(f) \to u \in A \to u \in \mathrm{dom}(f)$
+\item $\varphi_{17} :\equiv \lvert x - c \rvert < \delta \to x \in A \to \lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon$
+\item $\varphi_{18} :\equiv \lvert x - c \rvert < \delta \to \forall x \in A\,(\lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon)$
+\item $\varphi_{19} :\equiv \delta \in \mathbb{R} \land 0 < \delta \land \forall x \in A\,(\lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon)$
+\item $\varphi_{20} :\equiv \delta \in \mathbb{R} \land 0 < \delta \land \forall x \in B\,(\lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon)$
+\item $\varphi_{21} :\equiv (\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to u \in B \to u \in B) \to \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to u \in B \to u \in A$
+\item $\varphi_{22} :\equiv \varphi_{4} \to \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to B \subseteq \mathrm{dom}(f)$
+\item $\varphi_{23} :\equiv (\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to u \in B \to u \in A) \to \varphi_{2}$
+\item $\varphi_{24} :\equiv \forall x \in A\,(\lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon) \to x \in A \to \lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon$
+\item $\varphi_{25} :\equiv \mathrm{ContIn}(f,A,c) \land B \subseteq A \land c \in B \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{19}$
+\item $\varphi_{26} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists \delta\,(\varphi_{19})$
+\item $\varphi_{27} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists \delta\,(\varphi_{20})$
+\item $\varphi_{28} :\equiv \mathrm{ContIn}(f,A,c) \land B \subseteq A \land c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists \delta\,(\varphi_{20})$
+\item $\varphi_{29} :\equiv \mathrm{ContIn}(f,A,c) \land B \subseteq A \land c \in B \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \exists \delta\,(\varphi_{20})$
+\item $\varphi_{30} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\varphi_{20}))$
+\item $\varphi_{31} :\equiv 0 < \varepsilon \to \varphi_{19} \to x \in B \to \lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon$
+\item $\varphi_{32} :\equiv \forall \varepsilon\,(\mathrm{ContIn}(f,A,c) \land B \subseteq A \land c \in B) \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\varphi_{20}))$
+\item $\varphi_{33} :\equiv B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists \delta\,(\varphi_{19})$
+\item $\varphi_{34} :\equiv 0 < \varepsilon \to \varphi_{19} \to \forall x \in B\,(\lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon)$
+\item $\varphi_{35} :\equiv (\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to A \subseteq \mathrm{dom}(f)) \to \varphi_{23}$
+\item $\varphi_{36} :\equiv B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\varphi_{19}))$
+\item $\varphi_{37} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to x \in B \to x \in B$
+\item $\varphi_{38} :\equiv \mathrm{ContIn}(f,A,c) \leftrightarrow \mathrm{RFn}(f) \land A \subseteq \mathrm{dom}(f) \land c \in A \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\varphi_{19}))$
+\item $\varphi_{39} :\equiv \mathrm{ContIn}(f,B,c) \leftrightarrow \mathrm{RFn}(f) \land B \subseteq \mathrm{dom}(f) \land c \in B \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\varphi_{20}))$
+\item $\varphi_{40} :\equiv c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to x \in B \to \lvert x - c \rvert < \delta \to \lvert x - c \rvert < \delta$
+\item $\varphi_{41} :\equiv B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to x \in B \to \lvert x - c \rvert < \delta \to x \in A$
+\item $\varphi_{42} :\equiv (B \subseteq A \to u \in B \to u \in A) \to (\mathrm{ContIn}(f,A,c) \to B \subseteq A \to B \subseteq A) \to \varphi_{21}$
+\item $\varphi_{43} :\equiv \forall x\,(\varphi_{25} \to x \in B \to \lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon)$
+\item $\varphi_{44} :\equiv \forall x\,(\varphi_{25}) \to \forall x \in B\,(\lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon)$
+\item $\varphi_{45} :\equiv \varphi_{38} \to \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to A \subseteq \mathrm{dom}(f)$
+\item $\varphi_{46} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to \varphi_{19}$
+\item $\varphi_{47} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to \varphi_{20}$
+\item $\varphi_{48} :\equiv \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\varphi_{19})) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists \delta\,(\varphi_{19})$
+\item $\varphi_{49} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to x \in B \to \varphi_{17}$
+\item $\varphi_{50} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to \exists \delta\,(\varphi_{20})$
+\item $\varphi_{51} :\equiv \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to x \in B \to \varphi_{18}$
+\item $\varphi_{52} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)) \to \varphi_{38} \to \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \mathrm{RFn}(f)$
+\item $\varphi_{53} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)) \to \varphi_{45}$
+\item $\varphi_{54} :\equiv (\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to c \in B) \to \varphi_{30} \to \varphi_{1}$
+\item $\varphi_{55} :\equiv (\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to B \subseteq \mathrm{dom}(f)) \to \varphi_{54}$
+\item $\varphi_{56} :\equiv (\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \mathrm{RFn}(f)) \to \varphi_{55}$
+\item $\varphi_{57} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)) \to \varphi_{38} \to \mathrm{ContIn}(f,A,c) \to \varphi_{36}$
+\item $\varphi_{58} :\equiv (\mathrm{ContIn}(f,A,c) \to B \subseteq A \to B \subseteq A) \to \varphi_{37} \to \mathrm{ContIn}(f,A,c) \to \varphi_{41}$
+\item $\varphi_{59} :\equiv (\mathrm{ContIn}(f,A,c) \to B \subseteq A \to \varphi_{40}) \to \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to \varphi_{31}$
+\item $\varphi_{60} :\equiv (\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to \varphi_{31}) \to \varphi_{25} \to x \in B \to \lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon$
+\item $\varphi_{61} :\equiv (\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to \varphi_{34}) \to \varphi_{47}$
+\item $\varphi_{62} :\equiv (\varphi_{25} \to \forall x\,(\varphi_{25})) \to \mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \varepsilon \in \mathbb{R} \to \varphi_{34}$
+\item $\varphi_{63} :\equiv (\mathrm{ContIn}(f,A,c) \to \varphi_{36}) \to \varphi_{48} \to \mathrm{ContIn}(f,A,c) \to \varphi_{33}$
+\item $\varphi_{64} :\equiv (\forall \delta\,(\varphi_{29} \to \neg \varphi_{19}) \to \forall \delta\,(\varphi_{29}) \to \forall \delta\,(\neg \varphi_{19})) \to (\varphi_{29} \to \forall \delta\,(\varphi_{29})) \to \varphi_{27}$
+\end{abbrevlist}
+\end{fullproof}

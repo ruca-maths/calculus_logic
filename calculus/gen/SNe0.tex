@@ -1,0 +1,72 @@
+% 自動生成 (prover/build.js): SNe0  ノード数 35
+\begin{fullproof}{[N0]}{$\forall n\,(S(n) \neq \emptyset)$}{35}\phantomsection\label{tree:SNe0}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall u\,(u \in S(x) \leftrightarrow u \in x \lor u = x)$\lbl{Def$S$}}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall u\,(u \in S(n) \leftrightarrow u \in n \lor u = n)$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$n \in S(n) \leftrightarrow n \in n \lor n = n$}
+\AXC{$\varphi_{2}$\lbl{A1}}
+\BIC{$n = n \to \neg S(n) \neq \emptyset \to n \in S(n)$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to n = n$\lbl{A2}}
+\BIC{$n = n$}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$n = n \to \neg S(n) \neq \emptyset \to n \in S(n)$}
+\BIC{$\neg S(n) \neq \emptyset \to n \in S(n)$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\neg S(n) \neq \emptyset \to n \in S(n)$}
+\AXC{$\neg S(n) \neq \emptyset \to \neg S(n) \neq \emptyset$\lbl{A1}}
+\AXC{$\varphi_{5}$\lbl{A1}}
+\BIC{$\neg S(n) \neq \emptyset \to S(n) = \emptyset$}
+\AXC{$\varphi_{9}$\lbl{A1}}
+\BIC{$(\neg S(n) \neq \emptyset \to n \in S(n)) \to \varphi_{7}$}
+\BIC{$\varphi_{7}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$z = w \to n \in z \to n \in w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to n \in z \to n \in w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to n \in z \to n \in w)$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall w\,(S(n) = w \to n \in S(n) \to n \in w)$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$S(n) = \emptyset \to n \in S(n) \to n \in \emptyset$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{7}$}
+\BIC{$\neg S(n) \neq \emptyset \to n \in \emptyset$}
+\AXC{$\varphi_{8}$\lbl{A1}}
+\BIC{$(\neg S(n) \neq \emptyset \to n \notin \emptyset) \to S(n) \neq \emptyset$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\forall u\,(u \notin \emptyset)$\lbl{Def$\emptyset$}}
+\AXC{$\forall u\,(u \notin \emptyset) \to n \notin \emptyset$\lbl{A2}}
+\BIC{$n \notin \emptyset$}
+\AXC{$n \notin \emptyset \to \neg S(n) \neq \emptyset \to n \notin \emptyset$\lbl{A1}}
+\BIC{$\neg S(n) \neq \emptyset \to n \notin \emptyset$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$(\neg S(n) \neq \emptyset \to n \notin \emptyset) \to S(n) \neq \emptyset$}
+\BIC{$S(n) \neq \emptyset$}
+\UIC{$\forall n\,(S(n) \neq \emptyset)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall u\,(u \in S(n) \leftrightarrow u \in n \lor u = n) \to (n \in S(n) \leftrightarrow n \in n \lor n = n)$
+\item $\varphi_{2} :\equiv (n \in S(n) \leftrightarrow n \in n \lor n = n) \to n = n \to \neg S(n) \neq \emptyset \to n \in S(n)$
+\item $\varphi_{3} :\equiv \forall z\,\forall w\,(z = w \to n \in z \to n \in w) \to \forall w\,(S(n) = w \to n \in S(n) \to n \in w)$
+\item $\varphi_{4} :\equiv \forall x\,\forall u\,(u \in S(x) \leftrightarrow u \in x \lor u = x) \to \forall u\,(u \in S(n) \leftrightarrow u \in n \lor u = n)$
+\item $\varphi_{5} :\equiv (\neg S(n) \neq \emptyset \to \neg S(n) \neq \emptyset) \to \neg S(n) \neq \emptyset \to S(n) = \emptyset$
+\item $\varphi_{6} :\equiv \forall w\,(S(n) = w \to n \in S(n) \to n \in w) \to S(n) = \emptyset \to n \in S(n) \to n \in \emptyset$
+\item $\varphi_{7} :\equiv (S(n) = \emptyset \to n \in S(n) \to n \in \emptyset) \to \neg S(n) \neq \emptyset \to n \in \emptyset$
+\item $\varphi_{8} :\equiv (\neg S(n) \neq \emptyset \to n \in \emptyset) \to (\neg S(n) \neq \emptyset \to n \notin \emptyset) \to S(n) \neq \emptyset$
+\item $\varphi_{9} :\equiv (\neg S(n) \neq \emptyset \to S(n) = \emptyset) \to (\neg S(n) \neq \emptyset \to n \in S(n)) \to \varphi_{7}$
+\end{abbrevlist}
+\end{fullproof}

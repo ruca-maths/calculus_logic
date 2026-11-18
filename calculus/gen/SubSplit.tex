@@ -1,0 +1,1036 @@
+% 自動生成 (prover/build.js): SubSplit  ノード数 376
+\begin{fullproof}{[F16]}{$\forall a\,\forall b\,\forall x\,(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - b = a - x + (x - b))$}{376}\phantomsection\label{tree:SubSplit}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(a - b = y \to y = a - b)$\lbl{A2}}
+\BIC{$\forall y\,(a - b = y \to y = a - b)$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$a - b = a + -b \to a + -b = a - b$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y)$\lbl{Def$-$}}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y) \to \forall y\,(a - y = a + -y)$\lbl{A2}}
+\BIC{$\forall y\,(a - y = a + -y)$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$a - b = a + -b \to a + -b = a - b$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\forall y\,(a - y = a + -y)$}
+\AXC{$\forall y\,(a - y = a + -y) \to a - b = a + -b$\lbl{A2}}
+\BIC{$a - b = a + -b$}
+\AXC{$\varphi_{53}$\lbl{A1}}
+\BIC{$(a - b = a + -b \to a + -b = a - b) \to a + -b = a - b$}
+\BIC{$a + -b = a - b$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$z = w \to a + (-b + 0) = a + z \to a + (-b + 0) = a + w$\lbl{A6}}
+\UIC{$\varphi_{3}$}
+\UIC{$\forall z\,(\varphi_{3})$}
+\AXC{$\forall z\,(\varphi_{3}) \to \varphi_{40}$\lbl{A2}}
+\BIC{$\varphi_{40}$}
+\AXC{$\varphi_{40} \to -b + 0 = -b \to \varphi_{13}$\lbl{A2}}
+\BIC{$-b + 0 = -b \to \varphi_{13}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R}) \to b \in \mathbb{R} \to -b \in \mathbb{R}$\lbl{A2}}
+\BIC{$b \in \mathbb{R} \to -b \in \mathbb{R}$}
+\AXC{$(b \in \mathbb{R} \to -b \in \mathbb{R}) \to \varphi_{89}$\lbl{A1}}
+\BIC{$\varphi_{89}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to b \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{89}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x + 0 = x)$\lbl{(R4)}}
+\AXC{$\forall x \in \mathbb{R}\,(x + 0 = x) \to -b \in \mathbb{R} \to -b + 0 = -b$\lbl{A2}}
+\BIC{$-b \in \mathbb{R} \to -b + 0 = -b$}
+\AXC{$(-b \in \mathbb{R} \to -b + 0 = -b) \to \varphi_{95}$\lbl{A1}}
+\BIC{$\varphi_{95}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{95}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b + 0 = -b$}
+\AXC{$\varphi_{123}$\lbl{A1}}
+\BIC{$a + (-b + 0) = a + (-b + 0) \to \varphi_{106}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to a + (-b + 0) = a + (-b + 0)$\lbl{A2}}
+\BIC{$a + (-b + 0) = a + (-b + 0)$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$a + (-b + 0) = a + (-b + 0) \to \varphi_{106}$}
+\BIC{$\varphi_{106}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$z = w \to a + (0 + -b) = a + z \to a + (0 + -b) = a + w$\lbl{A6}}
+\UIC{$\varphi_{4}$}
+\UIC{$\forall z\,(\varphi_{4})$}
+\AXC{$\forall z\,(\varphi_{4}) \to \varphi_{42}$\lbl{A2}}
+\BIC{$\varphi_{42}$}
+\AXC{$\varphi_{42} \to 0 + -b = -b + 0 \to \varphi_{21}$\lbl{A2}}
+\BIC{$0 + -b = -b + 0 \to \varphi_{21}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)$\lbl{(R3)}}
+\AXC{$\varphi_{67}$\lbl{A2}}
+\BIC{$\forall y\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to 0 + y = y + 0)$}
+\AXC{$\varphi_{81}$\lbl{A2}}
+\BIC{$0 \in \mathbb{R} \to -b \in \mathbb{R} \to 0 + -b = -b + 0$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$0 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$0 \in \mathbb{R} \to -b \in \mathbb{R} \to 0 + -b = -b + 0$}
+\AXC{$(0 \in \mathbb{R} \to -b \in \mathbb{R} \to 0 + -b = -b + 0) \to 0 \in \mathbb{R} \to \varphi_{101}$\lbl{A1}}
+\BIC{$0 \in \mathbb{R} \to \varphi_{101}$}
+\BIC{$\varphi_{101}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{101}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to 0 + -b = -b + 0$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to 0 + -b = -b + 0) \to \varphi_{115}$\lbl{A1}}
+\BIC{$\varphi_{115}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$0 + -b = -b + 0 \to \varphi_{21}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to a + (0 + -b) = a + (0 + -b)$\lbl{A2}}
+\BIC{$a + (0 + -b) = a + (0 + -b)$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{115}$}
+\BIC{$(0 + -b = -b + 0 \to \varphi_{21}) \to \varphi_{31}$}
+\BIC{$\varphi_{31}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{75}$\lbl{A2}}
+\BIC{$\varphi_{75}$}
+\AXC{$\varphi_{75} \to a - x + (x - b) = a + (x + -x + -b) \to \varphi_{44}$\lbl{A2}}
+\BIC{$a - x + (x - b) = a + (x + -x + -b) \to \varphi_{44}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{65}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{65})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{65})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{65}) \to \varphi_{97}$\lbl{A2}}
+\BIC{$\varphi_{97}$}
+\AXC{$\varphi_{97} \to x + -x = 0 \to \varphi_{82}$\lbl{A2}}
+\BIC{$x + -x = 0 \to \varphi_{82}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x + -x = 0)$\lbl{(R5)}}
+\AXC{$\forall x \in \mathbb{R}\,(x + -x = 0) \to x \in \mathbb{R} \to x + -x = 0$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to x + -x = 0$}
+\AXC{$(x \in \mathbb{R} \to x + -x = 0) \to \varphi_{86}$\lbl{A1}}
+\BIC{$\varphi_{86}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{86}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x + -x = 0$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x + -x = 0) \to \varphi_{125}$\lbl{A1}}
+\BIC{$\varphi_{125}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$x + -x = 0 \to \varphi_{82}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$a + (x + -x + -b) = a + (x + -x + -b)$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{125}$}
+\BIC{$(x + -x = 0 \to \varphi_{82}) \to \varphi_{54}$}
+\BIC{$\varphi_{54}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{76}$\lbl{A2}}
+\BIC{$\varphi_{76}$}
+\AXC{$\varphi_{76} \to a - x + (x - b) = a + (x + (-x + -b)) \to \varphi_{83}$\lbl{A2}}
+\BIC{$a - x + (x - b) = a + (x + (-x + -b)) \to \varphi_{83}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{22}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{22})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{22})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{22}) \to \varphi_{98}$\lbl{A2}}
+\BIC{$\varphi_{98}$}
+\AXC{$\varphi_{98} \to x + (-x + -b) = x + -x + -b \to \varphi_{92}$\lbl{A2}}
+\BIC{$x + (-x + -b) = x + -x + -b \to \varphi_{92}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R}) \to x \in \mathbb{R} \to -x \in \mathbb{R}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to -x \in \mathbb{R}$}
+\AXC{$(x \in \mathbb{R} \to -x \in \mathbb{R}) \to \varphi_{90}$\lbl{A1}}
+\BIC{$\varphi_{90}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{90}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\forall x\,(\varphi_{18})$\lbl{(R2)}}
+\AXC{$\forall x\,(\varphi_{18}) \to \varphi_{18}$\lbl{A2}}
+\BIC{$\varphi_{18}$}
+\AXC{$\varphi_{18} \to \varphi_{50}$\lbl{A2}}
+\BIC{$\varphi_{50}$}
+\AXC{$\varphi_{50} \to \varphi_{68}$\lbl{A2}}
+\BIC{$\varphi_{68}$}
+\AXC{$\varphi_{68} \to (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{110}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{110}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}$}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{110}$}
+\BIC{$\varphi_{110}$}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}) \to \varphi_{55}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}) \to \varphi_{55}$}
+\BIC{$\varphi_{55}$}
+\AXC{$\varphi_{55} \to \varphi_{64} \to \varphi_{56}$\lbl{A1}}
+\BIC{$\varphi_{64} \to \varphi_{56}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{30}$\lbl{A2}}
+\BIC{$\forall y\,(x + -x + -b = y \to y = x + -x + -b)$}
+\AXC{$\forall y\,(x + -x + -b = y \to y = x + -x + -b) \to \varphi_{64}$\lbl{A2}}
+\BIC{$\varphi_{64}$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\varphi_{64} \to \varphi_{56}$}
+\BIC{$\varphi_{56}$}
+\AXC{$\varphi_{56} \to \varphi_{131}$\lbl{A1}}
+\BIC{$\varphi_{131}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$x + (-x + -b) = x + -x + -b \to \varphi_{92}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$a + (x + (-x + -b)) = a + (x + (-x + -b))$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{131}$}
+\BIC{$(x + (-x + -b) = x + -x + -b \to \varphi_{92}) \to a \in \mathbb{R} \to \varphi_{45}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{46}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{46})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{46})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{46}) \to \varphi_{99}$\lbl{A2}}
+\BIC{$\varphi_{99}$}
+\AXC{$\varphi_{99} \to -b + -x = -x + -b \to \varphi_{93}$\lbl{A2}}
+\BIC{$-b + -x = -x + -b \to \varphi_{93}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)$\lbl{(R3)}}
+\AXC{$\varphi_{87}$\lbl{A2}}
+\BIC{$\forall y\,(-b \in \mathbb{R} \to y \in \mathbb{R} \to -b + y = y + -b)$}
+\AXC{$\varphi_{102}$\lbl{A2}}
+\BIC{$-b \in \mathbb{R} \to -x \in \mathbb{R} \to -b + -x = -x + -b$}
+\AXC{$\varphi_{127}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}) \to \varphi_{103}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}) \to \varphi_{103}$}
+\BIC{$\varphi_{103}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$\varphi_{103}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b + -x = -x + -b$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b + -x = -x + -b) \to \varphi_{130}$\lbl{A1}}
+\BIC{$\varphi_{130}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$-b + -x = -x + -b \to \varphi_{93}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\BIC{$a + (x + (-b + -x)) = a + (x + (-b + -x))$}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\varphi_{130}$}
+\BIC{$(-b + -x = -x + -b \to \varphi_{93}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{16}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{16}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{23}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{23})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{23})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{23}) \to \varphi_{100}$\lbl{A2}}
+\BIC{$\varphi_{100}$}
+\AXC{$\varphi_{100} \to x + -b + -x = x + (-b + -x) \to \varphi_{94}$\lbl{A2}}
+\BIC{$x + -b + -x = x + (-b + -x) \to \varphi_{94}$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$\forall x\,(\varphi_{18})$\lbl{(R2)}}
+\AXC{$\forall x\,(\varphi_{18}) \to \varphi_{18}$\lbl{A2}}
+\BIC{$\varphi_{18}$}
+\AXC{$\varphi_{18} \to \varphi_{51}$\lbl{A2}}
+\BIC{$\varphi_{51}$}
+\AXC{$\varphi_{51} \to \varphi_{69}$\lbl{A2}}
+\BIC{$\varphi_{69}$}
+\AXC{$\varphi_{69} \to (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{111}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{111}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}$}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{111}$}
+\BIC{$\varphi_{111}$}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}) \to \varphi_{57}$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}) \to \varphi_{57}$}
+\BIC{$\varphi_{57}$}
+\AXC{$\varphi_{57} \to \varphi_{132}$\lbl{A1}}
+\BIC{$\varphi_{132}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$x + -b + -x = x + (-b + -x) \to \varphi_{94}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$a + (x + -b + -x) = a + (x + -b + -x)$}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$\varphi_{132}$}
+\BIC{$(x + -b + -x = x + (-b + -x) \to \varphi_{94}) \to a \in \mathbb{R} \to \varphi_{47}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{47}$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{60}$\lbl{A2}}
+\BIC{$\varphi_{60}$}
+\AXC{$\varphi_{60} \to a - x + (x - b) = a + (x - b + -x) \to \varphi_{72}$\lbl{A2}}
+\BIC{$a - x + (x - b) = a + (x - b + -x) \to \varphi_{72}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{48}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{48})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{48})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{48}) \to \varphi_{79}$\lbl{A2}}
+\BIC{$\varphi_{79}$}
+\AXC{$\varphi_{79} \to x - b = x + -b \to \varphi_{73}$\lbl{A2}}
+\BIC{$x - b = x + -b \to \varphi_{73}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y)$\lbl{Def$-$}}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y) \to \forall y\,(x - y = x + -y)$\lbl{A2}}
+\BIC{$\forall y\,(x - y = x + -y)$}
+\end{ptree}
+\noindent$\Pi_{51}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$\forall y\,(x - y = x + -y)$}
+\AXC{$\forall y\,(x - y = x + -y) \to x - b = x + -b$\lbl{A2}}
+\BIC{$x - b = x + -b$}
+\AXC{$x - b = x + -b \to \varphi_{124}$\lbl{A1}}
+\BIC{$\varphi_{124}$}
+\end{ptree}
+\noindent$\Pi_{52}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$x - b = x + -b \to \varphi_{73}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to a + (x - b + -x) = a + (x - b + -x)$\lbl{A2}}
+\BIC{$a + (x - b + -x) = a + (x - b + -x)$}
+\AXC{$\stackrel{\Pi_{51}}{\vdots}$}\noLine
+\UIC{$\varphi_{124}$}
+\BIC{$(x - b = x + -b \to \varphi_{73}) \to a \in \mathbb{R} \to \varphi_{34}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{34}$}
+\end{ptree}
+\noindent$\Pi_{53}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{54}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{53}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{61}$\lbl{A2}}
+\BIC{$\varphi_{61}$}
+\AXC{$\varphi_{61} \to a - x + (x - b) = a + (-x + (x - b)) \to \varphi_{58}$\lbl{A2}}
+\BIC{$a - x + (x - b) = a + (-x + (x - b)) \to \varphi_{58}$}
+\end{ptree}
+\noindent$\Pi_{55}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{5}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{5})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{5})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{5}) \to \varphi_{80}$\lbl{A2}}
+\BIC{$\varphi_{80}$}
+\AXC{$\varphi_{80} \to -x + (x - b) = x - b + -x \to \varphi_{66}$\lbl{A2}}
+\BIC{$-x + (x - b) = x - b + -x \to \varphi_{66}$}
+\end{ptree}
+\noindent$\Pi_{56}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{71}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$}
+\AXC{$\varphi_{62}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to b \in \mathbb{R} \to x - b \in \mathbb{R}$}
+\AXC{$\varphi_{113}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{91}$}
+\BIC{$\varphi_{91}$}
+\end{ptree}
+\noindent$\Pi_{57}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to b \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{56}}{\vdots}$}\noLine
+\UIC{$\varphi_{91}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x - b \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{58}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)$\lbl{(R3)}}
+\AXC{$\varphi_{88}$\lbl{A2}}
+\BIC{$\forall y\,(-x \in \mathbb{R} \to y \in \mathbb{R} \to -x + y = y + -x)$}
+\AXC{$\varphi_{104}$\lbl{A2}}
+\BIC{$-x \in \mathbb{R} \to x - b \in \mathbb{R} \to -x + (x - b) = x - b + -x$}
+\AXC{$\varphi_{128}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}) \to \varphi_{105}$}
+\end{ptree}
+\noindent$\Pi_{59}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{58}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}) \to \varphi_{105}$}
+\BIC{$\varphi_{105}$}
+\end{ptree}
+\noindent$\Pi_{60}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$a + (-x + (x - b)) = a + (-x + (x - b))$}
+\AXC{$\stackrel{\Pi_{57}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x - b \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{59}}{\vdots}$}\noLine
+\UIC{$\varphi_{105}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x + (x - b) = x - b + -x$}
+\AXC{$\varphi_{133}$\lbl{A1}}
+\BIC{$\varphi_{126}$}
+\BIC{$(-x + (x - b) = x - b + -x \to \varphi_{66}) \to a \in \mathbb{R} \to \varphi_{24}$}
+\end{ptree}
+\noindent$\Pi_{61}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{55}}{\vdots}$}\noLine
+\UIC{$-x + (x - b) = x - b + -x \to \varphi_{66}$}
+\AXC{$\stackrel{\Pi_{60}}{\vdots}$}\noLine
+\UIC{$(-x + (x - b) = x - b + -x \to \varphi_{66}) \to a \in \mathbb{R} \to \varphi_{24}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{24}$}
+\end{ptree}
+\noindent$\Pi_{62}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{63}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{62}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{63}$\lbl{A2}}
+\BIC{$\varphi_{63}$}
+\AXC{$\varphi_{63} \to a - x + (x - b) = a + -x + (x - b) \to \varphi_{59}$\lbl{A2}}
+\BIC{$a - x + (x - b) = a + -x + (x - b) \to \varphi_{59}$}
+\end{ptree}
+\noindent$\Pi_{64}$:
+\begin{ptree}
+\AXC{$\forall x\,(\varphi_{18})$\lbl{(R2)}}
+\AXC{$\forall x\,(\varphi_{18}) \to \varphi_{19}$\lbl{A2}}
+\BIC{$\varphi_{19}$}
+\AXC{$\varphi_{19} \to \varphi_{52}$\lbl{A2}}
+\BIC{$\varphi_{52}$}
+\AXC{$\varphi_{52} \to a \in \mathbb{R} \to \varphi_{49}$\lbl{A2}}
+\BIC{$a \in \mathbb{R} \to \varphi_{49}$}
+\AXC{$\varphi_{134}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a \in \mathbb{R}) \to \varphi_{112}$}
+\end{ptree}
+\noindent$\Pi_{65}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}$}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{64}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a \in \mathbb{R}) \to \varphi_{112}$}
+\BIC{$\varphi_{112}$}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x - b \in \mathbb{R}) \to a \in \mathbb{R} \to \varphi_{25}$}
+\end{ptree}
+\noindent$\Pi_{66}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{57}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x - b \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{65}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x - b \in \mathbb{R}) \to a \in \mathbb{R} \to \varphi_{25}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{25}$}
+\end{ptree}
+\noindent$\Pi_{67}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{6}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{6})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{6})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{6}) \to \varphi_{43}$\lbl{A2}}
+\BIC{$\varphi_{43}$}
+\AXC{$\varphi_{43} \to a - x = a + -x \to \varphi_{35}$\lbl{A2}}
+\BIC{$a - x = a + -x \to \varphi_{35}$}
+\end{ptree}
+\noindent$\Pi_{68}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y)$\lbl{Def$-$}}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y) \to \forall y\,(a - y = a + -y)$\lbl{A2}}
+\BIC{$\forall y\,(a - y = a + -y)$}
+\end{ptree}
+\noindent$\Pi_{69}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{68}}{\vdots}$}\noLine
+\UIC{$\forall y\,(a - y = a + -y)$}
+\AXC{$\forall y\,(a - y = a + -y) \to a - x = a + -x$\lbl{A2}}
+\BIC{$a - x = a + -x$}
+\AXC{$a - x = a + -x \to \varphi_{116}$\lbl{A1}}
+\BIC{$\varphi_{116}$}
+\end{ptree}
+\noindent$\Pi_{70}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{67}}{\vdots}$}\noLine
+\UIC{$a - x = a + -x \to \varphi_{35}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to a - x + (x - b) = a - x + (x - b)$\lbl{A2}}
+\BIC{$a - x + (x - b) = a - x + (x - b)$}
+\AXC{$\stackrel{\Pi_{69}}{\vdots}$}\noLine
+\UIC{$\varphi_{116}$}
+\BIC{$(a - x = a + -x \to \varphi_{35}) \to \varphi_{37}$}
+\BIC{$\varphi_{37}$}
+\end{ptree}
+\noindent$\Pi_{71}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{63}}{\vdots}$}\noLine
+\UIC{$a - x + (x - b) = a + -x + (x - b) \to \varphi_{59}$}
+\AXC{$\stackrel{\Pi_{66}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{25}$}
+\AXC{$\stackrel{\Pi_{70}}{\vdots}$}\noLine
+\UIC{$\varphi_{37}$}
+\AXC{$\varphi_{37} \to (a \in \mathbb{R} \to \varphi_{25}) \to \varphi_{114}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to \varphi_{25}) \to \varphi_{114}$}
+\BIC{$\varphi_{114}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{72}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{54}}{\vdots}$}\noLine
+\UIC{$a - x + (x - b) = a + (-x + (x - b)) \to \varphi_{58}$}
+\AXC{$\stackrel{\Pi_{61}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{24}$}
+\AXC{$\stackrel{\Pi_{71}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{14}$}
+\AXC{$(a \in \mathbb{R} \to \varphi_{14}) \to \varphi_{129}$\lbl{A1}}
+\BIC{$\varphi_{129}$}
+\BIC{$(a - x + (x - b) = a + (-x + (x - b)) \to \varphi_{58}) \to \varphi_{38}$}
+\BIC{$\varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{73}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$a - x + (x - b) = a + (x - b + -x) \to \varphi_{72}$}
+\AXC{$\stackrel{\Pi_{52}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{34}$}
+\AXC{$\stackrel{\Pi_{72}}{\vdots}$}\noLine
+\UIC{$\varphi_{38}$}
+\AXC{$\varphi_{38} \to (a \in \mathbb{R} \to \varphi_{34}) \to \varphi_{117}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to \varphi_{34}) \to \varphi_{117}$}
+\BIC{$\varphi_{117}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{26}$}
+\end{ptree}
+\noindent$\Pi_{74}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{47}$}
+\AXC{$\stackrel{\Pi_{73}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{26}$}
+\AXC{$(a \in \mathbb{R} \to \varphi_{26}) \to (a \in \mathbb{R} \to \varphi_{47}) \to \varphi_{118}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to \varphi_{47}) \to \varphi_{118}$}
+\BIC{$\varphi_{118}$}
+\end{ptree}
+\noindent$\Pi_{75}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{78}$\lbl{A2}}
+\BIC{$\varphi_{78}$}
+\AXC{$\varphi_{78} \to a - x + (x - b) = a + (x + -b + -x) \to \varphi_{85}$\lbl{A2}}
+\BIC{$a - x + (x - b) = a + (x + -b + -x) \to \varphi_{85}$}
+\AXC{$\stackrel{\Pi_{74}}{\vdots}$}\noLine
+\UIC{$\varphi_{118}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{27}$}
+\end{ptree}
+\noindent$\Pi_{76}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{16}$}
+\AXC{$\stackrel{\Pi_{75}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{27}$}
+\AXC{$(a \in \mathbb{R} \to \varphi_{27}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{16}) \to \varphi_{119}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{16}) \to \varphi_{119}$}
+\BIC{$\varphi_{119}$}
+\end{ptree}
+\noindent$\Pi_{77}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{77}$\lbl{A2}}
+\BIC{$\varphi_{77}$}
+\AXC{$\varphi_{77} \to a - x + (x - b) = a + (x + (-b + -x)) \to \varphi_{84}$\lbl{A2}}
+\BIC{$a - x + (x - b) = a + (x + (-b + -x)) \to \varphi_{84}$}
+\AXC{$\stackrel{\Pi_{76}}{\vdots}$}\noLine
+\UIC{$\varphi_{119}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{28}$}
+\end{ptree}
+\noindent$\Pi_{78}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{45}$}
+\AXC{$\stackrel{\Pi_{77}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{28}$}
+\AXC{$(a \in \mathbb{R} \to \varphi_{28}) \to (a \in \mathbb{R} \to \varphi_{45}) \to \varphi_{120}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to \varphi_{45}) \to \varphi_{120}$}
+\BIC{$\varphi_{120}$}
+\end{ptree}
+\noindent$\Pi_{79}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{54}$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$a - x + (x - b) = a + (x + (-x + -b)) \to \varphi_{83}$}
+\AXC{$\stackrel{\Pi_{78}}{\vdots}$}\noLine
+\UIC{$\varphi_{120}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{29}$}
+\AXC{$\varphi_{135}$\lbl{A1}}
+\BIC{$\varphi_{54} \to (a - x + (x - b) = a + (x + -x + -b) \to \varphi_{44}) \to \varphi_{32}$}
+\BIC{$(a - x + (x - b) = a + (x + -x + -b) \to \varphi_{44}) \to \varphi_{32}$}
+\end{ptree}
+\noindent$\Pi_{80}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$a - x + (x - b) = a + (x + -x + -b) \to \varphi_{44}$}
+\AXC{$\stackrel{\Pi_{79}}{\vdots}$}\noLine
+\UIC{$(a - x + (x - b) = a + (x + -x + -b) \to \varphi_{44}) \to \varphi_{32}$}
+\BIC{$\varphi_{32}$}
+\end{ptree}
+\noindent$\Pi_{81}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{31}$}
+\AXC{$\stackrel{\Pi_{80}}{\vdots}$}\noLine
+\UIC{$\varphi_{32}$}
+\AXC{$\varphi_{32} \to \varphi_{31} \to (a - x + (x - b) = a + (0 + -b) \to \varphi_{20}) \to \varphi_{33}$\lbl{A1}}
+\BIC{$\varphi_{31} \to (a - x + (x - b) = a + (0 + -b) \to \varphi_{20}) \to \varphi_{33}$}
+\BIC{$(a - x + (x - b) = a + (0 + -b) \to \varphi_{20}) \to \varphi_{33}$}
+\end{ptree}
+\noindent$\Pi_{82}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{41}$\lbl{A2}}
+\BIC{$\varphi_{41}$}
+\AXC{$\varphi_{41} \to a - x + (x - b) = a + (0 + -b) \to \varphi_{20}$\lbl{A2}}
+\BIC{$a - x + (x - b) = a + (0 + -b) \to \varphi_{20}$}
+\AXC{$\stackrel{\Pi_{81}}{\vdots}$}\noLine
+\UIC{$(a - x + (x - b) = a + (0 + -b) \to \varphi_{20}) \to \varphi_{33}$}
+\BIC{$\varphi_{33}$}
+\end{ptree}
+\noindent$\Pi_{83}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{39}$\lbl{A2}}
+\BIC{$\varphi_{39}$}
+\AXC{$\varphi_{39} \to \varphi_{74}$\lbl{A2}}
+\BIC{$\varphi_{74}$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$-b + 0 = -b \to \varphi_{13}$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{106}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a + (-b + 0) = a + -b$}
+\AXC{$\stackrel{\Pi_{82}}{\vdots}$}\noLine
+\UIC{$\varphi_{33}$}
+\AXC{$\varphi_{33} \to \varphi_{122}$\lbl{A1}}
+\BIC{$\varphi_{122}$}
+\BIC{$\varphi_{108}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + -b$}
+\end{ptree}
+\noindent$\Pi_{84}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$a + -b = a - b$}
+\AXC{$\stackrel{\Pi_{83}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + -b$}
+\AXC{$\varphi_{121}$\lbl{A1}}
+\BIC{$\varphi_{107}$}
+\BIC{$\varphi_{36} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a - b$}
+\end{ptree}
+\noindent$\Pi_{85}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{17}$\lbl{A2}}
+\BIC{$\varphi_{17}$}
+\AXC{$\varphi_{17} \to \varphi_{36}$\lbl{A2}}
+\BIC{$\varphi_{36}$}
+\AXC{$\stackrel{\Pi_{84}}{\vdots}$}\noLine
+\UIC{$\varphi_{36} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a - b$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a - b$}
+\AXC{$\varphi_{109}$\lbl{A1}}
+\BIC{$\varphi_{96}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall y\,(a - x + (x - b) = y \to y = a - x + (x - b))$}
+\AXC{$\varphi_{70}$\lbl{A2}}
+\BIC{$a - x + (x - b) = a - b \to a - b = a - x + (x - b)$}
+\AXC{$\stackrel{\Pi_{85}}{\vdots}$}\noLine
+\UIC{$\varphi_{96}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - b = a - x + (x - b)$}
+\UIC{$\varphi_{15}$}
+\UIC{$\forall b\,(\varphi_{15})$}
+\UIC{$\forall a\,\forall b\,(\varphi_{15})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall y\,\forall z\,(a - x + (x - b) = y \to y = z \to a - x + (x - b) = z)$
+\item $\varphi_{2} :\equiv \forall x\,(x = x) \to a + (-x + (x - b)) = a + (-x + (x - b))$
+\item $\varphi_{3} :\equiv \forall w\,(z = w \to a + (-b + 0) = a + z \to a + (-b + 0) = a + w)$
+\item $\varphi_{4} :\equiv \forall w\,(z = w \to a + (0 + -b) = a + z \to a + (0 + -b) = a + w)$
+\item $\varphi_{5} :\equiv a + (-x + (x - b)) = a + z \to a + (-x + (x - b)) = a + w$
+\item $\varphi_{6} :\equiv a - x + (x - b) = z + (x - b) \to a - x + (x - b) = w + (x - b)$
+\item $\varphi_{7} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(a - x + (x - b) = y \to y = a - x + (x - b))$
+\item $\varphi_{8} :\equiv \forall x\,(x = x) \to a + (x + -x + -b) = a + (x + -x + -b)$
+\item $\varphi_{9} :\equiv \forall x\,(x = x) \to a + (x + (-x + -b)) = a + (x + (-x + -b))$
+\item $\varphi_{10} :\equiv \forall x\,(x = x) \to a + (x + (-b + -x)) = a + (x + (-b + -x))$
+\item $\varphi_{11} :\equiv \forall x\,(x = x) \to a + (x + -b + -x) = a + (x + -b + -x)$
+\item $\varphi_{12} :\equiv \forall y\,(a - b = y \to y = a - b) \to a - b = a + -b \to a + -b = a - b$
+\item $\varphi_{13} :\equiv a + (-b + 0) = a + (-b + 0) \to a + (-b + 0) = a + -b$
+\item $\varphi_{14} :\equiv b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + (-x + (x - b))$
+\item $\varphi_{15} :\equiv \forall x\,(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - b = a - x + (x - b))$
+\item $\varphi_{16} :\equiv x \in \mathbb{R} \to a + (x + (-b + -x)) = a + (x + (-x + -b))$
+\item $\varphi_{17} :\equiv \forall z\,(a - x + (x - b) = a + -b \to a + -b = z \to a - x + (x - b) = z)$
+\item $\varphi_{18} :\equiv \forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + y + z = x + (y + z))$
+\item $\varphi_{19} :\equiv \forall y\,\forall z\,(a \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to a + y + z = a + (y + z))$
+\item $\varphi_{20} :\equiv a + (0 + -b) = a + (-b + 0) \to a - x + (x - b) = a + (-b + 0)$
+\item $\varphi_{21} :\equiv a + (0 + -b) = a + (0 + -b) \to a + (0 + -b) = a + (-b + 0)$
+\item $\varphi_{22} :\equiv a + (x + (-x + -b)) = a + z \to a + (x + (-x + -b)) = a + w$
+\item $\varphi_{23} :\equiv a + (x + -b + -x) = a + z \to a + (x + -b + -x) = a + w$
+\item $\varphi_{24} :\equiv b \in \mathbb{R} \to x \in \mathbb{R} \to a + (-x + (x - b)) = a + (x - b + -x)$
+\item $\varphi_{25} :\equiv b \in \mathbb{R} \to x \in \mathbb{R} \to a + -x + (x - b) = a + (-x + (x - b))$
+\item $\varphi_{26} :\equiv b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + (x + -b + -x)$
+\item $\varphi_{27} :\equiv b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + (x + (-b + -x))$
+\item $\varphi_{28} :\equiv b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + (x + (-x + -b))$
+\item $\varphi_{29} :\equiv b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + (x + -x + -b)$
+\item $\varphi_{30} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(x + -x + -b = y \to y = x + -x + -b)$
+\item $\varphi_{31} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a + (0 + -b) = a + (-b + 0)$
+\item $\varphi_{32} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + (0 + -b)$
+\item $\varphi_{33} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + (-b + 0)$
+\item $\varphi_{34} :\equiv b \in \mathbb{R} \to x \in \mathbb{R} \to a + (x - b + -x) = a + (x + -b + -x)$
+\item $\varphi_{35} :\equiv a - x + (x - b) = a - x + (x - b) \to a - x + (x - b) = a + -x + (x - b)$
+\item $\varphi_{36} :\equiv a - x + (x - b) = a + -b \to a + -b = a - b \to a - x + (x - b) = a - b$
+\item $\varphi_{37} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + -x + (x - b)$
+\item $\varphi_{38} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + (x - b + -x)$
+\item $\varphi_{39} :\equiv \forall z\,(a - x + (x - b) = a + (-b + 0) \to a + (-b + 0) = z \to a - x + (x - b) = z)$
+\item $\varphi_{40} :\equiv \forall w\,(-b + 0 = w \to a + (-b + 0) = a + (-b + 0) \to a + (-b + 0) = a + w)$
+\item $\varphi_{41} :\equiv \forall z\,(a - x + (x - b) = a + (0 + -b) \to a + (0 + -b) = z \to a - x + (x - b) = z)$
+\item $\varphi_{42} :\equiv \forall w\,(0 + -b = w \to a + (0 + -b) = a + (0 + -b) \to a + (0 + -b) = a + w)$
+\item $\varphi_{43} :\equiv \forall w\,(a - x = w \to a - x + (x - b) = a - x + (x - b) \to a - x + (x - b) = w + (x - b))$
+\item $\varphi_{44} :\equiv a + (x + -x + -b) = a + (0 + -b) \to a - x + (x - b) = a + (0 + -b)$
+\item $\varphi_{45} :\equiv b \in \mathbb{R} \to x \in \mathbb{R} \to a + (x + (-x + -b)) = a + (x + -x + -b)$
+\item $\varphi_{46} :\equiv a + (x + (-b + -x)) = a + (x + z) \to a + (x + (-b + -x)) = a + (x + w)$
+\item $\varphi_{47} :\equiv b \in \mathbb{R} \to x \in \mathbb{R} \to a + (x + -b + -x) = a + (x + (-b + -x))$
+\item $\varphi_{48} :\equiv a + (x - b + -x) = a + (z + -x) \to a + (x - b + -x) = a + (w + -x)$
+\item $\varphi_{49} :\equiv -x \in \mathbb{R} \to x - b \in \mathbb{R} \to a + -x + (x - b) = a + (-x + (x - b))$
+\item $\varphi_{50} :\equiv \forall z\,(x \in \mathbb{R} \to -x \in \mathbb{R} \to z \in \mathbb{R} \to x + -x + z = x + (-x + z))$
+\item $\varphi_{51} :\equiv \forall z\,(x \in \mathbb{R} \to -b \in \mathbb{R} \to z \in \mathbb{R} \to x + -b + z = x + (-b + z))$
+\item $\varphi_{52} :\equiv \forall z\,(a \in \mathbb{R} \to -x \in \mathbb{R} \to z \in \mathbb{R} \to a + -x + z = a + (-x + z))$
+\item $\varphi_{53} :\equiv a - b = a + -b \to (a - b = a + -b \to a + -b = a - b) \to a + -b = a - b$
+\item $\varphi_{54} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a + (x + -x + -b) = a + (0 + -b)$
+\item $\varphi_{55} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x + -x + -b = x + (-x + -b)$
+\item $\varphi_{56} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x + (-x + -b) = x + -x + -b$
+\item $\varphi_{57} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x + -b + -x = x + (-b + -x)$
+\item $\varphi_{58} :\equiv a + (-x + (x - b)) = a + (x - b + -x) \to a - x + (x - b) = a + (x - b + -x)$
+\item $\varphi_{59} :\equiv a + -x + (x - b) = a + (-x + (x - b)) \to a - x + (x - b) = a + (-x + (x - b))$
+\item $\varphi_{60} :\equiv \forall z\,(a - x + (x - b) = a + (x - b + -x) \to a + (x - b + -x) = z \to a - x + (x - b) = z)$
+\item $\varphi_{61} :\equiv \forall z\,(a - x + (x - b) = a + (-x + (x - b)) \to a + (-x + (x - b)) = z \to a - x + (x - b) = z)$
+\item $\varphi_{62} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to x \in \mathbb{R} \to b \in \mathbb{R} \to x - b \in \mathbb{R}$
+\item $\varphi_{63} :\equiv \forall z\,(a - x + (x - b) = a + -x + (x - b) \to a + -x + (x - b) = z \to a - x + (x - b) = z)$
+\item $\varphi_{64} :\equiv x + -x + -b = x + (-x + -b) \to x + (-x + -b) = x + -x + -b$
+\item $\varphi_{65} :\equiv a + (x + -x + -b) = a + (z + -b) \to a + (x + -x + -b) = a + (w + -b)$
+\item $\varphi_{66} :\equiv a + (-x + (x - b)) = a + (-x + (x - b)) \to a + (-x + (x - b)) = a + (x - b + -x)$
+\item $\varphi_{67} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x) \to \forall y\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to 0 + y = y + 0)$
+\item $\varphi_{68} :\equiv x \in \mathbb{R} \to -x \in \mathbb{R} \to -b \in \mathbb{R} \to x + -x + -b = x + (-x + -b)$
+\item $\varphi_{69} :\equiv x \in \mathbb{R} \to -b \in \mathbb{R} \to -x \in \mathbb{R} \to x + -b + -x = x + (-b + -x)$
+\item $\varphi_{70} :\equiv \forall y\,(a - x + (x - b) = y \to y = a - x + (x - b)) \to a - x + (x - b) = a - b \to a - b = a - x + (x - b)$
+\item $\varphi_{71} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$
+\item $\varphi_{72} :\equiv a + (x - b + -x) = a + (x + -b + -x) \to a - x + (x - b) = a + (x + -b + -x)$
+\item $\varphi_{73} :\equiv a + (x - b + -x) = a + (x - b + -x) \to a + (x - b + -x) = a + (x + -b + -x)$
+\item $\varphi_{74} :\equiv a - x + (x - b) = a + (-b + 0) \to a + (-b + 0) = a + -b \to a - x + (x - b) = a + -b$
+\item $\varphi_{75} :\equiv \forall z\,(a - x + (x - b) = a + (x + -x + -b) \to a + (x + -x + -b) = z \to a - x + (x - b) = z)$
+\item $\varphi_{76} :\equiv \forall z\,(a - x + (x - b) = a + (x + (-x + -b)) \to a + (x + (-x + -b)) = z \to a - x + (x - b) = z)$
+\item $\varphi_{77} :\equiv \forall z\,(a - x + (x - b) = a + (x + (-b + -x)) \to a + (x + (-b + -x)) = z \to a - x + (x - b) = z)$
+\item $\varphi_{78} :\equiv \forall z\,(a - x + (x - b) = a + (x + -b + -x) \to a + (x + -b + -x) = z \to a - x + (x - b) = z)$
+\item $\varphi_{79} :\equiv \forall w\,(x - b = w \to a + (x - b + -x) = a + (x - b + -x) \to a + (x - b + -x) = a + (w + -x))$
+\item $\varphi_{80} :\equiv \forall w\,(-x + (x - b) = w \to a + (-x + (x - b)) = a + (-x + (x - b)) \to a + (-x + (x - b)) = a + w)$
+\item $\varphi_{81} :\equiv \forall y\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to 0 + y = y + 0) \to 0 \in \mathbb{R} \to -b \in \mathbb{R} \to 0 + -b = -b + 0$
+\item $\varphi_{82} :\equiv a + (x + -x + -b) = a + (x + -x + -b) \to a + (x + -x + -b) = a + (0 + -b)$
+\item $\varphi_{83} :\equiv a + (x + (-x + -b)) = a + (x + -x + -b) \to a - x + (x - b) = a + (x + -x + -b)$
+\item $\varphi_{84} :\equiv a + (x + (-b + -x)) = a + (x + (-x + -b)) \to a - x + (x - b) = a + (x + (-x + -b))$
+\item $\varphi_{85} :\equiv a + (x + -b + -x) = a + (x + (-b + -x)) \to a - x + (x - b) = a + (x + (-b + -x))$
+\item $\varphi_{86} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x + -x = 0$
+\item $\varphi_{87} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x) \to \forall y\,(-b \in \mathbb{R} \to y \in \mathbb{R} \to -b + y = y + -b)$
+\item $\varphi_{88} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x) \to \forall y\,(-x \in \mathbb{R} \to y \in \mathbb{R} \to -x + y = y + -x)$
+\item $\varphi_{89} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to b \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}$
+\item $\varphi_{90} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}$
+\item $\varphi_{91} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to b \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x - b \in \mathbb{R}$
+\item $\varphi_{92} :\equiv a + (x + (-x + -b)) = a + (x + (-x + -b)) \to a + (x + (-x + -b)) = a + (x + -x + -b)$
+\item $\varphi_{93} :\equiv a + (x + (-b + -x)) = a + (x + (-b + -x)) \to a + (x + (-b + -x)) = a + (x + (-x + -b))$
+\item $\varphi_{94} :\equiv a + (x + -b + -x) = a + (x + -b + -x) \to a + (x + -b + -x) = a + (x + (-b + -x))$
+\item $\varphi_{95} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b + 0 = -b$
+\item $\varphi_{96} :\equiv (a - x + (x - b) = a - b \to a - b = a - x + (x - b)) \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - b = a - x + (x - b)$
+\item $\varphi_{97} :\equiv \forall w\,(x + -x = w \to a + (x + -x + -b) = a + (x + -x + -b) \to a + (x + -x + -b) = a + (w + -b))$
+\item $\varphi_{98} :\equiv \forall w\,(x + (-x + -b) = w \to a + (x + (-x + -b)) = a + (x + (-x + -b)) \to a + (x + (-x + -b)) = a + w)$
+\item $\varphi_{99} :\equiv \forall w\,(-b + -x = w \to a + (x + (-b + -x)) = a + (x + (-b + -x)) \to a + (x + (-b + -x)) = a + (x + w))$
+\item $\varphi_{100} :\equiv \forall w\,(x + -b + -x = w \to a + (x + -b + -x) = a + (x + -b + -x) \to a + (x + -b + -x) = a + w)$
+\item $\varphi_{101} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to 0 + -b = -b + 0$
+\item $\varphi_{102} :\equiv \forall y\,(-b \in \mathbb{R} \to y \in \mathbb{R} \to -b + y = y + -b) \to -b \in \mathbb{R} \to -x \in \mathbb{R} \to -b + -x = -x + -b$
+\item $\varphi_{103} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b + -x = -x + -b$
+\item $\varphi_{104} :\equiv \forall y\,(-x \in \mathbb{R} \to y \in \mathbb{R} \to -x + y = y + -x) \to -x \in \mathbb{R} \to x - b \in \mathbb{R} \to -x + (x - b) = x - b + -x$
+\item $\varphi_{105} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x - b \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x + (x - b) = x - b + -x$
+\item $\varphi_{106} :\equiv (-b + 0 = -b \to \varphi_{13}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a + (-b + 0) = a + -b$
+\item $\varphi_{107} :\equiv a + -b = a - b \to \varphi_{36} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a - b$
+\item $\varphi_{108} :\equiv \varphi_{74} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + -b$
+\item $\varphi_{109} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a - b) \to \varphi_{96}$
+\item $\varphi_{110} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}) \to \varphi_{55}$
+\item $\varphi_{111} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}) \to \varphi_{57}$
+\item $\varphi_{112} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x - b \in \mathbb{R}) \to a \in \mathbb{R} \to \varphi_{25}$
+\item $\varphi_{113} :\equiv (x \in \mathbb{R} \to b \in \mathbb{R} \to x - b \in \mathbb{R}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{91}$
+\item $\varphi_{114} :\equiv (a - x + (x - b) = a + -x + (x - b) \to \varphi_{59}) \to a \in \mathbb{R} \to \varphi_{14}$
+\item $\varphi_{115} :\equiv a + (0 + -b) = a + (0 + -b) \to (0 + -b = -b + 0 \to \varphi_{21}) \to \varphi_{31}$
+\item $\varphi_{116} :\equiv a - x + (x - b) = a - x + (x - b) \to (a - x = a + -x \to \varphi_{35}) \to \varphi_{37}$
+\item $\varphi_{117} :\equiv (a - x + (x - b) = a + (x - b + -x) \to \varphi_{72}) \to a \in \mathbb{R} \to \varphi_{26}$
+\item $\varphi_{118} :\equiv (a - x + (x - b) = a + (x + -b + -x) \to \varphi_{85}) \to a \in \mathbb{R} \to \varphi_{27}$
+\item $\varphi_{119} :\equiv (a - x + (x - b) = a + (x + (-b + -x)) \to \varphi_{84}) \to a \in \mathbb{R} \to \varphi_{28}$
+\item $\varphi_{120} :\equiv (a - x + (x - b) = a + (x + (-x + -b)) \to \varphi_{83}) \to a \in \mathbb{R} \to \varphi_{29}$
+\item $\varphi_{121} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - x + (x - b) = a + -b) \to \varphi_{107}$
+\item $\varphi_{122} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a + (-b + 0) = a + -b) \to \varphi_{108}$
+\item $\varphi_{123} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b + 0 = -b) \to a + (-b + 0) = a + (-b + 0) \to \varphi_{106}$
+\item $\varphi_{124} :\equiv a + (x - b + -x) = a + (x - b + -x) \to (x - b = x + -b \to \varphi_{73}) \to a \in \mathbb{R} \to \varphi_{34}$
+\item $\varphi_{125} :\equiv a + (x + -x + -b) = a + (x + -x + -b) \to (x + -x = 0 \to \varphi_{82}) \to \varphi_{54}$
+\item $\varphi_{126} :\equiv a + (-x + (x - b)) = a + (-x + (x - b)) \to (-x + (x - b) = x - b + -x \to \varphi_{66}) \to a \in \mathbb{R} \to \varphi_{24}$
+\item $\varphi_{127} :\equiv (-b \in \mathbb{R} \to -x \in \mathbb{R} \to -b + -x = -x + -b) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -b \in \mathbb{R}) \to \varphi_{103}$
+\item $\varphi_{128} :\equiv (-x \in \mathbb{R} \to x - b \in \mathbb{R} \to -x + (x - b) = x - b + -x) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x \in \mathbb{R}) \to \varphi_{105}$
+\item $\varphi_{129} :\equiv (a \in \mathbb{R} \to \varphi_{24}) \to (a - x + (x - b) = a + (-x + (x - b)) \to \varphi_{58}) \to \varphi_{38}$
+\item $\varphi_{130} :\equiv a + (x + (-b + -x)) = a + (x + (-b + -x)) \to (-b + -x = -x + -b \to \varphi_{93}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{16}$
+\item $\varphi_{131} :\equiv a + (x + (-x + -b)) = a + (x + (-x + -b)) \to (x + (-x + -b) = x + -x + -b \to \varphi_{92}) \to a \in \mathbb{R} \to \varphi_{45}$
+\item $\varphi_{132} :\equiv a + (x + -b + -x) = a + (x + -b + -x) \to (x + -b + -x = x + (-b + -x) \to \varphi_{94}) \to a \in \mathbb{R} \to \varphi_{47}$
+\item $\varphi_{133} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to -x + (x - b) = x - b + -x) \to \varphi_{126}$
+\item $\varphi_{134} :\equiv (a \in \mathbb{R} \to \varphi_{49}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a \in \mathbb{R}) \to \varphi_{112}$
+\item $\varphi_{135} :\equiv (a \in \mathbb{R} \to \varphi_{29}) \to \varphi_{54} \to (a - x + (x - b) = a + (x + -x + -b) \to \varphi_{44}) \to \varphi_{32}$
+\end{abbrevlist}
+\end{fullproof}

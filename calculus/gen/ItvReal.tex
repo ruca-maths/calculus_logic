@@ -1,0 +1,38 @@
+% 自動生成 (prover/build.js): ItvReal  ノード数 16
+\begin{fullproof}{[I5]}{$\mathrm{Itv}(\mathbb{R})$}{16}\phantomsection\label{tree:ItvReal}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\varphi_{2}$\lbl{DefItv}}
+\AXC{$\varphi_{2} \to (\mathrm{Itv}(\mathbb{R}) \leftrightarrow \mathbb{R} \subseteq \mathbb{R} \land \forall x\,\forall y\,(\varphi_{1}))$\lbl{A2}}
+\BIC{$\mathrm{Itv}(\mathbb{R}) \leftrightarrow \mathbb{R} \subseteq \mathbb{R} \land \forall x\,\forall y\,(\varphi_{1})$}
+\AXC{$\varphi_{4}$\lbl{A1}}
+\BIC{$\mathbb{R} \subseteq \mathbb{R} \to \forall x\,\forall y\,(\varphi_{1}) \to \mathrm{Itv}(\mathbb{R})$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall A\,(A \subseteq A)$\lbl{[E43]}}
+\AXC{$\forall A\,(A \subseteq A) \to \mathbb{R} \subseteq \mathbb{R}$\lbl{A2}}
+\BIC{$\mathbb{R} \subseteq \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\mathbb{R} \subseteq \mathbb{R} \to \forall x\,\forall y\,(\varphi_{1}) \to \mathrm{Itv}(\mathbb{R})$}
+\BIC{$\forall x\,\forall y\,(\varphi_{1}) \to \mathrm{Itv}(\mathbb{R})$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to z \in \mathbb{R} \to y \in \mathbb{R} \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\varphi_{3}$\lbl{A1}}
+\BIC{$x \in \mathbb{R} \to z \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to y \leq z \to y \in \mathbb{R}$}
+\UIC{$\varphi_{1}$}
+\UIC{$\forall y\,(\varphi_{1})$}
+\UIC{$\forall x\,\forall y\,(\varphi_{1})$}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(\varphi_{1}) \to \mathrm{Itv}(\mathbb{R})$}
+\BIC{$\mathrm{Itv}(\mathbb{R})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall z\,(x \in \mathbb{R} \to z \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to y \leq z \to y \in \mathbb{R})$
+\item $\varphi_{2} :\equiv \forall I\,(\mathrm{Itv}(I) \leftrightarrow I \subseteq \mathbb{R} \land \forall x\,\forall y\,\forall z\,(x \in I \to z \in I \to y \in \mathbb{R} \to x \leq y \to y \leq z \to y \in I))$
+\item $\varphi_{3} :\equiv (x \in \mathbb{R} \to z \in \mathbb{R} \to y \in \mathbb{R} \to y \in \mathbb{R}) \to x \in \mathbb{R} \to z \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to y \leq z \to y \in \mathbb{R}$
+\item $\varphi_{4} :\equiv (\mathrm{Itv}(\mathbb{R}) \leftrightarrow \mathbb{R} \subseteq \mathbb{R} \land \forall x\,\forall y\,(\varphi_{1})) \to \mathbb{R} \subseteq \mathbb{R} \to \forall x\,\forall y\,(\varphi_{1}) \to \mathrm{Itv}(\mathbb{R})$
+\end{abbrevlist}
+\end{fullproof}

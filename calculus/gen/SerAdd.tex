@@ -1,0 +1,378 @@
+% 自動生成 (prover/build.js): SerAdd  ノード数 155
+\begin{fullproof}{定理4.4(和)}{$\forall a\,\forall b\,\forall s\,\forall t\,(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to \mathrm{Conv}(\Sigma a \oplus b,s + t))$}{155}\phantomsection\label{tree:SerAdd}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\AXC{$\varphi_{13}$\lbl{定理2.1(1)}}
+\AXC{$\varphi_{13} \to \varphi_{17}$\lbl{A2}}
+\BIC{$\varphi_{17}$}
+\AXC{$\varphi_{17} \to \varphi_{15}$\lbl{A2}}
+\BIC{$\varphi_{15}$}
+\AXC{$\varphi_{15} \to \varphi_{20}$\lbl{A2}}
+\BIC{$\varphi_{20}$}
+\AXC{$\varphi_{20} \to \varphi_{16}$\lbl{A2}}
+\BIC{$\varphi_{16}$}
+\AXC{$\varphi_{16} \to \varphi_{1} \to \varphi_{48}$\lbl{A1}}
+\BIC{$\varphi_{1} \to \varphi_{48}$}
+\BIC{$\varphi_{48}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{21}$\lbl{A2}}
+\BIC{$\varphi_{21}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\forall y\,({\textstyle\sum_{k=1}^{n} a \oplus b(k)} = y \to y = {\textstyle\sum_{k=1}^{n} a \oplus b(k)})$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\forall y\,({\textstyle\sum_{k=1}^{n} a \oplus b(k)} = y \to y = {\textstyle\sum_{k=1}^{n} a \oplus b(k)})$}
+\AXC{$\forall y\,({\textstyle\sum_{k=1}^{n} a \oplus b(k)} = y \to y = {\textstyle\sum_{k=1}^{n} a \oplus b(k)}) \to \varphi_{41}$\lbl{A2}}
+\BIC{$\varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall b\,(\mathrm{Seq}(a) \to \varphi_{24})$\lbl{[Q1]}}
+\AXC{$\forall a\,\forall b\,(\mathrm{Seq}(a) \to \varphi_{24}) \to \forall b\,(\mathrm{Seq}(a) \to \varphi_{24})$\lbl{A2}}
+\BIC{$\forall b\,(\mathrm{Seq}(a) \to \varphi_{24})$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\forall b\,(\mathrm{Seq}(a) \to \varphi_{24})$}
+\AXC{$\forall b\,(\mathrm{Seq}(a) \to \varphi_{24}) \to \mathrm{Seq}(a) \to \varphi_{24}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to \varphi_{24}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{7}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(a) \to \varphi_{24}$}
+\AXC{$(\mathrm{Seq}(a) \to \varphi_{24}) \to (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{7}) \to \varphi_{59}$\lbl{A1}}
+\BIC{$(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{7}) \to \varphi_{59}$}
+\BIC{$\varphi_{59}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\varphi_{46}$\lbl{A2}}
+\AXC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{6}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{59}$}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{34}$}
+\AXC{$\varphi_{71}$\lbl{A1}}
+\BIC{$\varphi_{46} \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{33}$}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{33}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{33}$}
+\AXC{$(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{33}) \to \varphi_{57}$\lbl{A1}}
+\BIC{$\varphi_{57}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{41}$}
+\AXC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{8}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{57}$}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{28}$}
+\AXC{$\varphi_{67}$\lbl{A1}}
+\BIC{$\varphi_{41} \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{29}$}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{29}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{6}$\lbl{A1}}
+\AXC{$\forall a\,(\mathrm{Seq}(a) \to \varphi_{39})$\lbl{[S25]}}
+\AXC{$\forall a\,(\mathrm{Seq}(a) \to \varphi_{39}) \to \mathrm{Seq}(b) \to \varphi_{38}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(b) \to \varphi_{38}$}
+\AXC{$\varphi_{68}$\lbl{A1}}
+\BIC{$(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{6}) \to \mathrm{Seq}(a) \to \varphi_{52}$}
+\BIC{$\mathrm{Seq}(a) \to \varphi_{52}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{7}$\lbl{A1}}
+\AXC{$\forall a\,(\mathrm{Seq}(a) \to \varphi_{39})$\lbl{[S25]}}
+\AXC{$\forall a\,(\mathrm{Seq}(a) \to \varphi_{39}) \to \mathrm{Seq}(a) \to \varphi_{39}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to \varphi_{39}$}
+\AXC{$\varphi_{69}$\lbl{A1}}
+\BIC{$(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{7}) \to \mathrm{Seq}(a) \to \varphi_{53}$}
+\BIC{$\mathrm{Seq}(a) \to \varphi_{53}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall b\,(\mathrm{Seq}(a) \to \varphi_{25})$\lbl{[S2]}}
+\AXC{$\forall a\,\forall b\,(\mathrm{Seq}(a) \to \varphi_{25}) \to \varphi_{42}$\lbl{A2}}
+\BIC{$\varphi_{42}$}
+\AXC{$\varphi_{42} \to \mathrm{Seq}(\Sigma a) \to \mathrm{Seq}(\Sigma b) \to \varphi_{36}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(\Sigma a) \to \mathrm{Seq}(\Sigma b) \to \varphi_{36}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(\Sigma a) \to \mathrm{Seq}(\Sigma b) \to \varphi_{36}$}
+\AXC{$(\mathrm{Seq}(\Sigma a) \to \mathrm{Seq}(\Sigma b) \to \varphi_{36}) \to \varphi_{66}$\lbl{A1}}
+\BIC{$\varphi_{66}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(a) \to \varphi_{53}$}
+\AXC{$(\mathrm{Seq}(a) \to \varphi_{53}) \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{11}$\lbl{A1}}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{11}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{66}$}
+\BIC{$(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{10}) \to \mathrm{Seq}(a) \to \varphi_{51}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(a) \to \varphi_{52}$}
+\AXC{$(\mathrm{Seq}(a) \to \varphi_{52}) \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{10}$\lbl{A1}}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{10}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{10}) \to \mathrm{Seq}(a) \to \varphi_{51}$}
+\BIC{$\mathrm{Seq}(a) \to \varphi_{51}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\varphi_{47}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(a) \to \varphi_{51}$}
+\AXC{$\varphi_{65}$\lbl{A1}}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{37}$}
+\AXC{$\varphi_{72}$\lbl{A1}}
+\BIC{$\varphi_{47} \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{35}$}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{35}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{35}$}
+\AXC{$(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{35}) \to \varphi_{58}$\lbl{A1}}
+\BIC{$\varphi_{58}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{29}$}
+\AXC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{8}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{58}$}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{32}$}
+\AXC{$\varphi_{73}$\lbl{A1}}
+\BIC{$(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{29}) \to \varphi_{64}$}
+\BIC{$\varphi_{64}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\varphi_{63}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{21}$}
+\AXC{$\varphi_{21} \to \varphi_{44}$\lbl{A2}}
+\BIC{$\varphi_{44}$}
+\AXC{$\varphi_{44} \to \Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}} \to \varphi_{40}$\lbl{A2}}
+\BIC{$\Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}} \to \varphi_{40}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{64}$}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{26}$}
+\AXC{$\varphi_{62}$\lbl{A1}}
+\BIC{$\varphi_{3} \to n \in \mathbb{N} \to \Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a \oplus b(k)}$}
+\UIC{$\forall n\,(\varphi_{3} \to n \in \mathbb{N} \to \Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a \oplus b(k)})$}
+\AXC{$\varphi_{74}$\lbl{A1}}
+\BIC{$\varphi_{63} \to \varphi_{61}$}
+\BIC{$\varphi_{61}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall b\,(\mathrm{Seq}(a) \to \varphi_{25})$\lbl{[S2]}}
+\AXC{$\forall a\,\forall b\,(\mathrm{Seq}(a) \to \varphi_{25}) \to \forall b\,(\mathrm{Seq}(a) \to \varphi_{25})$\lbl{A2}}
+\BIC{$\forall b\,(\mathrm{Seq}(a) \to \varphi_{25})$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\forall b\,(\mathrm{Seq}(a) \to \varphi_{25})$}
+\AXC{$\forall b\,(\mathrm{Seq}(a) \to \varphi_{25}) \to \mathrm{Seq}(a) \to \varphi_{25}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to \varphi_{25}$}
+\AXC{$(\mathrm{Seq}(a) \to \varphi_{25}) \to (\mathrm{Seq}(a) \to \varphi_{5}) \to \varphi_{55}$\lbl{A1}}
+\BIC{$(\mathrm{Seq}(a) \to \varphi_{5}) \to \varphi_{55}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\forall a\,(\mathrm{Seq}(a) \to \varphi_{39})$\lbl{[S25]}}
+\AXC{$\forall a\,(\mathrm{Seq}(a) \to \varphi_{39}) \to \mathrm{Seq}(a \oplus b) \to \varphi_{49}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a \oplus b) \to \varphi_{49}$}
+\AXC{$(\mathrm{Seq}(a \oplus b) \to \varphi_{49}) \to (\mathrm{Seq}(a) \to \varphi_{12}) \to \varphi_{60}$\lbl{A1}}
+\BIC{$(\mathrm{Seq}(a) \to \varphi_{12}) \to \varphi_{60}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(a) \to \varphi_{4}$\lbl{A1}}
+\AXC{$\mathrm{Seq}(a) \to \varphi_{5}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Seq}(a) \to \varphi_{5}) \to \varphi_{55}$}
+\BIC{$\varphi_{55}$}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{31}$}
+\AXC{$\varphi_{56}$\lbl{A1}}
+\BIC{$\mathrm{Seq}(a) \to \varphi_{12}$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Seq}(a) \to \varphi_{12}) \to \varphi_{60}$}
+\BIC{$\varphi_{60}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\varphi_{22}$\lbl{[C13]}}
+\AXC{$\varphi_{22} \to \varphi_{23}$\lbl{A2}}
+\BIC{$\varphi_{23}$}
+\AXC{$\varphi_{23} \to \varphi_{27}$\lbl{A2}}
+\BIC{$\varphi_{27}$}
+\AXC{$\varphi_{27} \to \mathrm{Seq}(v_{877}) \to \varphi_{19}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(v_{877}) \to \varphi_{19}$}
+\UIC{$\forall v_{878}\,(\mathrm{Seq}(v_{877}) \to \varphi_{19})$}
+\UIC{$\forall v_{877}\,\forall v_{878}\,(\mathrm{Seq}(v_{877}) \to \varphi_{19})$}
+\UIC{$\forall v_{876}\,\forall v_{877}\,\forall v_{878}\,(\mathrm{Seq}(v_{877}) \to \varphi_{19})$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\forall v_{876}\,\forall v_{877}\,\forall v_{878}\,(\mathrm{Seq}(v_{877}) \to \varphi_{19})$}
+\AXC{$\forall v_{876}\,\forall v_{877}\,\forall v_{878}\,(\mathrm{Seq}(v_{877}) \to \varphi_{19}) \to \varphi_{43}$\lbl{A2}}
+\BIC{$\varphi_{43}$}
+\AXC{$\varphi_{43} \to \varphi_{50}$\lbl{A2}}
+\BIC{$\varphi_{50}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\varphi_{50}$}
+\AXC{$\varphi_{50} \to \mathrm{Seq}(\Sigma a \oplus b) \to \varphi_{45}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(\Sigma a \oplus b) \to \varphi_{45}$}
+\AXC{$(\mathrm{Seq}(\Sigma a \oplus b) \to \varphi_{45}) \to \varphi_{70}$\lbl{A1}}
+\BIC{$\varphi_{70}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\varphi_{3} \to \forall n\,(\varphi_{3})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{61}$}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{30}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{60}$}
+\AXC{$\varphi_{60} \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{9}$\lbl{A1}}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{9}$}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{70}$}
+\BIC{$(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{30}) \to \varphi_{54}$}
+\BIC{$\varphi_{54}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{2}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{48}$}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{16}$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{54}$}
+\BIC{$\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{14}$}
+\UIC{$\forall t\,(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{14})$}
+\UIC{$\forall s\,\forall t\,(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{14})$}
+\UIC{$\forall b\,\forall s\,\forall t\,(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{14})$}
+\UIC{$\forall a\,\forall b\,\forall s\,\forall t\,(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{14})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma a,s)$
+\item $\varphi_{2} :\equiv \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to \mathrm{Conv}(\Sigma b,t)$
+\item $\varphi_{3} :\equiv \mathrm{Seq}(a) \land \mathrm{Seq}(b) \land \mathrm{Conv}(\Sigma a,s) \land \mathrm{Conv}(\Sigma b,t)$
+\item $\varphi_{4} :\equiv \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to \mathrm{Seq}(b)$
+\item $\varphi_{5} :\equiv \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to \mathrm{Seq}(a)$
+\item $\varphi_{6} :\equiv \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to \mathrm{Seq}(b)$
+\item $\varphi_{7} :\equiv \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to \mathrm{Seq}(a)$
+\item $\varphi_{8} :\equiv \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{9} :\equiv \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to \mathrm{Seq}(\Sigma a \oplus b)$
+\item $\varphi_{10} :\equiv \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to \mathrm{Seq}(\Sigma b)$
+\item $\varphi_{11} :\equiv \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to \mathrm{Seq}(\Sigma a)$
+\item $\varphi_{12} :\equiv \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to \mathrm{Seq}(a \oplus b)$
+\item $\varphi_{13} :\equiv \forall a\,\forall \alpha\,\forall b\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \mathrm{Conv}(a \oplus b,\alpha + \beta))$
+\item $\varphi_{14} :\equiv \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to \mathrm{Conv}(\Sigma a \oplus b,s + t)$
+\item $\varphi_{15} :\equiv \forall b\,\forall \beta\,(\mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(b,\beta) \to \mathrm{Conv}(\Sigma a \oplus b,s + \beta))$
+\item $\varphi_{16} :\equiv \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to \mathrm{Conv}(\Sigma a \oplus \Sigma b,s + t)$
+\item $\varphi_{17} :\equiv \forall \alpha\,\forall b\,\forall \beta\,(\mathrm{Conv}(\Sigma a,\alpha) \to \mathrm{Conv}(b,\beta) \to \mathrm{Conv}(\Sigma a \oplus b,\alpha + \beta))$
+\item $\varphi_{18} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,({\textstyle\sum_{k=1}^{n} a \oplus b(k)} = y \to y = {\textstyle\sum_{k=1}^{n} a \oplus b(k)})$
+\item $\varphi_{19} :\equiv \forall n \in \mathbb{N}\,(v_{876}(n) = v_{877}(n)) \to \mathrm{Conv}(v_{876},v_{878}) \to \mathrm{Conv}(v_{877},v_{878})$
+\item $\varphi_{20} :\equiv \forall \beta\,(\mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,\beta) \to \mathrm{Conv}(\Sigma a \oplus \Sigma b,s + \beta))$
+\item $\varphi_{21} :\equiv \forall y\,\forall z\,(\Sigma a \oplus \Sigma b(n) = y \to y = z \to \Sigma a \oplus \Sigma b(n) = z)$
+\item $\varphi_{22} :\equiv \forall a\,\forall b\,\forall \alpha\,(\mathrm{Seq}(b) \to \forall n \in \mathbb{N}\,(a_{n} = b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha))$
+\item $\varphi_{23} :\equiv \forall b\,\forall \alpha\,(\mathrm{Seq}(b) \to \forall n \in \mathbb{N}\,(v_{876}(n) = b_{n}) \to \mathrm{Conv}(v_{876},\alpha) \to \mathrm{Conv}(b,\alpha))$
+\item $\varphi_{24} :\equiv \mathrm{Seq}(b) \to \forall n \in \mathbb{N}\,({\textstyle\sum_{k=1}^{n} a \oplus b(k)} = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}})$
+\item $\varphi_{25} :\equiv \mathrm{Seq}(b) \to \mathrm{Seq}(a \oplus b) \land \forall n \in \mathbb{N}\,(a \oplus b(n) = a_{n} + b_{n})$
+\item $\varphi_{26} :\equiv \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to \Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a \oplus b(k)}$
+\item $\varphi_{27} :\equiv \forall \alpha\,(\mathrm{Seq}(v_{877}) \to \forall n \in \mathbb{N}\,(v_{876}(n) = v_{877}(n)) \to \mathrm{Conv}(v_{876},\alpha) \to \mathrm{Conv}(v_{877},\alpha))$
+\item $\varphi_{28} :\equiv \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to {\textstyle\sum_{k=1}^{n} a \oplus b(k)} = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}}$
+\item $\varphi_{29} :\equiv \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}} = {\textstyle\sum_{k=1}^{n} a \oplus b(k)}$
+\item $\varphi_{30} :\equiv \mathrm{Conv}(\Sigma b,t) \to \forall n \in \mathbb{N}\,(\Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a \oplus b(k)})$
+\item $\varphi_{31} :\equiv \mathrm{Conv}(\Sigma b,t) \to \mathrm{Seq}(a \oplus b) \land \forall n \in \mathbb{N}\,(a \oplus b(n) = a_{n} + b_{n})$
+\item $\varphi_{32} :\equiv \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to \Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}}$
+\item $\varphi_{33} :\equiv \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to n \in \mathbb{N} \to {\textstyle\sum_{k=1}^{n} a \oplus b(k)} = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}}$
+\item $\varphi_{34} :\equiv \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to \forall n \in \mathbb{N}\,({\textstyle\sum_{k=1}^{n} a \oplus b(k)} = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}})$
+\item $\varphi_{35} :\equiv \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to n \in \mathbb{N} \to \Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}}$
+\item $\varphi_{36} :\equiv \mathrm{Seq}(\Sigma a \oplus \Sigma b) \land \forall n \in \mathbb{N}\,(\Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}})$
+\item $\varphi_{37} :\equiv \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to \forall n \in \mathbb{N}\,(\Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}})$
+\item $\varphi_{38} :\equiv \mathrm{Seq}(\Sigma b) \land {\textstyle\sum_{k=1}^{1_{\omega}} b_{k}} = b_{1_{\omega}} \land \forall n \in \mathbb{N}\,({\textstyle\sum_{k=1}^{S(n)} b_{k}} = {\textstyle\sum_{k=1}^{n} b_{k}} + b_{S(n)})$
+\item $\varphi_{39} :\equiv \mathrm{Seq}(\Sigma a) \land {\textstyle\sum_{k=1}^{1_{\omega}} a_{k}} = a_{1_{\omega}} \land \forall n \in \mathbb{N}\,({\textstyle\sum_{k=1}^{S(n)} a_{k}} = {\textstyle\sum_{k=1}^{n} a_{k}} + a_{S(n)})$
+\item $\varphi_{40} :\equiv {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}} = {\textstyle\sum_{k=1}^{n} a \oplus b(k)} \to \Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a \oplus b(k)}$
+\item $\varphi_{41} :\equiv {\textstyle\sum_{k=1}^{n} a \oplus b(k)} = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}} \to {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}} = {\textstyle\sum_{k=1}^{n} a \oplus b(k)}$
+\item $\varphi_{42} :\equiv \forall b\,(\mathrm{Seq}(\Sigma a) \to \mathrm{Seq}(b) \to \mathrm{Seq}(\Sigma a \oplus b) \land \forall n \in \mathbb{N}\,(\Sigma a \oplus b(n) = {\textstyle\sum_{k=1}^{n} a_{k}} + b_{n}))$
+\item $\varphi_{43} :\equiv \forall v_{877}\,\forall v_{878}\,(\mathrm{Seq}(v_{877}) \to \forall n \in \mathbb{N}\,(\Sigma a \oplus \Sigma b(n) = v_{877}(n)) \to \mathrm{Conv}(\Sigma a \oplus \Sigma b,v_{878}) \to \mathrm{Conv}(v_{877},v_{878}))$
+\item $\varphi_{44} :\equiv \forall z\,(\Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}} \to {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}} = z \to \Sigma a \oplus \Sigma b(n) = z)$
+\item $\varphi_{45} :\equiv \forall n \in \mathbb{N}\,(\Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a \oplus b(k)}) \to \mathrm{Conv}(\Sigma a \oplus \Sigma b,s + t) \to \mathrm{Conv}(\Sigma a \oplus b,s + t)$
+\item $\varphi_{46} :\equiv \forall n \in \mathbb{N}\,({\textstyle\sum_{k=1}^{n} a \oplus b(k)} = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}}) \to n \in \mathbb{N} \to {\textstyle\sum_{k=1}^{n} a \oplus b(k)} = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}}$
+\item $\varphi_{47} :\equiv \forall n \in \mathbb{N}\,(\Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}}) \to n \in \mathbb{N} \to \Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}}$
+\item $\varphi_{48} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{2}) \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{16}$
+\item $\varphi_{49} :\equiv \mathrm{Seq}(\Sigma a \oplus b) \land {\textstyle\sum_{k=1}^{1_{\omega}} a \oplus b(k)} = a \oplus b(1_{\omega}) \land \forall n \in \mathbb{N}\,({\textstyle\sum_{k=1}^{S(n)} a \oplus b(k)} = {\textstyle\sum_{k=1}^{n} a \oplus b(k)} + a \oplus b(S(n)))$
+\item $\varphi_{50} :\equiv \forall v_{878}\,(\mathrm{Seq}(\Sigma a \oplus b) \to \forall n \in \mathbb{N}\,(\Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a \oplus b(k)}) \to \mathrm{Conv}(\Sigma a \oplus \Sigma b,v_{878}) \to \mathrm{Conv}(\Sigma a \oplus b,v_{878}))$
+\item $\varphi_{51} :\equiv \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to \varphi_{36}$
+\item $\varphi_{52} :\equiv \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to \varphi_{38}$
+\item $\varphi_{53} :\equiv \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to n \in \mathbb{N} \to \varphi_{39}$
+\item $\varphi_{54} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{16}) \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{14}$
+\item $\varphi_{55} :\equiv (\mathrm{Seq}(a) \to \varphi_{4}) \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{31}$
+\item $\varphi_{56} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{31}) \to \mathrm{Seq}(a) \to \varphi_{12}$
+\item $\varphi_{57} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{8}) \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{28}$
+\item $\varphi_{58} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{8}) \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{32}$
+\item $\varphi_{59} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{6}) \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{34}$
+\item $\varphi_{60} :\equiv \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to \varphi_{49}$
+\item $\varphi_{61} :\equiv (\varphi_{3} \to \forall n\,(\varphi_{3})) \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{30}$
+\item $\varphi_{62} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{26}) \to \varphi_{3} \to n \in \mathbb{N} \to \Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a \oplus b(k)}$
+\item $\varphi_{63} :\equiv \forall n\,(\varphi_{3} \to n \in \mathbb{N} \to \Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a \oplus b(k)}) \to \forall n\,(\varphi_{3}) \to \forall n \in \mathbb{N}\,(\Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a \oplus b(k)})$
+\item $\varphi_{64} :\equiv (\Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}} \to \varphi_{40}) \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{26}$
+\item $\varphi_{65} :\equiv (\mathrm{Seq}(a) \to \varphi_{51}) \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{37}$
+\item $\varphi_{66} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{11}) \to (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{10}) \to \mathrm{Seq}(a) \to \varphi_{51}$
+\item $\varphi_{67} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{28}) \to \varphi_{41} \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{29}$
+\item $\varphi_{68} :\equiv (\mathrm{Seq}(b) \to \varphi_{38}) \to (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{6}) \to \mathrm{Seq}(a) \to \varphi_{52}$
+\item $\varphi_{69} :\equiv (\mathrm{Seq}(a) \to \varphi_{39}) \to (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{7}) \to \mathrm{Seq}(a) \to \varphi_{53}$
+\item $\varphi_{70} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \varphi_{9}) \to (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{30}) \to \varphi_{54}$
+\item $\varphi_{71} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{34}) \to \varphi_{46} \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{33}$
+\item $\varphi_{72} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{37}) \to \varphi_{47} \to \mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{35}$
+\item $\varphi_{73} :\equiv (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{32}) \to (\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \varphi_{29}) \to \varphi_{64}$
+\item $\varphi_{74} :\equiv \forall n\,(\varphi_{3} \to n \in \mathbb{N} \to \Sigma a \oplus \Sigma b(n) = {\textstyle\sum_{k=1}^{n} a \oplus b(k)}) \to \varphi_{63} \to \varphi_{61}$
+\end{abbrevlist}
+\end{fullproof}

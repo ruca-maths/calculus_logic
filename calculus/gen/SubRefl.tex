@@ -1,0 +1,26 @@
+% 自動生成 (prover/build.js): SubRefl  ノード数 11
+\begin{fullproof}{[E43]}{$\forall A\,(A \subseteq A)$}{11}\phantomsection\label{tree:SubRefl}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$\lbl{Def$\subseteq$}}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall y\,(A \subseteq y \leftrightarrow \forall u \in A\,(u \in y))$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$A \subseteq A \leftrightarrow \forall u \in A\,(u \in A)$}
+\AXC{$(A \subseteq A \leftrightarrow \forall u \in A\,(u \in A)) \to \forall u \in A\,(u \in A) \to A \subseteq A$\lbl{A1}}
+\BIC{$\forall u \in A\,(u \in A) \to A \subseteq A$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$u \in A \to u \in A$\lbl{A1}}
+\UIC{$\forall u \in A\,(u \in A)$}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall u \in A\,(u \in A) \to A \subseteq A$}
+\BIC{$A \subseteq A$}
+\UIC{$\forall A\,(A \subseteq A)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall y\,(A \subseteq y \leftrightarrow \forall u \in A\,(u \in y)) \to (A \subseteq A \leftrightarrow \forall u \in A\,(u \in A))$
+\item $\varphi_{2} :\equiv \forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to \forall y\,(A \subseteq y \leftrightarrow \forall u \in A\,(u \in y))$
+\end{abbrevlist}
+\end{fullproof}

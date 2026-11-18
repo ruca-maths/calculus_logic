@@ -1,0 +1,427 @@
+% 自動生成 (prover/build.js): Squeeze  ノード数 170
+\begin{fullproof}{定理2.3}{$\forall a\,\forall b\,\forall c\,\forall \alpha\,(\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \mathrm{Conv}(c,\alpha))$}{170}\phantomsection\label{tree:Squeeze}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\varphi_{32}$\lbl{A2}}
+\AXC{$\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{61}$\lbl{A1}}
+\AXC{$\varphi_{90}$\lbl{A1}}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{78}$}
+\AXC{$(\mathrm{Seq}(c) \to \varphi_{78}) \to \varphi_{32} \to \mathrm{Seq}(c) \to \varphi_{77}$\lbl{A1}}
+\BIC{$\varphi_{32} \to \mathrm{Seq}(c) \to \varphi_{77}$}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{77}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\AXC{$\mathrm{Seq}(c) \to \varphi_{28}$\lbl{A1}}
+\AXC{$(\mathrm{Seq}(c) \to \varphi_{28}) \to \varphi_{26} \to \mathrm{Seq}(c) \to \varphi_{26}$\lbl{A1}}
+\BIC{$\varphi_{26} \to \mathrm{Seq}(c) \to \varphi_{26}$}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{26}$}
+\AXC{$(\mathrm{Seq}(c) \to \varphi_{26}) \to \varphi_{86}$\lbl{A1}}
+\BIC{$\varphi_{86}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{36}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{86}$}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{70}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(c) \to \varphi_{9}$\lbl{A1}}
+\AXC{$\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})$\lbl{[C2]}}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}$}
+\AXC{$\varphi_{59}$\lbl{A1}}
+\BIC{$(\mathrm{Seq}(c) \to \varphi_{9}) \to \mathrm{Seq}(c) \to \varphi_{24}$}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{24}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(c) \to \mathrm{Seq}(c)$\lbl{A1}}
+\AXC{$\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$\lbl{[S1]}}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$\forall n\,(\mathrm{Seq}(c) \to n \in \mathbb{N} \to c_{n} \in \mathbb{R})$}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(c) \to n \in \mathbb{N} \to c_{n} \in \mathbb{R}$}
+\AXC{$\varphi_{89}$\lbl{A1}}
+\BIC{$(\mathrm{Seq}(c) \to \mathrm{Seq}(c)) \to \varphi_{83}$}
+\BIC{$\varphi_{83}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(c) \to \varphi_{21}$\lbl{A1}}
+\AXC{$\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$\lbl{[C1]}}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{Conv}(b,\alpha) \to \mathrm{Seq}(b))$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(b,\alpha) \to \mathrm{Seq}(b)$}
+\AXC{$\varphi_{60}$\lbl{A1}}
+\BIC{$(\mathrm{Seq}(c) \to \varphi_{21}) \to \mathrm{Seq}(c) \to \varphi_{14}$}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(c) \to \varphi_{14}$}
+\AXC{$\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$\lbl{[S1]}}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\forall n\,(\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R})$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R}$}
+\AXC{$\varphi_{91}$\lbl{A1}}
+\BIC{$(\mathrm{Seq}(c) \to \varphi_{14}) \to \varphi_{84}$}
+\BIC{$\varphi_{84}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(c) \to \varphi_{9}$\lbl{A1}}
+\AXC{$\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$\lbl{[C1]}}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$}
+\AXC{$\varphi_{57}$\lbl{A1}}
+\BIC{$(\mathrm{Seq}(c) \to \varphi_{9}) \to \mathrm{Seq}(c) \to \varphi_{15}$}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{15}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(c) \to \varphi_{15}$}
+\AXC{$\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$\lbl{[S1]}}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}$}
+\AXC{$\varphi_{92}$\lbl{A1}}
+\BIC{$(\mathrm{Seq}(c) \to \varphi_{15}) \to \varphi_{85}$}
+\BIC{$\varphi_{85}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\varphi_{35}$\lbl{[C12]}}
+\AXC{$\varphi_{35} \to \varphi_{52}$\lbl{A2}}
+\BIC{$\varphi_{52}$}
+\AXC{$\varphi_{52} \to \varphi_{55}$\lbl{A2}}
+\BIC{$\varphi_{55}$}
+\AXC{$\varphi_{55} \to \forall \alpha\,\forall \varepsilon\,(\varphi_{58})$\lbl{A2}}
+\BIC{$\forall \alpha\,\forall \varepsilon\,(\varphi_{58})$}
+\AXC{$\forall \alpha\,\forall \varepsilon\,(\varphi_{58}) \to \forall \varepsilon\,(\varphi_{58})$\lbl{A2}}
+\BIC{$\forall \varepsilon\,(\varphi_{58})$}
+\AXC{$\forall \varepsilon\,(\varphi_{58}) \to \varphi_{58}$\lbl{A2}}
+\BIC{$\varphi_{58}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{36}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{85}$}
+\BIC{$\varphi_{66}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{58}$}
+\AXC{$\varphi_{58} \to \varphi_{66} \to \varphi_{65} \to \varphi_{64} \to \varphi_{99}$\lbl{A1}}
+\BIC{$\varphi_{66} \to \varphi_{65} \to \varphi_{64} \to \varphi_{99}$}
+\BIC{$\varphi_{65} \to \varphi_{64} \to \varphi_{99}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{36}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{84}$}
+\BIC{$\varphi_{65}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{65} \to \varphi_{64} \to \varphi_{99}$}
+\BIC{$\varphi_{64} \to \varphi_{99}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(c) \to \varphi_{29}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(c) \to \varphi_{24}$}
+\AXC{$\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{36}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{83}$}
+\BIC{$\varphi_{64}$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{64} \to \varphi_{99}$}
+\BIC{$\varphi_{99}$}
+\BIC{$(\mathrm{Seq}(c) \to \varphi_{29}) \to \varphi_{63} \to \varphi_{62} \to \varphi_{68} \to \varphi_{67} \to \varphi_{69}$}
+\BIC{$\varphi_{63} \to \varphi_{62} \to \varphi_{68} \to \varphi_{67} \to \varphi_{69}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(c) \to \varphi_{70}$}
+\AXC{$(\mathrm{Seq}(c) \to \varphi_{70}) \to \varphi_{63}$\lbl{A1}}
+\BIC{$\varphi_{63}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{63} \to \varphi_{62} \to \varphi_{68} \to \varphi_{67} \to \varphi_{69}$}
+\BIC{$\varphi_{62} \to \varphi_{68} \to \varphi_{67} \to \varphi_{69}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(c) \to \varphi_{77}$}
+\AXC{$(\mathrm{Seq}(c) \to \varphi_{77}) \to \varphi_{68}$\lbl{A1}}
+\BIC{$\varphi_{68}$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(c) \to \varphi_{70}$}
+\AXC{$(\mathrm{Seq}(c) \to \varphi_{70}) \to \varphi_{62}$\lbl{A1}}
+\BIC{$\varphi_{62}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{62} \to \varphi_{68} \to \varphi_{67} \to \varphi_{69}$}
+\BIC{$\varphi_{68} \to \varphi_{67} \to \varphi_{69}$}
+\BIC{$\varphi_{67} \to \varphi_{69}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\varphi_{71} \to \varphi_{73}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(c) \to \varphi_{77}$}
+\AXC{$(\mathrm{Seq}(c) \to \varphi_{77}) \to \varphi_{67}$\lbl{A1}}
+\BIC{$\varphi_{67}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{67} \to \varphi_{69}$}
+\BIC{$\varphi_{69}$}
+\AXC{$\varphi_{87}$\lbl{A1}}
+\BIC{$\varphi_{13} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon$}
+\UIC{$\varphi_{71}$}
+\AXC{$\varphi_{71} \to (\varphi_{71} \to \varphi_{73}) \to \varphi_{94}$\lbl{A1}}
+\BIC{$(\varphi_{71} \to \varphi_{73}) \to \varphi_{94}$}
+\BIC{$\varphi_{94}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{61}$\lbl{A1}}
+\AXC{$\varphi_{88}$\lbl{A1}}
+\BIC{$\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{34}$}
+\AXC{$\varphi_{95}$\lbl{A1}}
+\BIC{$\varphi_{72} \to \mathrm{Seq}(c) \to \varphi_{74}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\varphi_{13} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{19} \to \forall n\,(\varphi_{13} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{19})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{94}$}
+\BIC{$\varphi_{72}$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{72} \to \mathrm{Seq}(c) \to \varphi_{74}$}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{74}$}
+\AXC{$(\mathrm{Seq}(c) \to \varphi_{74}) \to \varphi_{81}$\lbl{A1}}
+\BIC{$\varphi_{81}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\varphi_{8} \to \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon))$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{81}$}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{75}$}
+\AXC{$(\mathrm{Seq}(c) \to \varphi_{75}) \to \varphi_{53} \to \neg \varphi_{19}$\lbl{A1}}
+\BIC{$\varphi_{53} \to \neg \varphi_{19}$}
+\UIC{$\forall N\,(\varphi_{53} \to \neg \varphi_{19})$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,\forall b\,(\varphi_{33})$\lbl{[C9]}}
+\AXC{$\forall a\,\forall \alpha\,\forall b\,(\varphi_{33}) \to \forall \alpha\,\forall b\,(\varphi_{33})$\lbl{A2}}
+\BIC{$\forall \alpha\,\forall b\,(\varphi_{33})$}
+\AXC{$\forall \alpha\,\forall b\,(\varphi_{33}) \to \forall b\,(\varphi_{33})$\lbl{A2}}
+\BIC{$\forall b\,(\varphi_{33})$}
+\AXC{$\forall b\,(\varphi_{33}) \to \varphi_{33}$\lbl{A2}}
+\BIC{$\varphi_{33}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(c) \to \varphi_{21}$\lbl{A1}}
+\AXC{$\mathrm{Seq}(c) \to \varphi_{9}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{33}$}
+\AXC{$\varphi_{33} \to \varphi_{31}$\lbl{A2}}
+\BIC{$\varphi_{31}$}
+\AXC{$\varphi_{79}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{22}$}
+\AXC{$\varphi_{97}$\lbl{A1}}
+\BIC{$\varphi_{93}$}
+\BIC{$(\mathrm{Seq}(c) \to \varphi_{21}) \to (\mathrm{Seq}(c) \to \varphi_{29}) \to \varphi_{80}$}
+\BIC{$(\mathrm{Seq}(c) \to \varphi_{29}) \to \varphi_{80}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{6}$\lbl{A1}}
+\AXC{$\mathrm{Seq}(c) \to \varphi_{29}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Seq}(c) \to \varphi_{29}) \to \varphi_{80}$}
+\BIC{$\varphi_{80}$}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{56}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\forall N\,(\varphi_{53} \to \neg \varphi_{19})$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(c) \to \varphi_{56}$}
+\AXC{$(\mathrm{Seq}(c) \to \varphi_{56}) \to \forall N\,(\varphi_{53} \to \neg \varphi_{19}) \to \varphi_{98}$\lbl{A1}}
+\BIC{$\forall N\,(\varphi_{53} \to \neg \varphi_{19}) \to \varphi_{98}$}
+\BIC{$\varphi_{98}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\varphi_{53} \to \forall N\,(\varphi_{53})$\lbl{A4}}
+\AXC{$\forall N\,(\varphi_{53} \to \neg \varphi_{19}) \to \forall N\,(\varphi_{53}) \to \forall N\,(\neg \varphi_{19})$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{98}$}
+\BIC{$(\varphi_{53} \to \forall N\,(\varphi_{53})) \to \mathrm{Seq}(c) \to \varphi_{42}$}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{42}$}
+\AXC{$(\mathrm{Seq}(c) \to \varphi_{42}) \to \varphi_{13} \to \varphi_{20}$\lbl{A1}}
+\BIC{$\varphi_{13} \to \varphi_{20}$}
+\UIC{$\forall \varepsilon\,(\varphi_{13} \to \varphi_{20})$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\varphi_{13} \to \forall \varepsilon\,(\varphi_{13})$\lbl{A4}}
+\AXC{$\forall \varepsilon\,(\varphi_{13} \to \varphi_{20}) \to \forall \varepsilon\,(\varphi_{13}) \to \varphi_{25}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\forall \varepsilon\,(\varphi_{13} \to \varphi_{20})$}
+\AXC{$\forall \varepsilon\,(\varphi_{13} \to \varphi_{20}) \to \varphi_{96}$\lbl{A1}}
+\BIC{$\varphi_{96}$}
+\BIC{$(\varphi_{13} \to \forall \varepsilon\,(\varphi_{13})) \to \mathrm{Seq}(c) \to \varphi_{47}$}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{47}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\varphi_{30}$\lbl{DefConv}}
+\AXC{$\varphi_{30} \to \forall \alpha\,(\mathrm{Conv}(c,\alpha) \leftrightarrow \mathrm{Seq}(c) \land \alpha \in \mathbb{R} \land \varphi_{25})$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{Conv}(c,\alpha) \leftrightarrow \mathrm{Seq}(c) \land \alpha \in \mathbb{R} \land \varphi_{25})$}
+\AXC{$\varphi_{76}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(c,\alpha) \leftrightarrow \mathrm{Seq}(c) \land \alpha \in \mathbb{R} \land \varphi_{25}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(c,\alpha) \leftrightarrow \mathrm{Seq}(c) \land \alpha \in \mathbb{R} \land \varphi_{25}$}
+\AXC{$(\mathrm{Conv}(c,\alpha) \leftrightarrow \mathrm{Seq}(c) \land \alpha \in \mathbb{R} \land \varphi_{25}) \to \varphi_{82}$\lbl{A1}}
+\BIC{$\varphi_{82}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(c) \to \varphi_{47}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\mathrm{Seq}(c) \to \varphi_{24}$}
+\AXC{$\mathrm{Seq}(c) \to \mathrm{Seq}(c)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{82}$}
+\BIC{$(\mathrm{Seq}(c) \to \varphi_{24}) \to (\mathrm{Seq}(c) \to \varphi_{47}) \to \mathrm{Seq}(c) \to \varphi_{23}$}
+\BIC{$(\mathrm{Seq}(c) \to \varphi_{47}) \to \mathrm{Seq}(c) \to \varphi_{23}$}
+\BIC{$\mathrm{Seq}(c) \to \varphi_{23}$}
+\UIC{$\forall \alpha\,(\mathrm{Seq}(c) \to \varphi_{23})$}
+\UIC{$\forall c\,\forall \alpha\,(\mathrm{Seq}(c) \to \varphi_{23})$}
+\UIC{$\forall b\,\forall c\,\forall \alpha\,(\mathrm{Seq}(c) \to \varphi_{23})$}
+\UIC{$\forall a\,\forall b\,\forall c\,\forall \alpha\,(\mathrm{Seq}(c) \to \varphi_{23})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall \alpha\,(\mathrm{Conv}(b,\alpha) \to \mathrm{Seq}(b)) \to \mathrm{Conv}(b,\alpha) \to \mathrm{Seq}(b)$
+\item $\varphi_{2} :\equiv \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$
+\item $\varphi_{3} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \forall \alpha\,(\mathrm{Conv}(b,\alpha) \to \mathrm{Seq}(b))$
+\item $\varphi_{4} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$
+\item $\varphi_{5} :\equiv \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}$
+\item $\varphi_{6} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon$
+\item $\varphi_{7} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})$
+\item $\varphi_{8} :\equiv \forall N\,(\neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{9} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)$
+\item $\varphi_{10} :\equiv \forall n\,(\mathrm{Seq}(c) \to n \in \mathbb{N} \to c_{n} \in \mathbb{R}) \to \mathrm{Seq}(c) \to n \in \mathbb{N} \to c_{n} \in \mathbb{R}$
+\item $\varphi_{11} :\equiv \forall n\,(\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R}) \to \mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R}$
+\item $\varphi_{12} :\equiv \forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}$
+\item $\varphi_{13} :\equiv \mathrm{Seq}(c) \land \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \land \mathrm{Conv}(a,\alpha) \land \mathrm{Conv}(b,\alpha)$
+\item $\varphi_{14} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \mathrm{Seq}(b)$
+\item $\varphi_{15} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \mathrm{Seq}(a)$
+\item $\varphi_{16} :\equiv \forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \forall n\,(\mathrm{Seq}(c) \to n \in \mathbb{N} \to c_{n} \in \mathbb{R})$
+\item $\varphi_{17} :\equiv \forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \forall n\,(\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R})$
+\item $\varphi_{18} :\equiv \forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$
+\item $\varphi_{19} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{20} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{21} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \mathrm{Conv}(b,\alpha)$
+\item $\varphi_{22} :\equiv \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{23} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \mathrm{Conv}(c,\alpha)$
+\item $\varphi_{24} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \alpha \in \mathbb{R}$
+\item $\varphi_{25} :\equiv \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon))$
+\item $\varphi_{26} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to n \in \mathbb{N} \to a_{n} \leq c_{n} \land c_{n} \leq b_{n}$
+\item $\varphi_{27} :\equiv c_{n} \leq b_{n} \to \lvert a_{n} - \alpha \rvert < \varepsilon \to \lvert b_{n} - \alpha \rvert < \varepsilon \to \lvert c_{n} - \alpha \rvert < \varepsilon$
+\item $\varphi_{28} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n})$
+\item $\varphi_{29} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$
+\item $\varphi_{30} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \leftrightarrow \mathrm{Seq}(a) \land \alpha \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{31} :\equiv \forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{22})$
+\item $\varphi_{32} :\equiv \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \alpha \rvert < \varepsilon) \to n \in \mathbb{N} \to N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \alpha \rvert < \varepsilon$
+\item $\varphi_{33} :\equiv \forall \beta\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \beta \rvert < \varepsilon))$
+\item $\varphi_{34} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to N \in \mathbb{N}$
+\item $\varphi_{35} :\equiv \forall x\,\forall y\,\forall z\,\forall \alpha\,\forall \varepsilon\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to \lvert z - \alpha \rvert < \varepsilon)$
+\item $\varphi_{36} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{37} :\equiv \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to c_{n} \leq b_{n}$
+\item $\varphi_{38} :\equiv \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to a_{n} \leq c_{n}$
+\item $\varphi_{39} :\equiv \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to c_{n} \in \mathbb{R}$
+\item $\varphi_{40} :\equiv \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to b_{n} \in \mathbb{R}$
+\item $\varphi_{41} :\equiv \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to a_{n} \in \mathbb{R}$
+\item $\varphi_{42} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varphi_{20}$
+\item $\varphi_{43} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to a_{n} \leq c_{n} \land c_{n} \leq b_{n}$
+\item $\varphi_{44} :\equiv \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to \lvert b_{n} - \alpha \rvert < \varepsilon$
+\item $\varphi_{45} :\equiv \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon$
+\item $\varphi_{46} :\equiv \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon$
+\item $\varphi_{47} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varphi_{25}$
+\item $\varphi_{48} :\equiv 0 < \varepsilon \to \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \alpha \rvert < \varepsilon$
+\item $\varphi_{49} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{50} :\equiv \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to \forall n \in \mathbb{N}\,(N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{51} :\equiv 0 < \varepsilon \to \varphi_{19} \to \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{52} :\equiv \forall y\,\forall z\,\forall \alpha\,\forall \varepsilon\,(a_{n} \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to a_{n} \leq z \to z \leq y \to \lvert a_{n} - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to \lvert z - \alpha \rvert < \varepsilon)$
+\item $\varphi_{53} :\equiv \varphi_{13} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{54} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{55} :\equiv \forall z\,\forall \alpha\,\forall \varepsilon\,(a_{n} \in \mathbb{R} \to b_{n} \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to a_{n} \leq z \to z \leq b_{n} \to \lvert a_{n} - \alpha \rvert < \varepsilon \to \lvert b_{n} - \alpha \rvert < \varepsilon \to \lvert z - \alpha \rvert < \varepsilon)$
+\item $\varphi_{56} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{22}$
+\item $\varphi_{57} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to (\mathrm{Seq}(c) \to \varphi_{9}) \to \mathrm{Seq}(c) \to \varphi_{15}$
+\item $\varphi_{58} :\equiv a_{n} \in \mathbb{R} \to b_{n} \in \mathbb{R} \to c_{n} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to a_{n} \leq c_{n} \to \varphi_{27}$
+\item $\varphi_{59} :\equiv (\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to (\mathrm{Seq}(c) \to \varphi_{9}) \to \mathrm{Seq}(c) \to \varphi_{24}$
+\item $\varphi_{60} :\equiv (\mathrm{Conv}(b,\alpha) \to \mathrm{Seq}(b)) \to (\mathrm{Seq}(c) \to \varphi_{21}) \to \mathrm{Seq}(c) \to \varphi_{14}$
+\item $\varphi_{61} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{19} \to \varphi_{19}$
+\item $\varphi_{62} :\equiv \mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{37}$
+\item $\varphi_{63} :\equiv \mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{38}$
+\item $\varphi_{64} :\equiv \mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{39}$
+\item $\varphi_{65} :\equiv \mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{40}$
+\item $\varphi_{66} :\equiv \mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{41}$
+\item $\varphi_{67} :\equiv \mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{44}$
+\item $\varphi_{68} :\equiv \mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{45}$
+\item $\varphi_{69} :\equiv \mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{46}$
+\item $\varphi_{70} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varphi_{43}$
+\item $\varphi_{71} :\equiv \forall n\,(\varphi_{13} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{72} :\equiv \mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{50}$
+\item $\varphi_{73} :\equiv \forall n\,(\varphi_{13} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{19}) \to \forall n \in \mathbb{N}\,(N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{74} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varphi_{49}$
+\item $\varphi_{75} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varphi_{54}$
+\item $\varphi_{76} :\equiv \forall \alpha\,(\mathrm{Conv}(c,\alpha) \leftrightarrow \mathrm{Seq}(c) \land \alpha \in \mathbb{R} \land \varphi_{25}) \to (\mathrm{Conv}(c,\alpha) \leftrightarrow \mathrm{Seq}(c) \land \alpha \in \mathbb{R} \land \varphi_{25})$
+\item $\varphi_{77} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{48}$
+\item $\varphi_{78} :\equiv \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{51}$
+\item $\varphi_{79} :\equiv \varphi_{31} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{22}$
+\item $\varphi_{80} :\equiv (\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{6}) \to \mathrm{Seq}(c) \to \varphi_{56}$
+\item $\varphi_{81} :\equiv (\varphi_{8} \to \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon))) \to \mathrm{Seq}(c) \to \varphi_{75}$
+\item $\varphi_{82} :\equiv (\mathrm{Seq}(c) \to \mathrm{Seq}(c)) \to (\mathrm{Seq}(c) \to \varphi_{24}) \to (\mathrm{Seq}(c) \to \varphi_{47}) \to \mathrm{Seq}(c) \to \varphi_{23}$
+\item $\varphi_{83} :\equiv (\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{36}) \to \varphi_{64}$
+\item $\varphi_{84} :\equiv (\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{36}) \to \varphi_{65}$
+\item $\varphi_{85} :\equiv (\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{36}) \to \varphi_{66}$
+\item $\varphi_{86} :\equiv (\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{36}) \to \mathrm{Seq}(c) \to \varphi_{70}$
+\item $\varphi_{87} :\equiv \varphi_{69} \to \varphi_{13} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{19} \to n \in \mathbb{N} \to N \leq n \to \lvert c_{n} - \alpha \rvert < \varepsilon$
+\item $\varphi_{88} :\equiv (\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{61}) \to \mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{34}$
+\item $\varphi_{89} :\equiv (\mathrm{Seq}(c) \to n \in \mathbb{N} \to c_{n} \in \mathbb{R}) \to (\mathrm{Seq}(c) \to \mathrm{Seq}(c)) \to \varphi_{83}$
+\item $\varphi_{90} :\equiv (\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{61}) \to \mathrm{Seq}(c) \to \varphi_{78}$
+\item $\varphi_{91} :\equiv (\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R}) \to (\mathrm{Seq}(c) \to \varphi_{14}) \to \varphi_{84}$
+\item $\varphi_{92} :\equiv (\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to (\mathrm{Seq}(c) \to \varphi_{15}) \to \varphi_{85}$
+\item $\varphi_{93} :\equiv (\mathrm{Seq}(c) \to \varphi_{9}) \to (\mathrm{Seq}(c) \to \varphi_{21}) \to (\mathrm{Seq}(c) \to \varphi_{29}) \to \varphi_{80}$
+\item $\varphi_{94} :\equiv (\varphi_{13} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{19} \to \forall n\,(\varphi_{13} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{19})) \to \varphi_{72}$
+\item $\varphi_{95} :\equiv (\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \varphi_{34}) \to \varphi_{72} \to \mathrm{Seq}(c) \to \varphi_{74}$
+\item $\varphi_{96} :\equiv (\forall \varepsilon\,(\varphi_{13} \to \varphi_{20}) \to \forall \varepsilon\,(\varphi_{13}) \to \varphi_{25}) \to (\varphi_{13} \to \forall \varepsilon\,(\varphi_{13})) \to \mathrm{Seq}(c) \to \varphi_{47}$
+\item $\varphi_{97} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{22}) \to \varphi_{93}$
+\item $\varphi_{98} :\equiv (\forall N\,(\varphi_{53} \to \neg \varphi_{19}) \to \forall N\,(\varphi_{53}) \to \forall N\,(\neg \varphi_{19})) \to (\varphi_{53} \to \forall N\,(\varphi_{53})) \to \mathrm{Seq}(c) \to \varphi_{42}$
+\item $\varphi_{99} :\equiv (\mathrm{Seq}(c) \to \varphi_{24}) \to (\mathrm{Seq}(c) \to \varphi_{29}) \to \varphi_{63} \to \varphi_{62} \to \varphi_{68} \to \varphi_{67} \to \varphi_{69}$
+\end{abbrevlist}
+\end{fullproof}

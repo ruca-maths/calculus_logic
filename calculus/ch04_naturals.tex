@@ -1,0 +1,107 @@
+\chapter{自然数}\label{ch:naturals}
+
+\begin{textref}{第1章 1.7節「数学的帰納法」, 第2章冒頭「$\N$ は自然数全体」}
+  テキストでは $\N = \{1,2,3,\ldots\}$ である. 本章では $\omega = \{0,1,2,\ldots\}$ を構成し, $\N := \omega \setminus \{0\}$ と定める. 数学的帰納法は $\ZFC$ の定理(図式)として証明する(定理\ref{thm:induction}).
+\end{textref}
+
+\section{$\omega$ の定義と数学的帰納法}
+
+\begin{dfn}
+  述語記号 $\Ind$ を $\Ind(x) :\leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x)$ で定義する($x$ は\textbf{帰納的}).
+\end{dfn}
+
+\begin{lem}\label{lem:inf-ind}
+  $\ZFC \vdash \exists x\,\Ind(x)$.
+\end{lem}
+\begin{proof}
+  無限公理の $x$ をとる($\exists$E). 無限公理の第1連言の $e$ は $\Emp(e)$ をみたすので, 定理\ref{thm:emptyset}の一意性より $e = \emptyset$, よって $\emptyset \in x$ (Eq). 第2連言の $z$ は $\forall u(u \in z \leftrightarrow u \in y \lor u = y)$ をみたし, 一方 $S(y) = y \cup \{y\}$ の定義公理を展開すると $\forall u(u \in S(y) \leftrightarrow u \in y \lor u = y)$ なので, Ext より $z = S(y)$, よって $S(y) \in x$.
+\end{proof}
+
+\begin{thm}\label{thm:omega}
+  $\ZFC \vdash \exists ! w\,\forall n\,(n \in w \leftrightarrow \forall x\,(\Ind(x) \to n \in x))$.
+\end{thm}
+\begin{proof}
+  補題\ref{lem:inf-ind}の $x_0$ をとり, $w := \{n \in x_0 \mid \forall x(\Ind(x) \to n \in x)\}$ とおく. $n \in w \to \forall x(\Ind(x) \to n \in x)$ は定義から明らか. 逆に $\forall x(\Ind(x) \to n \in x)$ ならば $x := x_0$ として $n \in x_0$ なので $n \in w$. 一意性は Ext.
+\end{proof}
+
+\begin{dfn}
+  定理\ref{thm:omega}により定数記号 $\omega$ を導入する. さらに
+  \[ 0 := \emptyset,\quad 1 := S(0),\quad 2 := S(1), \qquad \N := \omega \setminus \{0\} \]
+  と定める. 順序 $<$, $\leq$ は第\ref{ch:zfc}章で一般の集合について定義したもの($\subsetneq$, $\subseteq$ と同値)を用いる.
+\end{dfn}
+
+\begin{lem}\label{lem:omega-ind}
+  $\ZFC \vdash \Ind(\omega)$.
+\end{lem}
+\begin{proof}
+  任意の帰納的集合 $x$ について $\emptyset \in x$ なので $\emptyset \in \omega$. $n \in \omega$ とし, 帰納的な $x$ をとると $n \in x$ なので $S(n) \in x$. $x$ は任意だから $S(n) \in \omega$.
+\end{proof}
+
+\begin{thm}[数学的帰納法]\label{thm:induction}
+  各論理式 $\varphi(n, \vec z)$ について
+  \[ \ZFC \vdash \varphi(0) \land \forall n \in \omega\,(\varphi(n) \to \varphi(S(n))) \to \forall n \in \omega\,\varphi(n). \]
+\end{thm}
+\begin{proof}[通常の証明]
+  $B := \{n \in \omega \mid \varphi(n)\}$ とおく. 仮定より $0 \in B$ であり, $n \in B$ ならば $S(n) \in \omega$ (補題\ref{lem:omega-ind})かつ $\varphi(S(n))$ なので $S(n) \in B$. よって $B$ は帰納的であり, $\omega$ の定義から $\omega \subseteq B$. すなわち任意の $n \in \omega$ について $\varphi(n)$.
+\end{proof}
+
+数学的帰納法は定理図式なので, $\varphi(n)$ の代わりに図式文字 $\Phi$ を用いて完全展開する(第\ref{ch:logic}章の注意). 分出公理の図式のインスタンス $\forall a\,\exists y\,\forall x\,(x \in y \leftrightarrow x \in a \land \Phi(x))$ を $a := \omega$ として用い, 得られる $y$ (木の中では $B$)が帰納的であることを示す. 先に $\Ind(\omega)$ (補題\ref{lem:omega-ind})の木を与える.
+
+\trees{OmegaInd,Induction}
+\section{$\omega$ の順序}
+
+以下の事実は, $\omega$ の各元が順序数であることから従う(Kunen \cite{kunen2011} \S I.7--I.8. 本章の $\omega$ が同書の $\omega$ と一致することも同書 \S I.8 にある). ここで $<$ は第\ref{ch:zfc}章で一般の集合に対して定義した $x < y :\leftrightarrow x \subseteq y \land x \neq y$ であり, $\omega$ の元については $m < n \leftrightarrow m \in n$ である. これらの事実のうち, 証明木の葉として使うものは付録の基礎定理 [N1]--[N7] として登録した.
+
+\begin{thm}\label{thm:omega-order}
+  $\ZFC$ において次が成り立つ.
+  \begin{enumerate}[label=(\arabic*)]
+    \item $\omega$ の各元は推移的集合であり, $m \in n \in \omega \to m \in \omega$.
+    \item $<$ は $\omega$ 上の狭義全順序である: $n \not< n$, $l < m < n \to l < n$, $m < n \lor m = n \lor n < m$.
+    \item $\omega$ の空でない部分集合は $<$ に関する最小元をもつ.
+    \item $m, n \in \omega$ について $m \leq n \leftrightarrow m \subseteq n$, および $m < S(n) \leftrightarrow m \leq n$.
+    \item $S(n) \neq 0$, \; $S(m) = S(n) \to m = n$. また $n \neq 0 \to \exists m \in \omega\,(n = S(m))$.
+  \end{enumerate}
+\end{thm}
+
+\begin{lem}[最大値]\label{lem:max}
+  $\ZFC \vdash m \in \omega \land n \in \omega \to m \cup n \in \omega \land m \leq m \cup n \land n \leq m \cup n$.
+  さらに $m, n \in \N$ ならば $m \cup n \in \N$.
+\end{lem}
+\begin{proof}
+  定理\ref{thm:omega-order}(2)(4)より $m \subseteq n$ または $n \subseteq m$ である. 前者なら $m \cup n = n$ (Ext), 後者なら $m \cup n = m$. いずれの場合も (4) から主張が従う. $m \neq 0$ なら $m \subseteq m \cup n$ より $m \cup n \neq 0$.
+\end{proof}
+
+以下 $\max\{m,n\} := m \cup n$ と書く. テキストの定理2.1の証明の「$N(\varepsilon) = \max\{N_1, N_2\}$」はこれである.
+
+\section{再帰的定義}
+
+\begin{thm}[$\omega$ 上の再帰定理]\label{thm:recursion-omega}
+  $\ZFC \vdash a \in A \land g : \omega \times A \to A \to \exists ! f\,(f : \omega \to A \land f(0) = a \land \forall n \in \omega\,(f(S(n)) = g(\pair{n}{f(n)})))$.
+\end{thm}
+\begin{proof}
+  関数 $h$ が\textbf{近似}であるとは, ある $k \in \omega$ について $h : S(k) \to A$, $h(0) = a$, $\forall n \in k\,(h(S(n)) = g(\pair{n}{h(n)}))$ をみたすことをいう. 近似全体 $\mathcal{H} := \{h \in \mathcal{P}(\omega \times A) \mid h \text{ は近似}\}$ は分出で得られる(置換公理は不要).
+  (i) 2つの近似 $h, h'$ は共通の定義域上で一致する: $n$ に関する帰納法(定理\ref{thm:induction}). (ii) 任意の $k \in \omega$ について定義域 $S(k)$ の近似が存在する: $k$ に関する帰納法で, $h$ から $h \cup \{\pair{S(k)}{g(\pair{k}{h(k)})}\}$ を作る. (iii) $f := \bigcup \mathcal{H}$ とおくと, (i) より $\Fnc(f)$, (ii) より $\dom(f) = \omega$ であり, 再帰式をみたす. 一意性は $n$ に関する帰納法と定理\ref{thm:fnc-ext}による. (Kunen \cite{kunen2011} \S I.9 の超限再帰定理を $\omega$ に制限したものと同じ構造の証明であり, 置換公理を用いない.)
+\end{proof}
+
+定理\ref{thm:recursion-omega}の $f$ は $a, g$ から一意に決まるので, 関数記号 $\mathrm{rec}(a, g)$ として定義できる(定義\ref{dfn:description}). 以下, 「$f(0) = a$, $f(S(n)) = \cdots$ で定める」という定義はすべてこれによる.
+
+\section{自然数の演算}
+
+\begin{dfn}
+  $m \in \omega$ を固定し, 再帰定理で $m + 0 = m$, $m + S(n) = S(m + n)$ をみたす $(n \mapsto m + n) : \omega \to \omega$ を定める. 同様に $m \cdot 0 = 0$, $m \cdot S(n) = m \cdot n + m$. 2項関数記号 $+_\omega, \cdot_\omega$ としては, $m+_\omega n := \mathrm{rec}(m, g_S)(n)$ ($g_S(\pair{k}{x}) = S(x)$) などとおく.
+\end{dfn}
+
+\begin{thm}\label{thm:omega-arith}
+  $\ZFC$ において, $l, m, n \in \omega$ について次が成り立つ.
+  \begin{enumerate}[label=(\arabic*)]
+    \item $m + n \in \omega$, $m \cdot n \in \omega$, $S(n) = n + 1$.
+    \item 結合律・交換律: $(l+m)+n = l+(m+n)$, $m + n = n + m$, $(lm)n = l(mn)$, $mn = nm$.
+    \item 分配律 $l(m+n) = lm + ln$, 単位元 $n + 0 = n$, $n \cdot 1 = n$.
+    \item 簡約律 $l + n = m + n \to l = m$.
+    \item 順序との両立: $l < m \leftrightarrow l + n < m + n$; $n \neq 0 \to (l < m \leftrightarrow l n < m n)$.
+    \item $m \leq n \leftrightarrow \exists k \in \omega\,(m + k = n)$.
+  \end{enumerate}
+\end{thm}
+\begin{proof}
+  いずれも定理\ref{thm:induction}による標準的な帰納法である. 例として $0 + n = n$ を示す: $n = 0$ のとき定義より $0 + 0 = 0$. $0 + n = n$ ならば $0 + S(n) = S(0 + n) = S(n)$ (Eq). よって帰納法により $\forall n \in \omega\,(0 + n = n)$. 交換律は, これと $S(m) + n = S(m + n)$ ($n$ に関する帰納法)を用いて $n$ に関する帰納法で示す. 他も同様である(Kunen \cite{kunenFoM} \S I.9--I.10 参照).
+\end{proof}

@@ -1,0 +1,424 @@
+% 自動生成 (prover/build.js): Tail  ノード数 157
+\begin{fullproof}{[C9]}{$\forall a\,\forall \alpha\,\forall b\,\forall \beta\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \beta \rvert < \varepsilon))$}{157}\phantomsection\label{tree:Tail}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall m\,\forall n\,(n \leq m \cup n)$\lbl{[C8]}}
+\AXC{$\forall m\,\forall n\,(n \leq m \cup n) \to \forall n\,(n \leq N_{1} \cup n)$\lbl{A2}}
+\BIC{$\forall n\,(n \leq N_{1} \cup n)$}
+\AXC{$\forall n\,(n \leq N_{1} \cup n) \to N_{2} \leq N_{1} \cup N_{2}$\lbl{A2}}
+\BIC{$N_{2} \leq N_{1} \cup N_{2}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$N_{2} \leq N_{1} \cup N_{2}$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z)$\lbl{[O5]}}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(N_{2} \leq y \to y \leq z \to N_{2} \leq z)$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\forall z\,(N_{2} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq z \to N_{2} \leq z)$}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$N_{2} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq n \to N_{2} \leq n$}
+\AXC{$\varphi_{88}$\lbl{A1}}
+\BIC{$N_{2} \leq N_{1} \cup N_{2} \to \varphi_{81}$}
+\BIC{$\varphi_{81}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\varphi_{29}$\lbl{A2}}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{55}$\lbl{A1}}
+\AXC{$\varphi_{91}$\lbl{A1}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{58}$}
+\AXC{$\varphi_{94}$\lbl{A1}}
+\BIC{$\varphi_{76}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{56}$}
+\AXC{$\varphi_{98}$\lbl{A1}}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{46}) \to \varphi_{85}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{46}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{46}) \to \varphi_{85}$}
+\BIC{$\varphi_{85}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall m\,\forall n\,(m \leq m \cup n)$\lbl{[C7]}}
+\AXC{$\forall m\,\forall n\,(m \leq m \cup n) \to \forall n\,(N_{1} \leq N_{1} \cup n)$\lbl{A2}}
+\BIC{$\forall n\,(N_{1} \leq N_{1} \cup n)$}
+\AXC{$\forall n\,(N_{1} \leq N_{1} \cup n) \to N_{1} \leq N_{1} \cup N_{2}$\lbl{A2}}
+\BIC{$N_{1} \leq N_{1} \cup N_{2}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$N_{1} \leq N_{1} \cup N_{2}$}
+\AXC{$\forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z)$\lbl{[O5]}}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(N_{1} \leq y \to y \leq z \to N_{1} \leq z)$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall z\,(N_{1} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq z \to N_{1} \leq z)$}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$N_{1} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq n \to N_{1} \leq n$}
+\AXC{$\varphi_{89}$\lbl{A1}}
+\BIC{$N_{1} \leq N_{1} \cup N_{2} \to \varphi_{82}$}
+\BIC{$\varphi_{82}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\varphi_{30}$\lbl{A2}}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{36}$\lbl{A1}}
+\AXC{$\varphi_{84}$\lbl{A1}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{59}$}
+\AXC{$\varphi_{95}$\lbl{A1}}
+\BIC{$\varphi_{77}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{57}$}
+\AXC{$\varphi_{99}$\lbl{A1}}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{46}) \to \varphi_{86}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{46}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{46}) \to \varphi_{86}$}
+\BIC{$\varphi_{86}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{52}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{82}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{49}$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{86}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{54}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{54}$}
+\AXC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{54}) \to \varphi_{90}$\lbl{A1}}
+\BIC{$\varphi_{90}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{52}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{81}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{48}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{85}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{53}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{90}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{65}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{65}$}
+\AXC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{65}) \to \varphi_{70}$\lbl{A1}}
+\BIC{$\varphi_{70}$}
+\UIC{$\forall n\,(\varphi_{70})$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\varphi_{51} \to \forall n\,(\varphi_{51})$\lbl{A4}}
+\AXC{$\forall n\,(\varphi_{70}) \to \forall n\,(\varphi_{51}) \to \varphi_{19}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\forall n\,(\varphi_{70})$}
+\AXC{$\forall n\,(\varphi_{70}) \to (\forall n\,(\varphi_{70}) \to \forall n\,(\varphi_{51}) \to \varphi_{19}) \to \varphi_{96}$\lbl{A1}}
+\BIC{$(\forall n\,(\varphi_{70}) \to \forall n\,(\varphi_{51}) \to \varphi_{19}) \to \varphi_{96}$}
+\BIC{$\varphi_{96}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{62}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to m \cup n \in \mathbb{N})$\lbl{[N3]}}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\BIC{$\forall n\,(N_{1} \in \mathbb{N} \to n \in \mathbb{N} \to N_{1} \cup n \in \mathbb{N})$}
+\AXC{$\varphi_{24}$\lbl{A2}}
+\BIC{$N_{1} \in \mathbb{N} \to N_{2} \in \mathbb{N} \to N_{1} \cup N_{2} \in \mathbb{N}$}
+\AXC{$\varphi_{97}$\lbl{A1}}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{44}) \to \varphi_{80}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{36}$\lbl{A1}}
+\AXC{$\varphi_{79}$\lbl{A1}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{44}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{44}) \to \varphi_{80}$}
+\BIC{$\varphi_{80}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{55}$\lbl{A1}}
+\AXC{$\varphi_{83}$\lbl{A1}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{43}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{80}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{45}$}
+\AXC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{45}) \to \varphi_{93}$\lbl{A1}}
+\BIC{$\varphi_{93}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{62}$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{93}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{69}$}
+\AXC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{69}) \to \varphi_{87}$\lbl{A1}}
+\BIC{$\varphi_{87}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varphi_{22})$\lbl{[C3]}}
+\AXC{$\forall a\,\forall \alpha\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varphi_{22}) \to \varphi_{32}$\lbl{A2}}
+\BIC{$\varphi_{32}$}
+\AXC{$\varphi_{32} \to \forall \varepsilon\,(\mathrm{Conv}(b,\beta) \to \varphi_{21})$\lbl{A2}}
+\BIC{$\forall \varepsilon\,(\mathrm{Conv}(b,\beta) \to \varphi_{21})$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\forall \varepsilon\,(\mathrm{Conv}(b,\beta) \to \varphi_{21})$}
+\AXC{$\forall \varepsilon\,(\mathrm{Conv}(b,\beta) \to \varphi_{21}) \to \mathrm{Conv}(b,\beta) \to \varphi_{21}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(b,\beta) \to \varphi_{21}$}
+\AXC{$(\mathrm{Conv}(b,\beta) \to \varphi_{21}) \to \varphi_{71}$\lbl{A1}}
+\BIC{$\varphi_{71}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$\lbl{A1}}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \mathrm{Conv}(b,\beta)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{71}$}
+\BIC{$\varphi_{67}$}
+\BIC{$\varphi_{3} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{21}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\varphi_{3}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{3} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{21}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{21}$}
+\AXC{$\varphi_{74}$\lbl{A1}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{37}$}
+\AXC{$\varphi_{103}$\lbl{A1}}
+\BIC{$\forall N_{2}\,(\varphi_{72}) \to \varphi_{101}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\forall N_{2}\,(\varphi_{72}) \to \forall N_{2}\,(\varphi_{60}) \to \varphi_{9}$\lbl{A3}}
+\AXC{$\varphi_{25} \to \neg (N_{1} \cup N_{2} \in \mathbb{N} \land \varphi_{19})$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{87}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{64}$}
+\AXC{$\varphi_{92}$\lbl{A1}}
+\BIC{$\varphi_{72}$}
+\UIC{$\forall N_{2}\,(\varphi_{72})$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\forall N_{2}\,(\varphi_{72}) \to \varphi_{101}$}
+\BIC{$\varphi_{101}$}
+\BIC{$(\varphi_{60} \to \forall N_{2}\,(\varphi_{60})) \to \varphi_{39} \to (\varphi_{39} \to \forall N\,(\varphi_{9}) \to \varphi_{5}) \to \varphi_{75}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\varphi_{60} \to \forall N_{2}\,(\varphi_{60})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$(\varphi_{60} \to \forall N_{2}\,(\varphi_{60})) \to \varphi_{39} \to (\varphi_{39} \to \forall N\,(\varphi_{9}) \to \varphi_{5}) \to \varphi_{75}$}
+\BIC{$\varphi_{39} \to (\varphi_{39} \to \forall N\,(\varphi_{9}) \to \varphi_{5}) \to \varphi_{75}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\varphi_{39} \to \forall N\,(\varphi_{9}) \to \varphi_{5}$\lbl{A3}}
+\AXC{$\varphi_{9} \to \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon))$\lbl{A2}}
+\UIC{$\varphi_{39}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{39} \to (\varphi_{39} \to \forall N\,(\varphi_{9}) \to \varphi_{5}) \to \varphi_{75}$}
+\BIC{$(\varphi_{39} \to \forall N\,(\varphi_{9}) \to \varphi_{5}) \to \varphi_{75}$}
+\BIC{$\varphi_{75}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\varphi_{9} \to \forall N\,(\varphi_{9})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{75}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{47}$}
+\AXC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{47}) \to \varphi_{61}$\lbl{A1}}
+\BIC{$\varphi_{61}$}
+\UIC{$\forall N_{1}\,(\varphi_{61})$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varphi_{22})$\lbl{[C3]}}
+\AXC{$\varphi_{66}$\lbl{A2}}
+\BIC{$\forall \alpha\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varphi_{22})$}
+\AXC{$\varphi_{63}$\lbl{A2}}
+\BIC{$\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varphi_{22})$}
+\AXC{$\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varphi_{22}) \to \mathrm{Conv}(a,\alpha) \to \varphi_{22}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\mathrm{Conv}(a,\alpha) \to \varphi_{22}$}
+\AXC{$\varphi_{78}$\lbl{A1}}
+\BIC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \varphi_{68}$}
+\BIC{$\varphi_{68}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\forall N_{1}\,(\varphi_{61})$}
+\AXC{$\varphi_{3}$\lbl{A1}}
+\AXC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{68}$}
+\BIC{$\varphi_{3} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{22}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{22}$}
+\AXC{$\varphi_{102}$\lbl{A1}}
+\BIC{$\forall N_{1}\,(\varphi_{61}) \to \varphi_{100}$}
+\BIC{$\varphi_{100}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\varphi_{8} \to \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon))$\lbl{A2}}
+\UIC{$\varphi_{38}$}
+\AXC{$\varphi_{40} \to \forall N_{1}\,(\varphi_{40})$\lbl{A4}}
+\AXC{$\forall N_{1}\,(\varphi_{61}) \to \forall N_{1}\,(\varphi_{40}) \to \varphi_{8}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{100}$}
+\BIC{$(\varphi_{40} \to \forall N_{1}\,(\varphi_{40})) \to \varphi_{38} \to (\varphi_{38} \to \forall N\,(\varphi_{8}) \to \varphi_{4}) \to \varphi_{73}$}
+\BIC{$\varphi_{38} \to (\varphi_{38} \to \forall N\,(\varphi_{8}) \to \varphi_{4}) \to \varphi_{73}$}
+\BIC{$(\varphi_{38} \to \forall N\,(\varphi_{8}) \to \varphi_{4}) \to \varphi_{73}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{8} \to \forall N\,(\varphi_{8})$\lbl{A4}}
+\AXC{$\varphi_{38} \to \forall N\,(\varphi_{8}) \to \varphi_{4}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$(\varphi_{38} \to \forall N\,(\varphi_{8}) \to \varphi_{4}) \to \varphi_{73}$}
+\BIC{$\varphi_{73}$}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{23}$}
+\UIC{$\varphi_{42}$}
+\UIC{$\forall \beta\,(\varphi_{42})$}
+\UIC{$\forall b\,\forall \beta\,(\varphi_{42})$}
+\UIC{$\forall \alpha\,\forall b\,\forall \beta\,(\varphi_{42})$}
+\UIC{$\forall a\,\forall \alpha\,\forall b\,\forall \beta\,(\varphi_{42})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z) \to \forall y\,\forall z\,(N_{2} \leq y \to y \leq z \to N_{2} \leq z)$
+\item $\varphi_{2} :\equiv \forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z) \to \forall y\,\forall z\,(N_{1} \leq y \to y \leq z \to N_{1} \leq z)$
+\item $\varphi_{3} :\equiv \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon$
+\item $\varphi_{4} :\equiv \forall N\,(\neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{5} :\equiv \forall N\,(\neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon)))$
+\item $\varphi_{6} :\equiv \forall y\,\forall z\,(N_{2} \leq y \to y \leq z \to N_{2} \leq z) \to \forall z\,(N_{2} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq z \to N_{2} \leq z)$
+\item $\varphi_{7} :\equiv \forall y\,\forall z\,(N_{1} \leq y \to y \leq z \to N_{1} \leq z) \to \forall z\,(N_{1} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq z \to N_{1} \leq z)$
+\item $\varphi_{8} :\equiv \forall N_{1}\,(\neg (N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{9} :\equiv \forall N_{2}\,(\neg (N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon)))$
+\item $\varphi_{10} :\equiv n \in \mathbb{N} \to N_{1} \cup N_{2} \leq n \to n \in \mathbb{N} \to N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon$
+\item $\varphi_{11} :\equiv n \in \mathbb{N} \to N_{1} \cup N_{2} \leq n \to n \in \mathbb{N} \to N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon$
+\item $\varphi_{12} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to N_{2} \in \mathbb{N}$
+\item $\varphi_{13} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to N_{1} \in \mathbb{N}$
+\item $\varphi_{14} :\equiv n \in \mathbb{N} \to N_{1} \cup N_{2} \leq n \to \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon)$
+\item $\varphi_{15} :\equiv n \in \mathbb{N} \to N_{1} \cup N_{2} \leq n \to \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{16} :\equiv \forall z\,(N_{2} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq z \to N_{2} \leq z) \to N_{2} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq n \to N_{2} \leq n$
+\item $\varphi_{17} :\equiv \forall z\,(N_{1} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq z \to N_{1} \leq z) \to N_{1} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq n \to N_{1} \leq n$
+\item $\varphi_{18} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to N_{1} \cup N_{2} \in \mathbb{N}$
+\item $\varphi_{19} :\equiv \forall n \in \mathbb{N}\,(N_{1} \cup N_{2} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \beta \rvert < \varepsilon)$
+\item $\varphi_{20} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{21} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon)$
+\item $\varphi_{22} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{23} :\equiv \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \beta \rvert < \varepsilon)$
+\item $\varphi_{24} :\equiv \forall n\,(N_{1} \in \mathbb{N} \to n \in \mathbb{N} \to N_{1} \cup n \in \mathbb{N}) \to N_{1} \in \mathbb{N} \to N_{2} \in \mathbb{N} \to N_{1} \cup N_{2} \in \mathbb{N}$
+\item $\varphi_{25} :\equiv \forall N\,(\neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \beta \rvert < \varepsilon)))$
+\item $\varphi_{26} :\equiv \forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to m \cup n \in \mathbb{N}) \to \forall n\,(N_{1} \in \mathbb{N} \to n \in \mathbb{N} \to N_{1} \cup n \in \mathbb{N})$
+\item $\varphi_{27} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to n \in \mathbb{N} \to N_{1} \cup N_{2} \leq n \to N_{2} \leq n$
+\item $\varphi_{28} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to n \in \mathbb{N} \to N_{1} \cup N_{2} \leq n \to N_{1} \leq n$
+\item $\varphi_{29} :\equiv \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to n \in \mathbb{N} \to N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon$
+\item $\varphi_{30} :\equiv \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to n \in \mathbb{N} \to N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon$
+\item $\varphi_{31} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to n \in \mathbb{N} \to N_{1} \cup N_{2} \leq n \to N_{1} \cup N_{2} \leq n$
+\item $\varphi_{32} :\equiv \forall \alpha\,\forall \varepsilon\,(\mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert b_{n} - \alpha \rvert < \varepsilon))$
+\item $\varphi_{33} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to n \in \mathbb{N} \to N_{1} \cup N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon$
+\item $\varphi_{34} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to n \in \mathbb{N} \to N_{1} \cup N_{2} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon$
+\item $\varphi_{35} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon)$
+\item $\varphi_{36} :\equiv N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)$
+\item $\varphi_{37} :\equiv N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon)$
+\item $\varphi_{38} :\equiv \forall N\,(\varphi_{8} \to \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{39} :\equiv \forall N\,(\varphi_{9} \to \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon)))$
+\item $\varphi_{40} :\equiv \mathrm{Conv}(a,\alpha) \land \mathrm{Conv}(b,\beta) \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \varphi_{23}$
+\item $\varphi_{41} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to n \in \mathbb{N} \to N_{1} \cup N_{2} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \beta \rvert < \varepsilon$
+\item $\varphi_{42} :\equiv \forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{23})$
+\item $\varphi_{43} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{12}$
+\item $\varphi_{44} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{13}$
+\item $\varphi_{45} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{18}$
+\item $\varphi_{46} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{20}$
+\item $\varphi_{47} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{23}$
+\item $\varphi_{48} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{27}$
+\item $\varphi_{49} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{28}$
+\item $\varphi_{50} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to N_{1} \cup N_{2} \in \mathbb{N} \land \varphi_{19}$
+\item $\varphi_{51} :\equiv \mathrm{Conv}(a,\alpha) \land \mathrm{Conv}(b,\beta) \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land (N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)) \land (N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon))$
+\item $\varphi_{52} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{31}$
+\item $\varphi_{53} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{33}$
+\item $\varphi_{54} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{34}$
+\item $\varphi_{55} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{35}$
+\item $\varphi_{56} :\equiv N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to \varphi_{10}$
+\item $\varphi_{57} :\equiv N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to \varphi_{11}$
+\item $\varphi_{58} :\equiv N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to \varphi_{14}$
+\item $\varphi_{59} :\equiv N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to \varphi_{15}$
+\item $\varphi_{60} :\equiv \mathrm{Conv}(a,\alpha) \land \mathrm{Conv}(b,\beta) \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land (N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)) \land \neg \varphi_{23}$
+\item $\varphi_{61} :\equiv \varphi_{40} \to \neg (N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon))$
+\item $\varphi_{62} :\equiv N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to \varphi_{19}$
+\item $\varphi_{63} :\equiv \forall \alpha\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varphi_{22}) \to \forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varphi_{22})$
+\item $\varphi_{64} :\equiv N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon) \to \varphi_{23}$
+\item $\varphi_{65} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{41}$
+\item $\varphi_{66} :\equiv \forall a\,\forall \alpha\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varphi_{22}) \to \forall \alpha\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varphi_{22})$
+\item $\varphi_{67} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{3} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{21}$
+\item $\varphi_{68} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{3} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{22}$
+\item $\varphi_{69} :\equiv 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon) \to \varphi_{50}$
+\item $\varphi_{70} :\equiv \varphi_{51} \to n \in \mathbb{N} \to N_{1} \cup N_{2} \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \beta \rvert < \varepsilon$
+\item $\varphi_{71} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \mathrm{Conv}(b,\beta)) \to \varphi_{67}$
+\item $\varphi_{72} :\equiv \varphi_{60} \to \neg (N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - \beta \rvert < \varepsilon))$
+\item $\varphi_{73} :\equiv (\varphi_{8} \to \forall N\,(\varphi_{8})) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{23}$
+\item $\varphi_{74} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{21}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{37}$
+\item $\varphi_{75} :\equiv (\varphi_{9} \to \forall N\,(\varphi_{9})) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{47}$
+\item $\varphi_{76} :\equiv \varphi_{29} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{56}$
+\item $\varphi_{77} :\equiv \varphi_{30} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{57}$
+\item $\varphi_{78} :\equiv (\mathrm{Conv}(a,\alpha) \to \varphi_{22}) \to (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \varphi_{68}$
+\item $\varphi_{79} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{36}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{44}$
+\item $\varphi_{80} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{43}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{45}$
+\item $\varphi_{81} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{52}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{48}$
+\item $\varphi_{82} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{52}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{49}$
+\item $\varphi_{83} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{55}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{43}$
+\item $\varphi_{84} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{36}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{59}$
+\item $\varphi_{85} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{48}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{53}$
+\item $\varphi_{86} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{49}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{54}$
+\item $\varphi_{87} :\equiv (\varphi_{25} \to \neg (N_{1} \cup N_{2} \in \mathbb{N} \land \varphi_{19})) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{64}$
+\item $\varphi_{88} :\equiv (N_{2} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq n \to N_{2} \leq n) \to N_{2} \leq N_{1} \cup N_{2} \to \varphi_{81}$
+\item $\varphi_{89} :\equiv (N_{1} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq n \to N_{1} \leq n) \to N_{1} \leq N_{1} \cup N_{2} \to \varphi_{82}$
+\item $\varphi_{90} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{53}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{65}$
+\item $\varphi_{91} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{55}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{58}$
+\item $\varphi_{92} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{64}) \to \varphi_{72}$
+\item $\varphi_{93} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{62}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{69}$
+\item $\varphi_{94} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{58}) \to \varphi_{76}$
+\item $\varphi_{95} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{59}) \to \varphi_{77}$
+\item $\varphi_{96} :\equiv (\varphi_{51} \to \forall n\,(\varphi_{51})) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{62}$
+\item $\varphi_{97} :\equiv (N_{1} \in \mathbb{N} \to N_{2} \in \mathbb{N} \to N_{1} \cup N_{2} \in \mathbb{N}) \to (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{44}) \to \varphi_{80}$
+\item $\varphi_{98} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{56}) \to (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{46}) \to \varphi_{85}$
+\item $\varphi_{99} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{57}) \to (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to \varphi_{46}) \to \varphi_{86}$
+\item $\varphi_{100} :\equiv (\forall N_{1}\,(\varphi_{61}) \to \forall N_{1}\,(\varphi_{40}) \to \varphi_{8}) \to (\varphi_{40} \to \forall N_{1}\,(\varphi_{40})) \to \varphi_{38} \to (\varphi_{38} \to \forall N\,(\varphi_{8}) \to \varphi_{4}) \to \varphi_{73}$
+\item $\varphi_{101} :\equiv (\forall N_{2}\,(\varphi_{72}) \to \forall N_{2}\,(\varphi_{60}) \to \varphi_{9}) \to (\varphi_{60} \to \forall N_{2}\,(\varphi_{60})) \to \varphi_{39} \to (\varphi_{39} \to \forall N\,(\varphi_{9}) \to \varphi_{5}) \to \varphi_{75}$
+\item $\varphi_{102} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varphi_{22}) \to \forall N_{1}\,(\varphi_{61}) \to \varphi_{100}$
+\item $\varphi_{103} :\equiv (\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{37}) \to \forall N_{2}\,(\varphi_{72}) \to \varphi_{101}$
+\end{abbrevlist}
+\end{fullproof}

@@ -1,0 +1,390 @@
+\chapter{関数の極限}\label{ch:text4}
+
+\begin{textref}{第4章 1節--4節}
+  関数の極限(1節: 定義1.1, 1.3, 定理1.7--1.13, 片側極限 1.15--1.19), 連続関数(2節: 定義2.1--2.8, 定理2.3--2.10, 中間値の定理 2.14, 最大値・最小値の定理 2.17, 逆関数 2.20--2.21), 初等関数(3節: 指数関数・対数関数), 一様連続性(4節: 定義4.1, 定理4.3, 4.6)を扱う.
+\end{textref}
+
+\section{関数の極限の定義}
+
+実数値関数とは, $\Fnc(f)$, $\dom(f) \subseteq \R$, $\ran(f) \subseteq \R$ をみたす $f$ のことであり, これを $\mathrm{RFn}(f)$ と書く. 関数値 $f(x)$ が実数であること等の集合論的事実は付録の基礎定理 [S6]--[S9] である.
+
+テキストの定義1.1は「$f$ は少なくとも点 $a$ の近傍から点 $a$ を除いたところでは定義されている」ことを前提とする. これを次の述語で表す.
+
+\begin{dfn}
+  \[ \mathrm{PNbhd}(f, c) :\leftrightarrow \exists r\,\bigl(r \in \R \land 0 < r \land \forall x\,(x \in \R \to 0 < \abs{x - c} \to \abs{x - c} < r \to x \in \dom(f))\bigr). \]
+\end{dfn}
+
+\begin{dfn}[テキスト定義1.1]\label{dfn:flim}
+  述語記号 $\mathrm{FLim}$ を次の定義公理で導入する.
+  \begin{align*}
+    \mathrm{FLim}(f, c, \alpha) :\leftrightarrow{}& \mathrm{RFn}(f) \land c \in \R \land \alpha \in \R \land \mathrm{PNbhd}(f, c) \\
+    & \land \forall \varepsilon\,\bigl(\varepsilon \in \R \to 0 < \varepsilon \to \exists\delta\,(\delta \in \R \land 0 < \delta \\
+    & \qquad \land \forall x\,(x \in \dom(f) \to 0 < \abs{x - c} \to \abs{x - c} < \delta \to \abs{f(x) - \alpha} < \varepsilon))\bigr).
+  \end{align*}
+  テキストの $\lim_{x \to c} f(x) = \alpha$ は $\mathrm{FLim}(f, c, \alpha)$ を意味する.
+\end{dfn}
+
+テキストでは「$0 < \abs{x - a} < \delta$ をみたす任意の $x$」と書かれているが, $f(x)$ が意味をもつのは $x \in \dom(f)$ のときだけなので, 条件 $x \in \dom(f)$ を明示した. $\mathrm{PNbhd}(f, c)$ のもとで $\delta$ を小さくとれば, 両者は同値である.
+
+\begin{lem}\label{lem:flim-unfold}
+  \begin{enumerate}[label={[D\arabic*]}]
+    \item $\mathrm{FLim}(f, c, \alpha) \to \varepsilon \in \R \to 0 < \varepsilon \to \exists \delta\,(\delta \in \R \land 0 < \delta \land \forall x\,(\cdots))$.
+    \item $\mathrm{FLim}(f, c, \alpha) \to \mathrm{RFn}(f)$.
+    \item $\mathrm{FLim}(f, c, \alpha) \to c \in \R$.
+    \item $\mathrm{FLim}(f, c, \alpha) \to \alpha \in \R$.
+    \item $\mathrm{FLim}(f, c, \alpha) \to \mathrm{PNbhd}(f, c)$.
+    \item $x \in \R \to \abs{x} = 0 \to x = 0$.
+    \item $x, y \in \R \to x - y = 0 \to x = y$.
+    \item $p, q \in \R \to 0 < p \to 0 < q \to \exists d\,(d \in \R \land 0 < d \land d \leq p \land d \leq q)$.
+  \end{enumerate}
+\end{lem}
+\begin{proof}[通常の証明]
+  [D1]--[D5] は定義公理の例化. [D6] は [A14] の対偶. [D7] $x = (x - y) + y = 0 + y = y$. [D8] (R13) で $p, q$ を比較し, 小さい方をとる.
+\end{proof}
+
+\trees{FLimE,FLimRFn,FLimCR,FLimAR,FLimNb,AbsZeroEq,SubZeroEq,MinPos}
+
+\begin{dfn}[テキスト定義1.3]\label{dfn:flim-inf}
+  $x \to \infty$ での極限を次の定義公理で導入する.
+  \begin{align*}
+    \mathrm{FLimInf}(f, \alpha) :\leftrightarrow{}& \mathrm{RFn}(f) \land \alpha \in \R \\
+    & \land \exists r\,\bigl(r \in \R \land \forall x\,(x \in \R \to r < x \to x \in \dom(f))\bigr) \\
+    & \land \forall\varepsilon\,\bigl(\varepsilon \in \R \to 0 < \varepsilon \\
+    & \qquad \to \exists L\,(L \in \R \land \forall x\,(x \in \dom(f) \to L < x \to \abs{f(x) - \alpha} < \varepsilon))\bigr).
+  \end{align*}
+\end{dfn}
+$x \to \infty$ に関する定理は本ノートでは扱わない($x \to c$ の場合と同様に形式化できる).
+
+\section{関数の極限と数列の極限}
+
+関数 $f$ と, 各項が $\dom(f)$ に属する数列 $a$ に対して, 合成 $f \circ a := (n \in \N \mapsto f(a_n))$ を定義する. これが数列で値が $f(a_n)$ であることは基礎定理 [S8] である.
+
+\medskip\noindent\textbf{可算選択.}\quad
+定理1.7($\Leftarrow$)の証明では, 各 $k \in \N$ について条件 $\psi(k, x)$ をみたす $x$ が存在することから, すべての $k$ で $\psi(k, q_k)$ をみたす数列 $q$ の存在を導く(可算選択). これは選択公理から次のように示される: $A_k := \{x \in \R \mid \psi(k, x)\}$ ($k \in \N$) は空でないので, 選択関数 $F : \mathcal{P}(\R) \setminus \{\emptyset\} \to \R$ をとり $q_k := F(A_k)$ とおけばよい(Kunen \cite{kunen2011} \S I.12). 本ノートで用いる $\psi$ の具体形ごとのインスタンスを基礎定理 [CC1]--[CC6] として登録した(付録\ref{app:found}). 後の定理2.17, 4.6 の証明でも同じ図式を用いる.
+
+\begin{lem}\label{lem:fun-aux}
+  \lemlist{AddSub,Inv1,AbsSelf0,PosAbsNe,ApproxSeq}
+\end{lem}
+\begin{proof}[通常の証明]
+  [E35]--[E38] は順序体の計算. [H1] $c \in \R$, $r > 0$ に対して $a_n := c + r(\iota(n) + 1)^{-1}$ (基礎定理 [S22]) とおくと, $0 < a_n - c < r$ かつ $a_n \to c$ (アルキメデスの公理).
+\end{proof}
+
+\begin{thm}[関数の極限と数列の極限の関係. テキスト定理1.7]\label{thm:seqcrit}
+  $\mathrm{FLim}(f, c, \alpha)$ となるための必要十分条件は, $\mathrm{RFn}(f)$, $c, \alpha \in \R$, $\mathrm{PNbhd}(f, c)$ であって, $\Conv(a, c)$ かつすべての $n$ で $a_n \in \dom(f)$, $a_n \neq c$ をみたす任意の数列 $a$ について $\Conv(f \circ a, \alpha)$ となることである.
+\end{thm}
+\begin{proof}[通常の証明(テキストと同じ)]
+  ($\Rightarrow$) $\varepsilon > 0$ に対して [D1] で $\delta$ をとり, $\Conv(a, c)$ を $\delta$ に適用して $N$ をとる. $n \geq N$ なら $\abs{a_n - c} < \delta$ であり, $a_n \neq c$ より $0 < \abs{a_n - c}$ ([A15][A14]) なので $\abs{f(a_n) - \alpha} < \varepsilon$.
+
+  ($\Leftarrow$) 背理法. $\mathrm{FLim}(f, c, \alpha)$ でないとすると, ある $\varepsilon_0 > 0$ があって, 任意の $k \in \N$ に対して $0 < \abs{x - c} < \iota(k)^{-1}$, $\abs{f(x) - \alpha} \geq \varepsilon_0$ となる $x \in \dom(f)$ が存在する. 可算選択 [CC1] でそのような $q_k$ を選ぶと, $\Conv(q, c)$ ([C24][C25]) だが $f \circ q$ は $\alpha$ に収束しない.
+\end{proof}
+\fs{SeqCrit}
+\fs{SeqCritInv}
+\fs{FLimSeq}
+
+\section{関数の極限の性質}
+
+\begin{textref}{第4章 1.2節 定理1.8, 1.9, 1.10, 1.11, 1.13}
+  関数の極限の和・積・商, 大小関係, はさみうち法, 合成関数, Cauchy の判定法.
+\end{textref}
+
+実数値関数 $f, g$ と $\lambda \in \R$ に対して, 和 $f + g$, 積 $f \cdot g$, 定数倍 $\lambda f$, 商 $f / g$, 絶対値 $\abs{f}$ を定義 $(x \in A \mapsto t)$ で定める. 例えば $\dom(f + g) = \dom(f) \cap \dom(g)$, $(f + g)(x) = f(x) + g(x)$, $\dom(f/g) = \{x \in \dom(f) \cap \dom(g) \mid g(x) \neq 0\}$. これらは基礎定理 [S17]--[S21] である.
+
+\begin{lem}\lemlist{PNbhdInter}\end{lem}
+\begin{proof}[通常の証明]
+  2つの除外近傍の半径の小さい方をとる([D8]).
+\end{proof}
+
+\begin{thm}[テキスト定理1.8]
+  $\lim_{x \to c} f(x) = \alpha$, $\lim_{x \to c} g(x) = \beta$ ならば
+  \begin{enumerate}[label=(\arabic*)]
+    \item $\lim (f + g)(x) = \alpha + \beta$, $\lim \lambda f(x) = \lambda\alpha$,
+    \item $\lim (f \cdot g)(x) = \alpha\beta$,
+    \item $\beta \neq 0$ ならば $\lim (f/g)(x) = \alpha\beta^{-1}$.
+  \end{enumerate}
+\end{thm}
+\begin{proof}[通常の証明]
+  定理1.7 により数列の極限の定理(第3章 定理2.1, 2.7, 2.9)に帰着する. 例えば (1) は, $a_n \to c$ ($a_n \in \dom(f+g)$, $a_n \neq c$)について $(f+g)(a_n) = f(a_n) + g(a_n) \to \alpha + \beta$ による. 除外近傍で定義されていることは [H2] から. (3) では $g(x)$ が $c$ の近くで $0$ にならないこと(定理2.7 と同じ議論)を用いて $\dom(f/g)$ が除外近傍を含むことを示す.
+\end{proof}
+\fs{FLimAdd}
+\fs{FLimScal}
+\fs{FLimMul}
+\fs{FLimDiv}
+
+\begin{thm}[テキスト定理1.9]
+  $\lim f(x) = \alpha$, $\lim g(x) = \beta$ であり, ある $r > 0$ について $0 < \abs{x - c} < r$ ($x \in \dom(f) \cap \dom(g)$) で $f(x) \leq g(x)$ ならば $\alpha \leq \beta$.
+\end{thm}
+\begin{proof}[通常の証明]
+  [H1] で除外近傍に属し $c$ に収束する数列 $a$ をとり, 定理1.7 と第3章定理2.5 を用いる.
+\end{proof}
+\fs{FLimLe}
+
+\begin{thm}[はさみうち法. テキスト定理1.10]\label{thm:fsqueeze}
+  $\mathrm{FLim}(f, c, \alpha)$, $\mathrm{FLim}(g, c, \alpha)$, $\mathrm{RFn}(h)$, $\mathrm{PNbhd}(h, c)$ であり, ある $r > 0$ について, $0 < \abs{x - c} < r$ をみたす任意の $x \in \dom(h)$ で $x \in \dom(f) \cap \dom(g)$ かつ $f(x) \leq h(x) \leq g(x)$ ならば, $\mathrm{FLim}(h, c, \alpha)$.
+\end{thm}
+\begin{proof}[通常の証明]
+  $\varepsilon > 0$ に対して $f, g$ の $\delta_1, \delta_2$ をとり, [D8] を2回用いて $\delta \leq \delta_1, \delta_2, r$ となる $\delta > 0$ をとる. $x \in \dom(h)$, $0 < \abs{x - c} < \delta$ なら, $\abs{f(x) - \alpha} < \varepsilon$, $\abs{g(x) - \alpha} < \varepsilon$, $f(x) \leq h(x) \leq g(x)$ なので [C12] より $\abs{h(x) - \alpha} < \varepsilon$.
+\end{proof}
+\fs{FSqueeze}
+
+実数値関数 $g, f$ に対して, 合成 $g \circ f$ を $\dom(g \circ f) = \{x \in \dom(f) \mid f(x) \in \dom(g)\}$, $(g \circ f)(x) = g(f(x))$ で定める(基礎定理 [S9]).
+
+\begin{thm}[合成関数の極限. テキスト定理1.11]\label{thm:flim-comp}
+  $\mathrm{FLim}(f, c, b)$, $\mathrm{FLim}(g, b, g(b))$, $b \in \dom(g)$, $\mathrm{PNbhd}(g \circ f, c)$ ならば $\mathrm{FLim}(g \circ f, c, g(b))$.
+\end{thm}
+\begin{proof}[通常の証明(テキストと同じ)]
+  $\varepsilon > 0$ に対し, $g$ について $\delta_1$ をとる. $y = b$ のときも $\abs{g(y) - g(b)} = 0 < \varepsilon$ なので, $y \in \dom(g)$, $\abs{y - b} < \delta_1$ ならば $\abs{g(y) - g(b)} < \varepsilon$ ([A6], [D6], [D7]). 次に $f$ について $\delta_1$ に対する $\delta_2$ をとると, $x \in \dom(g \circ f)$, $0 < \abs{x - c} < \delta_2$ なら $\abs{f(x) - b} < \delta_1$ なので $\abs{g(f(x)) - g(b)} < \varepsilon$.
+\end{proof}
+\fs{FLimComp}
+
+テキストは「$f$ は点 $a$ の近傍で定義され」と仮定しているが, $g \circ f$ が点 $c$ の除外近傍で定義されていることは自動的には従わないので, $\mathrm{PNbhd}(g \circ f, c)$ を仮定に加えた.
+
+\begin{thm}[Cauchy の収束判定法. テキスト定理1.13]
+  $\mathrm{RFn}(f)$, $c \in \R$, $\mathrm{PNbhd}(f, c)$ とする. $\lim_{x \to c} f(x)$ が存在するための必要十分条件は, 任意の $\varepsilon > 0$ に対してある $\delta > 0$ が存在して, $0 < \abs{x - c} < \delta$, $0 < \abs{y - c} < \delta$ をみたす任意の $x, y \in \dom(f)$ について $\abs{f(x) - f(y)} < \varepsilon$ となることである.
+\end{thm}
+\begin{proof}[通常の証明(テキストと同じ)]
+  ($\Rightarrow$) $\abs{f(x) - f(y)} \leq \abs{f(x) - \alpha} + \abs{\alpha - f(y)}$. ($\Leftarrow$) [H1] の数列 $p$ について $f \circ p$ は Cauchy 列なので, 第3章定理6.11 より極限 $\alpha$ をもつ. 定理1.7 の条件を確かめる: $a_n \to c$ ならば, $\varepsilon/2$ に対する $\delta$, $f \circ p$ の $N_1$, $a$ と $p$ の $N_2$ をとると, $n \geq \max\{N_1, N_2\}$ で $\abs{f(a_n) - \alpha} \leq \abs{f(a_n) - f(p_n)} + \abs{f(p_n) - \alpha} < \varepsilon$.
+\end{proof}
+\fs{FCauchy}
+
+\section{右極限・左極限}
+
+\begin{textref}{第4章 1.4節 定義1.15, 1.16, 定理1.19}
+  片側極限と, 極限が存在することと左右の極限が一致することの同値性.
+\end{textref}
+
+\begin{dfn}[テキスト定義1.15, 1.16]
+  \begin{align*}
+    \mathrm{RNbhd}(f, c) &:\leftrightarrow \exists r\,\bigl(r \in \R \land 0 < r \land \forall x\,(x \in \R \to c < x \to x < c + r \to x \in \dom(f))\bigr),\\
+    \mathrm{FLimR}(f, c, \alpha) &:\leftrightarrow \mathrm{RFn}(f) \land c, \alpha \in \R \land \mathrm{RNbhd}(f, c) \\
+    &\qquad \land \forall\varepsilon\,\bigl(\varepsilon \in \R \to 0 < \varepsilon \to \exists\delta\,(\delta \in \R \land 0 < \delta \\
+    &\qquad\qquad \land \forall x\,(x \in \dom(f) \to c < x \to x < c + \delta \to \abs{f(x) - \alpha} < \varepsilon))\bigr).
+  \end{align*}
+  左側の $\mathrm{LNbhd}$, $\mathrm{FLimL}$ も同様に($c - r < x < c$, $c - \delta < x < c$ で)定める. テキストの $\lim_{x \to c+0} f(x) = \alpha$ は $\mathrm{FLimR}(f, c, \alpha)$ である.
+\end{dfn}
+
+\begin{lem}\lemlist{RightAbs,LtAddSwap2,LeftAbs,NeSides,SideR,SideL}\end{lem}
+\begin{proof}[通常の証明]
+  いずれも順序体の計算: $c < x < c + d \leftrightarrow 0 < \abs{x - c} < d \land c < x$ など.
+\end{proof}
+
+\begin{thm}[テキスト定理1.19]
+  $\mathrm{FLim}(f, c, \alpha) \leftrightarrow \mathrm{FLimR}(f, c, \alpha) \land \mathrm{FLimL}(f, c, \alpha)$.
+\end{thm}
+\begin{proof}[通常の証明(テキストと同じ)]
+  ($\Rightarrow$) 同じ $\delta$ でよい([H3][H5]). ($\Leftarrow$) 右極限と左極限の $\delta_1, \delta_2$ の小さい方を $\delta$ とすると, $0 < \abs{x - c} < \delta$ なら $x > c$ または $x < c$ ([H6]) であり, それぞれ [H7][H8] によりいずれかの評価が使える. 除外近傍についても同様.
+\end{proof}
+\fs{FLimLR}
+
+テキストの $\lim_{x \to c+0} f(x) = \pm\infty$ などの発散の場合は形式化していない.
+
+\section{各点における連続性}
+
+\begin{textref}{第4章 2.1節 定義2.1, 2.2, 定理2.3, 2.4, 2.6, 2.7}
+  各点での連続性, 右連続・左連続, 連続性の演算・合成に関する性質, 符号の保存.
+\end{textref}
+
+テキストの定義2.1 は「$\lim_{x \to a} f(x) = f(a)$」である. 区間の端点などで除外近傍が定義域に含まれない場合も扱えるよう, 本ノートでは $\varepsilon$--$\delta$ で直接定め, テキストの定義との同値性を命題として示す.
+
+\begin{dfn}[テキスト定義2.1, 2.2]
+  \begin{align*}
+    \mathrm{ContIn}(f, A, c) :\leftrightarrow{}& \mathrm{RFn}(f) \land A \subseteq \dom(f) \land c \in A \\
+    & \land \forall\varepsilon\,\bigl(\varepsilon \in \R \to 0 < \varepsilon \to \exists\delta\,(\delta \in \R \land 0 < \delta \\
+    & \qquad \land \forall x\,(x \in A \to \abs{x - c} < \delta \to \abs{f(x) - f(c)} < \varepsilon))\bigr),\\
+    \mathrm{Cont}(f, c) :\leftrightarrow{}& \mathrm{ContIn}(f, \dom(f), c).
+  \end{align*}
+  $\mathrm{ContIn}(f, A, c)$ は「$f$ の $A$ への制限が点 $c$ で連続」を表す. 右連続 $\mathrm{RCont}(f, c)$ は $x \in \dom(f)$, $c \leq x < c + \delta$ について $\abs{f(x) - f(c)} < \varepsilon$ となること, 左連続 $\mathrm{LCont}(f, c)$ も同様である.
+\end{dfn}
+
+\begin{lem}\lemlist{ContInSeq,ContSeqInv,ContInSub,HalfLt,SubNonneg,LeftAbsLe,NegSubLt,SubRefl,AbsLtBoth,RightAbsLe}\end{lem}
+\begin{proof}[通常の証明]
+  [G1] 連続ならば $A$ の点列 $a_n \to c$ について $f(a_n) \to f(c)$ (定理1.7($\Rightarrow$)と同じ). [G2] その逆. 背理法で, 可算選択 [CC2] により反例の点列を作る. [G3] 部分集合に制限しても連続. [E39]--[E47] は順序体の計算.
+\end{proof}
+
+\begin{prop}[テキスト定義2.1 との同値性]
+  $\mathrm{PNbhd}(f, c)$, $c \in \dom(f)$ ならば $\mathrm{Cont}(f, c) \leftrightarrow \mathrm{FLim}(f, c, f(c))$.
+\end{prop}
+\begin{proof}[通常の証明]
+  ($\Rightarrow$) $0 < \abs{x - c}$ の条件を弱めるだけ. ($\Leftarrow$) $x = c$ のときは $\abs{f(c) - f(c)} = 0 < \varepsilon$.
+\end{proof}
+\fs{ContLim}
+
+\begin{thm}[テキスト定理2.3]
+  $f, g$ が $A$ 上で点 $c$ において連続ならば, $f + g$, $\lambda f$, $f \cdot g$, $\abs{f}$ も点 $c$ で連続であり, $A$ 上で $g(x) \neq 0$ ならば $f/g$ も点 $c$ で連続である.
+\end{thm}
+\begin{proof}[通常の証明]
+  [G1][G2] により数列の極限の定理(第3章 定理2.1, 2.7, 2.9, 2.15)に帰着する.
+\end{proof}
+\fs{ContInAdd}
+\fs{ContInScal}
+\fs{ContInMul}
+\fs{ContInAbs}
+\fs{ContInDiv}
+
+\begin{thm}[テキスト定理2.4]
+  $\mathrm{Cont}(f, c) \leftrightarrow \mathrm{RCont}(f, c) \land \mathrm{LCont}(f, c)$.
+\end{thm}
+\begin{proof}[通常の証明]
+  定理1.19 と同様に, $\delta$ の小さい方をとり $x \geq c$, $x \leq c$ で場合分けする.
+\end{proof}
+\fs{ContRL}
+
+\begin{thm}[合成関数の各点での連続性. テキスト定理2.6]
+  $f$ が $A$ 上で点 $c$ において連続, $g$ が $B$ 上で点 $f(c)$ において連続で, $f(A) \subseteq B$ ならば, $g \circ f$ は $A$ 上で点 $c$ において連続である.
+\end{thm}
+\begin{proof}[通常の証明(テキストと同じ)]
+  $\varepsilon$ に対する $g$ の $\delta_1$, $\delta_1$ に対する $f$ の $\delta_2$ をとればよい.
+\end{proof}
+\fs{ContInComp}
+
+\begin{thm}[符号の保存. テキスト定理2.7]
+  $f$ が $A$ 上で点 $c$ において連続で $f(c) > 0$ ならば, ある $\delta > 0$ が存在して, $x \in A$, $\abs{x - c} < \delta$ ならば $f(x) > f(c)/2\ (> 0)$.
+\end{thm}
+\begin{proof}[通常の証明(テキストと同じ)]
+  $\varepsilon := f(c)/2$ とおけばよい.
+\end{proof}
+\fs{ContPos}
+
+\section{連続関数}
+
+\begin{dfn}[テキスト定義2.8]
+  $\mathrm{ContOn}(f, A) :\leftrightarrow \mathrm{RFn}(f) \land A \subseteq \dom(f) \land \forall c\,(c \in A \to \mathrm{ContIn}(f, A, c))$. 閉区間 $[a, b] := \{x \in \R \mid a \leq x \leq b\}$ を関数記号 $\mathrm{cint}(a, b)$ として定める.
+\end{dfn}
+
+\begin{thm}[テキスト定理2.9, 2.10]
+  $A$ 上の連続関数の和は $A$ 上連続である. $f$ が $A$ 上, $g$ が $B$ 上で連続で $f(A) \subseteq B$ ならば $g \circ f$ は $A$ 上連続である.
+\end{thm}
+\begin{proof}[通常の証明]
+  定理2.3, 2.6 を各点に適用する(定数倍・積・商も同様).
+\end{proof}
+\fs{ContOnAdd}
+\fs{ContOnComp}
+
+\section{有界閉区間上の連続関数}
+
+\begin{textref}{第4章 2.3節 定理2.14, 2.17}
+  中間値の定理と最大値・最小値の定理.
+\end{textref}
+
+\begin{thm}[中間値の定理. テキスト定理2.14]
+  $f$ が $[a, b]$ 上で連続, $a < b$, $f(a) < \mu < f(b)$ ならば, $a < \xi < b$, $f(\xi) = \mu$ をみたす $\xi \in \R$ が存在する.
+\end{thm}
+\begin{proof}[通常の証明]
+  テキストは区間縮小法による. ここでは上限を用いる. $W := \{x \in [a, b] \mid f(x) < \mu\}$ は $a$ を含み $b$ で上から抑えられるので $\xi := \sup W$ が存在し, $a \leq \xi \leq b$. (i) $f(\xi) < \mu$ とすると, $\xi < b$ であり, 連続性から $\xi$ より少し大きい $x \in [a, b]$ で $f(x) < \mu$ となり, $\xi$ が上界であることに反する. (ii) $\mu < f(\xi)$ とすると, 連続性から $\xi$ の少し左の区間で $f(x) > \mu$ となり, $\xi$ より小さい上界が得られて $\xi$ が最小の上界であることに反する. よって $f(\xi) = \mu$ であり, $f(a) < \mu < f(b)$ より $\xi \neq a, b$.
+\end{proof}
+\fs{IVT}
+
+\begin{lem}\lemlist{ConstConv,CintClosed,CintBdd,BWin,SubLtTwo,SubLtAnti,EVTBdd}\end{lem}
+\begin{proof}[通常の証明]
+  [G4] 定数列の極限. [G5] $[a, b]$ の点列の極限は $[a, b]$ に属する(第3章 定理2.5). [G6] $x \in [a, b] \to \abs{x} \leq \abs{a} + \abs{b}$. [G7] $[a, b]$ の点列は $[a, b]$ の点に収束する部分列をもつ(Bolzano--Weierstrass と [G5]). [G8] $[a, b]$ 上の連続関数は上に有界: 有界でなければ可算選択 [CC3] で $f(q_k) > \iota(k)$ をみたす点列 $q$ をとり, [G7] の部分列の極限 $c$ で [G1] を適用すると $f(q_{s_k}) \to f(c)$ となって矛盾.
+\end{proof}
+
+\begin{thm}[最大値・最小値の定理. テキスト定理2.17]
+  $f$ が $[a, b]$ ($a \leq b$) 上で連続ならば, $f$ は $[a, b]$ で最大値と最小値をとる.
+\end{thm}
+\begin{proof}[通常の証明(テキストと同じ)]
+  [G8] より $\sigma := \sup\{f(x) \mid x \in [a, b]\}$ が存在する. [C22] と可算選択 [CC4] で $f(q_k) > \sigma - \iota(k)^{-1}$ をみたす $[a, b]$ の点列 $q$ をとり, [G7] で $c \in [a, b]$ に収束する部分列 $q \circ s$ をとると, $f(q_{s_k}) \to f(c)$ ([G1]) かつ $f(q_{s_k}) \to \sigma$ なので $f(c) = \sigma$. 最小値は $-f$ に適用する.
+\end{proof}
+\fs{EVT}
+\fs{EVTMin}
+
+\section{逆関数}
+
+\begin{textref}{第4章 2.4節 定義2.20, 定理2.21}
+  狭義単調増加な連続関数の逆関数の存在と連続性.
+\end{textref}
+
+\begin{dfn}
+  \begin{align*}
+    \mathrm{StrInc}(f, A) &:\leftrightarrow \forall x\,\forall y\,(x \in A \to y \in A \to x < y \to f(x) < f(y)),\\
+    \mathrm{Itv}(I) &:\leftrightarrow I \subseteq \R \land \forall x\,\forall y\,\forall z\,(x \in I \to z \in I \to y \in \R \to x \leq y \to y \leq z \to y \in I),\\
+    \mathrm{Inj}(f) &:\leftrightarrow \forall x\,\forall y\,(x \in \dom(f) \to y \in \dom(f) \to f(x) = f(y) \to x = y).
+  \end{align*}
+  $\mathrm{Itv}(I)$ は「$I$ は区間である」を表す(開区間・閉区間・半開区間・無限区間のすべてを含む).
+\end{dfn}
+
+\begin{dfn}[逆関数. テキスト定義2.20]
+  単射な実数値関数 $f$ に対して, $f^{-1} := \{\pair{y}{x} \mid \pair{x}{y} \in f\}$ とおく. $f^{-1}$ が実数値関数であり, $\dom(f^{-1}) = \{f(x) \mid x \in \dom(f)\}$, $f^{-1}(f(x)) = x$, $f(f^{-1}(y)) = y$ をみたすことは基礎定理 [S26] である(第\ref{ch:zfc}章の関数の基本性質から).
+\end{dfn}
+
+\begin{lem}\lemlist{SubLeAnti,StrIncInj,InvMono,InvUp,InvDown}\end{lem}
+\begin{proof}[通常の証明]
+  [E51] $x \leq y \to -y \leq -x$. [I1] 狭義単調増加ならば単射((R13) による場合分け). [I2] $y_1 < y_2$, $x_i := f^{-1}(y_i)$ とする. $x_2 \leq x_1$ なら $y_2 = f(x_2) \leq f(x_1) = y_1$ となり矛盾するので $x_1 < x_2$.
+
+  [I3] $\dom(f)$ が区間で $f$ が狭義単調増加, $y_0 \in \dom(f^{-1})$, $x_0 := f^{-1}(y_0)$, $\varepsilon > 0$ とする. $x_0 < u$ となる $u \in \dom(f)$ があれば, $0 < d \leq \min\{u - x_0, \varepsilon\}$ をとり $x_1 := x_0 + d$ とおくと, $x_1 \in \dom(f)$ (区間)であり, $\delta := f(x_1) - y_0 > 0$ について, $y < y_0 + \delta = f(x_1)$ ならば $f^{-1}(y) < x_1 \leq x_0 + \varepsilon$ ([I2]). そのような $u$ がなければ, すべての $y \in \dom(f^{-1})$ で $f^{-1}(y) \leq x_0 < x_0 + \varepsilon$ なので $\delta := 1$ でよい. [I4] は左側について同様.
+\end{proof}
+
+\begin{thm}[テキスト定理2.21]\label{thm:inverse}
+  $f$ の定義域 $I$ が区間で, $f$ が $I$ 上で狭義単調増加ならば, $f^{-1}$ は $\dom(f^{-1}) = f(I)$ 上で狭義単調増加かつ連続である. さらに $f$ が $I$ 上連続ならば $f(I)$ は区間である.
+\end{thm}
+\begin{proof}[通常の証明]
+  狭義単調増加は [I2]. 連続性: $y_0 \in f(I)$, $\varepsilon > 0$ に対して [I3][I4] の $\delta_1, \delta_2$ をとり, $\delta := \min\{\delta_1, \delta_2\}$ とすると, $\abs{y - y_0} < \delta$ ならば $f^{-1}(y_0) - \varepsilon < f^{-1}(y) < f^{-1}(y_0) + \varepsilon$. $f(I)$ が区間であること: $y_1, y_3 \in f(I)$, $y_1 < y < y_3$ ならば, $x_i := f^{-1}(y_i)$ とおくと $x_1 < x_3$, $[x_1, x_3] \subseteq I$ であり, $f$ は $[x_1, x_3]$ 上連続なので中間値の定理により $f(\xi) = y$ となる $\xi \in [x_1, x_3]$ がある. よって $y \in f(I)$.
+\end{proof}
+\fs{InvMono}
+\fs{InvCont}
+\fs{InvItv}
+
+テキストの定理2.21 は「$f^{-1}$ の連続性」に $f$ の連続性を仮定しているが, 上の証明が示すように, 定義域が区間であれば狭義単調性だけで $f^{-1}$ は連続である. $f$ の連続性は $f(I)$ が区間であること(すなわち $f^{-1}$ の定義域が区間であること)に用いられる. 狭義単調減少の場合は $-f$ に適用すればよい.
+
+\section{初等関数}
+
+\begin{textref}{第4章 3節 定義3.1}
+  指数関数・対数関数.
+\end{textref}
+
+テキストは指数関数 $e^x$ と三角関数を高校数学で既知のものとして扱う. これらを $\ZFC$ の中で構成するには冪級数(あるいは微分方程式)の理論が必要であり, テキストの第4章の範囲を超える. 本ノートでは指数関数について, 次の性質をもつ関数 $\exp$ が存在することを基礎定理 [S27] として認める(構成は例えば $\exp(x) := \lim_{n \to \infty} \sum_{k=0}^n x^k/k!$ により, 第3章の級数の理論と Cauchy 積から得られる).
+\begin{itemize}
+  \item[{[S27]}] \fsf{F:Exp}
+\end{itemize}
+対数関数 $\log := \exp^{-1}$ を逆関数として定める(テキスト定義3.1). 次の定理は [S27] と定理\ref{thm:inverse}から完全展開した証明木で導かれる.
+
+\begin{lem}\lemlist{ItvReal}\end{lem}
+
+\begin{thm}[テキスト定義3.1 の主張]
+  \begin{enumerate}[label=(\arabic*)]
+    \item $\log$ は定義域上で連続かつ狭義単調増加である.
+    \item $\dom(\log) = \{y \in \R \mid y > 0\}$.
+    \item $x, y > 0$ ならば $\log(xy) = \log x + \log y$.
+  \end{enumerate}
+\end{thm}
+\begin{proof}[通常の証明]
+  (1) $\dom(\exp) = \R$ は区間([I5])で, $\exp$ は狭義単調増加なので, 定理\ref{thm:inverse}. (2) $\dom(\log) = \{\exp(x) \mid x \in \R\}$ であり, $\exp(x) > 0$ と全射性による. (3) $a := \log x$, $b := \log y$ とおくと $\exp(a + b) = \exp(a)\exp(b) = xy$ なので $\log(xy) = a + b$.
+\end{proof}
+\fs{LogCont}
+\fs{LogDom}
+\fs{LogMul}
+
+テキストの定理3.2(指数関数・対数関数の極限), 3.2--3.4節(三角関数, 逆三角関数, 双曲線関数)は, これらの関数の解析的な構成を前提とするので形式化していない. ただし逆三角関数の連続性は, $\sin$ を $[-\pi/2, \pi/2]$ に制限した関数に定理\ref{thm:inverse}を適用すれば, 対数関数と同様に得られる.
+
+\section{一様連続性}
+
+\begin{textref}{第4章 4節 定義4.1, 定理4.3, 4.6}
+  一様連続性の定義と性質, 有界閉区間上の連続関数の一様連続性.
+\end{textref}
+
+\begin{dfn}[テキスト定義4.1]
+  \begin{align*}
+    \mathrm{UC}(f, A) :\leftrightarrow{}& \mathrm{RFn}(f) \land A \subseteq \dom(f) \land \forall\varepsilon\,\bigl(\varepsilon \in \R \to 0 < \varepsilon \to \exists\delta\,(\delta \in \R \land 0 < \delta \\
+    & \land \forall x\,\forall y\,(x, y \in A \to \abs{x - y} < \delta \to \abs{f(x) - f(y)} < \varepsilon))\bigr).
+  \end{align*}
+\end{dfn}
+
+\begin{thm}[テキスト定理4.3]
+  $A$ 上一様連続な関数の和・定数倍は $A$ 上一様連続である.
+\end{thm}
+\begin{proof}[通常の証明(テキストと同じ)]
+  和: $\varepsilon/2$ に対する $\delta_1, \delta_2$ の小さい方をとる. 定数倍: $\lambda \neq 0$ なら $\varepsilon\abs{\lambda}^{-1}$ に対する $\delta$ をとる.
+\end{proof}
+\fs{UCAdd}
+\fs{UCScal}
+
+\begin{thm}[Heine--Cantor の定理. テキスト定理4.6]
+  有界閉区間 $[a, b]$ 上の連続関数は $[a, b]$ 上一様連続である.
+\end{thm}
+\begin{proof}[通常の証明(テキストと同じ)]
+  背理法. 一様連続でないとすると, ある $\varepsilon_0 > 0$ について, 各 $k$ で $\abs{x - y} < \iota(k)^{-1}$, $\abs{f(x) - f(y)} \geq \varepsilon_0$ となる $x, y \in [a, b]$ がある. 可算選択 [CC5][CC6] で点列 $p, q$ をとり, [G7] で $p \circ s \to c \in [a, b]$ とすると $q \circ s \to c$ でもある. [G1] より $f(p_{s_k}) - f(q_{s_k}) \to f(c) - f(c) = 0$ となり, $\abs{f(p_{s_k}) - f(q_{s_k})} \geq \varepsilon_0$ に矛盾する.
+\end{proof}
+\fs{HeineCantor}
+
+\section{本章で形式化していない内容}
+
+テキスト第4章のうち, 次は形式化していない: $x \to \infty$ の極限と $\pm\infty$ への発散に関する定理(定義1.3 は定義のみ), 1.3節の高校既習の極限の例, 例題2.16, 3節の三角関数・逆三角関数・双曲線関数とその極限の公式(定理3.2, 命題3.5, 3.6, 3.17), 命題4.7, 4.8, 5節の章末問題.

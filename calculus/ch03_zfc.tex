@@ -1,0 +1,168 @@
+\chapter{ZFC 集合論}\label{ch:zfc}
+
+\begin{textref}{第1章 1.5節「集合の記法」}
+  テキストは集合を素朴に扱い, $\{x \mid P(x)\}$, $\subset$, $\cup$, $\cap$ などの記法を導入している. 本章ではこれらを $\ZFC$ の中で定義し直す. テキストの「集合 $\{x \mid P(x)\}$」は, 本ノートでは常に既知の集合 $a$ からの分出 $\{x \in a \mid P(x)\}$ として与えられる.
+\end{textref}
+
+\section{公理}
+
+$\ZFC$ の公理を $\mathcal{L}_\in$ の閉論理式として挙げる. 番号は Kunen \cite{kunen2011} \S I.2 に合わせた. 図式 (公理3, 6)は論理式 $\varphi$ ごとに1つの公理を表す. 自由変数をもつ論理式は全称閉包をとったものを公理とする.
+
+\begin{axm}[外延性 Ext]
+  $\forall x\forall y\,(\forall z(z \in x \leftrightarrow z \in y) \to x = y)$.
+\end{axm}
+\begin{axm}[基礎 Found]
+  $\forall x\,(\exists y(y \in x) \to \exists y(y \in x \land \neg\exists z(z \in x \land z \in y)))$.
+\end{axm}
+\begin{axm}[分出 Sep]
+  $y$ が $\varphi$ に自由に現れない各論理式 $\varphi$ について, $\forall a\,\exists y\,\forall x\,(x \in y \leftrightarrow x \in a \land \varphi)$.
+\end{axm}
+\begin{axm}[対 Pair]
+  $\forall x\forall y\,\exists z\,(x \in z \land y \in z)$.
+\end{axm}
+\begin{axm}[和集合 Union]
+  $\forall F\,\exists A\,\forall Y\forall x\,(x \in Y \land Y \in F \to x \in A)$.
+\end{axm}
+\begin{axm}[置換 Repl]
+  $B$ が $\varphi$ に自由に現れない各論理式 $\varphi(x,y,\ldots)$ について,
+  $\forall A\,(\forall x \in A\,\exists ! y\,\varphi(x,y) \to \exists B\,\forall x \in A\,\exists y \in B\,\varphi(x,y))$.
+\end{axm}
+\begin{axm}[無限 Inf]
+  $\exists x\,\bigl(\exists e(e \in x \land \forall u(u \notin e)) \land \forall y \in x\,\exists z \in x\,\forall u(u \in z \leftrightarrow u \in y \lor u = y)\bigr)$.
+\end{axm}
+\begin{axm}[冪集合 Pow]
+  $\forall x\,\exists y\,\forall z\,(\forall u(u \in z \to u \in x) \to z \in y)$.
+\end{axm}
+\begin{axm}[選択 AC]
+  $\forall F\,\bigl(\forall x \in F\,\exists u(u \in x) \land \forall x \in F\,\forall x' \in F\,(x \neq x' \to \neg\exists u(u \in x \land u \in x')) \to \exists C\,\forall x \in F\,\exists ! u\,(u \in x \land u \in C)\bigr)$.
+\end{axm}
+
+\begin{rem}
+  (1) 一階述語論理では領域が空でないことが組み込まれており, $\vdash \exists x(x = x)$ である((A5) と $\exists$I). 従って Kunen の公理0(集合の存在)は不要である.
+  (2) 本ノートの第\ref{ch:text3}章までの議論では基礎の公理, 置換公理, 選択公理は用いない. これは Kunen \cite{kunen2011} の「初等解析学の展開では置換は使われない」という注意(演習 I.9.27 の後)と整合する. ただしテキスト第3章6節以降(Bolzano--Weierstrass の定理の点列による議論など)では可算選択公理が必要になる箇所がある.
+\end{rem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{空集合}
+
+\begin{dfn}
+  $\Emp(y) :\equiv \forall u\,(u \notin y)$.
+\end{dfn}
+
+これは述語記号の定義ではなく単なる略記である. 次の定理が, 空集合を定数記号として導入するための well-definedness $(\ast)$ である.
+
+\begin{thm}\label{thm:emptyset}
+  $\ZFC \vdash \exists ! y\,\Emp(y)$.
+\end{thm}
+\begin{proof}[通常の証明]
+  (存在) 任意の集合 $x$ をとる. 分出公理により $y = \{u \in x \mid u \neq u\}$ が存在する. $u \in y$ ならば $u \neq u$ となって矛盾するので, $y$ は元をもたない.
+  (一意性) $y, y'$ がともに元をもたないならば, 任意の $u$ について $u \in y \leftrightarrow u \in y'$ (両辺とも偽)なので, 外延性公理より $y = y'$.
+\end{proof}
+
+存在部分と一意性部分を別々に完全展開する. 存在部分では分出公理の図式のインスタンス $\forall a\,\exists y\,\forall u\,(u \in y \leftrightarrow u \in a \land u \neq u)$ を用い, 一意性部分では外延性公理を用いる. 両者を (A1) と MP で $\land$ によって結べば $\exists ! y\,\Emp(y)$ (の略記を展開したもの)を得る.
+
+\trees{EmptyEx,EmptyUnique}
+\begin{dfn}[空集合]\label{dfn:emptyset}
+  定理\ref{thm:emptyset}により, 定数記号 $\emptyset$ を定義公理 $\delta_\emptyset :\equiv \forall u\,(u \notin \emptyset)$ によって導入する.
+\end{dfn}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{分出・包含・基本演算}
+
+\begin{thm}\label{thm:separation-term}
+  $y$ が $\varphi(x, \vec z)$ に現れないとき, $\ZFC \vdash \forall a\forall \vec z\,\exists ! y\,\forall x\,(x \in y \leftrightarrow x \in a \land \varphi)$.
+\end{thm}
+\begin{proof}
+  存在は分出公理そのもの. 一意性は定理\ref{thm:emptyset}の一意性部分と同じ形の証明による: $\forall x(x \in y \leftrightarrow x \in a \land \varphi)$ と $\forall x(x \in y' \leftrightarrow x \in a \land \varphi)$ を仮定し, $\forall$E, TC で $x \in y \leftrightarrow x \in y'$, Gen と Ext で $y = y'$.
+\end{proof}
+
+これにより, 第\ref{ch:definitions}章の最後で述べた内包記法 $\{x \in a \mid \varphi\}$ が関数記号として導入される. 以下, 同じ型の一意性証明(外延性公理による)は「Ext により一意」とだけ書く.
+
+\begin{dfn}[包含]
+  述語記号 $\subseteq$ を $x \subseteq y :\leftrightarrow \forall u\,(u \in x \to u \in y)$ で定義する.
+\end{dfn}
+
+\begin{dfn}[順序]\label{dfn:lt}
+  述語記号 $<$ を $x < y :\leftrightarrow x \subseteq y \land x \neq y$ で定義する. $x \leq y$ は $x < y \lor x = y$ の略記である(第\ref{ch:logic}章).
+\end{dfn}
+
+この $<$ は, 自然数(順序数)については $\in$ と一致し(第\ref{ch:naturals}章), 実数(Dedekind 切断)については第\ref{ch:reals}章の順序そのものである. 一つの記号で両方の順序を扱えるので, 非反射性・推移性などは集合一般の定理として一度だけ証明すればよい(第\ref{ch:ofield}章の [O1]--[O7]).
+
+\begin{thm}\label{thm:basic-sets}
+  次の各 $\varphi$ について $\ZFC \vdash \forall \vec x\,\exists ! y\,\varphi(\vec x, y)$ が成り立つ.
+  \begin{enumerate}[label=(\arabic*)]
+    \item $\varphi(a, b, y) :\equiv \forall u\,(u \in y \leftrightarrow u = a \lor u = b)$.
+    \item $\varphi(F, y) :\equiv \forall u\,(u \in y \leftrightarrow \exists Y(Y \in F \land u \in Y))$.
+    \item $\varphi(x, y) :\equiv \forall z\,(z \in y \leftrightarrow z \subseteq x)$.
+  \end{enumerate}
+\end{thm}
+\begin{proof}
+  いずれも一意性は Ext による. (1) 対の公理で $a \in z \land b \in z$ となる $z$ をとり($\exists$E), $y = \{u \in z \mid u = a \lor u = b\}$ とおけばよい. (2) 和集合公理で $A$ をとり, $y = \{u \in A \mid \exists Y(Y \in F \land u \in Y)\}$. (3) 冪集合公理で $y_0$ をとり, $y = \{z \in y_0 \mid z \subseteq x\}$.
+\end{proof}
+
+\begin{dfn}
+  定理\ref{thm:basic-sets}により, 関数記号 $\{a,b\}$ (非順序対), $\bigcup F$ (和集合), $\mathcal{P}(x)$ (冪集合)を導入する. さらに
+  \begin{align*}
+    & \{a\} := \{a,a\}, \qquad a \cup b := \textstyle\bigcup\{a,b\}, \qquad a \cap b := \{u \in a \mid u \in b\}, \qquad a \setminus b := \{u \in a \mid u \notin b\}, \\
+    & S(a) := a \cup \{a\} \quad (\text{後者})
+  \end{align*}
+  と定める(右辺は既に導入した関数記号からなる項なので, $y = $ 右辺 を $\varphi$ として関数記号を定義する. $\exists ! y(y = t)$ は (A5) と推移律から自明である).
+\end{dfn}
+
+\begin{rem}
+  テキストでは部分集合を $\subset$ と書くが, 本ノートでは $\subseteq$ と書く. 真部分集合 $a \subsetneq b$ は $a \subseteq b \land a \neq b$ の略記である.
+\end{rem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{順序対・直積・関係・関数}
+
+\begin{dfn}[順序対]
+  $\pair{a}{b} := \{\{a\},\{a,b\}\}$ (Kuratowski 対).
+\end{dfn}
+
+\begin{thm}\label{thm:pair}
+  $\ZFC \vdash \pair{a}{b} = \pair{c}{d} \to a = c \land b = d$.
+\end{thm}
+\begin{proof}
+  $\pair{a}{b} = \pair{c}{d}$ とする. $\{a\} \in \pair{c}{d}$ なので $\{a\} = \{c\}$ または $\{a\} = \{c,d\}$ であり, いずれの場合も $c \in \{a\}$ から $c = a$. 次に $a = b$ の場合: $\pair{a}{b} = \{\{a\}\}$ なので $\{c,d\} = \{a\}$, よって $d = a = b$. $a \neq b$ の場合: $\{a,b\} \in \pair{c}{d}$ より $\{a,b\} = \{c\}$ または $\{a,b\} = \{c,d\}$. 前者なら $a = c = b$ となり矛盾. 後者なら $b \in \{c,d\}$, $b \neq a = c$ より $b = d$.
+  (形式的には各「$\in \{p,q\}$」を定義公理で $= p \lor = q$ に書き換え, 場合分けを TC, 書き換えを Eq で行う.)
+\end{proof}
+
+\begin{dfn}[直積]
+  $\ZFC \vdash \forall A\forall B\,\exists ! y\,\forall z\,(z \in y \leftrightarrow \exists a \in A\,\exists b \in B\,(z = \pair{a}{b}))$ である(存在: $a \in A, b \in B$ ならば $\pair{a}{b} \in \mathcal{P}(\mathcal{P}(A \cup B))$ なので, そこから分出する). これにより $A \times B$ を定義する.
+\end{dfn}
+
+\begin{dfn}[関係と関数]
+  \begin{enumerate}[label=(\arabic*)]
+    \item $\dom(R) := \{a \in \bigcup\bigcup R \mid \exists b\, \pair{a}{b} \in R\}$, \quad $\ran(R) := \{b \in \bigcup\bigcup R \mid \exists a\, \pair{a}{b} \in R\}$.
+    \item $\Fnc(f) :\leftrightarrow \forall z \in f\, \exists a \exists b\, (z = \pair{a}{b}) \land \forall a\forall b\forall b'\,(\pair{a}{b} \in f \land \pair{a}{b'} \in f \to b = b')$.
+    \item $f : A \to B \;:\leftrightarrow\; \Fnc(f) \land \dom(f) = A \land \ran(f) \subseteq B$.
+    \item (関数値) $f(a)$ を, $\pair{a}{b} \in f \land \forall b'(\pair{a}{b'} \in f \to b' = b)$ をみたす唯一の $b$ と定める(そのような $b$ がなければ $\emptyset$). これは定義\ref{dfn:description}の形の定義であり, 一意性は自明である.
+    \item $B^A := \{f \in \mathcal{P}(A \times B) \mid f : A \to B\}$.
+    \item $f[X] := \{b \in \ran(f) \mid \exists a \in X\, (\pair{a}{b} \in f)\}$, \quad $f|_X := \{z \in f \mid \exists a \in X \exists b\,(z = \pair{a}{b})\}$.
+  \end{enumerate}
+\end{dfn}
+
+\begin{lem}\label{lem:fnc-app}
+  $\ZFC \vdash \Fnc(f) \land a \in \dom(f) \to \pair{a}{f(a)} \in f$. また $\ZFC \vdash \Fnc(f) \land \pair{a}{b} \in f \to b = f(a)$.
+\end{lem}
+\begin{proof}
+  $a \in \dom(f)$ より $\pair{a}{b} \in f$ となる $b$ があり, $\Fnc(f)$ よりその $b$ は一意なので関数値の定義の前半の場合が適用される. 後半は一意性から.
+\end{proof}
+
+\begin{thm}[関数の外延性]\label{thm:fnc-ext}
+  $\ZFC \vdash f : A \to B \land g : A \to B \land \forall a \in A\,(f(a) = g(a)) \to f = g$.
+\end{thm}
+\begin{proof}
+  $z \in f$ なら $z = \pair{a}{b}$, $a \in A$, $b = f(a) = g(a)$ であり, 補題\ref{lem:fnc-app}より $z \in g$. 逆も同様. Ext より $f = g$.
+\end{proof}
+
+\begin{dfn}[関数の定義の仕方]\label{dfn:lambda}
+  項 $t(x, \vec z)$ と集合 $A, B$ について, $\forall x \in A\,(t(x,\vec z) \in B)$ が証明されているとき,
+  \[ (x \in A \mapsto t) := \{w \in A \times B \mid \exists x \in A\,(w = \pair{x}{t})\} \]
+  とおくと, $(x \in A \mapsto t) : A \to B$ であり $\forall x \in A\,((x \in A \mapsto t)(x) = t)$ である(補題\ref{lem:fnc-app}).
+\end{dfn}
+
+\begin{dfn}[同値関係と商集合]
+  $E \subseteq A \times A$ が $A$ 上の\textbf{同値関係}であるとは反射律・対称律・推移律をみたすことをいう. このとき $[a]_E := \{b \in A \mid \pair{a}{b} \in E\}$, $A/E := \{c \in \mathcal{P}(A) \mid \exists a \in A\,(c = [a]_E)\}$ と定める. 次は通常の通り証明される: $a, b \in A$ に対して $[a]_E = [b]_E \leftrightarrow \pair{a}{b} \in E$.
+\end{dfn}

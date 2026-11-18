@@ -1,0 +1,782 @@
+% 自動生成 (prover/build.js): BWin  ノード数 314
+\begin{fullproof}{[G7]}{$\forall x\,\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \exists s\,\exists c\,(\mathrm{SubIdx}(s) \land c \in [a,b] \land \mathrm{Conv}(x \circ s,c)))$}{314}\phantomsection\label{tree:BWin}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{780} = y \to y = z \to v_{780} = z)$}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$\forall z\,(v_{780} = v_{781} \to v_{781} = z \to v_{780} = z)$}
+\AXC{$\varphi_{28}$\lbl{A2}}
+\BIC{$v_{780} = v_{781} \to v_{781} = v_{782} \to v_{780} = v_{782}$}
+\UIC{$\forall v_{782}\,(v_{780} = v_{781} \to v_{781} = v_{782} \to v_{780} = v_{782})$}
+\UIC{$\varphi_{8}$}
+\UIC{$\forall v_{780}\,(\varphi_{8})$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall s\,(\varphi_{22})$\lbl{DefSubIdx}}
+\AXC{$\forall s\,(\varphi_{22}) \to \varphi_{22}$\lbl{A2}}
+\BIC{$\varphi_{22}$}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{122}$\lbl{A1}}
+\AXC{$\varphi_{152}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{96}$}
+\AXC{$\varphi_{159}$\lbl{A1}}
+\BIC{$\varphi_{22} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{95}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{95}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\varphi_{62}$\lbl{[S12]}}
+\AXC{$\varphi_{62} \to \forall s\,(\mathrm{Seq}(x) \to \varphi_{43})$\lbl{A2}}
+\BIC{$\forall s\,(\mathrm{Seq}(x) \to \varphi_{43})$}
+\AXC{$\forall s\,(\mathrm{Seq}(x) \to \varphi_{43}) \to \mathrm{Seq}(x) \to \varphi_{43}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(x) \to \varphi_{43}$}
+\AXC{$\varphi_{169}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \mathrm{Seq}(x)) \to \varphi_{156}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \mathrm{Seq}(x)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \mathrm{Seq}(x)) \to \varphi_{156}$}
+\BIC{$\varphi_{156}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{95}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{156}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{128}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\varphi_{65}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{128}$}
+\AXC{$\varphi_{164}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{127}$}
+\AXC{$\varphi_{171}$\lbl{A1}}
+\BIC{$\varphi_{65} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{126}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{126}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{126}) \to \varphi_{154}$\lbl{A1}}
+\BIC{$\varphi_{154}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{101}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{154}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{116}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{116}) \to \varphi_{139}$\lbl{A1}}
+\BIC{$\varphi_{139}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\varphi_{48}$\lbl{A2}}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{122}$\lbl{A1}}
+\AXC{$\varphi_{163}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{123}$}
+\AXC{$\varphi_{167}$\lbl{A1}}
+\BIC{$\varphi_{48} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{120}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{120}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{120}) \to \varphi_{151}$\lbl{A1}}
+\BIC{$\varphi_{151}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{101}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{151}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{111}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{111}) \to \varphi_{165}$\lbl{A1}}
+\BIC{$\varphi_{165}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\forall y\,(x \circ s(n) = y \to y = x \circ s(n))$}
+\AXC{$\varphi_{85}$\lbl{A2}}
+\BIC{$x \circ s(n) = x(s_{n}) \to x(s_{n}) = x \circ s(n)$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{139}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{117}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{165}$}
+\BIC{$\varphi_{58} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{112}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall v_{780}\,(\varphi_{8})$}
+\AXC{$\forall v_{780}\,(\varphi_{8}) \to \varphi_{13}$\lbl{A2}}
+\BIC{$\varphi_{13}$}
+\AXC{$\varphi_{13} \to \varphi_{32}$\lbl{A2}}
+\BIC{$\varphi_{32}$}
+\AXC{$\varphi_{32} \to \varphi_{58}$\lbl{A2}}
+\BIC{$\varphi_{58}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{58} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{112}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{112}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\varphi_{108} \to \forall n\,(\varphi_{108})$\lbl{A4}}
+\AXC{$\varphi_{160}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{112}$}
+\AXC{$\varphi_{157}$\lbl{A1}}
+\BIC{$\varphi_{108} \to n \in \mathbb{N} \to y(n) = x \circ s(n)$}
+\UIC{$\forall n\,(\varphi_{108} \to n \in \mathbb{N} \to y(n) = x \circ s(n))$}
+\AXC{$\varphi_{181}$\lbl{A1}}
+\BIC{$\varphi_{160} \to (\varphi_{108} \to \forall n\,(\varphi_{108})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{113}$}
+\BIC{$(\varphi_{108} \to \forall n\,(\varphi_{108})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{113}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{113}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\varphi_{46}$\lbl{[C13]}}
+\AXC{$\varphi_{46} \to \varphi_{41}$\lbl{A2}}
+\BIC{$\varphi_{41}$}
+\AXC{$\varphi_{41} \to \varphi_{67}$\lbl{A2}}
+\BIC{$\varphi_{67}$}
+\AXC{$\varphi_{67} \to \mathrm{Seq}(x \circ s) \to \varphi_{38}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(x \circ s) \to \varphi_{38}$}
+\AXC{$\varphi_{178}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{97}) \to \varphi_{166}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{128}$}
+\AXC{$\varphi_{158}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{97}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{97}) \to \varphi_{166}$}
+\BIC{$\varphi_{166}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to \varphi_{82}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{113}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{166}$}
+\BIC{$(a \in \mathbb{R} \to \varphi_{82}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{99}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{99}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$z = w \to z \in [a,b] \to w \in [a,b]$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z \in [a,b] \to w \in [a,b])$}
+\UIC{$\forall z\,\forall w\,(z = w \to z \in [a,b] \to w \in [a,b])$}
+\AXC{$\forall z\,\forall w\,(z = w \to z \in [a,b] \to w \in [a,b]) \to \varphi_{34}$\lbl{A2}}
+\BIC{$\varphi_{34}$}
+\AXC{$\varphi_{34} \to \varphi_{70}$\lbl{A2}}
+\BIC{$\varphi_{70}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{95}$}
+\AXC{$\forall s\,\forall k\,(\mathrm{NSeq}(s) \to k \in \mathbb{N} \to s_{k} \in \mathbb{N})$\lbl{[S13]}}
+\AXC{$\varphi_{59}$\lbl{A2}}
+\BIC{$\forall k\,(\mathrm{NSeq}(s) \to k \in \mathbb{N} \to s_{k} \in \mathbb{N})$}
+\AXC{$\varphi_{51}$\lbl{A2}}
+\BIC{$\mathrm{NSeq}(s) \to n \in \mathbb{N} \to s_{n} \in \mathbb{N}$}
+\AXC{$\varphi_{173}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{95}) \to \varphi_{150}$}
+\BIC{$\varphi_{150}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\varphi_{60}$\lbl{A2}}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{47}$\lbl{A1}}
+\AXC{$\varphi_{146}$\lbl{A1}}
+\BIC{$\varphi_{60} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{60}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{60}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{60}) \to \varphi_{155}$\lbl{A1}}
+\BIC{$\varphi_{155}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\varphi_{65}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{128}$}
+\AXC{$\varphi_{164}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{127}$}
+\AXC{$\varphi_{171}$\lbl{A1}}
+\BIC{$\varphi_{65} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{126}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{126}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{126}) \to \varphi_{154}$\lbl{A1}}
+\BIC{$\varphi_{154}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{101}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{154}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{116}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{116}) \to \varphi_{139}$\lbl{A1}}
+\BIC{$\varphi_{139}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\forall y\,(x \circ s(n) = y \to y = x \circ s(n))$}
+\AXC{$\varphi_{85}$\lbl{A2}}
+\BIC{$x \circ s(n) = x(s_{n}) \to x(s_{n}) = x \circ s(n)$}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{139}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{117}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{117}) \to \varphi_{168}$\lbl{A1}}
+\BIC{$\varphi_{168}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{70}$}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{101}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{150}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{105}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{155}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{114}$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{168}$}
+\BIC{$\varphi_{70} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{115}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{115}$}
+\AXC{$\varphi_{161}$\lbl{A1}}
+\BIC{$\varphi_{108} \to n \in \mathbb{N} \to x \circ s(n) \in [a,b]$}
+\UIC{$\forall n\,(\varphi_{108} \to n \in \mathbb{N} \to x \circ s(n) \in [a,b])$}
+\AXC{$\varphi_{182}$\lbl{A1}}
+\BIC{$\varphi_{162} \to (\varphi_{108} \to \forall n\,(\varphi_{108})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{118}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\varphi_{108} \to \forall n\,(\varphi_{108})$\lbl{A4}}
+\AXC{$\varphi_{162}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{162} \to (\varphi_{108} \to \forall n\,(\varphi_{108})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{118}$}
+\BIC{$(\varphi_{108} \to \forall n\,(\varphi_{108})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{118}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{118}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\varphi_{78}$\lbl{[G5]}}
+\AXC{$\varphi_{78} \to \forall c\,\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55})$\lbl{A2}}
+\BIC{$\forall c\,\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55})$}
+\AXC{$\varphi_{133}$\lbl{A2}}
+\BIC{$\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55})$}
+\AXC{$\varphi_{132}$\lbl{A2}}
+\BIC{$\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55})$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55})$}
+\AXC{$\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55}$\lbl{A2}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to a \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55}) \to (a \in \mathbb{R} \to a \in \mathbb{R}) \to \varphi_{174}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to a \in \mathbb{R}) \to \varphi_{174}$}
+\BIC{$\varphi_{174}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{99}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{118}$}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{174}$}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{118}) \to \varphi_{147}$}
+\BIC{$\varphi_{147}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{98}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{98}$}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{122}$\lbl{A1}}
+\AXC{$\varphi_{152}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{96}$}
+\AXC{$\varphi_{177}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{98}) \to \varphi_{153}$}
+\BIC{$\varphi_{153}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\forall s\,(\neg \varphi_{11}) \to \neg \varphi_{11}$\lbl{A2}}
+\AXC{$\forall c\,(\varphi_{10}) \to \varphi_{10}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{99}$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{153}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{119}$}
+\AXC{$\varphi_{170}$\lbl{A1}}
+\BIC{$(\forall c\,(\varphi_{10}) \to \varphi_{10}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{121}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{121}$}
+\AXC{$\varphi_{172}$\lbl{A1}}
+\BIC{$(\forall s\,(\neg \varphi_{11}) \to \neg \varphi_{11}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{124}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{124}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\varphi_{54}$\lbl{DefSubSeq}}
+\AXC{$\varphi_{54} \to \varphi_{49}$\lbl{A2}}
+\BIC{$\varphi_{49}$}
+\AXC{$\varphi_{49} \to (\mathrm{SubSeq}(y,x) \leftrightarrow \mathrm{Seq}(y) \land \varphi_{17})$\lbl{A2}}
+\BIC{$\mathrm{SubSeq}(y,x) \leftrightarrow \mathrm{Seq}(y) \land \varphi_{17}$}
+\AXC{$a \in \mathbb{R} \to \varphi_{81}$\lbl{A1}}
+\AXC{$(a \in \mathbb{R} \to \varphi_{81}) \to \varphi_{135}$\lbl{A1}}
+\BIC{$\varphi_{135}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{92}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{92}$}
+\AXC{$\varphi_{145}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{93}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{93}) \to \forall s\,(\varphi_{130}) \to \varphi_{179}$\lbl{A1}}
+\BIC{$\forall s\,(\varphi_{130}) \to \varphi_{179}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{124}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{124}) \to \varphi_{130}$\lbl{A1}}
+\BIC{$\varphi_{130}$}
+\UIC{$\forall s\,(\varphi_{130})$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\forall s\,(\varphi_{130}) \to \varphi_{179}$}
+\BIC{$\varphi_{179}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\varphi_{109} \to \forall s\,(\varphi_{109})$\lbl{A4}}
+\AXC{$\forall s\,(\varphi_{130}) \to \forall s\,(\varphi_{109}) \to \varphi_{18}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{179}$}
+\BIC{$(\varphi_{109} \to \forall s\,(\varphi_{109})) \to a \in \mathbb{R} \to \varphi_{102}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{102}$}
+\AXC{$(a \in \mathbb{R} \to \varphi_{102}) \to \varphi_{110}$\lbl{A1}}
+\BIC{$\varphi_{110}$}
+\UIC{$\forall c\,(\varphi_{110})$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\forall a\,(\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha)))$\lbl{DefCgt}}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$\mathrm{Cgt}(y) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(y,\alpha))$}
+\AXC{$a \in \mathbb{R} \to \varphi_{81}$\lbl{A1}}
+\AXC{$\varphi_{138}$\lbl{A1}}
+\BIC{$(\mathrm{Cgt}(y) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(y,\alpha))) \to a \in \mathbb{R} \to \varphi_{74}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{74}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\varphi_{144}$\lbl{A4}}
+\AXC{$\forall c\,(\varphi_{110}) \to \varphi_{103} \to \forall c\,(\neg \mathrm{Conv}(y,c))$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\forall c\,(\varphi_{110})$}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{74}$}
+\AXC{$(a \in \mathbb{R} \to \varphi_{74}) \to \varphi_{180}$\lbl{A1}}
+\BIC{$\varphi_{180}$}
+\BIC{$(\forall c\,(\varphi_{110}) \to \varphi_{103} \to \forall c\,(\neg \mathrm{Conv}(y,c))) \to \varphi_{144} \to \varphi_{141}$}
+\BIC{$\varphi_{144} \to \varphi_{141}$}
+\BIC{$\varphi_{141}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\varphi_{1}$\lbl{A4}}
+\AXC{$\varphi_{31}$\lbl{A3}}
+\AXC{$\forall c\,(\neg \mathrm{Conv}(y,c)) \to \neg \mathrm{Conv}(y,\alpha)$\lbl{A2}}
+\UIC{$\forall \alpha\,(\forall c\,(\neg \mathrm{Conv}(y,c)) \to \neg \mathrm{Conv}(y,\alpha))$}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\varphi_{141}$}
+\BIC{$\varphi_{31} \to \varphi_{1} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{89}$}
+\BIC{$\varphi_{1} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{89}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{89}$}
+\AXC{$\varphi_{143}$\lbl{A1}}
+\BIC{$\varphi_{39} \land \neg \exists s\,(\varphi_{11}) \to \neg (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y))$}
+\UIC{$\varphi_{104}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall b\,(\varphi_{35})$\lbl{[G6]}}
+\AXC{$\forall a\,\forall b\,(\varphi_{35}) \to \forall b\,(\varphi_{35})$\lbl{A2}}
+\BIC{$\forall b\,(\varphi_{35})$}
+\AXC{$\forall b\,(\varphi_{35}) \to \varphi_{35}$\lbl{A2}}
+\BIC{$\varphi_{35}$}
+\AXC{$\varphi_{35} \to \varphi_{50}$\lbl{A2}}
+\BIC{$\varphi_{50}$}
+\AXC{$\varphi_{149}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to a \in \mathbb{R}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{131}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}$\lbl{A1}}
+\AXC{$a \in \mathbb{R} \to a \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to a \in \mathbb{R}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{131}$}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{131}$}
+\BIC{$\varphi_{131}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\varphi_{136}$\lbl{A3}}
+\AXC{$\varphi_{42}$\lbl{A2}}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{47}$\lbl{A1}}
+\AXC{$\varphi_{142}$\lbl{A1}}
+\BIC{$\varphi_{42} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{42}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{42}$}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\varphi_{131}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{53}$}
+\AXC{$\varphi_{134}$\lbl{A1}}
+\BIC{$\varphi_{39} \to n \in \mathbb{N} \to \lvert x(n) \rvert \leq \lvert a \rvert + \lvert b \rvert$}
+\UIC{$\forall n\,(\varphi_{39} \to n \in \mathbb{N} \to \lvert x(n) \rvert \leq \lvert a \rvert + \lvert b \rvert)$}
+\AXC{$\varphi_{176}$\lbl{A1}}
+\BIC{$\varphi_{136} \to (\varphi_{39} \to \forall n\,(\varphi_{39})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{56}$}
+\BIC{$(\varphi_{39} \to \forall n\,(\varphi_{39})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{56}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$\lbl{[A5]}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R}) \to b \in \mathbb{R} \to \lvert b \rvert \in \mathbb{R}$\lbl{A2}}
+\BIC{$b \in \mathbb{R} \to \lvert b \rvert \in \mathbb{R}$}
+\AXC{$\varphi_{107}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{26}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{26}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{26}$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to a \in \mathbb{R}$\lbl{A1}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$\lbl{[A5]}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R}) \to a \in \mathbb{R} \to \lvert a \rvert \in \mathbb{R}$\lbl{A2}}
+\BIC{$a \in \mathbb{R} \to \lvert a \rvert \in \mathbb{R}$}
+\AXC{$\varphi_{100}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to a \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{27}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{27}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{77}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert a \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert a \rvert + y \in \mathbb{R})$}
+\AXC{$\varphi_{90}$\lbl{A2}}
+\BIC{$\lvert a \rvert \in \mathbb{R} \to \lvert b \rvert \in \mathbb{R} \to \lvert a \rvert + \lvert b \rvert \in \mathbb{R}$}
+\AXC{$(\lvert a \rvert \in \mathbb{R} \to \lvert b \rvert \in \mathbb{R} \to \lvert a \rvert + \lvert b \rvert \in \mathbb{R}) \to \varphi_{140}$\lbl{A1}}
+\BIC{$\varphi_{140}$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{26}$}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{27}$}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\varphi_{140}$}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{26}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{44}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{44}$}
+\AXC{$\varphi_{148}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{56}) \to a \in \mathbb{R} \to \varphi_{94}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$\varphi_{39} \to \forall n\,(\varphi_{39})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$(\varphi_{39} \to \forall n\,(\varphi_{39})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{56}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{56}$}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{56}) \to a \in \mathbb{R} \to \varphi_{94}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{94}$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$\forall M\,(\neg (M \in \mathbb{R} \land \forall n \in \mathbb{N}\,(\lvert x(n) \rvert \leq M))) \to \neg \varphi_{40}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{94}$}
+\AXC{$(a \in \mathbb{R} \to \varphi_{94}) \to \varphi_{137}$\lbl{A1}}
+\BIC{$\varphi_{137}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{57}$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$\varphi_{36}$\lbl{DefSeqBdd}}
+\AXC{$\varphi_{36} \to \varphi_{29}$\lbl{A2}}
+\BIC{$\varphi_{29}$}
+\AXC{$\varphi_{29} \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \mathrm{Seq}(x)) \to \varphi_{129}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \mathrm{Seq}(x)) \to \varphi_{129}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \mathrm{Seq}(x)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \mathrm{Seq}(x)) \to \varphi_{129}$}
+\BIC{$\varphi_{129}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{57}$}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$\varphi_{129}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{19}$}
+\AXC{$\varphi_{5}$\lbl{定理6.8}}
+\AXC{$\varphi_{5} \to \varphi_{2}$\lbl{A2}}
+\BIC{$\varphi_{2}$}
+\AXC{$\varphi_{2} \to \varphi_{125}$\lbl{A1}}
+\BIC{$\varphi_{125}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{25}$}
+\end{ptree}
+\noindent$\Pi_{51}$:
+\begin{ptree}
+\AXC{$\varphi_{104} \to \varphi_{106}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$\varphi_{104}$}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{25}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{25}) \to \varphi_{104} \to (\varphi_{104} \to \varphi_{106}) \to \varphi_{175}$\lbl{A1}}
+\BIC{$\varphi_{104} \to (\varphi_{104} \to \varphi_{106}) \to \varphi_{175}$}
+\BIC{$(\varphi_{104} \to \varphi_{106}) \to \varphi_{175}$}
+\BIC{$\varphi_{175}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{14}$\lbl{A4}}
+\AXC{$\forall b\,(\varphi_{9}) \to \varphi_{16}$\lbl{A3}}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\UIC{$\forall b\,(\varphi_{9})$}
+\AXC{$\varphi_{39} \land \neg \exists s\,(\varphi_{11}) \to \forall y\,(\varphi_{39} \land \neg \exists s\,(\varphi_{11}))$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{51}}{\vdots}$}\noLine
+\UIC{$\varphi_{175}$}
+\BIC{$\forall b\,(\varphi_{9}) \to (\forall b\,(\varphi_{9}) \to \varphi_{16}) \to \varphi_{14} \to a \in \mathbb{R} \to \varphi_{87}$}
+\BIC{$(\forall b\,(\varphi_{9}) \to \varphi_{16}) \to \varphi_{14} \to a \in \mathbb{R} \to \varphi_{87}$}
+\BIC{$\varphi_{14} \to a \in \mathbb{R} \to \varphi_{87}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{87}$}
+\UIC{$\forall b\,(a \in \mathbb{R} \to \varphi_{87})$}
+\UIC{$\forall a\,\forall b\,(a \in \mathbb{R} \to \varphi_{87})$}
+\UIC{$\forall x\,\forall a\,\forall b\,(a \in \mathbb{R} \to \varphi_{87})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall c\,(\neg \mathrm{Conv}(y,c)) \to \forall \alpha\,\forall c\,(\neg \mathrm{Conv}(y,c))$
+\item $\varphi_{2} :\equiv \mathrm{SeqBdd}(x) \to \exists b\,(\mathrm{SubSeq}(b,x) \land \mathrm{Cgt}(b))$
+\item $\varphi_{3} :\equiv \forall \alpha\,\forall c\,(\neg \mathrm{Conv}(y,c)) \to \forall \alpha\,(\neg \mathrm{Conv}(y,\alpha))$
+\item $\varphi_{4} :\equiv \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \exists \alpha\,(\mathrm{Conv}(y,\alpha))$
+\item $\varphi_{5} :\equiv \forall a\,(\mathrm{SeqBdd}(a) \to \exists b\,(\mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b)))$
+\item $\varphi_{6} :\equiv \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y)$
+\item $\varphi_{7} :\equiv \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \mathrm{Conv}(y,c)$
+\item $\varphi_{8} :\equiv \forall v_{781}\,\forall v_{782}\,(v_{780} = v_{781} \to v_{781} = v_{782} \to v_{780} = v_{782})$
+\item $\varphi_{9} :\equiv \forall y\,(\neg (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y))) \to \neg (\mathrm{SubSeq}(b,x) \land \mathrm{Cgt}(b))$
+\item $\varphi_{10} :\equiv \neg (\mathrm{SubIdx}(s) \land c \in [a,b] \land \mathrm{Conv}(x \circ s,c))$
+\item $\varphi_{11} :\equiv \exists c\,(\mathrm{SubIdx}(s) \land c \in [a,b] \land \mathrm{Conv}(x \circ s,c))$
+\item $\varphi_{12} :\equiv \forall a\,(\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha))) \to (\mathrm{Cgt}(y) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(y,\alpha)))$
+\item $\varphi_{13} :\equiv \forall v_{781}\,\forall v_{782}\,(y(n) = v_{781} \to v_{781} = v_{782} \to y(n) = v_{782})$
+\item $\varphi_{14} :\equiv \forall y\,(\neg (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y))) \to \forall b\,\forall y\,(\neg (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y)))$
+\item $\varphi_{15} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{780} = y \to y = z \to v_{780} = z)$
+\item $\varphi_{16} :\equiv \forall b\,\forall y\,(\neg (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y))) \to \forall b\,(\neg (\mathrm{SubSeq}(b,x) \land \mathrm{Cgt}(b)))$
+\item $\varphi_{17} :\equiv \exists s\,(\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})))$
+\item $\varphi_{18} :\equiv \forall s\,(\neg (\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k}))))$
+\item $\varphi_{19} :\equiv \mathrm{Seq}(x) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SeqBdd}(x)$
+\item $\varphi_{20} :\equiv \forall y\,\forall z\,(v_{780} = y \to y = z \to v_{780} = z) \to \forall z\,(v_{780} = v_{781} \to v_{781} = z \to v_{780} = z)$
+\item $\varphi_{21} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(x \circ s(n) = y \to y = x \circ s(n))$
+\item $\varphi_{22} :\equiv \mathrm{SubIdx}(s) \leftrightarrow \mathrm{NSeq}(s) \land \forall k \in \mathbb{N}\,(s_{k} < s_{S(k)})$
+\item $\varphi_{23} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to \mathrm{NSeq}(s)$
+\item $\varphi_{24} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to \mathrm{SubIdx}(s)$
+\item $\varphi_{25} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \exists b\,(\mathrm{SubSeq}(b,x) \land \mathrm{Cgt}(b))$
+\item $\varphi_{26} :\equiv \mathrm{Seq}(x) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \lvert b \rvert \in \mathbb{R}$
+\item $\varphi_{27} :\equiv \mathrm{Seq}(x) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \lvert a \rvert \in \mathbb{R}$
+\item $\varphi_{28} :\equiv \forall z\,(v_{780} = v_{781} \to v_{781} = z \to v_{780} = z) \to v_{780} = v_{781} \to v_{781} = v_{782} \to v_{780} = v_{782}$
+\item $\varphi_{29} :\equiv \mathrm{SeqBdd}(x) \leftrightarrow \mathrm{Seq}(x) \land \exists M \in \mathbb{R}\,\forall n \in \mathbb{N}\,(\lvert x(n) \rvert \leq M)$
+\item $\varphi_{30} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to \mathrm{Seq}(x \circ s)$
+\item $\varphi_{31} :\equiv \forall \alpha\,(\forall c\,(\neg \mathrm{Conv}(y,c)) \to \neg \mathrm{Conv}(y,\alpha)) \to \varphi_{3}$
+\item $\varphi_{32} :\equiv \forall v_{782}\,(y(n) = x(s_{n}) \to x(s_{n}) = v_{782} \to y(n) = v_{782})$
+\item $\varphi_{33} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to c \in [a,b]$
+\item $\varphi_{34} :\equiv \forall w\,(x(s_{n}) = w \to x(s_{n}) \in [a,b] \to w \in [a,b])$
+\item $\varphi_{35} :\equiv \forall x\,(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in [a,b] \to \lvert x \rvert \leq \lvert a \rvert + \lvert b \rvert)$
+\item $\varphi_{36} :\equiv \forall a\,(\mathrm{SeqBdd}(a) \leftrightarrow \mathrm{Seq}(a) \land \exists M \in \mathbb{R}\,\forall n \in \mathbb{N}\,(\lvert a_{n} \rvert \leq M))$
+\item $\varphi_{37} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to \mathrm{Conv}(x \circ s,c)$
+\item $\varphi_{38} :\equiv \forall n \in \mathbb{N}\,(y(n) = x \circ s(n)) \to \mathrm{Conv}(y,c) \to \mathrm{Conv}(x \circ s,c)$
+\item $\varphi_{39} :\equiv a \in \mathbb{R} \land b \in \mathbb{R} \land \mathrm{Seq}(x) \land \forall n \in \mathbb{N}\,(x(n) \in [a,b])$
+\item $\varphi_{40} :\equiv \lvert a \rvert + \lvert b \rvert \in \mathbb{R} \land \forall n \in \mathbb{N}\,(\lvert x(n) \rvert \leq \lvert a \rvert + \lvert b \rvert)$
+\item $\varphi_{41} :\equiv \forall b\,\forall \alpha\,(\mathrm{Seq}(b) \to \forall n \in \mathbb{N}\,(y(n) = b_{n}) \to \mathrm{Conv}(y,\alpha) \to \mathrm{Conv}(b,\alpha))$
+\item $\varphi_{42} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to n \in \mathbb{N} \to x(n) \in [a,b]$
+\item $\varphi_{43} :\equiv \mathrm{NSeq}(s) \to \mathrm{Seq}(x \circ s) \land \forall k \in \mathbb{N}\,(x \circ s(k) = x(s_{k}))$
+\item $\varphi_{44} :\equiv \mathrm{Seq}(x) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \lvert a \rvert + \lvert b \rvert \in \mathbb{R}$
+\item $\varphi_{45} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{46} :\equiv \forall a\,\forall b\,\forall \alpha\,(\mathrm{Seq}(b) \to \forall n \in \mathbb{N}\,(a_{n} = b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha))$
+\item $\varphi_{47} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b])$
+\item $\varphi_{48} :\equiv \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to y(n) = x(s_{n})$
+\item $\varphi_{49} :\equiv \forall a\,(\mathrm{SubSeq}(y,a) \leftrightarrow \mathrm{Seq}(y) \land \exists s\,(\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = a_{s_{k}})))$
+\item $\varphi_{50} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x(n) \in [a,b] \to \lvert x(n) \rvert \leq \lvert a \rvert + \lvert b \rvert$
+\item $\varphi_{51} :\equiv \forall k\,(\mathrm{NSeq}(s) \to k \in \mathbb{N} \to s_{k} \in \mathbb{N}) \to \mathrm{NSeq}(s) \to n \in \mathbb{N} \to s_{n} \in \mathbb{N}$
+\item $\varphi_{52} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to s_{n} \in \mathbb{N}$
+\item $\varphi_{53} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to n \in \mathbb{N} \to \lvert x(n) \rvert \leq \lvert a \rvert + \lvert b \rvert$
+\item $\varphi_{54} :\equiv \forall b\,\forall a\,(\mathrm{SubSeq}(b,a) \leftrightarrow \mathrm{Seq}(b) \land \exists s\,(\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}})))$
+\item $\varphi_{55} :\equiv \forall n \in \mathbb{N}\,(x \circ s(n) \in [a,b]) \to \mathrm{Conv}(x \circ s,c) \to c \in [a,b]$
+\item $\varphi_{56} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \forall n \in \mathbb{N}\,(\lvert x(n) \rvert \leq \lvert a \rvert + \lvert b \rvert)$
+\item $\varphi_{57} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \exists M \in \mathbb{R}\,\forall n \in \mathbb{N}\,(\lvert x(n) \rvert \leq M)$
+\item $\varphi_{58} :\equiv y(n) = x(s_{n}) \to x(s_{n}) = x \circ s(n) \to y(n) = x \circ s(n)$
+\item $\varphi_{59} :\equiv \forall s\,\forall k\,(\mathrm{NSeq}(s) \to k \in \mathbb{N} \to s_{k} \in \mathbb{N}) \to \forall k\,(\mathrm{NSeq}(s) \to k \in \mathbb{N} \to s_{k} \in \mathbb{N})$
+\item $\varphi_{60} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to s_{n} \in \mathbb{N} \to x(s_{n}) \in [a,b]$
+\item $\varphi_{61} :\equiv \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \exists s\,(\varphi_{11})$
+\item $\varphi_{62} :\equiv \forall a\,\forall s\,(\mathrm{Seq}(a) \to \mathrm{NSeq}(s) \to \mathrm{Seq}(a \circ s) \land \forall k \in \mathbb{N}\,(a \circ s(k) = a_{s_{k}}))$
+\item $\varphi_{63} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to y(n) = x(s_{n})$
+\item $\varphi_{64} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to y(n) = x \circ s(n)$
+\item $\varphi_{65} :\equiv \forall k \in \mathbb{N}\,(x \circ s(k) = x(s_{k})) \to n \in \mathbb{N} \to x \circ s(n) = x(s_{n})$
+\item $\varphi_{66} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to \forall n \in \mathbb{N}\,(y(n) = x \circ s(n))$
+\item $\varphi_{67} :\equiv \forall \alpha\,(\mathrm{Seq}(x \circ s) \to \forall n \in \mathbb{N}\,(y(n) = x \circ s(n)) \to \mathrm{Conv}(y,\alpha) \to \mathrm{Conv}(x \circ s,\alpha))$
+\item $\varphi_{68} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to x(s_{n}) \in [a,b]$
+\item $\varphi_{69} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to x \circ s(n) \in [a,b]$
+\item $\varphi_{70} :\equiv x(s_{n}) = x \circ s(n) \to x(s_{n}) \in [a,b] \to x \circ s(n) \in [a,b]$
+\item $\varphi_{71} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to x \circ s(n) = x(s_{n})$
+\item $\varphi_{72} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to x(s_{n}) = x \circ s(n)$
+\item $\varphi_{73} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to \forall n \in \mathbb{N}\,(x \circ s(n) \in [a,b])$
+\item $\varphi_{74} :\equiv b \in \mathbb{R} \to \mathrm{Seq}(x) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \varphi_{4}$
+\item $\varphi_{75} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to \mathrm{SubIdx}(s) \land c \in [a,b] \land \mathrm{Conv}(x \circ s,c)$
+\item $\varphi_{76} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to n \in \mathbb{N} \to y(n) = x(s_{n})$
+\item $\varphi_{77} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y \in \mathbb{R}) \to \forall y\,(\lvert a \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert a \rvert + y \in \mathbb{R})$
+\item $\varphi_{78} :\equiv \forall x\,\forall c\,\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{Conv}(x,c) \to c \in [a,b])$
+\item $\varphi_{79} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k}))$
+\item $\varphi_{80} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to \forall k \in \mathbb{N}\,(y(k) = x(s_{k}))$
+\item $\varphi_{81} :\equiv b \in \mathbb{R} \to \mathrm{Seq}(x) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \varphi_{6}$
+\item $\varphi_{82} :\equiv b \in \mathbb{R} \to \mathrm{Seq}(x) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \varphi_{7}$
+\item $\varphi_{83} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to \exists s\,(\varphi_{11})$
+\item $\varphi_{84} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to n \in \mathbb{N} \to x \circ s(n) = x(s_{n})$
+\item $\varphi_{85} :\equiv \forall y\,(x \circ s(n) = y \to y = x \circ s(n)) \to x \circ s(n) = x(s_{n}) \to x(s_{n}) = x \circ s(n)$
+\item $\varphi_{86} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to n \in \mathbb{N} \to \forall k \in \mathbb{N}\,(x \circ s(k) = x(s_{k}))$
+\item $\varphi_{87} :\equiv b \in \mathbb{R} \to \mathrm{Seq}(x) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \exists s\,(\varphi_{11})$
+\item $\varphi_{88} :\equiv \mathrm{Conv}(y,c) \to \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to \varphi_{11}$
+\item $\varphi_{89} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \exists s\,(\varphi_{11})$
+\item $\varphi_{90} :\equiv \forall y\,(\lvert a \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert a \rvert + y \in \mathbb{R}) \to \lvert a \rvert \in \mathbb{R} \to \lvert b \rvert \in \mathbb{R} \to \lvert a \rvert + \lvert b \rvert \in \mathbb{R}$
+\item $\varphi_{91} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})) \to \mathrm{Seq}(x \circ s) \land \forall k \in \mathbb{N}\,(x \circ s(k) = x(s_{k}))$
+\item $\varphi_{92} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Seq}(y) \land \varphi_{17}$
+\item $\varphi_{93} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{17}$
+\item $\varphi_{94} :\equiv b \in \mathbb{R} \to \mathrm{Seq}(x) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \varphi_{40}$
+\item $\varphi_{95} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{23}$
+\item $\varphi_{96} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{24}$
+\item $\varphi_{97} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{30}$
+\item $\varphi_{98} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{33}$
+\item $\varphi_{99} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{37}$
+\item $\varphi_{100} :\equiv (a \in \mathbb{R} \to \lvert a \rvert \in \mathbb{R}) \to (a \in \mathbb{R} \to a \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{27}$
+\item $\varphi_{101} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{45}$
+\item $\varphi_{102} :\equiv b \in \mathbb{R} \to \mathrm{Seq}(x) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \varphi_{61}$
+\item $\varphi_{103} :\equiv \forall c\,(\varphi_{39} \land (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y)) \land \neg \exists s\,(\varphi_{11}))$
+\item $\varphi_{104} :\equiv \forall y\,(\varphi_{39} \land \neg \exists s\,(\varphi_{11}) \to \neg (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y)))$
+\item $\varphi_{105} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{52}$
+\item $\varphi_{106} :\equiv \forall y\,(\varphi_{39} \land \neg \exists s\,(\varphi_{11})) \to \forall y\,(\neg (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y)))$
+\item $\varphi_{107} :\equiv (b \in \mathbb{R} \to \lvert b \rvert \in \mathbb{R}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{26}$
+\item $\varphi_{108} :\equiv \varphi_{39} \land (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y)) \land \mathrm{Conv}(y,c) \land (\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})))$
+\item $\varphi_{109} :\equiv \varphi_{39} \land (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y)) \land \mathrm{Conv}(y,c) \land \neg \exists s\,(\varphi_{11})$
+\item $\varphi_{110} :\equiv \varphi_{39} \land (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y)) \land \neg \exists s\,(\varphi_{11}) \to \neg \mathrm{Conv}(y,c)$
+\item $\varphi_{111} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{63}$
+\item $\varphi_{112} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{64}$
+\item $\varphi_{113} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{66}$
+\item $\varphi_{114} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{68}$
+\item $\varphi_{115} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{69}$
+\item $\varphi_{116} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{71}$
+\item $\varphi_{117} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{72}$
+\item $\varphi_{118} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{73}$
+\item $\varphi_{119} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{75}$
+\item $\varphi_{120} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{76}$
+\item $\varphi_{121} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \varphi_{88}$
+\item $\varphi_{122} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{79}$
+\item $\varphi_{123} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{80}$
+\item $\varphi_{124} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{83}$
+\item $\varphi_{125} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{19}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{25}$
+\item $\varphi_{126} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{84}$
+\item $\varphi_{127} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{86}$
+\item $\varphi_{128} :\equiv \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y) \to \mathrm{Conv}(y,c) \to \varphi_{91}$
+\item $\varphi_{129} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{57}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{19}$
+\item $\varphi_{130} :\equiv \varphi_{109} \to \neg (\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(y(k) = x(s_{k})))$
+\item $\varphi_{131} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{42}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{53}$
+\item $\varphi_{132} :\equiv \forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55}) \to \forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55})$
+\item $\varphi_{133} :\equiv \forall c\,\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55}) \to \forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{55})$
+\item $\varphi_{134} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{53}) \to \varphi_{39} \to n \in \mathbb{N} \to \lvert x(n) \rvert \leq \lvert a \rvert + \lvert b \rvert$
+\item $\varphi_{135} :\equiv (\mathrm{SubSeq}(y,x) \leftrightarrow \mathrm{Seq}(y) \land \varphi_{17}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{92}$
+\item $\varphi_{136} :\equiv \forall n\,(\varphi_{39} \to n \in \mathbb{N} \to \lvert x(n) \rvert \leq \lvert a \rvert + \lvert b \rvert) \to \forall n\,(\varphi_{39}) \to \forall n \in \mathbb{N}\,(\lvert x(n) \rvert \leq \lvert a \rvert + \lvert b \rvert)$
+\item $\varphi_{137} :\equiv (\forall M\,(\neg (M \in \mathbb{R} \land \forall n \in \mathbb{N}\,(\lvert x(n) \rvert \leq M))) \to \neg \varphi_{40}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{57}$
+\item $\varphi_{138} :\equiv (a \in \mathbb{R} \to \varphi_{81}) \to (\mathrm{Cgt}(y) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(y,\alpha))) \to a \in \mathbb{R} \to \varphi_{74}$
+\item $\varphi_{139} :\equiv (x \circ s(n) = x(s_{n}) \to x(s_{n}) = x \circ s(n)) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{117}$
+\item $\varphi_{140} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{27}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{26}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{44}$
+\item $\varphi_{141} :\equiv \forall \alpha\,(\forall c\,(\neg \mathrm{Conv}(y,c)) \to \neg \mathrm{Conv}(y,\alpha)) \to \varphi_{31} \to \varphi_{1} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{89}$
+\item $\varphi_{142} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{47}) \to \varphi_{42} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{42}$
+\item $\varphi_{143} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{89}) \to \varphi_{39} \land \neg \exists s\,(\varphi_{11}) \to \neg (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y))$
+\item $\varphi_{144} :\equiv \varphi_{39} \land (\mathrm{SubSeq}(y,x) \land \mathrm{Cgt}(y)) \land \neg \exists s\,(\varphi_{11}) \to \varphi_{103}$
+\item $\varphi_{145} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{92}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{93}$
+\item $\varphi_{146} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{47}) \to \varphi_{60} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{60}$
+\item $\varphi_{147} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{99}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{98}$
+\item $\varphi_{148} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{44}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{56}) \to a \in \mathbb{R} \to \varphi_{94}$
+\item $\varphi_{149} :\equiv \varphi_{50} \to (a \in \mathbb{R} \to a \in \mathbb{R}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{131}$
+\item $\varphi_{150} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{101}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{105}$
+\item $\varphi_{151} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{101}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{111}$
+\item $\varphi_{152} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{122}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{96}$
+\item $\varphi_{153} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{99}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{119}$
+\item $\varphi_{154} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{101}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{116}$
+\item $\varphi_{155} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{105}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{114}$
+\item $\varphi_{156} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{95}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{128}$
+\item $\varphi_{157} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{112}) \to \varphi_{108} \to n \in \mathbb{N} \to y(n) = x \circ s(n)$
+\item $\varphi_{158} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{128}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{97}$
+\item $\varphi_{159} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{96}) \to \varphi_{22} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{95}$
+\item $\varphi_{160} :\equiv \forall n\,(\varphi_{108} \to n \in \mathbb{N} \to y(n) = x \circ s(n)) \to \forall n\,(\varphi_{108}) \to \forall n \in \mathbb{N}\,(y(n) = x \circ s(n))$
+\item $\varphi_{161} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{115}) \to \varphi_{108} \to n \in \mathbb{N} \to x \circ s(n) \in [a,b]$
+\item $\varphi_{162} :\equiv \forall n\,(\varphi_{108} \to n \in \mathbb{N} \to x \circ s(n) \in [a,b]) \to \forall n\,(\varphi_{108}) \to \forall n \in \mathbb{N}\,(x \circ s(n) \in [a,b])$
+\item $\varphi_{163} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{122}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{123}$
+\item $\varphi_{164} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{128}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{127}$
+\item $\varphi_{165} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{117}) \to \varphi_{58} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{112}$
+\item $\varphi_{166} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{113}) \to (a \in \mathbb{R} \to \varphi_{82}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{99}$
+\item $\varphi_{167} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{123}) \to \varphi_{48} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{120}$
+\item $\varphi_{168} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{114}) \to \varphi_{70} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{115}$
+\item $\varphi_{169} :\equiv (\mathrm{Seq}(x) \to \varphi_{43}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \mathrm{Seq}(x)) \to \varphi_{156}$
+\item $\varphi_{170} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{119}) \to (\forall c\,(\varphi_{10}) \to \varphi_{10}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{121}$
+\item $\varphi_{171} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{127}) \to \varphi_{65} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{126}$
+\item $\varphi_{172} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{121}) \to (\forall s\,(\neg \varphi_{11}) \to \neg \varphi_{11}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{124}$
+\item $\varphi_{173} :\equiv (\mathrm{NSeq}(s) \to n \in \mathbb{N} \to s_{n} \in \mathbb{N}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{95}) \to \varphi_{150}$
+\item $\varphi_{174} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{118}) \to \varphi_{147}$
+\item $\varphi_{175} :\equiv (\varphi_{39} \land \neg \exists s\,(\varphi_{11}) \to \forall y\,(\varphi_{39} \land \neg \exists s\,(\varphi_{11}))) \to \forall b\,(\varphi_{9}) \to (\forall b\,(\varphi_{9}) \to \varphi_{16}) \to \varphi_{14} \to a \in \mathbb{R} \to \varphi_{87}$
+\item $\varphi_{176} :\equiv \forall n\,(\varphi_{39} \to n \in \mathbb{N} \to \lvert x(n) \rvert \leq \lvert a \rvert + \lvert b \rvert) \to \varphi_{136} \to (\varphi_{39} \to \forall n\,(\varphi_{39})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{56}$
+\item $\varphi_{177} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{96}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{98}) \to \varphi_{153}$
+\item $\varphi_{178} :\equiv (\mathrm{Seq}(x \circ s) \to \varphi_{38}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{97}) \to \varphi_{166}$
+\item $\varphi_{179} :\equiv (\forall s\,(\varphi_{130}) \to \forall s\,(\varphi_{109}) \to \varphi_{18}) \to (\varphi_{109} \to \forall s\,(\varphi_{109})) \to a \in \mathbb{R} \to \varphi_{102}$
+\item $\varphi_{180} :\equiv \forall c\,(\varphi_{110}) \to (\forall c\,(\varphi_{110}) \to \varphi_{103} \to \forall c\,(\neg \mathrm{Conv}(y,c))) \to \varphi_{144} \to \varphi_{141}$
+\item $\varphi_{181} :\equiv \forall n\,(\varphi_{108} \to n \in \mathbb{N} \to y(n) = x \circ s(n)) \to \varphi_{160} \to (\varphi_{108} \to \forall n\,(\varphi_{108})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{113}$
+\item $\varphi_{182} :\equiv \forall n\,(\varphi_{108} \to n \in \mathbb{N} \to x \circ s(n) \in [a,b]) \to \varphi_{162} \to (\varphi_{108} \to \forall n\,(\varphi_{108})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \varphi_{118}$
+\end{abbrevlist}
+\end{fullproof}

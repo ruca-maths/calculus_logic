@@ -1,0 +1,438 @@
+% 自動生成 (prover/build.js): MulZeroCancel  ノード数 181
+\begin{fullproof}{[E48]}{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = 0)$}{181}\phantomsection\label{tree:MulZeroCancel}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall z\,(x = y^{-1} \cdot 0 \to y^{-1} \cdot 0 = z \to x = z)$}
+\AXC{$\varphi_{25}$\lbl{A2}}
+\BIC{$x = y^{-1} \cdot 0 \to y^{-1} \cdot 0 = 0 \to x = 0$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\BIC{$y \in \mathbb{R} \to y \neq 0 \to y^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{53}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \in \mathbb{R}) \to \varphi_{40}$}
+\BIC{$\varphi_{40}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \neq 0$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{40}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y^{-1} \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x \cdot 0 = 0)$\lbl{[F8]}}
+\AXC{$\forall x \in \mathbb{R}\,(x \cdot 0 = 0) \to y^{-1} \in \mathbb{R} \to y^{-1} \cdot 0 = 0$\lbl{A2}}
+\BIC{$y^{-1} \in \mathbb{R} \to y^{-1} \cdot 0 = 0$}
+\AXC{$(y^{-1} \in \mathbb{R} \to y^{-1} \cdot 0 = 0) \to \varphi_{42}$\lbl{A1}}
+\BIC{$\varphi_{42}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$\forall z\,(x = 0 \cdot y^{-1} \to 0 \cdot y^{-1} = z \to x = z)$}
+\AXC{$\varphi_{35}$\lbl{A2}}
+\BIC{$x = 0 \cdot y^{-1} \to 0 \cdot y^{-1} = y^{-1} \cdot 0 \to x = y^{-1} \cdot 0$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)$\lbl{(R7)}}
+\AXC{$\varphi_{34}$\lbl{A2}}
+\BIC{$\forall y\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to 0 \cdot y = y \cdot 0)$}
+\AXC{$\varphi_{37}$\lbl{A2}}
+\BIC{$0 \in \mathbb{R} \to y^{-1} \in \mathbb{R} \to 0 \cdot y^{-1} = y^{-1} \cdot 0$}
+\AXC{$(0 \in \mathbb{R} \to y^{-1} \in \mathbb{R} \to 0 \cdot y^{-1} = y^{-1} \cdot 0) \to \varphi_{47}$\lbl{A1}}
+\BIC{$\varphi_{47}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\forall z\,(x = x \cdot y \cdot y^{-1} \to x \cdot y \cdot y^{-1} = z \to x = z)$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\forall z\,(x = x \cdot y \cdot y^{-1} \to x \cdot y \cdot y^{-1} = z \to x = z)$}
+\AXC{$\forall z\,(x = x \cdot y \cdot y^{-1} \to x \cdot y \cdot y^{-1} = z \to x = z) \to \varphi_{12}$\lbl{A2}}
+\BIC{$\varphi_{12}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to x \cdot y \cdot y^{-1} = x \cdot y \cdot y^{-1}$\lbl{A2}}
+\BIC{$x \cdot y \cdot y^{-1} = x \cdot y \cdot y^{-1}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \cdot y = 0$\lbl{A1}}
+\AXC{$\varphi_{55}$\lbl{A1}}
+\BIC{$x \cdot y \cdot y^{-1} = x \cdot y \cdot y^{-1} \to \varphi_{23} \to \varphi_{19}$}
+\BIC{$\varphi_{23} \to \varphi_{19}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \varphi_{4}$\lbl{A2}}
+\BIC{$\varphi_{4}$}
+\AXC{$\varphi_{4} \to \varphi_{24}$\lbl{A2}}
+\BIC{$\varphi_{24}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(v_{851} = y \to y = v_{851})$\lbl{A2}}
+\BIC{$\forall y\,(v_{851} = y \to y = v_{851})$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$v_{851} = v_{852} \to v_{852} = v_{851}$}
+\UIC{$\forall v_{852}\,(v_{851} = v_{852} \to v_{852} = v_{851})$}
+\UIC{$\forall v_{851}\,\forall v_{852}\,(v_{851} = v_{852} \to v_{852} = v_{851})$}
+\AXC{$\varphi_{32}$\lbl{A2}}
+\BIC{$\forall v_{852}\,(x \cdot y \cdot y^{-1} = v_{852} \to v_{852} = x \cdot y \cdot y^{-1})$}
+\AXC{$\varphi_{43}$\lbl{A2}}
+\BIC{$\varphi_{17}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(\varphi_{14})$\lbl{(R6)}}
+\AXC{$\forall x\,\forall y\,(\varphi_{14}) \to \forall y\,(\varphi_{14})$\lbl{A2}}
+\BIC{$\forall y\,(\varphi_{14})$}
+\AXC{$\forall y\,(\varphi_{14}) \to \varphi_{14}$\lbl{A2}}
+\BIC{$\varphi_{14}$}
+\AXC{$\varphi_{14} \to \varphi_{27}$\lbl{A2}}
+\BIC{$\varphi_{27}$}
+\AXC{$\varphi_{27} \to \varphi_{58}$\lbl{A1}}
+\BIC{$\varphi_{58}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{58}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \in \mathbb{R}) \to \varphi_{45}$}
+\BIC{$\varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{17}$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y^{-1} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{45}$}
+\BIC{$x \in \mathbb{R} \to \varphi_{10}$}
+\AXC{$(x \in \mathbb{R} \to \varphi_{10}) \to \varphi_{17} \to x \in \mathbb{R} \to \varphi_{11}$\lbl{A1}}
+\BIC{$\varphi_{17} \to x \in \mathbb{R} \to \varphi_{11}$}
+\BIC{$x \in \mathbb{R} \to \varphi_{11}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall z\,(x = x \cdot 1 \to x \cdot 1 = z \to x = z)$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(v_{849} = y \to y = v_{849})$\lbl{A2}}
+\BIC{$\forall y\,(v_{849} = y \to y = v_{849})$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$v_{849} = v_{850} \to v_{850} = v_{849}$}
+\UIC{$\forall v_{850}\,(v_{849} = v_{850} \to v_{850} = v_{849})$}
+\UIC{$\forall v_{849}\,\forall v_{850}\,(v_{849} = v_{850} \to v_{850} = v_{849})$}
+\AXC{$\varphi_{28}$\lbl{A2}}
+\BIC{$\forall v_{850}\,(y \cdot y^{-1} = v_{850} \to v_{850} = y \cdot y^{-1})$}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$y \cdot y^{-1} = 1 \to 1 = y \cdot y^{-1}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to x \cdot x^{-1} = 1)$\lbl{(R9)}}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$y \in \mathbb{R} \to y \neq 0 \to y \cdot y^{-1} = 1$}
+\AXC{$\varphi_{51}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \in \mathbb{R}) \to \varphi_{38}$}
+\BIC{$\varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$y \cdot y^{-1} = 1 \to 1 = y \cdot y^{-1}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \neq 0$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{38}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \cdot y^{-1} = 1$}
+\AXC{$\varphi_{49}$\lbl{A1}}
+\BIC{$\varphi_{33}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to 1 = y \cdot y^{-1}$}
+\AXC{$\varphi_{52}$\lbl{A1}}
+\BIC{$x \cdot 1 = x \cdot 1 \to \varphi_{44}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to x \cdot 1 = x \cdot 1$\lbl{A2}}
+\BIC{$x \cdot 1 = x \cdot 1$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$x \cdot 1 = x \cdot 1 \to \varphi_{44}$}
+\BIC{$\varphi_{44}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(x \cdot 1 = y \to y = x \cdot 1)$\lbl{A2}}
+\BIC{$\forall y\,(x \cdot 1 = y \to y = x \cdot 1)$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x \cdot 1 = x)$\lbl{(R8)}}
+\AXC{$\forall x \in \mathbb{R}\,(x \cdot 1 = x) \to x \in \mathbb{R} \to x \cdot 1 = x$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to x \cdot 1 = x$}
+\AXC{$(x \in \mathbb{R} \to x \cdot 1 = x) \to \varphi_{39}$\lbl{A1}}
+\BIC{$\varphi_{39}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{39}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \cdot 1 = x$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \cdot 1 = x) \to \varphi_{22}$\lbl{A1}}
+\BIC{$\varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\forall y\,(x \cdot 1 = y \to y = x \cdot 1)$}
+\AXC{$\forall y\,(x \cdot 1 = y \to y = x \cdot 1) \to x \cdot 1 = x \to x = x \cdot 1$\lbl{A2}}
+\BIC{$x \cdot 1 = x \to x = x \cdot 1$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{22}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = x \cdot 1$}
+\AXC{$\varphi_{56}$\lbl{A1}}
+\BIC{$\varphi_{16} \to \varphi_{6} \to \varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$z = w \to x \cdot 1 = x \cdot z \to x \cdot 1 = x \cdot w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to x \cdot 1 = x \cdot z \to x \cdot 1 = x \cdot w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to x \cdot 1 = x \cdot z \to x \cdot 1 = x \cdot w)$}
+\AXC{$\varphi_{30}$\lbl{A2}}
+\BIC{$\forall w\,(1 = w \to x \cdot 1 = x \cdot 1 \to x \cdot 1 = x \cdot w)$}
+\AXC{$\varphi_{36}$\lbl{A2}}
+\BIC{$1 = y \cdot y^{-1} \to x \cdot 1 = x \cdot 1 \to x \cdot 1 = x \cdot (y \cdot y^{-1})$}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{44}$}
+\BIC{$\varphi_{16}$}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{16} \to \varphi_{6} \to \varphi_{9}$}
+\BIC{$\varphi_{6} \to \varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\forall z\,(x = x \cdot 1 \to x \cdot 1 = z \to x = z)$}
+\AXC{$\forall z\,(x = x \cdot 1 \to x \cdot 1 = z \to x = z) \to \varphi_{6}$\lbl{A2}}
+\BIC{$\varphi_{6}$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\varphi_{6} \to \varphi_{9}$}
+\BIC{$\varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{24}$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to \varphi_{11}$}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{9}$}
+\AXC{$\varphi_{9} \to (x \in \mathbb{R} \to \varphi_{11}) \to \varphi_{46}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to \varphi_{11}) \to \varphi_{46}$}
+\BIC{$\varphi_{46}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = x \cdot y \cdot y^{-1}$}
+\AXC{$\varphi_{59}$\lbl{A1}}
+\BIC{$\varphi_{50}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{12}$}
+\AXC{$\varphi_{13}$\lbl{A6}}
+\UIC{$\forall w\,(\varphi_{13})$}
+\UIC{$\forall z\,\forall w\,(\varphi_{13})$}
+\AXC{$\forall z\,\forall w\,(\varphi_{13}) \to \varphi_{29}$\lbl{A2}}
+\BIC{$\varphi_{29}$}
+\AXC{$\varphi_{29} \to \varphi_{23}$\lbl{A2}}
+\BIC{$\varphi_{23}$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{23} \to \varphi_{19}$}
+\BIC{$\varphi_{19}$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{50}$}
+\BIC{$\varphi_{12} \to x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = 0 \cdot y^{-1}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = 0 \cdot y^{-1}$}
+\AXC{$\varphi_{57}$\lbl{A1}}
+\BIC{$\varphi_{15} \to \varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y^{-1} \in \mathbb{R}$}
+\AXC{$0 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{47}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y^{-1} \in \mathbb{R}) \to \varphi_{15}$}
+\BIC{$\varphi_{15}$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{15} \to \varphi_{41}$}
+\BIC{$\varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$x = 0 \cdot y^{-1} \to 0 \cdot y^{-1} = y^{-1} \cdot 0 \to x = y^{-1} \cdot 0$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\varphi_{41}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = y^{-1} \cdot 0$}
+\AXC{$\varphi_{54}$\lbl{A1}}
+\BIC{$\varphi_{48}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$x = y^{-1} \cdot 0 \to y^{-1} \cdot 0 = 0 \to x = 0$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y^{-1} \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{42}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y^{-1} \cdot 0 = 0$}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{48}$}
+\BIC{$\varphi_{31}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = 0$}
+\UIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = 0)$}
+\UIC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = 0)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall y\,(v_{851} = y \to y = v_{851}) \to v_{851} = v_{852} \to v_{852} = v_{851}$
+\item $\varphi_{2} :\equiv \forall y\,(v_{849} = y \to y = v_{849}) \to v_{849} = v_{850} \to v_{850} = v_{849}$
+\item $\varphi_{3} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(x = y \to y = z \to x = z)$
+\item $\varphi_{4} :\equiv \forall z\,(x = x \cdot (y \cdot y^{-1}) \to x \cdot (y \cdot y^{-1}) = z \to x = z)$
+\item $\varphi_{5} :\equiv \forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall z\,(x = x \cdot 1 \to x \cdot 1 = z \to x = z)$
+\item $\varphi_{6} :\equiv x = x \cdot 1 \to x \cdot 1 = x \cdot (y \cdot y^{-1}) \to x = x \cdot (y \cdot y^{-1})$
+\item $\varphi_{7} :\equiv \forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall z\,(x = y^{-1} \cdot 0 \to y^{-1} \cdot 0 = z \to x = z)$
+\item $\varphi_{8} :\equiv \forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall z\,(x = 0 \cdot y^{-1} \to 0 \cdot y^{-1} = z \to x = z)$
+\item $\varphi_{9} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = x \cdot (y \cdot y^{-1})$
+\item $\varphi_{10} :\equiv y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \cdot y \cdot y^{-1} = x \cdot (y \cdot y^{-1})$
+\item $\varphi_{11} :\equiv y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \cdot (y \cdot y^{-1}) = x \cdot y \cdot y^{-1}$
+\item $\varphi_{12} :\equiv x = x \cdot y \cdot y^{-1} \to x \cdot y \cdot y^{-1} = 0 \cdot y^{-1} \to x = 0 \cdot y^{-1}$
+\item $\varphi_{13} :\equiv z = w \to x \cdot y \cdot y^{-1} = z \cdot y^{-1} \to x \cdot y \cdot y^{-1} = w \cdot y^{-1}$
+\item $\varphi_{14} :\equiv \forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x \cdot y \cdot z = x \cdot (y \cdot z))$
+\item $\varphi_{15} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to 0 \cdot y^{-1} = y^{-1} \cdot 0$
+\item $\varphi_{16} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \cdot 1 = x \cdot (y \cdot y^{-1})$
+\item $\varphi_{17} :\equiv x \cdot y \cdot y^{-1} = x \cdot (y \cdot y^{-1}) \to x \cdot (y \cdot y^{-1}) = x \cdot y \cdot y^{-1}$
+\item $\varphi_{18} :\equiv \forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall z\,(x = x \cdot y \cdot y^{-1} \to x \cdot y \cdot y^{-1} = z \to x = z)$
+\item $\varphi_{19} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \cdot y \cdot y^{-1} = 0 \cdot y^{-1}$
+\item $\varphi_{20} :\equiv \forall x \in \mathbb{R}\,(x \neq 0 \to x \cdot x^{-1} = 1) \to y \in \mathbb{R} \to y \neq 0 \to y \cdot y^{-1} = 1$
+\item $\varphi_{21} :\equiv \forall v_{850}\,(y \cdot y^{-1} = v_{850} \to v_{850} = y \cdot y^{-1}) \to y \cdot y^{-1} = 1 \to 1 = y \cdot y^{-1}$
+\item $\varphi_{22} :\equiv (x \cdot 1 = x \to x = x \cdot 1) \to x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = x \cdot 1$
+\item $\varphi_{23} :\equiv x \cdot y = 0 \to x \cdot y \cdot y^{-1} = x \cdot y \cdot y^{-1} \to x \cdot y \cdot y^{-1} = 0 \cdot y^{-1}$
+\item $\varphi_{24} :\equiv x = x \cdot (y \cdot y^{-1}) \to x \cdot (y \cdot y^{-1}) = x \cdot y \cdot y^{-1} \to x = x \cdot y \cdot y^{-1}$
+\item $\varphi_{25} :\equiv \forall z\,(x = y^{-1} \cdot 0 \to y^{-1} \cdot 0 = z \to x = z) \to x = y^{-1} \cdot 0 \to y^{-1} \cdot 0 = 0 \to x = 0$
+\item $\varphi_{26} :\equiv \forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R}) \to y \in \mathbb{R} \to y \neq 0 \to y^{-1} \in \mathbb{R}$
+\item $\varphi_{27} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to y^{-1} \in \mathbb{R} \to x \cdot y \cdot y^{-1} = x \cdot (y \cdot y^{-1})$
+\item $\varphi_{28} :\equiv \forall v_{849}\,\forall v_{850}\,(v_{849} = v_{850} \to v_{850} = v_{849}) \to \forall v_{850}\,(y \cdot y^{-1} = v_{850} \to v_{850} = y \cdot y^{-1})$
+\item $\varphi_{29} :\equiv \forall w\,(x \cdot y = w \to x \cdot y \cdot y^{-1} = x \cdot y \cdot y^{-1} \to x \cdot y \cdot y^{-1} = w \cdot y^{-1})$
+\item $\varphi_{30} :\equiv \forall z\,\forall w\,(z = w \to x \cdot 1 = x \cdot z \to x \cdot 1 = x \cdot w) \to \forall w\,(1 = w \to x \cdot 1 = x \cdot 1 \to x \cdot 1 = x \cdot w)$
+\item $\varphi_{31} :\equiv (x = y^{-1} \cdot 0 \to y^{-1} \cdot 0 = 0 \to x = 0) \to x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = 0$
+\item $\varphi_{32} :\equiv \forall v_{851}\,\forall v_{852}\,(v_{851} = v_{852} \to v_{852} = v_{851}) \to \forall v_{852}\,(x \cdot y \cdot y^{-1} = v_{852} \to v_{852} = x \cdot y \cdot y^{-1})$
+\item $\varphi_{33} :\equiv (y \cdot y^{-1} = 1 \to 1 = y \cdot y^{-1}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to 1 = y \cdot y^{-1}$
+\item $\varphi_{34} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x) \to \forall y\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to 0 \cdot y = y \cdot 0)$
+\item $\varphi_{35} :\equiv \forall z\,(x = 0 \cdot y^{-1} \to 0 \cdot y^{-1} = z \to x = z) \to x = 0 \cdot y^{-1} \to 0 \cdot y^{-1} = y^{-1} \cdot 0 \to x = y^{-1} \cdot 0$
+\item $\varphi_{36} :\equiv \forall w\,(1 = w \to x \cdot 1 = x \cdot 1 \to x \cdot 1 = x \cdot w) \to 1 = y \cdot y^{-1} \to x \cdot 1 = x \cdot 1 \to x \cdot 1 = x \cdot (y \cdot y^{-1})$
+\item $\varphi_{37} :\equiv \forall y\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to 0 \cdot y = y \cdot 0) \to 0 \in \mathbb{R} \to y^{-1} \in \mathbb{R} \to 0 \cdot y^{-1} = y^{-1} \cdot 0$
+\item $\varphi_{38} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \neq 0) \to x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \cdot y^{-1} = 1$
+\item $\varphi_{39} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \cdot 1 = x$
+\item $\varphi_{40} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \neq 0) \to x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y^{-1} \in \mathbb{R}$
+\item $\varphi_{41} :\equiv (x = 0 \cdot y^{-1} \to 0 \cdot y^{-1} = y^{-1} \cdot 0 \to x = y^{-1} \cdot 0) \to x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = y^{-1} \cdot 0$
+\item $\varphi_{42} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y^{-1} \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y^{-1} \cdot 0 = 0$
+\item $\varphi_{43} :\equiv \forall v_{852}\,(x \cdot y \cdot y^{-1} = v_{852} \to v_{852} = x \cdot y \cdot y^{-1}) \to \varphi_{17}$
+\item $\varphi_{44} :\equiv (1 = y \cdot y^{-1} \to x \cdot 1 = x \cdot 1 \to x \cdot 1 = x \cdot (y \cdot y^{-1})) \to \varphi_{16}$
+\item $\varphi_{45} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y^{-1} \in \mathbb{R}) \to x \in \mathbb{R} \to \varphi_{10}$
+\item $\varphi_{46} :\equiv \varphi_{24} \to x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = x \cdot y \cdot y^{-1}$
+\item $\varphi_{47} :\equiv 0 \in \mathbb{R} \to (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y^{-1} \in \mathbb{R}) \to \varphi_{15}$
+\item $\varphi_{48} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y^{-1} \cdot 0 = 0) \to \varphi_{31}$
+\item $\varphi_{49} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \cdot y^{-1} = 1) \to \varphi_{33}$
+\item $\varphi_{50} :\equiv \varphi_{19} \to \varphi_{12} \to x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = 0 \cdot y^{-1}$
+\item $\varphi_{51} :\equiv (y \in \mathbb{R} \to y \neq 0 \to y \cdot y^{-1} = 1) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \in \mathbb{R}) \to \varphi_{38}$
+\item $\varphi_{52} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to 1 = y \cdot y^{-1}) \to x \cdot 1 = x \cdot 1 \to \varphi_{44}$
+\item $\varphi_{53} :\equiv (y \in \mathbb{R} \to y \neq 0 \to y^{-1} \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \in \mathbb{R}) \to \varphi_{40}$
+\item $\varphi_{54} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = y^{-1} \cdot 0) \to \varphi_{48}$
+\item $\varphi_{55} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \cdot y = 0) \to x \cdot y \cdot y^{-1} = x \cdot y \cdot y^{-1} \to \varphi_{23} \to \varphi_{19}$
+\item $\varphi_{56} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = x \cdot 1) \to \varphi_{16} \to \varphi_{6} \to \varphi_{9}$
+\item $\varphi_{57} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = 0 \cdot y^{-1}) \to \varphi_{15} \to \varphi_{41}$
+\item $\varphi_{58} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to y \in \mathbb{R}) \to \varphi_{45}$
+\item $\varphi_{59} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = x \cdot y \cdot y^{-1}) \to \varphi_{50}$
+\end{abbrevlist}
+\end{fullproof}

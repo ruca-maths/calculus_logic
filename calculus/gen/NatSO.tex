@@ -1,0 +1,58 @@
+% 自動生成 (prover/build.js): NatSO  ノード数 24
+\begin{fullproof}{[N2$_omega$]}{$\forall n \in \omega\,(S(n) \in \mathbb{N})$}{24}\phantomsection\label{tree:NatSO}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,(\mathrm{Ind}(x) \leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x))$\lbl{DefInd}}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\mathrm{Ind}(\omega) \leftrightarrow \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega)$}
+\AXC{$\mathrm{Ind}(\omega)$\lbl{補題(ωは帰納的)}}
+\AXC{$\mathrm{Ind}(\omega) \to \varphi_{4}$\lbl{A1}}
+\BIC{$\varphi_{4}$}
+\BIC{$n \in \omega \to \forall y \in \omega\,(S(y) \in \omega)$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall y \in \omega\,(S(y) \in \omega) \to n \in \omega \to S(n) \in \omega$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$n \in \omega \to \forall y \in \omega\,(S(y) \in \omega)$}
+\AXC{$(n \in \omega \to \forall y \in \omega\,(S(y) \in \omega)) \to \varphi_{3}$\lbl{A1}}
+\BIC{$\varphi_{3}$}
+\BIC{$n \in \omega \to n \in \omega \to S(n) \in \omega$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$n \in \omega \to n \in \omega$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$n \in \omega \to n \in \omega \to S(n) \in \omega$}
+\AXC{$\varphi_{6}$\lbl{A1}}
+\BIC{$(n \in \omega \to n \in \omega) \to S(n) \neq \emptyset \to \varphi_{1}$}
+\BIC{$S(n) \neq \emptyset \to \varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\forall n\,(S(n) \neq \emptyset)$\lbl{[N0]}}
+\AXC{$\forall n\,(S(n) \neq \emptyset) \to S(n) \neq \emptyset$\lbl{A2}}
+\BIC{$S(n) \neq \emptyset$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$S(n) \neq \emptyset \to \varphi_{1}$}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\forall n\,(n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset)$\lbl{Def$\mathbb{N}$}}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$S(n) \in \mathbb{N} \leftrightarrow S(n) \in \omega \land S(n) \neq \emptyset$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\BIC{$n \in \omega \to S(n) \in \mathbb{N}$}
+\UIC{$\forall n \in \omega\,(S(n) \in \mathbb{N})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv (S(n) \in \mathbb{N} \leftrightarrow S(n) \in \omega \land S(n) \neq \emptyset) \to n \in \omega \to S(n) \in \mathbb{N}$
+\item $\varphi_{2} :\equiv \forall n\,(n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset) \to (S(n) \in \mathbb{N} \leftrightarrow S(n) \in \omega \land S(n) \neq \emptyset)$
+\item $\varphi_{3} :\equiv (\forall y \in \omega\,(S(y) \in \omega) \to n \in \omega \to S(n) \in \omega) \to n \in \omega \to n \in \omega \to S(n) \in \omega$
+\item $\varphi_{4} :\equiv (\mathrm{Ind}(\omega) \leftrightarrow \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega)) \to n \in \omega \to \forall y \in \omega\,(S(y) \in \omega)$
+\item $\varphi_{5} :\equiv \forall x\,(\mathrm{Ind}(x) \leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x)) \to (\mathrm{Ind}(\omega) \leftrightarrow \emptyset \in \omega \land \forall y \in \omega\,(S(y) \in \omega))$
+\item $\varphi_{6} :\equiv (n \in \omega \to n \in \omega \to S(n) \in \omega) \to (n \in \omega \to n \in \omega) \to S(n) \neq \emptyset \to \varphi_{1}$
+\end{abbrevlist}
+\end{fullproof}

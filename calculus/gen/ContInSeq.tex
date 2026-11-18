@@ -1,0 +1,630 @@
+% 自動生成 (prover/build.js): ContInSeq  ノード数 248
+\begin{fullproof}{[G1]}{$\forall f\,\forall A\,\forall c\,\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Conv}(f \circ a,f(c)))$}{248}\phantomsection\label{tree:ContInSeq}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z = w \to \lvert z - f(c) \rvert < \varepsilon \to \lvert w - f(c) \rvert < \varepsilon$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \lvert z - f(c) \rvert < \varepsilon \to \lvert w - f(c) \rvert < \varepsilon)$}
+\UIC{$\varphi_{5}$}
+\AXC{$\varphi_{5} \to \varphi_{32}$\lbl{A2}}
+\BIC{$\varphi_{32}$}
+\AXC{$\varphi_{32} \to \varphi_{48}$\lbl{A2}}
+\BIC{$\varphi_{48}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\varphi_{33}$\lbl{A2}}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{94}$\lbl{A1}}
+\AXC{$\varphi_{132}$\lbl{A1}}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{99}$}
+\AXC{$\varphi_{138}$\lbl{A1}}
+\BIC{$\varphi_{33} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{96}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{96}$}
+\AXC{$\varphi_{145}$\lbl{A1}}
+\BIC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{81}) \to \varphi_{127}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{81}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{81}) \to \varphi_{127}$}
+\BIC{$\varphi_{127}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A$\lbl{A2}}
+\AXC{$\varphi_{28}$\lbl{A1}}
+\AXC{$\varphi_{28} \to (\forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A) \to \varphi_{26}$\lbl{A1}}
+\BIC{$(\forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A) \to \varphi_{26}$}
+\BIC{$\varphi_{26}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{26}$}
+\AXC{$\varphi_{58}$\lbl{A2}}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{86}$\lbl{A1}}
+\AXC{$\varphi_{131}$\lbl{A1}}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{107}$}
+\AXC{$\varphi_{144}$\lbl{A1}}
+\BIC{$\varphi_{58} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{112}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{112}$}
+\AXC{$\varphi_{146}$\lbl{A1}}
+\BIC{$\varphi_{26} \to (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{81}) \to \varphi_{130}$}
+\BIC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{81}) \to \varphi_{130}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{81}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{81}) \to \varphi_{130}$}
+\BIC{$\varphi_{130}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$\forall y\,(f \circ a(n) = y \to y = f \circ a(n))$}
+\AXC{$\varphi_{50}$\lbl{A2}}
+\BIC{$f \circ a(n) = f(a_{n}) \to f(a_{n}) = f \circ a(n)$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A$\lbl{A2}}
+\AXC{$\varphi_{28}$\lbl{A1}}
+\AXC{$\varphi_{28} \to (\forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A) \to \varphi_{26}$\lbl{A1}}
+\BIC{$(\forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A) \to \varphi_{26}$}
+\BIC{$\varphi_{26}$}
+\AXC{$\varphi_{26} \to \varphi_{72}$\lbl{A1}}
+\BIC{$\varphi_{72}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{69})$\lbl{DefContIn}}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{69}) \to \forall A\,\forall c\,(\varphi_{69})$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,(\varphi_{69})$}
+\AXC{$\forall A\,\forall c\,(\varphi_{69}) \to \forall c\,(\varphi_{69})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{69})$}
+\AXC{$\forall c\,(\varphi_{69}) \to \varphi_{69}$\lbl{A2}}
+\BIC{$\varphi_{69}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{69}$}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)$\lbl{A1}}
+\AXC{$\varphi_{105}$\lbl{A1}}
+\BIC{$\varphi_{69} \to \mathrm{ContIn}(f,A,c) \to \varphi_{10}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y)$\lbl{[B5]}}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$\forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y)$}
+\AXC{$\varphi_{19}$\lbl{A2}}
+\BIC{$\forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f))$}
+\AXC{$\varphi_{35}$\lbl{A2}}
+\BIC{$A \subseteq \mathrm{dom}(f) \to a_{n} \in A \to a_{n} \in \mathrm{dom}(f)$}
+\AXC{$\varphi_{114}$\lbl{A1}}
+\BIC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{10}) \to \varphi_{73}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{10}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{10}) \to \varphi_{73}$}
+\BIC{$\varphi_{73}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{6}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{72}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{11}$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{73}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}$}
+\AXC{$\varphi_{74}$\lbl{A1}}
+\BIC{$\varphi_{9} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)$}
+\UIC{$\forall n\,(\varphi_{9} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f))$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\varphi_{9} \to \forall n\,(\varphi_{9})$\lbl{A4}}
+\AXC{$\varphi_{75}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\forall n\,(\varphi_{9} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f))$}
+\AXC{$\forall n\,(\varphi_{9} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)) \to \varphi_{75} \to \varphi_{82}$\lbl{A1}}
+\BIC{$\varphi_{75} \to \varphi_{82}$}
+\BIC{$\varphi_{82}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{20}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{69})$\lbl{DefContIn}}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{69}) \to \forall A\,\forall c\,(\varphi_{69})$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,(\varphi_{69})$}
+\AXC{$\forall A\,\forall c\,(\varphi_{69}) \to \forall c\,(\varphi_{69})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{69})$}
+\AXC{$\forall c\,(\varphi_{69}) \to \varphi_{69}$\lbl{A2}}
+\BIC{$\varphi_{69}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{69}$}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)$\lbl{A1}}
+\AXC{$\varphi_{98}$\lbl{A1}}
+\BIC{$\varphi_{69} \to \mathrm{ContIn}(f,A,c) \to \varphi_{2}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{2}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{2}$}
+\AXC{$\forall f\,\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{39})$\lbl{[S8]}}
+\AXC{$\varphi_{88}$\lbl{A2}}
+\BIC{$\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{39})$}
+\AXC{$\varphi_{87}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{39}$}
+\AXC{$\varphi_{123}$\lbl{A1}}
+\BIC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{2}) \to \varphi_{93}$}
+\BIC{$\varphi_{93}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{20}$}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \mathrm{Seq}(a)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{93}$}
+\BIC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{20}) \to \varphi_{55}$}
+\BIC{$\varphi_{55}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\varphi_{36}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{55}$}
+\AXC{$\varphi_{55} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{104}$\lbl{A1}}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{104}$}
+\AXC{$\varphi_{139}$\lbl{A1}}
+\BIC{$\varphi_{36} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{103}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{103}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{103}$}
+\AXC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{103}) \to \varphi_{129}$\lbl{A1}}
+\BIC{$\varphi_{129}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{81}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{129}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{90}$}
+\AXC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{90}) \to \varphi_{118}$\lbl{A1}}
+\BIC{$\varphi_{118}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$f \circ a(n) = f(a_{n}) \to f(a_{n}) = f \circ a(n)$}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{118}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{91}$}
+\AXC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{91}) \to \varphi_{140}$\lbl{A1}}
+\BIC{$\varphi_{140}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{48}$}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{80}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{127}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{89}$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{130}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{95}$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{140}$}
+\BIC{$\varphi_{48} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{97}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{97}$}
+\AXC{$\varphi_{133}$\lbl{A1}}
+\BIC{$\varphi_{83} \to n \in \mathbb{N} \to N \leq n \to \lvert f \circ a(n) - f(c) \rvert < \varepsilon$}
+\UIC{$\forall n\,(\varphi_{83} \to n \in \mathbb{N} \to N \leq n \to \lvert f \circ a(n) - f(c) \rvert < \varepsilon)$}
+\AXC{$\varphi_{149}$\lbl{A1}}
+\BIC{$\varphi_{134} \to \varphi_{141}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{94}$\lbl{A1}}
+\AXC{$\varphi_{128}$\lbl{A1}}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{76}$}
+\AXC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{76}) \to \varphi_{136}$\lbl{A1}}
+\BIC{$\varphi_{136}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\forall N\,(\neg \varphi_{18}) \to \neg \varphi_{18}$\lbl{A2}}
+\AXC{$\varphi_{83} \to \forall n\,(\varphi_{83})$\lbl{A4}}
+\AXC{$\varphi_{134}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{134} \to \varphi_{141}$}
+\BIC{$\varphi_{141}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{102}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{136}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{108}$}
+\AXC{$\varphi_{142}$\lbl{A1}}
+\BIC{$(\forall N\,(\neg \varphi_{18}) \to \neg \varphi_{18}) \to \mathrm{ContIn}(f,A,c) \to \varphi_{109}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{109}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\forall a\,(\varphi_{41})$\lbl{[C3]}}
+\AXC{$\forall a\,(\varphi_{41}) \to \varphi_{41}$\lbl{A2}}
+\BIC{$\varphi_{41}$}
+\AXC{$\varphi_{41} \to \varphi_{38}$\lbl{A2}}
+\BIC{$\varphi_{38}$}
+\AXC{$\varphi_{38} \to \mathrm{Conv}(a,c) \to \varphi_{27}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,c) \to \varphi_{27}$}
+\AXC{$\varphi_{143}$\lbl{A1}}
+\BIC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{1}) \to \varphi_{137}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{1}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{1}) \to \varphi_{137}$}
+\BIC{$\varphi_{137}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{86}$\lbl{A1}}
+\AXC{$\varphi_{122}$\lbl{A1}}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{68}$}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{137}$}
+\BIC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{66}) \to \varphi_{85}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{86}$\lbl{A1}}
+\AXC{$\varphi_{121}$\lbl{A1}}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{66}$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{66}) \to \varphi_{85}$}
+\BIC{$\varphi_{85}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{109}$}
+\AXC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{109}) \to \varphi_{113}$\lbl{A1}}
+\BIC{$\varphi_{113}$}
+\UIC{$\forall N\,(\varphi_{113})$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{85}$}
+\AXC{$\varphi_{85} \to \forall N\,(\varphi_{113}) \to \varphi_{148}$\lbl{A1}}
+\BIC{$\forall N\,(\varphi_{113}) \to \varphi_{148}$}
+\BIC{$\varphi_{148}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{69})$\lbl{DefContIn}}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{69}) \to \forall A\,\forall c\,(\varphi_{69})$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,(\varphi_{69})$}
+\AXC{$\forall A\,\forall c\,(\varphi_{69}) \to \forall c\,(\varphi_{69})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{69})$}
+\AXC{$\forall c\,(\varphi_{69}) \to \varphi_{69}$\lbl{A2}}
+\BIC{$\varphi_{69}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\varphi_{84}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{69}$}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)$\lbl{A1}}
+\AXC{$\varphi_{119}$\lbl{A1}}
+\BIC{$\varphi_{69} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{65}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{65}$}
+\AXC{$\varphi_{135}$\lbl{A1}}
+\BIC{$\varphi_{84} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{63}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{63}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{63}$}
+\AXC{$(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{63}) \to \varphi_{147}$\lbl{A1}}
+\BIC{$\varphi_{147}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\varphi_{126}$\lbl{A3}}
+\AXC{$\varphi_{125}$\lbl{A4}}
+\AXC{$\forall N\,(\varphi_{113}) \to \forall N\,(\varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{30} \land \neg \varphi_{21}) \to \varphi_{4}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\varphi_{148}$}
+\BIC{$\varphi_{125} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{78}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{78}$}
+\AXC{$\varphi_{124}$\lbl{A1}}
+\BIC{$\varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \varphi_{21} \to \neg \varphi_{30}$}
+\UIC{$\forall \delta\,(\varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \varphi_{21} \to \neg \varphi_{30})$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{147}$}
+\BIC{$\varphi_{126} \to \varphi_{116} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{57}$}
+\BIC{$\varphi_{116} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{57}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\varphi_{116}$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\varphi_{116} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{57}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{57}$}
+\AXC{$\varphi_{115}$\lbl{A1}}
+\BIC{$\varphi_{9} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{21}$}
+\UIC{$\forall \varepsilon\,(\varphi_{9} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{21})$}
+\AXC{$\forall \varepsilon\,(\varphi_{9} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{21}) \to \varphi_{117} \to \varphi_{111}$\lbl{A1}}
+\BIC{$\varphi_{117} \to \varphi_{111}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{69})$\lbl{DefContIn}}
+\AXC{$\forall f\,\forall A\,\forall c\,(\varphi_{69}) \to \forall A\,\forall c\,(\varphi_{69})$\lbl{A2}}
+\BIC{$\forall A\,\forall c\,(\varphi_{69})$}
+\AXC{$\forall A\,\forall c\,(\varphi_{69}) \to \forall c\,(\varphi_{69})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{69})$}
+\AXC{$\forall c\,(\varphi_{69}) \to \varphi_{69}$\lbl{A2}}
+\BIC{$\varphi_{69}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\varphi_{69}$}
+\AXC{$\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)$\lbl{A1}}
+\AXC{$\varphi_{100}$\lbl{A1}}
+\BIC{$\varphi_{69} \to \mathrm{ContIn}(f,A,c) \to \varphi_{3}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{3}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y)$\lbl{[B5]}}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$\forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y)$}
+\AXC{$\varphi_{19}$\lbl{A2}}
+\BIC{$\forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f))$}
+\AXC{$\varphi_{24}$\lbl{A2}}
+\BIC{$A \subseteq \mathrm{dom}(f) \to c \in A \to c \in \mathrm{dom}(f)$}
+\AXC{$\varphi_{101}$\lbl{A1}}
+\BIC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{10}) \to \varphi_{60}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{3}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{10}$}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{10}) \to \varphi_{60}$}
+\BIC{$\varphi_{60}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{7}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to f(x) \in \mathbb{R})$\lbl{[S6]}}
+\AXC{$\varphi_{34}$\lbl{A2}}
+\BIC{$\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to f(x) \in \mathbb{R})$}
+\AXC{$\varphi_{29}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(f) \to c \in \mathrm{dom}(f) \to f(c) \in \mathbb{R}$}
+\AXC{$\varphi_{106}$\lbl{A1}}
+\BIC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{2}) \to \varphi_{67}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{7}$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{2}$}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{2}) \to \varphi_{67}$}
+\BIC{$\varphi_{67}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{12}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{55}$}
+\AXC{$\varphi_{55} \to \mathrm{ContIn}(f,A,c) \to \varphi_{13}$\lbl{A1}}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{13}$}
+\AXC{$\varphi_{54}$\lbl{DefConv}}
+\AXC{$\varphi_{54} \to \varphi_{64}$\lbl{A2}}
+\BIC{$\varphi_{64}$}
+\AXC{$\varphi_{64} \to \varphi_{71}$\lbl{A2}}
+\BIC{$\varphi_{71}$}
+\AXC{$\varphi_{71} \to \varphi_{120}$\lbl{A1}}
+\BIC{$\varphi_{120}$}
+\BIC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{12}) \to \varphi_{92}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{9} \to \forall \varepsilon\,(\varphi_{9})$\lbl{A4}}
+\AXC{$\varphi_{117}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\varphi_{117} \to \varphi_{111}$}
+\BIC{$\varphi_{111}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{59}$}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\mathrm{ContIn}(f,A,c) \to \varphi_{12}$}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$(\mathrm{ContIn}(f,A,c) \to \varphi_{12}) \to \varphi_{92}$}
+\BIC{$\varphi_{92}$}
+\BIC{$\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{15}$}
+\UIC{$\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{15})$}
+\UIC{$\forall c\,\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{15})$}
+\UIC{$\forall A\,\forall c\,\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{15})$}
+\UIC{$\varphi_{40}$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Conv}(a,c)$
+\item $\varphi_{2} :\equiv \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{RFn}(f)$
+\item $\varphi_{3} :\equiv \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to c \in A$
+\item $\varphi_{4} :\equiv \forall N\,(\neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta)))$
+\item $\varphi_{5} :\equiv \forall z\,\forall w\,(z = w \to \lvert z - f(c) \rvert < \varepsilon \to \lvert w - f(c) \rvert < \varepsilon)$
+\item $\varphi_{6} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{7} :\equiv \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to c \in \mathrm{dom}(f)$
+\item $\varphi_{8} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(f \circ a(n) = y \to y = f \circ a(n))$
+\item $\varphi_{9} :\equiv \mathrm{ContIn}(f,A,c) \land \mathrm{Seq}(a) \land \forall n \in \mathbb{N}\,(a_{n} \in A) \land \mathrm{Conv}(a,c)$
+\item $\varphi_{10} :\equiv \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to A \subseteq \mathrm{dom}(f)$
+\item $\varphi_{11} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to a_{n} \in A$
+\item $\varphi_{12} :\equiv \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to f(c) \in \mathbb{R}$
+\item $\varphi_{13} :\equiv \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Seq}(f \circ a)$
+\item $\varphi_{14} :\equiv N \leq n \to \forall x \in A\,(\lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon)$
+\item $\varphi_{15} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Conv}(f \circ a,f(c))$
+\item $\varphi_{16} :\equiv \forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y) \to \forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y)$
+\item $\varphi_{17} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)$
+\item $\varphi_{18} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert f \circ a(n) - f(c) \rvert < \varepsilon)$
+\item $\varphi_{19} :\equiv \forall Y\,\forall x\,(A \subseteq Y \to x \in A \to x \in Y) \to \forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f))$
+\item $\varphi_{20} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f))$
+\item $\varphi_{21} :\equiv \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert f \circ a(n) - f(c) \rvert < \varepsilon)$
+\item $\varphi_{22} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to N \leq n \to N \leq n$
+\item $\varphi_{23} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{24} :\equiv \forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f)) \to A \subseteq \mathrm{dom}(f) \to c \in A \to c \in \mathrm{dom}(f)$
+\item $\varphi_{25} :\equiv \mathrm{Conv}(a,c) \to \mathrm{Seq}(f \circ a) \land \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n}))$
+\item $\varphi_{26} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to n \in \mathbb{N} \to a_{n} \in A$
+\item $\varphi_{27} :\equiv \delta \in \mathbb{R} \to 0 < \delta \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta)$
+\item $\varphi_{28} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \forall n \in \mathbb{N}\,(a_{n} \in A)$
+\item $\varphi_{29} :\equiv \forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to f(x) \in \mathbb{R}) \to \mathrm{RFn}(f) \to c \in \mathrm{dom}(f) \to f(c) \in \mathbb{R}$
+\item $\varphi_{30} :\equiv \delta \in \mathbb{R} \land 0 < \delta \land \forall x \in A\,(\lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon)$
+\item $\varphi_{31} :\equiv N \leq n \to a_{n} \in A \to \lvert a_{n} - c \rvert < \delta \to \lvert f(a_{n}) - f(c) \rvert < \varepsilon$
+\item $\varphi_{32} :\equiv \forall w\,(f(a_{n}) = w \to \lvert f(a_{n}) - f(c) \rvert < \varepsilon \to \lvert w - f(c) \rvert < \varepsilon)$
+\item $\varphi_{33} :\equiv \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to N \leq n \to \lvert a_{n} - c \rvert < \delta$
+\item $\varphi_{34} :\equiv \forall f\,\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to f(x) \in \mathbb{R}) \to \forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to f(x) \in \mathbb{R})$
+\item $\varphi_{35} :\equiv \forall x\,(A \subseteq \mathrm{dom}(f) \to x \in A \to x \in \mathrm{dom}(f)) \to A \subseteq \mathrm{dom}(f) \to a_{n} \in A \to a_{n} \in \mathrm{dom}(f)$
+\item $\varphi_{36} :\equiv \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n})) \to n \in \mathbb{N} \to f \circ a(n) = f(a_{n})$
+\item $\varphi_{37} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to N \leq n \to \lvert a_{n} - c \rvert < \delta$
+\item $\varphi_{38} :\equiv \forall \varepsilon\,(\mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \varepsilon))$
+\item $\varphi_{39} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f)) \to \mathrm{Seq}(f \circ a) \land \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n}))$
+\item $\varphi_{40} :\equiv \forall f\,\forall A\,\forall c\,\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{15})$
+\item $\varphi_{41} :\equiv \forall \alpha\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon))$
+\item $\varphi_{42} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to N \leq n \to f \circ a(n) = f(a_{n})$
+\item $\varphi_{43} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to N \leq n \to f(a_{n}) = f \circ a(n)$
+\item $\varphi_{44} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta)$
+\item $\varphi_{45} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to N \leq n \to \lvert f(a_{n}) - f(c) \rvert < \varepsilon$
+\item $\varphi_{46} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to N \leq n \to n \in \mathbb{N} \to N \leq n \to \lvert a_{n} - c \rvert < \delta$
+\item $\varphi_{47} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to N \leq n \to \lvert f \circ a(n) - f(c) \rvert < \varepsilon$
+\item $\varphi_{48} :\equiv f(a_{n}) = f \circ a(n) \to \lvert f(a_{n}) - f(c) \rvert < \varepsilon \to \lvert f \circ a(n) - f(c) \rvert < \varepsilon$
+\item $\varphi_{49} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to N \leq n \to \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta)$
+\item $\varphi_{50} :\equiv \forall y\,(f \circ a(n) = y \to y = f \circ a(n)) \to f \circ a(n) = f(a_{n}) \to f(a_{n}) = f \circ a(n)$
+\item $\varphi_{51} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to \forall n \in \mathbb{N}\,(N \leq n \to \lvert f \circ a(n) - f(c) \rvert < \varepsilon)$
+\item $\varphi_{52} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to N \leq n \to n \in \mathbb{N} \to f \circ a(n) = f(a_{n})$
+\item $\varphi_{53} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to N \leq n \to \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n}))$
+\item $\varphi_{54} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \leftrightarrow \mathrm{Seq}(a) \land \alpha \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{55} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \varphi_{25}$
+\item $\varphi_{56} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to \varphi_{14}$
+\item $\varphi_{57} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{21}$
+\item $\varphi_{58} :\equiv \forall x \in A\,(\lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon) \to a_{n} \in A \to \lvert a_{n} - c \rvert < \delta \to \lvert f(a_{n}) - f(c) \rvert < \varepsilon$
+\item $\varphi_{59} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \varphi_{21})$
+\item $\varphi_{60} :\equiv (\mathrm{ContIn}(f,A,c) \to \varphi_{3}) \to \mathrm{ContIn}(f,A,c) \to \varphi_{7}$
+\item $\varphi_{61} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to n \in \mathbb{N} \to \varphi_{31}$
+\item $\varphi_{62} :\equiv \varphi_{30} \to N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to N \in \mathbb{N}$
+\item $\varphi_{63} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists \delta\,(\varphi_{30})$
+\item $\varphi_{64} :\equiv \forall \alpha\,(\mathrm{Conv}(f \circ a,\alpha) \leftrightarrow \mathrm{Seq}(f \circ a) \land \alpha \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert f \circ a(n) - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{65} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\varphi_{30}))$
+\item $\varphi_{66} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to 0 < \delta$
+\item $\varphi_{67} :\equiv (\mathrm{ContIn}(f,A,c) \to \varphi_{7}) \to \mathrm{ContIn}(f,A,c) \to \varphi_{12}$
+\item $\varphi_{68} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \delta \in \mathbb{R}$
+\item $\varphi_{69} :\equiv \mathrm{ContIn}(f,A,c) \leftrightarrow \mathrm{RFn}(f) \land A \subseteq \mathrm{dom}(f) \land c \in A \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\varphi_{30}))$
+\item $\varphi_{70} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta)$
+\item $\varphi_{71} :\equiv \mathrm{Conv}(f \circ a,f(c)) \leftrightarrow \mathrm{Seq}(f \circ a) \land f(c) \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \varphi_{21})$
+\item $\varphi_{72} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{6}) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{11}$
+\item $\varphi_{73} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{11}) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}$
+\item $\varphi_{74} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{17}) \to \varphi_{9} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)$
+\item $\varphi_{75} :\equiv \forall n\,(\varphi_{9} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)) \to \forall n\,(\varphi_{9}) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f))$
+\item $\varphi_{76} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{62}$
+\item $\varphi_{77} :\equiv 0 < \varepsilon \to \varphi_{30} \to N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to \varphi_{18}$
+\item $\varphi_{78} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{21}$
+\item $\varphi_{79} :\equiv 0 < \varepsilon \to \varphi_{30} \to N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta) \to \varphi_{21}$
+\item $\varphi_{80} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{22}$
+\item $\varphi_{81} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{23}$
+\item $\varphi_{82} :\equiv (\varphi_{9} \to \forall n\,(\varphi_{9})) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{20}$
+\item $\varphi_{83} :\equiv \varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{30} \land (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta))$
+\item $\varphi_{84} :\equiv \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\varphi_{30})) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists \delta\,(\varphi_{30})$
+\item $\varphi_{85} :\equiv \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varphi_{70}$
+\item $\varphi_{86} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{30}$
+\item $\varphi_{87} :\equiv \forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{39}) \to \mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{39}$
+\item $\varphi_{88} :\equiv \forall f\,\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{39}) \to \forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{39})$
+\item $\varphi_{89} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{37}$
+\item $\varphi_{90} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{42}$
+\item $\varphi_{91} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{43}$
+\item $\varphi_{92} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{59}) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{15}$
+\item $\varphi_{93} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \mathrm{Seq}(a)) \to (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{20}) \to \varphi_{55}$
+\item $\varphi_{94} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{44}$
+\item $\varphi_{95} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{45}$
+\item $\varphi_{96} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{46}$
+\item $\varphi_{97} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{47}$
+\item $\varphi_{98} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)) \to \varphi_{69} \to \mathrm{ContIn}(f,A,c) \to \varphi_{2}$
+\item $\varphi_{99} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{49}$
+\item $\varphi_{100} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)) \to \varphi_{69} \to \mathrm{ContIn}(f,A,c) \to \varphi_{3}$
+\item $\varphi_{101} :\equiv (A \subseteq \mathrm{dom}(f) \to c \in A \to c \in \mathrm{dom}(f)) \to (\mathrm{ContIn}(f,A,c) \to \varphi_{10}) \to \varphi_{60}$
+\item $\varphi_{102} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{51}$
+\item $\varphi_{103} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{52}$
+\item $\varphi_{104} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{53}$
+\item $\varphi_{105} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)) \to \varphi_{69} \to \mathrm{ContIn}(f,A,c) \to \varphi_{10}$
+\item $\varphi_{106} :\equiv (\mathrm{RFn}(f) \to c \in \mathrm{dom}(f) \to f(c) \in \mathbb{R}) \to (\mathrm{ContIn}(f,A,c) \to \varphi_{2}) \to \varphi_{67}$
+\item $\varphi_{107} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{56}$
+\item $\varphi_{108} :\equiv \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to \varphi_{77}$
+\item $\varphi_{109} :\equiv \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to \varphi_{79}$
+\item $\varphi_{110} :\equiv \forall n\,(\varphi_{83}) \to \forall n \in \mathbb{N}\,(N \leq n \to \lvert f \circ a(n) - f(c) \rvert < \varepsilon)$
+\item $\varphi_{111} :\equiv (\varphi_{9} \to \forall \varepsilon\,(\varphi_{9})) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{59}$
+\item $\varphi_{112} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{30} \to \varphi_{61}$
+\item $\varphi_{113} :\equiv \varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{30} \land \neg \varphi_{21} \to \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \delta))$
+\item $\varphi_{114} :\equiv (A \subseteq \mathrm{dom}(f) \to a_{n} \in A \to a_{n} \in \mathrm{dom}(f)) \to (\mathrm{ContIn}(f,A,c) \to \varphi_{10}) \to \varphi_{73}$
+\item $\varphi_{115} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{57}) \to \varphi_{9} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{21}$
+\item $\varphi_{116} :\equiv \varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \varphi_{21} \to \forall \delta\,(\varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \varphi_{21})$
+\item $\varphi_{117} :\equiv \forall \varepsilon\,(\varphi_{9} \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{21}) \to \forall \varepsilon\,(\varphi_{9}) \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \varphi_{21})$
+\item $\varphi_{118} :\equiv (f \circ a(n) = f(a_{n}) \to f(a_{n}) = f \circ a(n)) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{91}$
+\item $\varphi_{119} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(f,A,c)) \to \varphi_{69} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{65}$
+\item $\varphi_{120} :\equiv (\mathrm{ContIn}(f,A,c) \to \varphi_{13}) \to (\mathrm{ContIn}(f,A,c) \to \varphi_{12}) \to \varphi_{92}$
+\item $\varphi_{121} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{86}) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{66}$
+\item $\varphi_{122} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{86}) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{68}$
+\item $\varphi_{123} :\equiv (\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{39}) \to (\mathrm{ContIn}(f,A,c) \to \varphi_{2}) \to \varphi_{93}$
+\item $\varphi_{124} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{78}) \to \varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \varphi_{21} \to \neg \varphi_{30}$
+\item $\varphi_{125} :\equiv \varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{30} \land \neg \varphi_{21} \to \forall N\,(\varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{30} \land \neg \varphi_{21})$
+\item $\varphi_{126} :\equiv \forall \delta\,(\varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \varphi_{21} \to \neg \varphi_{30}) \to \forall \delta\,(\varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \varphi_{21}) \to \forall \delta\,(\neg \varphi_{30})$
+\item $\varphi_{127} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{80}) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{89}$
+\item $\varphi_{128} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{94}) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{76}$
+\item $\varphi_{129} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{81}) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{90}$
+\item $\varphi_{130} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{89}) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{95}$
+\item $\varphi_{131} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{86}) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{107}$
+\item $\varphi_{132} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{94}) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{99}$
+\item $\varphi_{133} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{97}) \to \varphi_{83} \to n \in \mathbb{N} \to N \leq n \to \lvert f \circ a(n) - f(c) \rvert < \varepsilon$
+\item $\varphi_{134} :\equiv \forall n\,(\varphi_{83} \to n \in \mathbb{N} \to N \leq n \to \lvert f \circ a(n) - f(c) \rvert < \varepsilon) \to \varphi_{110}$
+\item $\varphi_{135} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{65}) \to \varphi_{84} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{63}$
+\item $\varphi_{136} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{102}) \to \mathrm{ContIn}(f,A,c) \to \varphi_{108}$
+\item $\varphi_{137} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{68}) \to (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{66}) \to \varphi_{85}$
+\item $\varphi_{138} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{99}) \to \varphi_{33} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{96}$
+\item $\varphi_{139} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{104}) \to \varphi_{36} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{103}$
+\item $\varphi_{140} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{95}) \to \varphi_{48} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{97}$
+\item $\varphi_{141} :\equiv (\varphi_{83} \to \forall n\,(\varphi_{83})) \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{102}$
+\item $\varphi_{142} :\equiv (\mathrm{ContIn}(f,A,c) \to \varphi_{108}) \to (\forall N\,(\neg \varphi_{18}) \to \neg \varphi_{18}) \to \mathrm{ContIn}(f,A,c) \to \varphi_{109}$
+\item $\varphi_{143} :\equiv (\mathrm{Conv}(a,c) \to \varphi_{27}) \to (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{1}) \to \varphi_{137}$
+\item $\varphi_{144} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{107}) \to \varphi_{58} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{112}$
+\item $\varphi_{145} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{96}) \to (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{81}) \to \varphi_{127}$
+\item $\varphi_{146} :\equiv (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{112}) \to \varphi_{26} \to (\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{81}) \to \varphi_{130}$
+\item $\varphi_{147} :\equiv \forall \delta\,(\varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \varphi_{21} \to \neg \varphi_{30}) \to \varphi_{126} \to \varphi_{116} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{57}$
+\item $\varphi_{148} :\equiv (\forall N\,(\varphi_{113}) \to \forall N\,(\varphi_{9} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \varphi_{30} \land \neg \varphi_{21}) \to \varphi_{4}) \to \varphi_{125} \to \mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \varphi_{78}$
+\item $\varphi_{149} :\equiv \forall n\,(\varphi_{83} \to n \in \mathbb{N} \to N \leq n \to \lvert f \circ a(n) - f(c) \rvert < \varepsilon) \to \varphi_{134} \to \varphi_{141}$
+\end{abbrevlist}
+\end{fullproof}

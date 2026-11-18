@@ -1,0 +1,18 @@
+% 自動生成 (prover/build.js): AbsOfNonneg  ノード数 8
+\begin{fullproof}{[A1]}{$\forall x\,(0 \leq x \to \lvert x \rvert = x)$}{8}\phantomsection\label{tree:AbsOfNonneg}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\forall x\,(0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x)$\lbl{Def$\lvert\cdot\rvert$}}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x$}
+\AXC{$0 \leq x \to 0 \leq x$\lbl{A1}}
+\AXC{$(0 \leq x \to 0 \leq x) \to \varphi_{1}$\lbl{A1}}
+\BIC{$\varphi_{1}$}
+\BIC{$0 \leq x \to \lvert x \rvert = x$}
+\UIC{$\forall x\,(0 \leq x \to \lvert x \rvert = x)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv 0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x \to 0 \leq x \to \lvert x \rvert = x$
+\item $\varphi_{2} :\equiv \forall x\,(0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x) \to 0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x$
+\end{abbrevlist}
+\end{fullproof}

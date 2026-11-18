@@ -1,0 +1,121 @@
+\chapter{実数の集合}\label{ch:text2}
+
+\begin{textref}{第2章 定義1.1--3.1, 命題3.2}
+  区間(定義1.1), 近傍(定義1.3), 上界・下界(定義2.1), 最大値・最小値(定義2.2), 上限・下限(定義2.3), 数列の上限・下限(定義2.5), 実数の連続性(公理3.1), アルキメデスの公理(命題3.2)を扱う. テキストの公理3.1 は本ノートでは定理である(定理\ref{thm:sup}, 定理\ref{thm:inf}).
+\end{textref}
+
+\section{区間と近傍}
+
+\begin{dfn}[テキスト定義1.1]\label{dfn:interval}
+  $a, b \in \R$ に対して, 次の関数記号を内包記法(分出)で定義する.
+  \begin{align*}
+    \mathrm{I}_{oo}(a,b) &:= \{x \in \R \mid a < x \land x < b\}, & \mathrm{I}_{cc}(a,b) &:= \{x \in \R \mid a \leq x \land x \leq b\},\\
+    \mathrm{I}_{co}(a,b) &:= \{x \in \R \mid a \leq x \land x < b\}, & \mathrm{I}_{oc}(a,b) &:= \{x \in \R \mid a < x \land x \leq b\},\\
+    \mathrm{I}_{o+}(a) &:= \{x \in \R \mid a < x\}, & \mathrm{I}_{c+}(a) &:= \{x \in \R \mid a \leq x\},\\
+    \mathrm{I}_{o-}(b) &:= \{x \in \R \mid x < b\}, & \mathrm{I}_{c-}(b) &:= \{x \in \R \mid x \leq b\}.
+  \end{align*}
+  テキストの記法ではそれぞれ $(a,b)$, $[a,b]$, $[a,b)$, $(a,b]$, $(a,\infty)$, $[a,\infty)$, $(-\infty,b)$, $(-\infty,b]$ である. (本ノートでは $(a,b)$ を順序対と区別するため, 形式的には上の記号を用いる.) さらに述語記号
+  \begin{align*}
+    \mathrm{Interval}(I) :\leftrightarrow{}& I = \R \lor \exists a\exists b\,(a,b \in \R \land a < b \land (I = \mathrm{I}_{oo}(a,b) \lor I = \mathrm{I}_{cc}(a,b) \lor \cdots)) \\
+    & \lor \exists a\,(a \in \R \land (I = \mathrm{I}_{o+}(a) \lor \cdots))
+  \end{align*}
+  で「$I$ は区間である」を定める(「$\cdots$」は上の8種類を尽くす選言).
+\end{dfn}
+
+\begin{dfn}[近傍. テキスト定義1.3]
+  $\varepsilon, a \in \R$, $0 < \varepsilon$ に対して $U_\varepsilon(a) := \{x \in \R \mid \abs{x - a} < \varepsilon\}$.
+\end{dfn}
+
+\begin{prop}
+  $\varepsilon, a \in \R$, $0 < \varepsilon$ ならば $U_\varepsilon(a) = \mathrm{I}_{oo}(a - \varepsilon, a + \varepsilon)$.
+\end{prop}
+\begin{proof}
+  Ext により, $x \in \R$ について $\abs{x - a} < \varepsilon \leftrightarrow a - \varepsilon < x \land x < a + \varepsilon$ を示せばよい. [A11][A12] より左辺は $-\varepsilon < x - a < \varepsilon$ と同値であり, 各辺に $a$ を加えれば(補題\ref{lem:order}(4), (R2)--(R5))右辺と同値.
+\end{proof}
+
+\section{上界・下界・最大値・上限}
+
+以下 $X$ は $X \subseteq \R$ をみたす集合とする(テキストは $X \neq \emptyset$ も仮定するが, 定義自体には不要である).
+
+\begin{dfn}[テキスト定義2.1--2.3]\label{dfn:bounds}
+  \begin{align*}
+    \UB(a, X) &:\leftrightarrow a \in \R \land \forall x \in X\,(x \leq a), &
+    \LB(a, X) &:\leftrightarrow a \in \R \land \forall x \in X\,(a \leq x),\\
+    \mathrm{BddAb}(X) &:\leftrightarrow \exists a\,\UB(a, X), &
+    \mathrm{BddBe}(X) &:\leftrightarrow \exists a\,\LB(a, X),\\
+    \mathrm{Bdd}(X) &:\leftrightarrow \mathrm{BddAb}(X) \land \mathrm{BddBe}(X), \\
+    \mathrm{IsMax}(a, X) &:\leftrightarrow \UB(a, X) \land a \in X, &
+    \mathrm{IsMin}(a, X) &:\leftrightarrow \LB(a, X) \land a \in X,\\
+    \IsSup(s, X) &:\leftrightarrow \UB(s, X) \land \forall w\,(\UB(w, X) \to s \leq w), \\
+    \IsInf(s, X) &:\leftrightarrow \LB(s, X) \land \forall w\,(\LB(w, X) \to w \leq s).
+  \end{align*}
+  ($\UB$, $\IsSup$ は定義\ref{dfn:ub}と同じである.) テキストの「上界の最小値を上限という」は $\IsSup(s,X) \leftrightarrow \mathrm{IsMin}(s, \{a \in \R \mid \UB(a,X)\})$ であり, 定義から直ちに同値である.
+\end{dfn}
+
+\begin{lem}[一意性]\label{lem:sup-unique}
+  \begin{enumerate}[label={[B\arabic*]}, start=3]
+    \item $\IsSup(s, X) \to \IsSup(t, X) \to s = t$.
+    \item $\IsInf(s, X) \to \IsInf(t, X) \to s = t$.
+  \end{enumerate}
+\end{lem}
+\begin{proof}[通常の証明]
+  $t$ は上界なので $s$ の最小性から $s \leq t$, 同様に $t \leq s$. [O6] より $s = t$.
+\end{proof}
+
+\trees{SupUnique,InfUnique}
+\begin{dfn}
+  [B3][B4] と定義\ref{dfn:description}により, 関数記号 $\sup X$, $\inf X$ を導入する(それぞれ $\IsSup(s,X)$, $\IsInf(s, X)$ をみたす唯一の $s$. 存在しなければ $\emptyset$). テキストの「$\sup X = \infty$」は $\neg\,\mathrm{BddAb}(X)$ の別表記であり, 関数記号の値ではない. $\max X$, $\min X$ も同様に導入する.
+\end{dfn}
+
+\begin{prop}[テキスト定義2.3の後の注意]
+  $\mathrm{IsMax}(a, X) \to \IsSup(a, X)$. 従って $X$ が最大値をもてば $\max X = \sup X$.
+\end{prop}
+\begin{proof}
+  $a$ は上界であり, 任意の上界 $b$ について $a \in X$ より $a \leq b$. (証明木は今後追加する.)
+\end{proof}
+
+\begin{dfn}[数列の上限・下限. テキスト定義2.5]
+  $a : \N \to \R$ を数列という($\Seq(a) :\leftrightarrow a : \N \to \R$). $a(n)$ を $a_n$ と書く. 数列 $a$ の上界・上限などは集合 $\ran(a) = \{a_n \mid n \in \N\}$ のそれと定める.
+\end{dfn}
+
+\section{実数の連続性}
+
+テキストの公理3.1(1) は第\ref{ch:reals}章の定理\ref{thm:sup}, すなわち基礎定理 (R16) である. (2) は (1) から導かれる. そのために次の補題を用いる.
+
+\begin{lem}\label{lem:nonempty}
+  \begin{enumerate}[label={[B\arabic*]}]
+    \item $X \neq \emptyset \to \exists x\,(x \in X)$.
+    \item $x \in X \to X \neq \emptyset$.
+    \item[{[B5]}] $X \subseteq Y \to x \in X \to x \in Y$.
+  \end{enumerate}
+\end{lem}
+\begin{proof}[通常の証明]
+  [B1] どの $x$ も $X$ に属さなければ, 空集合の定義公理と外延性公理から $X = \emptyset$. [B2] $X = \emptyset$ なら $x \in \emptyset$ となり矛盾. [B5] $\subseteq$ の定義.
+\end{proof}
+
+\trees{NonemptyEx,ExNonempty,SubElem}
+\begin{thm}[テキスト公理3.1(2)]\label{thm:inf}
+  $\ZFC \vdash \forall X\,(X \subseteq \R \to X \neq \emptyset \to \exists b\,\LB(b, X) \to \exists s\,\IsInf(s, X))$.
+\end{thm}
+\begin{proof}[通常の証明]
+  $\ominus X := \{y \in \R \mid -y \in X\}$ とおく(定義公理 $y \in \ominus X \leftrightarrow y \in \R \land -y \in X$). $x_0 \in X$ なら $-(-x_0) = x_0$ より $-x_0 \in \ominus X$ で $\ominus X \neq \emptyset$. $b$ が $X$ の下界なら, $y \in \ominus X$ について $b \leq -y$ なので $y \leq -b$, すなわち $-b$ は $\ominus X$ の上界. (R16) より $\ominus X$ の上限 $s$ が存在する. このとき $-s$ は $X$ の下限である: $x \in X$ なら $-x \in \ominus X$ なので $-x \leq s$, よって $-s \leq x$; $a$ が $X$ の下界なら $-a$ は $\ominus X$ の上界なので $s \leq -a$, よって $a \leq -s$.
+\end{proof}
+
+\trees{InfExists}
+\section{アルキメデスの公理}
+
+\begin{thm}[アルキメデスの公理. テキスト命題3.2]\label{thm:archimedes}
+  $\ZFC \vdash \forall a\forall b\,\bigl(a \in \R \to b \in \R \to 0 < a \to 0 < b \to \exists n\,(n \in \N \land b < \nat{n} \cdot a)\bigr)$.
+\end{thm}
+\begin{proof}[通常の証明(テキストと同じ)]
+  背理法. すべての $n \in \N$ について $\neg\, b < \nat n a$ と仮定し, $X_a := \{y \in \R \mid \exists n \in \N\,(y = \nat n a)\}$ とおく. $X_a$ は $\nat{1_\omega} a$ を含み, $b$ を上界にもつ([O8]) ので, (R16) により上限 $s$ が存在する. $s - a < s$ ([B6], [F25]) なので $s - a$ は $X_a$ の上界でなく, ある $y \in X_a$ で $s - a < y$. $y = \nat m a$ ($m \in \N$) と書くと $s < \nat m a + a = \nat{S(m)} a \in X_a$ ([B7], [B8]) となり, $s$ が上界であることに矛盾する.
+\end{proof}
+
+次の補題を用いる.
+\begin{enumerate}[label={[B\arabic*]}, start=6]
+  \item $x, y \in \R \to x - (x - y) = y$.
+  \item $x, a, y \in \R \to x - a < y \to x < y + a$.
+  \item $m \in \N \to a \in \R \to \nat{S(m)} \cdot a = \nat{m} \cdot a + a$.
+\end{enumerate}
+
+\trees{SubSubSelf,LtSubAdd,IotaSMul,Archimedes}

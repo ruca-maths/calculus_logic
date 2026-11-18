@@ -1,0 +1,434 @@
+% 自動生成 (prover/build.js): PNbhdInter  ノード数 157
+\begin{fullproof}{[H2]}{$\forall f\,\forall g\,\forall c\,(\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \exists d\,(d \in \mathbb{R} \land 0 < d \land \forall x \in \mathbb{R}\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to x \in \mathrm{dom}(f) \land x \in \mathrm{dom}(g))))$}{157}\phantomsection\label{tree:PNbhdInter}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\mathrm{PNbhd}(f,c) \to \varphi_{60}$\lbl{A1}}
+\AXC{$(\mathrm{PNbhd}(f,c) \to \varphi_{60}) \to \mathrm{PNbhd}(f,c) \to \varphi_{64}$\lbl{A1}}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{64}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z)$\lbl{[O3]}}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(\lvert x - c \rvert < y \to y \leq z \to \lvert x - c \rvert < z)$}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\forall z\,(\lvert x - c \rvert < d \to d \leq z \to \lvert x - c \rvert < z)$}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$\lvert x - c \rvert < d \to d \leq r_{2} \to \lvert x - c \rvert < r_{2}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\mathrm{PNbhd}(f,c) \to \varphi_{68}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\lvert x - c \rvert < d \to d \leq r_{2} \to \lvert x - c \rvert < r_{2}$}
+\AXC{$(\lvert x - c \rvert < d \to d \leq r_{2} \to \lvert x - c \rvert < r_{2}) \to \varphi_{96}$\lbl{A1}}
+\BIC{$\varphi_{96}$}
+\BIC{$(\mathrm{PNbhd}(f,c) \to \varphi_{64}) \to \mathrm{PNbhd}(f,c) \to \varphi_{69}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{62}$\lbl{A1}}
+\AXC{$\varphi_{90}$\lbl{A1}}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{79}$}
+\AXC{$(\mathrm{PNbhd}(f,c) \to \varphi_{79}) \to \varphi_{30} \to \mathrm{PNbhd}(f,c) \to \varphi_{77}$\lbl{A1}}
+\BIC{$\varphi_{30} \to \mathrm{PNbhd}(f,c) \to \varphi_{77}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\varphi_{61}$\lbl{A1}}
+\AXC{$\varphi_{30}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{30} \to \mathrm{PNbhd}(f,c) \to \varphi_{77}$}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{77}$}
+\AXC{$(\mathrm{PNbhd}(f,c) \to \varphi_{77}) \to \varphi_{61} \to \varphi_{94}$\lbl{A1}}
+\BIC{$\varphi_{61} \to \varphi_{94}$}
+\BIC{$\varphi_{94}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\mathrm{PNbhd}(f,c) \to \varphi_{64}$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$(\mathrm{PNbhd}(f,c) \to \varphi_{64}) \to \mathrm{PNbhd}(f,c) \to \varphi_{69}$}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{69}$}
+\AXC{$\mathrm{PNbhd}(f,c) \to \varphi_{63}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{94}$}
+\BIC{$(\mathrm{PNbhd}(f,c) \to \varphi_{69}) \to \mathrm{PNbhd}(f,c) \to \varphi_{66}$}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{66}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\mathrm{PNbhd}(f,c) \to \varphi_{60}$\lbl{A1}}
+\AXC{$(\mathrm{PNbhd}(f,c) \to \varphi_{60}) \to \mathrm{PNbhd}(f,c) \to \varphi_{65}$\lbl{A1}}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{65}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z)$\lbl{[O3]}}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(\lvert x - c \rvert < y \to y \leq z \to \lvert x - c \rvert < z)$}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\forall z\,(\lvert x - c \rvert < d \to d \leq z \to \lvert x - c \rvert < z)$}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$\lvert x - c \rvert < d \to d \leq r_{1} \to \lvert x - c \rvert < r_{1}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\mathrm{PNbhd}(f,c) \to \varphi_{68}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\lvert x - c \rvert < d \to d \leq r_{1} \to \lvert x - c \rvert < r_{1}$}
+\AXC{$(\lvert x - c \rvert < d \to d \leq r_{1} \to \lvert x - c \rvert < r_{1}) \to \varphi_{97}$\lbl{A1}}
+\BIC{$\varphi_{97}$}
+\BIC{$(\mathrm{PNbhd}(f,c) \to \varphi_{65}) \to \mathrm{PNbhd}(f,c) \to \varphi_{70}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\mathrm{PNbhd}(f,c) \to \varphi_{65}$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$(\mathrm{PNbhd}(f,c) \to \varphi_{65}) \to \mathrm{PNbhd}(f,c) \to \varphi_{70}$}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{70}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\mathrm{PNbhd}(f,c) \to \varphi_{41}$\lbl{A1}}
+\AXC{$(\mathrm{PNbhd}(f,c) \to \varphi_{41}) \to \mathrm{PNbhd}(f,c) \to \varphi_{80}$\lbl{A1}}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{80}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\varphi_{31}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\mathrm{PNbhd}(f,c) \to \varphi_{80}$}
+\AXC{$(\mathrm{PNbhd}(f,c) \to \varphi_{80}) \to \varphi_{31} \to \mathrm{PNbhd}(f,c) \to \varphi_{78}$\lbl{A1}}
+\BIC{$\varphi_{31} \to \mathrm{PNbhd}(f,c) \to \varphi_{78}$}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{78}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\mathrm{PNbhd}(f,c) \to \varphi_{63}$\lbl{A1}}
+\AXC{$\varphi_{61}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\mathrm{PNbhd}(f,c) \to \varphi_{78}$}
+\AXC{$(\mathrm{PNbhd}(f,c) \to \varphi_{78}) \to \varphi_{61} \to \varphi_{95}$\lbl{A1}}
+\BIC{$\varphi_{61} \to \varphi_{95}$}
+\BIC{$\varphi_{95}$}
+\BIC{$(\mathrm{PNbhd}(f,c) \to \varphi_{70}) \to \mathrm{PNbhd}(f,c) \to \varphi_{67}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\mathrm{PNbhd}(f,c) \to \varphi_{66}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\mathrm{PNbhd}(f,c) \to \varphi_{70}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$(\mathrm{PNbhd}(f,c) \to \varphi_{70}) \to \mathrm{PNbhd}(f,c) \to \varphi_{67}$}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{67}$}
+\AXC{$\varphi_{98}$\lbl{A1}}
+\BIC{$(\mathrm{PNbhd}(f,c) \to \varphi_{66}) \to \varphi_{73}$}
+\BIC{$\varphi_{73}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\forall x\,(\varphi_{58} \to x \in \mathbb{R} \to \varphi_{3}) \to \forall x\,(\varphi_{58}) \to \forall x \in \mathbb{R}\,(\varphi_{3})$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{73}$}
+\AXC{$\varphi_{73} \to \varphi_{58} \to x \in \mathbb{R} \to \varphi_{3}$\lbl{A1}}
+\BIC{$\varphi_{58} \to x \in \mathbb{R} \to \varphi_{3}$}
+\UIC{$\forall x\,(\varphi_{58} \to x \in \mathbb{R} \to \varphi_{3})$}
+\AXC{$\forall x\,(\varphi_{58} \to x \in \mathbb{R} \to \varphi_{3}) \to \varphi_{101}$\lbl{A1}}
+\BIC{$\varphi_{101}$}
+\BIC{$(\varphi_{58} \to \forall x\,(\varphi_{58})) \to \varphi_{74}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\mathrm{PNbhd}(f,c) \to \varphi_{60}$\lbl{A1}}
+\AXC{$(\mathrm{PNbhd}(f,c) \to \varphi_{60}) \to \varphi_{74} \to \mathrm{PNbhd}(f,c) \to \varphi_{75}$\lbl{A1}}
+\BIC{$\varphi_{74} \to \mathrm{PNbhd}(f,c) \to \varphi_{75}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\varphi_{58} \to \forall x\,(\varphi_{58})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$(\varphi_{58} \to \forall x\,(\varphi_{58})) \to \varphi_{74}$}
+\BIC{$\varphi_{74}$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{74} \to \mathrm{PNbhd}(f,c) \to \varphi_{75}$}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{75}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\varphi_{51}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\mathrm{PNbhd}(f,c) \to \varphi_{75}$}
+\AXC{$(\mathrm{PNbhd}(f,c) \to \varphi_{75}) \to \varphi_{51} \to \mathrm{PNbhd}(f,c) \to \varphi_{76}$\lbl{A1}}
+\BIC{$\varphi_{51} \to \mathrm{PNbhd}(f,c) \to \varphi_{76}$}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{76}$}
+\AXC{$\varphi_{92}$\lbl{A1}}
+\BIC{$\varphi_{72} \to \neg (d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2})$}
+\UIC{$\forall d\,(\varphi_{72} \to \neg (d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2}))$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\varphi_{10}$\lbl{[D8]}}
+\AXC{$\varphi_{10} \to \varphi_{11}$\lbl{A2}}
+\BIC{$\varphi_{11}$}
+\AXC{$\varphi_{11} \to r_{1} \in \mathbb{R} \to r_{2} \in \mathbb{R} \to \varphi_{2}$\lbl{A2}}
+\BIC{$r_{1} \in \mathbb{R} \to r_{2} \in \mathbb{R} \to \varphi_{2}$}
+\AXC{$(r_{1} \in \mathbb{R} \to r_{2} \in \mathbb{R} \to \varphi_{2}) \to \varphi_{100}$\lbl{A1}}
+\BIC{$\varphi_{100}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{62}$\lbl{A1}}
+\AXC{$\varphi_{88}$\lbl{A1}}
+\BIC{$\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{42}$}
+\AXC{$\mathrm{PNbhd}(f,c) \to \varphi_{41}$\lbl{A1}}
+\AXC{$\varphi_{84}$\lbl{A1}}
+\BIC{$\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{43}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{100}$}
+\BIC{$(\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{42}) \to \varphi_{91}$}
+\BIC{$\varphi_{91}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\mathrm{PNbhd}(f,c) \to \varphi_{41}$\lbl{A1}}
+\AXC{$(\mathrm{PNbhd}(f,c) \to \varphi_{41}) \to \mathrm{PNbhd}(f,c) \to \varphi_{48}$\lbl{A1}}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{48}$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{91}$}
+\BIC{$(\mathrm{PNbhd}(f,c) \to \varphi_{47}) \to \varphi_{59}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{62}$\lbl{A1}}
+\AXC{$\varphi_{87}$\lbl{A1}}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{47}$}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$(\mathrm{PNbhd}(f,c) \to \varphi_{47}) \to \varphi_{59}$}
+\BIC{$\varphi_{59}$}
+\AXC{$\varphi_{104}$\lbl{A1}}
+\BIC{$\forall d\,(\varphi_{72} \to \neg (d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2})) \to \varphi_{102}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\forall d\,(\varphi_{72} \to \neg (d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2}))$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\forall d\,(\varphi_{72} \to \neg (d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2})) \to \varphi_{102}$}
+\BIC{$\varphi_{102}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\varphi_{72} \to \forall d\,(\varphi_{72})$\lbl{A4}}
+\AXC{$\forall d\,(\varphi_{72} \to \neg (d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2})) \to \varphi_{81}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{102}$}
+\BIC{$(\varphi_{72} \to \forall d\,(\varphi_{72})) \to \varphi_{71}$}
+\BIC{$\varphi_{71}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall c\,(\mathrm{PNbhd}(f,c) \leftrightarrow \varphi_{20})$\lbl{DefPNbhd}}
+\AXC{$\varphi_{54}$\lbl{A2}}
+\BIC{$\forall c\,(\mathrm{PNbhd}(g,c) \leftrightarrow \varphi_{19})$}
+\AXC{$\varphi_{52}$\lbl{A2}}
+\BIC{$\mathrm{PNbhd}(g,c) \leftrightarrow \varphi_{19}$}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\AXC{$\varphi_{1} \to (\mathrm{PNbhd}(g,c) \leftrightarrow \varphi_{19}) \to \varphi_{49}$\lbl{A1}}
+\BIC{$(\mathrm{PNbhd}(g,c) \leftrightarrow \varphi_{19}) \to \varphi_{49}$}
+\BIC{$\varphi_{49}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\varphi_{57} \to \forall r_{2}\,(\varphi_{57})$\lbl{A4}}
+\AXC{$\varphi_{89}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{71}$}
+\AXC{$\varphi_{71} \to \varphi_{57} \to \neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4})$\lbl{A1}}
+\BIC{$\varphi_{57} \to \neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4})$}
+\UIC{$\forall r_{2}\,(\varphi_{57} \to \neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4}))$}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{49}$}
+\AXC{$\varphi_{49} \to \varphi_{105}$\lbl{A1}}
+\BIC{$\varphi_{105}$}
+\BIC{$\varphi_{89} \to (\varphi_{57} \to \forall r_{2}\,(\varphi_{57})) \to \varphi_{99}$}
+\BIC{$(\varphi_{57} \to \forall r_{2}\,(\varphi_{57})) \to \varphi_{99}$}
+\BIC{$\varphi_{99}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\varphi_{40}$\lbl{A4}}
+\AXC{$\varphi_{83}$\lbl{A3}}
+\AXC{$\forall r_{2}\,(\neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4})) \to \varphi_{14}$\lbl{A2}}
+\UIC{$\forall r\,(\forall r_{2}\,(\neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4})) \to \varphi_{14})$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\varphi_{99}$}
+\BIC{$\varphi_{83} \to \varphi_{40} \to \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{45}$}
+\BIC{$\varphi_{40} \to \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{45}$}
+\BIC{$\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{45}$}
+\AXC{$\varphi_{85}$\lbl{A1}}
+\BIC{$\varphi_{29} \to \neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5})$}
+\UIC{$\forall r_{1}\,(\varphi_{29} \to \neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5}))$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(f,c)$\lbl{A1}}
+\AXC{$(\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(f,c)) \to \varphi_{56}$\lbl{A1}}
+\BIC{$\varphi_{56}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall c\,(\mathrm{PNbhd}(f,c) \leftrightarrow \varphi_{20})$\lbl{DefPNbhd}}
+\AXC{$\varphi_{55}$\lbl{A2}}
+\BIC{$\forall c\,(\mathrm{PNbhd}(f,c) \leftrightarrow \varphi_{20})$}
+\AXC{$\varphi_{53}$\lbl{A2}}
+\BIC{$\mathrm{PNbhd}(f,c) \leftrightarrow \varphi_{20}$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{56}$}
+\BIC{$\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{20}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{20}$}
+\AXC{$(\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{20}) \to \varphi_{103}$\lbl{A1}}
+\BIC{$\varphi_{103}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\varphi_{29} \to \forall r_{1}\,(\varphi_{29})$\lbl{A4}}
+\AXC{$\varphi_{86}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\forall r_{1}\,(\varphi_{29} \to \neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5}))$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\varphi_{103}$}
+\BIC{$\varphi_{86} \to (\varphi_{29} \to \forall r_{1}\,(\varphi_{29})) \to \varphi_{93}$}
+\BIC{$(\varphi_{29} \to \forall r_{1}\,(\varphi_{29})) \to \varphi_{93}$}
+\BIC{$\varphi_{93}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{39}$\lbl{A4}}
+\AXC{$\varphi_{82}$\lbl{A3}}
+\AXC{$\forall r_{1}\,(\neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5})) \to \varphi_{13}$\lbl{A2}}
+\UIC{$\forall r\,(\forall r_{1}\,(\neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5})) \to \varphi_{13})$}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{93}$}
+\BIC{$\varphi_{82} \to \varphi_{39} \to \mathrm{PNbhd}(f,c) \to \varphi_{27}$}
+\BIC{$\varphi_{39} \to \mathrm{PNbhd}(f,c) \to \varphi_{27}$}
+\BIC{$\mathrm{PNbhd}(f,c) \to \varphi_{27}$}
+\UIC{$\forall c\,(\mathrm{PNbhd}(f,c) \to \varphi_{27})$}
+\UIC{$\forall g\,\forall c\,(\mathrm{PNbhd}(f,c) \to \varphi_{27})$}
+\UIC{$\forall f\,\forall g\,\forall c\,(\mathrm{PNbhd}(f,c) \to \varphi_{27})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \mathrm{PNbhd}(g,c)$
+\item $\varphi_{2} :\equiv 0 < r_{1} \to 0 < r_{2} \to \exists d\,(d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2})$
+\item $\varphi_{3} :\equiv 0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to x \in \mathrm{dom}(f) \land x \in \mathrm{dom}(g)$
+\item $\varphi_{4} :\equiv \forall x \in \mathbb{R}\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < r_{2} \to x \in \mathrm{dom}(g))$
+\item $\varphi_{5} :\equiv \forall x \in \mathbb{R}\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < r_{1} \to x \in \mathrm{dom}(f))$
+\item $\varphi_{6} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2}$
+\item $\varphi_{7} :\equiv \forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z) \to \forall y\,\forall z\,(\lvert x - c \rvert < y \to y \leq z \to \lvert x - c \rvert < z)$
+\item $\varphi_{8} :\equiv \lvert x - c \rvert < d \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < r_{2} \to x \in \mathrm{dom}(g)$
+\item $\varphi_{9} :\equiv \lvert x - c \rvert < d \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < r_{1} \to x \in \mathrm{dom}(f)$
+\item $\varphi_{10} :\equiv \forall p\,\forall q\,(p \in \mathbb{R} \to q \in \mathbb{R} \to 0 < p \to 0 < q \to \exists d\,(d \in \mathbb{R} \land 0 < d \land d \leq p \land d \leq q))$
+\item $\varphi_{11} :\equiv \forall q\,(r_{1} \in \mathbb{R} \to q \in \mathbb{R} \to 0 < r_{1} \to 0 < q \to \exists d\,(d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq q))$
+\item $\varphi_{12} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to 0 < \lvert x - c \rvert$
+\item $\varphi_{13} :\equiv \neg (r \in \mathbb{R} \land 0 < r \land \forall x \in \mathbb{R}\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < r \to x \in \mathrm{dom}(f)))$
+\item $\varphi_{14} :\equiv \neg (r \in \mathbb{R} \land 0 < r \land \forall x \in \mathbb{R}\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < r \to x \in \mathrm{dom}(g)))$
+\item $\varphi_{15} :\equiv \forall z\,(\lvert x - c \rvert < d \to d \leq z \to \lvert x - c \rvert < z) \to \lvert x - c \rvert < d \to d \leq r_{2} \to \lvert x - c \rvert < r_{2}$
+\item $\varphi_{16} :\equiv \forall z\,(\lvert x - c \rvert < d \to d \leq z \to \lvert x - c \rvert < z) \to \lvert x - c \rvert < d \to d \leq r_{1} \to \lvert x - c \rvert < r_{1}$
+\item $\varphi_{17} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to d \leq r_{2}$
+\item $\varphi_{18} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to d \leq r_{1}$
+\item $\varphi_{19} :\equiv \exists r\,(r \in \mathbb{R} \land 0 < r \land \forall x \in \mathbb{R}\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < r \to x \in \mathrm{dom}(g)))$
+\item $\varphi_{20} :\equiv \exists r\,(r \in \mathbb{R} \land 0 < r \land \forall x \in \mathbb{R}\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < r \to x \in \mathrm{dom}(f)))$
+\item $\varphi_{21} :\equiv \forall y\,\forall z\,(\lvert x - c \rvert < y \to y \leq z \to \lvert x - c \rvert < z) \to \forall z\,(\lvert x - c \rvert < d \to d \leq z \to \lvert x - c \rvert < z)$
+\item $\varphi_{22} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to x \in \mathrm{dom}(g)$
+\item $\varphi_{23} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to x \in \mathrm{dom}(f)$
+\item $\varphi_{24} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to \lvert x - c \rvert < d$
+\item $\varphi_{25} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to \lvert x - c \rvert < r_{2}$
+\item $\varphi_{26} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to \lvert x - c \rvert < r_{1}$
+\item $\varphi_{27} :\equiv \mathrm{PNbhd}(g,c) \to \exists d\,(d \in \mathbb{R} \land 0 < d \land \forall x \in \mathbb{R}\,(\varphi_{3}))$
+\item $\varphi_{28} :\equiv r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \exists d\,(d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2})$
+\item $\varphi_{29} :\equiv \mathrm{PNbhd}(f,c) \land \mathrm{PNbhd}(g,c) \land \neg \exists d\,(d \in \mathbb{R} \land 0 < d \land \forall x \in \mathbb{R}\,(\varphi_{3}))$
+\item $\varphi_{30} :\equiv \varphi_{4} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < r_{2} \to x \in \mathrm{dom}(g)$
+\item $\varphi_{31} :\equiv \varphi_{5} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < r_{1} \to x \in \mathrm{dom}(f)$
+\item $\varphi_{32} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to d \in \mathbb{R} \land 0 < d \land \forall x \in \mathbb{R}\,(\varphi_{3})$
+\item $\varphi_{33} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to \exists d\,(d \in \mathbb{R} \land 0 < d \land \forall x \in \mathbb{R}\,(\varphi_{3}))$
+\item $\varphi_{34} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \varphi_{8}$
+\item $\varphi_{35} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \varphi_{9}$
+\item $\varphi_{36} :\equiv r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to x \in \mathbb{R}$
+\item $\varphi_{37} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to \varphi_{4}$
+\item $\varphi_{38} :\equiv d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to \varphi_{5}$
+\item $\varphi_{39} :\equiv \forall r_{1}\,(\neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5})) \to \forall r\,\forall r_{1}\,(\neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5}))$
+\item $\varphi_{40} :\equiv \forall r_{2}\,(\neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4})) \to \forall r\,\forall r_{2}\,(\neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4}))$
+\item $\varphi_{41} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5}$
+\item $\varphi_{42} :\equiv r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to r_{2} \in \mathbb{R}$
+\item $\varphi_{43} :\equiv r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to r_{1} \in \mathbb{R}$
+\item $\varphi_{44} :\equiv r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \exists d\,(d \in \mathbb{R} \land 0 < d \land \forall x \in \mathbb{R}\,(\varphi_{3}))$
+\item $\varphi_{45} :\equiv r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to \exists d\,(d \in \mathbb{R} \land 0 < d \land \forall x \in \mathbb{R}\,(\varphi_{3}))$
+\item $\varphi_{46} :\equiv r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to x \in \mathbb{R} \to \varphi_{3}$
+\item $\varphi_{47} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to 0 < r_{2}$
+\item $\varphi_{48} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to 0 < r_{1}$
+\item $\varphi_{49} :\equiv \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to \varphi_{19}$
+\item $\varphi_{50} :\equiv r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2} \to \forall x \in \mathbb{R}\,(\varphi_{3})$
+\item $\varphi_{51} :\equiv \forall d\,(\neg (d \in \mathbb{R} \land 0 < d \land \forall x \in \mathbb{R}\,(\varphi_{3}))) \to \neg (d \in \mathbb{R} \land 0 < d \land \forall x \in \mathbb{R}\,(\varphi_{3}))$
+\item $\varphi_{52} :\equiv \forall c\,(\mathrm{PNbhd}(g,c) \leftrightarrow \varphi_{19}) \to (\mathrm{PNbhd}(g,c) \leftrightarrow \varphi_{19})$
+\item $\varphi_{53} :\equiv \forall c\,(\mathrm{PNbhd}(f,c) \leftrightarrow \varphi_{20}) \to (\mathrm{PNbhd}(f,c) \leftrightarrow \varphi_{20})$
+\item $\varphi_{54} :\equiv \forall f\,\forall c\,(\mathrm{PNbhd}(f,c) \leftrightarrow \varphi_{20}) \to \forall c\,(\mathrm{PNbhd}(g,c) \leftrightarrow \varphi_{19})$
+\item $\varphi_{55} :\equiv \forall f\,\forall c\,(\mathrm{PNbhd}(f,c) \leftrightarrow \varphi_{20}) \to \forall c\,(\mathrm{PNbhd}(f,c) \leftrightarrow \varphi_{20})$
+\item $\varphi_{56} :\equiv (\mathrm{PNbhd}(f,c) \leftrightarrow \varphi_{20}) \to \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{20}$
+\item $\varphi_{57} :\equiv \mathrm{PNbhd}(f,c) \land \mathrm{PNbhd}(g,c) \land (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5}) \land \neg \exists d\,(d \in \mathbb{R} \land 0 < d \land \forall x \in \mathbb{R}\,(\varphi_{3}))$
+\item $\varphi_{58} :\equiv \mathrm{PNbhd}(f,c) \land \mathrm{PNbhd}(g,c) \land (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5}) \land (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4}) \land (d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2})$
+\item $\varphi_{59} :\equiv \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to \varphi_{28}$
+\item $\varphi_{60} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{6}$
+\item $\varphi_{61} :\equiv \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to \varphi_{36}$
+\item $\varphi_{62} :\equiv r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4}$
+\item $\varphi_{63} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{12}$
+\item $\varphi_{64} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{17}$
+\item $\varphi_{65} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{18}$
+\item $\varphi_{66} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{22}$
+\item $\varphi_{67} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{23}$
+\item $\varphi_{68} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{24}$
+\item $\varphi_{69} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{25}$
+\item $\varphi_{70} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{26}$
+\item $\varphi_{71} :\equiv \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to \varphi_{44}$
+\item $\varphi_{72} :\equiv \mathrm{PNbhd}(f,c) \land \mathrm{PNbhd}(g,c) \land (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5}) \land (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4}) \land \neg \exists d\,(d \in \mathbb{R} \land 0 < d \land \forall x \in \mathbb{R}\,(\varphi_{3}))$
+\item $\varphi_{73} :\equiv \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to \varphi_{46}$
+\item $\varphi_{74} :\equiv \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to \varphi_{50}$
+\item $\varphi_{75} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{32}$
+\item $\varphi_{76} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{33}$
+\item $\varphi_{77} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{34}$
+\item $\varphi_{78} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{35}$
+\item $\varphi_{79} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{37}$
+\item $\varphi_{80} :\equiv \mathrm{PNbhd}(g,c) \to r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5} \to r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4} \to \varphi_{38}$
+\item $\varphi_{81} :\equiv \forall d\,(\varphi_{72}) \to \forall d\,(\neg (d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2}))$
+\item $\varphi_{82} :\equiv \forall r\,(\forall r_{1}\,(\neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5})) \to \varphi_{13}) \to \forall r\,\forall r_{1}\,(\neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5})) \to \forall r\,(\varphi_{13})$
+\item $\varphi_{83} :\equiv \forall r\,(\forall r_{2}\,(\neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4})) \to \varphi_{14}) \to \forall r\,\forall r_{2}\,(\neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4})) \to \forall r\,(\varphi_{14})$
+\item $\varphi_{84} :\equiv (\mathrm{PNbhd}(f,c) \to \varphi_{41}) \to \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{43}$
+\item $\varphi_{85} :\equiv (\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{45}) \to \varphi_{29} \to \neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5})$
+\item $\varphi_{86} :\equiv \forall r_{1}\,(\varphi_{29} \to \neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5})) \to \forall r_{1}\,(\varphi_{29}) \to \forall r_{1}\,(\neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5}))$
+\item $\varphi_{87} :\equiv (\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{62}) \to \mathrm{PNbhd}(f,c) \to \varphi_{47}$
+\item $\varphi_{88} :\equiv (\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{62}) \to \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{42}$
+\item $\varphi_{89} :\equiv \forall r_{2}\,(\varphi_{57} \to \neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4})) \to \forall r_{2}\,(\varphi_{57}) \to \forall r_{2}\,(\neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4}))$
+\item $\varphi_{90} :\equiv (\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{62}) \to \mathrm{PNbhd}(f,c) \to \varphi_{79}$
+\item $\varphi_{91} :\equiv (\mathrm{PNbhd}(f,c) \to \varphi_{48}) \to (\mathrm{PNbhd}(f,c) \to \varphi_{47}) \to \varphi_{59}$
+\item $\varphi_{92} :\equiv (\mathrm{PNbhd}(f,c) \to \varphi_{76}) \to \varphi_{72} \to \neg (d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2})$
+\item $\varphi_{93} :\equiv \forall r\,(\forall r_{1}\,(\neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5})) \to \varphi_{13}) \to \varphi_{82} \to \varphi_{39} \to \mathrm{PNbhd}(f,c) \to \varphi_{27}$
+\item $\varphi_{94} :\equiv (\mathrm{PNbhd}(f,c) \to \varphi_{63}) \to (\mathrm{PNbhd}(f,c) \to \varphi_{69}) \to \mathrm{PNbhd}(f,c) \to \varphi_{66}$
+\item $\varphi_{95} :\equiv (\mathrm{PNbhd}(f,c) \to \varphi_{63}) \to (\mathrm{PNbhd}(f,c) \to \varphi_{70}) \to \mathrm{PNbhd}(f,c) \to \varphi_{67}$
+\item $\varphi_{96} :\equiv (\mathrm{PNbhd}(f,c) \to \varphi_{68}) \to (\mathrm{PNbhd}(f,c) \to \varphi_{64}) \to \mathrm{PNbhd}(f,c) \to \varphi_{69}$
+\item $\varphi_{97} :\equiv (\mathrm{PNbhd}(f,c) \to \varphi_{68}) \to (\mathrm{PNbhd}(f,c) \to \varphi_{65}) \to \mathrm{PNbhd}(f,c) \to \varphi_{70}$
+\item $\varphi_{98} :\equiv (\mathrm{PNbhd}(f,c) \to \varphi_{67}) \to (\mathrm{PNbhd}(f,c) \to \varphi_{66}) \to \varphi_{73}$
+\item $\varphi_{99} :\equiv \forall r\,(\forall r_{2}\,(\neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4})) \to \varphi_{14}) \to \varphi_{83} \to \varphi_{40} \to \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{45}$
+\item $\varphi_{100} :\equiv (\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{43}) \to (\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \varphi_{42}) \to \varphi_{91}$
+\item $\varphi_{101} :\equiv (\forall x\,(\varphi_{58} \to x \in \mathbb{R} \to \varphi_{3}) \to \forall x\,(\varphi_{58}) \to \forall x \in \mathbb{R}\,(\varphi_{3})) \to (\varphi_{58} \to \forall x\,(\varphi_{58})) \to \varphi_{74}$
+\item $\varphi_{102} :\equiv (\forall d\,(\varphi_{72} \to \neg (d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2})) \to \varphi_{81}) \to (\varphi_{72} \to \forall d\,(\varphi_{72})) \to \varphi_{71}$
+\item $\varphi_{103} :\equiv \forall r_{1}\,(\varphi_{29} \to \neg (r_{1} \in \mathbb{R} \land 0 < r_{1} \land \varphi_{5})) \to \varphi_{86} \to (\varphi_{29} \to \forall r_{1}\,(\varphi_{29})) \to \varphi_{93}$
+\item $\varphi_{104} :\equiv \varphi_{59} \to \forall d\,(\varphi_{72} \to \neg (d \in \mathbb{R} \land 0 < d \land d \leq r_{1} \land d \leq r_{2})) \to \varphi_{102}$
+\item $\varphi_{105} :\equiv \forall r_{2}\,(\varphi_{57} \to \neg (r_{2} \in \mathbb{R} \land 0 < r_{2} \land \varphi_{4})) \to \varphi_{89} \to (\varphi_{57} \to \forall r_{2}\,(\varphi_{57})) \to \varphi_{99}$
+\end{abbrevlist}
+\end{fullproof}

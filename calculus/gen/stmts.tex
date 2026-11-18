@@ -1,0 +1,387 @@
+% 自動生成 (prover/build.js): 各定理の形式的な主張
+\fsdef{EmptyEx}{定理(空集合の存在)}{\exists y\,\forall u\,(u \notin y)}{32}
+\fsdef{EmptyUnique}{定理(空集合の一意性)}{\forall y\,\forall y_{2}\,(\forall u\,(u \notin y) \to \forall u\,(u \notin y_{2}) \to y = y_{2})}{52}
+\fsdef{OmegaInd}{補題(ωは帰納的)}{\mathrm{Ind}(\omega)}{78}
+\fsdef{Induction}{定理(数学的帰納法)}{\mathrm{Phi}(\emptyset) \to \forall n \in \omega\,(\mathrm{Phi}(n) \to \mathrm{Phi}(S(n))) \to \forall n \in \omega\,(\mathrm{Phi}(n))}{111}
+\fsdef{LtIrrefl}{[O1]}{\forall x\,(\neg x < x)}{13}
+\fsdef{LtTrans}{[O2]}{\forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z)}{173}
+\fsdef{LtLeTrans}{[O3]}{\forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z)}{30}
+\fsdef{LeLtTrans}{[O4]}{\forall x\,\forall y\,\forall z\,(x \leq y \to y < z \to x < z)}{44}
+\fsdef{LeTrans}{[O5]}{\forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z)}{52}
+\fsdef{LeAntisym}{[O6]}{\forall x\,\forall y\,(x \leq y \to y \leq x \to x = y)}{41}
+\fsdef{LeNotLt}{[O7]}{\forall x\,\forall y\,(x \leq y \to \neg y < x)}{48}
+\fsdef{NotLtLe}{[O8]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \neg x < y \to y \leq x)}{33}
+\fsdef{SubR}{[F1]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})}{55}
+\fsdef{TwoR}{[F2]}{2 \in \mathbb{R}}{36}
+\fsdef{AddCancel}{[F3]}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z = y + z \to x = y)}{256}
+\fsdef{NegUnique}{[F4]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = 0 \to y = -x)}{281}
+\fsdef{NegNeg}{[F5]}{\forall x \in \mathbb{R}\,(-(-x) = x)}{58}
+\fsdef{NegZero}{[F6]}{-0 = 0}{31}
+\fsdef{NegAdd}{[F7]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -(x + y) = -x + -y)}{341}
+\fsdef{Mul0}{[F8]}{\forall x \in \mathbb{R}\,(x \cdot 0 = 0)}{131}
+\fsdef{NegMul}{[F9]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -x \cdot y = -(x \cdot y))}{235}
+\fsdef{MulNeg}{[F10]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot -y = -(x \cdot y))}{112}
+\fsdef{NegNegMul}{[F11]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -x \cdot -y = x \cdot y)}{94}
+\fsdef{SubAdd}{[F12]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y + y = x)}{181}
+\fsdef{SubSelf}{[F13]}{\forall x \in \mathbb{R}\,(x - x = 0)}{25}
+\fsdef{SubNeg}{[F14]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -(y - x) = x - y)}{201}
+\fsdef{SubAddAdd}{[F15]}{\forall x\,\forall y\,\forall a\,\forall b\,(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x + y - (a + b) = x - a + (y - b))}{450}
+\fsdef{SubSplit}{[F16]}{\forall a\,\forall b\,\forall x\,(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - b = a - x + (x - b))}{376}
+\fsdef{MulSub}{[F17]}{\forall c\,\forall x\,\forall a\,(c \in \mathbb{R} \to x \in \mathbb{R} \to a \in \mathbb{R} \to c \cdot x - c \cdot a = c \cdot (x - a))}{130}
+\fsdef{MulSubSplit}{[F18]}{\forall x\,\forall y\,\forall a\,\forall b\,(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y - a \cdot b = x \cdot (y - b) + b \cdot (x - a))}{308}
+\fsdef{LeAddRight}{[F19]}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x \leq y \to x + z \leq y + z)}{39}
+\fsdef{AddLtLe}{[F20]}{\forall x\,\forall y\,\forall u\,\forall v\,(x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u \leq v \to x + u < y + v)}{109}
+\fsdef{AddLeLe}{[F21]}{\forall x\,\forall y\,\forall u\,\forall v\,(x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x \leq y \to u \leq v \to x + u \leq y + v)}{109}
+\fsdef{NegLt}{[F22]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x < y \to -y < -x)}{365}
+\fsdef{NegLe}{[F23]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x)}{48}
+\fsdef{SubPos}{[F24]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x < y \to 0 < y - x)}{85}
+\fsdef{PosSub}{[F25]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y - x \to x < y)}{107}
+\fsdef{LtNe}{[F26]}{\forall x\,\forall y\,(x < y \to x \neq y)}{35}
+\fsdef{NegOneSq}{[F27]}{-1 \cdot -1 = 1}{32}
+\fsdef{ZeroLtOne}{[F28]}{0 < 1}{70}
+\fsdef{TwoPos}{[F29]}{0 < 2}{96}
+\fsdef{TwoNe}{[F30]}{2 \neq 0}{23}
+\fsdef{InvTwoR}{[F31]}{2^{-1} \in \mathbb{R}}{9}
+\fsdef{MulLtPos}{[F32]}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \cdot z < y \cdot z)}{265}
+\fsdef{MulLeNonneg}{[F33]}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 \leq z \to x \leq y \to x \cdot z \leq y \cdot z)}{177}
+\fsdef{InvPos}{[F34]}{\forall x \in \mathbb{R}\,(0 < x \to 0 < x^{-1})}{263}
+\fsdef{HalfPos}{[F35]}{\forall e \in \mathbb{R}\,(0 < e \to 0 < e \cdot 2^{-1})}{24}
+\fsdef{HalfSum}{[F36]}{\forall e \in \mathbb{R}\,(e \cdot 2^{-1} + e \cdot 2^{-1} = e)}{250}
+\fsdef{NatSub}{[N7]}{\mathbb{N} \subseteq \omega}{16}
+\fsdef{SNe0}{[N0]}{\forall n\,(S(n) \neq \emptyset)}{35}
+\fsdef{NatSO}{[N2$_omega$]}{\forall n \in \omega\,(S(n) \in \mathbb{N})}{24}
+\fsdef{NatOne}{[N1]}{1_{\omega} \in \mathbb{N}}{39}
+\fsdef{NatS}{[N2]}{\forall n \in \mathbb{N}\,(S(n) \in \mathbb{N})}{14}
+\fsdef{NatOmega}{[N7']}{\forall n \in \mathbb{N}\,(n \in \omega)}{8}
+\fsdef{LeS}{[N8]}{\forall n\,(n \leq S(n))}{23}
+\fsdef{OneLe}{[N12]}{\forall n \in \mathbb{N}\,(1_{\omega} \leq n)}{230}
+\fsdef{LtAddOne}{[N13]}{\forall x \in \mathbb{R}\,(x < x + 1)}{79}
+\fsdef{IotaGeOne}{[N14]}{\forall n \in \mathbb{N}\,(1 \leq \underline{n})}{271}
+\fsdef{IotaPos}{[N15]}{\forall n \in \mathbb{N}\,(0 < \underline{n})}{16}
+\fsdef{IotaMono}{[N16]}{\forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to m \leq n \to \underline{m} \leq \underline{n})}{447}
+\fsdef{AbsOfNonneg}{[A1]}{\forall x\,(0 \leq x \to \lvert x \rvert = x)}{8}
+\fsdef{NotLeLt}{[A2]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \neg y \leq x \to x < y)}{17}
+\fsdef{AbsOfNeg}{[A3]}{\forall x\,(x < 0 \to \lvert x \rvert = -x)}{14}
+\fsdef{AbsNonpos}{[A4]}{\forall x \in \mathbb{R}\,(x \leq 0 \to \lvert x \rvert = -x)}{98}
+\fsdef{AbsR}{[A5]}{\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})}{65}
+\fsdef{AbsNonneg}{[A6]}{\forall x \in \mathbb{R}\,(0 \leq \lvert x \rvert)}{106}
+\fsdef{AbsNeg}{[A7]}{\forall x \in \mathbb{R}\,(\lvert -x \rvert = \lvert x \rvert)}{216}
+\fsdef{AbsBound}{[A8]}{\forall x \in \mathbb{R}\,(-\lvert x \rvert \leq x \land x \leq \lvert x \rvert)}{244}
+\fsdef{AbsLe}{[A9]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq x \land x \leq y)}{66}
+\fsdef{LeAbs}{[A10]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -y \leq x \to x \leq y \to \lvert x \rvert \leq y)}{142}
+\fsdef{AbsLt}{[A11]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert < y \to -y < x \land x < y)}{66}
+\fsdef{LtAbs}{[A12]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -y < x \to x < y \to \lvert x \rvert < y)}{118}
+\fsdef{AbsSubComm}{[A13]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x - y \rvert = \lvert y - x \rvert)}{41}
+\fsdef{Triangle}{命題1.2}{\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \lvert a + b \rvert \leq \lvert a \rvert + \lvert b \rvert)}{155}
+\fsdef{AbsPos}{[A14]}{\forall x \in \mathbb{R}\,(x \neq 0 \to 0 < \lvert x \rvert)}{101}
+\fsdef{SubNeZero}{[A15]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \neq y \to x - y \neq 0)}{107}
+\fsdef{MulNonneg}{[A16]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq x \to 0 \leq y \to 0 \leq x \cdot y)}{82}
+\fsdef{AbsMul}{[A17]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \cdot y \rvert = \lvert x \rvert \cdot \lvert y \rvert)}{1070}
+\fsdef{NonemptyEx}{[B1]}{\forall X\,(X \neq \emptyset \to \exists x\,(x \in X))}{35}
+\fsdef{ExNonempty}{[B2]}{\forall X\,\forall x \in X\,(X \neq \emptyset)}{21}
+\fsdef{SupUnique}{[B3]}{\forall s\,\forall t\,\forall X\,(\mathrm{IsSup}(s,X) \to \mathrm{IsSup}(t,X) \to s = t)}{50}
+\fsdef{InfUnique}{[B4]}{\forall s\,\forall t\,\forall X\,(\mathrm{IsInf}(s,X) \to \mathrm{IsInf}(t,X) \to s = t)}{50}
+\fsdef{SubElem}{[B5]}{\forall X\,\forall Y\,\forall x\,(X \subseteq Y \to x \in X \to x \in Y)}{21}
+\fsdef{InfExists}{公理3.1(2)}{\forall X\,(X \subseteq \mathbb{R} \to X \neq \emptyset \to \exists b\,(\mathrm{LB}(b,X)) \to \exists s\,(\mathrm{IsInf}(s,X)))}{634}
+\fsdef{SubSubSelf}{[B6]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - (x - y) = y)}{146}
+\fsdef{LtSubAdd}{[B7]}{\forall x\,\forall a\,\forall y\,(x \in \mathbb{R} \to a \in \mathbb{R} \to y \in \mathbb{R} \to x - a < y \to x < y + a)}{52}
+\fsdef{IotaSMul}{[B8]}{\forall m\,\forall a\,(m \in \mathbb{N} \to a \in \mathbb{R} \to \underline{S(m)} \cdot a = \underline{m} \cdot a + a)}{153}
+\fsdef{Archimedes}{命題3.2}{\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a))}{544}
+\fsdef{ConvSeq}{[C1]}{\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))}{11}
+\fsdef{ConvR}{[C2]}{\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})}{11}
+\fsdef{ConvE}{[C3]}{\forall a\,\forall \alpha\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon))}{22}
+\fsdef{SubCupL}{[C4]}{\forall m\,\forall n\,(m \subseteq m \cup n)}{20}
+\fsdef{SubCupR}{[C5]}{\forall m\,\forall n\,(n \subseteq m \cup n)}{20}
+\fsdef{SubLe}{[C6]}{\forall x\,\forall y\,(x \subseteq y \to x \leq y)}{11}
+\fsdef{LeCupL}{[C7]}{\forall m\,\forall n\,(m \leq m \cup n)}{15}
+\fsdef{LeCupR}{[C8]}{\forall m\,\forall n\,(n \leq m \cup n)}{15}
+\fsdef{Tail}{[C9]}{\forall a\,\forall \alpha\,\forall b\,\forall \beta\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \beta \rvert < \varepsilon))}{157}
+\fsdef{EpsEq}{命題1.1}{\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to a = b)}{56}
+\fsdef{ErrTwo}{[C10]}{\forall x\,\forall \alpha\,\forall \beta\,\forall \varepsilon\,(x \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \lvert x - \alpha \rvert < \varepsilon \to \lvert x - \beta \rvert < \varepsilon \to \lvert \alpha - \beta \rvert < \varepsilon + \varepsilon)}{151}
+\fsdef{LimUnique}{命題1.3}{\forall a\,\forall \alpha\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \alpha = \beta)}{209}
+\fsdef{ErrSum}{[C11]}{\forall x\,\forall y\,\forall \alpha\,\forall \beta\,\forall h\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to h \in \mathbb{R} \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert x + y - (\alpha + \beta) \rvert < h + h)}{155}
+\fsdef{LimSum}{定理2.1(1)}{\forall a\,\forall \alpha\,\forall b\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \mathrm{Conv}(a \oplus b,\alpha + \beta))}{252}
+\fsdef{LimScalar}{定理2.1(2)}{\forall c\,\forall a\,\forall \alpha\,(c \in \mathbb{R} \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(c \odot a,c \cdot \alpha))}{720}
+\fsdef{ErrSqueeze}{[C12]}{\forall x\,\forall y\,\forall z\,\forall \alpha\,\forall \varepsilon\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to \lvert z - \alpha \rvert < \varepsilon)}{321}
+\fsdef{Squeeze}{定理2.3}{\forall a\,\forall b\,\forall c\,\forall \alpha\,(\mathrm{Seq}(c) \to \forall n \in \mathbb{N}\,(a_{n} \leq c_{n} \land c_{n} \leq b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha) \to \mathrm{Conv}(c,\alpha))}{170}
+\fsdef{LimLe}{定理2.5}{\forall a\,\forall b\,\forall \alpha\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \alpha \leq \beta)}{568}
+\fsdef{FLimE}{[D1]}{\forall f\,\forall c\,\forall \alpha\,\forall \varepsilon\,(\mathrm{FLim}(f,c,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < \delta \to \lvert f(x) - \alpha \rvert < \varepsilon)))}{25}
+\fsdef{FLimRFn}{[D2]}{\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f))}{14}
+\fsdef{FLimCR}{[D3]}{\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to c \in \mathbb{R})}{14}
+\fsdef{FLimAR}{[D4]}{\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \alpha \in \mathbb{R})}{14}
+\fsdef{FLimNb}{[D5]}{\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c))}{14}
+\fsdef{AbsZeroEq}{[D6]}{\forall x \in \mathbb{R}\,(\lvert x \rvert = 0 \to x = 0)}{30}
+\fsdef{SubZeroEq}{[D7]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y = 0 \to x = y)}{103}
+\fsdef{MinPos}{[D8]}{\forall p\,\forall q\,(p \in \mathbb{R} \to q \in \mathbb{R} \to 0 < p \to 0 < q \to \exists d\,(d \in \mathbb{R} \land 0 < d \land d \leq p \land d \leq q))}{61}
+\fsdef{SeqCrit}{定理1.7(⇒)}{\forall f\,\forall c\,\forall \alpha\,\forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c) \to \mathrm{Conv}(f \circ a,\alpha))}{261}
+\fsdef{FLimComp}{定理1.11}{\forall f\,\forall g\,\forall c\,\forall b\,(\mathrm{FLim}(f,c,b) \to \mathrm{FLim}(g,b,g(b)) \to b \in \mathrm{dom}(g) \to \mathrm{PNbhd}(g \circ f,c) \to \mathrm{FLim}(g \circ f,c,g(b)))}{446}
+\fsdef{FSqueeze}{定理1.10}{\forall f\,\forall g\,\forall h\,\forall c\,\forall \alpha\,\forall r\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\alpha) \to \mathrm{RFn}(h) \to \mathrm{PNbhd}(h,c) \to r \in \mathbb{R} \to 0 < r \to \forall x \in \mathrm{dom}(h)\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < r \to x \in \mathrm{dom}(f) \land x \in \mathrm{dom}(g) \land f(x) \leq h(x) \land h(x) \leq g(x)) \to \mathrm{FLim}(h,c,\alpha))}{371}
+\fsdef{LeAddNonneg}{[E1]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \leq x + y)}{107}
+\fsdef{LeAddNonnegL}{[E2]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \leq y + x)}{37}
+\fsdef{LtAddPos}{[E3]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y \to x < x + y)}{91}
+\fsdef{LtAddCancel}{[E4]}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + z < y + z \to x < y)}{267}
+\fsdef{AddPosPos}{[E5]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x + y)}{27}
+\fsdef{AddNonnegNonneg}{[E6]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq x \to 0 \leq y \to 0 \leq x + y)}{27}
+\fsdef{AddLtLt}{[E7]}{\forall x\,\forall y\,\forall u\,\forall v\,(x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x < y \to u < v \to x + u < y + v)}{29}
+\fsdef{MulLtPosL}{[E8]}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \cdot x < z \cdot y)}{60}
+\fsdef{MulLeNonnegL}{[E9]}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 \leq z \to x \leq y \to z \cdot x \leq z \cdot y)}{76}
+\fsdef{PosNonneg}{[E10]}{\forall x\,(0 < x \to 0 \leq x)}{4}
+\fsdef{MulPosPos}{[E11]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y)}{7}
+\fsdef{MulLeLe}{[E12]}{\forall x\,\forall y\,\forall u\,\forall v\,(x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to 0 \leq x \to 0 \leq u \to x \leq y \to u \leq v \to x \cdot u \leq y \cdot v)}{64}
+\fsdef{InvUnique}{[E13]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \neq 0 \to x \cdot y = 1 \to y = x^{-1})}{284}
+\fsdef{InvNe0}{[E14]}{\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \neq 0)}{88}
+\fsdef{MulNe0}{[E15]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \neq 0 \to y \neq 0 \to x \cdot y \neq 0)}{242}
+\fsdef{InvMul}{[E16]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \neq 0 \to y \neq 0 \to (x \cdot y)^{-1} = x^{-1} \cdot y^{-1})}{359}
+\fsdef{Abs1}{[E17]}{\lvert 1 \rvert = 1}{9}
+\fsdef{AbsInv}{[E18]}{\forall x \in \mathbb{R}\,(x \neq 0 \to \lvert x^{-1} \rvert = \lvert x \rvert^{-1})}{115}
+\fsdef{InvLt}{[E19]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x < y \to y^{-1} < x^{-1})}{437}
+\fsdef{InvLe}{[E20]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to x \leq y \to y^{-1} \leq x^{-1})}{50}
+\fsdef{SubInv}{[E21]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \neq 0 \to y \neq 0 \to x^{-1} - y^{-1} = (y - x) \cdot (x^{-1} \cdot y^{-1}))}{589}
+\fsdef{InvMulL}{[E22]}{\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \cdot x = 1)}{33}
+\fsdef{DivMul}{[E23]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y^{-1} \cdot y = x)}{99}
+\fsdef{LtDiv}{[E24]}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < y \to x < z \cdot y \to x \cdot y^{-1} < z)}{192}
+\fsdef{MulLtDiv}{[E25]}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < y \to x \cdot y < z \to x < z \cdot y^{-1})}{183}
+\fsdef{AbsLowerHalf}{[E26]}{\forall x\,\forall \beta\,(x \in \mathbb{R} \to \beta \in \mathbb{R} \to \lvert x - \beta \rvert < \lvert \beta \rvert \cdot 2^{-1} \to \lvert \beta \rvert \cdot 2^{-1} < \lvert x \rvert)}{204}
+\fsdef{RevTriangle}{[E27]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert \lvert x \rvert - \lvert y \rvert \rvert \leq \lvert x - y \rvert)}{658}
+\fsdef{ConvExt}{[C13]}{\forall a\,\forall b\,\forall \alpha\,(\mathrm{Seq}(b) \to \forall n \in \mathbb{N}\,(a_{n} = b_{n}) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\alpha))}{106}
+\fsdef{FinBound}{[C14]}{\forall a\,(\mathrm{Seq}(a) \to \forall N \in \mathbb{N}\,\exists M\,(M \in \mathbb{R} \land 0 \leq M \land \forall n \in \mathbb{N}\,(n \leq N \to \lvert a_{n} \rvert \leq M)))}{636}
+\fsdef{ConvBdd}{定理2.11}{\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{SeqBdd}(a))}{356}
+\fsdef{ErrProd}{[C15]}{\forall x\,\forall y\,\forall \alpha\,\forall \beta\,\forall M\,\forall h\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to M \in \mathbb{R} \to h \in \mathbb{R} \to 0 \leq M \to \lvert x \rvert \leq M \to \lvert x - \alpha \rvert < h \to \lvert y - \beta \rvert < h \to \lvert x \cdot y - \alpha \cdot \beta \rvert \leq (M + \lvert \beta \rvert) \cdot h)}{516}
+\fsdef{LimProd}{定理2.7}{\forall a\,\forall \alpha\,\forall b\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \mathrm{Conv}(a \otimes b,\alpha \cdot \beta))}{529}
+\fsdef{LimRecip}{定理2.9(逆数)}{\forall b\,\forall \beta\,(\mathrm{Conv}(b,\beta) \to \beta \neq 0 \to \forall n \in \mathbb{N}\,(b_{n} \neq 0) \to \mathrm{Conv}(b^{\ast},\beta^{-1}))}{930}
+\fsdef{LimQuot}{定理2.9}{\forall a\,\forall \alpha\,\forall b\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \beta \neq 0 \to \forall n \in \mathbb{N}\,(b_{n} \neq 0) \to \mathrm{Conv}(a \otimes b^{\ast},\alpha \cdot \beta^{-1}))}{31}
+\fsdef{IdxLt}{[C16]}{\forall s\,\forall m\,(\mathrm{SubIdx}(s) \to m \in \mathbb{N} \to \forall n \in \mathbb{N}\,(m < n \to s_{m} < s_{n}))}{376}
+\fsdef{IdxGe}{[C17]}{\forall s\,(\mathrm{SubIdx}(s) \to \forall k \in \mathbb{N}\,(k \leq s_{k}))}{326}
+\fsdef{SubConvIdx}{[C18]}{\forall a\,\forall s\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{SubIdx}(s) \to \mathrm{Conv}(a \circ s,\alpha))}{179}
+\fsdef{SubConv}{定理6.7}{\forall a\,\forall b\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{SubSeq}(b,a) \to \mathrm{Conv}(b,\alpha))}{134}
+\fsdef{CoverConv}{[C19]}{\forall a\,\forall s\,\forall t\,\forall \alpha\,(\mathrm{Seq}(a) \to \mathrm{SubIdx}(s) \to \mathrm{SubIdx}(t) \to \forall n \in \mathbb{N}\,\exists k \in \mathbb{N}\,(n = s_{k} \lor n = t(k)) \to \mathrm{Conv}(a \circ s,\alpha) \to \mathrm{Conv}(a \circ t,\alpha) \to \mathrm{Conv}(a,\alpha))}{497}
+\fsdef{OddEven}{命題2.13}{\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \leftrightarrow \mathrm{Seq}(a) \land \mathrm{Conv}(a \circ \mathsf{o},\alpha) \land \mathrm{Conv}(a \circ \mathsf{e},\alpha))}{104}
+\fsdef{SubZero}{[E28]}{\forall x \in \mathbb{R}\,(x - 0 = x)}{51}
+\fsdef{AbsAbs}{[E29]}{\forall x \in \mathbb{R}\,(\lvert \lvert x \rvert \rvert = \lvert x \rvert)}{10}
+\fsdef{LimAbs}{定理2.15(1)}{\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(\lvert a \rvert,\lvert \alpha \rvert))}{154}
+\fsdef{LimAbsZero}{定理2.15(2)}{\forall a\,(\mathrm{Seq}(a) \to (\mathrm{Conv}(a,0) \leftrightarrow \mathrm{Conv}(\lvert a \rvert,0)))}{278}
+\fsdef{LimSubConst}{定理2.15(3)}{\forall a\,\forall \alpha\,(\mathrm{Seq}(a) \to \alpha \in \mathbb{R} \to (\mathrm{Conv}(a,\alpha) \leftrightarrow \mathrm{Conv}(a \oplus \overline{-\alpha},0)))}{408}
+\fsdef{InvInv}{[E30]}{\forall x \in \mathbb{R}\,(x \neq 0 \to (x^{-1})^{-1} = x)}{36}
+\fsdef{DvgRecip}{定理2.16}{\forall a\,(\mathrm{DvgP}(a) \to \forall n \in \mathbb{N}\,(a_{n} \neq 0) \to \mathrm{Conv}(a^{\ast},0))}{298}
+\fsdef{RecipDvg}{定理2.17}{\forall a\,(\forall n \in \mathbb{N}\,(0 < a_{n}) \to \mathrm{Conv}(a,0) \to \mathrm{DvgP}(a^{\ast}))}{287}
+\fsdef{DvgLe}{定理2.18(1)}{\forall a\,\forall b\,(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \mathrm{DvgP}(b))}{96}
+\fsdef{DvgAdd}{定理2.18(2)}{\forall a\,\forall b\,\forall C\,(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to \mathrm{DvgP}(a \oplus b))}{291}
+\fsdef{DvgMul}{定理2.18(3)}{\forall a\,\forall b\,\forall C\,(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to \mathrm{DvgP}(a \otimes b))}{295}
+\fsdef{MonoIncLe}{[C20]}{\forall a\,\forall m\,\forall n\,(\mathrm{MonoInc}(a) \to m \in \mathbb{N} \to n \in \mathbb{N} \to m \leq n \to a_{m} \leq a_{n})}{428}
+\fsdef{MonoDecLe}{[C21]}{\forall a\,\forall m\,\forall n\,(\mathrm{MonoDec}(a) \to m \in \mathbb{N} \to n \in \mathbb{N} \to m \leq n \to a_{n} \leq a_{m})}{428}
+\fsdef{SubLtSwap}{[E31]}{\forall x\,\forall e\,\forall y\,(x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to -e < y - x)}{224}
+\fsdef{LtAddSwap}{[E32]}{\forall x\,\forall e\,\forall y\,(x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to y < x + e \to y - x < e)}{201}
+\fsdef{BandAbs}{[E33]}{\forall x\,\forall e\,\forall y\,(x \in \mathbb{R} \to e \in \mathbb{R} \to y \in \mathbb{R} \to x - e < y \to y < x + e \to \lvert y - x \rvert < e)}{72}
+\fsdef{SubLtSelf}{[E34]}{\forall x\,\forall e\,(x \in \mathbb{R} \to e \in \mathbb{R} \to 0 < e \to x - e < x)}{47}
+\fsdef{SupApprox}{[C22]}{\forall s\,\forall E\,\forall e\,(E \subseteq \mathbb{R} \to \mathrm{IsSup}(s,E) \to e \in \mathbb{R} \to 0 < e \to \exists x \in E\,(s - e < x))}{139}
+\fsdef{InfApprox}{[C23]}{\forall s\,\forall E\,\forall e\,(E \subseteq \mathbb{R} \to \mathrm{IsInf}(s,E) \to e \in \mathbb{R} \to 0 < e \to \exists x \in E\,(x < s + e))}{139}
+\fsdef{MonoConv}{定理5.3(1)}{\forall a\,\forall M\,(\mathrm{MonoInc}(a) \to M \in \mathbb{R} \to \forall n \in \mathbb{N}\,(a_{n} \leq M) \to \exists \alpha\,(\mathrm{Conv}(a,\alpha)))}{443}
+\fsdef{MonoConvDec}{定理5.3(2)}{\forall a\,\forall M\,(\mathrm{MonoDec}(a) \to M \in \mathbb{R} \to \forall n \in \mathbb{N}\,(M \leq a_{n}) \to \exists \alpha\,(\mathrm{Conv}(a,\alpha)))}{438}
+\fsdef{NestedInt}{定理5.10}{\forall a\,\forall b\,(\mathrm{MonoInc}(a) \to \mathrm{MonoDec}(b) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \exists x \in \mathbb{R}\,\forall n \in \mathbb{N}\,(a_{n} \leq x \land x \leq b_{n}))}{646}
+\fsdef{ArchInv}{[C24]}{\forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists K \in \mathbb{N}\,(\underline{K}^{-1} < \varepsilon))}{167}
+\fsdef{IotaInvMono}{[C25]}{\forall K\,\forall n\,(K \in \mathbb{N} \to n \in \mathbb{N} \to K \leq n \to \underline{n}^{-1} \leq \underline{K}^{-1})}{38}
+\fsdef{BW}{定理6.8}{\forall a\,(\mathrm{SeqBdd}(a) \to \exists b\,(\mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b)))}{941}
+\fsdef{CauchyE}{[C26]}{\forall a\,\forall \varepsilon\,(\mathrm{Cauchy}(a) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - a_{n} \rvert < \varepsilon))}{19}
+\fsdef{ErrChain}{[C27]}{\forall x\,\forall y\,\forall z\,\forall e\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to \lvert x - z \rvert < e + e)}{163}
+\fsdef{CauchyBdd}{補題6.10}{\forall a\,(\mathrm{Cauchy}(a) \to \mathrm{SeqBdd}(a))}{412}
+\fsdef{CauchyComplete}{定理6.11}{\forall a\,(\mathrm{Cgt}(a) \leftrightarrow \mathrm{Cauchy}(a))}{657}
+\fsdef{AddSub}{[E38]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y - y = x)}{126}
+\fsdef{Inv1}{[E35]}{1^{-1} = 1}{41}
+\fsdef{AbsSelf0}{[E36]}{\forall x \in \mathbb{R}\,(0 < \lvert x - x \rvert \to x \neq x)}{69}
+\fsdef{PosAbsNe}{[E37]}{\forall y\,\forall c\,(y \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert y - c \rvert \to y \neq c)}{34}
+\fsdef{ApproxSeq}{[H1]}{\forall c\,\forall r\,(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \exists a\,(\mathrm{Seq}(a) \land \mathrm{Conv}(a,c) \land \forall n \in \mathbb{N}\,(0 < \lvert a_{n} - c \rvert \land \lvert a_{n} - c \rvert < r)))}{818}
+\fsdef{SeqCritInv}{定理1.7(⇐)}{\forall f\,\forall c\,\forall \alpha\,(\mathrm{RFn}(f) \to c \in \mathbb{R} \to \alpha \in \mathbb{R} \to \mathrm{PNbhd}(f,c) \to \forall a\,(\mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c) \to \mathrm{Conv}(f \circ a,\alpha)) \to \mathrm{FLim}(f,c,\alpha))}{453}
+\fsdef{FLimSeq}{定理1.7}{\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathbb{R} \land \alpha \in \mathbb{R} \land \mathrm{PNbhd}(f,c) \land \forall a\,(\mathrm{Seq}(a) \to \mathrm{Conv}(a,c) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c) \to \mathrm{Conv}(f \circ a,\alpha)))}{66}
+\fsdef{PNbhdInter}{[H2]}{\forall f\,\forall g\,\forall c\,(\mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \exists d\,(d \in \mathbb{R} \land 0 < d \land \forall x \in \mathbb{R}\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to x \in \mathrm{dom}(f) \land x \in \mathrm{dom}(g))))}{157}
+\fsdef{FLimAdd}{定理1.8(1)}{\forall f\,\forall g\,\forall c\,\forall \alpha\,\forall \beta\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \mathrm{FLim}((f + g),c,\alpha + \beta))}{560}
+\fsdef{FLimMul}{定理1.8(2)}{\forall f\,\forall g\,\forall c\,\forall \alpha\,\forall \beta\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \mathrm{FLim}((f \cdot g),c,\alpha \cdot \beta))}{560}
+\fsdef{FLimScal}{定理1.8(1')}{\forall l\,\forall f\,\forall c\,\forall \alpha\,(l \in \mathbb{R} \to \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}((l f),c,l \cdot \alpha))}{416}
+\fsdef{FLimDiv}{定理1.8(3)}{\forall f\,\forall g\,\forall c\,\forall \alpha\,\forall \beta\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \beta \neq 0 \to \mathrm{FLim}((f / g),c,\alpha \cdot \beta^{-1}))}{1002}
+\fsdef{FLimLe}{定理1.9}{\forall f\,\forall g\,\forall c\,\forall \alpha\,\forall \beta\,\forall r\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \forall x \in \mathrm{dom}(f)\,(x \in \mathrm{dom}(g) \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < r \to f(x) \leq g(x)) \to \alpha \leq \beta)}{574}
+\fsdef{FCauchy}{定理1.13}{\forall f\,\forall c\,(\mathrm{RFn}(f) \to c \in \mathbb{R} \to \mathrm{PNbhd}(f,c) \to (\exists \alpha\,(\mathrm{FLim}(f,c,\alpha)) \leftrightarrow \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x\,\forall y\,(x \in \mathrm{dom}(f) \to y \in \mathrm{dom}(f) \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < \delta \to 0 < \lvert y - c \rvert \to \lvert y - c \rvert < \delta \to \lvert f(x) - f(y) \rvert < \varepsilon)))))}{946}
+\fsdef{RightAbs}{[H3]}{\forall x\,\forall c\,\forall d\,(x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to x < c + d \to 0 < \lvert x - c \rvert \land \lvert x - c \rvert < d)}{87}
+\fsdef{LtAddSwap2}{[H4]}{\forall c\,\forall d\,\forall x\,(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c - d < x)}{180}
+\fsdef{LeftAbs}{[H5]}{\forall x\,\forall c\,\forall d\,(x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c - d < x \to x < c \to 0 < \lvert x - c \rvert \land \lvert x - c \rvert < d)}{182}
+\fsdef{NeSides}{[H6]}{\forall x\,\forall c\,(x \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert x - c \rvert \to x < c \lor c < x)}{21}
+\fsdef{SideR}{[H7]}{\forall x\,\forall c\,\forall d\,(x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c < x \to \lvert x - c \rvert < d \to x < c + d)}{74}
+\fsdef{SideL}{[H8]}{\forall x\,\forall c\,\forall d\,(x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to x < c \to \lvert x - c \rvert < d \to c - d < x)}{95}
+\fsdef{FLimLR}{定理1.19}{\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \leftrightarrow \mathrm{FLimR}(f,c,\alpha) \land \mathrm{FLimL}(f,c,\alpha))}{805}
+\fsdef{ContInSeq}{[G1]}{\forall f\,\forall A\,\forall c\,\forall a\,(\mathrm{ContIn}(f,A,c) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Conv}(f \circ a,f(c)))}{248}
+\fsdef{ContSeqInv}{[G2]}{\forall f\,\forall A\,\forall c\,(\mathrm{RFn}(f) \to A \subseteq \mathrm{dom}(f) \to c \in A \to \forall a\,(\mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in A) \to \mathrm{Conv}(a,c) \to \mathrm{Conv}(f \circ a,f(c))) \to \mathrm{ContIn}(f,A,c))}{466}
+\fsdef{ContInSub}{[G3]}{\forall f\,\forall A\,\forall B\,\forall c\,(\mathrm{ContIn}(f,A,c) \to B \subseteq A \to c \in B \to \mathrm{ContIn}(f,B,c))}{159}
+\fsdef{ContInAdd}{定理2.3(和)}{\forall f\,\forall g\,\forall A\,\forall c\,(\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(g,A,c) \to \mathrm{ContIn}((f + g),A,c))}{567}
+\fsdef{ContInMul}{定理2.3(積)}{\forall f\,\forall g\,\forall A\,\forall c\,(\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(g,A,c) \to \mathrm{ContIn}((f \cdot g),A,c))}{567}
+\fsdef{ContInScal}{定理2.3(定数倍)}{\forall l\,\forall f\,\forall A\,\forall c\,(l \in \mathbb{R} \to \mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}((l f),A,c))}{416}
+\fsdef{ContInAbs}{定理2.3(絶対値)}{\forall f\,\forall A\,\forall c\,(\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(\lvert f \rvert,A,c))}{394}
+\fsdef{ContInDiv}{定理2.3(商)}{\forall f\,\forall g\,\forall A\,\forall c\,(\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(g,A,c) \to \forall x \in A\,(g(x) \neq 0) \to \mathrm{ContIn}((f / g),A,c))}{770}
+\fsdef{ContInComp}{定理2.6}{\forall f\,\forall g\,\forall A\,\forall B\,\forall c\,(\mathrm{ContIn}(f,A,c) \to \mathrm{ContIn}(g,B,f(c)) \to \forall x \in A\,(f(x) \in B) \to \mathrm{ContIn}(g \circ f,A,c))}{359}
+\fsdef{ContOnAdd}{定理2.9(和)}{\forall f\,\forall g\,\forall A\,(\mathrm{ContOn}(f,A) \to \mathrm{ContOn}(g,A) \to \mathrm{ContOn}((f + g),A))}{161}
+\fsdef{ContOnComp}{定理2.10}{\forall f\,\forall g\,\forall A\,\forall B\,(\mathrm{ContOn}(f,A) \to \mathrm{ContOn}(g,B) \to \forall x \in A\,(f(x) \in B) \to \mathrm{ContOn}(g \circ f,A))}{178}
+\fsdef{ContPos}{定理2.7}{\forall f\,\forall A\,\forall c\,(\mathrm{ContIn}(f,A,c) \to 0 < f(c) \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in A\,(\lvert x - c \rvert < \delta \to f(c) \cdot 2^{-1} < f(x))))}{310}
+\fsdef{HalfLt}{[E39]}{\forall e \in \mathbb{R}\,(0 < e \to e \cdot 2^{-1} < e)}{43}
+\fsdef{SubNonneg}{[E40]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to 0 \leq y - x)}{63}
+\fsdef{LeftAbsLe}{[E41]}{\forall s\,\forall x\,\forall d\,(s \in \mathbb{R} \to x \in \mathbb{R} \to d \in \mathbb{R} \to s \leq x \to x - d < s \to \lvert s - x \rvert < d)}{159}
+\fsdef{NegSubLt}{[E42]}{\forall x\,\forall m\,\forall y\,(x \in \mathbb{R} \to m \in \mathbb{R} \to y \in \mathbb{R} \to -(x - m) < y - x \to m < y)}{86}
+\fsdef{SubRefl}{[E43]}{\forall A\,(A \subseteq A)}{11}
+\fsdef{ContLim}{命題(定義2.1)}{\forall f\,\forall c\,(\mathrm{PNbhd}(f,c) \to c \in \mathrm{dom}(f) \to (\mathrm{Cont}(f,c) \leftrightarrow \mathrm{FLim}(f,c,f(c))))}{347}
+\fsdef{IVT}{定理2.14}{\forall f\,\forall a\,\forall b\,\forall \mu\,(\mathrm{ContOn}(f,[a,b]) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mu \in \mathbb{R} \to a < b \to f(a) < \mu \to \mu < f(b) \to \exists \xi\,(\xi \in \mathbb{R} \land a < \xi \land \xi < b \land f(\xi) = \mu))}{1304}
+\fsdef{ConstConv}{[G4]}{\forall c \in \mathbb{R}\,(\mathrm{Conv}(\overline{c},c))}{148}
+\fsdef{CintClosed}{[G5]}{\forall x\,\forall c\,\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \mathrm{Conv}(x,c) \to c \in [a,b])}{207}
+\fsdef{CintBdd}{[G6]}{\forall a\,\forall b\,\forall x\,(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in [a,b] \to \lvert x \rvert \leq \lvert a \rvert + \lvert b \rvert)}{156}
+\fsdef{BWin}{[G7]}{\forall x\,\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{Seq}(x) \to \forall n \in \mathbb{N}\,(x(n) \in [a,b]) \to \exists s\,\exists c\,(\mathrm{SubIdx}(s) \land c \in [a,b] \land \mathrm{Conv}(x \circ s,c)))}{314}
+\fsdef{SubLtTwo}{[E44]}{\forall x\,\forall y\,\forall e\,(x \in \mathbb{R} \to y \in \mathbb{R} \to e \in \mathbb{R} \to x - e < y + e \to x - y < e + e)}{106}
+\fsdef{SubLtAnti}{[E45]}{\forall z\,\forall x\,\forall y\,(z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x < y \to z - y < z - x)}{182}
+\fsdef{EVTBdd}{[G8]}{\forall f\,\forall a\,\forall b\,(\mathrm{ContOn}(f,[a,b]) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \exists M \in \mathbb{R}\,\forall x \in [a,b]\,(f(x) \leq M))}{734}
+\fsdef{EVT}{定理2.17}{\forall f\,\forall a\,\forall b\,(\mathrm{ContOn}(f,[a,b]) \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \leq b \to \exists \xi \in [a,b]\,\forall x \in [a,b]\,(f(x) \leq f(\xi)))}{1466}
+\fsdef{EVTMin}{定理2.17(最小値)}{\forall f\,\forall a\,\forall b\,(\mathrm{ContOn}(f,[a,b]) \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \leq b \to \exists \xi \in [a,b]\,\forall x \in [a,b]\,(f(\xi) \leq f(x)))}{498}
+\fsdef{AbsLtBoth}{[E46]}{\forall x\,\forall c\,\forall d\,(x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to \lvert x - c \rvert < d \to c - d < x \land x < c + d)}{170}
+\fsdef{RightAbsLe}{[E47]}{\forall x\,\forall c\,\forall d\,(x \in \mathbb{R} \to c \in \mathbb{R} \to d \in \mathbb{R} \to c \leq x \to x < c + d \to \lvert x - c \rvert < d)}{64}
+\fsdef{ContRL}{定理2.4}{\forall f\,\forall c\,(\mathrm{Cont}(f,c) \leftrightarrow \mathrm{RCont}(f,c) \land \mathrm{LCont}(f,c))}{450}
+\fsdef{UCAdd}{定理4.3(和)}{\forall f\,\forall g\,\forall A\,(\mathrm{UC}(f,A) \to \mathrm{UC}(g,A) \to \mathrm{UC}((f + g),A))}{585}
+\fsdef{UCScal}{定理4.3(定数倍)}{\forall l\,\forall f\,\forall A\,(l \in \mathbb{R} \to \mathrm{UC}(f,A) \to \mathrm{UC}((l f),A))}{639}
+\fsdef{HeineCantor}{定理4.6}{\forall f\,\forall a\,\forall b\,(\mathrm{ContOn}(f,[a,b]) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \mathrm{UC}(f,[a,b]))}{1418}
+\fsdef{MulZeroCancel}{[E48]}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y = 0 \to x = 0)}{181}
+\fsdef{PowAbs}{[P1]}{\forall r \in \mathbb{R}\,\forall n \in \mathbb{N}\,(\lvert {{r}^{n}} \rvert = {{\lvert r \rvert}^{n}})}{409}
+\fsdef{PowNonneg}{[P2]}{\forall r \in \mathbb{R}\,(0 \leq r \to \forall n \in \mathbb{N}\,(0 \leq {{r}^{n}}))}{352}
+\fsdef{PowPos}{[P3]}{\forall r \in \mathbb{R}\,(0 < r \to \forall n \in \mathbb{N}\,(0 < {{r}^{n}}))}{328}
+\fsdef{PowNe0}{[P4]}{\forall r \in \mathbb{R}\,(r \neq 0 \to \forall n \in \mathbb{N}\,({{r}^{n}} \neq 0))}{376}
+\fsdef{PowOneOne}{[P5]}{\forall n \in \mathbb{N}\,({{1}^{n}} = 1)}{272}
+\fsdef{PowInv}{[P6]}{\forall r \in \mathbb{R}\,(r \neq 0 \to \forall n \in \mathbb{N}\,({{(r^{-1})}^{n}} = {{r}^{n}}^{-1}))}{441}
+\fsdef{PowDec}{[P7]}{\forall r \in \mathbb{R}\,(0 \leq r \to r \leq 1 \to \mathrm{MonoDec}({(r)^{\bullet}}))}{152}
+\fsdef{SucIdx}{[C28]}{\mathrm{SubIdx}(\mathsf{s})}{88}
+\fsdef{GeoLim}{命題3.1(3)}{\forall r \in \mathbb{R}\,(\lvert r \rvert < 1 \to \mathrm{Conv}({(r)^{\bullet}},0))}{607}
+\fsdef{GeoOne}{命題3.1(2)}{\mathrm{Conv}({(1)^{\bullet}},1)}{77}
+\fsdef{GeoDvg}{命題3.1(1)}{\forall r \in \mathbb{R}\,(1 < r \to \mathrm{DvgP}({(r)^{\bullet}}))}{308}
+\fsdef{AddSwap4}{[E49]}{\forall x\,\forall y\,\forall u\,\forall v\,(x \in \mathbb{R} \to y \in \mathbb{R} \to u \in \mathbb{R} \to v \in \mathbb{R} \to x + y + (u + v) = x + u + (y + v))}{272}
+\fsdef{NegOneMul}{[E50]}{\forall x \in \mathbb{R}\,(-1 \cdot x = -x)}{79}
+\fsdef{ShiftConv}{[C29]}{\forall a\,\forall \alpha\,(\mathrm{Seq}(a) \to \mathrm{Conv}(a \circ \mathsf{s},\alpha) \to \mathrm{Conv}(a,\alpha))}{370}
+\fsdef{PSumAdd}{[Q1]}{\forall a\,\forall b\,(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \forall n \in \mathbb{N}\,({\textstyle\sum_{k=1}^{n} a \oplus b(k)} = {\textstyle\sum_{k=1}^{n} a_{k}} + {\textstyle\sum_{k=1}^{n} b_{k}}))}{630}
+\fsdef{PSumScal}{[Q2]}{\forall l\,\forall a\,(l \in \mathbb{R} \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,({\textstyle\sum_{k=1}^{n} l \odot a(k)} = l \cdot {\textstyle\sum_{k=1}^{n} a_{k}}))}{522}
+\fsdef{SerAdd}{定理4.4(和)}{\forall a\,\forall b\,\forall s\,\forall t\,(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma b,t) \to \mathrm{Conv}(\Sigma a \oplus b,s + t))}{155}
+\fsdef{SerScal}{定理4.4(定数倍)}{\forall l\,\forall a\,\forall s\,(l \in \mathbb{R} \to \mathrm{Seq}(a) \to \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(\Sigma l \odot a,l \cdot s))}{135}
+\fsdef{SerTerm}{定理4.7(1)}{\forall a\,\forall s\,(\mathrm{Seq}(a) \to \mathrm{Conv}(\Sigma a,s) \to \mathrm{Conv}(a,0))}{613}
+\fsdef{GeoPartial}{[Q3]}{\forall r \in \mathbb{R}\,\forall n \in \mathbb{N}\,((1 - r) \cdot {\textstyle\sum_{k=1}^{n} {{r}^{k}}} = r - {{r}^{S(n)}})}{787}
+\fsdef{GeoSer}{命題4.3(1)}{\forall r \in \mathbb{R}\,(\lvert r \rvert < 1 \to \mathrm{Conv}(\Sigma {(r)^{\bullet}},r \cdot (1 - r)^{-1}))}{884}
+\fsdef{PowGeOne}{[P8]}{\forall r \in \mathbb{R}\,(1 \leq r \to \forall n \in \mathbb{N}\,(1 \leq {{r}^{n}}))}{389}
+\fsdef{GeoSerDvg}{命題4.3(2)}{\forall r \in \mathbb{R}\,(1 \leq \lvert r \rvert \to \neg \exists s\,(\mathrm{Conv}(\Sigma {(r)^{\bullet}},s)))}{294}
+\fsdef{SubLeAnti}{[E51]}{\forall z\,\forall x\,\forall y\,(z \in \mathbb{R} \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to z - y \leq z - x)}{198}
+\fsdef{StrIncInj}{[I1]}{\forall f\,(\mathrm{RFn}(f) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{Inj}(f))}{167}
+\fsdef{InvMono}{[I2]}{\forall f\,(\mathrm{RFn}(f) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{StrInc}(f^{-1},\mathrm{dom}(f^{-1})))}{244}
+\fsdef{InvUp}{[I3]}{\forall f\,\forall y_{0}\,\forall \varepsilon\,(\mathrm{RFn}(f) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to y_{0} \in \mathrm{dom}(f^{-1}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall y \in \mathrm{dom}(f^{-1})\,(y < y_{0} + \delta \to f^{-1}(y) < f^{-1}(y_{0}) + \varepsilon)))}{621}
+\fsdef{InvDown}{[I4]}{\forall f\,\forall y_{0}\,\forall \varepsilon\,(\mathrm{RFn}(f) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to y_{0} \in \mathrm{dom}(f^{-1}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall y \in \mathrm{dom}(f^{-1})\,(y_{0} - \delta < y \to f^{-1}(y_{0}) - \varepsilon < f^{-1}(y))))}{522}
+\fsdef{InvCont}{定理2.21(連続性)}{\forall f\,(\mathrm{RFn}(f) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{ContOn}(f^{-1},\mathrm{dom}(f^{-1})))}{398}
+\fsdef{InvItv}{定理2.21(定義域)}{\forall f\,(\mathrm{ContOn}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f)) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{Itv}(\mathrm{dom}(f^{-1})))}{619}
+\fsdef{ItvReal}{[I5]}{\mathrm{Itv}(\mathbb{R})}{16}
+\fsdef{LogCont}{定理(対数関数の連続性・単調性)}{\mathrm{ContOn}(\log,\mathrm{dom}(\log)) \land \mathrm{StrInc}(\log,\mathrm{dom}(\log))}{71}
+\fsdef{LogDom}{定理(対数関数の定義域)}{\forall y\,(y \in \mathrm{dom}(\log) \leftrightarrow y \in \mathbb{R} \land 0 < y)}{206}
+\fsdef{LogMul}{定理(対数法則)}{\forall x\,\forall y\,(x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x \cdot y) = \log(x) + \log(y))}{230}
+\fsdef{D:sub}{Def$\subseteq$}{\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))}{0}
+\fsdef{D:lt}{Def$<$}{\forall x\,\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y)}{0}
+\fsdef{D:empty}{Def$\emptyset$}{\forall u\,(u \notin \emptyset)}{0}
+\fsdef{D:cup}{Def$\cup$}{\forall x\,\forall y\,\forall u\,(u \in x \cup y \leftrightarrow u \in x \lor u \in y)}{0}
+\fsdef{D:bigcup}{Def$\bigcup$}{\forall X\,\forall u\,(u \in \textstyle\bigcup X \leftrightarrow \exists Y \in X\,(u \in Y))}{0}
+\fsdef{D:S}{Def$S$}{\forall x\,\forall u\,(u \in S(x) \leftrightarrow u \in x \lor u = x)}{0}
+\fsdef{D:Ind}{DefInd}{\forall x\,(\mathrm{Ind}(x) \leftrightarrow \emptyset \in x \land \forall y \in x\,(S(y) \in x))}{0}
+\fsdef{D:omega}{Def$\omega$}{\forall n\,(n \in \omega \leftrightarrow \forall x\,(\mathrm{Ind}(x) \to n \in x))}{0}
+\fsdef{D:minus}{Def$-$}{\forall x\,\forall y\,(x - y = x + -y)}{0}
+\fsdef{D:abs}{Def$\lvert\cdot\rvert$}{\forall x\,(0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x)}{0}
+\fsdef{D:two}{Def$2$}{2 = 1 + 1}{0}
+\fsdef{D:UB}{DefUB}{\forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a))}{0}
+\fsdef{D:LB}{DefLB}{\forall a\,\forall X\,(\mathrm{LB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(a \leq x))}{0}
+\fsdef{D:IsSup}{DefSup}{\forall s\,\forall X\,(\mathrm{IsSup}(s,X) \leftrightarrow \mathrm{UB}(s,X) \land \forall w\,(\mathrm{UB}(w,X) \to s \leq w))}{0}
+\fsdef{D:IsInf}{DefInf}{\forall s\,\forall X\,(\mathrm{IsInf}(s,X) \leftrightarrow \mathrm{LB}(s,X) \land \forall w\,(\mathrm{LB}(w,X) \to w \leq s))}{0}
+\fsdef{D:BddAb}{DefBddAb}{\forall X\,(\mathrm{BddAb}(X) \leftrightarrow \exists a\,(\mathrm{UB}(a,X)))}{0}
+\fsdef{D:BddBe}{DefBddBe}{\forall X\,(\mathrm{BddBe}(X) \leftrightarrow \exists a\,(\mathrm{LB}(a,X)))}{0}
+\fsdef{D:ArchX}{Def$X_a$}{\forall a\,\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))}{0}
+\fsdef{D:negset}{Def$\ominus$}{\forall X\,\forall y\,(y \in \ominus X \leftrightarrow y \in \mathbb{R} \land -y \in X)}{0}
+\fsdef{D:Conv}{DefConv}{\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \leftrightarrow \mathrm{Seq}(a) \land \alpha \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)))}{0}
+\fsdef{D:Cgt}{DefCgt}{\forall a\,(\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha)))}{0}
+\fsdef{D:DvgP}{Def$\mathrm{DvgP}$}{\forall a\,(\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \forall K \in \mathbb{R}\,(0 < K \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to K < a_{n})))}{0}
+\fsdef{D:SeqBdd}{DefSeqBdd}{\forall a\,(\mathrm{SeqBdd}(a) \leftrightarrow \mathrm{Seq}(a) \land \exists M \in \mathbb{R}\,\forall n \in \mathbb{N}\,(\lvert a_{n} \rvert \leq M))}{0}
+\fsdef{D:MonoInc}{DefMonoInc}{\forall a\,(\mathrm{MonoInc}(a) \leftrightarrow \mathrm{Seq}(a) \land \forall n \in \mathbb{N}\,(a_{n} \leq a_{S(n)}))}{0}
+\fsdef{D:MonoDec}{DefMonoDec}{\forall a\,(\mathrm{MonoDec}(a) \leftrightarrow \mathrm{Seq}(a) \land \forall n \in \mathbb{N}\,(a_{S(n)} \leq a_{n}))}{0}
+\fsdef{D:Cauchy}{DefCauchy}{\forall a\,(\mathrm{Cauchy}(a) \leftrightarrow \mathrm{Seq}(a) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - a_{n} \rvert < \varepsilon)))}{0}
+\fsdef{D:PNbhd}{DefPNbhd}{\forall f\,\forall c\,(\mathrm{PNbhd}(f,c) \leftrightarrow \exists r\,(r \in \mathbb{R} \land 0 < r \land \forall x \in \mathbb{R}\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < r \to x \in \mathrm{dom}(f))))}{0}
+\fsdef{D:FLim}{DefFLim}{\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathbb{R} \land \alpha \in \mathbb{R} \land \mathrm{PNbhd}(f,c) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < \delta \to \lvert f(x) - \alpha \rvert < \varepsilon))))}{0}
+\fsdef{F:R1_0}{(R1)}{0 \in \mathbb{R}}{0}
+\fsdef{F:R1_1}{(R1)}{1 \in \mathbb{R}}{0}
+\fsdef{F:R1_add}{(R1)}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y \in \mathbb{R})}{0}
+\fsdef{F:R1_mul}{(R1)}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})}{0}
+\fsdef{F:R1_neg}{(R1)}{\forall x \in \mathbb{R}\,(-x \in \mathbb{R})}{0}
+\fsdef{F:R1_inv}{(R1)}{\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R})}{0}
+\fsdef{F:R2}{(R2)}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + y + z = x + (y + z))}{0}
+\fsdef{F:R3}{(R3)}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)}{0}
+\fsdef{F:R4}{(R4)}{\forall x \in \mathbb{R}\,(x + 0 = x)}{0}
+\fsdef{F:R5}{(R5)}{\forall x \in \mathbb{R}\,(x + -x = 0)}{0}
+\fsdef{F:R6}{(R6)}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x \cdot y \cdot z = x \cdot (y \cdot z))}{0}
+\fsdef{F:R7}{(R7)}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)}{0}
+\fsdef{F:R8}{(R8)}{\forall x \in \mathbb{R}\,(x \cdot 1 = x)}{0}
+\fsdef{F:R8b}{(R8)}{0 \neq 1}{0}
+\fsdef{F:R9}{(R9)}{\forall x \in \mathbb{R}\,(x \neq 0 \to x \cdot x^{-1} = 1)}{0}
+\fsdef{F:R10}{(R10)}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x \cdot (y + z) = x \cdot y + x \cdot z)}{0}
+\fsdef{F:R13}{(R13)}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x < y \lor x = y \lor y < x)}{0}
+\fsdef{F:R14}{(R14)}{\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x < y \to x + z < y + z)}{0}
+\fsdef{F:R15}{(R15)}{\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y)}{0}
+\fsdef{F:R16}{(R16)}{\forall X\,(X \subseteq \mathbb{R} \to X \neq \emptyset \to \exists b\,(\mathrm{UB}(b,X)) \to \exists s\,(\mathrm{IsSup}(s,X)))}{0}
+\fsdef{F:NatCup}{[N3]}{\forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to m \cup n \in \mathbb{N})}{0}
+\fsdef{F:IotaR}{[N4]}{\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R})}{0}
+\fsdef{F:Iota1}{[N5]}{\underline{1_{\omega}} = 1}{0}
+\fsdef{F:IotaS}{[N6]}{\forall n \in \mathbb{N}\,(\underline{S(n)} = \underline{n} + 1)}{0}
+\fsdef{F:SeqVal}{[S1]}{\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})}{0}
+\fsdef{F:Oplus}{[S2]}{\forall a\,\forall b\,(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Seq}(a \oplus b) \land \forall n \in \mathbb{N}\,(a \oplus b(n) = a_{n} + b_{n}))}{0}
+\fsdef{F:Odot}{[S3]}{\forall c\,\forall a\,(c \in \mathbb{R} \to \mathrm{Seq}(a) \to \mathrm{Seq}(c \odot a) \land \forall n \in \mathbb{N}\,(c \odot a(n) = c \cdot a_{n}))}{0}
+\fsdef{F:Otimes}{[S4]}{\forall a\,\forall b\,(\mathrm{Seq}(a) \to \mathrm{Seq}(b) \to \mathrm{Seq}(a \otimes b) \land \forall n \in \mathbb{N}\,(a \otimes b(n) = a_{n} \cdot b_{n}))}{0}
+\fsdef{F:Recip}{[S5]}{\forall a\,(\mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \neq 0) \to \mathrm{Seq}(a^{\ast}) \land \forall n \in \mathbb{N}\,(a^{\ast}(n) = a_{n}^{-1}))}{0}
+\fsdef{F:RFnVal}{[S6]}{\forall f\,\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to f(x) \in \mathbb{R})}{0}
+\fsdef{F:RFnDom}{[S7]}{\forall f\,\forall x\,(\mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to x \in \mathbb{R})}{0}
+\fsdef{F:CompSeq}{[S8]}{\forall f\,\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f)) \to \mathrm{Seq}(f \circ a) \land \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n})))}{0}
+\fsdef{F:CompFn}{[S9]}{\forall g\,\forall f\,(\mathrm{RFn}(g) \to \mathrm{RFn}(f) \to \mathrm{RFn}(g \circ f) \land \forall x \in \mathrm{dom}(g \circ f)\,(x \in \mathrm{dom}(f) \land f(x) \in \mathrm{dom}(g) \land g \circ f(x) = g(f(x))))}{0}
+\fsdef{D:Nat}{Def$\mathbb{N}$}{\forall n\,(n \in \mathbb{N} \leftrightarrow n \in \omega \land n \neq \emptyset)}{0}
+\fsdef{D:onew}{Def$1_\omega$}{1_{\omega} = S(\emptyset)}{0}
+\fsdef{F:LeSCases}{[N9]}{\forall m\,\forall n\,(m \in \omega \to n \in \omega \to m \leq S(n) \to m \leq n \lor m = S(n))}{0}
+\fsdef{F:LtSLe}{[N10]}{\forall m\,\forall n\,(m \in \omega \to n \in \omega \to m < n \to S(m) \leq n)}{0}
+\fsdef{F:OmegaTotal}{[N11]}{\forall m\,\forall n\,(m \in \omega \to n \in \omega \to m \leq n \lor n < m)}{0}
+\fsdef{F:ConstSeq}{[S10]}{\forall c \in \mathbb{R}\,(\mathrm{Seq}(\overline{c}) \land \forall n \in \mathbb{N}\,(\overline{c}(n) = c))}{0}
+\fsdef{F:AbsSeq}{[S11]}{\forall a\,(\mathrm{Seq}(a) \to \mathrm{Seq}(\lvert a \rvert) \land \forall n \in \mathbb{N}\,(\lvert a \rvert(n) = \lvert a_{n} \rvert))}{0}
+\fsdef{F:SubSeqF}{[S12]}{\forall a\,\forall s\,(\mathrm{Seq}(a) \to \mathrm{NSeq}(s) \to \mathrm{Seq}(a \circ s) \land \forall k \in \mathbb{N}\,(a \circ s(k) = a_{s_{k}}))}{0}
+\fsdef{F:NSeqVal}{[S13]}{\forall s\,\forall k\,(\mathrm{NSeq}(s) \to k \in \mathbb{N} \to s_{k} \in \mathbb{N})}{0}
+\fsdef{F:Sucf}{[S14]}{\mathrm{NSeq}(\mathsf{s}) \land \forall k \in \mathbb{N}\,(\mathsf{s}(k) = S(k))}{0}
+\fsdef{F:EvOd}{[S15]}{\mathrm{NSeq}(\mathsf{e}) \land \mathrm{NSeq}(\mathsf{o}) \land \forall k \in \mathbb{N}\,(\mathsf{e}(k) < \mathsf{e}(S(k)) \land \mathsf{o}(k) < \mathsf{o}(S(k))) \land \forall n \in \mathbb{N}\,\exists k \in \mathbb{N}\,(n = \mathsf{e}(k) \lor n = \mathsf{o}(k))}{0}
+\fsdef{F:LtS}{[N17]}{\forall n \in \omega\,(n < S(n))}{0}
+\fsdef{D:SubIdx}{DefSubIdx}{\forall s\,(\mathrm{SubIdx}(s) \leftrightarrow \mathrm{NSeq}(s) \land \forall k \in \mathbb{N}\,(s_{k} < s_{S(k)}))}{0}
+\fsdef{D:SubSeq}{DefSubSeq}{\forall b\,\forall a\,(\mathrm{SubSeq}(b,a) \leftrightarrow \mathrm{Seq}(b) \land \exists s\,(\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}})))}{0}
+\fsdef{F:RanSeq}{[S16]}{\forall a\,(\mathrm{Seq}(a) \to \mathrm{ran}(a) \subseteq \mathbb{R} \land \forall y\,(y \in \mathrm{ran}(a) \leftrightarrow \exists j \in \mathbb{N}\,(y = a_{j})))}{0}
+\fsdef{F:ExtractSub}{[S28]}{\forall a\,\forall c\,(\mathrm{Seq}(a) \to \forall k \in \mathbb{N}\,\forall N \in \mathbb{N}\,\exists n\,(n \in \mathbb{N} \land N \leq n \land \lvert a_{n} - c \rvert < \underline{k}^{-1}) \to \exists s\,(\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(\lvert a_{s_{k}} - c \rvert < \underline{k}^{-1})))}{0}
+\fsdef{F:FAdd}{[S17]}{\forall f\,\forall g\,(\mathrm{RFn}(f) \to \mathrm{RFn}(g) \to \mathrm{RFn}((f + g)) \land \forall x\,(x \in \mathrm{dom}((f + g)) \leftrightarrow x \in \mathrm{dom}(f) \land x \in \mathrm{dom}(g)) \land \forall x \in \mathrm{dom}((f + g))\,((f + g)(x) = f(x) + g(x)))}{0}
+\fsdef{F:FMul}{[S18]}{\forall f\,\forall g\,(\mathrm{RFn}(f) \to \mathrm{RFn}(g) \to \mathrm{RFn}((f \cdot g)) \land \forall x\,(x \in \mathrm{dom}((f \cdot g)) \leftrightarrow x \in \mathrm{dom}(f) \land x \in \mathrm{dom}(g)) \land \forall x \in \mathrm{dom}((f \cdot g))\,((f \cdot g)(x) = f(x) \cdot g(x)))}{0}
+\fsdef{F:FScal}{[S19]}{\forall l\,\forall f\,(l \in \mathbb{R} \to \mathrm{RFn}(f) \to \mathrm{RFn}((l f)) \land \forall x\,(x \in \mathrm{dom}((l f)) \leftrightarrow x \in \mathrm{dom}(f)) \land \forall x \in \mathrm{dom}((l f))\,((l f)(x) = l \cdot f(x)))}{0}
+\fsdef{F:FDiv}{[S20]}{\forall f\,\forall g\,(\mathrm{RFn}(f) \to \mathrm{RFn}(g) \to \mathrm{RFn}((f / g)) \land \forall x\,(x \in \mathrm{dom}((f / g)) \leftrightarrow x \in \mathrm{dom}(f) \land x \in \mathrm{dom}(g) \land g(x) \neq 0) \land \forall x \in \mathrm{dom}((f / g))\,((f / g)(x) = f(x) \cdot g(x)^{-1}))}{0}
+\fsdef{F:FAbs}{[S21]}{\forall f\,(\mathrm{RFn}(f) \to \mathrm{RFn}(\lvert f \rvert) \land \forall x\,(x \in \mathrm{dom}(\lvert f \rvert) \leftrightarrow x \in \mathrm{dom}(f)) \land \forall x \in \mathrm{dom}(\lvert f \rvert)\,(\lvert f \rvert(x) = \lvert f(x) \rvert))}{0}
+\fsdef{F:ApSeq}{[S22]}{\forall c\,\forall r\,(c \in \mathbb{R} \to r \in \mathbb{R} \to \mathrm{Seq}(\pi_{c,r}) \land \forall n \in \mathbb{N}\,(\pi_{c,r}(n) = c + r \cdot (\underline{n} + 1)^{-1}))}{0}
+\fsdef{F:CC1}{[CC1]}{\forall f\,\forall c\,\forall \alpha\,\forall e_{0}\,(\forall k \in \mathbb{N}\,\exists x \in \mathbb{R}\,(x \in \mathrm{dom}(f) \land 0 < \lvert x - c \rvert \land \lvert x - c \rvert < \underline{k}^{-1} \land \neg \lvert f(x) - \alpha \rvert < e_{0}) \to \exists q\,(\mathrm{Seq}(q) \land \forall k \in \mathbb{N}\,(q(k) \in \mathrm{dom}(f) \land 0 < \lvert q(k) - c \rvert \land \lvert q(k) - c \rvert < \underline{k}^{-1} \land \neg \lvert f(q(k)) - \alpha \rvert < e_{0})))}{0}
+\fsdef{D:RNbhd}{DefRNbhd}{\forall f\,\forall c\,(\mathrm{RNbhd}(f,c) \leftrightarrow \exists r\,(r \in \mathbb{R} \land 0 < r \land \forall x \in \mathbb{R}\,(c < x \to x < c + r \to x \in \mathrm{dom}(f))))}{0}
+\fsdef{D:LNbhd}{DefLNbhd}{\forall f\,\forall c\,(\mathrm{LNbhd}(f,c) \leftrightarrow \exists r\,(r \in \mathbb{R} \land 0 < r \land \forall x \in \mathbb{R}\,(c - r < x \to x < c \to x \in \mathrm{dom}(f))))}{0}
+\fsdef{D:FLimR}{DefFLimR}{\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLimR}(f,c,\alpha) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathbb{R} \land \alpha \in \mathbb{R} \land \mathrm{RNbhd}(f,c) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(c < x \to x < c + \delta \to \lvert f(x) - \alpha \rvert < \varepsilon))))}{0}
+\fsdef{D:FLimL}{DefFLimL}{\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLimL}(f,c,\alpha) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathbb{R} \land \alpha \in \mathbb{R} \land \mathrm{LNbhd}(f,c) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(c - \delta < x \to x < c \to \lvert f(x) - \alpha \rvert < \varepsilon))))}{0}
+\fsdef{D:FLimInf}{DefFLimInf}{\forall f\,\forall \alpha\,(\mathrm{FLimInf}(f,\alpha) \leftrightarrow \mathrm{RFn}(f) \land \alpha \in \mathbb{R} \land \exists r \in \mathbb{R}\,\forall x \in \mathbb{R}\,(r < x \to x \in \mathrm{dom}(f)) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists L \in \mathbb{R}\,\forall x \in \mathrm{dom}(f)\,(L < x \to \lvert f(x) - \alpha \rvert < \varepsilon)))}{0}
+\fsdef{D:ContIn}{DefContIn}{\forall f\,\forall A\,\forall c\,(\mathrm{ContIn}(f,A,c) \leftrightarrow \mathrm{RFn}(f) \land A \subseteq \mathrm{dom}(f) \land c \in A \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in A\,(\lvert x - c \rvert < \delta \to \lvert f(x) - f(c) \rvert < \varepsilon))))}{0}
+\fsdef{D:Cont}{DefCont}{\forall f\,\forall c\,(\mathrm{Cont}(f,c) \leftrightarrow \mathrm{ContIn}(f,\mathrm{dom}(f),c))}{0}
+\fsdef{D:ContOn}{DefContOn}{\forall f\,\forall A\,(\mathrm{ContOn}(f,A) \leftrightarrow \mathrm{RFn}(f) \land A \subseteq \mathrm{dom}(f) \land \forall c \in A\,(\mathrm{ContIn}(f,A,c)))}{0}
+\fsdef{D:RCont}{DefRCont}{\forall f\,\forall c\,(\mathrm{RCont}(f,c) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathrm{dom}(f) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(c \leq x \to x < c + \delta \to \lvert f(x) - f(c) \rvert < \varepsilon))))}{0}
+\fsdef{D:LCont}{DefLCont}{\forall f\,\forall c\,(\mathrm{LCont}(f,c) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathrm{dom}(f) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(c - \delta < x \to x \leq c \to \lvert f(x) - f(c) \rvert < \varepsilon))))}{0}
+\fsdef{D:cint}{Def{$[a,b]$}}{\forall a\,\forall b\,\forall x\,(x \in [a,b] \leftrightarrow x \in \mathbb{R} \land a \leq x \land x \leq b)}{0}
+\fsdef{F:CompDom}{[S23]}{\forall g\,\forall f\,\forall x\,(\mathrm{RFn}(g) \to \mathrm{RFn}(f) \to x \in \mathrm{dom}(f) \to f(x) \in \mathrm{dom}(g) \to x \in \mathrm{dom}(g \circ f))}{0}
+\fsdef{F:CC2}{[CC2]}{\forall A\,\forall c\,\forall f\,\forall e_{0}\,(\forall k \in \mathbb{N}\,\exists x \in \mathbb{R}\,(x \in A \land \lvert x - c \rvert < \underline{k}^{-1} \land \neg \lvert f(x) - f(c) \rvert < e_{0}) \to \exists q\,(\mathrm{Seq}(q) \land \forall k \in \mathbb{N}\,(q(k) \in A \land \lvert q(k) - c \rvert < \underline{k}^{-1} \land \neg \lvert f(q(k)) - f(c) \rvert < e_{0})))}{0}
+\fsdef{F:CC3}{[CC3]}{\forall a\,\forall b\,\forall f\,(\forall k \in \mathbb{N}\,\exists x \in \mathbb{R}\,(x \in [a,b] \land \underline{k} < f(x)) \to \exists q\,(\mathrm{Seq}(q) \land \forall k \in \mathbb{N}\,(q(k) \in [a,b] \land \underline{k} < f(q(k)))))}{0}
+\fsdef{F:CC4}{[CC4]}{\forall a\,\forall b\,\forall \sigma\,\forall f\,(\forall k \in \mathbb{N}\,\exists x \in \mathbb{R}\,(x \in [a,b] \land \sigma - \underline{k}^{-1} < f(x)) \to \exists q\,(\mathrm{Seq}(q) \land \forall k \in \mathbb{N}\,(q(k) \in [a,b] \land \sigma - \underline{k}^{-1} < f(q(k)))))}{0}
+\fsdef{D:UC}{DefUC}{\forall f\,\forall A\,(\mathrm{UC}(f,A) \leftrightarrow \mathrm{RFn}(f) \land A \subseteq \mathrm{dom}(f) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x\,\forall y\,(x \in A \to y \in A \to \lvert x - y \rvert < \delta \to \lvert f(x) - f(y) \rvert < \varepsilon))))}{0}
+\fsdef{F:CC5}{[CC5]}{\forall a\,\forall b\,\forall f\,\forall e_{0}\,(\forall k \in \mathbb{N}\,\exists x \in \mathbb{R}\,(x \in [a,b] \land \exists y\,(y \in [a,b] \land \lvert x - y \rvert < \underline{k}^{-1} \land \neg \lvert f(x) - f(y) \rvert < e_{0})) \to \exists q\,(\mathrm{Seq}(q) \land \forall k \in \mathbb{N}\,(q(k) \in [a,b] \land \exists y\,(y \in [a,b] \land \lvert q(k) - y \rvert < \underline{k}^{-1} \land \neg \lvert f(q(k)) - f(y) \rvert < e_{0}))))}{0}
+\fsdef{F:CC6}{[CC6]}{\forall a\,\forall b\,\forall p\,\forall f\,\forall e_{0}\,(\forall k \in \mathbb{N}\,\exists x \in \mathbb{R}\,(x \in [a,b] \land \lvert p(k) - x \rvert < \underline{k}^{-1} \land \neg \lvert f(p(k)) - f(x) \rvert < e_{0}) \to \exists q\,(\mathrm{Seq}(q) \land \forall k \in \mathbb{N}\,(q(k) \in [a,b] \land \lvert p(k) - q(k) \rvert < \underline{k}^{-1} \land \neg \lvert f(p(k)) - f(q(k)) \rvert < e_{0})))}{0}
+\fsdef{F:PowSeq}{[S24]}{\forall r \in \mathbb{R}\,(\mathrm{Seq}({(r)^{\bullet}}) \land {{r}^{1_{\omega}}} = r \land \forall n \in \mathbb{N}\,({{r}^{S(n)}} = {{r}^{n}} \cdot r))}{0}
+\fsdef{F:PSum}{[S25]}{\forall a\,(\mathrm{Seq}(a) \to \mathrm{Seq}(\Sigma a) \land {\textstyle\sum_{k=1}^{1_{\omega}} a_{k}} = a_{1_{\omega}} \land \forall n \in \mathbb{N}\,({\textstyle\sum_{k=1}^{S(n)} a_{k}} = {\textstyle\sum_{k=1}^{n} a_{k}} + a_{S(n)}))}{0}
+\fsdef{F:Pred}{[N18]}{\forall n \in \mathbb{N}\,(n \neq 1_{\omega} \to \exists m \in \mathbb{N}\,(n = S(m)))}{0}
+\fsdef{D:StrInc}{DefStrInc}{\forall f\,\forall A\,(\mathrm{StrInc}(f,A) \leftrightarrow \forall x\,\forall y\,(x \in A \to y \in A \to x < y \to f(x) < f(y)))}{0}
+\fsdef{D:Itv}{DefItv}{\forall I\,(\mathrm{Itv}(I) \leftrightarrow I \subseteq \mathbb{R} \land \forall x\,\forall y\,\forall z\,(x \in I \to z \in I \to y \in \mathbb{R} \to x \leq y \to y \leq z \to y \in I))}{0}
+\fsdef{D:Inj}{DefInj}{\forall f\,(\mathrm{Inj}(f) \leftrightarrow \forall x\,\forall y\,(x \in \mathrm{dom}(f) \to y \in \mathrm{dom}(f) \to f(x) = f(y) \to x = y))}{0}
+\fsdef{F:InvFn}{[S26]}{\forall f\,(\mathrm{RFn}(f) \to \mathrm{Inj}(f) \to \mathrm{RFn}(f^{-1}) \land \forall y\,(y \in \mathrm{dom}(f^{-1}) \leftrightarrow \exists x \in \mathrm{dom}(f)\,(y = f(x))) \land \forall x \in \mathrm{dom}(f)\,(f^{-1}(f(x)) = x) \land \forall y \in \mathrm{dom}(f^{-1})\,(f^{-1}(y) \in \mathrm{dom}(f) \land f(f^{-1}(y)) = y))}{0}
+\fsdef{F:Exp}{[S27]}{\mathrm{RFn}(\exp) \land \mathrm{dom}(\exp) = \mathbb{R} \land \forall x \in \mathbb{R}\,(0 < \exp(x)) \land \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \exp(x + y) = \exp(x) \cdot \exp(y)) \land \mathrm{StrInc}(\exp,\mathbb{R}) \land \mathrm{ContOn}(\exp,\mathbb{R}) \land \forall y \in \mathbb{R}\,(0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y))}{0}

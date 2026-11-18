@@ -1,0 +1,161 @@
+% 自動生成 (prover/build.js): AbsLe  ノード数 66
+\begin{fullproof}{[A9]}{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq x \land x \leq y)$}{66}\phantomsection\label{tree:AbsLe}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(-\lvert x \rvert \leq x \land x \leq \lvert x \rvert)$\lbl{[A8]}}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to -\lvert x \rvert \leq x \land x \leq \lvert x \rvert$}
+\AXC{$(x \in \mathbb{R} \to -\lvert x \rvert \leq x \land x \leq \lvert x \rvert) \to \varphi_{18}$\lbl{A1}}
+\BIC{$\varphi_{18}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{18}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -\lvert x \rvert \leq x \land x \leq \lvert x \rvert$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z)$\lbl{[O5]}}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall z\,(x \leq \lvert x \rvert \to \lvert x \rvert \leq z \to x \leq z)$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$x \leq \lvert x \rvert \to \lvert x \rvert \leq y \to x \leq y$}
+\AXC{$\varphi_{22}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to x \leq \lvert x \rvert) \to \varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -\lvert x \rvert \leq x \land x \leq \lvert x \rvert$}
+\AXC{$\varphi_{16}$\lbl{A1}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to x \leq \lvert x \rvert$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to x \leq \lvert x \rvert) \to \varphi_{10}$}
+\BIC{$\varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$\lbl{[A5]}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R}) \to x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}$}
+\AXC{$(x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}) \to \varphi_{13}$\lbl{A1}}
+\BIC{$\varphi_{13}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x)$\lbl{[F23]}}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$\forall y\,(\lvert x \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq -\lvert x \rvert)$}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\lvert x \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq -\lvert x \rvert$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\lvert x \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq -\lvert x \rvert$}
+\AXC{$(\lvert x \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq -\lvert x \rvert) \to \varphi_{24}$\lbl{A1}}
+\BIC{$\varphi_{24}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{13}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to \lvert x \rvert \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{24}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to y \in \mathbb{R}) \to \varphi_{14}$}
+\BIC{$\varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z)$\lbl{[O5]}}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{285} \leq y \to y \leq z \to v_{285} \leq z)$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall z\,(v_{285} \leq v_{286} \to v_{286} \leq z \to v_{285} \leq z)$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$v_{285} \leq v_{286} \to v_{286} \leq v_{287} \to v_{285} \leq v_{287}$}
+\UIC{$\forall v_{287}\,(v_{285} \leq v_{286} \to v_{286} \leq v_{287} \to v_{285} \leq v_{287})$}
+\UIC{$\varphi_{1}$}
+\UIC{$\forall v_{285}\,(\varphi_{1})$}
+\AXC{$\forall v_{285}\,(\varphi_{1}) \to \varphi_{3}$\lbl{A2}}
+\BIC{$\varphi_{3}$}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\forall v_{287}\,(-y \leq -\lvert x \rvert \to -\lvert x \rvert \leq v_{287} \to -y \leq v_{287})$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\forall v_{287}\,(-y \leq -\lvert x \rvert \to -\lvert x \rvert \leq v_{287} \to -y \leq v_{287})$}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$-y \leq -\lvert x \rvert \to -\lvert x \rvert \leq x \to -y \leq x$}
+\AXC{$\varphi_{23}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq -\lvert x \rvert) \to \varphi_{12}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to \lvert x \rvert \leq y$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{14}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq -\lvert x \rvert$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq -\lvert x \rvert) \to \varphi_{12}$}
+\BIC{$\varphi_{12}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -\lvert x \rvert \leq x \land x \leq \lvert x \rvert$}
+\AXC{$\varphi_{19}$\lbl{A1}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -\lvert x \rvert \leq x$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{12}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq x$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq x) \to \varphi_{11}$\lbl{A1}}
+\BIC{$\varphi_{11}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to \lvert x \rvert \leq y$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{10}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to x \leq y$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{11}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq x \land x \leq y$}
+\UIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq x \land x \leq y)$}
+\UIC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq x \land x \leq y)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall v_{286}\,\forall v_{287}\,(v_{285} \leq v_{286} \to v_{286} \leq v_{287} \to v_{285} \leq v_{287})$
+\item $\varphi_{2} :\equiv \forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z) \to \forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z)$
+\item $\varphi_{3} :\equiv \forall v_{286}\,\forall v_{287}\,(-y \leq v_{286} \to v_{286} \leq v_{287} \to -y \leq v_{287})$
+\item $\varphi_{4} :\equiv \forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z) \to \forall z\,(x \leq \lvert x \rvert \to \lvert x \rvert \leq z \to x \leq z)$
+\item $\varphi_{5} :\equiv \forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z) \to \forall y\,\forall z\,(v_{285} \leq y \to y \leq z \to v_{285} \leq z)$
+\item $\varphi_{6} :\equiv \forall z\,(x \leq \lvert x \rvert \to \lvert x \rvert \leq z \to x \leq z) \to x \leq \lvert x \rvert \to \lvert x \rvert \leq y \to x \leq y$
+\item $\varphi_{7} :\equiv \forall y\,\forall z\,(v_{285} \leq y \to y \leq z \to v_{285} \leq z) \to \forall z\,(v_{285} \leq v_{286} \to v_{286} \leq z \to v_{285} \leq z)$
+\item $\varphi_{8} :\equiv \forall z\,(v_{285} \leq v_{286} \to v_{286} \leq z \to v_{285} \leq z) \to v_{285} \leq v_{286} \to v_{286} \leq v_{287} \to v_{285} \leq v_{287}$
+\item $\varphi_{9} :\equiv \forall x \in \mathbb{R}\,(-\lvert x \rvert \leq x \land x \leq \lvert x \rvert) \to x \in \mathbb{R} \to -\lvert x \rvert \leq x \land x \leq \lvert x \rvert$
+\item $\varphi_{10} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to \lvert x \rvert \leq y) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to x \leq y$
+\item $\varphi_{11} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to x \leq y) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq x \land x \leq y$
+\item $\varphi_{12} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -\lvert x \rvert \leq x) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq x$
+\item $\varphi_{13} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to x \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to \lvert x \rvert \in \mathbb{R}$
+\item $\varphi_{14} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to \lvert x \rvert \leq y) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq -\lvert x \rvert$
+\item $\varphi_{15} :\equiv \forall v_{287}\,(-y \leq -\lvert x \rvert \to -\lvert x \rvert \leq v_{287} \to -y \leq v_{287}) \to -y \leq -\lvert x \rvert \to -\lvert x \rvert \leq x \to -y \leq x$
+\item $\varphi_{16} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -\lvert x \rvert \leq x \land x \leq \lvert x \rvert) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to x \leq \lvert x \rvert$
+\item $\varphi_{17} :\equiv \varphi_{3} \to \forall v_{287}\,(-y \leq -\lvert x \rvert \to -\lvert x \rvert \leq v_{287} \to -y \leq v_{287})$
+\item $\varphi_{18} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to x \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -\lvert x \rvert \leq x \land x \leq \lvert x \rvert$
+\item $\varphi_{19} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -\lvert x \rvert \leq x \land x \leq \lvert x \rvert) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -\lvert x \rvert \leq x$
+\item $\varphi_{20} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \leq y \to -y \leq -x) \to \forall y\,(\lvert x \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq -\lvert x \rvert)$
+\item $\varphi_{21} :\equiv \forall y\,(\lvert x \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq -\lvert x \rvert) \to \lvert x \rvert \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq -\lvert x \rvert$
+\item $\varphi_{22} :\equiv (x \leq \lvert x \rvert \to \lvert x \rvert \leq y \to x \leq y) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to x \leq \lvert x \rvert) \to \varphi_{10}$
+\item $\varphi_{23} :\equiv (-y \leq -\lvert x \rvert \to -\lvert x \rvert \leq x \to -y \leq x) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to -y \leq -\lvert x \rvert) \to \varphi_{12}$
+\item $\varphi_{24} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to \lvert x \rvert \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert \leq y \to y \in \mathbb{R}) \to \varphi_{14}$
+\end{abbrevlist}
+\end{fullproof}

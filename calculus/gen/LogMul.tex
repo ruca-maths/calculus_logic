@@ -1,0 +1,542 @@
+% 自動生成 (prover/build.js): LogMul  ノード数 230
+\begin{fullproof}{定理(対数法則)}{$\forall x\,\forall y\,(x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x \cdot y) = \log(x) + \log(y))$}{230}\phantomsection\label{tree:LogMul}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z = w \to \log(x) + \log(y) \in z \to \log(x) + \log(y) \in w$\lbl{A6}}
+\UIC{$\varphi_{26}$}
+\UIC{$\forall z\,(\varphi_{26})$}
+\AXC{$\forall z\,(\varphi_{26}) \to \varphi_{31}$\lbl{A2}}
+\BIC{$\varphi_{31}$}
+\AXC{$\varphi_{31} \to \varphi_{39}$\lbl{A2}}
+\BIC{$\varphi_{39}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$z = w \to \mathrm{StrInc}(\exp,z) \to \mathrm{StrInc}(\exp,w)$\lbl{A6}}
+\UIC{$\varphi_{2}$}
+\UIC{$\forall z\,(\varphi_{2})$}
+\AXC{$\forall z\,(\varphi_{2}) \to \varphi_{3}$\lbl{A2}}
+\BIC{$\varphi_{3}$}
+\AXC{$\varphi_{3} \to \varphi_{10}$\lbl{A2}}
+\BIC{$\varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\varphi_{72}$\lbl{[S27]}}
+\AXC{$\varphi_{72} \to \mathrm{dom}(\exp) = \mathbb{R}$\lbl{A1}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R}$}
+\AXC{$\mathrm{dom}(\exp) = \mathbb{R} \to \varphi_{5}$\lbl{A1}}
+\BIC{$\varphi_{5}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall y\,(\mathrm{dom}(\exp) = y \to y = \mathrm{dom}(\exp))$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R} \to \mathbb{R} = \mathrm{dom}(\exp)$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{5}$}
+\BIC{$\mathbb{R} = \mathrm{dom}(\exp)$}
+\AXC{$\mathbb{R} = \mathrm{dom}(\exp) \to \varphi_{27}$\lbl{A1}}
+\BIC{$\varphi_{27}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\varphi_{72}$\lbl{[S27]}}
+\AXC{$\varphi_{72} \to \mathrm{RFn}(\exp)$\lbl{A1}}
+\BIC{$\mathrm{RFn}(\exp)$}
+\AXC{$\varphi_{1}$\lbl{[I1]}}
+\AXC{$\varphi_{19}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(\exp) \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)$}
+\AXC{$\varphi_{23}$\lbl{A1}}
+\BIC{$\mathrm{RFn}(\exp) \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)$}
+\BIC{$\mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{10}$}
+\AXC{$\varphi_{72}$\lbl{[S27]}}
+\AXC{$\varphi_{72} \to \mathrm{StrInc}(\exp,\mathbb{R})$\lbl{A1}}
+\BIC{$\mathrm{StrInc}(\exp,\mathbb{R})$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{27}$}
+\BIC{$\varphi_{10} \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp))$}
+\BIC{$\mathrm{StrInc}(\exp,\mathrm{dom}(\exp))$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)$}
+\BIC{$\mathrm{Inj}(\exp)$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\mathrm{Inj}(\exp)$}
+\AXC{$\varphi_{72}$\lbl{[S27]}}
+\AXC{$\varphi_{72} \to \mathrm{RFn}(\exp)$\lbl{A1}}
+\BIC{$\mathrm{RFn}(\exp)$}
+\AXC{$\varphi_{66}$\lbl{[S26]}}
+\AXC{$\varphi_{66} \to \mathrm{RFn}(\exp) \to \mathrm{Inj}(\exp) \to \varphi_{67}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(\exp) \to \mathrm{Inj}(\exp) \to \varphi_{67}$}
+\AXC{$\varphi_{88}$\lbl{A1}}
+\BIC{$\mathrm{RFn}(\exp) \to \mathrm{Inj}(\exp) \to \varphi_{67}$}
+\BIC{$\mathrm{Inj}(\exp) \to \varphi_{67}$}
+\BIC{$\varphi_{67}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\varphi_{57}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{67}$}
+\AXC{$\varphi_{67} \to x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \varphi_{22}$\lbl{A1}}
+\BIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \varphi_{22}$}
+\AXC{$\varphi_{83}$\lbl{A1}}
+\BIC{$\varphi_{57} \to x \in \mathrm{dom}(\log) \to \varphi_{35}$}
+\BIC{$x \in \mathrm{dom}(\log) \to \varphi_{35}$}
+\AXC{$\varphi_{77}$\lbl{A1}}
+\BIC{$(x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log)) \to \varphi_{33}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$(x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log)) \to \varphi_{33}$}
+\BIC{$\varphi_{33}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{33}$}
+\AXC{$\varphi_{63}$\lbl{A1}}
+\BIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(y) \in \mathrm{dom}(\exp)$}
+\AXC{$\varphi_{72}$\lbl{[S27]}}
+\AXC{$\varphi_{72} \to \mathrm{dom}(\exp) = \mathbb{R}$\lbl{A1}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R}$}
+\AXC{$\mathrm{dom}(\exp) = \mathbb{R} \to \varphi_{70}$\lbl{A1}}
+\BIC{$\varphi_{70}$}
+\BIC{$\varphi_{51}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$z = w \to \log(y) \in z \to \log(y) \in w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \log(y) \in z \to \log(y) \in w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to \log(y) \in z \to \log(y) \in w)$}
+\AXC{$\forall z\,\forall w\,(z = w \to \log(y) \in z \to \log(y) \in w) \to \varphi_{16}$\lbl{A2}}
+\BIC{$\varphi_{16}$}
+\AXC{$\varphi_{49}$\lbl{A2}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R} \to \log(y) \in \mathrm{dom}(\exp) \to \log(y) \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{51}$}
+\BIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(y) \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\varphi_{58}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{67}$}
+\AXC{$\varphi_{67} \to x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \varphi_{22}$\lbl{A1}}
+\BIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \varphi_{22}$}
+\AXC{$\varphi_{84}$\lbl{A1}}
+\BIC{$\varphi_{58} \to x \in \mathrm{dom}(\log) \to \varphi_{36}$}
+\BIC{$x \in \mathrm{dom}(\log) \to \varphi_{36}$}
+\AXC{$\varphi_{76}$\lbl{A1}}
+\BIC{$(x \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\log)) \to \varphi_{34}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$x \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\log)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$(x \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\log)) \to \varphi_{34}$}
+\BIC{$\varphi_{34}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{34}$}
+\AXC{$\varphi_{64}$\lbl{A1}}
+\BIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathrm{dom}(\exp)$}
+\AXC{$\varphi_{72}$\lbl{[S27]}}
+\AXC{$\varphi_{72} \to \mathrm{dom}(\exp) = \mathbb{R}$\lbl{A1}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R}$}
+\AXC{$\mathrm{dom}(\exp) = \mathbb{R} \to \varphi_{71}$\lbl{A1}}
+\BIC{$\varphi_{71}$}
+\BIC{$\varphi_{52}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$z = w \to \log(x) \in z \to \log(x) \in w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \log(x) \in z \to \log(x) \in w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to \log(x) \in z \to \log(x) \in w)$}
+\AXC{$\forall z\,\forall w\,(z = w \to \log(x) \in z \to \log(x) \in w) \to \varphi_{17}$\lbl{A2}}
+\BIC{$\varphi_{17}$}
+\AXC{$\varphi_{50}$\lbl{A2}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R} \to \log(x) \in \mathrm{dom}(\exp) \to \log(x) \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{52}$}
+\BIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{44}$\lbl{A2}}
+\BIC{$\forall y\,(\log(x) \in \mathbb{R} \to y \in \mathbb{R} \to \log(x) + y \in \mathbb{R})$}
+\AXC{$\varphi_{62}$\lbl{A2}}
+\BIC{$\log(x) \in \mathbb{R} \to \log(y) \in \mathbb{R} \to \log(x) + \log(y) \in \mathbb{R}$}
+\AXC{$\varphi_{79}$\lbl{A1}}
+\BIC{$(x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathbb{R}) \to \varphi_{56}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$(x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathbb{R}) \to \varphi_{56}$}
+\BIC{$\varphi_{56}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\varphi_{72}$\lbl{[S27]}}
+\AXC{$\varphi_{72} \to \mathrm{dom}(\exp) = \mathbb{R}$\lbl{A1}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R}$}
+\AXC{$\mathrm{dom}(\exp) = \mathbb{R} \to \varphi_{5}$\lbl{A1}}
+\BIC{$\varphi_{5}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall y\,(\mathrm{dom}(\exp) = y \to y = \mathrm{dom}(\exp))$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\mathrm{dom}(\exp) = \mathbb{R} \to \mathbb{R} = \mathrm{dom}(\exp)$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{5}$}
+\BIC{$\mathbb{R} = \mathrm{dom}(\exp)$}
+\AXC{$\mathbb{R} = \mathrm{dom}(\exp) \to \varphi_{78}$\lbl{A1}}
+\BIC{$\varphi_{78}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathrm{dom}(\exp)\,(\log(\exp(x)) = x) \to \varphi_{53}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{67}$}
+\AXC{$\varphi_{67} \to \varphi_{24}$\lbl{A1}}
+\BIC{$\varphi_{24}$}
+\AXC{$\varphi_{24} \to \varphi_{82}$\lbl{A1}}
+\BIC{$\varphi_{82}$}
+\BIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \varphi_{53}$}
+\AXC{$\varphi_{85}$\lbl{A1}}
+\BIC{$\varphi_{25} \to x \in \mathrm{dom}(\log) \to \varphi_{42}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{39}$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(y) \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{56}$}
+\BIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) + \log(y) \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{78}$}
+\BIC{$\varphi_{39} \to \varphi_{25}$}
+\BIC{$\varphi_{25}$}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{25} \to x \in \mathrm{dom}(\log) \to \varphi_{42}$}
+\BIC{$x \in \mathrm{dom}(\log) \to \varphi_{42}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{927} = y \to y = z \to v_{927} = z)$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$\forall z\,(v_{927} = v_{928} \to v_{928} = z \to v_{927} = z)$}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$v_{927} = v_{928} \to v_{928} = v_{929} \to v_{927} = v_{929}$}
+\UIC{$\forall v_{929}\,(v_{927} = v_{928} \to v_{928} = v_{929} \to v_{927} = v_{929})$}
+\UIC{$\varphi_{6}$}
+\UIC{$\forall v_{927}\,(\varphi_{6})$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\forall v_{927}\,(\varphi_{6})$}
+\AXC{$\forall v_{927}\,(\varphi_{6}) \to \varphi_{45}$\lbl{A2}}
+\BIC{$\varphi_{45}$}
+\AXC{$\varphi_{45} \to \varphi_{60}$\lbl{A2}}
+\BIC{$\varphi_{60}$}
+\AXC{$\varphi_{60} \to \varphi_{59}$\lbl{A2}}
+\BIC{$\varphi_{59}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{33}$}
+\AXC{$\varphi_{33} \to x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \exp(\log(y)) = y$\lbl{A1}}
+\BIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \exp(\log(y)) = y$}
+\AXC{$\varphi_{80}$\lbl{A1}}
+\BIC{$\varphi_{75}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to x \cdot \exp(\log(y)) = x \cdot \exp(\log(y))$\lbl{A2}}
+\BIC{$x \cdot \exp(\log(y)) = x \cdot \exp(\log(y))$}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{75}$}
+\BIC{$(\exp(\log(y)) = y \to \varphi_{30}) \to \varphi_{21}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\varphi_{20}$\lbl{A6}}
+\UIC{$\forall w\,(\varphi_{20})$}
+\UIC{$\forall z\,\forall w\,(\varphi_{20})$}
+\AXC{$\forall z\,\forall w\,(\varphi_{20}) \to \varphi_{48}$\lbl{A2}}
+\BIC{$\varphi_{48}$}
+\AXC{$\varphi_{48} \to \exp(\log(y)) = y \to \varphi_{30}$\lbl{A2}}
+\BIC{$\exp(\log(y)) = y \to \varphi_{30}$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$(\exp(\log(y)) = y \to \varphi_{30}) \to \varphi_{21}$}
+\BIC{$\varphi_{21}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{924} = y \to y = z \to v_{924} = z)$}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\BIC{$\forall z\,(v_{924} = v_{925} \to v_{925} = z \to v_{924} = z)$}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$v_{924} = v_{925} \to v_{925} = v_{926} \to v_{924} = v_{926}$}
+\UIC{$\forall v_{926}\,(v_{924} = v_{925} \to v_{925} = v_{926} \to v_{924} = v_{926})$}
+\UIC{$\varphi_{7}$}
+\UIC{$\forall v_{924}\,(\varphi_{7})$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\forall v_{924}\,(\varphi_{7})$}
+\AXC{$\forall v_{924}\,(\varphi_{7}) \to \varphi_{46}$\lbl{A2}}
+\BIC{$\varphi_{46}$}
+\AXC{$\varphi_{46} \to \varphi_{69}$\lbl{A2}}
+\BIC{$\varphi_{69}$}
+\AXC{$\varphi_{89}$\lbl{A2}}
+\BIC{$\exp(\log(x) + \log(y)) = \exp(\log(x)) \cdot \exp(\log(y)) \to \varphi_{55}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \varphi_{38}$\lbl{A2}}
+\BIC{$\varphi_{38}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{34}$}
+\AXC{$\varphi_{34} \to x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \exp(\log(x)) = x$\lbl{A1}}
+\BIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \exp(\log(x)) = x$}
+\AXC{$\varphi_{90}$\lbl{A1}}
+\BIC{$\varphi_{38} \to \varphi_{73} \to x \in \mathrm{dom}(\log) \to \varphi_{37}$}
+\BIC{$\varphi_{73} \to x \in \mathrm{dom}(\log) \to \varphi_{37}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{61}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{61})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{61})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{61}) \to \varphi_{74}$\lbl{A2}}
+\BIC{$\varphi_{74}$}
+\AXC{$\varphi_{74} \to \varphi_{73}$\lbl{A2}}
+\BIC{$\varphi_{73}$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\varphi_{73} \to x \in \mathrm{dom}(\log) \to \varphi_{37}$}
+\BIC{$x \in \mathrm{dom}(\log) \to \varphi_{37}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\varphi_{72}$\lbl{[S27]}}
+\AXC{$\varphi_{72} \to \varphi_{18}$\lbl{A1}}
+\BIC{$\varphi_{18}$}
+\AXC{$\varphi_{18} \to \varphi_{40}$\lbl{A2}}
+\BIC{$\varphi_{40}$}
+\AXC{$\varphi_{40} \to \log(x) \in \mathbb{R} \to \varphi_{47}$\lbl{A2}}
+\BIC{$\log(x) \in \mathbb{R} \to \varphi_{47}$}
+\AXC{$\varphi_{86}$\lbl{A1}}
+\BIC{$(x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathbb{R}) \to \varphi_{68}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$(x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathbb{R}) \to \varphi_{68}$}
+\BIC{$\varphi_{68}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(y) \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{68}$}
+\BIC{$x \in \mathrm{dom}(\log) \to \varphi_{43}$}
+\AXC{$(x \in \mathrm{dom}(\log) \to \varphi_{43}) \to (x \in \mathrm{dom}(\log) \to \varphi_{37}) \to \varphi_{81}$\lbl{A1}}
+\BIC{$(x \in \mathrm{dom}(\log) \to \varphi_{37}) \to \varphi_{81}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\exp(\log(x) + \log(y)) = \exp(\log(x)) \cdot \exp(\log(y)) \to \varphi_{55}$}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$x \in \mathrm{dom}(\log) \to \varphi_{37}$}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$(x \in \mathrm{dom}(\log) \to \varphi_{37}) \to \varphi_{81}$}
+\BIC{$\varphi_{81}$}
+\BIC{$x \in \mathrm{dom}(\log) \to \varphi_{29}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{59}$}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{21}$}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$x \in \mathrm{dom}(\log) \to \varphi_{29}$}
+\AXC{$(x \in \mathrm{dom}(\log) \to \varphi_{29}) \to \varphi_{21} \to \varphi_{59} \to \varphi_{28}$\lbl{A1}}
+\BIC{$\varphi_{21} \to \varphi_{59} \to \varphi_{28}$}
+\BIC{$\varphi_{59} \to \varphi_{28}$}
+\BIC{$\varphi_{28}$}
+\AXC{$\varphi_{28} \to \varphi_{87}$\lbl{A1}}
+\BIC{$\varphi_{87}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{41}$\lbl{A6}}
+\UIC{$\forall w\,(\varphi_{41})$}
+\UIC{$\forall z\,\forall w\,(\varphi_{41})$}
+\AXC{$\forall z\,\forall w\,(\varphi_{41}) \to \varphi_{65}$\lbl{A2}}
+\BIC{$\varphi_{65}$}
+\AXC{$\varphi_{65} \to \exp(\log(x) + \log(y)) = x \cdot y \to \varphi_{54}$\lbl{A2}}
+\BIC{$\exp(\log(x) + \log(y)) = x \cdot y \to \varphi_{54}$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$x \in \mathrm{dom}(\log) \to \varphi_{42}$}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\varphi_{87}$}
+\BIC{$(\exp(\log(x) + \log(y)) = x \cdot y \to \varphi_{54}) \to \varphi_{32}$}
+\BIC{$\varphi_{32}$}
+\UIC{$\forall y\,(\varphi_{32})$}
+\UIC{$\forall x\,\forall y\,(\varphi_{32})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall f\,(\mathrm{RFn}(f) \to \mathrm{StrInc}(f,\mathrm{dom}(f)) \to \mathrm{Inj}(f))$
+\item $\varphi_{2} :\equiv \forall w\,(z = w \to \mathrm{StrInc}(\exp,z) \to \mathrm{StrInc}(\exp,w))$
+\item $\varphi_{3} :\equiv \forall w\,(\mathbb{R} = w \to \mathrm{StrInc}(\exp,\mathbb{R}) \to \mathrm{StrInc}(\exp,w))$
+\item $\varphi_{4} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(\mathrm{dom}(\exp) = y \to y = \mathrm{dom}(\exp))$
+\item $\varphi_{5} :\equiv (\mathrm{dom}(\exp) = \mathbb{R} \to \mathbb{R} = \mathrm{dom}(\exp)) \to \mathbb{R} = \mathrm{dom}(\exp)$
+\item $\varphi_{6} :\equiv \forall v_{928}\,\forall v_{929}\,(v_{927} = v_{928} \to v_{928} = v_{929} \to v_{927} = v_{929})$
+\item $\varphi_{7} :\equiv \forall v_{925}\,\forall v_{926}\,(v_{924} = v_{925} \to v_{925} = v_{926} \to v_{924} = v_{926})$
+\item $\varphi_{8} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{927} = y \to y = z \to v_{927} = z)$
+\item $\varphi_{9} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{924} = y \to y = z \to v_{924} = z)$
+\item $\varphi_{10} :\equiv \mathbb{R} = \mathrm{dom}(\exp) \to \mathrm{StrInc}(\exp,\mathbb{R}) \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp))$
+\item $\varphi_{11} :\equiv \forall y\,(\mathrm{dom}(\exp) = y \to y = \mathrm{dom}(\exp)) \to \mathrm{dom}(\exp) = \mathbb{R} \to \mathbb{R} = \mathrm{dom}(\exp)$
+\item $\varphi_{12} :\equiv \forall y\,\forall z\,(v_{927} = y \to y = z \to v_{927} = z) \to \forall z\,(v_{927} = v_{928} \to v_{928} = z \to v_{927} = z)$
+\item $\varphi_{13} :\equiv \forall y\,\forall z\,(v_{924} = y \to y = z \to v_{924} = z) \to \forall z\,(v_{924} = v_{925} \to v_{925} = z \to v_{924} = z)$
+\item $\varphi_{14} :\equiv \forall z\,(v_{927} = v_{928} \to v_{928} = z \to v_{927} = z) \to v_{927} = v_{928} \to v_{928} = v_{929} \to v_{927} = v_{929}$
+\item $\varphi_{15} :\equiv \forall z\,(v_{924} = v_{925} \to v_{925} = z \to v_{924} = z) \to v_{924} = v_{925} \to v_{925} = v_{926} \to v_{924} = v_{926}$
+\item $\varphi_{16} :\equiv \forall w\,(\mathrm{dom}(\exp) = w \to \log(y) \in \mathrm{dom}(\exp) \to \log(y) \in w)$
+\item $\varphi_{17} :\equiv \forall w\,(\mathrm{dom}(\exp) = w \to \log(x) \in \mathrm{dom}(\exp) \to \log(x) \in w)$
+\item $\varphi_{18} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \exp(x + y) = \exp(x) \cdot \exp(y))$
+\item $\varphi_{19} :\equiv \varphi_{1} \to \mathrm{RFn}(\exp) \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)$
+\item $\varphi_{20} :\equiv z = w \to x \cdot \exp(\log(y)) = x \cdot z \to x \cdot \exp(\log(y)) = x \cdot w$
+\item $\varphi_{21} :\equiv x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to x \cdot \exp(\log(y)) = x \cdot y$
+\item $\varphi_{22} :\equiv \forall y \in \mathrm{dom}(\log)\,(\log(y) \in \mathrm{dom}(\exp) \land \exp(\log(y)) = y)$
+\item $\varphi_{23} :\equiv (\mathrm{RFn}(\exp) \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)) \to \mathrm{RFn}(\exp) \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp)) \to \mathrm{Inj}(\exp)$
+\item $\varphi_{24} :\equiv x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \forall x \in \mathrm{dom}(\exp)\,(\log(\exp(x)) = x)$
+\item $\varphi_{25} :\equiv x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) + \log(y) \in \mathrm{dom}(\exp)$
+\item $\varphi_{26} :\equiv \forall w\,(z = w \to \log(x) + \log(y) \in z \to \log(x) + \log(y) \in w)$
+\item $\varphi_{27} :\equiv \mathrm{StrInc}(\exp,\mathbb{R}) \to \varphi_{10} \to \mathrm{StrInc}(\exp,\mathrm{dom}(\exp))$
+\item $\varphi_{28} :\equiv x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \exp(\log(x) + \log(y)) = x \cdot y$
+\item $\varphi_{29} :\equiv y \in \mathrm{dom}(\log) \to \exp(\log(x) + \log(y)) = x \cdot \exp(\log(y))$
+\item $\varphi_{30} :\equiv x \cdot \exp(\log(y)) = x \cdot \exp(\log(y)) \to x \cdot \exp(\log(y)) = x \cdot y$
+\item $\varphi_{31} :\equiv \forall w\,(\mathbb{R} = w \to \log(x) + \log(y) \in \mathbb{R} \to \log(x) + \log(y) \in w)$
+\item $\varphi_{32} :\equiv x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x \cdot y) = \log(x) + \log(y)$
+\item $\varphi_{33} :\equiv x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(y) \in \mathrm{dom}(\exp) \land \exp(\log(y)) = y$
+\item $\varphi_{34} :\equiv x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathrm{dom}(\exp) \land \exp(\log(x)) = x$
+\item $\varphi_{35} :\equiv y \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(y) \in \mathrm{dom}(\exp) \land \exp(\log(y)) = y$
+\item $\varphi_{36} :\equiv y \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\log) \to \log(x) \in \mathrm{dom}(\exp) \land \exp(\log(x)) = x$
+\item $\varphi_{37} :\equiv y \in \mathrm{dom}(\log) \to \exp(\log(x)) \cdot \exp(\log(y)) = x \cdot \exp(\log(y))$
+\item $\varphi_{38} :\equiv \exp(\log(x)) \cdot \exp(\log(y)) = \exp(\log(x)) \cdot \exp(\log(y))$
+\item $\varphi_{39} :\equiv \mathbb{R} = \mathrm{dom}(\exp) \to \log(x) + \log(y) \in \mathbb{R} \to \log(x) + \log(y) \in \mathrm{dom}(\exp)$
+\item $\varphi_{40} :\equiv \forall y\,(\log(x) \in \mathbb{R} \to y \in \mathbb{R} \to \exp(\log(x) + y) = \exp(\log(x)) \cdot \exp(y))$
+\item $\varphi_{41} :\equiv z = w \to \log(z) = \log(x) + \log(y) \to \log(w) = \log(x) + \log(y)$
+\item $\varphi_{42} :\equiv y \in \mathrm{dom}(\log) \to \log(\exp(\log(x) + \log(y))) = \log(x) + \log(y)$
+\item $\varphi_{43} :\equiv y \in \mathrm{dom}(\log) \to \exp(\log(x) + \log(y)) = \exp(\log(x)) \cdot \exp(\log(y))$
+\item $\varphi_{44} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y \in \mathbb{R}) \to \forall y\,(\log(x) \in \mathbb{R} \to y \in \mathbb{R} \to \log(x) + y \in \mathbb{R})$
+\item $\varphi_{45} :\equiv \forall v_{928}\,\forall v_{929}\,(\exp(\log(x) + \log(y)) = v_{928} \to v_{928} = v_{929} \to \exp(\log(x) + \log(y)) = v_{929})$
+\item $\varphi_{46} :\equiv \forall v_{925}\,\forall v_{926}\,(\exp(\log(x) + \log(y)) = v_{925} \to v_{925} = v_{926} \to \exp(\log(x) + \log(y)) = v_{926})$
+\item $\varphi_{47} :\equiv \log(y) \in \mathbb{R} \to \exp(\log(x) + \log(y)) = \exp(\log(x)) \cdot \exp(\log(y))$
+\item $\varphi_{48} :\equiv \forall w\,(\exp(\log(y)) = w \to x \cdot \exp(\log(y)) = x \cdot \exp(\log(y)) \to x \cdot \exp(\log(y)) = x \cdot w)$
+\item $\varphi_{49} :\equiv \varphi_{16} \to \mathrm{dom}(\exp) = \mathbb{R} \to \log(y) \in \mathrm{dom}(\exp) \to \log(y) \in \mathbb{R}$
+\item $\varphi_{50} :\equiv \varphi_{17} \to \mathrm{dom}(\exp) = \mathbb{R} \to \log(x) \in \mathrm{dom}(\exp) \to \log(x) \in \mathbb{R}$
+\item $\varphi_{51} :\equiv (\mathrm{dom}(\exp) = \mathbb{R} \to \log(y) \in \mathrm{dom}(\exp) \to \log(y) \in \mathbb{R}) \to x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(y) \in \mathbb{R}$
+\item $\varphi_{52} :\equiv (\mathrm{dom}(\exp) = \mathbb{R} \to \log(x) \in \mathrm{dom}(\exp) \to \log(x) \in \mathbb{R}) \to x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathbb{R}$
+\item $\varphi_{53} :\equiv \log(x) + \log(y) \in \mathrm{dom}(\exp) \to \log(\exp(\log(x) + \log(y))) = \log(x) + \log(y)$
+\item $\varphi_{54} :\equiv \log(\exp(\log(x) + \log(y))) = \log(x) + \log(y) \to \log(x \cdot y) = \log(x) + \log(y)$
+\item $\varphi_{55} :\equiv \exp(\log(x)) \cdot \exp(\log(y)) = x \cdot \exp(\log(y)) \to \exp(\log(x) + \log(y)) = x \cdot \exp(\log(y))$
+\item $\varphi_{56} :\equiv (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(y) \in \mathbb{R}) \to x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) + \log(y) \in \mathbb{R}$
+\item $\varphi_{57} :\equiv \varphi_{22} \to y \in \mathrm{dom}(\log) \to \log(y) \in \mathrm{dom}(\exp) \land \exp(\log(y)) = y$
+\item $\varphi_{58} :\equiv \varphi_{22} \to x \in \mathrm{dom}(\log) \to \log(x) \in \mathrm{dom}(\exp) \land \exp(\log(x)) = x$
+\item $\varphi_{59} :\equiv \exp(\log(x) + \log(y)) = x \cdot \exp(\log(y)) \to x \cdot \exp(\log(y)) = x \cdot y \to \exp(\log(x) + \log(y)) = x \cdot y$
+\item $\varphi_{60} :\equiv \forall v_{929}\,(\exp(\log(x) + \log(y)) = x \cdot \exp(\log(y)) \to x \cdot \exp(\log(y)) = v_{929} \to \exp(\log(x) + \log(y)) = v_{929})$
+\item $\varphi_{61} :\equiv \exp(\log(x)) \cdot \exp(\log(y)) = z \cdot \exp(\log(y)) \to \exp(\log(x)) \cdot \exp(\log(y)) = w \cdot \exp(\log(y))$
+\item $\varphi_{62} :\equiv \forall y\,(\log(x) \in \mathbb{R} \to y \in \mathbb{R} \to \log(x) + y \in \mathbb{R}) \to \log(x) \in \mathbb{R} \to \log(y) \in \mathbb{R} \to \log(x) + \log(y) \in \mathbb{R}$
+\item $\varphi_{63} :\equiv \varphi_{33} \to x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(y) \in \mathrm{dom}(\exp)$
+\item $\varphi_{64} :\equiv \varphi_{34} \to x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathrm{dom}(\exp)$
+\item $\varphi_{65} :\equiv \forall w\,(\exp(\log(x) + \log(y)) = w \to \log(\exp(\log(x) + \log(y))) = \log(x) + \log(y) \to \log(w) = \log(x) + \log(y))$
+\item $\varphi_{66} :\equiv \forall f\,(\mathrm{RFn}(f) \to \mathrm{Inj}(f) \to \mathrm{RFn}(f^{-1}) \land \forall y\,(y \in \mathrm{dom}(f^{-1}) \leftrightarrow \exists x \in \mathrm{dom}(f)\,(y = f(x))) \land \forall x \in \mathrm{dom}(f)\,(f^{-1}(f(x)) = x) \land \forall y \in \mathrm{dom}(f^{-1})\,(f^{-1}(y) \in \mathrm{dom}(f) \land f(f^{-1}(y)) = y))$
+\item $\varphi_{67} :\equiv \mathrm{RFn}(\log) \land \forall y\,(y \in \mathrm{dom}(\log) \leftrightarrow \exists x \in \mathrm{dom}(\exp)\,(y = \exp(x))) \land \forall x \in \mathrm{dom}(\exp)\,(\log(\exp(x)) = x) \land \varphi_{22}$
+\item $\varphi_{68} :\equiv (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(y) \in \mathbb{R}) \to x \in \mathrm{dom}(\log) \to \varphi_{43}$
+\item $\varphi_{69} :\equiv \forall v_{926}\,(\exp(\log(x) + \log(y)) = \exp(\log(x)) \cdot \exp(\log(y)) \to \exp(\log(x)) \cdot \exp(\log(y)) = v_{926} \to \exp(\log(x) + \log(y)) = v_{926})$
+\item $\varphi_{70} :\equiv (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(y) \in \mathrm{dom}(\exp)) \to \varphi_{51}$
+\item $\varphi_{71} :\equiv (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathrm{dom}(\exp)) \to \varphi_{52}$
+\item $\varphi_{72} :\equiv \mathrm{RFn}(\exp) \land \mathrm{dom}(\exp) = \mathbb{R} \land \forall x \in \mathbb{R}\,(0 < \exp(x)) \land \varphi_{18} \land \mathrm{StrInc}(\exp,\mathbb{R}) \land \mathrm{ContOn}(\exp,\mathbb{R}) \land \forall y \in \mathbb{R}\,(0 < y \to \exists x \in \mathbb{R}\,(\exp(x) = y))$
+\item $\varphi_{73} :\equiv \exp(\log(x)) = x \to \varphi_{38} \to \exp(\log(x)) \cdot \exp(\log(y)) = x \cdot \exp(\log(y))$
+\item $\varphi_{74} :\equiv \forall w\,(\exp(\log(x)) = w \to \varphi_{38} \to \exp(\log(x)) \cdot \exp(\log(y)) = w \cdot \exp(\log(y)))$
+\item $\varphi_{75} :\equiv x \cdot \exp(\log(y)) = x \cdot \exp(\log(y)) \to (\exp(\log(y)) = y \to \varphi_{30}) \to \varphi_{21}$
+\item $\varphi_{76} :\equiv (x \in \mathrm{dom}(\log) \to \varphi_{36}) \to (x \in \mathrm{dom}(\log) \to x \in \mathrm{dom}(\log)) \to \varphi_{34}$
+\item $\varphi_{77} :\equiv (x \in \mathrm{dom}(\log) \to \varphi_{35}) \to (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log)) \to \varphi_{33}$
+\item $\varphi_{78} :\equiv (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) + \log(y) \in \mathbb{R}) \to \varphi_{39} \to \varphi_{25}$
+\item $\varphi_{79} :\equiv (\log(x) \in \mathbb{R} \to \log(y) \in \mathbb{R} \to \log(x) + \log(y) \in \mathbb{R}) \to (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathbb{R}) \to \varphi_{56}$
+\item $\varphi_{80} :\equiv (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \exp(\log(y)) = y) \to \varphi_{75}$
+\item $\varphi_{81} :\equiv (\exp(\log(x) + \log(y)) = \exp(\log(x)) \cdot \exp(\log(y)) \to \varphi_{55}) \to x \in \mathrm{dom}(\log) \to \varphi_{29}$
+\item $\varphi_{82} :\equiv (\forall x \in \mathrm{dom}(\exp)\,(\log(\exp(x)) = x) \to \varphi_{53}) \to x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \varphi_{53}$
+\item $\varphi_{83} :\equiv (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \varphi_{22}) \to \varphi_{57} \to x \in \mathrm{dom}(\log) \to \varphi_{35}$
+\item $\varphi_{84} :\equiv (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \varphi_{22}) \to \varphi_{58} \to x \in \mathrm{dom}(\log) \to \varphi_{36}$
+\item $\varphi_{85} :\equiv (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \varphi_{53}) \to \varphi_{25} \to x \in \mathrm{dom}(\log) \to \varphi_{42}$
+\item $\varphi_{86} :\equiv (\log(x) \in \mathbb{R} \to \varphi_{47}) \to (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \log(x) \in \mathbb{R}) \to \varphi_{68}$
+\item $\varphi_{87} :\equiv (x \in \mathrm{dom}(\log) \to \varphi_{42}) \to (\exp(\log(x) + \log(y)) = x \cdot y \to \varphi_{54}) \to \varphi_{32}$
+\item $\varphi_{88} :\equiv (\mathrm{RFn}(\exp) \to \mathrm{Inj}(\exp) \to \varphi_{67}) \to \mathrm{RFn}(\exp) \to \mathrm{Inj}(\exp) \to \varphi_{67}$
+\item $\varphi_{89} :\equiv \varphi_{69} \to \exp(\log(x) + \log(y)) = \exp(\log(x)) \cdot \exp(\log(y)) \to \varphi_{55}$
+\item $\varphi_{90} :\equiv (x \in \mathrm{dom}(\log) \to y \in \mathrm{dom}(\log) \to \exp(\log(x)) = x) \to \varphi_{38} \to \varphi_{73} \to x \in \mathrm{dom}(\log) \to \varphi_{37}$
+\end{abbrevlist}
+\end{fullproof}

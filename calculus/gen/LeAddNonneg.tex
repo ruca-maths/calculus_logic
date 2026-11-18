@@ -1,0 +1,221 @@
+% 自動生成 (prover/build.js): LeAddNonneg  ノード数 107
+\begin{fullproof}{[E1]}{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \leq x + y)$}{107}\phantomsection\label{tree:LeAddNonneg}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$0 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\varphi_{7}$\lbl{[F19]}}
+\AXC{$\varphi_{7} \to \varphi_{5}$\lbl{A2}}
+\BIC{$\varphi_{5}$}
+\AXC{$\varphi_{29}$\lbl{A2}}
+\BIC{$\forall z\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 \leq y \to 0 + z \leq y + z)$}
+\AXC{$\varphi_{27}$\lbl{A2}}
+\BIC{$0 \in \mathbb{R} \to y \in \mathbb{R} \to x \in \mathbb{R} \to 0 \leq y \to 0 + x \leq y + x$}
+\AXC{$\varphi_{35}$\lbl{A1}}
+\BIC{$0 \in \mathbb{R} \to \varphi_{33}$}
+\BIC{$\varphi_{33}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{33}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \in \mathbb{R}) \to \varphi_{16}$}
+\BIC{$\varphi_{16}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(0 + x = y \to y = z \to 0 + x = z)$}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$\forall z\,(0 + x = x + 0 \to x + 0 = z \to 0 + x = z)$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$0 + x = x + 0 \to x + 0 = x \to 0 + x = x$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x + 0 = x)$\lbl{(R4)}}
+\AXC{$\forall x \in \mathbb{R}\,(x + 0 = x) \to x \in \mathbb{R} \to x + 0 = x$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to x + 0 = x$}
+\AXC{$(x \in \mathbb{R} \to x + 0 = x) \to \varphi_{19}$\lbl{A1}}
+\BIC{$\varphi_{19}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)$\lbl{(R3)}}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\forall y\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to 0 + y = y + 0)$}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$0 \in \mathbb{R} \to x \in \mathbb{R} \to 0 + x = x + 0$}
+\AXC{$(0 \in \mathbb{R} \to x \in \mathbb{R} \to 0 + x = x + 0) \to 0 \in \mathbb{R} \to \varphi_{22}$\lbl{A1}}
+\BIC{$0 \in \mathbb{R} \to \varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$0 \in \mathbb{R}$\lbl{(R1)}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$0 \in \mathbb{R} \to \varphi_{22}$}
+\BIC{$\varphi_{22}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to 0 + x = x + 0$}
+\AXC{$\varphi_{31}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x + 0 = x) \to \varphi_{13}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{19}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x + 0 = x$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x + 0 = x) \to \varphi_{13}$}
+\BIC{$\varphi_{13}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$0 + x = x + 0 \to x + 0 = x \to 0 + x = x$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{13}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to 0 + x = x$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to 0 + x = x) \to \varphi_{32}$\lbl{A1}}
+\BIC{$\varphi_{32}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$z = w \to z < y + x \to w < y + x$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < y + x \to w < y + x)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < y + x \to w < y + x)$}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\forall w\,(0 + x = w \to 0 + x < y + x \to w < y + x)$}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$0 + x = x \to 0 + x < y + x \to x < y + x$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to 0 \leq y$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{16}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to 0 + x \leq y + x$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{32}$}
+\BIC{$(0 + x = x \to 0 + x < y + x \to x < y + x) \to \varphi_{14}$}
+\BIC{$\varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)$\lbl{(R3)}}
+\AXC{$\varphi_{25}$\lbl{A2}}
+\BIC{$\forall y\,(v_{422} \in \mathbb{R} \to y \in \mathbb{R} \to v_{422} + y = y + v_{422})$}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\BIC{$v_{422} \in \mathbb{R} \to v_{423} \in \mathbb{R} \to v_{422} + v_{423} = v_{423} + v_{422}$}
+\UIC{$\varphi_{3}$}
+\UIC{$\forall v_{422}\,(\varphi_{3})$}
+\AXC{$\varphi_{28}$\lbl{A2}}
+\BIC{$\forall v_{423}\,(y \in \mathbb{R} \to v_{423} \in \mathbb{R} \to y + v_{423} = v_{423} + y)$}
+\AXC{$\varphi_{24}$\lbl{A2}}
+\BIC{$y \in \mathbb{R} \to x \in \mathbb{R} \to y + x = x + y$}
+\AXC{$\varphi_{34}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to y \in \mathbb{R}) \to \varphi_{23}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to y \in \mathbb{R}) \to \varphi_{23}$}
+\BIC{$\varphi_{23}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to y + x = x + y$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to y + x = x + y$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to y + x = x + y) \to \varphi_{30}$\lbl{A1}}
+\BIC{$\varphi_{30}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$z = w \to z = y + x \to w = y + x$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z = y + x \to w = y + x)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z = y + x \to w = y + x)$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$\forall w\,(0 + x = w \to 0 + x = y + x \to w = y + x)$}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\BIC{$0 + x = x \to 0 + x = y + x \to x = y + x$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{14}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \leq y + x$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{30}$}
+\BIC{$(y + x = x + y \to x < y + x \to x < x + y) \to \varphi_{15}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$z = w \to x < z \to x < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to x < z \to x < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to x < z \to x < w)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall w\,(y + x = w \to x < y + x \to x < w)$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$y + x = x + y \to x < y + x \to x < x + y$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$(y + x = x + y \to x < y + x \to x < x + y) \to \varphi_{15}$}
+\BIC{$\varphi_{15}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$z = w \to x = z \to x = w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to x = z \to x = w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to x = z \to x = w)$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$\forall w\,(y + x = w \to x = y + x \to x = w)$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$y + x = x + y \to x = y + x \to x = x + y$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{15}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \leq x + y$}
+\UIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \leq x + y)$}
+\UIC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \leq x + y)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall z\,\forall w\,(z = w \to x = z \to x = w) \to \forall w\,(y + x = w \to x = y + x \to x = w)$
+\item $\varphi_{2} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(0 + x = y \to y = z \to 0 + x = z)$
+\item $\varphi_{3} :\equiv \forall v_{423}\,(v_{422} \in \mathbb{R} \to v_{423} \in \mathbb{R} \to v_{422} + v_{423} = v_{423} + v_{422})$
+\item $\varphi_{4} :\equiv \forall z\,\forall w\,(z = w \to x < z \to x < w) \to \forall w\,(y + x = w \to x < y + x \to x < w)$
+\item $\varphi_{5} :\equiv \forall y\,\forall z\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 \leq y \to 0 + z \leq y + z)$
+\item $\varphi_{6} :\equiv \forall w\,(y + x = w \to x = y + x \to x = w) \to y + x = x + y \to x = y + x \to x = x + y$
+\item $\varphi_{7} :\equiv \forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x \leq y \to x + z \leq y + z)$
+\item $\varphi_{8} :\equiv \forall z\,\forall w\,(z = w \to z = y + x \to w = y + x) \to \forall w\,(0 + x = w \to 0 + x = y + x \to w = y + x)$
+\item $\varphi_{9} :\equiv \forall y\,\forall z\,(0 + x = y \to y = z \to 0 + x = z) \to \forall z\,(0 + x = x + 0 \to x + 0 = z \to 0 + x = z)$
+\item $\varphi_{10} :\equiv \forall w\,(0 + x = w \to 0 + x = y + x \to w = y + x) \to 0 + x = x \to 0 + x = y + x \to x = y + x$
+\item $\varphi_{11} :\equiv \forall z\,(0 + x = x + 0 \to x + 0 = z \to 0 + x = z) \to 0 + x = x + 0 \to x + 0 = x \to 0 + x = x$
+\item $\varphi_{12} :\equiv \forall w\,(y + x = w \to x < y + x \to x < w) \to y + x = x + y \to x < y + x \to x < x + y$
+\item $\varphi_{13} :\equiv (0 + x = x + 0 \to x + 0 = x \to 0 + x = x) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to 0 + x = x$
+\item $\varphi_{14} :\equiv (0 + x = x \to 0 + x = y + x \to x = y + x) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \leq y + x$
+\item $\varphi_{15} :\equiv (y + x = x + y \to x = y + x \to x = x + y) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \leq x + y$
+\item $\varphi_{16} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to 0 \leq y) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to 0 + x \leq y + x$
+\item $\varphi_{17} :\equiv \forall z\,\forall w\,(z = w \to z < y + x \to w < y + x) \to \forall w\,(0 + x = w \to 0 + x < y + x \to w < y + x)$
+\item $\varphi_{18} :\equiv \forall y\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to 0 + y = y + 0) \to 0 \in \mathbb{R} \to x \in \mathbb{R} \to 0 + x = x + 0$
+\item $\varphi_{19} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x + 0 = x$
+\item $\varphi_{20} :\equiv \forall w\,(0 + x = w \to 0 + x < y + x \to w < y + x) \to 0 + x = x \to 0 + x < y + x \to x < y + x$
+\item $\varphi_{21} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x) \to \forall y\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to 0 + y = y + 0)$
+\item $\varphi_{22} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to 0 + x = x + 0$
+\item $\varphi_{23} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to y + x = x + y$
+\item $\varphi_{24} :\equiv \forall v_{423}\,(y \in \mathbb{R} \to v_{423} \in \mathbb{R} \to y + v_{423} = v_{423} + y) \to y \in \mathbb{R} \to x \in \mathbb{R} \to y + x = x + y$
+\item $\varphi_{25} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x) \to \forall y\,(v_{422} \in \mathbb{R} \to y \in \mathbb{R} \to v_{422} + y = y + v_{422})$
+\item $\varphi_{26} :\equiv \forall y\,(v_{422} \in \mathbb{R} \to y \in \mathbb{R} \to v_{422} + y = y + v_{422}) \to v_{422} \in \mathbb{R} \to v_{423} \in \mathbb{R} \to v_{422} + v_{423} = v_{423} + v_{422}$
+\item $\varphi_{27} :\equiv \forall z\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 \leq y \to 0 + z \leq y + z) \to 0 \in \mathbb{R} \to y \in \mathbb{R} \to x \in \mathbb{R} \to 0 \leq y \to 0 + x \leq y + x$
+\item $\varphi_{28} :\equiv \forall v_{422}\,(\varphi_{3}) \to \forall v_{423}\,(y \in \mathbb{R} \to v_{423} \in \mathbb{R} \to y + v_{423} = v_{423} + y)$
+\item $\varphi_{29} :\equiv \varphi_{5} \to \forall z\,(0 \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 \leq y \to 0 + z \leq y + z)$
+\item $\varphi_{30} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \leq y + x) \to (y + x = x + y \to x < y + x \to x < x + y) \to \varphi_{15}$
+\item $\varphi_{31} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to 0 + x = x + 0) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x + 0 = x) \to \varphi_{13}$
+\item $\varphi_{32} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to 0 + x \leq y + x) \to (0 + x = x \to 0 + x < y + x \to x < y + x) \to \varphi_{14}$
+\item $\varphi_{33} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to y \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to x \in \mathbb{R}) \to \varphi_{16}$
+\item $\varphi_{34} :\equiv (y \in \mathbb{R} \to x \in \mathbb{R} \to y + x = x + y) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to 0 \leq y \to y \in \mathbb{R}) \to \varphi_{23}$
+\item $\varphi_{35} :\equiv (0 \in \mathbb{R} \to y \in \mathbb{R} \to x \in \mathbb{R} \to 0 \leq y \to 0 + x \leq y + x) \to 0 \in \mathbb{R} \to \varphi_{33}$
+\end{abbrevlist}
+\end{fullproof}

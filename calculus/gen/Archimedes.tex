@@ -1,0 +1,1377 @@
+% 自動生成 (prover/build.js): Archimedes  ノード数 544
+\begin{fullproof}{命題3.2}{$\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a))$}{544}\phantomsection\label{tree:Archimedes}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,(\neg x < x)$\lbl{[O1]}}
+\AXC{$\forall x\,(\neg x < x) \to \neg 0 < 0$\lbl{A2}}
+\BIC{$\neg 0 < 0$}
+\AXC{$\neg 0 < 0 \to a \in \mathbb{R} \to \varphi_{69}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to \varphi_{69}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(S(n) \in \mathbb{N})$\lbl{[N2]}}
+\AXC{$\forall n \in \mathbb{N}\,(S(n) \in \mathbb{N}) \to m \in \mathbb{N} \to S(m) \in \mathbb{N}$\lbl{A2}}
+\BIC{$m \in \mathbb{N} \to S(m) \in \mathbb{N}$}
+\AXC{$\varphi_{251}$\lbl{A1}}
+\BIC{$\varphi_{203} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{166}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{187}$\lbl{A1}}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{187}) \to \varphi_{203}$\lbl{A1}}
+\BIC{$\varphi_{203}$}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{203} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{166}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{166}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{166}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{166}) \to \varphi_{223}$\lbl{A1}}
+\BIC{$\varphi_{223}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R})$\lbl{[N4]}}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R}) \to S(m) \in \mathbb{N} \to \underline{S(m)} \in \mathbb{R}$\lbl{A2}}
+\BIC{$S(m) \in \mathbb{N} \to \underline{S(m)} \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{149}$\lbl{A2}}
+\BIC{$\forall y\,(\underline{S(m)} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{S(m)} \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{157}$\lbl{A2}}
+\BIC{$\underline{S(m)} \in \mathbb{R} \to a \in \mathbb{R} \to \underline{S(m)} \cdot a \in \mathbb{R}$}
+\AXC{$(\underline{S(m)} \in \mathbb{R} \to a \in \mathbb{R} \to \underline{S(m)} \cdot a \in \mathbb{R}) \to \varphi_{267}$\lbl{A1}}
+\BIC{$\varphi_{267}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{166}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$S(m) \in \mathbb{N} \to \underline{S(m)} \in \mathbb{R}$}
+\AXC{$(S(m) \in \mathbb{N} \to \underline{S(m)} \in \mathbb{R}) \to \varphi_{246}$\lbl{A1}}
+\BIC{$\varphi_{246}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{178}$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{267}$}
+\BIC{$\varphi_{204} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{186}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$\lbl{Def$X_a$}}
+\AXC{$\varphi_{163}$\lbl{A2}}
+\BIC{$\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$}
+\AXC{$\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)) \to \varphi_{141}$\lbl{A2}}
+\BIC{$\varphi_{141}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\varphi_{204}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{204} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{186}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{186}$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{141}$}
+\AXC{$\varphi_{141} \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{186}) \to \varphi_{255}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{186}) \to \varphi_{255}$}
+\BIC{$\varphi_{255}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\varphi_{128}$\lbl{A2}}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \underline{S(m)} \cdot a = \underline{S(m)} \cdot a$\lbl{A2}}
+\BIC{$\underline{S(m)} \cdot a = \underline{S(m)} \cdot a$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{223}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{198}$}
+\AXC{$\varphi_{263}$\lbl{A1}}
+\BIC{$\varphi_{128} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{194}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{194}$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{255}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{189}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\forall s\,(\varphi_{1})$\lbl{DefSup}}
+\AXC{$\forall s\,(\varphi_{1}) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{14}$\lbl{A2}}
+\BIC{$\varphi_{14}$}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{64}$\lbl{A1}}
+\AXC{$\varphi_{238}$\lbl{A1}}
+\BIC{$\varphi_{14} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{52}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{52}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{52}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{52}) \to \varphi_{222}$\lbl{A1}}
+\BIC{$\varphi_{222}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\varphi_{67}$\lbl{A2}}
+\AXC{$\forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a))$\lbl{DefUB}}
+\AXC{$\varphi_{116}$\lbl{A2}}
+\BIC{$\forall X\,(\mathrm{UB}(s,X) \leftrightarrow s \in \mathbb{R} \land \forall x \in X\,(x \leq s))$}
+\AXC{$\varphi_{136}$\lbl{A2}}
+\BIC{$\mathrm{UB}(s,X_{a}) \leftrightarrow s \in \mathbb{R} \land \forall x \in X_{a}\,(x \leq s)$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{222}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{185}$}
+\AXC{$\varphi_{261}$\lbl{A1}}
+\BIC{$\varphi_{67} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{199}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{199}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{189}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{199}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{199}) \to \varphi_{249}$\lbl{A1}}
+\BIC{$\varphi_{249}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{175}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$z = w \to s < z \to s < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to s < z \to s < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to s < z \to s < w)$}
+\AXC{$\varphi_{109}$\lbl{A2}}
+\BIC{$\forall w\,(\underline{m} \cdot a + a = w \to s < \underline{m} \cdot a + a \to s < w)$}
+\AXC{$\forall w\,(\underline{m} \cdot a + a = w \to s < \underline{m} \cdot a + a \to s < w) \to \varphi_{90}$\lbl{A2}}
+\BIC{$\varphi_{90}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\varphi_{191}$\lbl{A1}}
+\AXC{$\varphi_{191} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{139}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{139}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{139}) \to \varphi_{210}$\lbl{A1}}
+\BIC{$\varphi_{210}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$\lbl{Def$X_a$}}
+\AXC{$\varphi_{163}$\lbl{A2}}
+\BIC{$\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$}
+\AXC{$\varphi_{158}$\lbl{A2}}
+\BIC{$y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{210}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{131}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{52}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{52}) \to \varphi_{202}$\lbl{A1}}
+\BIC{$\varphi_{202}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a))$\lbl{DefUB}}
+\AXC{$\varphi_{116}$\lbl{A2}}
+\BIC{$\forall X\,(\mathrm{UB}(s,X) \leftrightarrow s \in \mathbb{R} \land \forall x \in X\,(x \leq s))$}
+\AXC{$\varphi_{136}$\lbl{A2}}
+\BIC{$\mathrm{UB}(s,X_{a}) \leftrightarrow s \in \mathbb{R} \land \forall x \in X_{a}\,(x \leq s)$}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{202}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{129}$\lbl{A2}}
+\BIC{$\forall y\,(s \in \mathbb{R} \to y \in \mathbb{R} \to s - y \in \mathbb{R})$}
+\AXC{$\varphi_{113}$\lbl{A2}}
+\BIC{$s \in \mathbb{R} \to a \in \mathbb{R} \to s - a \in \mathbb{R}$}
+\AXC{$(s \in \mathbb{R} \to a \in \mathbb{R} \to s - a \in \mathbb{R}) \to \varphi_{256}$\lbl{A1}}
+\BIC{$\varphi_{256}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{132}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{256}$}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{132}) \to \varphi_{181}$}
+\BIC{$\varphi_{181}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{181}$}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \neg y \leq x \to x < y)$\lbl{[A2]}}
+\AXC{$\varphi_{146}$\lbl{A2}}
+\BIC{$\forall y\,(s - a \in \mathbb{R} \to y \in \mathbb{R} \to \neg y \leq s - a \to s - a < y)$}
+\AXC{$\varphi_{153}$\lbl{A2}}
+\BIC{$s - a \in \mathbb{R} \to y \in \mathbb{R} \to \neg y \leq s - a \to s - a < y$}
+\AXC{$\varphi_{274}$\lbl{A1}}
+\BIC{$\varphi_{181} \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{131}) \to \varphi_{172} \to \varphi_{173}$}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{131}) \to \varphi_{172} \to \varphi_{173}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\varphi_{191}$\lbl{A1}}
+\AXC{$\varphi_{191} \to \varphi_{172}$\lbl{A1}}
+\BIC{$\varphi_{172}$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{131}$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{131}) \to \varphi_{172} \to \varphi_{173}$}
+\BIC{$\varphi_{172} \to \varphi_{173}$}
+\BIC{$\varphi_{173}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}$}
+\AXC{$\varphi_{63}$\lbl{[B7]}}
+\AXC{$\varphi_{63} \to \varphi_{50}$\lbl{A2}}
+\BIC{$\varphi_{50}$}
+\AXC{$\varphi_{174}$\lbl{A2}}
+\BIC{$\forall y\,(s \in \mathbb{R} \to a \in \mathbb{R} \to y \in \mathbb{R} \to s - a < y \to s < y + a)$}
+\AXC{$\varphi_{164}$\lbl{A2}}
+\BIC{$s \in \mathbb{R} \to a \in \mathbb{R} \to y \in \mathbb{R} \to s - a < y \to s < y + a$}
+\AXC{$\varphi_{277}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}) \to \varphi_{204} \to \varphi_{259}$}
+\BIC{$\varphi_{204} \to \varphi_{259}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{173}$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{131}$}
+\AXC{$\varphi_{204}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{204} \to \varphi_{259}$}
+\BIC{$\varphi_{259}$}
+\BIC{$\varphi_{173} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{165}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{165}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{165}$}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{187}$\lbl{A1}}
+\AXC{$\varphi_{248}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{170}$}
+\AXC{$\varphi_{269}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{165}) \to \varphi_{221}$}
+\BIC{$\varphi_{221}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\forall m\,\forall a\,(m \in \mathbb{N} \to a \in \mathbb{R} \to \underline{S(m)} \cdot a = \underline{m} \cdot a + a)$\lbl{[B8]}}
+\AXC{$\varphi_{161}$\lbl{A2}}
+\BIC{$\forall a\,(m \in \mathbb{N} \to a \in \mathbb{R} \to \underline{S(m)} \cdot a = \underline{m} \cdot a + a)$}
+\AXC{$\varphi_{156}$\lbl{A2}}
+\BIC{$m \in \mathbb{N} \to a \in \mathbb{R} \to \underline{S(m)} \cdot a = \underline{m} \cdot a + a$}
+\AXC{$\varphi_{271}$\lbl{A1}}
+\BIC{$\varphi_{203} \to \varphi_{204} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{192}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{187}$\lbl{A1}}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{187}) \to \varphi_{203}$\lbl{A1}}
+\BIC{$\varphi_{203}$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{203} \to \varphi_{204} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{192}$}
+\BIC{$\varphi_{204} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{192}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\varphi_{204}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{204} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{192}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{192}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{192}) \to \varphi_{226}$\lbl{A1}}
+\BIC{$\varphi_{226}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\BIC{$\forall y\,(\underline{S(m)} \cdot a = y \to y = \underline{S(m)} \cdot a)$}
+\AXC{$\varphi_{150}$\lbl{A2}}
+\BIC{$\underline{S(m)} \cdot a = \underline{m} \cdot a + a \to \underline{m} \cdot a + a = \underline{S(m)} \cdot a$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\varphi_{226}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{193}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{193}) \to \varphi_{258}$\lbl{A1}}
+\BIC{$\varphi_{258}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{90}$}
+\AXC{$z = w \to s < z + a \to s < w + a$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to s < z + a \to s < w + a)$}
+\UIC{$\forall z\,\forall w\,(z = w \to s < z + a \to s < w + a)$}
+\AXC{$\varphi_{68}$\lbl{A2}}
+\BIC{$\forall w\,(y = w \to s < y + a \to s < w + a)$}
+\AXC{$\varphi_{117}$\lbl{A2}}
+\BIC{$y = \underline{m} \cdot a \to s < y + a \to s < \underline{m} \cdot a + a$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\varphi_{221}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{184}$}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{258}$}
+\BIC{$\varphi_{90} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{180}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{180}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z)$\lbl{[O3]}}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(s < y \to y \leq z \to s < z)$}
+\AXC{$\varphi_{93}$\lbl{A2}}
+\BIC{$\forall z\,(s < \underline{S(m)} \cdot a \to \underline{S(m)} \cdot a \leq z \to s < z)$}
+\AXC{$\varphi_{145}$\lbl{A2}}
+\BIC{$s < \underline{S(m)} \cdot a \to \underline{S(m)} \cdot a \leq s \to s < s$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$s < \underline{S(m)} \cdot a \to \underline{S(m)} \cdot a \leq s \to s < s$}
+\AXC{$(s < \underline{S(m)} \cdot a \to \underline{S(m)} \cdot a \leq s \to s < s) \to \varphi_{264}$\lbl{A1}}
+\BIC{$\varphi_{264}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{175}$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{180}$}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\varphi_{264}$}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{175}) \to \varphi_{200}$}
+\BIC{$\varphi_{200}$}
+\AXC{$\varphi_{200} \to \neg s < s \to \varphi_{201}$\lbl{A1}}
+\BIC{$\neg s < s \to \varphi_{201}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\forall x\,(\neg x < x)$\lbl{[O1]}}
+\AXC{$\forall x\,(\neg x < x) \to \neg s < s$\lbl{A2}}
+\BIC{$\neg s < s$}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\neg s < s \to \varphi_{201}$}
+\BIC{$\varphi_{201}$}
+\AXC{$\varphi_{201} \to \varphi_{168} \to \neg (m \in \mathbb{N} \land y = \underline{m} \cdot a)$\lbl{A1}}
+\BIC{$\varphi_{168} \to \neg (m \in \mathbb{N} \land y = \underline{m} \cdot a)$}
+\UIC{$\forall m\,(\varphi_{168} \to \neg (m \in \mathbb{N} \land y = \underline{m} \cdot a))$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$\lbl{Def$X_a$}}
+\AXC{$\varphi_{163}$\lbl{A2}}
+\BIC{$\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$}
+\AXC{$\varphi_{158}$\lbl{A2}}
+\BIC{$y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)$}
+\AXC{$\varphi_{191}$\lbl{A1}}
+\AXC{$\varphi_{191} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{139}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{139}$}
+\AXC{$\varphi_{250}$\lbl{A1}}
+\BIC{$(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)) \to \varphi_{195}$}
+\BIC{$\varphi_{195}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\UIC{$\forall n\,(\varphi_{13})$}
+\AXC{$\varphi_{168} \to \forall m\,(\varphi_{168})$\lbl{A4}}
+\AXC{$\varphi_{244}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\forall m\,(\varphi_{168} \to \neg (m \in \mathbb{N} \land y = \underline{m} \cdot a))$}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$\varphi_{195}$}
+\AXC{$\varphi_{195} \to \varphi_{279}$\lbl{A1}}
+\BIC{$\varphi_{279}$}
+\BIC{$\varphi_{244} \to (\varphi_{168} \to \forall m\,(\varphi_{168})) \to \forall n\,(\varphi_{13}) \to \varphi_{243}$}
+\BIC{$(\varphi_{168} \to \forall m\,(\varphi_{168})) \to \forall n\,(\varphi_{13}) \to \varphi_{243}$}
+\BIC{$\forall n\,(\varphi_{13}) \to \varphi_{243}$}
+\BIC{$\varphi_{243}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\varphi_{31}$\lbl{A4}}
+\AXC{$\forall n\,(\varphi_{13}) \to \varphi_{35}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\varphi_{243}$}
+\BIC{$\varphi_{31} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{123}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{123}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{123}) \to \varphi_{169}$\lbl{A1}}
+\BIC{$\varphi_{169}$}
+\UIC{$\forall y\,(\varphi_{169})$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}$}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{129}$\lbl{A2}}
+\BIC{$\forall y\,(s \in \mathbb{R} \to y \in \mathbb{R} \to s - y \in \mathbb{R})$}
+\AXC{$\varphi_{113}$\lbl{A2}}
+\BIC{$s \in \mathbb{R} \to a \in \mathbb{R} \to s - a \in \mathbb{R}$}
+\AXC{$\varphi_{254}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}) \to \varphi_{217}$}
+\BIC{$\varphi_{217}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{37}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\varphi_{217}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{53}$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a))$\lbl{DefUB}}
+\AXC{$\forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a)) \to \varphi_{7}$\lbl{A2}}
+\BIC{$\varphi_{7}$}
+\AXC{$\varphi_{162}$\lbl{A2}}
+\BIC{$\mathrm{UB}(s - a,X_{a}) \leftrightarrow s - a \in \mathbb{R} \land \forall x \in X_{a}\,(x \leq s - a)$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - (x - y) = y)$\lbl{[B6]}}
+\AXC{$\varphi_{118}$\lbl{A2}}
+\BIC{$\forall y\,(s \in \mathbb{R} \to y \in \mathbb{R} \to s - (s - y) = y)$}
+\AXC{$\varphi_{98}$\lbl{A2}}
+\BIC{$s \in \mathbb{R} \to a \in \mathbb{R} \to s - (s - a) = a$}
+\AXC{$\varphi_{253}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}) \to \varphi_{214}$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{37}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}$}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}) \to \varphi_{214}$}
+\BIC{$\varphi_{214}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{47}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{47}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{47}) \to \varphi_{182}$\lbl{A1}}
+\BIC{$\varphi_{182}$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to 0 < a$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall y\,(s - (s - a) = y \to y = s - (s - a))$}
+\AXC{$\varphi_{23}$\lbl{A2}}
+\BIC{$s - (s - a) = a \to a = s - (s - a)$}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$\varphi_{182}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{48}$}
+\AXC{$\varphi_{242}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to 0 < a) \to \varphi_{196}$}
+\BIC{$\varphi_{196}$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y - x \to x < y)$\lbl{[F25]}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y - x \to x < y) \to \varphi_{24}$\lbl{A2}}
+\BIC{$\varphi_{24}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{53}$}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$\varphi_{24}$}
+\AXC{$\varphi_{24} \to s - a \in \mathbb{R} \to s \in \mathbb{R} \to 0 < s - (s - a) \to s - a < s$\lbl{A2}}
+\BIC{$s - a \in \mathbb{R} \to s \in \mathbb{R} \to 0 < s - (s - a) \to s - a < s$}
+\AXC{$\varphi_{265}$\lbl{A1}}
+\BIC{$\varphi_{260}$}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}) \to \varphi_{219}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}$}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}) \to \varphi_{219}$}
+\BIC{$\varphi_{219}$}
+\end{ptree}
+\noindent$\Pi_{51}$:
+\begin{ptree}
+\AXC{$z = w \to 0 < z \to 0 < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to 0 < z \to 0 < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to 0 < z \to 0 < w)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall w\,(a = w \to 0 < a \to 0 < w)$}
+\AXC{$\varphi_{39}$\lbl{A2}}
+\BIC{$a = s - (s - a) \to 0 < a \to 0 < s - (s - a)$}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$\varphi_{196}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{59}$}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$\varphi_{219}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{52}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \leq y \to \neg y < x)$\lbl{[O7]}}
+\AXC{$\forall x\,\forall y\,(x \leq y \to \neg y < x) \to \forall y\,(s \leq y \to \neg y < s)$\lbl{A2}}
+\BIC{$\forall y\,(s \leq y \to \neg y < s)$}
+\end{ptree}
+\noindent$\Pi_{53}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{64}$\lbl{A1}}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{64}) \to \varphi_{14} \to \varphi_{183}$\lbl{A1}}
+\BIC{$\varphi_{14} \to \varphi_{183}$}
+\end{ptree}
+\noindent$\Pi_{54}$:
+\begin{ptree}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\AXC{$\forall s\,(\varphi_{1})$\lbl{DefSup}}
+\AXC{$\forall s\,(\varphi_{1}) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\AXC{$\varphi_{1} \to \varphi_{14}$\lbl{A2}}
+\BIC{$\varphi_{14}$}
+\AXC{$\stackrel{\Pi_{53}}{\vdots}$}\noLine
+\UIC{$\varphi_{14} \to \varphi_{183}$}
+\BIC{$\varphi_{183}$}
+\AXC{$\varphi_{183} \to \varphi_{6} \to \varphi_{190}$\lbl{A1}}
+\BIC{$\varphi_{6} \to \varphi_{190}$}
+\BIC{$\varphi_{190}$}
+\end{ptree}
+\noindent$\Pi_{55}$:
+\begin{ptree}
+\AXC{$\varphi_{176}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{54}}{\vdots}$}\noLine
+\UIC{$\varphi_{190}$}
+\AXC{$\varphi_{190} \to \varphi_{176} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{111}$\lbl{A1}}
+\BIC{$\varphi_{176} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{111}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{111}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{111}) \to \varphi_{231}$\lbl{A1}}
+\BIC{$\varphi_{231}$}
+\end{ptree}
+\noindent$\Pi_{56}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{52}}{\vdots}$}\noLine
+\UIC{$\forall y\,(s \leq y \to \neg y < s)$}
+\AXC{$\forall y\,(s \leq y \to \neg y < s) \to s \leq s - a \to \neg s - a < s$\lbl{A2}}
+\BIC{$s \leq s - a \to \neg s - a < s$}
+\AXC{$\stackrel{\Pi_{55}}{\vdots}$}\noLine
+\UIC{$\varphi_{231}$}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{38}) \to \varphi_{177}$}
+\end{ptree}
+\noindent$\Pi_{57}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{51}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{38}$}
+\AXC{$\stackrel{\Pi_{56}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{38}) \to \varphi_{177}$}
+\BIC{$\varphi_{177}$}
+\end{ptree}
+\noindent$\Pi_{58}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{57}}{\vdots}$}\noLine
+\UIC{$\varphi_{177}$}
+\AXC{$\varphi_{177} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{77}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{77}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{77}) \to \varphi_{241}$\lbl{A1}}
+\BIC{$\varphi_{241}$}
+\end{ptree}
+\noindent$\Pi_{59}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{53}$}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$\mathrm{UB}(s - a,X_{a}) \leftrightarrow s - a \in \mathbb{R} \land \forall x \in X_{a}\,(x \leq s - a)$}
+\AXC{$\stackrel{\Pi_{58}}{\vdots}$}\noLine
+\UIC{$\varphi_{241}$}
+\BIC{$\varphi_{224}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{103}$}
+\AXC{$\varphi_{266}$\lbl{A1}}
+\BIC{$\varphi_{18} \to (\varphi_{18} \to \varphi_{27}) \to \varphi_{32} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{104}$}
+\end{ptree}
+\noindent$\Pi_{60}$:
+\begin{ptree}
+\AXC{$\varphi_{18} \to \varphi_{27}$\lbl{A3}}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\AXC{$\varphi_{155}$\lbl{A1}}
+\BIC{$\forall x\,(\neg \neg (x \in X_{a} \to x \leq s - a)) \to x \in X_{a} \to x \leq s - a$}
+\UIC{$\varphi_{18}$}
+\AXC{$\stackrel{\Pi_{59}}{\vdots}$}\noLine
+\UIC{$\varphi_{18} \to (\varphi_{18} \to \varphi_{27}) \to \varphi_{32} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{104}$}
+\BIC{$(\varphi_{18} \to \varphi_{27}) \to \varphi_{32} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{104}$}
+\BIC{$\varphi_{32} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{104}$}
+\end{ptree}
+\noindent$\Pi_{61}$:
+\begin{ptree}
+\AXC{$\varphi_{213}$\lbl{A4}}
+\AXC{$\forall y\,(\varphi_{169}) \to \varphi_{179}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$\forall y\,(\varphi_{169})$}
+\AXC{$\varphi_{32}$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{60}}{\vdots}$}\noLine
+\UIC{$\varphi_{32} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{104}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{104}$}
+\AXC{$\varphi_{278}$\lbl{A1}}
+\BIC{$\forall y\,(\varphi_{169}) \to (\forall y\,(\varphi_{169}) \to \varphi_{179}) \to \varphi_{213} \to \varphi_{252}$}
+\BIC{$(\forall y\,(\varphi_{169}) \to \varphi_{179}) \to \varphi_{213} \to \varphi_{252}$}
+\BIC{$\varphi_{213} \to \varphi_{252}$}
+\BIC{$\varphi_{252}$}
+\end{ptree}
+\noindent$\Pi_{62}$:
+\begin{ptree}
+\AXC{$\varphi_{55}$\lbl{A4}}
+\AXC{$\varphi_{42} \to \varphi_{61}$\lbl{A3}}
+\AXC{$\forall y \in X_{a}\,(\neg y < b \to y = b) \to x \in X_{a} \to \neg x < b \to x = b$\lbl{A2}}
+\UIC{$\varphi_{42}$}
+\AXC{$\varphi_{42} \to (\varphi_{42} \to \varphi_{61}) \to \varphi_{55} \to \varphi_{43}$\lbl{A1}}
+\BIC{$(\varphi_{42} \to \varphi_{61}) \to \varphi_{55} \to \varphi_{43}$}
+\BIC{$\varphi_{55} \to \varphi_{43}$}
+\BIC{$\varphi_{43}$}
+\end{ptree}
+\noindent$\Pi_{63}$:
+\begin{ptree}
+\AXC{$\varphi_{56}$\lbl{A4}}
+\AXC{$\varphi_{44} \to \varphi_{62}$\lbl{A3}}
+\AXC{$\forall x \in X_{a}\,(\neg x < b \to x = b) \to y \in X_{a} \to \neg y < b \to y = b$\lbl{A2}}
+\UIC{$\varphi_{44}$}
+\AXC{$\varphi_{44} \to (\varphi_{44} \to \varphi_{62}) \to \varphi_{56} \to \varphi_{45}$\lbl{A1}}
+\BIC{$(\varphi_{44} \to \varphi_{62}) \to \varphi_{56} \to \varphi_{45}$}
+\BIC{$\varphi_{56} \to \varphi_{45}$}
+\BIC{$\varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{64}$:
+\begin{ptree}
+\AXC{$\varphi_{33}$\lbl{A2}}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{85}$\lbl{A1}}
+\AXC{$\varphi_{218}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{49}$}
+\AXC{$\varphi_{236}$\lbl{A1}}
+\BIC{$\varphi_{33} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{74}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{74}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{74}) \to \varphi_{232}$\lbl{A1}}
+\BIC{$\varphi_{232}$}
+\end{ptree}
+\noindent$\Pi_{65}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R})$\lbl{[N4]}}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R}) \to n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$\lbl{A2}}
+\BIC{$n \in \mathbb{N} \to \underline{n} \in \mathbb{R}$}
+\AXC{$(n \in \mathbb{N} \to \underline{n} \in \mathbb{R}) \to \varphi_{230}$\lbl{A1}}
+\BIC{$\varphi_{230}$}
+\end{ptree}
+\noindent$\Pi_{66}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{147}$\lbl{A2}}
+\BIC{$\forall y\,(\underline{n} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{n} \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{151}$\lbl{A2}}
+\BIC{$\underline{n} \in \mathbb{R} \to a \in \mathbb{R} \to \underline{n} \cdot a \in \mathbb{R}$}
+\AXC{$\varphi_{262}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{138}) \to \varphi_{233}$}
+\end{ptree}
+\noindent$\Pi_{67}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{148}$\lbl{A1}}
+\AXC{$\varphi_{235}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{124}$}
+\AXC{$\stackrel{\Pi_{65}}{\vdots}$}\noLine
+\UIC{$\varphi_{230}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{138}$}
+\AXC{$\stackrel{\Pi_{66}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{138}) \to \varphi_{233}$}
+\BIC{$\varphi_{233}$}
+\end{ptree}
+\noindent$\Pi_{68}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \neg x < y \to y \leq x)$\lbl{[O8]}}
+\AXC{$\varphi_{119}$\lbl{A2}}
+\BIC{$\forall y\,(b \in \mathbb{R} \to y \in \mathbb{R} \to \neg b < y \to y \leq b)$}
+\AXC{$\varphi_{154}$\lbl{A2}}
+\BIC{$b \in \mathbb{R} \to \underline{n} \cdot a \in \mathbb{R} \to \neg b < \underline{n} \cdot a \to \underline{n} \cdot a \leq b$}
+\AXC{$\varphi_{275}$\lbl{A1}}
+\BIC{$\varphi_{268}$}
+\end{ptree}
+\noindent$\Pi_{69}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{126}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{67}}{\vdots}$}\noLine
+\UIC{$\varphi_{233}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{144}$}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{127}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{68}}{\vdots}$}\noLine
+\UIC{$\varphi_{268}$}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{144}) \to \varphi_{234}$}
+\BIC{$\varphi_{234}$}
+\end{ptree}
+\noindent$\Pi_{70}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(v_{374} = y \to y = v_{374})$\lbl{A2}}
+\BIC{$\forall y\,(v_{374} = y \to y = v_{374})$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$v_{374} = v_{375} \to v_{375} = v_{374}$}
+\UIC{$\forall v_{375}\,(v_{374} = v_{375} \to v_{375} = v_{374})$}
+\UIC{$\forall v_{374}\,\forall v_{375}\,(v_{374} = v_{375} \to v_{375} = v_{374})$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$\forall v_{375}\,(y = v_{375} \to v_{375} = y)$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$y = \underline{n} \cdot a \to \underline{n} \cdot a = y$}
+\end{ptree}
+\noindent$\Pi_{71}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{148}$\lbl{A1}}
+\AXC{$\varphi_{237}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{134}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{134}) \to \varphi_{207}$\lbl{A1}}
+\BIC{$\varphi_{207}$}
+\end{ptree}
+\noindent$\Pi_{72}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{70}}{\vdots}$}\noLine
+\UIC{$y = \underline{n} \cdot a \to \underline{n} \cdot a = y$}
+\AXC{$\stackrel{\Pi_{71}}{\vdots}$}\noLine
+\UIC{$\varphi_{207}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{135}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{135}) \to \varphi_{247}$\lbl{A1}}
+\BIC{$\varphi_{247}$}
+\end{ptree}
+\noindent$\Pi_{73}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{148}$\lbl{A1}}
+\AXC{$\varphi_{235}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{124}$}
+\AXC{$\stackrel{\Pi_{64}}{\vdots}$}\noLine
+\UIC{$\varphi_{232}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{140}$}
+\AXC{$\stackrel{\Pi_{69}}{\vdots}$}\noLine
+\UIC{$\varphi_{234}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{133}$}
+\AXC{$\stackrel{\Pi_{72}}{\vdots}$}\noLine
+\UIC{$\varphi_{247}$}
+\BIC{$(\underline{n} \cdot a = y \to \underline{n} \cdot a < b \to y < b) \to \varphi_{205}$}
+\end{ptree}
+\noindent$\Pi_{74}$:
+\begin{ptree}
+\AXC{$z = w \to z < b \to w < b$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < b \to w < b)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < b \to w < b)$}
+\AXC{$\varphi_{75}$\lbl{A2}}
+\BIC{$\forall w\,(\underline{n} \cdot a = w \to \underline{n} \cdot a < b \to w < b)$}
+\AXC{$\varphi_{125}$\lbl{A2}}
+\BIC{$\underline{n} \cdot a = y \to \underline{n} \cdot a < b \to y < b$}
+\AXC{$\stackrel{\Pi_{73}}{\vdots}$}\noLine
+\UIC{$(\underline{n} \cdot a = y \to \underline{n} \cdot a < b \to y < b) \to \varphi_{205}$}
+\BIC{$\varphi_{205}$}
+\end{ptree}
+\noindent$\Pi_{75}$:
+\begin{ptree}
+\AXC{$z = w \to z = b \to w = b$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z = b \to w = b)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z = b \to w = b)$}
+\AXC{$\varphi_{25}$\lbl{A2}}
+\BIC{$\forall w\,(\underline{n} \cdot a = w \to \underline{n} \cdot a = b \to w = b)$}
+\AXC{$\varphi_{88}$\lbl{A2}}
+\BIC{$\underline{n} \cdot a = y \to \underline{n} \cdot a = b \to y = b$}
+\AXC{$\stackrel{\Pi_{74}}{\vdots}$}\noLine
+\UIC{$\varphi_{205}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{105}$}
+\AXC{$\varphi_{227}$\lbl{A1}}
+\BIC{$\varphi_{80} \land y \in X_{a} \land \neg y \leq b \to \neg (n \in \mathbb{N} \land y = \underline{n} \cdot a)$}
+\UIC{$\forall n\,(\varphi_{80} \land y \in X_{a} \land \neg y \leq b \to \neg (n \in \mathbb{N} \land y = \underline{n} \cdot a))$}
+\end{ptree}
+\noindent$\Pi_{76}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$\lbl{Def$X_a$}}
+\AXC{$\varphi_{163}$\lbl{A2}}
+\BIC{$\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$}
+\AXC{$\varphi_{158}$\lbl{A2}}
+\BIC{$y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)$}
+\end{ptree}
+\noindent$\Pi_{77}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{76}}{\vdots}$}\noLine
+\UIC{$y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)$}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{106}$\lbl{A1}}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{106}) \to \varphi_{208}$\lbl{A1}}
+\BIC{$\varphi_{208}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{95}$}
+\end{ptree}
+\noindent$\Pi_{78}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{77}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{95}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{95}) \to \varphi_{276}$\lbl{A1}}
+\BIC{$\varphi_{276}$}
+\end{ptree}
+\noindent$\Pi_{79}$:
+\begin{ptree}
+\AXC{$\varphi_{229}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{75}}{\vdots}$}\noLine
+\UIC{$\forall n\,(\varphi_{80} \land y \in X_{a} \land \neg y \leq b \to \neg (n \in \mathbb{N} \land y = \underline{n} \cdot a))$}
+\AXC{$\stackrel{\Pi_{78}}{\vdots}$}\noLine
+\UIC{$\varphi_{276}$}
+\BIC{$\varphi_{229} \to \varphi_{240}$}
+\BIC{$\varphi_{240}$}
+\end{ptree}
+\noindent$\Pi_{80}$:
+\begin{ptree}
+\AXC{$\varphi_{80} \land y \in X_{a} \land \neg y \leq b \to \forall n\,(\varphi_{80} \land y \in X_{a} \land \neg y \leq b)$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{79}}{\vdots}$}\noLine
+\UIC{$\varphi_{240}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{70}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{70}) \to \varphi_{80} \to y \in X_{a} \to y \leq b$\lbl{A1}}
+\BIC{$\varphi_{80} \to y \in X_{a} \to y \leq b$}
+\UIC{$\forall y\,(\varphi_{80} \to y \in X_{a} \to y \leq b)$}
+\AXC{$\varphi_{270}$\lbl{A1}}
+\BIC{$\varphi_{211} \to (\varphi_{80} \to \forall y\,(\varphi_{80})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{81}$}
+\end{ptree}
+\noindent$\Pi_{81}$:
+\begin{ptree}
+\AXC{$\varphi_{80} \to \forall y\,(\varphi_{80})$\lbl{A4}}
+\AXC{$\varphi_{211}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{80}}{\vdots}$}\noLine
+\UIC{$\varphi_{211} \to (\varphi_{80} \to \forall y\,(\varphi_{80})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{81}$}
+\BIC{$(\varphi_{80} \to \forall y\,(\varphi_{80})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{81}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{81}$}
+\end{ptree}
+\noindent$\Pi_{82}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a))$\lbl{DefUB}}
+\AXC{$\varphi_{120}$\lbl{A2}}
+\BIC{$\forall X\,(\mathrm{UB}(b,X) \leftrightarrow b \in \mathbb{R} \land \forall x \in X\,(x \leq b))$}
+\AXC{$\varphi_{137}$\lbl{A2}}
+\BIC{$\mathrm{UB}(b,X_{a}) \leftrightarrow b \in \mathbb{R} \land \forall x \in X_{a}\,(x \leq b)$}
+\AXC{$\varphi_{257}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{81}) \to \varphi_{45} \to \varphi_{43} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{83}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{62}}{\vdots}$}\noLine
+\UIC{$\varphi_{43}$}
+\AXC{$\stackrel{\Pi_{63}}{\vdots}$}\noLine
+\UIC{$\varphi_{45}$}
+\AXC{$\stackrel{\Pi_{81}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{81}$}
+\AXC{$\stackrel{\Pi_{82}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{81}) \to \varphi_{45} \to \varphi_{43} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{41}$}
+\BIC{$\varphi_{45} \to \varphi_{43} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{41}$}
+\BIC{$\varphi_{43} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{41}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{84}$:
+\begin{ptree}
+\AXC{$\forall b\,(\neg \mathrm{UB}(b,X_{a})) \to \neg \mathrm{UB}(b,X_{a})$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{83}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{41}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{41}) \to \varphi_{167}$\lbl{A1}}
+\BIC{$\varphi_{167}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{85}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \underline{1_{\omega}} \cdot a = \underline{1_{\omega}} \cdot a$\lbl{A2}}
+\BIC{$\underline{1_{\omega}} \cdot a = \underline{1_{\omega}} \cdot a$}
+\AXC{$1_{\omega} \in \mathbb{N}$\lbl{[N1]}}
+\AXC{$1_{\omega} \in \mathbb{N} \to \varphi_{197}$\lbl{A1}}
+\BIC{$\varphi_{197}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{96}$}
+\end{ptree}
+\noindent$\Pi_{86}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{152}$\lbl{A2}}
+\BIC{$\forall y\,(\underline{1_{\omega}} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{1_{\omega}} \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{159}$\lbl{A2}}
+\BIC{$\underline{1_{\omega}} \in \mathbb{R} \to a \in \mathbb{R} \to \underline{1_{\omega}} \cdot a \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{87}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{86}}{\vdots}$}\noLine
+\UIC{$\underline{1_{\omega}} \in \mathbb{R} \to a \in \mathbb{R} \to \underline{1_{\omega}} \cdot a \in \mathbb{R}$}
+\AXC{$(\underline{1_{\omega}} \in \mathbb{R} \to a \in \mathbb{R} \to \underline{1_{\omega}} \cdot a \in \mathbb{R}) \to \varphi_{239}$\lbl{A1}}
+\BIC{$\varphi_{239}$}
+\end{ptree}
+\noindent$\Pi_{88}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to \varphi_{82}$\lbl{A1}}
+\AXC{$1_{\omega} \in \mathbb{N}$\lbl{[N1]}}
+\AXC{$\forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R})$\lbl{[N4]}}
+\AXC{$\varphi_{40}$\lbl{A2}}
+\BIC{$1_{\omega} \in \mathbb{N} \to \underline{1_{\omega}} \in \mathbb{R}$}
+\AXC{$\varphi_{188}$\lbl{A1}}
+\BIC{$1_{\omega} \in \mathbb{N} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{65}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{65}$}
+\AXC{$\stackrel{\Pi_{87}}{\vdots}$}\noLine
+\UIC{$\varphi_{239}$}
+\BIC{$(a \in \mathbb{R} \to \varphi_{82}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{86}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{86}$}
+\end{ptree}
+\noindent$\Pi_{89}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$\lbl{Def$X_a$}}
+\AXC{$\varphi_{163}$\lbl{A2}}
+\BIC{$\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$}
+\AXC{$\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)) \to \varphi_{142}$\lbl{A2}}
+\BIC{$\varphi_{142}$}
+\end{ptree}
+\noindent$\Pi_{90}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{88}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{86}$}
+\AXC{$\stackrel{\Pi_{89}}{\vdots}$}\noLine
+\UIC{$\varphi_{142}$}
+\AXC{$\varphi_{142} \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{86}) \to \varphi_{220}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{86}) \to \varphi_{220}$}
+\BIC{$\varphi_{220}$}
+\end{ptree}
+\noindent$\Pi_{91}$:
+\begin{ptree}
+\AXC{$\forall X\,\forall x \in X\,(X \neq \emptyset)$\lbl{[B2]}}
+\AXC{$\forall X\,\forall x \in X\,(X \neq \emptyset) \to \forall x \in X_{a}\,(X_{a} \neq \emptyset)$\lbl{A2}}
+\BIC{$\forall x \in X_{a}\,(X_{a} \neq \emptyset)$}
+\end{ptree}
+\noindent$\Pi_{92}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{91}}{\vdots}$}\noLine
+\UIC{$\forall x \in X_{a}\,(X_{a} \neq \emptyset)$}
+\AXC{$\forall x \in X_{a}\,(X_{a} \neq \emptyset) \to \underline{1_{\omega}} \cdot a \in X_{a} \to X_{a} \neq \emptyset$\lbl{A2}}
+\BIC{$\underline{1_{\omega}} \cdot a \in X_{a} \to X_{a} \neq \emptyset$}
+\AXC{$\varphi_{225}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{97}) \to a \in \mathbb{R} \to \varphi_{107}$}
+\end{ptree}
+\noindent$\Pi_{93}$:
+\begin{ptree}
+\AXC{$\varphi_{130}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{85}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{96}$}
+\AXC{$\varphi_{245}$\lbl{A1}}
+\BIC{$\varphi_{130} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{87}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{87}$}
+\AXC{$\stackrel{\Pi_{90}}{\vdots}$}\noLine
+\UIC{$\varphi_{220}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{97}$}
+\AXC{$\stackrel{\Pi_{92}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{97}) \to a \in \mathbb{R} \to \varphi_{107}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{107}$}
+\end{ptree}
+\noindent$\Pi_{94}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$\lbl{Def$X_a$}}
+\AXC{$\varphi_{163}$\lbl{A2}}
+\BIC{$\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$}
+\AXC{$\varphi_{160}$\lbl{A2}}
+\BIC{$u \in X_{a} \leftrightarrow u \in \mathbb{R} \land \exists n \in \mathbb{N}\,(u = \underline{n} \cdot a)$}
+\AXC{$\varphi_{206}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{92}$}
+\end{ptree}
+\noindent$\Pi_{95}$:
+\begin{ptree}
+\AXC{$\varphi_{80} \to \forall u\,(\varphi_{80})$\lbl{A4}}
+\AXC{$\varphi_{215}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{94}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{92}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{92}) \to \varphi_{80} \to u \in X_{a} \to u \in \mathbb{R}$\lbl{A1}}
+\BIC{$\varphi_{80} \to u \in X_{a} \to u \in \mathbb{R}$}
+\UIC{$\forall u\,(\varphi_{80} \to u \in X_{a} \to u \in \mathbb{R})$}
+\AXC{$\varphi_{273}$\lbl{A1}}
+\BIC{$\varphi_{215} \to (\varphi_{80} \to \forall u\,(\varphi_{80})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{102}$}
+\BIC{$(\varphi_{80} \to \forall u\,(\varphi_{80})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{102}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{102}$}
+\end{ptree}
+\noindent$\Pi_{96}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$\lbl{Def$\subseteq$}}
+\AXC{$\varphi_{114}$\lbl{A2}}
+\BIC{$\forall y\,(X_{a} \subseteq y \leftrightarrow \forall u \in X_{a}\,(u \in y))$}
+\AXC{$\varphi_{143}$\lbl{A2}}
+\BIC{$X_{a} \subseteq \mathbb{R} \leftrightarrow \forall u \in X_{a}\,(u \in \mathbb{R})$}
+\AXC{$\stackrel{\Pi_{95}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{102}$}
+\AXC{$\varphi_{228}$\lbl{A1}}
+\BIC{$(X_{a} \subseteq \mathbb{R} \leftrightarrow \forall u \in X_{a}\,(u \in \mathbb{R})) \to a \in \mathbb{R} \to \varphi_{108}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{108}$}
+\end{ptree}
+\noindent$\Pi_{97}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{96}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{108}$}
+\AXC{$\varphi_{9}$\lbl{(R16)}}
+\AXC{$\varphi_{9} \to X_{a} \subseteq \mathbb{R} \to \varphi_{20}$\lbl{A2}}
+\BIC{$X_{a} \subseteq \mathbb{R} \to \varphi_{20}$}
+\AXC{$(X_{a} \subseteq \mathbb{R} \to \varphi_{20}) \to (a \in \mathbb{R} \to \varphi_{108}) \to (a \in \mathbb{R} \to \varphi_{107}) \to \varphi_{209}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to \varphi_{108}) \to (a \in \mathbb{R} \to \varphi_{107}) \to \varphi_{209}$}
+\BIC{$(a \in \mathbb{R} \to \varphi_{107}) \to \varphi_{209}$}
+\end{ptree}
+\noindent$\Pi_{98}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{84}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{22}$}
+\AXC{$\stackrel{\Pi_{93}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{107}$}
+\AXC{$\stackrel{\Pi_{97}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to \varphi_{107}) \to \varphi_{209}$}
+\BIC{$\varphi_{209}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{29}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{29}) \to \varphi_{272}$\lbl{A1}}
+\BIC{$\varphi_{272}$}
+\end{ptree}
+\noindent$\Pi_{99}$:
+\begin{ptree}
+\AXC{$\varphi_{216}$\lbl{A3}}
+\AXC{$\varphi_{30}$\lbl{A4}}
+\AXC{$\forall x\,(\varphi_{12}) \to \varphi_{34}$\lbl{A3}}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\UIC{$\forall x\,(\varphi_{12})$}
+\AXC{$\stackrel{\Pi_{61}}{\vdots}$}\noLine
+\UIC{$\varphi_{252}$}
+\BIC{$(\forall x\,(\varphi_{12}) \to \varphi_{34}) \to \varphi_{30} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{54}$}
+\BIC{$\varphi_{30} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{54}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{54}$}
+\AXC{$\varphi_{212}$\lbl{A1}}
+\BIC{$\varphi_{80} \land \neg 0 < 0 \to \neg \mathrm{IsSup}(s,X_{a})$}
+\UIC{$\forall s\,(\varphi_{80} \land \neg 0 < 0 \to \neg \mathrm{IsSup}(s,X_{a}))$}
+\AXC{$\stackrel{\Pi_{98}}{\vdots}$}\noLine
+\UIC{$\varphi_{272}$}
+\BIC{$\varphi_{216} \to (\varphi_{80} \land \neg 0 < 0 \to \forall s\,(\varphi_{80} \land \neg 0 < 0)) \to a \in \mathbb{R} \to \varphi_{66}$}
+\BIC{$(\varphi_{80} \land \neg 0 < 0 \to \forall s\,(\varphi_{80} \land \neg 0 < 0)) \to a \in \mathbb{R} \to \varphi_{66}$}
+\end{ptree}
+\noindent$\Pi_{100}$:
+\begin{ptree}
+\AXC{$\varphi_{80} \land \neg 0 < 0 \to \forall s\,(\varphi_{80} \land \neg 0 < 0)$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{99}}{\vdots}$}\noLine
+\UIC{$(\varphi_{80} \land \neg 0 < 0 \to \forall s\,(\varphi_{80} \land \neg 0 < 0)) \to a \in \mathbb{R} \to \varphi_{66}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{66}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{69}$}
+\AXC{$\stackrel{\Pi_{100}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{66}$}
+\AXC{$(a \in \mathbb{R} \to \varphi_{66}) \to (a \in \mathbb{R} \to \varphi_{69}) \to \varphi_{76}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to \varphi_{69}) \to \varphi_{76}$}
+\BIC{$\varphi_{76}$}
+\UIC{$\forall b\,(\varphi_{76})$}
+\UIC{$\forall a\,\forall b\,(\varphi_{76})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall X\,(\mathrm{IsSup}(s,X) \leftrightarrow \mathrm{UB}(s,X) \land \forall w\,(\mathrm{UB}(w,X) \to s \leq w))$
+\item $\varphi_{2} :\equiv \forall y\,(v_{374} = y \to y = v_{374}) \to v_{374} = v_{375} \to v_{375} = v_{374}$
+\item $\varphi_{3} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(s - (s - a) = y \to y = s - (s - a))$
+\item $\varphi_{4} :\equiv \forall z\,\forall w\,(z = w \to 0 < z \to 0 < w) \to \forall w\,(a = w \to 0 < a \to 0 < w)$
+\item $\varphi_{5} :\equiv \forall v_{375}\,(y = v_{375} \to v_{375} = y) \to y = \underline{n} \cdot a \to \underline{n} \cdot a = y$
+\item $\varphi_{6} :\equiv \forall w\,(\mathrm{UB}(w,X_{a}) \to s \leq w) \to \mathrm{UB}(s - a,X_{a}) \to s \leq s - a$
+\item $\varphi_{7} :\equiv \forall X\,(\mathrm{UB}(s - a,X) \leftrightarrow s - a \in \mathbb{R} \land \forall x \in X\,(x \leq s - a))$
+\item $\varphi_{8} :\equiv \forall v_{374}\,\forall v_{375}\,(v_{374} = v_{375} \to v_{375} = v_{374}) \to \forall v_{375}\,(y = v_{375} \to v_{375} = y)$
+\item $\varphi_{9} :\equiv \forall X\,(X \subseteq \mathbb{R} \to X \neq \emptyset \to \exists b\,(\mathrm{UB}(b,X)) \to \exists s\,(\mathrm{IsSup}(s,X)))$
+\item $\varphi_{10} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(\underline{S(m)} \cdot a = y \to y = \underline{S(m)} \cdot a)$
+\item $\varphi_{11} :\equiv \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to \neg y \leq s - a$
+\item $\varphi_{12} :\equiv \forall y\,(\neg \neg (y \in X_{a} \to y \leq s - a)) \to \neg \neg (x \in X_{a} \to x \leq s - a)$
+\item $\varphi_{13} :\equiv \forall m\,(\neg (m \in \mathbb{N} \land y = \underline{m} \cdot a)) \to \neg (n \in \mathbb{N} \land y = \underline{n} \cdot a)$
+\item $\varphi_{14} :\equiv \mathrm{IsSup}(s,X_{a}) \leftrightarrow \mathrm{UB}(s,X_{a}) \land \forall w\,(\mathrm{UB}(w,X_{a}) \to s \leq w)$
+\item $\varphi_{15} :\equiv \forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z) \to \forall y\,\forall z\,(s < y \to y \leq z \to s < z)$
+\item $\varphi_{16} :\equiv \forall x\,(\neg \neg (x \in X_{a} \to x \leq s - a)) \to \neg \neg (x \in X_{a} \to x \leq s - a)$
+\item $\varphi_{17} :\equiv \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to s - a < y$
+\item $\varphi_{18} :\equiv \forall x\,(\forall x\,(\neg \neg (x \in X_{a} \to x \leq s - a)) \to x \in X_{a} \to x \leq s - a)$
+\item $\varphi_{19} :\equiv \mathrm{IsSup}(s,X_{a}) \to \mathrm{UB}(s - a,X_{a}) \to \mathrm{UB}(s - a,X_{a})$
+\item $\varphi_{20} :\equiv X_{a} \neq \emptyset \to \exists b\,(\mathrm{UB}(b,X_{a})) \to \exists s\,(\mathrm{IsSup}(s,X_{a}))$
+\item $\varphi_{21} :\equiv \mathrm{IsSup}(s,X_{a}) \to \mathrm{UB}(s - a,X_{a}) \to \neg \mathrm{UB}(s - a,X_{a})$
+\item $\varphi_{22} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \exists b\,(\mathrm{UB}(b,X_{a}))$
+\item $\varphi_{23} :\equiv \forall y\,(s - (s - a) = y \to y = s - (s - a)) \to s - (s - a) = a \to a = s - (s - a)$
+\item $\varphi_{24} :\equiv \forall y\,(s - a \in \mathbb{R} \to y \in \mathbb{R} \to 0 < y - (s - a) \to s - a < y)$
+\item $\varphi_{25} :\equiv \forall z\,\forall w\,(z = w \to z = b \to w = b) \to \forall w\,(\underline{n} \cdot a = w \to \underline{n} \cdot a = b \to w = b)$
+\item $\varphi_{26} :\equiv \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to s - a \in \mathbb{R}$
+\item $\varphi_{27} :\equiv \forall x\,\forall x\,(\neg \neg (x \in X_{a} \to x \leq s - a)) \to \forall x \in X_{a}\,(x \leq s - a)$
+\item $\varphi_{28} :\equiv \mathrm{IsSup}(s,X_{a}) \to \mathrm{UB}(s - a,X_{a}) \to \forall w\,(\mathrm{UB}(w,X_{a}) \to s \leq w)$
+\item $\varphi_{29} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \exists s\,(\mathrm{IsSup}(s,X_{a}))$
+\item $\varphi_{30} :\equiv \forall y\,(\neg \neg (y \in X_{a} \to y \leq s - a)) \to \forall x\,\forall y\,(\neg \neg (y \in X_{a} \to y \leq s - a))$
+\item $\varphi_{31} :\equiv \forall m\,(\neg (m \in \mathbb{N} \land y = \underline{m} \cdot a)) \to \forall n\,\forall m\,(\neg (m \in \mathbb{N} \land y = \underline{m} \cdot a))$
+\item $\varphi_{32} :\equiv \forall x\,(\neg \neg (x \in X_{a} \to x \leq s - a)) \to \forall x\,\forall x\,(\neg \neg (x \in X_{a} \to x \leq s - a))$
+\item $\varphi_{33} :\equiv \forall n\,(\neg (n \in \mathbb{N} \land b < \underline{n} \cdot a)) \to \neg (n \in \mathbb{N} \land b < \underline{n} \cdot a)$
+\item $\varphi_{34} :\equiv \forall x\,\forall y\,(\neg \neg (y \in X_{a} \to y \leq s - a)) \to \forall x\,(\neg \neg (x \in X_{a} \to x \leq s - a))$
+\item $\varphi_{35} :\equiv \forall n\,\forall m\,(\neg (m \in \mathbb{N} \land y = \underline{m} \cdot a)) \to \forall n\,(\neg (n \in \mathbb{N} \land y = \underline{n} \cdot a))$
+\item $\varphi_{36} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to s \in \mathbb{R}$
+\item $\varphi_{37} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to a \in \mathbb{R}$
+\item $\varphi_{38} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to s - a < s$
+\item $\varphi_{39} :\equiv \forall w\,(a = w \to 0 < a \to 0 < w) \to a = s - (s - a) \to 0 < a \to 0 < s - (s - a)$
+\item $\varphi_{40} :\equiv \forall n \in \mathbb{N}\,(\underline{n} \in \mathbb{R}) \to 1_{\omega} \in \mathbb{N} \to \underline{1_{\omega}} \in \mathbb{R}$
+\item $\varphi_{41} :\equiv 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{UB}(b,X_{a})$
+\item $\varphi_{42} :\equiv \forall x\,(\forall y \in X_{a}\,(\neg y < b \to y = b) \to x \in X_{a} \to \neg x < b \to x = b)$
+\item $\varphi_{43} :\equiv \forall y \in X_{a}\,(\neg y < b \to y = b) \to \forall x \in X_{a}\,(\neg x < b \to x = b)$
+\item $\varphi_{44} :\equiv \forall y\,(\forall x \in X_{a}\,(\neg x < b \to x = b) \to y \in X_{a} \to \neg y < b \to y = b)$
+\item $\varphi_{45} :\equiv \forall x \in X_{a}\,(\neg x < b \to x = b) \to \forall y \in X_{a}\,(\neg y < b \to y = b)$
+\item $\varphi_{46} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to s < y + a$
+\item $\varphi_{47} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to s - (s - a) = a$
+\item $\varphi_{48} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to a = s - (s - a)$
+\item $\varphi_{49} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \forall n\,(\neg (n \in \mathbb{N} \land b < \underline{n} \cdot a))$
+\item $\varphi_{50} :\equiv \forall a\,\forall y\,(s \in \mathbb{R} \to a \in \mathbb{R} \to y \in \mathbb{R} \to s - a < y \to s < y + a)$
+\item $\varphi_{51} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to S(m) \in \mathbb{N}$
+\item $\varphi_{52} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \mathrm{UB}(s,X_{a})$
+\item $\varphi_{53} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to s - a \in \mathbb{R}$
+\item $\varphi_{54} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to 0 < 0$
+\item $\varphi_{55} :\equiv \forall y \in X_{a}\,(\neg y < b \to y = b) \to \forall x\,\forall y \in X_{a}\,(\neg y < b \to y = b)$
+\item $\varphi_{56} :\equiv \forall x \in X_{a}\,(\neg x < b \to x = b) \to \forall y\,\forall x \in X_{a}\,(\neg x < b \to x = b)$
+\item $\varphi_{57} :\equiv m \in \mathbb{N} \land y = \underline{m} \cdot a \to \exists n \in \mathbb{N}\,(\underline{S(m)} \cdot a = \underline{n} \cdot a)$
+\item $\varphi_{58} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to y = \underline{m} \cdot a$
+\item $\varphi_{59} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to 0 < s - (s - a)$
+\item $\varphi_{60} :\equiv \mathrm{IsSup}(s,X_{a}) \to \mathrm{UB}(s - a,X_{a}) \to \mathrm{UB}(s - a,X_{a}) \to s \leq s - a$
+\item $\varphi_{61} :\equiv \forall x\,\forall y \in X_{a}\,(\neg y < b \to y = b) \to \forall x \in X_{a}\,(\neg x < b \to x = b)$
+\item $\varphi_{62} :\equiv \forall y\,\forall x \in X_{a}\,(\neg x < b \to x = b) \to \forall y \in X_{a}\,(\neg y < b \to y = b)$
+\item $\varphi_{63} :\equiv \forall x\,\forall a\,\forall y\,(x \in \mathbb{R} \to a \in \mathbb{R} \to y \in \mathbb{R} \to x - a < y \to x < y + a)$
+\item $\varphi_{64} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \mathrm{IsSup}(s,X_{a})$
+\item $\varphi_{65} :\equiv 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \underline{1_{\omega}} \in \mathbb{R}$
+\item $\varphi_{66} :\equiv b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to 0 < 0$
+\item $\varphi_{67} :\equiv \forall x \in X_{a}\,(x \leq s) \to \underline{S(m)} \cdot a \in X_{a} \to \underline{S(m)} \cdot a \leq s$
+\item $\varphi_{68} :\equiv \forall z\,\forall w\,(z = w \to s < z + a \to s < w + a) \to \forall w\,(y = w \to s < y + a \to s < w + a)$
+\item $\varphi_{69} :\equiv b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \neg 0 < 0$
+\item $\varphi_{70} :\equiv 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to y \leq b$
+\item $\varphi_{71} :\equiv m \in \mathbb{N} \land y = \underline{m} \cdot a \to S(m) \in \mathbb{N} \land \underline{S(m)} \cdot a = \underline{S(m)} \cdot a$
+\item $\varphi_{72} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to \underline{S(m)} \cdot a \leq s$
+\item $\varphi_{73} :\equiv \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to \neg (y \in X_{a} \to y \leq s - a)$
+\item $\varphi_{74} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \neg (n \in \mathbb{N} \land b < \underline{n} \cdot a)$
+\item $\varphi_{75} :\equiv \forall z\,\forall w\,(z = w \to z < b \to w < b) \to \forall w\,(\underline{n} \cdot a = w \to \underline{n} \cdot a < b \to w < b)$
+\item $\varphi_{76} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a)$
+\item $\varphi_{77} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \neg \mathrm{UB}(s - a,X_{a})$
+\item $\varphi_{78} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to \underline{S(m)} \in \mathbb{R}$
+\item $\varphi_{79} :\equiv m \in \mathbb{N} \land y = \underline{m} \cdot a \to \underline{S(m)} \cdot a \in X_{a} \to \underline{S(m)} \cdot a \leq s$
+\item $\varphi_{80} :\equiv a \in \mathbb{R} \land b \in \mathbb{R} \land 0 < a \land 0 < b \land \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a)$
+\item $\varphi_{81} :\equiv 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \forall y \in X_{a}\,(y \leq b)$
+\item $\varphi_{82} :\equiv b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to a \in \mathbb{R}$
+\item $\varphi_{83} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to s < \underline{S(m)} \cdot a$
+\item $\varphi_{84} :\equiv \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)$
+\item $\varphi_{85} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a)$
+\item $\varphi_{86} :\equiv 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \underline{1_{\omega}} \cdot a \in \mathbb{R}$
+\item $\varphi_{87} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \exists n \in \mathbb{N}\,(\underline{1_{\omega}} \cdot a = \underline{n} \cdot a)$
+\item $\varphi_{88} :\equiv \forall w\,(\underline{n} \cdot a = w \to \underline{n} \cdot a = b \to w = b) \to \underline{n} \cdot a = y \to \underline{n} \cdot a = b \to y = b$
+\item $\varphi_{89} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to s < \underline{m} \cdot a + a$
+\item $\varphi_{90} :\equiv \underline{m} \cdot a + a = \underline{S(m)} \cdot a \to s < \underline{m} \cdot a + a \to s < \underline{S(m)} \cdot a$
+\item $\varphi_{91} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to \forall x \in X_{a}\,(x \leq s)$
+\item $\varphi_{92} :\equiv 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to u \in X_{a} \to u \in \mathbb{R}$
+\item $\varphi_{93} :\equiv \forall y\,\forall z\,(s < y \to y \leq z \to s < z) \to \forall z\,(s < \underline{S(m)} \cdot a \to \underline{S(m)} \cdot a \leq z \to s < z)$
+\item $\varphi_{94} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to \underline{S(m)} \cdot a \in \mathbb{R}$
+\item $\varphi_{95} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)$
+\item $\varphi_{96} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to 1_{\omega} \in \mathbb{N} \land \underline{1_{\omega}} \cdot a = \underline{1_{\omega}} \cdot a$
+\item $\varphi_{97} :\equiv 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \underline{1_{\omega}} \cdot a \in X_{a}$
+\item $\varphi_{98} :\equiv \forall y\,(s \in \mathbb{R} \to y \in \mathbb{R} \to s - (s - y) = y) \to s \in \mathbb{R} \to a \in \mathbb{R} \to s - (s - a) = a$
+\item $\varphi_{99} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to m \in \mathbb{N} \land y = \underline{m} \cdot a$
+\item $\varphi_{100} :\equiv \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to s < s$
+\item $\varphi_{101} :\equiv \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to 0 < 0$
+\item $\varphi_{102} :\equiv 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \forall u \in X_{a}\,(u \in \mathbb{R})$
+\item $\varphi_{103} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \neg \forall x \in X_{a}\,(x \leq s - a)$
+\item $\varphi_{104} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \exists x\,(\neg (x \in X_{a} \to x \leq s - a))$
+\item $\varphi_{105} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to n \in \mathbb{N} \land y = \underline{n} \cdot a \to y \leq b$
+\item $\varphi_{106} :\equiv 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to y \in X_{a}$
+\item $\varphi_{107} :\equiv b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to X_{a} \neq \emptyset$
+\item $\varphi_{108} :\equiv b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to X_{a} \subseteq \mathbb{R}$
+\item $\varphi_{109} :\equiv \forall z\,\forall w\,(z = w \to s < z \to s < w) \to \forall w\,(\underline{m} \cdot a + a = w \to s < \underline{m} \cdot a + a \to s < w)$
+\item $\varphi_{110} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to \underline{S(m)} \cdot a \in X_{a}$
+\item $\varphi_{111} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \mathrm{UB}(s - a,X_{a}) \to s \leq s - a$
+\item $\varphi_{112} :\equiv \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to m \in \mathbb{N}$
+\item $\varphi_{113} :\equiv \forall y\,(s \in \mathbb{R} \to y \in \mathbb{R} \to s - y \in \mathbb{R}) \to s \in \mathbb{R} \to a \in \mathbb{R} \to s - a \in \mathbb{R}$
+\item $\varphi_{114} :\equiv \forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to \forall y\,(X_{a} \subseteq y \leftrightarrow \forall u \in X_{a}\,(u \in y))$
+\item $\varphi_{115} :\equiv \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to a \in \mathbb{R}$
+\item $\varphi_{116} :\equiv \forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a)) \to \forall X\,(\mathrm{UB}(s,X) \leftrightarrow s \in \mathbb{R} \land \forall x \in X\,(x \leq s))$
+\item $\varphi_{117} :\equiv \forall w\,(y = w \to s < y + a \to s < w + a) \to y = \underline{m} \cdot a \to s < y + a \to s < \underline{m} \cdot a + a$
+\item $\varphi_{118} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - (x - y) = y) \to \forall y\,(s \in \mathbb{R} \to y \in \mathbb{R} \to s - (s - y) = y)$
+\item $\varphi_{119} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \neg x < y \to y \leq x) \to \forall y\,(b \in \mathbb{R} \to y \in \mathbb{R} \to \neg b < y \to y \leq b)$
+\item $\varphi_{120} :\equiv \forall a\,\forall X\,(\mathrm{UB}(a,X) \leftrightarrow a \in \mathbb{R} \land \forall x \in X\,(x \leq a)) \to \forall X\,(\mathrm{UB}(b,X) \leftrightarrow b \in \mathbb{R} \land \forall x \in X\,(x \leq b))$
+\item $\varphi_{121} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to \underline{S(m)} \cdot a = \underline{m} \cdot a + a$
+\item $\varphi_{122} :\equiv \neg (y \in X_{a} \to y \leq s - a) \to m \in \mathbb{N} \land y = \underline{m} \cdot a \to \underline{m} \cdot a + a = \underline{S(m)} \cdot a$
+\item $\varphi_{123} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to 0 < 0$
+\item $\varphi_{124} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to n \in \mathbb{N} \land y = \underline{n} \cdot a \to n \in \mathbb{N}$
+\item $\varphi_{125} :\equiv \forall w\,(\underline{n} \cdot a = w \to \underline{n} \cdot a < b \to w < b) \to \underline{n} \cdot a = y \to \underline{n} \cdot a < b \to y < b$
+\item $\varphi_{126} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to n \in \mathbb{N} \land y = \underline{n} \cdot a \to a \in \mathbb{R}$
+\item $\varphi_{127} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to n \in \mathbb{N} \land y = \underline{n} \cdot a \to b \in \mathbb{R}$
+\item $\varphi_{128} :\equiv \forall n\,(\neg (n \in \mathbb{N} \land \underline{S(m)} \cdot a = \underline{n} \cdot a)) \to \neg (S(m) \in \mathbb{N} \land \underline{S(m)} \cdot a = \underline{S(m)} \cdot a)$
+\item $\varphi_{129} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(s \in \mathbb{R} \to y \in \mathbb{R} \to s - y \in \mathbb{R})$
+\item $\varphi_{130} :\equiv \forall n\,(\neg (n \in \mathbb{N} \land \underline{1_{\omega}} \cdot a = \underline{n} \cdot a)) \to \neg (1_{\omega} \in \mathbb{N} \land \underline{1_{\omega}} \cdot a = \underline{1_{\omega}} \cdot a)$
+\item $\varphi_{131} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to y \in \mathbb{R}$
+\item $\varphi_{132} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to a \in \mathbb{R}$
+\item $\varphi_{133} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to n \in \mathbb{N} \land y = \underline{n} \cdot a \to \underline{n} \cdot a \leq b$
+\item $\varphi_{134} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to n \in \mathbb{N} \land y = \underline{n} \cdot a \to y = \underline{n} \cdot a$
+\item $\varphi_{135} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to n \in \mathbb{N} \land y = \underline{n} \cdot a \to \underline{n} \cdot a = y$
+\item $\varphi_{136} :\equiv \forall X\,(\mathrm{UB}(s,X) \leftrightarrow s \in \mathbb{R} \land \forall x \in X\,(x \leq s)) \to (\mathrm{UB}(s,X_{a}) \leftrightarrow s \in \mathbb{R} \land \forall x \in X_{a}\,(x \leq s))$
+\item $\varphi_{137} :\equiv \forall X\,(\mathrm{UB}(b,X) \leftrightarrow b \in \mathbb{R} \land \forall x \in X\,(x \leq b)) \to (\mathrm{UB}(b,X_{a}) \leftrightarrow b \in \mathbb{R} \land \forall x \in X_{a}\,(x \leq b))$
+\item $\varphi_{138} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to n \in \mathbb{N} \land y = \underline{n} \cdot a \to \underline{n} \in \mathbb{R}$
+\item $\varphi_{139} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to y \in X_{a}$
+\item $\varphi_{140} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to n \in \mathbb{N} \land y = \underline{n} \cdot a \to \neg b < \underline{n} \cdot a$
+\item $\varphi_{141} :\equiv \underline{S(m)} \cdot a \in X_{a} \leftrightarrow \underline{S(m)} \cdot a \in \mathbb{R} \land \exists n \in \mathbb{N}\,(\underline{S(m)} \cdot a = \underline{n} \cdot a)$
+\item $\varphi_{142} :\equiv \underline{1_{\omega}} \cdot a \in X_{a} \leftrightarrow \underline{1_{\omega}} \cdot a \in \mathbb{R} \land \exists n \in \mathbb{N}\,(\underline{1_{\omega}} \cdot a = \underline{n} \cdot a)$
+\item $\varphi_{143} :\equiv \forall y\,(X_{a} \subseteq y \leftrightarrow \forall u \in X_{a}\,(u \in y)) \to (X_{a} \subseteq \mathbb{R} \leftrightarrow \forall u \in X_{a}\,(u \in \mathbb{R}))$
+\item $\varphi_{144} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to n \in \mathbb{N} \land y = \underline{n} \cdot a \to \underline{n} \cdot a \in \mathbb{R}$
+\item $\varphi_{145} :\equiv \forall z\,(s < \underline{S(m)} \cdot a \to \underline{S(m)} \cdot a \leq z \to s < z) \to s < \underline{S(m)} \cdot a \to \underline{S(m)} \cdot a \leq s \to s < s$
+\item $\varphi_{146} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \neg y \leq x \to x < y) \to \forall y\,(s - a \in \mathbb{R} \to y \in \mathbb{R} \to \neg y \leq s - a \to s - a < y)$
+\item $\varphi_{147} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(\underline{n} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{n} \cdot y \in \mathbb{R})$
+\item $\varphi_{148} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to y \in X_{a} \to n \in \mathbb{N} \land y = \underline{n} \cdot a \to n \in \mathbb{N} \land y = \underline{n} \cdot a$
+\item $\varphi_{149} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(\underline{S(m)} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{S(m)} \cdot y \in \mathbb{R})$
+\item $\varphi_{150} :\equiv \forall y\,(\underline{S(m)} \cdot a = y \to y = \underline{S(m)} \cdot a) \to \underline{S(m)} \cdot a = \underline{m} \cdot a + a \to \underline{m} \cdot a + a = \underline{S(m)} \cdot a$
+\item $\varphi_{151} :\equiv \forall y\,(\underline{n} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{n} \cdot y \in \mathbb{R}) \to \underline{n} \in \mathbb{R} \to a \in \mathbb{R} \to \underline{n} \cdot a \in \mathbb{R}$
+\item $\varphi_{152} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(\underline{1_{\omega}} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{1_{\omega}} \cdot y \in \mathbb{R})$
+\item $\varphi_{153} :\equiv \forall y\,(s - a \in \mathbb{R} \to y \in \mathbb{R} \to \neg y \leq s - a \to s - a < y) \to s - a \in \mathbb{R} \to y \in \mathbb{R} \to \neg y \leq s - a \to s - a < y$
+\item $\varphi_{154} :\equiv \forall y\,(b \in \mathbb{R} \to y \in \mathbb{R} \to \neg b < y \to y \leq b) \to b \in \mathbb{R} \to \underline{n} \cdot a \in \mathbb{R} \to \neg b < \underline{n} \cdot a \to \underline{n} \cdot a \leq b$
+\item $\varphi_{155} :\equiv \varphi_{16} \to \forall x\,(\neg \neg (x \in X_{a} \to x \leq s - a)) \to x \in X_{a} \to x \leq s - a$
+\item $\varphi_{156} :\equiv \forall a\,(m \in \mathbb{N} \to a \in \mathbb{R} \to \underline{S(m)} \cdot a = \underline{m} \cdot a + a) \to m \in \mathbb{N} \to a \in \mathbb{R} \to \underline{S(m)} \cdot a = \underline{m} \cdot a + a$
+\item $\varphi_{157} :\equiv \forall y\,(\underline{S(m)} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{S(m)} \cdot y \in \mathbb{R}) \to \underline{S(m)} \in \mathbb{R} \to a \in \mathbb{R} \to \underline{S(m)} \cdot a \in \mathbb{R}$
+\item $\varphi_{158} :\equiv \forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)) \to (y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$
+\item $\varphi_{159} :\equiv \forall y\,(\underline{1_{\omega}} \in \mathbb{R} \to y \in \mathbb{R} \to \underline{1_{\omega}} \cdot y \in \mathbb{R}) \to \underline{1_{\omega}} \in \mathbb{R} \to a \in \mathbb{R} \to \underline{1_{\omega}} \cdot a \in \mathbb{R}$
+\item $\varphi_{160} :\equiv \forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)) \to (u \in X_{a} \leftrightarrow u \in \mathbb{R} \land \exists n \in \mathbb{N}\,(u = \underline{n} \cdot a))$
+\item $\varphi_{161} :\equiv \forall m\,\forall a\,(m \in \mathbb{N} \to a \in \mathbb{R} \to \underline{S(m)} \cdot a = \underline{m} \cdot a + a) \to \forall a\,(m \in \mathbb{N} \to a \in \mathbb{R} \to \underline{S(m)} \cdot a = \underline{m} \cdot a + a)$
+\item $\varphi_{162} :\equiv \varphi_{7} \to (\mathrm{UB}(s - a,X_{a}) \leftrightarrow s - a \in \mathbb{R} \land \forall x \in X_{a}\,(x \leq s - a))$
+\item $\varphi_{163} :\equiv \forall a\,\forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)) \to \forall y\,(y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a))$
+\item $\varphi_{164} :\equiv \forall y\,(s \in \mathbb{R} \to a \in \mathbb{R} \to y \in \mathbb{R} \to s - a < y \to s < y + a) \to s \in \mathbb{R} \to a \in \mathbb{R} \to y \in \mathbb{R} \to s - a < y \to s < y + a$
+\item $\varphi_{165} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{46}$
+\item $\varphi_{166} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{51}$
+\item $\varphi_{167} :\equiv (\forall b\,(\neg \mathrm{UB}(b,X_{a})) \to \neg \mathrm{UB}(b,X_{a})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{22}$
+\item $\varphi_{168} :\equiv \varphi_{80} \land \mathrm{IsSup}(s,X_{a}) \land \neg (y \in X_{a} \to y \leq s - a) \land \neg 0 < 0$
+\item $\varphi_{169} :\equiv \varphi_{80} \land \mathrm{IsSup}(s,X_{a}) \land \neg 0 < 0 \to \neg \neg (y \in X_{a} \to y \leq s - a)$
+\item $\varphi_{170} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{58}$
+\item $\varphi_{171} :\equiv \forall n\,(\varphi_{80} \land y \in X_{a} \land \neg y \leq b) \to \forall n\,(\neg (n \in \mathbb{N} \land y = \underline{n} \cdot a))$
+\item $\varphi_{172} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{11}$
+\item $\varphi_{173} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{17}$
+\item $\varphi_{174} :\equiv \varphi_{50} \to \forall y\,(s \in \mathbb{R} \to a \in \mathbb{R} \to y \in \mathbb{R} \to s - a < y \to s < y + a)$
+\item $\varphi_{175} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{72}$
+\item $\varphi_{176} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{19}$
+\item $\varphi_{177} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{21}$
+\item $\varphi_{178} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{78}$
+\item $\varphi_{179} :\equiv \forall y\,(\varphi_{80} \land \mathrm{IsSup}(s,X_{a}) \land \neg 0 < 0) \to \forall y\,(\neg \neg (y \in X_{a} \to y \leq s - a))$
+\item $\varphi_{180} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{83}$
+\item $\varphi_{181} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{26}$
+\item $\varphi_{182} :\equiv (s - (s - a) = a \to a = s - (s - a)) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{48}$
+\item $\varphi_{183} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{28}$
+\item $\varphi_{184} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{89}$
+\item $\varphi_{185} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{91}$
+\item $\varphi_{186} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{94}$
+\item $\varphi_{187} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{99}$
+\item $\varphi_{188} :\equiv (1_{\omega} \in \mathbb{N} \to \underline{1_{\omega}} \in \mathbb{R}) \to 1_{\omega} \in \mathbb{N} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{65}$
+\item $\varphi_{189} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{110}$
+\item $\varphi_{190} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{60}$
+\item $\varphi_{191} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{73}$
+\item $\varphi_{192} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{121}$
+\item $\varphi_{193} :\equiv 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \varphi_{122}$
+\item $\varphi_{194} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to \varphi_{57}$
+\item $\varphi_{195} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{84}$
+\item $\varphi_{196} :\equiv (a = s - (s - a) \to 0 < a \to 0 < s - (s - a)) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{59}$
+\item $\varphi_{197} :\equiv \underline{1_{\omega}} \cdot a = \underline{1_{\omega}} \cdot a \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{96}$
+\item $\varphi_{198} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to \varphi_{71}$
+\item $\varphi_{199} :\equiv \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \mathrm{IsSup}(s,X_{a}) \to \neg (y \in X_{a} \to y \leq s - a) \to \varphi_{79}$
+\item $\varphi_{200} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{100}$
+\item $\varphi_{201} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{101}$
+\item $\varphi_{202} :\equiv (\mathrm{UB}(s,X_{a}) \leftrightarrow s \in \mathbb{R} \land \forall x \in X_{a}\,(x \leq s)) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}$
+\item $\varphi_{203} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{112}$
+\item $\varphi_{204} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \neg \exists n \in \mathbb{N}\,(b < \underline{n} \cdot a) \to \varphi_{115}$
+\item $\varphi_{205} :\equiv (\underline{n} \cdot a = y \to \underline{n} \cdot a = b \to y = b) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{105}$
+\item $\varphi_{206} :\equiv (u \in X_{a} \leftrightarrow u \in \mathbb{R} \land \exists n \in \mathbb{N}\,(u = \underline{n} \cdot a)) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{92}$
+\item $\varphi_{207} :\equiv (y = \underline{n} \cdot a \to \underline{n} \cdot a = y) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{135}$
+\item $\varphi_{208} :\equiv (y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{95}$
+\item $\varphi_{209} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{22}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{29}$
+\item $\varphi_{210} :\equiv (y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{131}$
+\item $\varphi_{211} :\equiv \forall y\,(\varphi_{80} \to y \in X_{a} \to y \leq b) \to \forall y\,(\varphi_{80}) \to \forall y \in X_{a}\,(y \leq b)$
+\item $\varphi_{212} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{54}) \to \varphi_{80} \land \neg 0 < 0 \to \neg \mathrm{IsSup}(s,X_{a})$
+\item $\varphi_{213} :\equiv \varphi_{80} \land \mathrm{IsSup}(s,X_{a}) \land \neg 0 < 0 \to \forall y\,(\varphi_{80} \land \mathrm{IsSup}(s,X_{a}) \land \neg 0 < 0)$
+\item $\varphi_{214} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{37}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{47}$
+\item $\varphi_{215} :\equiv \forall u\,(\varphi_{80} \to u \in X_{a} \to u \in \mathbb{R}) \to \forall u\,(\varphi_{80}) \to \forall u \in X_{a}\,(u \in \mathbb{R})$
+\item $\varphi_{216} :\equiv \forall s\,(\varphi_{80} \land \neg 0 < 0 \to \neg \mathrm{IsSup}(s,X_{a})) \to \forall s\,(\varphi_{80} \land \neg 0 < 0) \to \forall s\,(\neg \mathrm{IsSup}(s,X_{a}))$
+\item $\varphi_{217} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{37}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{53}$
+\item $\varphi_{218} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{85}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{49}$
+\item $\varphi_{219} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{59}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{38}$
+\item $\varphi_{220} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{87}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{97}$
+\item $\varphi_{221} :\equiv (y = \underline{m} \cdot a \to s < y + a \to s < \underline{m} \cdot a + a) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{184}$
+\item $\varphi_{222} :\equiv (\mathrm{UB}(s,X_{a}) \leftrightarrow s \in \mathbb{R} \land \forall x \in X_{a}\,(x \leq s)) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{185}$
+\item $\varphi_{223} :\equiv \underline{S(m)} \cdot a = \underline{S(m)} \cdot a \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{198}$
+\item $\varphi_{224} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{53}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{103}$
+\item $\varphi_{225} :\equiv (\underline{1_{\omega}} \cdot a \in X_{a} \to X_{a} \neq \emptyset) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{97}) \to a \in \mathbb{R} \to \varphi_{107}$
+\item $\varphi_{226} :\equiv (\underline{S(m)} \cdot a = \underline{m} \cdot a + a \to \underline{m} \cdot a + a = \underline{S(m)} \cdot a) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{193}$
+\item $\varphi_{227} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{105}) \to \varphi_{80} \land y \in X_{a} \land \neg y \leq b \to \neg (n \in \mathbb{N} \land y = \underline{n} \cdot a)$
+\item $\varphi_{228} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{102}) \to (X_{a} \subseteq \mathbb{R} \leftrightarrow \forall u \in X_{a}\,(u \in \mathbb{R})) \to a \in \mathbb{R} \to \varphi_{108}$
+\item $\varphi_{229} :\equiv \forall n\,(\varphi_{80} \land y \in X_{a} \land \neg y \leq b \to \neg (n \in \mathbb{N} \land y = \underline{n} \cdot a)) \to \varphi_{171}$
+\item $\varphi_{230} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{124}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{138}$
+\item $\varphi_{231} :\equiv (s \leq s - a \to \neg s - a < s) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{38}) \to \varphi_{177}$
+\item $\varphi_{232} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{124}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{140}$
+\item $\varphi_{233} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{126}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{144}$
+\item $\varphi_{234} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{140}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{133}$
+\item $\varphi_{235} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{148}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{124}$
+\item $\varphi_{236} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{49}) \to \varphi_{33} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{74}$
+\item $\varphi_{237} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{148}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{134}$
+\item $\varphi_{238} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{64}) \to \varphi_{14} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{52}$
+\item $\varphi_{239} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{65}) \to (a \in \mathbb{R} \to \varphi_{82}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{86}$
+\item $\varphi_{240} :\equiv (\varphi_{80} \land y \in X_{a} \land \neg y \leq b \to \forall n\,(\varphi_{80} \land y \in X_{a} \land \neg y \leq b)) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{70}$
+\item $\varphi_{241} :\equiv (\mathrm{UB}(s - a,X_{a}) \leftrightarrow s - a \in \mathbb{R} \land \forall x \in X_{a}\,(x \leq s - a)) \to \varphi_{224}$
+\item $\varphi_{242} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{48}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to 0 < a) \to \varphi_{196}$
+\item $\varphi_{243} :\equiv (\forall n\,(\varphi_{13}) \to \varphi_{35}) \to \varphi_{31} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{123}$
+\item $\varphi_{244} :\equiv \forall m\,(\varphi_{168} \to \neg (m \in \mathbb{N} \land y = \underline{m} \cdot a)) \to \forall m\,(\varphi_{168}) \to \forall m\,(\neg (m \in \mathbb{N} \land y = \underline{m} \cdot a))$
+\item $\varphi_{245} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{96}) \to \varphi_{130} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{87}$
+\item $\varphi_{246} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{166}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{178}$
+\item $\varphi_{247} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{133}) \to (\underline{n} \cdot a = y \to \underline{n} \cdot a < b \to y < b) \to \varphi_{205}$
+\item $\varphi_{248} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{187}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{170}$
+\item $\varphi_{249} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{189}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{175}$
+\item $\varphi_{250} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{139}) \to (y \in X_{a} \leftrightarrow y \in \mathbb{R} \land \exists n \in \mathbb{N}\,(y = \underline{n} \cdot a)) \to \varphi_{195}$
+\item $\varphi_{251} :\equiv (m \in \mathbb{N} \to S(m) \in \mathbb{N}) \to \varphi_{203} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{166}$
+\item $\varphi_{252} :\equiv \forall x\,(\varphi_{12}) \to (\forall x\,(\varphi_{12}) \to \varphi_{34}) \to \varphi_{30} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{54}$
+\item $\varphi_{253} :\equiv (s \in \mathbb{R} \to a \in \mathbb{R} \to s - (s - a) = a) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}) \to \varphi_{214}$
+\item $\varphi_{254} :\equiv (s \in \mathbb{R} \to a \in \mathbb{R} \to s - a \in \mathbb{R}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}) \to \varphi_{217}$
+\item $\varphi_{255} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{194}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{189}$
+\item $\varphi_{256} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{132}) \to \varphi_{181}$
+\item $\varphi_{257} :\equiv (\mathrm{UB}(b,X_{a}) \leftrightarrow b \in \mathbb{R} \land \forall x \in X_{a}\,(x \leq b)) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{81}) \to \varphi_{45} \to \varphi_{43} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{41}$
+\item $\varphi_{258} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{184}) \to \varphi_{90} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{180}$
+\item $\varphi_{259} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{131}) \to \varphi_{173} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{165}$
+\item $\varphi_{260} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{53}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}) \to \varphi_{219}$
+\item $\varphi_{261} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{185}) \to \varphi_{67} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{199}$
+\item $\varphi_{262} :\equiv (\underline{n} \in \mathbb{R} \to a \in \mathbb{R} \to \underline{n} \cdot a \in \mathbb{R}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{138}) \to \varphi_{233}$
+\item $\varphi_{263} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{198}) \to \varphi_{128} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{194}$
+\item $\varphi_{264} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{180}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{175}) \to \varphi_{200}$
+\item $\varphi_{265} :\equiv (s - a \in \mathbb{R} \to s \in \mathbb{R} \to 0 < s - (s - a) \to s - a < s) \to \varphi_{260}$
+\item $\varphi_{266} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{103}) \to \varphi_{18} \to (\varphi_{18} \to \varphi_{27}) \to \varphi_{32} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{104}$
+\item $\varphi_{267} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{178}) \to \varphi_{204} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{186}$
+\item $\varphi_{268} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{127}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{144}) \to \varphi_{234}$
+\item $\varphi_{269} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{170}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{165}) \to \varphi_{221}$
+\item $\varphi_{270} :\equiv \forall y\,(\varphi_{80} \to y \in X_{a} \to y \leq b) \to \varphi_{211} \to (\varphi_{80} \to \forall y\,(\varphi_{80})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{81}$
+\item $\varphi_{271} :\equiv (m \in \mathbb{N} \to a \in \mathbb{R} \to \underline{S(m)} \cdot a = \underline{m} \cdot a + a) \to \varphi_{203} \to \varphi_{204} \to a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to \varphi_{192}$
+\item $\varphi_{272} :\equiv \forall s\,(\varphi_{80} \land \neg 0 < 0 \to \neg \mathrm{IsSup}(s,X_{a})) \to \varphi_{216} \to (\varphi_{80} \land \neg 0 < 0 \to \forall s\,(\varphi_{80} \land \neg 0 < 0)) \to a \in \mathbb{R} \to \varphi_{66}$
+\item $\varphi_{273} :\equiv \forall u\,(\varphi_{80} \to u \in X_{a} \to u \in \mathbb{R}) \to \varphi_{215} \to (\varphi_{80} \to \forall u\,(\varphi_{80})) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{102}$
+\item $\varphi_{274} :\equiv (s - a \in \mathbb{R} \to y \in \mathbb{R} \to \neg y \leq s - a \to s - a < y) \to \varphi_{181} \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{131}) \to \varphi_{172} \to \varphi_{173}$
+\item $\varphi_{275} :\equiv (b \in \mathbb{R} \to \underline{n} \cdot a \in \mathbb{R} \to \neg b < \underline{n} \cdot a \to \underline{n} \cdot a \leq b) \to \varphi_{268}$
+\item $\varphi_{276} :\equiv \forall n\,(\varphi_{80} \land y \in X_{a} \land \neg y \leq b \to \neg (n \in \mathbb{N} \land y = \underline{n} \cdot a)) \to \varphi_{229} \to \varphi_{240}$
+\item $\varphi_{277} :\equiv (s \in \mathbb{R} \to a \in \mathbb{R} \to y \in \mathbb{R} \to s - a < y \to s < y + a) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{36}) \to \varphi_{204} \to \varphi_{259}$
+\item $\varphi_{278} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to 0 < a \to 0 < b \to \varphi_{104}) \to \forall y\,(\varphi_{169}) \to (\forall y\,(\varphi_{169}) \to \varphi_{179}) \to \varphi_{213} \to \varphi_{252}$
+\item $\varphi_{279} :\equiv \forall m\,(\varphi_{168} \to \neg (m \in \mathbb{N} \land y = \underline{m} \cdot a)) \to \varphi_{244} \to (\varphi_{168} \to \forall m\,(\varphi_{168})) \to \forall n\,(\varphi_{13}) \to \varphi_{243}$
+\end{abbrevlist}
+\end{fullproof}

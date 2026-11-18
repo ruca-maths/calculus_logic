@@ -1,0 +1,14 @@
+\chapter*{第III部について}
+\addcontentsline{toc}{chapter}{第III部について}
+
+第III部には, 第I部・第II部で述べたすべての定理の\textbf{完全展開した証明木}を, テキストの章の順に収める.
+各証明木はプログラム \texttt{prover/build.js} が出力したもので, すべてのノードが
+\begin{itemize}
+  \item 葉: 論理的公理 (A1)--(A6), $\ZFC$ の公理, 定義公理, 既に完全展開した定理, 付録\ref{app:registry}の基礎定理,
+  \item 内部ノード: MP(二分岐)または Gen(一分岐)
+\end{itemize}
+のいずれかであることが機械的に検査されている. 木の読み方(葉のラベル, 部分木 $\Pi_i$, 略記 $\varphi_i$)は第\ref{sec:reading}節を参照.
+
+第II部の各定理の直後の「形式化」の欄に, その定理の形式的な主張と, 本部での証明木の頁を記した. 逆に, 本部の各証明木の見出しのラベル(例: 定理2.14, [C9])から第II部の対応箇所を引くことができる.
+
+\input{gen/part3}

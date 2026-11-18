@@ -1,0 +1,151 @@
+% 自動生成 (prover/build.js): AbsR  ノード数 65
+\begin{fullproof}{[A5]}{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$}{65}\phantomsection\label{tree:AbsR}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R}) \to x \in \mathbb{R} \to -x \in \mathbb{R}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to -x \in \mathbb{R}$}
+\AXC{$(x \in \mathbb{R} \to -x \in \mathbb{R}) \to \varphi_{11}$\lbl{A1}}
+\BIC{$\varphi_{11}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(\lvert x \rvert = y \to y = \lvert x \rvert)$\lbl{A2}}
+\BIC{$\forall y\,(\lvert x \rvert = y \to y = \lvert x \rvert)$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to \neg 0 \leq x \land \lvert x \rvert = -x$\lbl{A1}}
+\AXC{$\varphi_{13}$\lbl{A1}}
+\BIC{$x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to \lvert x \rvert = -x$}
+\AXC{$(x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to \lvert x \rvert = -x) \to \varphi_{6}$\lbl{A1}}
+\BIC{$\varphi_{6}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\forall y\,(\lvert x \rvert = y \to y = \lvert x \rvert)$}
+\AXC{$\forall y\,(\lvert x \rvert = y \to y = \lvert x \rvert) \to \lvert x \rvert = -x \to -x = \lvert x \rvert$\lbl{A2}}
+\BIC{$\lvert x \rvert = -x \to -x = \lvert x \rvert$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{6}$}
+\BIC{$x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to -x = \lvert x \rvert$}
+\AXC{$\varphi_{16}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to -x \in \mathbb{R}) \to \varphi_{12}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{11}$}
+\BIC{$x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to -x \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to -x \in \mathbb{R}) \to \varphi_{12}$}
+\BIC{$\varphi_{12}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(\lvert x \rvert = y \to y = \lvert x \rvert)$\lbl{A2}}
+\BIC{$\forall y\,(\lvert x \rvert = y \to y = \lvert x \rvert)$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to 0 \leq x \land \lvert x \rvert = x$\lbl{A1}}
+\AXC{$\varphi_{8}$\lbl{A1}}
+\BIC{$x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to \lvert x \rvert = x$}
+\AXC{$(x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to \lvert x \rvert = x) \to \varphi_{1}$\lbl{A1}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\forall y\,(\lvert x \rvert = y \to y = \lvert x \rvert)$}
+\AXC{$\forall y\,(\lvert x \rvert = y \to y = \lvert x \rvert) \to \lvert x \rvert = x \to x = \lvert x \rvert$\lbl{A2}}
+\BIC{$\lvert x \rvert = x \to x = \lvert x \rvert$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\BIC{$x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to x = \lvert x \rvert$}
+\AXC{$\varphi_{15}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to x \in \mathbb{R}) \to \varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to x \in \mathbb{R}) \to \varphi_{9}$}
+\BIC{$\varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\forall x\,(0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x)$\lbl{Def$\lvert\cdot\rvert$}}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x$}
+\AXC{$\varphi_{14}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to \lvert x \rvert \in \mathbb{R}) \to \varphi_{7}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$z = w \to z \in \mathbb{R} \to w \in \mathbb{R}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z \in \mathbb{R} \to w \in \mathbb{R})$}
+\UIC{$\forall z\,\forall w\,(z = w \to z \in \mathbb{R} \to w \in \mathbb{R})$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall w\,(x = w \to x \in \mathbb{R} \to w \in \mathbb{R})$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$x = \lvert x \rvert \to x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{9}$}
+\BIC{$x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to \lvert x \rvert \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to \lvert x \rvert \in \mathbb{R}) \to \varphi_{7}$}
+\BIC{$\varphi_{7}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$z = w \to z \in \mathbb{R} \to w \in \mathbb{R}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z \in \mathbb{R} \to w \in \mathbb{R})$}
+\UIC{$\forall z\,\forall w\,(z = w \to z \in \mathbb{R} \to w \in \mathbb{R})$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall w\,(-x = w \to -x \in \mathbb{R} \to w \in \mathbb{R})$}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\BIC{$-x = \lvert x \rvert \to -x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{12}$}
+\BIC{$x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to \lvert x \rvert \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{7}$}
+\BIC{$x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}$}
+\UIC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv (\lvert x \rvert = x \to x = \lvert x \rvert) \to x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to x = \lvert x \rvert$
+\item $\varphi_{2} :\equiv \forall z\,\forall w\,(z = w \to z \in \mathbb{R} \to w \in \mathbb{R}) \to \forall w\,(x = w \to x \in \mathbb{R} \to w \in \mathbb{R})$
+\item $\varphi_{3} :\equiv \forall w\,(x = w \to x \in \mathbb{R} \to w \in \mathbb{R}) \to x = \lvert x \rvert \to x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}$
+\item $\varphi_{4} :\equiv \forall z\,\forall w\,(z = w \to z \in \mathbb{R} \to w \in \mathbb{R}) \to \forall w\,(-x = w \to -x \in \mathbb{R} \to w \in \mathbb{R})$
+\item $\varphi_{5} :\equiv \forall x\,(0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x) \to 0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x$
+\item $\varphi_{6} :\equiv (\lvert x \rvert = -x \to -x = \lvert x \rvert) \to x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to -x = \lvert x \rvert$
+\item $\varphi_{7} :\equiv (x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to \lvert x \rvert \in \mathbb{R}) \to x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}$
+\item $\varphi_{8} :\equiv (x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to 0 \leq x \land \lvert x \rvert = x) \to x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to \lvert x \rvert = x$
+\item $\varphi_{9} :\equiv (x = \lvert x \rvert \to x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}) \to x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to \lvert x \rvert \in \mathbb{R}$
+\item $\varphi_{10} :\equiv \forall w\,(-x = w \to -x \in \mathbb{R} \to w \in \mathbb{R}) \to -x = \lvert x \rvert \to -x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}$
+\item $\varphi_{11} :\equiv (x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to x \in \mathbb{R}) \to x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to -x \in \mathbb{R}$
+\item $\varphi_{12} :\equiv (-x = \lvert x \rvert \to -x \in \mathbb{R} \to \lvert x \rvert \in \mathbb{R}) \to x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to \lvert x \rvert \in \mathbb{R}$
+\item $\varphi_{13} :\equiv (x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to \neg 0 \leq x \land \lvert x \rvert = -x) \to x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to \lvert x \rvert = -x$
+\item $\varphi_{14} :\equiv 0 \leq x \land \lvert x \rvert = x \lor \neg 0 \leq x \land \lvert x \rvert = -x \to (x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to \lvert x \rvert \in \mathbb{R}) \to \varphi_{7}$
+\item $\varphi_{15} :\equiv (x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to x = \lvert x \rvert) \to (x \in \mathbb{R} \to 0 \leq x \land \lvert x \rvert = x \to x \in \mathbb{R}) \to \varphi_{9}$
+\item $\varphi_{16} :\equiv (x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to -x = \lvert x \rvert) \to (x \in \mathbb{R} \to \neg 0 \leq x \land \lvert x \rvert = -x \to -x \in \mathbb{R}) \to \varphi_{12}$
+\end{abbrevlist}
+\end{fullproof}

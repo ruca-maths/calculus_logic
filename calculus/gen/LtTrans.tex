@@ -1,0 +1,382 @@
+% 自動生成 (prover/build.js): LtTrans  ノード数 173
+\begin{fullproof}{[O2]}{$\forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z)$}{173}\phantomsection\label{tree:LtTrans}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y)$\lbl{Def$<$}}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y)$}
+\AXC{$\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y) \to (x < z \leftrightarrow x \subseteq z \land x \neq z)$\lbl{A2}}
+\BIC{$x < z \leftrightarrow x \subseteq z \land x \neq z$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$\lbl{Def$\subseteq$}}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$x \subseteq z \leftrightarrow \forall u \in x\,(u \in z)$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y)$\lbl{Def$<$}}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall y\,(v_{3} < y \leftrightarrow v_{3} \subseteq y \land v_{3} \neq y)$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$v_{3} < v_{4} \leftrightarrow v_{3} \subseteq v_{4} \land v_{3} \neq v_{4}$}
+\UIC{$\forall v_{4}\,(v_{3} < v_{4} \leftrightarrow v_{3} \subseteq v_{4} \land v_{3} \neq v_{4})$}
+\UIC{$\forall v_{3}\,\forall v_{4}\,(v_{3} < v_{4} \leftrightarrow v_{3} \subseteq v_{4} \land v_{3} \neq v_{4})$}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\BIC{$\forall v_{4}\,(y < v_{4} \leftrightarrow y \subseteq v_{4} \land y \neq v_{4})$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$y < z \leftrightarrow y \subseteq z \land y \neq z$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$y < z \leftrightarrow y \subseteq z \land y \neq z$}
+\AXC{$x < y \to y < z \to y < z$\lbl{A1}}
+\AXC{$(x < y \to y < z \to y < z) \to (y < z \leftrightarrow y \subseteq z \land y \neq z) \to \varphi_{14}$\lbl{A1}}
+\BIC{$(y < z \leftrightarrow y \subseteq z \land y \neq z) \to \varphi_{14}$}
+\BIC{$\varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$\lbl{Def$\subseteq$}}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\forall y\,(v_{5} \subseteq y \leftrightarrow \forall u \in v_{5}\,(u \in y))$}
+\AXC{$\varphi_{19}$\lbl{A2}}
+\BIC{$v_{5} \subseteq v_{6} \leftrightarrow \forall u \in v_{5}\,(u \in v_{6})$}
+\UIC{$\forall v_{6}\,(v_{5} \subseteq v_{6} \leftrightarrow \forall u \in v_{5}\,(u \in v_{6}))$}
+\UIC{$\forall v_{5}\,\forall v_{6}\,(v_{5} \subseteq v_{6} \leftrightarrow \forall u \in v_{5}\,(u \in v_{6}))$}
+\AXC{$\varphi_{29}$\lbl{A2}}
+\BIC{$\forall v_{6}\,(y \subseteq v_{6} \leftrightarrow \forall u \in y\,(u \in v_{6}))$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$y \subseteq z \leftrightarrow \forall u \in y\,(u \in z)$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{14}$}
+\BIC{$x < y \to y < z \to \forall u \in y\,(u \in z)$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall u \in y\,(u \in z) \to u \in y \to u \in z$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to \forall u \in y\,(u \in z)$}
+\AXC{$(x < y \to y < z \to \forall u \in y\,(u \in z)) \to \varphi_{24}$\lbl{A1}}
+\BIC{$\varphi_{24}$}
+\BIC{$x < y \to y < z \to u \in y \to u \in z$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y)$\lbl{Def$<$}}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y)$}
+\AXC{$\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y) \to (x < y \leftrightarrow x \subseteq y \land x \neq y)$\lbl{A2}}
+\BIC{$x < y \leftrightarrow x \subseteq y \land x \neq y$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$x < y \leftrightarrow x \subseteq y \land x \neq y$}
+\AXC{$x < y \to x < y$\lbl{A1}}
+\AXC{$(x < y \to x < y) \to (x < y \leftrightarrow x \subseteq y \land x \neq y) \to \varphi_{15}$\lbl{A1}}
+\BIC{$(x < y \leftrightarrow x \subseteq y \land x \neq y) \to \varphi_{15}$}
+\BIC{$\varphi_{15}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$\lbl{Def$\subseteq$}}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{15}$}
+\BIC{$x < y \to y < z \to \forall u \in x\,(u \in y)$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\forall u \in x\,(u \in y) \to u \in x \to u \in y$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to \forall u \in x\,(u \in y)$}
+\AXC{$(x < y \to y < z \to \forall u \in x\,(u \in y)) \to \varphi_{25}$\lbl{A1}}
+\BIC{$\varphi_{25}$}
+\BIC{$x < y \to y < z \to u \in x \to u \in y$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to u \in y \to u \in z$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to u \in x \to u \in y$}
+\AXC{$(x < y \to y < z \to u \in x \to u \in y) \to \varphi_{16}$\lbl{A1}}
+\BIC{$\varphi_{16}$}
+\BIC{$x < y \to y < z \to u \in x \to u \in z$}
+\AXC{$\varphi_{17}$\lbl{A1}}
+\BIC{$x < y \land y < z \to u \in x \to u \in z$}
+\UIC{$\forall u\,(x < y \land y < z \to u \in x \to u \in z)$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\varphi_{28}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\forall u\,(x < y \land y < z \to u \in x \to u \in z)$}
+\AXC{$\forall u\,(x < y \land y < z \to u \in x \to u \in z) \to \varphi_{28} \to \varphi_{23}$\lbl{A1}}
+\BIC{$\varphi_{28} \to \varphi_{23}$}
+\BIC{$\varphi_{23}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$x \subseteq z \leftrightarrow \forall u \in x\,(u \in z)$}
+\AXC{$x < y \land y < z \to \forall u\,(x < y \land y < z)$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{23}$}
+\BIC{$x < y \to y < z \to \forall u \in x\,(u \in z)$}
+\AXC{$\varphi_{46}$\lbl{A1}}
+\BIC{$(x \subseteq z \leftrightarrow \forall u \in x\,(u \in z)) \to x < y \to y < z \to x \subseteq z$}
+\BIC{$x < y \to y < z \to x \subseteq z$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\varphi_{40}$\lbl{A4}}
+\AXC{$\forall z\,(\varphi_{32}) \to \varphi_{42}$\lbl{A3}}
+\AXC{$\varphi_{32}$\lbl{A2}}
+\UIC{$\forall z\,(\varphi_{32})$}
+\AXC{$\forall z\,(\varphi_{32}) \to (\forall z\,(\varphi_{32}) \to \varphi_{42}) \to \varphi_{40} \to \varphi_{38}$\lbl{A1}}
+\BIC{$(\forall z\,(\varphi_{32}) \to \varphi_{42}) \to \varphi_{40} \to \varphi_{38}$}
+\BIC{$\varphi_{40} \to \varphi_{38}$}
+\BIC{$\varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$\lbl{Def$\subseteq$}}
+\AXC{$\varphi_{22}$\lbl{A2}}
+\BIC{$\forall y\,(v_{7} \subseteq y \leftrightarrow \forall u \in v_{7}\,(u \in y))$}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$v_{7} \subseteq v_{8} \leftrightarrow \forall u \in v_{7}\,(u \in v_{8})$}
+\UIC{$\forall v_{8}\,(v_{7} \subseteq v_{8} \leftrightarrow \forall u \in v_{7}\,(u \in v_{8}))$}
+\UIC{$\forall v_{7}\,\forall v_{8}\,(v_{7} \subseteq v_{8} \leftrightarrow \forall u \in v_{7}\,(u \in v_{8}))$}
+\AXC{$\varphi_{30}$\lbl{A2}}
+\BIC{$\forall v_{8}\,(y \subseteq v_{8} \leftrightarrow \forall u \in y\,(u \in v_{8}))$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$y \subseteq x \leftrightarrow \forall u \in y\,(u \in x)$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to y \subseteq z_{1} \to y \subseteq w$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to y \subseteq z_{1} \to y \subseteq w)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to y \subseteq z_{1} \to y \subseteq w)$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall w\,(z = w \to y \subseteq z \to y \subseteq w)$}
+\AXC{$\forall w\,(z = w \to y \subseteq z \to y \subseteq w) \to z = x \to y \subseteq z \to y \subseteq x$\lbl{A2}}
+\BIC{$z = x \to y \subseteq z \to y \subseteq x$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(x = y \to y = x)$\lbl{A2}}
+\BIC{$\forall y\,(x = y \to y = x)$}
+\AXC{$\forall y\,(x = y \to y = x) \to x = z \to z = x$\lbl{A2}}
+\BIC{$x = z \to z = x$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$x = z \to z = x$}
+\AXC{$x < y \to y < z \to x = z \to x = z$\lbl{A1}}
+\AXC{$\varphi_{10}$\lbl{A1}}
+\BIC{$(x = z \to z = x) \to x < y \to y < z \to x = z \to z = x$}
+\BIC{$x < y \to y < z \to x = z \to z = x$}
+\AXC{$(x < y \to y < z \to x = z \to z = x) \to \varphi_{44}$\lbl{A1}}
+\BIC{$\varphi_{44}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$z = x \to y \subseteq z \to y \subseteq x$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$y < z \leftrightarrow y \subseteq z \land y \neq z$}
+\AXC{$x < y \to y < z \to y < z$\lbl{A1}}
+\AXC{$\varphi_{36}$\lbl{A1}}
+\BIC{$(y < z \leftrightarrow y \subseteq z \land y \neq z) \to x < y \to y < z \to x = z \to y \subseteq z$}
+\BIC{$x < y \to y < z \to x = z \to y \subseteq z$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{44}$}
+\BIC{$(z = x \to y \subseteq z \to y \subseteq x) \to x < y \to y < z \to x = z \to y \subseteq x$}
+\BIC{$x < y \to y < z \to x = z \to y \subseteq x$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$y \subseteq x \leftrightarrow \forall u \in y\,(u \in x)$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to x = z \to y \subseteq x$}
+\AXC{$(x < y \to y < z \to x = z \to y \subseteq x) \to \varphi_{26}$\lbl{A1}}
+\BIC{$\varphi_{26}$}
+\BIC{$x < y \to y < z \to x = z \to \forall u \in y\,(u \in x)$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to x = z \to \forall u \in y\,(u \in x)$}
+\AXC{$(x < y \to y < z \to x = z \to \forall u \in y\,(u \in x)) \to \varphi_{33}$\lbl{A1}}
+\BIC{$\varphi_{33}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\forall u \in x\,(u \in y) \to u \in x \to u \in y$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to \forall u \in x\,(u \in y)$}
+\AXC{$(x < y \to y < z \to \forall u \in x\,(u \in y)) \to \varphi_{25}$\lbl{A1}}
+\BIC{$\varphi_{25}$}
+\BIC{$x < y \to y < z \to u \in x \to u \in y$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\forall u \in y\,(u \in x) \to u \in y \to u \in x$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{33}$}
+\BIC{$x < y \to y < z \to x = z \to u \in y \to u \in x$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to u \in x \to u \in y$}
+\AXC{$(x < y \to y < z \to u \in x \to u \in y) \to \varphi_{34}$\lbl{A1}}
+\BIC{$\varphi_{34}$}
+\BIC{$x < y \to y < z \to x = z \to (u \in x \leftrightarrow u \in y)$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\varphi_{43}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to x = z \to (u \in x \leftrightarrow u \in y)$}
+\AXC{$\varphi_{35}$\lbl{A1}}
+\BIC{$x < y \land y < z \land x = z \to (u \in x \leftrightarrow u \in y)$}
+\UIC{$\forall u\,(x < y \land y < z \land x = z \to (u \in x \leftrightarrow u \in y))$}
+\AXC{$\forall u\,(x < y \land y < z \land x = z \to (u \in x \leftrightarrow u \in y)) \to \varphi_{43} \to \varphi_{45}$\lbl{A1}}
+\BIC{$\varphi_{43} \to \varphi_{45}$}
+\BIC{$\varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$x < y \land y < z \land x = z \to \forall u\,(x < y \land y < z \land x = z)$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{45}$}
+\BIC{$x < y \to y < z \to x = z \to \forall u\,(u \in x \leftrightarrow u \in y)$}
+\AXC{$(x < y \to y < z \to x = z \to \forall u\,(u \in x \leftrightarrow u \in y)) \to \varphi_{48}$\lbl{A1}}
+\BIC{$\varphi_{48}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{38}$}
+\AXC{$\forall x\,\forall y\,(\forall z\,(z \in x \leftrightarrow z \in y) \to x = y)$\lbl{Ext}}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\forall y\,(\forall z\,(z \in x \leftrightarrow z \in y) \to x = y)$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall z\,(z \in x \leftrightarrow z \in y) \to x = y$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\varphi_{48}$}
+\BIC{$\varphi_{38} \to \varphi_{37} \to x < y \to y < z \to x = z \to x = y$}
+\BIC{$\varphi_{37} \to x < y \to y < z \to x = z \to x = y$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\varphi_{39}$\lbl{A4}}
+\AXC{$\forall u\,(\varphi_{31}) \to \varphi_{41}$\lbl{A3}}
+\AXC{$\varphi_{31}$\lbl{A2}}
+\UIC{$\forall u\,(\varphi_{31})$}
+\AXC{$\forall u\,(\varphi_{31}) \to (\forall u\,(\varphi_{31}) \to \varphi_{41}) \to \varphi_{39} \to \varphi_{37}$\lbl{A1}}
+\BIC{$(\forall u\,(\varphi_{31}) \to \varphi_{41}) \to \varphi_{39} \to \varphi_{37}$}
+\BIC{$\varphi_{39} \to \varphi_{37}$}
+\BIC{$\varphi_{37}$}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{37} \to x < y \to y < z \to x = z \to x = y$}
+\BIC{$x < y \to y < z \to x = z \to x = y$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to x \subseteq z$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$x < y \leftrightarrow x \subseteq y \land x \neq y$}
+\AXC{$x < y \to x < y$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$x < y \to y < z \to x = z \to x = y$}
+\AXC{$\varphi_{47}$\lbl{A1}}
+\BIC{$(x < y \to x < y) \to (x < y \leftrightarrow x \subseteq y \land x \neq y) \to \varphi_{27}$}
+\BIC{$(x < y \leftrightarrow x \subseteq y \land x \neq y) \to \varphi_{27}$}
+\BIC{$\varphi_{27}$}
+\BIC{$(x < z \leftrightarrow x \subseteq z \land x \neq z) \to x < y \to y < z \to x < z$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$x < z \leftrightarrow x \subseteq z \land x \neq z$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$(x < z \leftrightarrow x \subseteq z \land x \neq z) \to x < y \to y < z \to x < z$}
+\BIC{$x < y \to y < z \to x < z$}
+\UIC{$\forall z\,(x < y \to y < z \to x < z)$}
+\UIC{$\forall y\,\forall z\,(x < y \to y < z \to x < z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z)$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall v_{4}\,(y < v_{4} \leftrightarrow y \subseteq v_{4} \land y \neq v_{4}) \to (y < z \leftrightarrow y \subseteq z \land y \neq z)$
+\item $\varphi_{2} :\equiv \forall y\,(\forall z\,(z \in x \leftrightarrow z \in y) \to x = y) \to \forall z\,(z \in x \leftrightarrow z \in y) \to x = y$
+\item $\varphi_{3} :\equiv \forall x\,\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y) \to \forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y)$
+\item $\varphi_{4} :\equiv \forall x\,\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y) \to \forall y\,(v_{3} < y \leftrightarrow v_{3} \subseteq y \land v_{3} \neq y)$
+\item $\varphi_{5} :\equiv \forall y\,(v_{3} < y \leftrightarrow v_{3} \subseteq y \land v_{3} \neq y) \to (v_{3} < v_{4} \leftrightarrow v_{3} \subseteq v_{4} \land v_{3} \neq v_{4})$
+\item $\varphi_{6} :\equiv \forall x\,\forall y\,(\forall z\,(z \in x \leftrightarrow z \in y) \to x = y) \to \forall y\,(\forall z\,(z \in x \leftrightarrow z \in y) \to x = y)$
+\item $\varphi_{7} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to y \subseteq z_{1} \to y \subseteq w) \to \forall w\,(z = w \to y \subseteq z \to y \subseteq w)$
+\item $\varphi_{8} :\equiv \forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to (x \subseteq z \leftrightarrow \forall u \in x\,(u \in z))$
+\item $\varphi_{9} :\equiv \forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to (x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$
+\item $\varphi_{10} :\equiv (x < y \to y < z \to x = z \to x = z) \to (x = z \to z = x) \to x < y \to y < z \to x = z \to z = x$
+\item $\varphi_{11} :\equiv \forall v_{6}\,(y \subseteq v_{6} \leftrightarrow \forall u \in y\,(u \in v_{6})) \to (y \subseteq z \leftrightarrow \forall u \in y\,(u \in z))$
+\item $\varphi_{12} :\equiv \forall v_{8}\,(y \subseteq v_{8} \leftrightarrow \forall u \in y\,(u \in v_{8})) \to (y \subseteq x \leftrightarrow \forall u \in y\,(u \in x))$
+\item $\varphi_{13} :\equiv \forall v_{3}\,\forall v_{4}\,(v_{3} < v_{4} \leftrightarrow v_{3} \subseteq v_{4} \land v_{3} \neq v_{4}) \to \forall v_{4}\,(y < v_{4} \leftrightarrow y \subseteq v_{4} \land y \neq v_{4})$
+\item $\varphi_{14} :\equiv (y \subseteq z \leftrightarrow \forall u \in y\,(u \in z)) \to x < y \to y < z \to \forall u \in y\,(u \in z)$
+\item $\varphi_{15} :\equiv (x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to x < y \to y < z \to \forall u \in x\,(u \in y)$
+\item $\varphi_{16} :\equiv (x < y \to y < z \to u \in y \to u \in z) \to x < y \to y < z \to u \in x \to u \in z$
+\item $\varphi_{17} :\equiv (x < y \to y < z \to u \in x \to u \in z) \to x < y \land y < z \to u \in x \to u \in z$
+\item $\varphi_{18} :\equiv \forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to \forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$
+\item $\varphi_{19} :\equiv \forall y\,(v_{5} \subseteq y \leftrightarrow \forall u \in v_{5}\,(u \in y)) \to (v_{5} \subseteq v_{6} \leftrightarrow \forall u \in v_{5}\,(u \in v_{6}))$
+\item $\varphi_{20} :\equiv \forall y\,(v_{7} \subseteq y \leftrightarrow \forall u \in v_{7}\,(u \in y)) \to (v_{7} \subseteq v_{8} \leftrightarrow \forall u \in v_{7}\,(u \in v_{8}))$
+\item $\varphi_{21} :\equiv \forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to \forall y\,(v_{5} \subseteq y \leftrightarrow \forall u \in v_{5}\,(u \in y))$
+\item $\varphi_{22} :\equiv \forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to \forall y\,(v_{7} \subseteq y \leftrightarrow \forall u \in v_{7}\,(u \in y))$
+\item $\varphi_{23} :\equiv (x < y \land y < z \to \forall u\,(x < y \land y < z)) \to x < y \to y < z \to \forall u \in x\,(u \in z)$
+\item $\varphi_{24} :\equiv (\forall u \in y\,(u \in z) \to u \in y \to u \in z) \to x < y \to y < z \to u \in y \to u \in z$
+\item $\varphi_{25} :\equiv (\forall u \in x\,(u \in y) \to u \in x \to u \in y) \to x < y \to y < z \to u \in x \to u \in y$
+\item $\varphi_{26} :\equiv (y \subseteq x \leftrightarrow \forall u \in y\,(u \in x)) \to x < y \to y < z \to x = z \to \forall u \in y\,(u \in x)$
+\item $\varphi_{27} :\equiv (x < y \to y < z \to x \subseteq z) \to (x < z \leftrightarrow x \subseteq z \land x \neq z) \to x < y \to y < z \to x < z$
+\item $\varphi_{28} :\equiv \forall u\,(x < y \land y < z \to u \in x \to u \in z) \to \forall u\,(x < y \land y < z) \to \forall u \in x\,(u \in z)$
+\item $\varphi_{29} :\equiv \forall v_{5}\,\forall v_{6}\,(v_{5} \subseteq v_{6} \leftrightarrow \forall u \in v_{5}\,(u \in v_{6})) \to \forall v_{6}\,(y \subseteq v_{6} \leftrightarrow \forall u \in y\,(u \in v_{6}))$
+\item $\varphi_{30} :\equiv \forall v_{7}\,\forall v_{8}\,(v_{7} \subseteq v_{8} \leftrightarrow \forall u \in v_{7}\,(u \in v_{8})) \to \forall v_{8}\,(y \subseteq v_{8} \leftrightarrow \forall u \in y\,(u \in v_{8}))$
+\item $\varphi_{31} :\equiv \forall z\,(\neg ((z \in x \to z \in y) \to \neg (z \in y \to z \in x))) \to \neg ((u \in x \to u \in y) \to \neg (u \in y \to u \in x))$
+\item $\varphi_{32} :\equiv \forall u\,(\neg ((u \in x \to u \in y) \to \neg (u \in y \to u \in x))) \to \neg ((z \in x \to z \in y) \to \neg (z \in y \to z \in x))$
+\item $\varphi_{33} :\equiv (\forall u \in y\,(u \in x) \to u \in y \to u \in x) \to x < y \to y < z \to x = z \to u \in y \to u \in x$
+\item $\varphi_{34} :\equiv (x < y \to y < z \to x = z \to u \in y \to u \in x) \to x < y \to y < z \to x = z \to (u \in x \leftrightarrow u \in y)$
+\item $\varphi_{35} :\equiv (x < y \to y < z \to x = z \to (u \in x \leftrightarrow u \in y)) \to x < y \land y < z \land x = z \to (u \in x \leftrightarrow u \in y)$
+\item $\varphi_{36} :\equiv (x < y \to y < z \to y < z) \to (y < z \leftrightarrow y \subseteq z \land y \neq z) \to x < y \to y < z \to x = z \to y \subseteq z$
+\item $\varphi_{37} :\equiv \forall z\,(\neg ((z \in x \to z \in y) \to \neg (z \in y \to z \in x))) \to \forall u\,(\neg ((u \in x \to u \in y) \to \neg (u \in y \to u \in x)))$
+\item $\varphi_{38} :\equiv \forall u\,(\neg ((u \in x \to u \in y) \to \neg (u \in y \to u \in x))) \to \forall z\,(\neg ((z \in x \to z \in y) \to \neg (z \in y \to z \in x)))$
+\item $\varphi_{39} :\equiv \forall z\,(\neg ((z \in x \to z \in y) \to \neg (z \in y \to z \in x))) \to \forall u\,\forall z\,(\neg ((z \in x \to z \in y) \to \neg (z \in y \to z \in x)))$
+\item $\varphi_{40} :\equiv \forall u\,(\neg ((u \in x \to u \in y) \to \neg (u \in y \to u \in x))) \to \forall z\,\forall u\,(\neg ((u \in x \to u \in y) \to \neg (u \in y \to u \in x)))$
+\item $\varphi_{41} :\equiv \forall u\,\forall z\,(\neg ((z \in x \to z \in y) \to \neg (z \in y \to z \in x))) \to \forall u\,(\neg ((u \in x \to u \in y) \to \neg (u \in y \to u \in x)))$
+\item $\varphi_{42} :\equiv \forall z\,\forall u\,(\neg ((u \in x \to u \in y) \to \neg (u \in y \to u \in x))) \to \forall z\,(\neg ((z \in x \to z \in y) \to \neg (z \in y \to z \in x)))$
+\item $\varphi_{43} :\equiv \forall u\,(x < y \land y < z \land x = z \to (u \in x \leftrightarrow u \in y)) \to \forall u\,(x < y \land y < z \land x = z) \to \forall u\,(u \in x \leftrightarrow u \in y)$
+\item $\varphi_{44} :\equiv (x < y \to y < z \to x = z \to y \subseteq z) \to (z = x \to y \subseteq z \to y \subseteq x) \to x < y \to y < z \to x = z \to y \subseteq x$
+\item $\varphi_{45} :\equiv (x < y \land y < z \land x = z \to \forall u\,(x < y \land y < z \land x = z)) \to x < y \to y < z \to x = z \to \forall u\,(u \in x \leftrightarrow u \in y)$
+\item $\varphi_{46} :\equiv (x < y \to y < z \to \forall u \in x\,(u \in z)) \to (x \subseteq z \leftrightarrow \forall u \in x\,(u \in z)) \to x < y \to y < z \to x \subseteq z$
+\item $\varphi_{47} :\equiv (x < y \to y < z \to x = z \to x = y) \to (x < y \to x < y) \to (x < y \leftrightarrow x \subseteq y \land x \neq y) \to \varphi_{27}$
+\item $\varphi_{48} :\equiv (\forall z\,(z \in x \leftrightarrow z \in y) \to x = y) \to \varphi_{38} \to \varphi_{37} \to x < y \to y < z \to x = z \to x = y$
+\end{abbrevlist}
+\end{fullproof}

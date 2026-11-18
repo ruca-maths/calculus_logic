@@ -1,0 +1,713 @@
+% 自動生成 (prover/build.js): MulSubSplit  ノード数 308
+\begin{fullproof}{[F18]}{$\forall x\,\forall y\,\forall a\,\forall b\,(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y - a \cdot b = x \cdot (y - b) + b \cdot (x - a))$}{308}\phantomsection\label{tree:MulSubSplit}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(v_{217} = y \to y = v_{217})$\lbl{A2}}
+\BIC{$\forall y\,(v_{217} = y \to y = v_{217})$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$v_{217} = v_{218} \to v_{218} = v_{217}$}
+\UIC{$\forall v_{218}\,(v_{217} = v_{218} \to v_{218} = v_{217})$}
+\UIC{$\forall v_{217}\,\forall v_{218}\,(v_{217} = v_{218} \to v_{218} = v_{217})$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\forall v_{217}\,\forall v_{218}\,(v_{217} = v_{218} \to v_{218} = v_{217})$}
+\AXC{$\forall v_{217}\,\forall v_{218}\,(v_{217} = v_{218} \to v_{218} = v_{217}) \to \varphi_{39}$\lbl{A2}}
+\BIC{$\varphi_{39}$}
+\AXC{$\varphi_{39} \to \varphi_{64}$\lbl{A2}}
+\BIC{$\varphi_{64}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{214} = y \to y = z \to v_{214} = z)$}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\forall z\,(v_{214} = v_{215} \to v_{215} = z \to v_{214} = z)$}
+\AXC{$\varphi_{27}$\lbl{A2}}
+\BIC{$v_{214} = v_{215} \to v_{215} = v_{216} \to v_{214} = v_{216}$}
+\UIC{$\forall v_{216}\,(v_{214} = v_{215} \to v_{215} = v_{216} \to v_{214} = v_{216})$}
+\UIC{$\varphi_{4}$}
+\UIC{$\forall v_{214}\,(\varphi_{4})$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\forall v_{214}\,(\varphi_{4})$}
+\AXC{$\forall v_{214}\,(\varphi_{4}) \to \varphi_{65}$\lbl{A2}}
+\BIC{$\varphi_{65}$}
+\AXC{$\varphi_{65} \to \varphi_{90}$\lbl{A2}}
+\BIC{$\varphi_{90}$}
+\AXC{$\varphi_{90} \to \varphi_{23} \to \varphi_{75}$\lbl{A2}}
+\BIC{$\varphi_{23} \to \varphi_{75}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(v_{201} = y \to y = v_{201})$\lbl{A2}}
+\BIC{$\forall y\,(v_{201} = y \to y = v_{201})$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$v_{201} = v_{202} \to v_{202} = v_{201}$}
+\UIC{$\forall v_{202}\,(v_{201} = v_{202} \to v_{202} = v_{201})$}
+\UIC{$\forall v_{201}\,\forall v_{202}\,(v_{201} = v_{202} \to v_{202} = v_{201})$}
+\AXC{$\varphi_{59}$\lbl{A2}}
+\BIC{$\forall v_{202}\,(x \cdot y - a \cdot b = v_{202} \to v_{202} = x \cdot y - a \cdot b)$}
+\AXC{$\varphi_{94}$\lbl{A2}}
+\BIC{$\varphi_{78}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{72}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{61}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot b \in \mathbb{R}$}
+\AXC{$\varphi_{102}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{84}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{84}$}
+\BIC{$\varphi_{84}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{73}$\lbl{A2}}
+\BIC{$\forall y\,(a \in \mathbb{R} \to y \in \mathbb{R} \to a \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{62}$\lbl{A2}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to a \cdot b \in \mathbb{R}$}
+\AXC{$\varphi_{103}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \in \mathbb{R}) \to \varphi_{85}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \in \mathbb{R}) \to \varphi_{85}$}
+\BIC{$\varphi_{85}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{72}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{63}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}$}
+\AXC{$\varphi_{104}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{86}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{86}$}
+\BIC{$\varphi_{86}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\varphi_{40}$\lbl{[F16]}}
+\AXC{$\varphi_{40} \to \varphi_{47}$\lbl{A2}}
+\BIC{$\varphi_{47}$}
+\AXC{$\varphi_{47} \to \varphi_{55}$\lbl{A2}}
+\BIC{$\varphi_{55}$}
+\AXC{$\varphi_{55} \to v_{198} \in \mathbb{R} \to v_{199} \in \mathbb{R} \to \varphi_{13}$\lbl{A2}}
+\BIC{$v_{198} \in \mathbb{R} \to v_{199} \in \mathbb{R} \to \varphi_{13}$}
+\UIC{$\forall v_{200}\,(v_{198} \in \mathbb{R} \to v_{199} \in \mathbb{R} \to \varphi_{13})$}
+\UIC{$\forall v_{199}\,\forall v_{200}\,(v_{198} \in \mathbb{R} \to v_{199} \in \mathbb{R} \to \varphi_{13})$}
+\UIC{$\forall v_{198}\,\forall v_{199}\,\forall v_{200}\,(v_{198} \in \mathbb{R} \to v_{199} \in \mathbb{R} \to \varphi_{13})$}
+\AXC{$\varphi_{99}$\lbl{A2}}
+\BIC{$\varphi_{76}$}
+\AXC{$\varphi_{76} \to \varphi_{77}$\lbl{A2}}
+\BIC{$\varphi_{77}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{77}$}
+\AXC{$\varphi_{77} \to x \cdot y \in \mathbb{R} \to a \cdot b \in \mathbb{R} \to \varphi_{41}$\lbl{A2}}
+\BIC{$x \cdot y \in \mathbb{R} \to a \cdot b \in \mathbb{R} \to \varphi_{41}$}
+\AXC{$(x \cdot y \in \mathbb{R} \to a \cdot b \in \mathbb{R} \to \varphi_{41}) \to \varphi_{109}$\lbl{A1}}
+\BIC{$\varphi_{109}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{86}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{109}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \cdot b \in \mathbb{R}) \to \varphi_{95}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{85}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \cdot b \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \cdot b \in \mathbb{R}) \to \varphi_{95}$}
+\BIC{$\varphi_{95}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{84}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot b \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{95}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{48}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{48}) \to \varphi_{78} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{49}$\lbl{A1}}
+\BIC{$\varphi_{78} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{49}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{211} = y \to y = z \to v_{211} = z)$}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\forall z\,(v_{211} = v_{212} \to v_{212} = z \to v_{211} = z)$}
+\AXC{$\varphi_{28}$\lbl{A2}}
+\BIC{$v_{211} = v_{212} \to v_{212} = v_{213} \to v_{211} = v_{213}$}
+\UIC{$\forall v_{213}\,(v_{211} = v_{212} \to v_{212} = v_{213} \to v_{211} = v_{213})$}
+\UIC{$\varphi_{5}$}
+\UIC{$\forall v_{211}\,(\varphi_{5})$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\forall v_{211}\,(\varphi_{5})$}
+\AXC{$\forall v_{211}\,(\varphi_{5}) \to \varphi_{66}$\lbl{A2}}
+\BIC{$\varphi_{66}$}
+\AXC{$\varphi_{66} \to \varphi_{91}$\lbl{A2}}
+\BIC{$\varphi_{91}$}
+\AXC{$\varphi_{91} \to \varphi_{24} \to \varphi_{44} \to \varphi_{23}$\lbl{A2}}
+\BIC{$\varphi_{24} \to \varphi_{44} \to \varphi_{23}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{32} \to \varphi_{31}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{32} \to \varphi_{31})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{32} \to \varphi_{31})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{32} \to \varphi_{31}) \to \forall w\,(b \cdot a = w \to \varphi_{42} \to \varphi_{31})$\lbl{A2}}
+\BIC{$\forall w\,(b \cdot a = w \to \varphi_{42} \to \varphi_{31})$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)$\lbl{(R7)}}
+\AXC{$\varphi_{70}$\lbl{A2}}
+\BIC{$\forall y\,(b \in \mathbb{R} \to y \in \mathbb{R} \to b \cdot y = y \cdot b)$}
+\AXC{$\varphi_{56}$\lbl{A2}}
+\BIC{$b \in \mathbb{R} \to a \in \mathbb{R} \to b \cdot a = a \cdot b$}
+\AXC{$\varphi_{100}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{82}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{82}$}
+\BIC{$\varphi_{82}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \varphi_{42}$\lbl{A2}}
+\BIC{$\varphi_{42}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{82}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \cdot a = a \cdot b$}
+\AXC{$\varphi_{114}$\lbl{A1}}
+\BIC{$\varphi_{42} \to \varphi_{107}$}
+\BIC{$\varphi_{107}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{208} = y \to y = z \to v_{208} = z)$}
+\AXC{$\varphi_{19}$\lbl{A2}}
+\BIC{$\forall z\,(v_{208} = v_{209} \to v_{209} = z \to v_{208} = z)$}
+\AXC{$\varphi_{29}$\lbl{A2}}
+\BIC{$v_{208} = v_{209} \to v_{209} = v_{210} \to v_{208} = v_{210}$}
+\UIC{$\forall v_{210}\,(v_{208} = v_{209} \to v_{209} = v_{210} \to v_{208} = v_{210})$}
+\UIC{$\varphi_{6}$}
+\UIC{$\forall v_{208}\,(\varphi_{6})$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\forall v_{208}\,(\varphi_{6})$}
+\AXC{$\forall v_{208}\,(\varphi_{6}) \to \varphi_{67}$\lbl{A2}}
+\BIC{$\varphi_{67}$}
+\AXC{$\varphi_{67} \to \varphi_{92}$\lbl{A2}}
+\BIC{$\varphi_{92}$}
+\AXC{$\varphi_{92} \to \varphi_{25} \to \varphi_{45} \to \varphi_{24}$\lbl{A2}}
+\BIC{$\varphi_{25} \to \varphi_{45} \to \varphi_{24}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{34} \to \varphi_{33}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{34} \to \varphi_{33})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{34} \to \varphi_{33})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{34} \to \varphi_{33}) \to \forall w\,(b \cdot x = w \to \varphi_{43} \to \varphi_{33})$\lbl{A2}}
+\BIC{$\forall w\,(b \cdot x = w \to \varphi_{43} \to \varphi_{33})$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)$\lbl{(R7)}}
+\AXC{$\varphi_{70}$\lbl{A2}}
+\BIC{$\forall y\,(b \in \mathbb{R} \to y \in \mathbb{R} \to b \cdot y = y \cdot b)$}
+\AXC{$\varphi_{57}$\lbl{A2}}
+\BIC{$b \in \mathbb{R} \to x \in \mathbb{R} \to b \cdot x = x \cdot b$}
+\AXC{$\varphi_{101}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{83}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{83}$}
+\BIC{$\varphi_{83}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \varphi_{43}$\lbl{A2}}
+\BIC{$\varphi_{43}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{83}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \cdot x = x \cdot b$}
+\AXC{$\varphi_{115}$\lbl{A1}}
+\BIC{$\varphi_{43} \to \varphi_{108}$}
+\BIC{$\varphi_{108}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{205} = y \to y = z \to v_{205} = z)$}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$\forall z\,(v_{205} = v_{206} \to v_{206} = z \to v_{205} = z)$}
+\AXC{$\varphi_{30}$\lbl{A2}}
+\BIC{$v_{205} = v_{206} \to v_{206} = v_{207} \to v_{205} = v_{207}$}
+\UIC{$\forall v_{207}\,(v_{205} = v_{206} \to v_{206} = v_{207} \to v_{205} = v_{207})$}
+\UIC{$\varphi_{7}$}
+\UIC{$\forall v_{205}\,(\varphi_{7})$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\forall v_{205}\,(\varphi_{7})$}
+\AXC{$\forall v_{205}\,(\varphi_{7}) \to \varphi_{68}$\lbl{A2}}
+\BIC{$\varphi_{68}$}
+\AXC{$\varphi_{68} \to \varphi_{87}$\lbl{A2}}
+\BIC{$\varphi_{87}$}
+\AXC{$\varphi_{87} \to \varphi_{14} \to \varphi_{35} \to \varphi_{25}$\lbl{A2}}
+\BIC{$\varphi_{14} \to \varphi_{35} \to \varphi_{25}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{79}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{79})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{79})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{79}) \to \varphi_{88}$\lbl{A2}}
+\BIC{$\varphi_{88}$}
+\AXC{$\varphi_{88} \to b \cdot (x - a) = b \cdot x - b \cdot a \to \varphi_{22} \to \varphi_{35}$\lbl{A2}}
+\BIC{$b \cdot (x - a) = b \cdot x - b \cdot a \to \varphi_{22} \to \varphi_{35}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\varphi_{46}$\lbl{[F17]}}
+\AXC{$\varphi_{46} \to \forall x\,(\varphi_{38})$\lbl{A2}}
+\BIC{$\forall x\,(\varphi_{38})$}
+\AXC{$\forall x\,(\varphi_{38}) \to \varphi_{38}$\lbl{A2}}
+\BIC{$\varphi_{38}$}
+\AXC{$\varphi_{89}$\lbl{A2}}
+\BIC{$b \in \mathbb{R} \to x \in \mathbb{R} \to a \in \mathbb{R} \to b \cdot x - b \cdot a = b \cdot (x - a)$}
+\AXC{$\varphi_{110}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{96}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{96}$}
+\BIC{$\varphi_{96}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\varphi_{96}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \in \mathbb{R}) \to \varphi_{50}$}
+\BIC{$\varphi_{50}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\forall y\,(b \cdot x - b \cdot a = y \to y = b \cdot x - b \cdot a)$}
+\AXC{$\forall y\,(b \cdot x - b \cdot a = y \to y = b \cdot x - b \cdot a) \to \varphi_{15}$\lbl{A2}}
+\BIC{$\varphi_{15}$}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\varphi_{50}$}
+\AXC{$\varphi_{50} \to \varphi_{15} \to \varphi_{51}$\lbl{A1}}
+\BIC{$\varphi_{15} \to \varphi_{51}$}
+\BIC{$\varphi_{51}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$b \cdot (x - a) = b \cdot x - b \cdot a \to \varphi_{22} \to \varphi_{35}$}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \varphi_{22}$\lbl{A2}}
+\BIC{$\varphi_{22}$}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\varphi_{51}$}
+\AXC{$\varphi_{51} \to \varphi_{22} \to \varphi_{106}$\lbl{A1}}
+\BIC{$\varphi_{22} \to \varphi_{106}$}
+\BIC{$\varphi_{106}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{35}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(v_{203} = y \to y = v_{203})$\lbl{A2}}
+\BIC{$\forall y\,(v_{203} = y \to y = v_{203})$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$v_{203} = v_{204} \to v_{204} = v_{203}$}
+\UIC{$\forall v_{204}\,(v_{203} = v_{204} \to v_{204} = v_{203})$}
+\UIC{$\forall v_{203}\,\forall v_{204}\,(v_{203} = v_{204} \to v_{204} = v_{203})$}
+\AXC{$\varphi_{60}$\lbl{A2}}
+\BIC{$\forall v_{204}\,(x \cdot y - x \cdot b = v_{204} \to v_{204} = x \cdot y - x \cdot b)$}
+\AXC{$\varphi_{80}$\lbl{A2}}
+\BIC{$\varphi_{16}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$\varphi_{46}$\lbl{[F17]}}
+\AXC{$\varphi_{46} \to \varphi_{58}$\lbl{A2}}
+\BIC{$\varphi_{58}$}
+\AXC{$\varphi_{58} \to \varphi_{71}$\lbl{A2}}
+\BIC{$\varphi_{71}$}
+\AXC{$\varphi_{71} \to v_{195} \in \mathbb{R} \to v_{196} \in \mathbb{R} \to \varphi_{26}$\lbl{A2}}
+\BIC{$v_{195} \in \mathbb{R} \to v_{196} \in \mathbb{R} \to \varphi_{26}$}
+\UIC{$\forall v_{197}\,(v_{195} \in \mathbb{R} \to v_{196} \in \mathbb{R} \to \varphi_{26})$}
+\UIC{$\forall v_{196}\,\forall v_{197}\,(v_{195} \in \mathbb{R} \to v_{196} \in \mathbb{R} \to \varphi_{26})$}
+\UIC{$\forall v_{195}\,\forall v_{196}\,\forall v_{197}\,(v_{195} \in \mathbb{R} \to v_{196} \in \mathbb{R} \to \varphi_{26})$}
+\AXC{$\varphi_{98}$\lbl{A2}}
+\BIC{$\varphi_{74}$}
+\AXC{$\varphi_{74} \to \varphi_{54}$\lbl{A2}}
+\BIC{$\varphi_{54}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\varphi_{54}$}
+\AXC{$\varphi_{93}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y - x \cdot b = x \cdot (y - b)$}
+\AXC{$\varphi_{111}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{97}$}
+\BIC{$\varphi_{97}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$\varphi_{97}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{52}$}
+\BIC{$\varphi_{52}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to \varphi_{8}$\lbl{A2}}
+\BIC{$\varphi_{8}$}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$\varphi_{16}$}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\varphi_{52}$}
+\AXC{$\varphi_{52} \to \varphi_{16} \to \varphi_{53}$\lbl{A1}}
+\BIC{$\varphi_{16} \to \varphi_{53}$}
+\BIC{$\varphi_{53}$}
+\AXC{$\varphi_{53} \to \varphi_{8} \to \varphi_{105}$\lbl{A1}}
+\BIC{$\varphi_{8} \to \varphi_{105}$}
+\BIC{$\varphi_{105}$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$z = w \to \varphi_{69}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \varphi_{69})$}
+\UIC{$\forall z\,\forall w\,(z = w \to \varphi_{69})$}
+\AXC{$\forall z\,\forall w\,(z = w \to \varphi_{69}) \to \varphi_{81}$\lbl{A2}}
+\BIC{$\varphi_{81}$}
+\AXC{$\varphi_{81} \to x \cdot (y - b) = x \cdot y - x \cdot b \to \varphi_{8} \to \varphi_{14}$\lbl{A2}}
+\BIC{$x \cdot (y - b) = x \cdot y - x \cdot b \to \varphi_{8} \to \varphi_{14}$}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$\varphi_{105}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{14}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{14}) \to \varphi_{113}$\lbl{A1}}
+\BIC{$\varphi_{113}$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{14} \to \varphi_{35} \to \varphi_{25}$}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{35}$}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\varphi_{113}$}
+\BIC{$(\varphi_{14} \to \varphi_{35} \to \varphi_{25}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{25}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{25}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{25}) \to \varphi_{116}$\lbl{A1}}
+\BIC{$\varphi_{116}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\forall w\,(b \cdot x = w \to \varphi_{43} \to \varphi_{33})$}
+\AXC{$\forall w\,(b \cdot x = w \to \varphi_{43} \to \varphi_{33}) \to b \cdot x = x \cdot b \to \varphi_{43} \to \varphi_{45}$\lbl{A2}}
+\BIC{$b \cdot x = x \cdot b \to \varphi_{43} \to \varphi_{45}$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{108}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{45}$}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$\varphi_{116}$}
+\BIC{$(\varphi_{25} \to \varphi_{45} \to \varphi_{24}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{24}$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{25} \to \varphi_{45} \to \varphi_{24}$}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$(\varphi_{25} \to \varphi_{45} \to \varphi_{24}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{24}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{24}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{24}) \to \varphi_{117}$\lbl{A1}}
+\BIC{$\varphi_{117}$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\forall w\,(b \cdot a = w \to \varphi_{42} \to \varphi_{31})$}
+\AXC{$\forall w\,(b \cdot a = w \to \varphi_{42} \to \varphi_{31}) \to b \cdot a = a \cdot b \to \varphi_{42} \to \varphi_{44}$\lbl{A2}}
+\BIC{$b \cdot a = a \cdot b \to \varphi_{42} \to \varphi_{44}$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{107}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{44}$}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$\varphi_{117}$}
+\BIC{$(\varphi_{24} \to \varphi_{44} \to \varphi_{23}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{23}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{24} \to \varphi_{44} \to \varphi_{23}$}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$(\varphi_{24} \to \varphi_{44} \to \varphi_{23}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{23}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{23}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{23}) \to \varphi_{112}$\lbl{A1}}
+\BIC{$\varphi_{112}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{23} \to \varphi_{75}$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{78}$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\varphi_{78} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{49}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{49}$}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$\varphi_{112}$}
+\BIC{$(\varphi_{23} \to \varphi_{75}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{36}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{36}$}
+\AXC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{36}) \to \varphi_{64} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{37}$\lbl{A1}}
+\BIC{$\varphi_{64} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{37}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{64}$}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$\varphi_{64} \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{37}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{37}$}
+\UIC{$\forall b\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{37})$}
+\UIC{$\forall a\,\forall b\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{37})$}
+\UIC{$\forall y\,\forall a\,\forall b\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{37})$}
+\UIC{$\forall x\,\forall y\,\forall a\,\forall b\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{37})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall y\,(v_{217} = y \to y = v_{217}) \to v_{217} = v_{218} \to v_{218} = v_{217}$
+\item $\varphi_{2} :\equiv \forall y\,(v_{201} = y \to y = v_{201}) \to v_{201} = v_{202} \to v_{202} = v_{201}$
+\item $\varphi_{3} :\equiv \forall y\,(v_{203} = y \to y = v_{203}) \to v_{203} = v_{204} \to v_{204} = v_{203}$
+\item $\varphi_{4} :\equiv \forall v_{215}\,\forall v_{216}\,(v_{214} = v_{215} \to v_{215} = v_{216} \to v_{214} = v_{216})$
+\item $\varphi_{5} :\equiv \forall v_{212}\,\forall v_{213}\,(v_{211} = v_{212} \to v_{212} = v_{213} \to v_{211} = v_{213})$
+\item $\varphi_{6} :\equiv \forall v_{209}\,\forall v_{210}\,(v_{208} = v_{209} \to v_{209} = v_{210} \to v_{208} = v_{210})$
+\item $\varphi_{7} :\equiv \forall v_{206}\,\forall v_{207}\,(v_{205} = v_{206} \to v_{206} = v_{207} \to v_{205} = v_{207})$
+\item $\varphi_{8} :\equiv x \cdot (y - b) + b \cdot (x - a) = x \cdot (y - b) + b \cdot (x - a)$
+\item $\varphi_{9} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{214} = y \to y = z \to v_{214} = z)$
+\item $\varphi_{10} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{211} = y \to y = z \to v_{211} = z)$
+\item $\varphi_{11} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{208} = y \to y = z \to v_{208} = z)$
+\item $\varphi_{12} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(v_{205} = y \to y = z \to v_{205} = z)$
+\item $\varphi_{13} :\equiv v_{200} \in \mathbb{R} \to v_{198} - v_{199} = v_{198} - v_{200} + (v_{200} - v_{199})$
+\item $\varphi_{14} :\equiv x \cdot (y - b) + b \cdot (x - a) = x \cdot y - x \cdot b + b \cdot (x - a)$
+\item $\varphi_{15} :\equiv b \cdot x - b \cdot a = b \cdot (x - a) \to b \cdot (x - a) = b \cdot x - b \cdot a$
+\item $\varphi_{16} :\equiv x \cdot y - x \cdot b = x \cdot (y - b) \to x \cdot (y - b) = x \cdot y - x \cdot b$
+\item $\varphi_{17} :\equiv \forall y\,\forall z\,(v_{214} = y \to y = z \to v_{214} = z) \to \forall z\,(v_{214} = v_{215} \to v_{215} = z \to v_{214} = z)$
+\item $\varphi_{18} :\equiv \forall y\,\forall z\,(v_{211} = y \to y = z \to v_{211} = z) \to \forall z\,(v_{211} = v_{212} \to v_{212} = z \to v_{211} = z)$
+\item $\varphi_{19} :\equiv \forall y\,\forall z\,(v_{208} = y \to y = z \to v_{208} = z) \to \forall z\,(v_{208} = v_{209} \to v_{209} = z \to v_{208} = z)$
+\item $\varphi_{20} :\equiv \forall y\,\forall z\,(v_{205} = y \to y = z \to v_{205} = z) \to \forall z\,(v_{205} = v_{206} \to v_{206} = z \to v_{205} = z)$
+\item $\varphi_{21} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(b \cdot x - b \cdot a = y \to y = b \cdot x - b \cdot a)$
+\item $\varphi_{22} :\equiv x \cdot y - x \cdot b + b \cdot (x - a) = x \cdot y - x \cdot b + b \cdot (x - a)$
+\item $\varphi_{23} :\equiv x \cdot (y - b) + b \cdot (x - a) = x \cdot y - x \cdot b + (x \cdot b - a \cdot b)$
+\item $\varphi_{24} :\equiv x \cdot (y - b) + b \cdot (x - a) = x \cdot y - x \cdot b + (x \cdot b - b \cdot a)$
+\item $\varphi_{25} :\equiv x \cdot (y - b) + b \cdot (x - a) = x \cdot y - x \cdot b + (b \cdot x - b \cdot a)$
+\item $\varphi_{26} :\equiv v_{197} \in \mathbb{R} \to v_{195} \cdot v_{196} - v_{195} \cdot v_{197} = v_{195} \cdot (v_{196} - v_{197})$
+\item $\varphi_{27} :\equiv \forall z\,(v_{214} = v_{215} \to v_{215} = z \to v_{214} = z) \to v_{214} = v_{215} \to v_{215} = v_{216} \to v_{214} = v_{216}$
+\item $\varphi_{28} :\equiv \forall z\,(v_{211} = v_{212} \to v_{212} = z \to v_{211} = z) \to v_{211} = v_{212} \to v_{212} = v_{213} \to v_{211} = v_{213}$
+\item $\varphi_{29} :\equiv \forall z\,(v_{208} = v_{209} \to v_{209} = z \to v_{208} = z) \to v_{208} = v_{209} \to v_{209} = v_{210} \to v_{208} = v_{210}$
+\item $\varphi_{30} :\equiv \forall z\,(v_{205} = v_{206} \to v_{206} = z \to v_{205} = z) \to v_{205} = v_{206} \to v_{206} = v_{207} \to v_{205} = v_{207}$
+\item $\varphi_{31} :\equiv x \cdot y - x \cdot b + (x \cdot b - b \cdot a) = x \cdot y - x \cdot b + (x \cdot b - w)$
+\item $\varphi_{32} :\equiv x \cdot y - x \cdot b + (x \cdot b - b \cdot a) = x \cdot y - x \cdot b + (x \cdot b - z)$
+\item $\varphi_{33} :\equiv x \cdot y - x \cdot b + (b \cdot x - b \cdot a) = x \cdot y - x \cdot b + (w - b \cdot a)$
+\item $\varphi_{34} :\equiv x \cdot y - x \cdot b + (b \cdot x - b \cdot a) = x \cdot y - x \cdot b + (z - b \cdot a)$
+\item $\varphi_{35} :\equiv x \cdot y - x \cdot b + b \cdot (x - a) = x \cdot y - x \cdot b + (b \cdot x - b \cdot a)$
+\item $\varphi_{36} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot (y - b) + b \cdot (x - a) = x \cdot y - a \cdot b$
+\item $\varphi_{37} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y - a \cdot b = x \cdot (y - b) + b \cdot (x - a)$
+\item $\varphi_{38} :\equiv \forall a\,(b \in \mathbb{R} \to x \in \mathbb{R} \to a \in \mathbb{R} \to b \cdot x - b \cdot a = b \cdot (x - a))$
+\item $\varphi_{39} :\equiv \forall v_{218}\,(x \cdot (y - b) + b \cdot (x - a) = v_{218} \to v_{218} = x \cdot (y - b) + b \cdot (x - a))$
+\item $\varphi_{40} :\equiv \forall a\,\forall b\,\forall x\,(a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a - b = a - x + (x - b))$
+\item $\varphi_{41} :\equiv x \cdot b \in \mathbb{R} \to x \cdot y - a \cdot b = x \cdot y - x \cdot b + (x \cdot b - a \cdot b)$
+\item $\varphi_{42} :\equiv x \cdot y - x \cdot b + (x \cdot b - b \cdot a) = x \cdot y - x \cdot b + (x \cdot b - b \cdot a)$
+\item $\varphi_{43} :\equiv x \cdot y - x \cdot b + (b \cdot x - b \cdot a) = x \cdot y - x \cdot b + (b \cdot x - b \cdot a)$
+\item $\varphi_{44} :\equiv x \cdot y - x \cdot b + (x \cdot b - b \cdot a) = x \cdot y - x \cdot b + (x \cdot b - a \cdot b)$
+\item $\varphi_{45} :\equiv x \cdot y - x \cdot b + (b \cdot x - b \cdot a) = x \cdot y - x \cdot b + (x \cdot b - b \cdot a)$
+\item $\varphi_{46} :\equiv \forall c\,\forall x\,\forall a\,(c \in \mathbb{R} \to x \in \mathbb{R} \to a \in \mathbb{R} \to c \cdot x - c \cdot a = c \cdot (x - a))$
+\item $\varphi_{47} :\equiv \forall b\,\forall x\,(v_{198} \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R} \to v_{198} - b = v_{198} - x + (x - b))$
+\item $\varphi_{48} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y - a \cdot b = x \cdot y - x \cdot b + (x \cdot b - a \cdot b)$
+\item $\varphi_{49} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y - x \cdot b + (x \cdot b - a \cdot b) = x \cdot y - a \cdot b$
+\item $\varphi_{50} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \cdot x - b \cdot a = b \cdot (x - a)$
+\item $\varphi_{51} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \cdot (x - a) = b \cdot x - b \cdot a$
+\item $\varphi_{52} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y - x \cdot b = x \cdot (y - b)$
+\item $\varphi_{53} :\equiv x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot (y - b) = x \cdot y - x \cdot b$
+\item $\varphi_{54} :\equiv \forall v_{197}\,(x \in \mathbb{R} \to y \in \mathbb{R} \to v_{197} \in \mathbb{R} \to x \cdot y - x \cdot v_{197} = x \cdot (y - v_{197}))$
+\item $\varphi_{55} :\equiv \forall x\,(v_{198} \in \mathbb{R} \to v_{199} \in \mathbb{R} \to x \in \mathbb{R} \to v_{198} - v_{199} = v_{198} - x + (x - v_{199}))$
+\item $\varphi_{56} :\equiv \forall y\,(b \in \mathbb{R} \to y \in \mathbb{R} \to b \cdot y = y \cdot b) \to b \in \mathbb{R} \to a \in \mathbb{R} \to b \cdot a = a \cdot b$
+\item $\varphi_{57} :\equiv \forall y\,(b \in \mathbb{R} \to y \in \mathbb{R} \to b \cdot y = y \cdot b) \to b \in \mathbb{R} \to x \in \mathbb{R} \to b \cdot x = x \cdot b$
+\item $\varphi_{58} :\equiv \forall x\,\forall a\,(v_{195} \in \mathbb{R} \to x \in \mathbb{R} \to a \in \mathbb{R} \to v_{195} \cdot x - v_{195} \cdot a = v_{195} \cdot (x - a))$
+\item $\varphi_{59} :\equiv \forall v_{201}\,\forall v_{202}\,(v_{201} = v_{202} \to v_{202} = v_{201}) \to \forall v_{202}\,(x \cdot y - a \cdot b = v_{202} \to v_{202} = x \cdot y - a \cdot b)$
+\item $\varphi_{60} :\equiv \forall v_{203}\,\forall v_{204}\,(v_{203} = v_{204} \to v_{204} = v_{203}) \to \forall v_{204}\,(x \cdot y - x \cdot b = v_{204} \to v_{204} = x \cdot y - x \cdot b)$
+\item $\varphi_{61} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to x \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot b \in \mathbb{R}$
+\item $\varphi_{62} :\equiv \forall y\,(a \in \mathbb{R} \to y \in \mathbb{R} \to a \cdot y \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \cdot b \in \mathbb{R}$
+\item $\varphi_{63} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}$
+\item $\varphi_{64} :\equiv x \cdot (y - b) + b \cdot (x - a) = x \cdot y - a \cdot b \to x \cdot y - a \cdot b = x \cdot (y - b) + b \cdot (x - a)$
+\item $\varphi_{65} :\equiv \forall v_{215}\,\forall v_{216}\,(x \cdot (y - b) + b \cdot (x - a) = v_{215} \to v_{215} = v_{216} \to x \cdot (y - b) + b \cdot (x - a) = v_{216})$
+\item $\varphi_{66} :\equiv \forall v_{212}\,\forall v_{213}\,(x \cdot (y - b) + b \cdot (x - a) = v_{212} \to v_{212} = v_{213} \to x \cdot (y - b) + b \cdot (x - a) = v_{213})$
+\item $\varphi_{67} :\equiv \forall v_{209}\,\forall v_{210}\,(x \cdot (y - b) + b \cdot (x - a) = v_{209} \to v_{209} = v_{210} \to x \cdot (y - b) + b \cdot (x - a) = v_{210})$
+\item $\varphi_{68} :\equiv \forall v_{206}\,\forall v_{207}\,(x \cdot (y - b) + b \cdot (x - a) = v_{206} \to v_{206} = v_{207} \to x \cdot (y - b) + b \cdot (x - a) = v_{207})$
+\item $\varphi_{69} :\equiv x \cdot (y - b) + b \cdot (x - a) = z + b \cdot (x - a) \to x \cdot (y - b) + b \cdot (x - a) = w + b \cdot (x - a)$
+\item $\varphi_{70} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x) \to \forall y\,(b \in \mathbb{R} \to y \in \mathbb{R} \to b \cdot y = y \cdot b)$
+\item $\varphi_{71} :\equiv \forall a\,(v_{195} \in \mathbb{R} \to v_{196} \in \mathbb{R} \to a \in \mathbb{R} \to v_{195} \cdot v_{196} - v_{195} \cdot a = v_{195} \cdot (v_{196} - a))$
+\item $\varphi_{72} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$
+\item $\varphi_{73} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(a \in \mathbb{R} \to y \in \mathbb{R} \to a \cdot y \in \mathbb{R})$
+\item $\varphi_{74} :\equiv \forall v_{196}\,\forall v_{197}\,(x \in \mathbb{R} \to v_{196} \in \mathbb{R} \to v_{197} \in \mathbb{R} \to x \cdot v_{196} - x \cdot v_{197} = x \cdot (v_{196} - v_{197}))$
+\item $\varphi_{75} :\equiv x \cdot y - x \cdot b + (x \cdot b - a \cdot b) = x \cdot y - a \cdot b \to x \cdot (y - b) + b \cdot (x - a) = x \cdot y - a \cdot b$
+\item $\varphi_{76} :\equiv \forall v_{199}\,\forall v_{200}\,(x \cdot y \in \mathbb{R} \to v_{199} \in \mathbb{R} \to v_{200} \in \mathbb{R} \to x \cdot y - v_{199} = x \cdot y - v_{200} + (v_{200} - v_{199}))$
+\item $\varphi_{77} :\equiv \forall v_{200}\,(x \cdot y \in \mathbb{R} \to a \cdot b \in \mathbb{R} \to v_{200} \in \mathbb{R} \to x \cdot y - a \cdot b = x \cdot y - v_{200} + (v_{200} - a \cdot b))$
+\item $\varphi_{78} :\equiv x \cdot y - a \cdot b = x \cdot y - x \cdot b + (x \cdot b - a \cdot b) \to x \cdot y - x \cdot b + (x \cdot b - a \cdot b) = x \cdot y - a \cdot b$
+\item $\varphi_{79} :\equiv x \cdot y - x \cdot b + b \cdot (x - a) = x \cdot y - x \cdot b + z \to x \cdot y - x \cdot b + b \cdot (x - a) = x \cdot y - x \cdot b + w$
+\item $\varphi_{80} :\equiv \forall v_{204}\,(x \cdot y - x \cdot b = v_{204} \to v_{204} = x \cdot y - x \cdot b) \to \varphi_{16}$
+\item $\varphi_{81} :\equiv \forall w\,(x \cdot (y - b) = w \to \varphi_{8} \to x \cdot (y - b) + b \cdot (x - a) = w + b \cdot (x - a))$
+\item $\varphi_{82} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \cdot a = a \cdot b$
+\item $\varphi_{83} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \cdot x = x \cdot b$
+\item $\varphi_{84} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot b \in \mathbb{R}$
+\item $\varphi_{85} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \cdot b \in \mathbb{R}$
+\item $\varphi_{86} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to y \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y \in \mathbb{R}$
+\item $\varphi_{87} :\equiv \forall v_{207}\,(\varphi_{14} \to x \cdot y - x \cdot b + b \cdot (x - a) = v_{207} \to x \cdot (y - b) + b \cdot (x - a) = v_{207})$
+\item $\varphi_{88} :\equiv \forall w\,(b \cdot (x - a) = w \to \varphi_{22} \to x \cdot y - x \cdot b + b \cdot (x - a) = x \cdot y - x \cdot b + w)$
+\item $\varphi_{89} :\equiv \varphi_{38} \to b \in \mathbb{R} \to x \in \mathbb{R} \to a \in \mathbb{R} \to b \cdot x - b \cdot a = b \cdot (x - a)$
+\item $\varphi_{90} :\equiv \forall v_{216}\,(\varphi_{23} \to x \cdot y - x \cdot b + (x \cdot b - a \cdot b) = v_{216} \to x \cdot (y - b) + b \cdot (x - a) = v_{216})$
+\item $\varphi_{91} :\equiv \forall v_{213}\,(\varphi_{24} \to x \cdot y - x \cdot b + (x \cdot b - b \cdot a) = v_{213} \to x \cdot (y - b) + b \cdot (x - a) = v_{213})$
+\item $\varphi_{92} :\equiv \forall v_{210}\,(\varphi_{25} \to x \cdot y - x \cdot b + (b \cdot x - b \cdot a) = v_{210} \to x \cdot (y - b) + b \cdot (x - a) = v_{210})$
+\item $\varphi_{93} :\equiv \varphi_{54} \to x \in \mathbb{R} \to y \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y - x \cdot b = x \cdot (y - b)$
+\item $\varphi_{94} :\equiv \forall v_{202}\,(x \cdot y - a \cdot b = v_{202} \to v_{202} = x \cdot y - a \cdot b) \to \varphi_{78}$
+\item $\varphi_{95} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot b \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{48}$
+\item $\varphi_{96} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \in \mathbb{R}) \to \varphi_{50}$
+\item $\varphi_{97} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to y \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{52}$
+\item $\varphi_{98} :\equiv \forall v_{195}\,\forall v_{196}\,\forall v_{197}\,(v_{195} \in \mathbb{R} \to v_{196} \in \mathbb{R} \to \varphi_{26}) \to \varphi_{74}$
+\item $\varphi_{99} :\equiv \forall v_{198}\,\forall v_{199}\,\forall v_{200}\,(v_{198} \in \mathbb{R} \to v_{199} \in \mathbb{R} \to \varphi_{13}) \to \varphi_{76}$
+\item $\varphi_{100} :\equiv (b \in \mathbb{R} \to a \in \mathbb{R} \to b \cdot a = a \cdot b) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{82}$
+\item $\varphi_{101} :\equiv (b \in \mathbb{R} \to x \in \mathbb{R} \to b \cdot x = x \cdot b) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{83}$
+\item $\varphi_{102} :\equiv (x \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot b \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{84}$
+\item $\varphi_{103} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to a \cdot b \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \in \mathbb{R}) \to \varphi_{85}$
+\item $\varphi_{104} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{86}$
+\item $\varphi_{105} :\equiv (x \cdot (y - b) = x \cdot y - x \cdot b \to \varphi_{8} \to \varphi_{14}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{14}$
+\item $\varphi_{106} :\equiv (b \cdot (x - a) = b \cdot x - b \cdot a \to \varphi_{22} \to \varphi_{35}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{35}$
+\item $\varphi_{107} :\equiv (b \cdot a = a \cdot b \to \varphi_{42} \to \varphi_{44}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{44}$
+\item $\varphi_{108} :\equiv (b \cdot x = x \cdot b \to \varphi_{43} \to \varphi_{45}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{45}$
+\item $\varphi_{109} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \cdot b \in \mathbb{R}) \to \varphi_{95}$
+\item $\varphi_{110} :\equiv (b \in \mathbb{R} \to x \in \mathbb{R} \to a \in \mathbb{R} \to b \cdot x - b \cdot a = b \cdot (x - a)) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \in \mathbb{R}) \to \varphi_{96}$
+\item $\varphi_{111} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to b \in \mathbb{R} \to x \cdot y - x \cdot b = x \cdot (y - b)) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to x \in \mathbb{R}) \to \varphi_{97}$
+\item $\varphi_{112} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{49}) \to (\varphi_{23} \to \varphi_{75}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to \varphi_{36}$
+\item $\varphi_{113} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{35}) \to (\varphi_{14} \to \varphi_{35} \to \varphi_{25}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{25}$
+\item $\varphi_{114} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \cdot a = a \cdot b) \to \varphi_{42} \to \varphi_{107}$
+\item $\varphi_{115} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to b \cdot x = x \cdot b) \to \varphi_{43} \to \varphi_{108}$
+\item $\varphi_{116} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{45}) \to (\varphi_{25} \to \varphi_{45} \to \varphi_{24}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{24}$
+\item $\varphi_{117} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{44}) \to (\varphi_{24} \to \varphi_{44} \to \varphi_{23}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{23}$
+\end{abbrevlist}
+\end{fullproof}

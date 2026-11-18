@@ -1,0 +1,133 @@
+% 自動生成 (prover/build.js): EpsEq  ノード数 56
+\begin{fullproof}{命題1.1}{$\forall a\,\forall b\,(a \in \mathbb{R} \to b \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to a = b)$}{56}\phantomsection\label{tree:EpsEq}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,(\neg x < x)$\lbl{[O1]}}
+\AXC{$\forall x\,(\neg x < x) \to \neg \lvert a - b \rvert < \lvert a - b \rvert$\lbl{A2}}
+\BIC{$\neg \lvert a - b \rvert < \lvert a - b \rvert$}
+\AXC{$\neg \lvert a - b \rvert < \lvert a - b \rvert \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{9}$\lbl{A1}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \neq y \to x - y \neq 0)$\lbl{[A15]}}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$\forall y\,(a \in \mathbb{R} \to y \in \mathbb{R} \to a \neq y \to a - y \neq 0)$}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to a \neq b \to a - b \neq 0$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to a \neq b \to a - b \neq 0) \to \varphi_{22}$\lbl{A1}}
+\BIC{$\varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to \varphi_{1}$\lbl{A1}}
+\AXC{$a \in \mathbb{R} \to \varphi_{5}$\lbl{A1}}
+\AXC{$a \in \mathbb{R} \to \varphi_{6}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{22}$}
+\BIC{$(a \in \mathbb{R} \to \varphi_{5}) \to (a \in \mathbb{R} \to \varphi_{1}) \to a \in \mathbb{R} \to \varphi_{4}$}
+\BIC{$(a \in \mathbb{R} \to \varphi_{1}) \to a \in \mathbb{R} \to \varphi_{4}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{4}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to \varphi_{6}$\lbl{A1}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$\forall y\,(a \in \mathbb{R} \to y \in \mathbb{R} \to a - y \in \mathbb{R})$}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to a - b \in \mathbb{R}$}
+\AXC{$\varphi_{20}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to \varphi_{6}) \to (a \in \mathbb{R} \to \varphi_{5}) \to a \in \mathbb{R} \to \varphi_{10}$}
+\BIC{$(a \in \mathbb{R} \to \varphi_{5}) \to a \in \mathbb{R} \to \varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$a \in \mathbb{R} \to \varphi_{5}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$(a \in \mathbb{R} \to \varphi_{5}) \to a \in \mathbb{R} \to \varphi_{10}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{4}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{10}$}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to 0 < \lvert x \rvert)$\lbl{[A14]}}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$a - b \in \mathbb{R} \to a - b \neq 0 \to 0 < \lvert a - b \rvert$}
+\AXC{$\varphi_{21}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to \varphi_{10}) \to (a \in \mathbb{R} \to \varphi_{4}) \to a \in \mathbb{R} \to \varphi_{12}$}
+\BIC{$(a \in \mathbb{R} \to \varphi_{4}) \to a \in \mathbb{R} \to \varphi_{12}$}
+\BIC{$a \in \mathbb{R} \to \varphi_{12}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{10}$}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R})$\lbl{[A5]}}
+\AXC{$\forall x \in \mathbb{R}\,(\lvert x \rvert \in \mathbb{R}) \to a - b \in \mathbb{R} \to \lvert a - b \rvert \in \mathbb{R}$\lbl{A2}}
+\BIC{$a - b \in \mathbb{R} \to \lvert a - b \rvert \in \mathbb{R}$}
+\AXC{$\varphi_{18}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to \varphi_{10}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{2}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{2}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\AXC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{16}$\lbl{A1}}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{16}) \to \varphi_{17} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{17}$\lbl{A1}}
+\BIC{$\varphi_{17} \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{17}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{17}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to \varphi_{12}$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{2}$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{17}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{17}) \to \varphi_{19}$\lbl{A1}}
+\BIC{$\varphi_{19}$}
+\BIC{$(a \in \mathbb{R} \to \varphi_{12}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{8}$}
+\BIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{8}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{9}$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{8}$}
+\AXC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{8}) \to (a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{9}) \to \varphi_{3}$\lbl{A1}}
+\BIC{$(a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{9}) \to \varphi_{3}$}
+\BIC{$\varphi_{3}$}
+\UIC{$\forall b\,(\varphi_{3})$}
+\UIC{$\forall a\,\forall b\,(\varphi_{3})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv b \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to a \neq b \to a \neq b$
+\item $\varphi_{2} :\equiv \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to a \neq b \to \lvert a - b \rvert \in \mathbb{R}$
+\item $\varphi_{3} :\equiv a \in \mathbb{R} \to b \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to a = b$
+\item $\varphi_{4} :\equiv b \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to a \neq b \to a - b \neq 0$
+\item $\varphi_{5} :\equiv b \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to a \neq b \to b \in \mathbb{R}$
+\item $\varphi_{6} :\equiv b \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to a \neq b \to a \in \mathbb{R}$
+\item $\varphi_{7} :\equiv \forall x \in \mathbb{R}\,(x \neq 0 \to 0 < \lvert x \rvert) \to a - b \in \mathbb{R} \to a - b \neq 0 \to 0 < \lvert a - b \rvert$
+\item $\varphi_{8} :\equiv \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to a \neq b \to \lvert a - b \rvert < \lvert a - b \rvert$
+\item $\varphi_{9} :\equiv \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to a \neq b \to \neg \lvert a - b \rvert < \lvert a - b \rvert$
+\item $\varphi_{10} :\equiv b \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to a \neq b \to a - b \in \mathbb{R}$
+\item $\varphi_{11} :\equiv \forall y\,(a \in \mathbb{R} \to y \in \mathbb{R} \to a - y \in \mathbb{R}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to a - b \in \mathbb{R}$
+\item $\varphi_{12} :\equiv b \in \mathbb{R} \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to a \neq b \to 0 < \lvert a - b \rvert$
+\item $\varphi_{13} :\equiv \forall y\,(a \in \mathbb{R} \to y \in \mathbb{R} \to a \neq y \to a - y \neq 0) \to a \in \mathbb{R} \to b \in \mathbb{R} \to a \neq b \to a - b \neq 0$
+\item $\varphi_{14} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(a \in \mathbb{R} \to y \in \mathbb{R} \to a - y \in \mathbb{R})$
+\item $\varphi_{15} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \neq y \to x - y \neq 0) \to \forall y\,(a \in \mathbb{R} \to y \in \mathbb{R} \to a \neq y \to a - y \neq 0)$
+\item $\varphi_{16} :\equiv \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon)$
+\item $\varphi_{17} :\equiv \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \lvert a - b \rvert < \varepsilon) \to \lvert a - b \rvert \in \mathbb{R} \to 0 < \lvert a - b \rvert \to \lvert a - b \rvert < \lvert a - b \rvert$
+\item $\varphi_{18} :\equiv (a - b \in \mathbb{R} \to \lvert a - b \rvert \in \mathbb{R}) \to (a \in \mathbb{R} \to \varphi_{10}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{2}$
+\item $\varphi_{19} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{2}) \to (a \in \mathbb{R} \to \varphi_{12}) \to a \in \mathbb{R} \to b \in \mathbb{R} \to \varphi_{8}$
+\item $\varphi_{20} :\equiv (a \in \mathbb{R} \to b \in \mathbb{R} \to a - b \in \mathbb{R}) \to (a \in \mathbb{R} \to \varphi_{6}) \to (a \in \mathbb{R} \to \varphi_{5}) \to a \in \mathbb{R} \to \varphi_{10}$
+\item $\varphi_{21} :\equiv (a - b \in \mathbb{R} \to a - b \neq 0 \to 0 < \lvert a - b \rvert) \to (a \in \mathbb{R} \to \varphi_{10}) \to (a \in \mathbb{R} \to \varphi_{4}) \to a \in \mathbb{R} \to \varphi_{12}$
+\item $\varphi_{22} :\equiv (a \in \mathbb{R} \to \varphi_{6}) \to (a \in \mathbb{R} \to \varphi_{5}) \to (a \in \mathbb{R} \to \varphi_{1}) \to a \in \mathbb{R} \to \varphi_{4}$
+\end{abbrevlist}
+\end{fullproof}

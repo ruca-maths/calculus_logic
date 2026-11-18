@@ -1,0 +1,799 @@
+% 自動生成 (prover/build.js): DvgMul  ノード数 295
+\begin{fullproof}{定理2.18(3)}{$\forall a\,\forall b\,\forall C\,(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to \mathrm{DvgP}(a \otimes b))$}{295}\phantomsection\label{tree:DvgMul}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(C \leq b_{n}) \to n \in \mathbb{N} \to C \leq b_{n}$\lbl{A2}}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{15}$\lbl{A1}}
+\AXC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{15}) \to \varphi_{84}$\lbl{A1}}
+\BIC{$\varphi_{84}$}
+\BIC{$\mathrm{DvgP}(a) \to \varphi_{29}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{93}$\lbl{A1}}
+\AXC{$\varphi_{41}$\lbl{A2}}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{116}$\lbl{A1}}
+\AXC{$\varphi_{159}$\lbl{A1}}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{124}$}
+\AXC{$\varphi_{167}$\lbl{A1}}
+\BIC{$\varphi_{41} \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{120}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{120}$}
+\AXC{$\varphi_{176}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{93}) \to \varphi_{145}$}
+\BIC{$\varphi_{145}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{94}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{145}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{109}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}$\lbl{A1}}
+\AXC{$\forall x \in \mathbb{R}\,(0 < x \to 0 < x^{-1})$\lbl{[F34]}}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$C \in \mathbb{R} \to 0 < C \to 0 < C^{-1}$}
+\AXC{$\varphi_{132}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}) \to \varphi_{92}$}
+\BIC{$\varphi_{92}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(C = y \to y = C)$\lbl{A2}}
+\BIC{$\forall y\,(C = y \to y = C)$}
+\AXC{$\forall y\,(C = y \to y = C) \to C = 0 \to 0 = C$\lbl{A2}}
+\BIC{$C = 0 \to 0 = C$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x < y \to x \neq y)$\lbl{[F26]}}
+\AXC{$\forall x\,\forall y\,(x < y \to x \neq y) \to \forall y\,(0 < y \to 0 \neq y)$\lbl{A2}}
+\BIC{$\forall y\,(0 < y \to 0 \neq y)$}
+\AXC{$\forall y\,(0 < y \to 0 \neq y) \to 0 < C \to 0 \neq C$\lbl{A2}}
+\BIC{$0 < C \to 0 \neq C$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to 0 < C$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$0 < C \to 0 \neq C$}
+\AXC{$(0 < C \to 0 \neq C) \to \varphi_{77}$\lbl{A1}}
+\BIC{$\varphi_{77}$}
+\BIC{$\mathrm{DvgP}(a) \to \varphi_{4}$}
+\AXC{$\varphi_{100}$\lbl{A1}}
+\BIC{$(C = 0 \to 0 = C) \to \mathrm{DvgP}(a) \to \varphi_{5}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$C = 0 \to 0 = C$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$(C = 0 \to 0 = C) \to \mathrm{DvgP}(a) \to \varphi_{5}$}
+\BIC{$\mathrm{DvgP}(a) \to \varphi_{5}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}$\lbl{A1}}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$C \in \mathbb{R} \to C \neq 0 \to C^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{135}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}) \to \varphi_{113}$}
+\BIC{$\varphi_{113}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \varphi_{5}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{113}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{13}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \varphi_{35}$\lbl{A1}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y)$\lbl{(R15)}}
+\AXC{$\varphi_{76}$\lbl{A2}}
+\BIC{$\forall y\,(K \in \mathbb{R} \to y \in \mathbb{R} \to 0 < K \to 0 < y \to 0 < K \cdot y)$}
+\AXC{$\varphi_{81}$\lbl{A2}}
+\BIC{$K \in \mathbb{R} \to C^{-1} \in \mathbb{R} \to 0 < K \to 0 < C^{-1} \to 0 < K \cdot C^{-1}$}
+\AXC{$\varphi_{171}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \varphi_{35}) \to \varphi_{160}$}
+\BIC{$\varphi_{160}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{23}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{13}$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{160}$}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{23}) \to \varphi_{127}$}
+\BIC{$\varphi_{127}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to 0 < C$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{92}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{37}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{127}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{16}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z)$\lbl{[O2]}}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(0 < y \to y < z \to 0 < z)$}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\BIC{$\forall z\,(0 < K \cdot C^{-1} \to K \cdot C^{-1} < z \to 0 < z)$}
+\AXC{$\varphi_{62}$\lbl{A2}}
+\BIC{$0 < K \cdot C^{-1} \to K \cdot C^{-1} < a_{n} \to 0 < a_{n}$}
+\AXC{$\varphi_{169}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{16}) \to \varphi_{151}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{109}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{16}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{16}) \to \varphi_{151}$}
+\BIC{$\varphi_{151}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{101}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\forall a\,(\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \varphi_{14})$\lbl{Def$\mathrm{DvgP}$}}
+\AXC{$\varphi_{123}$\lbl{A2}}
+\BIC{$\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \varphi_{14}$}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{DvgP}(a)$\lbl{A1}}
+\AXC{$\varphi_{122}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \varphi_{14}) \to \mathrm{DvgP}(a) \to \varphi_{7}$}
+\BIC{$\mathrm{DvgP}(a) \to \varphi_{7}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \varphi_{7}$}
+\AXC{$\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$\lbl{[S1]}}
+\AXC{$\varphi_{42}$\lbl{A2}}
+\BIC{$\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$}
+\AXC{$\varphi_{32}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}$}
+\AXC{$\varphi_{166}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \varphi_{7}) \to \varphi_{142}$}
+\BIC{$\varphi_{142}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{93}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{142}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{103}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$\lbl{[S1]}}
+\AXC{$\varphi_{43}$\lbl{A2}}
+\BIC{$\forall n\,(\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R})$}
+\AXC{$\varphi_{33}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R}$}
+\AXC{$\varphi_{162}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \mathrm{Seq}(b)) \to \varphi_{143}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \mathrm{Seq}(b)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \mathrm{Seq}(b)) \to \varphi_{143}$}
+\BIC{$\varphi_{143}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\varphi_{12}$\lbl{[E9]}}
+\AXC{$\varphi_{12} \to \varphi_{10}$\lbl{A2}}
+\BIC{$\varphi_{10}$}
+\AXC{$\varphi_{10} \to \varphi_{44}$\lbl{A2}}
+\BIC{$\varphi_{44}$}
+\AXC{$\varphi_{44} \to C \in \mathbb{R} \to \varphi_{56}$\lbl{A2}}
+\BIC{$C \in \mathbb{R} \to \varphi_{56}$}
+\AXC{$(C \in \mathbb{R} \to \varphi_{56}) \to \varphi_{179}$\lbl{A1}}
+\BIC{$\varphi_{179}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{93}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{143}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{104}$}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{179}$}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{104}) \to \varphi_{177}$}
+\BIC{$\varphi_{177}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{101}$}
+\AXC{$\varphi_{144}$\lbl{A1}}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{99}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{103}$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{177}$}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{99}) \to \varphi_{153}$}
+\BIC{$\varphi_{153}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$z = w \to z < a_{n} \cdot C \to w < a_{n} \cdot C$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < a_{n} \cdot C \to w < a_{n} \cdot C)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < a_{n} \cdot C \to w < a_{n} \cdot C)$}
+\AXC{$\forall z\,\forall w\,(z = w \to z < a_{n} \cdot C \to w < a_{n} \cdot C) \to \varphi_{21}$\lbl{A2}}
+\BIC{$\varphi_{21}$}
+\AXC{$\varphi_{96}$\lbl{A2}}
+\BIC{$K \cdot C^{-1} \cdot C = K \to K \cdot C^{-1} \cdot C < a_{n} \cdot C \to K < a_{n} \cdot C$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$C \in \mathbb{R} \to C \neq 0 \to C^{-1} \in \mathbb{R}$}
+\AXC{$(C \in \mathbb{R} \to C \neq 0 \to C^{-1} \in \mathbb{R}) \to \varphi_{138}$\lbl{A1}}
+\BIC{$\varphi_{138}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \varphi_{35}$\lbl{A1}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{48}$\lbl{A2}}
+\BIC{$\forall y\,(K \in \mathbb{R} \to y \in \mathbb{R} \to K \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{54}$\lbl{A2}}
+\BIC{$K \in \mathbb{R} \to C^{-1} \in \mathbb{R} \to K \cdot C^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{168}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \varphi_{35}) \to \varphi_{149}$}
+\BIC{$\varphi_{149}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \varphi_{5}$}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\varphi_{138}$}
+\BIC{$(\mathrm{DvgP}(a) \to \varphi_{5}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{102}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{102}$}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{149}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{107}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{107}$}
+\AXC{$\varphi_{34}$\lbl{[F32]}}
+\AXC{$\varphi_{34} \to \varphi_{65}$\lbl{A2}}
+\BIC{$\varphi_{65}$}
+\AXC{$\varphi_{65} \to \varphi_{78}$\lbl{A2}}
+\BIC{$\varphi_{78}$}
+\AXC{$\varphi_{78} \to K \cdot C^{-1} \in \mathbb{R} \to \varphi_{58}$\lbl{A2}}
+\BIC{$K \cdot C^{-1} \in \mathbb{R} \to \varphi_{58}$}
+\AXC{$\varphi_{180}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{107}) \to \varphi_{174}$}
+\BIC{$\varphi_{174}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{103}$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{174}$}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}) \to \varphi_{163}$}
+\BIC{$\varphi_{163}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{109}$}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to 0 < C$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\varphi_{163}$}
+\BIC{$\varphi_{156}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{114}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \varphi_{35}$\lbl{A1}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y^{-1} \cdot y = x)$\lbl{[E23]}}
+\AXC{$\varphi_{68}$\lbl{A2}}
+\BIC{$\forall y\,(K \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to K \cdot y^{-1} \cdot y = K)$}
+\AXC{$\varphi_{63}$\lbl{A2}}
+\BIC{$K \in \mathbb{R} \to C \in \mathbb{R} \to C \neq 0 \to K \cdot C^{-1} \cdot C = K$}
+\AXC{$\varphi_{164}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \varphi_{35}) \to \varphi_{139}$}
+\BIC{$\varphi_{139}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \varphi_{5}$}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\varphi_{139}$}
+\BIC{$(\mathrm{DvgP}(a) \to \varphi_{5}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{105}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{105}$}
+\AXC{$\varphi_{172}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{114}) \to \varphi_{134}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{114}$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{114}) \to \varphi_{134}$}
+\BIC{$\varphi_{134}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z)$\lbl{[O3]}}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(K < y \to y \leq z \to K < z)$}
+\AXC{$\varphi_{22}$\lbl{A2}}
+\BIC{$\forall z\,(K < a_{n} \cdot C \to a_{n} \cdot C \leq z \to K < z)$}
+\AXC{$\varphi_{83}$\lbl{A2}}
+\BIC{$K < a_{n} \cdot C \to a_{n} \cdot C \leq a_{n} \cdot b_{n} \to K < a_{n} \cdot b_{n}$}
+\AXC{$\varphi_{173}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{106}) \to \varphi_{157}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$K \cdot C^{-1} \cdot C = K \to K \cdot C^{-1} \cdot C < a_{n} \cdot C \to K < a_{n} \cdot C$}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\varphi_{134}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{106}$}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{106}) \to \varphi_{157}$}
+\BIC{$\varphi_{157}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{93}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \varphi_{29}$}
+\AXC{$(\mathrm{DvgP}(a) \to \varphi_{29}) \to \varphi_{141}$\lbl{A1}}
+\BIC{$\varphi_{141}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{98}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{153}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{115}$}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\varphi_{157}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{111}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall b\,(\mathrm{Seq}(a) \to \varphi_{36})$\lbl{[S4]}}
+\AXC{$\forall a\,\forall b\,(\mathrm{Seq}(a) \to \varphi_{36}) \to \forall b\,(\mathrm{Seq}(a) \to \varphi_{36})$\lbl{A2}}
+\BIC{$\forall b\,(\mathrm{Seq}(a) \to \varphi_{36})$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$\forall b\,(\mathrm{Seq}(a) \to \varphi_{36})$}
+\AXC{$\forall b\,(\mathrm{Seq}(a) \to \varphi_{36}) \to \mathrm{Seq}(a) \to \varphi_{36}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to \varphi_{36}$}
+\AXC{$(\mathrm{Seq}(a) \to \varphi_{36}) \to (\mathrm{DvgP}(a) \to \varphi_{7}) \to \varphi_{108}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \varphi_{7}) \to \varphi_{108}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \mathrm{Seq}(b)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \varphi_{7}$}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$(\mathrm{DvgP}(a) \to \varphi_{7}) \to \varphi_{108}$}
+\BIC{$\varphi_{108}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \varphi_{59}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$\varphi_{64}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \varphi_{59}$}
+\AXC{$\varphi_{146}$\lbl{A1}}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{126}$}
+\AXC{$\varphi_{170}$\lbl{A1}}
+\BIC{$\varphi_{64} \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{125}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{125}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{93}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{125}$}
+\AXC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{125}) \to \varphi_{152}$\lbl{A1}}
+\BIC{$\varphi_{152}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{118}$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{118}$}
+\AXC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{118}) \to \varphi_{137}$\lbl{A1}}
+\BIC{$\varphi_{137}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{111}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\forall y\,(a \otimes b(n) = y \to y = a \otimes b(n))$}
+\AXC{$\varphi_{80}$\lbl{A2}}
+\BIC{$a \otimes b(n) = a_{n} \cdot b_{n} \to a_{n} \cdot b_{n} = a \otimes b(n)$}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$\varphi_{137}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{119}$}
+\AXC{$\varphi_{175}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{111}) \to \varphi_{136}$}
+\BIC{$\varphi_{136}$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$\varphi_{155}$\lbl{A3}}
+\AXC{$z = w \to K < z \to K < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to K < z \to K < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to K < z \to K < w)$}
+\AXC{$\varphi_{46}$\lbl{A2}}
+\BIC{$\forall w\,(a_{n} \cdot b_{n} = w \to K < a_{n} \cdot b_{n} \to K < w)$}
+\AXC{$\varphi_{97}$\lbl{A2}}
+\BIC{$a_{n} \cdot b_{n} = a \otimes b(n) \to K < a_{n} \cdot b_{n} \to K < a \otimes b(n)$}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\varphi_{136}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{110}$}
+\AXC{$\varphi_{154}$\lbl{A1}}
+\BIC{$\varphi_{86} \to n \in \mathbb{N} \to N \leq n \to K < a \otimes b(n)$}
+\UIC{$\forall n\,(\varphi_{86} \to n \in \mathbb{N} \to N \leq n \to K < a \otimes b(n))$}
+\AXC{$\varphi_{181}$\lbl{A1}}
+\BIC{$\varphi_{155} \to (\varphi_{86} \to \forall n\,(\varphi_{86})) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{112}$}
+\BIC{$(\varphi_{86} \to \forall n\,(\varphi_{86})) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{112}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{116}$\lbl{A1}}
+\AXC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{116}) \to \mathrm{DvgP}(a) \to \varphi_{87}$\lbl{A1}}
+\BIC{$\mathrm{DvgP}(a) \to \varphi_{87}$}
+\AXC{$(\mathrm{DvgP}(a) \to \varphi_{87}) \to \varphi_{158}$\lbl{A1}}
+\BIC{$\varphi_{158}$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$\varphi_{86} \to \forall n\,(\varphi_{86})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$(\varphi_{86} \to \forall n\,(\varphi_{86})) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{112}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{112}$}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$\varphi_{158}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{117}$}
+\AXC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{117}) \to \varphi_{140}$\lbl{A1}}
+\BIC{$\varphi_{140}$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$\varphi_{3} \to \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K < a \otimes b(n)))$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$\varphi_{140}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{121}$}
+\AXC{$\varphi_{161}$\lbl{A1}}
+\BIC{$\varphi_{90} \to \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}))$}
+\UIC{$\varphi_{128}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \varphi_{35}$\lbl{A1}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{48}$\lbl{A2}}
+\BIC{$\forall y\,(K \in \mathbb{R} \to y \in \mathbb{R} \to K \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{54}$\lbl{A2}}
+\BIC{$K \in \mathbb{R} \to C^{-1} \in \mathbb{R} \to K \cdot C^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{147}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \varphi_{35}) \to \varphi_{129}$}
+\BIC{$\varphi_{129}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$\mathrm{DvgP}(a) \to \mathrm{DvgP}(a)$\lbl{A1}}
+\AXC{$(\mathrm{DvgP}(a) \to \mathrm{DvgP}(a)) \to \varphi_{133}$\lbl{A1}}
+\BIC{$\varphi_{133}$}
+\end{ptree}
+\noindent$\Pi_{51}$:
+\begin{ptree}
+\AXC{$\forall a\,(\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \varphi_{14})$\lbl{Def$\mathrm{DvgP}$}}
+\AXC{$\varphi_{123}$\lbl{A2}}
+\BIC{$\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \varphi_{14}$}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$\varphi_{133}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{85}$}
+\AXC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{85}) \to \varphi_{148}$\lbl{A1}}
+\BIC{$\varphi_{148}$}
+\end{ptree}
+\noindent$\Pi_{52}$:
+\begin{ptree}
+\AXC{$\varphi_{14} \to K \cdot C^{-1} \in \mathbb{R} \to \varphi_{24}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{51}}{\vdots}$}\noLine
+\UIC{$\varphi_{148}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \varphi_{91}$}
+\AXC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \varphi_{91}) \to \varphi_{150}$\lbl{A1}}
+\BIC{$\varphi_{150}$}
+\end{ptree}
+\noindent$\Pi_{53}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{16}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{13}$}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$\varphi_{129}$}
+\BIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{25}$}
+\AXC{$\stackrel{\Pi_{52}}{\vdots}$}\noLine
+\UIC{$\varphi_{150}$}
+\BIC{$(\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{16}) \to \varphi_{88}$}
+\BIC{$\varphi_{88}$}
+\end{ptree}
+\noindent$\Pi_{54}$:
+\begin{ptree}
+\AXC{$\varphi_{90} \to \forall N\,(\varphi_{90})$\lbl{A4}}
+\AXC{$\varphi_{128} \to \forall N\,(\varphi_{90}) \to \varphi_{2}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$\varphi_{128}$}
+\AXC{$\stackrel{\Pi_{53}}{\vdots}$}\noLine
+\UIC{$\varphi_{88}$}
+\AXC{$\varphi_{88} \to \varphi_{128} \to (\varphi_{128} \to \forall N\,(\varphi_{90}) \to \varphi_{2}) \to (\varphi_{90} \to \forall N\,(\varphi_{90})) \to \varphi_{89}$\lbl{A1}}
+\BIC{$\varphi_{128} \to (\varphi_{128} \to \forall N\,(\varphi_{90}) \to \varphi_{2}) \to (\varphi_{90} \to \forall N\,(\varphi_{90})) \to \varphi_{89}$}
+\BIC{$(\varphi_{128} \to \forall N\,(\varphi_{90}) \to \varphi_{2}) \to (\varphi_{90} \to \forall N\,(\varphi_{90})) \to \varphi_{89}$}
+\BIC{$(\varphi_{90} \to \forall N\,(\varphi_{90})) \to \varphi_{89}$}
+\BIC{$\varphi_{89}$}
+\end{ptree}
+\noindent$\Pi_{55}$:
+\begin{ptree}
+\AXC{$\varphi_{9} \to \forall K\,(\varphi_{9})$\lbl{A4}}
+\AXC{$\forall K\,(\varphi_{9} \to \varphi_{31}) \to \forall K\,(\varphi_{9}) \to \varphi_{38}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{54}}{\vdots}$}\noLine
+\UIC{$\varphi_{89}$}
+\AXC{$\varphi_{89} \to \varphi_{9} \to \varphi_{31}$\lbl{A1}}
+\BIC{$\varphi_{9} \to \varphi_{31}$}
+\UIC{$\forall K\,(\varphi_{9} \to \varphi_{31})$}
+\AXC{$\varphi_{178}$\lbl{A1}}
+\BIC{$(\forall K\,(\varphi_{9} \to \varphi_{31}) \to \forall K\,(\varphi_{9}) \to \varphi_{38}) \to (\varphi_{9} \to \forall K\,(\varphi_{9})) \to \varphi_{95}$}
+\BIC{$(\varphi_{9} \to \forall K\,(\varphi_{9})) \to \varphi_{95}$}
+\BIC{$\varphi_{95}$}
+\end{ptree}
+\noindent$\Pi_{56}$:
+\begin{ptree}
+\AXC{$\forall a\,(\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \varphi_{14})$\lbl{Def$\mathrm{DvgP}$}}
+\AXC{$\varphi_{130}$\lbl{A2}}
+\BIC{$\mathrm{DvgP}(a \otimes b) \leftrightarrow \mathrm{Seq}(a \otimes b) \land \varphi_{38}$}
+\AXC{$\varphi_{165}$\lbl{A1}}
+\BIC{$(\mathrm{DvgP}(a) \to \varphi_{17}) \to \varphi_{95} \to \mathrm{DvgP}(a) \to \varphi_{19}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{55}}{\vdots}$}\noLine
+\UIC{$\varphi_{95}$}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \varphi_{59}$}
+\AXC{$\varphi_{131}$\lbl{A1}}
+\BIC{$\mathrm{DvgP}(a) \to \varphi_{17}$}
+\AXC{$\stackrel{\Pi_{56}}{\vdots}$}\noLine
+\UIC{$(\mathrm{DvgP}(a) \to \varphi_{17}) \to \varphi_{95} \to \mathrm{DvgP}(a) \to \varphi_{19}$}
+\BIC{$\varphi_{95} \to \mathrm{DvgP}(a) \to \varphi_{19}$}
+\BIC{$\mathrm{DvgP}(a) \to \varphi_{19}$}
+\UIC{$\forall C\,(\mathrm{DvgP}(a) \to \varphi_{19})$}
+\UIC{$\forall b\,\forall C\,(\mathrm{DvgP}(a) \to \varphi_{19})$}
+\UIC{$\forall a\,\forall b\,\forall C\,(\mathrm{DvgP}(a) \to \varphi_{19})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z) \to \forall y\,\forall z\,(K < y \to y \leq z \to K < z)$
+\item $\varphi_{2} :\equiv \forall N\,(\neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n})))$
+\item $\varphi_{3} :\equiv \forall N\,(\neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K < a \otimes b(n))))$
+\item $\varphi_{4} :\equiv \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to 0 \neq C$
+\item $\varphi_{5} :\equiv \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to C \neq 0$
+\item $\varphi_{6} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(a \otimes b(n) = y \to y = a \otimes b(n))$
+\item $\varphi_{7} :\equiv \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to \mathrm{Seq}(a)$
+\item $\varphi_{8} :\equiv \forall x\,\forall y\,\forall z\,(x < y \to y < z \to x < z) \to \forall y\,\forall z\,(0 < y \to y < z \to 0 < z)$
+\item $\varphi_{9} :\equiv \mathrm{DvgP}(a) \land \mathrm{Seq}(b) \land C \in \mathbb{R} \land 0 < C \land \forall n \in \mathbb{N}\,(C \leq b_{n})$
+\item $\varphi_{10} :\equiv \forall y\,\forall z\,(C \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 \leq z \to C \leq y \to z \cdot C \leq z \cdot y)$
+\item $\varphi_{11} :\equiv \forall x \in \mathbb{R}\,(0 < x \to 0 < x^{-1}) \to C \in \mathbb{R} \to 0 < C \to 0 < C^{-1}$
+\item $\varphi_{12} :\equiv \forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 \leq z \to x \leq y \to z \cdot x \leq z \cdot y)$
+\item $\varphi_{13} :\equiv 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to C^{-1} \in \mathbb{R}$
+\item $\varphi_{14} :\equiv \forall K \in \mathbb{R}\,(0 < K \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to K < a_{n}))$
+\item $\varphi_{15} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to \forall n \in \mathbb{N}\,(C \leq b_{n})$
+\item $\varphi_{16} :\equiv 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to 0 < K \cdot C^{-1}$
+\item $\varphi_{17} :\equiv \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to \mathrm{Seq}(a \otimes b)$
+\item $\varphi_{18} :\equiv \forall x \in \mathbb{R}\,(x \neq 0 \to x^{-1} \in \mathbb{R}) \to C \in \mathbb{R} \to C \neq 0 \to C^{-1} \in \mathbb{R}$
+\item $\varphi_{19} :\equiv \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to \mathrm{DvgP}(a \otimes b)$
+\item $\varphi_{20} :\equiv 0 < K \to N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to N \in \mathbb{N}$
+\item $\varphi_{21} :\equiv \forall w\,(K \cdot C^{-1} \cdot C = w \to K \cdot C^{-1} \cdot C < a_{n} \cdot C \to w < a_{n} \cdot C)$
+\item $\varphi_{22} :\equiv \forall y\,\forall z\,(K < y \to y \leq z \to K < z) \to \forall z\,(K < a_{n} \cdot C \to a_{n} \cdot C \leq z \to K < z)$
+\item $\varphi_{23} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to 0 < K$
+\item $\varphi_{24} :\equiv 0 < K \cdot C^{-1} \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n})$
+\item $\varphi_{25} :\equiv 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to K \cdot C^{-1} \in \mathbb{R}$
+\item $\varphi_{26} :\equiv \forall y\,\forall z\,(0 < y \to y < z \to 0 < z) \to \forall z\,(0 < K \cdot C^{-1} \to K \cdot C^{-1} < z \to 0 < z)$
+\item $\varphi_{27} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{28} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to N \leq n$
+\item $\varphi_{29} :\equiv \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to n \in \mathbb{N} \to C \leq b_{n}$
+\item $\varphi_{30} :\equiv K \in \mathbb{R} \to 0 < K \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n})$
+\item $\varphi_{31} :\equiv K \in \mathbb{R} \to 0 < K \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to K < a \otimes b(n))$
+\item $\varphi_{32} :\equiv \forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}$
+\item $\varphi_{33} :\equiv \forall n\,(\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R}) \to \mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R}$
+\item $\varphi_{34} :\equiv \forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \cdot z < y \cdot z)$
+\item $\varphi_{35} :\equiv \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to K \in \mathbb{R}$
+\item $\varphi_{36} :\equiv \mathrm{Seq}(b) \to \mathrm{Seq}(a \otimes b) \land \forall n \in \mathbb{N}\,(a \otimes b(n) = a_{n} \cdot b_{n})$
+\item $\varphi_{37} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to 0 < C^{-1}$
+\item $\varphi_{38} :\equiv \forall K \in \mathbb{R}\,(0 < K \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to K < a \otimes b(n)))$
+\item $\varphi_{39} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to C \leq b_{n}$
+\item $\varphi_{40} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to 0 \leq a_{n}$
+\item $\varphi_{41} :\equiv \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to K \cdot C^{-1} < a_{n}$
+\item $\varphi_{42} :\equiv \forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$
+\item $\varphi_{43} :\equiv \forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \forall n\,(\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R})$
+\item $\varphi_{44} :\equiv \forall z\,(C \in \mathbb{R} \to b_{n} \in \mathbb{R} \to z \in \mathbb{R} \to 0 \leq z \to C \leq b_{n} \to z \cdot C \leq z \cdot b_{n})$
+\item $\varphi_{45} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to 0 < a_{n}$
+\item $\varphi_{46} :\equiv \forall z\,\forall w\,(z = w \to K < z \to K < w) \to \forall w\,(a_{n} \cdot b_{n} = w \to K < a_{n} \cdot b_{n} \to K < w)$
+\item $\varphi_{47} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to C^{-1} \in \mathbb{R}$
+\item $\varphi_{48} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(K \in \mathbb{R} \to y \in \mathbb{R} \to K \cdot y \in \mathbb{R})$
+\item $\varphi_{49} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to a_{n} \in \mathbb{R}$
+\item $\varphi_{50} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to b_{n} \in \mathbb{R}$
+\item $\varphi_{51} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to K \cdot C^{-1} \cdot C = K$
+\item $\varphi_{52} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to K < a_{n} \cdot C$
+\item $\varphi_{53} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to K \cdot C^{-1} \in \mathbb{R}$
+\item $\varphi_{54} :\equiv \forall y\,(K \in \mathbb{R} \to y \in \mathbb{R} \to K \cdot y \in \mathbb{R}) \to K \in \mathbb{R} \to C^{-1} \in \mathbb{R} \to K \cdot C^{-1} \in \mathbb{R}$
+\item $\varphi_{55} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to K \cdot C^{-1} < a_{n}$
+\item $\varphi_{56} :\equiv b_{n} \in \mathbb{R} \to a_{n} \in \mathbb{R} \to 0 \leq a_{n} \to C \leq b_{n} \to a_{n} \cdot C \leq a_{n} \cdot b_{n}$
+\item $\varphi_{57} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to K < a \otimes b(n)$
+\item $\varphi_{58} :\equiv a_{n} \in \mathbb{R} \to C \in \mathbb{R} \to 0 < C \to K \cdot C^{-1} < a_{n} \to K \cdot C^{-1} \cdot C < a_{n} \cdot C$
+\item $\varphi_{59} :\equiv \forall n \in \mathbb{N}\,(C \leq b_{n}) \to \mathrm{Seq}(a \otimes b) \land \forall n \in \mathbb{N}\,(a \otimes b(n) = a_{n} \cdot b_{n})$
+\item $\varphi_{60} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to K < a_{n} \cdot b_{n}$
+\item $\varphi_{61} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to \forall n \in \mathbb{N}\,(N \leq n \to K < a \otimes b(n))$
+\item $\varphi_{62} :\equiv \forall z\,(0 < K \cdot C^{-1} \to K \cdot C^{-1} < z \to 0 < z) \to 0 < K \cdot C^{-1} \to K \cdot C^{-1} < a_{n} \to 0 < a_{n}$
+\item $\varphi_{63} :\equiv \forall y\,(K \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to K \cdot y^{-1} \cdot y = K) \to K \in \mathbb{R} \to C \in \mathbb{R} \to C \neq 0 \to K \cdot C^{-1} \cdot C = K$
+\item $\varphi_{64} :\equiv \forall n \in \mathbb{N}\,(a \otimes b(n) = a_{n} \cdot b_{n}) \to n \in \mathbb{N} \to a \otimes b(n) = a_{n} \cdot b_{n}$
+\item $\varphi_{65} :\equiv \forall y\,\forall z\,(K \cdot C^{-1} \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to K \cdot C^{-1} < y \to K \cdot C^{-1} \cdot z < y \cdot z)$
+\item $\varphi_{66} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to K \cdot C^{-1} \cdot C < a_{n} \cdot C$
+\item $\varphi_{67} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to a_{n} \cdot C \leq a_{n} \cdot b_{n}$
+\item $\varphi_{68} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to x \cdot y^{-1} \cdot y = x) \to \forall y\,(K \in \mathbb{R} \to y \in \mathbb{R} \to y \neq 0 \to K \cdot y^{-1} \cdot y = K)$
+\item $\varphi_{69} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n})$
+\item $\varphi_{70} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K < a \otimes b(n))$
+\item $\varphi_{71} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to a \otimes b(n) = a_{n} \cdot b_{n}$
+\item $\varphi_{72} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to a_{n} \cdot b_{n} = a \otimes b(n)$
+\item $\varphi_{73} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to n \in \mathbb{N} \to N \leq n \to K \cdot C^{-1} < a_{n}$
+\item $\varphi_{74} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to K < a \otimes b(n))$
+\item $\varphi_{75} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n})$
+\item $\varphi_{76} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to 0 < x \to 0 < y \to 0 < x \cdot y) \to \forall y\,(K \in \mathbb{R} \to y \in \mathbb{R} \to 0 < K \to 0 < y \to 0 < K \cdot y)$
+\item $\varphi_{77} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to 0 < C) \to \mathrm{DvgP}(a) \to \varphi_{4}$
+\item $\varphi_{78} :\equiv \forall z\,(K \cdot C^{-1} \in \mathbb{R} \to a_{n} \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to K \cdot C^{-1} < a_{n} \to K \cdot C^{-1} \cdot z < a_{n} \cdot z)$
+\item $\varphi_{79} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to n \in \mathbb{N} \to a \otimes b(n) = a_{n} \cdot b_{n}$
+\item $\varphi_{80} :\equiv \forall y\,(a \otimes b(n) = y \to y = a \otimes b(n)) \to a \otimes b(n) = a_{n} \cdot b_{n} \to a_{n} \cdot b_{n} = a \otimes b(n)$
+\item $\varphi_{81} :\equiv \forall y\,(K \in \mathbb{R} \to y \in \mathbb{R} \to 0 < K \to 0 < y \to 0 < K \cdot y) \to K \in \mathbb{R} \to C^{-1} \in \mathbb{R} \to 0 < K \to 0 < C^{-1} \to 0 < K \cdot C^{-1}$
+\item $\varphi_{82} :\equiv N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}) \to n \in \mathbb{N} \to N \leq n \to \forall n \in \mathbb{N}\,(a \otimes b(n) = a_{n} \cdot b_{n})$
+\item $\varphi_{83} :\equiv \forall z\,(K < a_{n} \cdot C \to a_{n} \cdot C \leq z \to K < z) \to K < a_{n} \cdot C \to a_{n} \cdot C \leq a_{n} \cdot b_{n} \to K < a_{n} \cdot b_{n}$
+\item $\varphi_{84} :\equiv (\forall n \in \mathbb{N}\,(C \leq b_{n}) \to n \in \mathbb{N} \to C \leq b_{n}) \to \mathrm{DvgP}(a) \to \varphi_{29}$
+\item $\varphi_{85} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{14}$
+\item $\varphi_{86} :\equiv \varphi_{9} \land K \in \mathbb{R} \land 0 < K \land (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}))$
+\item $\varphi_{87} :\equiv \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to \varphi_{20}$
+\item $\varphi_{88} :\equiv \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to \varphi_{30}$
+\item $\varphi_{89} :\equiv \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to \varphi_{31}$
+\item $\varphi_{90} :\equiv \varphi_{9} \land K \in \mathbb{R} \land 0 < K \land \neg \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to K < a \otimes b(n))$
+\item $\varphi_{91} :\equiv \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to K \cdot C^{-1} \in \mathbb{R} \to \varphi_{24}$
+\item $\varphi_{92} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to 0 < C) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{37}$
+\item $\varphi_{93} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{27}$
+\item $\varphi_{94} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{28}$
+\item $\varphi_{95} :\equiv \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to \varphi_{38}$
+\item $\varphi_{96} :\equiv \varphi_{21} \to K \cdot C^{-1} \cdot C = K \to K \cdot C^{-1} \cdot C < a_{n} \cdot C \to K < a_{n} \cdot C$
+\item $\varphi_{97} :\equiv \forall w\,(a_{n} \cdot b_{n} = w \to K < a_{n} \cdot b_{n} \to K < w) \to a_{n} \cdot b_{n} = a \otimes b(n) \to K < a_{n} \cdot b_{n} \to K < a \otimes b(n)$
+\item $\varphi_{98} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{39}$
+\item $\varphi_{99} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{40}$
+\item $\varphi_{100} :\equiv (\mathrm{DvgP}(a) \to \varphi_{4}) \to (C = 0 \to 0 = C) \to \mathrm{DvgP}(a) \to \varphi_{5}$
+\item $\varphi_{101} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{45}$
+\item $\varphi_{102} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{47}$
+\item $\varphi_{103} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{49}$
+\item $\varphi_{104} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{50}$
+\item $\varphi_{105} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{51}$
+\item $\varphi_{106} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{52}$
+\item $\varphi_{107} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{53}$
+\item $\varphi_{108} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \mathrm{Seq}(b)) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \varphi_{59}$
+\item $\varphi_{109} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{55}$
+\item $\varphi_{110} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{57}$
+\item $\varphi_{111} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{60}$
+\item $\varphi_{112} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{61}$
+\item $\varphi_{113} :\equiv (\mathrm{DvgP}(a) \to \varphi_{5}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{13}$
+\item $\varphi_{114} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{66}$
+\item $\varphi_{115} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{67}$
+\item $\varphi_{116} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{69}$
+\item $\varphi_{117} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{70}$
+\item $\varphi_{118} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{71}$
+\item $\varphi_{119} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{72}$
+\item $\varphi_{120} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{73}$
+\item $\varphi_{121} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{74}$
+\item $\varphi_{122} :\equiv (\mathrm{DvgP}(a) \to \mathrm{DvgP}(a)) \to (\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \varphi_{14}) \to \mathrm{DvgP}(a) \to \varphi_{7}$
+\item $\varphi_{123} :\equiv \forall a\,(\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \varphi_{14}) \to (\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \varphi_{14})$
+\item $\varphi_{124} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{75}$
+\item $\varphi_{125} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{79}$
+\item $\varphi_{126} :\equiv C \in \mathbb{R} \to 0 < C \to \forall n \in \mathbb{N}\,(C \leq b_{n}) \to K \in \mathbb{R} \to 0 < K \to \varphi_{82}$
+\item $\varphi_{127} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{37}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{16}$
+\item $\varphi_{128} :\equiv \forall N\,(\varphi_{90} \to \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n})))$
+\item $\varphi_{129} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{13}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{25}$
+\item $\varphi_{130} :\equiv \forall a\,(\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \varphi_{14}) \to (\mathrm{DvgP}(a \otimes b) \leftrightarrow \mathrm{Seq}(a \otimes b) \land \varphi_{38})$
+\item $\varphi_{131} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \varphi_{59}) \to \mathrm{DvgP}(a) \to \varphi_{17}$
+\item $\varphi_{132} :\equiv (C \in \mathbb{R} \to 0 < C \to 0 < C^{-1}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}) \to \varphi_{92}$
+\item $\varphi_{133} :\equiv (\mathrm{DvgP}(a) \leftrightarrow \mathrm{Seq}(a) \land \varphi_{14}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{85}$
+\item $\varphi_{134} :\equiv (K \cdot C^{-1} \cdot C = K \to K \cdot C^{-1} \cdot C < a_{n} \cdot C \to K < a_{n} \cdot C) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{106}$
+\item $\varphi_{135} :\equiv (C \in \mathbb{R} \to C \neq 0 \to C^{-1} \in \mathbb{R}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}) \to \varphi_{113}$
+\item $\varphi_{136} :\equiv (a_{n} \cdot b_{n} = a \otimes b(n) \to K < a_{n} \cdot b_{n} \to K < a \otimes b(n)) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{110}$
+\item $\varphi_{137} :\equiv (a \otimes b(n) = a_{n} \cdot b_{n} \to a_{n} \cdot b_{n} = a \otimes b(n)) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{119}$
+\item $\varphi_{138} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}) \to (\mathrm{DvgP}(a) \to \varphi_{5}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{102}$
+\item $\varphi_{139} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}) \to (\mathrm{DvgP}(a) \to \varphi_{5}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{105}$
+\item $\varphi_{140} :\equiv (\varphi_{3} \to \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K < a \otimes b(n)))) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{121}$
+\item $\varphi_{141} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{93}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{98}$
+\item $\varphi_{142} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{93}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{103}$
+\item $\varphi_{143} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{93}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{104}$
+\item $\varphi_{144} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{101}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{99}$
+\item $\varphi_{145} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{94}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{109}$
+\item $\varphi_{146} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \varphi_{59}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{126}$
+\item $\varphi_{147} :\equiv (K \in \mathbb{R} \to C^{-1} \in \mathbb{R} \to K \cdot C^{-1} \in \mathbb{R}) \to (\mathrm{DvgP}(a) \to \varphi_{35}) \to \varphi_{129}$
+\item $\varphi_{148} :\equiv (\varphi_{14} \to K \cdot C^{-1} \in \mathbb{R} \to \varphi_{24}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to \varphi_{91}$
+\item $\varphi_{149} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{102}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{107}$
+\item $\varphi_{150} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{25}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{16}) \to \varphi_{88}$
+\item $\varphi_{151} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{109}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{101}$
+\item $\varphi_{152} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{93}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{118}$
+\item $\varphi_{153} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{98}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{115}$
+\item $\varphi_{154} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{110}) \to \varphi_{86} \to n \in \mathbb{N} \to N \leq n \to K < a \otimes b(n)$
+\item $\varphi_{155} :\equiv \forall n\,(\varphi_{86} \to n \in \mathbb{N} \to N \leq n \to K < a \otimes b(n)) \to \forall n\,(\varphi_{86}) \to \forall n \in \mathbb{N}\,(N \leq n \to K < a \otimes b(n))$
+\item $\varphi_{156} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{109}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{114}$
+\item $\varphi_{157} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{115}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{111}$
+\item $\varphi_{158} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{112}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{117}$
+\item $\varphi_{159} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{116}) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{124}$
+\item $\varphi_{160} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{13}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{23}) \to \varphi_{127}$
+\item $\varphi_{161} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{121}) \to \varphi_{90} \to \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to K \cdot C^{-1} < a_{n}))$
+\item $\varphi_{162} :\equiv (\mathrm{Seq}(b) \to n \in \mathbb{N} \to b_{n} \in \mathbb{R}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \mathrm{Seq}(b)) \to \varphi_{143}$
+\item $\varphi_{163} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to 0 < C \to 0 < C) \to \varphi_{156}$
+\item $\varphi_{164} :\equiv (K \in \mathbb{R} \to C \in \mathbb{R} \to C \neq 0 \to K \cdot C^{-1} \cdot C = K) \to (\mathrm{DvgP}(a) \to \varphi_{35}) \to \varphi_{139}$
+\item $\varphi_{165} :\equiv (\mathrm{DvgP}(a \otimes b) \leftrightarrow \mathrm{Seq}(a \otimes b) \land \varphi_{38}) \to (\mathrm{DvgP}(a) \to \varphi_{17}) \to \varphi_{95} \to \mathrm{DvgP}(a) \to \varphi_{19}$
+\item $\varphi_{166} :\equiv (\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to (\mathrm{DvgP}(a) \to \varphi_{7}) \to \varphi_{142}$
+\item $\varphi_{167} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{124}) \to \varphi_{41} \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{120}$
+\item $\varphi_{168} :\equiv (K \in \mathbb{R} \to C^{-1} \in \mathbb{R} \to K \cdot C^{-1} \in \mathbb{R}) \to (\mathrm{DvgP}(a) \to \varphi_{35}) \to \varphi_{149}$
+\item $\varphi_{169} :\equiv (0 < K \cdot C^{-1} \to K \cdot C^{-1} < a_{n} \to 0 < a_{n}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to \varphi_{16}) \to \varphi_{151}$
+\item $\varphi_{170} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{126}) \to \varphi_{64} \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{125}$
+\item $\varphi_{171} :\equiv (K \in \mathbb{R} \to C^{-1} \in \mathbb{R} \to 0 < K \to 0 < C^{-1} \to 0 < K \cdot C^{-1}) \to (\mathrm{DvgP}(a) \to \varphi_{35}) \to \varphi_{160}$
+\item $\varphi_{172} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{105}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{114}) \to \varphi_{134}$
+\item $\varphi_{173} :\equiv (K < a_{n} \cdot C \to a_{n} \cdot C \leq a_{n} \cdot b_{n} \to K < a_{n} \cdot b_{n}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{106}) \to \varphi_{157}$
+\item $\varphi_{174} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{103}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}) \to \varphi_{163}$
+\item $\varphi_{175} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{119}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{111}) \to \varphi_{136}$
+\item $\varphi_{176} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{120}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{93}) \to \varphi_{145}$
+\item $\varphi_{177} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{103}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{99}) \to \varphi_{153}$
+\item $\varphi_{178} :\equiv \forall K\,(\varphi_{9} \to \varphi_{31}) \to (\forall K\,(\varphi_{9} \to \varphi_{31}) \to \forall K\,(\varphi_{9}) \to \varphi_{38}) \to (\varphi_{9} \to \forall K\,(\varphi_{9})) \to \varphi_{95}$
+\item $\varphi_{179} :\equiv (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to C \in \mathbb{R} \to C \in \mathbb{R}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{104}) \to \varphi_{177}$
+\item $\varphi_{180} :\equiv (K \cdot C^{-1} \in \mathbb{R} \to \varphi_{58}) \to (\mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{107}) \to \varphi_{174}$
+\item $\varphi_{181} :\equiv \forall n\,(\varphi_{86} \to n \in \mathbb{N} \to N \leq n \to K < a \otimes b(n)) \to \varphi_{155} \to (\varphi_{86} \to \forall n\,(\varphi_{86})) \to \mathrm{DvgP}(a) \to \mathrm{Seq}(b) \to \varphi_{112}$
+\end{abbrevlist}
+\end{fullproof}

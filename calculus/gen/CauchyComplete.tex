@@ -1,0 +1,1652 @@
+% 自動生成 (prover/build.js): CauchyComplete  ノード数 657
+\begin{fullproof}{定理6.11}{$\forall a\,(\mathrm{Cgt}(a) \leftrightarrow \mathrm{Cauchy}(a))$}{657}\phantomsection\label{tree:CauchyComplete}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z = w \to \lvert a_{n} - c \rvert < z \to \lvert a_{n} - c \rvert < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \lvert a_{n} - c \rvert < z \to \lvert a_{n} - c \rvert < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to \lvert a_{n} - c \rvert < z \to \lvert a_{n} - c \rvert < w)$}
+\AXC{$\forall z\,\forall w\,(z = w \to \lvert a_{n} - c \rvert < z \to \lvert a_{n} - c \rvert < w) \to \varphi_{122}$\lbl{A2}}
+\BIC{$\varphi_{122}$}
+\AXC{$\varphi_{122} \to \varphi_{123}$\lbl{A2}}
+\BIC{$\varphi_{123}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$z = w \to \lvert z - c \rvert < \varepsilon \cdot 2^{-1} \to \lvert w - c \rvert < \varepsilon \cdot 2^{-1}$\lbl{A6}}
+\UIC{$\varphi_{46}$}
+\UIC{$\forall z\,(\varphi_{46})$}
+\AXC{$\forall z\,(\varphi_{46}) \to \varphi_{100}$\lbl{A2}}
+\BIC{$\varphi_{100}$}
+\AXC{$\varphi_{100} \to b_{N_{1} \cup N_{2}} = a_{s_{N_{1} \cup N_{2}}} \to \varphi_{96}$\lbl{A2}}
+\BIC{$b_{N_{1} \cup N_{2}} = a_{s_{N_{1} \cup N_{2}}} \to \varphi_{96}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall m\,\forall n\,(n \leq m \cup n)$\lbl{[C8]}}
+\AXC{$\forall m\,\forall n\,(n \leq m \cup n) \to \forall n\,(n \leq N_{1} \cup n)$\lbl{A2}}
+\BIC{$\forall n\,(n \leq N_{1} \cup n)$}
+\AXC{$\forall n\,(n \leq N_{1} \cup n) \to N_{2} \leq N_{1} \cup N_{2}$\lbl{A2}}
+\BIC{$N_{2} \leq N_{1} \cup N_{2}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to m \cup n \in \mathbb{N})$\lbl{[N3]}}
+\AXC{$\varphi_{87}$\lbl{A2}}
+\BIC{$\forall n\,(N_{1} \in \mathbb{N} \to n \in \mathbb{N} \to N_{1} \cup n \in \mathbb{N})$}
+\AXC{$\varphi_{81}$\lbl{A2}}
+\BIC{$N_{1} \in \mathbb{N} \to N_{2} \in \mathbb{N} \to N_{1} \cup N_{2} \in \mathbb{N}$}
+\AXC{$(N_{1} \in \mathbb{N} \to N_{2} \in \mathbb{N} \to N_{1} \cup N_{2} \in \mathbb{N}) \to \varphi_{269} \to \varphi_{268} \to \varphi_{288}$\lbl{A1}}
+\BIC{$\varphi_{269} \to \varphi_{268} \to \varphi_{288}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\varphi_{310}$\lbl{A1}}
+\AXC{$\varphi_{310} \to \varphi_{268}$\lbl{A1}}
+\BIC{$\varphi_{268}$}
+\AXC{$\varphi_{280}$\lbl{A1}}
+\AXC{$\varphi_{280} \to \varphi_{269}$\lbl{A1}}
+\BIC{$\varphi_{269}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{269} \to \varphi_{268} \to \varphi_{288}$}
+\BIC{$\varphi_{268} \to \varphi_{288}$}
+\BIC{$\varphi_{288}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to \varphi_{65}$\lbl{A2}}
+\AXC{$\varphi_{310}$\lbl{A1}}
+\AXC{$\varphi_{310} \to \varphi_{313}$\lbl{A1}}
+\BIC{$\varphi_{313}$}
+\AXC{$\varphi_{362}$\lbl{A1}}
+\BIC{$(\forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to \varphi_{65}) \to \varphi_{324}$}
+\BIC{$\varphi_{324}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$N_{2} \leq N_{1} \cup N_{2}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{288}$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{324}$}
+\AXC{$\varphi_{324} \to \varphi_{288} \to N_{2} \leq N_{1} \cup N_{2} \to \varphi_{308}$\lbl{A1}}
+\BIC{$\varphi_{288} \to N_{2} \leq N_{1} \cup N_{2} \to \varphi_{308}$}
+\BIC{$N_{2} \leq N_{1} \cup N_{2} \to \varphi_{308}$}
+\BIC{$\varphi_{308}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{288}$}
+\AXC{$\varphi_{106}$\lbl{A2}}
+\AXC{$\varphi_{173}$\lbl{A1}}
+\AXC{$\varphi_{173} \to \varphi_{304}$\lbl{A1}}
+\BIC{$\varphi_{304}$}
+\AXC{$\varphi_{304} \to \varphi_{106} \to \varphi_{317}$\lbl{A1}}
+\BIC{$\varphi_{106} \to \varphi_{317}$}
+\BIC{$\varphi_{317}$}
+\AXC{$\varphi_{317} \to \varphi_{288} \to \varphi_{306}$\lbl{A1}}
+\BIC{$\varphi_{288} \to \varphi_{306}$}
+\BIC{$\varphi_{306}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$b_{N_{1} \cup N_{2}} = a_{s_{N_{1} \cup N_{2}}} \to \varphi_{96}$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{308}$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{306}$}
+\AXC{$\varphi_{306} \to \varphi_{308} \to (b_{N_{1} \cup N_{2}} = a_{s_{N_{1} \cup N_{2}}} \to \varphi_{96}) \to \varphi_{311}$\lbl{A1}}
+\BIC{$\varphi_{308} \to (b_{N_{1} \cup N_{2}} = a_{s_{N_{1} \cup N_{2}}} \to \varphi_{96}) \to \varphi_{311}$}
+\BIC{$(b_{N_{1} \cup N_{2}} = a_{s_{N_{1} \cup N_{2}}} \to \varphi_{96}) \to \varphi_{311}$}
+\BIC{$\varphi_{311}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\forall s\,(\mathrm{SubIdx}(s) \to \forall k \in \mathbb{N}\,(k \leq s_{k}))$\lbl{[C17]}}
+\AXC{$\varphi_{64}$\lbl{A2}}
+\BIC{$\mathrm{SubIdx}(s) \to \forall k \in \mathbb{N}\,(k \leq s_{k})$}
+\AXC{$(\mathrm{SubIdx}(s) \to \forall k \in \mathbb{N}\,(k \leq s_{k})) \to \varphi_{113} \to \varphi_{135}$\lbl{A1}}
+\BIC{$\varphi_{113} \to \varphi_{135}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{288}$}
+\AXC{$\varphi_{62}$\lbl{A2}}
+\AXC{$\varphi_{173}$\lbl{A1}}
+\AXC{$\varphi_{173} \to \varphi_{113}$\lbl{A1}}
+\BIC{$\varphi_{113}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{113} \to \varphi_{135}$}
+\BIC{$\varphi_{135}$}
+\AXC{$\varphi_{135} \to \varphi_{62} \to \varphi_{170}$\lbl{A1}}
+\BIC{$\varphi_{62} \to \varphi_{170}$}
+\BIC{$\varphi_{170}$}
+\AXC{$\varphi_{170} \to \varphi_{288} \to \varphi_{295}$\lbl{A1}}
+\BIC{$\varphi_{288} \to \varphi_{295}$}
+\BIC{$\varphi_{295}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\forall m\,\forall n\,(m \leq m \cup n)$\lbl{[C7]}}
+\AXC{$\forall m\,\forall n\,(m \leq m \cup n) \to \forall n\,(N_{1} \leq N_{1} \cup n)$\lbl{A2}}
+\BIC{$\forall n\,(N_{1} \leq N_{1} \cup n)$}
+\AXC{$\forall n\,(N_{1} \leq N_{1} \cup n) \to N_{1} \leq N_{1} \cup N_{2}$\lbl{A2}}
+\BIC{$N_{1} \leq N_{1} \cup N_{2}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z)$\lbl{[O5]}}
+\AXC{$\varphi_{22}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(N_{1} \leq y \to y \leq z \to N_{1} \leq z)$}
+\AXC{$\varphi_{41}$\lbl{A2}}
+\BIC{$\forall z\,(N_{1} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq z \to N_{1} \leq z)$}
+\AXC{$\forall z\,(N_{1} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq z \to N_{1} \leq z) \to \varphi_{44}$\lbl{A2}}
+\BIC{$\varphi_{44}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\forall s\,(\varphi_{30})$\lbl{DefSubIdx}}
+\AXC{$\forall s\,(\varphi_{30}) \to \varphi_{30}$\lbl{A2}}
+\BIC{$\varphi_{30}$}
+\AXC{$\varphi_{173}$\lbl{A1}}
+\AXC{$\varphi_{173} \to \varphi_{113}$\lbl{A1}}
+\BIC{$\varphi_{113}$}
+\AXC{$\varphi_{113} \to \varphi_{30} \to \varphi_{111}$\lbl{A1}}
+\BIC{$\varphi_{30} \to \varphi_{111}$}
+\BIC{$\varphi_{111}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{288}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{111}$}
+\AXC{$\forall s\,\forall k\,(\mathrm{NSeq}(s) \to k \in \mathbb{N} \to s_{k} \in \mathbb{N})$\lbl{[S13]}}
+\AXC{$\varphi_{77}$\lbl{A2}}
+\BIC{$\forall k\,(\mathrm{NSeq}(s) \to k \in \mathbb{N} \to s_{k} \in \mathbb{N})$}
+\AXC{$\varphi_{101}$\lbl{A2}}
+\BIC{$\mathrm{NSeq}(s) \to N_{1} \cup N_{2} \in \mathbb{N} \to s_{N_{1} \cup N_{2}} \in \mathbb{N}$}
+\AXC{$\varphi_{361}$\lbl{A1}}
+\BIC{$\varphi_{111} \to \varphi_{288} \to \varphi_{292}$}
+\BIC{$\varphi_{288} \to \varphi_{292}$}
+\BIC{$\varphi_{292}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\varphi_{75} \to \varphi_{83}$\lbl{A2}}
+\AXC{$\varphi_{280}$\lbl{A1}}
+\AXC{$\varphi_{280} \to \varphi_{318}$\lbl{A1}}
+\BIC{$\varphi_{318}$}
+\AXC{$\varphi_{318} \to (\varphi_{75} \to \varphi_{83}) \to \varphi_{319}$\lbl{A1}}
+\BIC{$(\varphi_{75} \to \varphi_{83}) \to \varphi_{319}$}
+\BIC{$\varphi_{319}$}
+\AXC{$\varphi_{319} \to (\varphi_{83} \to v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48}) \to \varphi_{322}$\lbl{A1}}
+\BIC{$(\varphi_{83} \to v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48}) \to \varphi_{322}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\varphi_{83} \to v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$(\varphi_{83} \to v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48}) \to \varphi_{322}$}
+\BIC{$\varphi_{322}$}
+\AXC{$\varphi_{322} \to \varphi_{259} \to v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48}$\lbl{A1}}
+\BIC{$\varphi_{259} \to v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48}$}
+\UIC{$\forall v_{754}\,(\varphi_{259} \to v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48})$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\varphi_{259} \to \forall v_{754}\,(\varphi_{259})$\lbl{A4}}
+\AXC{$\varphi_{359}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\forall v_{754}\,(\varphi_{259} \to v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48})$}
+\AXC{$\varphi_{371}$\lbl{A1}}
+\BIC{$\varphi_{359} \to (\varphi_{259} \to \forall v_{754}\,(\varphi_{259})) \to \varphi_{327}$}
+\BIC{$(\varphi_{259} \to \forall v_{754}\,(\varphi_{259})) \to \varphi_{327}$}
+\BIC{$\varphi_{327}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\varphi_{259} \to \forall v_{753}\,(\varphi_{259})$\lbl{A4}}
+\AXC{$\varphi_{360}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{327}$}
+\AXC{$\varphi_{327} \to \varphi_{259} \to \forall v_{754}\,(v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48})$\lbl{A1}}
+\BIC{$\varphi_{259} \to \forall v_{754}\,(v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48})$}
+\UIC{$\forall v_{753}\,(\varphi_{259} \to \forall v_{754}\,(v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48}))$}
+\AXC{$\varphi_{373}$\lbl{A1}}
+\BIC{$\varphi_{360} \to (\varphi_{259} \to \forall v_{753}\,(\varphi_{259})) \to \varphi_{329}$}
+\BIC{$(\varphi_{259} \to \forall v_{753}\,(\varphi_{259})) \to \varphi_{329}$}
+\BIC{$\varphi_{329}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\forall v_{753}\,\forall v_{754}\,(v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48}) \to \varphi_{89}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{329}$}
+\AXC{$\varphi_{329} \to \varphi_{349}$\lbl{A1}}
+\BIC{$\varphi_{349}$}
+\BIC{$\varphi_{321}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\varphi_{89} \to n \in \mathbb{N} \to s_{N_{1} \cup N_{2}} \in \mathbb{N} \to N_{1} \leq n \to \varphi_{66}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{321}$}
+\AXC{$\varphi_{321} \to (\varphi_{89} \to n \in \mathbb{N} \to s_{N_{1} \cup N_{2}} \in \mathbb{N} \to N_{1} \leq n \to \varphi_{66}) \to \varphi_{334}$\lbl{A1}}
+\BIC{$(\varphi_{89} \to n \in \mathbb{N} \to s_{N_{1} \cup N_{2}} \in \mathbb{N} \to N_{1} \leq n \to \varphi_{66}) \to \varphi_{334}$}
+\BIC{$\varphi_{334}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\varphi_{276}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{292}$}
+\AXC{$\varphi_{275}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{334}$}
+\AXC{$\varphi_{334} \to \varphi_{275} \to \varphi_{292} \to \varphi_{276} \to \varphi_{289} \to \varphi_{314}$\lbl{A1}}
+\BIC{$\varphi_{275} \to \varphi_{292} \to \varphi_{276} \to \varphi_{289} \to \varphi_{314}$}
+\BIC{$\varphi_{292} \to \varphi_{276} \to \varphi_{289} \to \varphi_{314}$}
+\BIC{$\varphi_{276} \to \varphi_{289} \to \varphi_{314}$}
+\BIC{$\varphi_{289} \to \varphi_{314}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{295}$}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$N_{1} \leq N_{1} \cup N_{2}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{44}$}
+\AXC{$\varphi_{44} \to N_{1} \leq N_{1} \cup N_{2} \to \varphi_{295} \to \varphi_{289}$\lbl{A1}}
+\BIC{$N_{1} \leq N_{1} \cup N_{2} \to \varphi_{295} \to \varphi_{289}$}
+\BIC{$\varphi_{295} \to \varphi_{289}$}
+\BIC{$\varphi_{289}$}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{289} \to \varphi_{314}$}
+\BIC{$\varphi_{314}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$2^{-1} \in \mathbb{R}$\lbl{[F31]}}
+\AXC{$\varphi_{137}$\lbl{A1}}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{94}$\lbl{A2}}
+\BIC{$\forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to \varepsilon \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{108}$\lbl{A2}}
+\BIC{$\varepsilon \in \mathbb{R} \to 2^{-1} \in \mathbb{R} \to \varepsilon \cdot 2^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{302}$\lbl{A1}}
+\BIC{$\varphi_{137} \to 2^{-1} \in \mathbb{R} \to \varphi_{165}$}
+\BIC{$2^{-1} \in \mathbb{R} \to \varphi_{165}$}
+\BIC{$\varphi_{165}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})$\lbl{[C2]}}
+\AXC{$\varphi_{34}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{Conv}(b,\alpha) \to \alpha \in \mathbb{R})$}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(b,c) \to c \in \mathbb{R}$}
+\AXC{$(\mathrm{Conv}(b,c) \to c \in \mathbb{R}) \to \varphi_{192}$\lbl{A1}}
+\BIC{$\varphi_{192}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\mathrm{Cauchy}(a) \to \varphi_{15}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{192}$}
+\BIC{$\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{61}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\forall a\,(\varphi_{156})$\lbl{DefCauchy}}
+\AXC{$\forall a\,(\varphi_{156}) \to \varphi_{156}$\lbl{A2}}
+\BIC{$\varphi_{156}$}
+\AXC{$\mathrm{Cauchy}(a) \to \mathrm{Cauchy}(a)$\lbl{A1}}
+\AXC{$\varphi_{216}$\lbl{A1}}
+\BIC{$\varphi_{156} \to \mathrm{Cauchy}(a) \to \mathrm{Seq}(a)$}
+\BIC{$\mathrm{Cauchy}(a) \to \mathrm{Seq}(a)$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cauchy}(a) \to \mathrm{Seq}(a)$}
+\AXC{$\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$\lbl{[S1]}}
+\AXC{$\varphi_{78}$\lbl{A2}}
+\BIC{$\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$}
+\AXC{$\varphi_{120}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to s_{N_{1} \cup N_{2}} \in \mathbb{N} \to a_{s_{N_{1} \cup N_{2}}} \in \mathbb{R}$}
+\AXC{$\varphi_{358}$\lbl{A1}}
+\BIC{$(\mathrm{Cauchy}(a) \to \mathrm{Seq}(a)) \to \varphi_{292} \to \varphi_{299}$}
+\BIC{$\varphi_{292} \to \varphi_{299}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cauchy}(a) \to \mathrm{Seq}(a)$}
+\AXC{$\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$\lbl{[S1]}}
+\AXC{$\varphi_{78}$\lbl{A2}}
+\BIC{$\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$}
+\AXC{$\varphi_{68}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}$}
+\AXC{$\varphi_{355}$\lbl{A1}}
+\BIC{$(\mathrm{Cauchy}(a) \to \mathrm{Seq}(a)) \to \varphi_{275} \to \varphi_{287}$}
+\BIC{$\varphi_{275} \to \varphi_{287}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\varphi_{131}$\lbl{[C27]}}
+\AXC{$\varphi_{131} \to \varphi_{157}$\lbl{A2}}
+\BIC{$\varphi_{157}$}
+\AXC{$\varphi_{157} \to \varphi_{223}$\lbl{A2}}
+\BIC{$\varphi_{223}$}
+\AXC{$\varphi_{223} \to \varphi_{222}$\lbl{A2}}
+\BIC{$\varphi_{222}$}
+\AXC{$\varphi_{222} \to a_{n} \in \mathbb{R} \to a_{s_{N_{1} \cup N_{2}}} \in \mathbb{R} \to c \in \mathbb{R} \to \varphi_{218}$\lbl{A2}}
+\BIC{$a_{n} \in \mathbb{R} \to a_{s_{N_{1} \cup N_{2}}} \in \mathbb{R} \to c \in \mathbb{R} \to \varphi_{218}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{292}$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{292} \to \varphi_{299}$}
+\BIC{$\varphi_{299}$}
+\AXC{$\varphi_{275}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{275} \to \varphi_{287}$}
+\BIC{$\varphi_{287}$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$a_{n} \in \mathbb{R} \to a_{s_{N_{1} \cup N_{2}}} \in \mathbb{R} \to c \in \mathbb{R} \to \varphi_{218}$}
+\AXC{$\varphi_{374}$\lbl{A1}}
+\BIC{$\varphi_{287} \to \varphi_{299} \to \varphi_{367}$}
+\BIC{$\varphi_{299} \to \varphi_{367}$}
+\BIC{$\varphi_{367}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{311}$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\varphi_{314}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{165}$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{61}$}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{367}$}
+\BIC{$\varphi_{165} \to \varphi_{314} \to \varphi_{311} \to \varphi_{312}$}
+\BIC{$\varphi_{314} \to \varphi_{311} \to \varphi_{312}$}
+\BIC{$\varphi_{311} \to \varphi_{312}$}
+\BIC{$\varphi_{312}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\varphi_{283}$\lbl{A1}}
+\AXC{$\forall e \in \mathbb{R}\,(e \cdot 2^{-1} + e \cdot 2^{-1} = e)$\lbl{[F36]}}
+\AXC{$\varphi_{90}$\lbl{A2}}
+\BIC{$\varepsilon \in \mathbb{R} \to \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} = \varepsilon$}
+\AXC{$(\varepsilon \in \mathbb{R} \to \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} = \varepsilon) \to \varphi_{283} \to \varphi_{300}$\lbl{A1}}
+\BIC{$\varphi_{283} \to \varphi_{300}$}
+\BIC{$\varphi_{300}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{123}$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\varphi_{312}$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{300}$}
+\AXC{$\varphi_{300} \to \varphi_{312} \to \varphi_{123} \to \varphi_{293}$\lbl{A1}}
+\BIC{$\varphi_{312} \to \varphi_{123} \to \varphi_{293}$}
+\BIC{$\varphi_{123} \to \varphi_{293}$}
+\BIC{$\varphi_{293}$}
+\AXC{$\varphi_{293} \to \varphi_{259} \to n \in \mathbb{N} \to N_{1} \leq n \to \lvert a_{n} - c \rvert < \varepsilon$\lbl{A1}}
+\BIC{$\varphi_{259} \to n \in \mathbb{N} \to N_{1} \leq n \to \lvert a_{n} - c \rvert < \varepsilon$}
+\UIC{$\forall n\,(\varphi_{259} \to n \in \mathbb{N} \to N_{1} \leq n \to \lvert a_{n} - c \rvert < \varepsilon)$}
+\AXC{$\varphi_{370}$\lbl{A1}}
+\BIC{$\varphi_{352} \to (\varphi_{259} \to \forall n\,(\varphi_{259})) \to \varphi_{296}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\varphi_{259} \to \forall n\,(\varphi_{259})$\lbl{A4}}
+\AXC{$\varphi_{352}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\varphi_{352} \to (\varphi_{259} \to \forall n\,(\varphi_{259})) \to \varphi_{296}$}
+\BIC{$(\varphi_{259} \to \forall n\,(\varphi_{259})) \to \varphi_{296}$}
+\BIC{$\varphi_{296}$}
+\AXC{$\varphi_{280}$\lbl{A1}}
+\AXC{$\varphi_{280} \to \varphi_{269}$\lbl{A1}}
+\BIC{$\varphi_{269}$}
+\AXC{$\varphi_{269} \to \varphi_{296} \to \varphi_{305}$\lbl{A1}}
+\BIC{$\varphi_{296} \to \varphi_{305}$}
+\BIC{$\varphi_{305}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\varphi_{137}$\lbl{A1}}
+\AXC{$\forall e \in \mathbb{R}\,(0 < e \to 0 < e \cdot 2^{-1})$\lbl{[F35]}}
+\AXC{$\varphi_{79}$\lbl{A2}}
+\BIC{$\varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon \cdot 2^{-1}$}
+\AXC{$(\varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon \cdot 2^{-1}) \to \varphi_{137} \to \varphi_{149} \to \varphi_{162}$\lbl{A1}}
+\BIC{$\varphi_{137} \to \varphi_{149} \to \varphi_{162}$}
+\BIC{$\varphi_{149} \to \varphi_{162}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\varphi_{149}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\varphi_{149} \to \varphi_{162}$}
+\BIC{$\varphi_{162}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\varphi_{119}$\lbl{[C3]}}
+\AXC{$\varphi_{119} \to \varphi_{114}$\lbl{A2}}
+\BIC{$\varphi_{114}$}
+\AXC{$\varphi_{114} \to \varphi_{104}$\lbl{A2}}
+\BIC{$\varphi_{104}$}
+\AXC{$\varphi_{104} \to \mathrm{Conv}(b,c) \to \varepsilon \cdot 2^{-1} \in \mathbb{R} \to \varphi_{84}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(b,c) \to \varepsilon \cdot 2^{-1} \in \mathbb{R} \to \varphi_{84}$}
+\AXC{$\varphi_{357}$\lbl{A1}}
+\BIC{$(\mathrm{Cauchy}(a) \to \varphi_{15}) \to \varphi_{165} \to \varphi_{162} \to \varphi_{262}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$\varphi_{162}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{165}$}
+\AXC{$\mathrm{Cauchy}(a) \to \varphi_{15}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Cauchy}(a) \to \varphi_{15}) \to \varphi_{165} \to \varphi_{162} \to \varphi_{262}$}
+\BIC{$\varphi_{165} \to \varphi_{162} \to \varphi_{262}$}
+\BIC{$\varphi_{162} \to \varphi_{262}$}
+\BIC{$\varphi_{262}$}
+\AXC{$\varphi_{262} \to \forall N_{2}\,(\varphi_{255} \to \varphi_{55}) \to \varphi_{372}$\lbl{A1}}
+\BIC{$\forall N_{2}\,(\varphi_{255} \to \varphi_{55}) \to \varphi_{372}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\varphi_{134}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\varphi_{305}$}
+\AXC{$\varphi_{305} \to \varphi_{134} \to \varphi_{307}$\lbl{A1}}
+\BIC{$\varphi_{134} \to \varphi_{307}$}
+\BIC{$\varphi_{307}$}
+\AXC{$\varphi_{307} \to \varphi_{255} \to \varphi_{55}$\lbl{A1}}
+\BIC{$\varphi_{255} \to \varphi_{55}$}
+\UIC{$\forall N_{2}\,(\varphi_{255} \to \varphi_{55})$}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\forall N_{2}\,(\varphi_{255} \to \varphi_{55}) \to \varphi_{372}$}
+\BIC{$\varphi_{372}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$\forall N_{2}\,(\varphi_{55}) \to \varphi_{51}$\lbl{A2}}
+\UIC{$\forall N\,(\forall N_{2}\,(\varphi_{55}) \to \varphi_{51})$}
+\AXC{$\varphi_{255} \to \forall N_{2}\,(\varphi_{255})$\lbl{A4}}
+\AXC{$\forall N_{2}\,(\varphi_{255} \to \varphi_{55}) \to \forall N_{2}\,(\varphi_{255}) \to \forall N_{2}\,(\varphi_{55})$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$\varphi_{372}$}
+\BIC{$(\varphi_{255} \to \forall N_{2}\,(\varphi_{255})) \to \forall N\,(\forall N_{2}\,(\varphi_{55}) \to \varphi_{51}) \to \varphi_{356}$}
+\BIC{$\forall N\,(\forall N_{2}\,(\varphi_{55}) \to \varphi_{51}) \to \varphi_{356}$}
+\BIC{$\varphi_{356}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$\forall N_{2}\,(\varphi_{55}) \to \forall N\,\forall N_{2}\,(\varphi_{55})$\lbl{A4}}
+\AXC{$\forall N\,(\forall N_{2}\,(\varphi_{55}) \to \varphi_{51}) \to \forall N\,\forall N_{2}\,(\varphi_{55}) \to \forall N\,(\varphi_{51})$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\varphi_{356}$}
+\BIC{$(\forall N_{2}\,(\varphi_{55}) \to \forall N\,\forall N_{2}\,(\varphi_{55})) \to \varphi_{254}$}
+\BIC{$\varphi_{254}$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$\forall a\,(\varphi_{143})$\lbl{[C26]}}
+\AXC{$\forall a\,(\varphi_{143}) \to \varphi_{143}$\lbl{A2}}
+\BIC{$\varphi_{143}$}
+\AXC{$\varphi_{143} \to \mathrm{Cauchy}(a) \to \varepsilon \cdot 2^{-1} \in \mathbb{R} \to 0 < \varepsilon \cdot 2^{-1} \to \varphi_{99}$\lbl{A2}}
+\BIC{$\mathrm{Cauchy}(a) \to \varepsilon \cdot 2^{-1} \in \mathbb{R} \to 0 < \varepsilon \cdot 2^{-1} \to \varphi_{99}$}
+\AXC{$\varphi_{353}$\lbl{A1}}
+\BIC{$(\mathrm{Cauchy}(a) \to \mathrm{Cauchy}(a)) \to \varphi_{165} \to \varphi_{162} \to \varphi_{231}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$\varphi_{162}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{165}$}
+\AXC{$\mathrm{Cauchy}(a) \to \mathrm{Cauchy}(a)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Cauchy}(a) \to \mathrm{Cauchy}(a)) \to \varphi_{165} \to \varphi_{162} \to \varphi_{231}$}
+\BIC{$\varphi_{165} \to \varphi_{162} \to \varphi_{231}$}
+\BIC{$\varphi_{162} \to \varphi_{231}$}
+\BIC{$\varphi_{231}$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$\varphi_{348}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$\varphi_{254}$}
+\AXC{$\varphi_{254} \to \varphi_{217} \to \neg (N_{1} \in \mathbb{N} \land \varphi_{75})$\lbl{A1}}
+\BIC{$\varphi_{217} \to \neg (N_{1} \in \mathbb{N} \land \varphi_{75})$}
+\UIC{$\forall N_{1}\,(\varphi_{217} \to \neg (N_{1} \in \mathbb{N} \land \varphi_{75}))$}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\varphi_{231}$}
+\AXC{$\varphi_{231} \to \forall N_{1}\,(\varphi_{217} \to \neg (N_{1} \in \mathbb{N} \land \varphi_{75})) \to \varphi_{348} \to \varphi_{368}$\lbl{A1}}
+\BIC{$\forall N_{1}\,(\varphi_{217} \to \neg (N_{1} \in \mathbb{N} \land \varphi_{75})) \to \varphi_{348} \to \varphi_{368}$}
+\BIC{$\varphi_{348} \to \varphi_{368}$}
+\BIC{$\varphi_{368}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$\varphi_{225}$\lbl{A4}}
+\AXC{$\varphi_{331}$\lbl{A3}}
+\AXC{$\forall N_{1}\,(\neg (N_{1} \in \mathbb{N} \land \varphi_{75})) \to \varphi_{93}$\lbl{A2}}
+\UIC{$\forall N\,(\forall N_{1}\,(\neg (N_{1} \in \mathbb{N} \land \varphi_{75})) \to \varphi_{93})$}
+\AXC{$\varphi_{217} \to \forall N_{1}\,(\varphi_{217})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$\varphi_{368}$}
+\BIC{$\forall N\,(\forall N_{1}\,(\neg (N_{1} \in \mathbb{N} \land \varphi_{75})) \to \varphi_{93}) \to \varphi_{331} \to \varphi_{326}$}
+\BIC{$\varphi_{331} \to \varphi_{326}$}
+\BIC{$\varphi_{326}$}
+\BIC{$\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{176}$}
+\AXC{$\varphi_{315}$\lbl{A1}}
+\BIC{$\varphi_{95} \to \varphi_{76}$}
+\UIC{$\forall \varepsilon\,(\varphi_{95} \to \varphi_{76})$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$\forall \varepsilon\,(\varphi_{95} \to \varphi_{76}) \to \forall \varepsilon\,(\varphi_{95}) \to \varphi_{82}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$\forall \varepsilon\,(\varphi_{95} \to \varphi_{76})$}
+\AXC{$\forall \varepsilon\,(\varphi_{95} \to \varphi_{76}) \to (\forall \varepsilon\,(\varphi_{95} \to \varphi_{76}) \to \forall \varepsilon\,(\varphi_{95}) \to \varphi_{82}) \to \varphi_{323}$\lbl{A1}}
+\BIC{$(\forall \varepsilon\,(\varphi_{95} \to \varphi_{76}) \to \forall \varepsilon\,(\varphi_{95}) \to \varphi_{82}) \to \varphi_{323}$}
+\BIC{$\varphi_{323}$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$\forall a\,(\varphi_{144})$\lbl{DefConv}}
+\AXC{$\forall a\,(\varphi_{144}) \to \varphi_{144}$\lbl{A2}}
+\BIC{$\varphi_{144}$}
+\AXC{$\varphi_{144} \to (\mathrm{Conv}(a,c) \leftrightarrow \mathrm{Seq}(a) \land c \in \mathbb{R} \land \varphi_{82})$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,c) \leftrightarrow \mathrm{Seq}(a) \land c \in \mathbb{R} \land \varphi_{82}$}
+\AXC{$\varphi_{345}$\lbl{A1}}
+\BIC{$(\mathrm{Cauchy}(a) \to \mathrm{Seq}(a)) \to \varphi_{332}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cauchy}(a) \to \mathrm{Seq}(a)$}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Cauchy}(a) \to \mathrm{Seq}(a)) \to \varphi_{332}$}
+\BIC{$\varphi_{332}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$\varphi_{95} \to \forall \varepsilon\,(\varphi_{95})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$\varphi_{323}$}
+\BIC{$\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{180}$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{61}$}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$\varphi_{332}$}
+\BIC{$\varphi_{265}$}
+\BIC{$\varphi_{115}$}
+\end{ptree}
+\noindent$\Pi_{51}$:
+\begin{ptree}
+\AXC{$\forall a\,(\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha)))$\lbl{DefCgt}}
+\AXC{$\varphi_{23}$\lbl{A2}}
+\BIC{$\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha))$}
+\AXC{$(\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha))) \to \varphi_{121} \to \varphi_{110}$\lbl{A1}}
+\BIC{$\varphi_{121} \to \varphi_{110}$}
+\end{ptree}
+\noindent$\Pi_{52}$:
+\begin{ptree}
+\AXC{$\forall \alpha\,(\neg \mathrm{Conv}(a,\alpha)) \to \neg \mathrm{Conv}(a,c)$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$\varphi_{115}$}
+\AXC{$\varphi_{247}$\lbl{A1}}
+\BIC{$(\forall \alpha\,(\neg \mathrm{Conv}(a,\alpha)) \to \neg \mathrm{Conv}(a,c)) \to \varphi_{121}$}
+\BIC{$\varphi_{121}$}
+\AXC{$\stackrel{\Pi_{51}}{\vdots}$}\noLine
+\UIC{$\varphi_{121} \to \varphi_{110}$}
+\BIC{$\varphi_{110}$}
+\end{ptree}
+\noindent$\Pi_{53}$:
+\begin{ptree}
+\AXC{$\forall b\,\forall a\,(\mathrm{SubSeq}(b,a) \leftrightarrow \varphi_{40})$\lbl{DefSubSeq}}
+\AXC{$\varphi_{188}$\lbl{A2}}
+\BIC{$\forall a\,(\mathrm{SubSeq}(b,a) \leftrightarrow \varphi_{40})$}
+\AXC{$\varphi_{183}$\lbl{A2}}
+\BIC{$\mathrm{SubSeq}(b,a) \leftrightarrow \varphi_{40}$}
+\end{ptree}
+\noindent$\Pi_{54}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{53}}{\vdots}$}\noLine
+\UIC{$\mathrm{SubSeq}(b,a) \leftrightarrow \varphi_{40}$}
+\AXC{$\mathrm{Cauchy}(a) \to \varphi_{13}$\lbl{A1}}
+\AXC{$(\mathrm{Cauchy}(a) \to \varphi_{13}) \to \varphi_{205}$\lbl{A1}}
+\BIC{$\varphi_{205}$}
+\BIC{$\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{40}$}
+\AXC{$\varphi_{220}$\lbl{A1}}
+\BIC{$\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{43}$}
+\AXC{$\varphi_{351}$\lbl{A1}}
+\BIC{$\varphi_{117} \to \varphi_{325}$}
+\end{ptree}
+\noindent$\Pi_{55}$:
+\begin{ptree}
+\AXC{$\varphi_{27} \to \forall s\,(\varphi_{27})$\lbl{A4}}
+\AXC{$\varphi_{117} \to \forall s\,(\varphi_{27}) \to \varphi_{29}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{52}}{\vdots}$}\noLine
+\UIC{$\varphi_{110}$}
+\AXC{$\varphi_{228}$\lbl{A1}}
+\BIC{$\varphi_{27} \to \neg (\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}))$}
+\UIC{$\varphi_{117}$}
+\AXC{$\stackrel{\Pi_{54}}{\vdots}$}\noLine
+\UIC{$\varphi_{117} \to \varphi_{325}$}
+\BIC{$\varphi_{325}$}
+\BIC{$(\varphi_{27} \to \forall s\,(\varphi_{27})) \to \mathrm{Cauchy}(a) \to \varphi_{9}$}
+\BIC{$\mathrm{Cauchy}(a) \to \varphi_{9}$}
+\end{ptree}
+\noindent$\Pi_{56}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{55}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cauchy}(a) \to \varphi_{9}$}
+\AXC{$(\mathrm{Cauchy}(a) \to \varphi_{9}) \to \varphi_{11} \to \neg \mathrm{Conv}(b,c)$\lbl{A1}}
+\BIC{$\varphi_{11} \to \neg \mathrm{Conv}(b,c)$}
+\UIC{$\forall c\,(\varphi_{11} \to \neg \mathrm{Conv}(b,c))$}
+\end{ptree}
+\noindent$\Pi_{57}$:
+\begin{ptree}
+\AXC{$\forall a\,(\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha)))$\lbl{DefCgt}}
+\AXC{$\varphi_{24}$\lbl{A2}}
+\BIC{$\mathrm{Cgt}(b) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(b,\alpha))$}
+\AXC{$\mathrm{Cauchy}(a) \to \varphi_{13}$\lbl{A1}}
+\AXC{$(\mathrm{Cauchy}(a) \to \varphi_{13}) \to \varphi_{57}$\lbl{A1}}
+\BIC{$\varphi_{57}$}
+\BIC{$\mathrm{Cauchy}(a) \to \varphi_{6}$}
+\end{ptree}
+\noindent$\Pi_{58}$:
+\begin{ptree}
+\AXC{$\varphi_{11} \to \forall c\,(\varphi_{11})$\lbl{A4}}
+\AXC{$\varphi_{130}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{56}}{\vdots}$}\noLine
+\UIC{$\forall c\,(\varphi_{11} \to \neg \mathrm{Conv}(b,c))$}
+\AXC{$\stackrel{\Pi_{57}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cauchy}(a) \to \varphi_{6}$}
+\AXC{$\varphi_{343}$\lbl{A1}}
+\BIC{$\forall c\,(\varphi_{11} \to \neg \mathrm{Conv}(b,c)) \to \varphi_{130} \to (\varphi_{11} \to \forall c\,(\varphi_{11})) \to \varphi_{209}$}
+\BIC{$\varphi_{130} \to (\varphi_{11} \to \forall c\,(\varphi_{11})) \to \varphi_{209}$}
+\BIC{$(\varphi_{11} \to \forall c\,(\varphi_{11})) \to \varphi_{209}$}
+\BIC{$\varphi_{209}$}
+\end{ptree}
+\noindent$\Pi_{59}$:
+\begin{ptree}
+\AXC{$\forall a\,(\varphi_{2})$\lbl{定理6.8}}
+\AXC{$\forall a\,(\varphi_{2}) \to \varphi_{2}$\lbl{A2}}
+\BIC{$\varphi_{2}$}
+\AXC{$\varphi_{2} \to (\mathrm{Cauchy}(a) \to \mathrm{SeqBdd}(a)) \to \varphi_{3}$\lbl{A1}}
+\BIC{$(\mathrm{Cauchy}(a) \to \mathrm{SeqBdd}(a)) \to \varphi_{3}$}
+\end{ptree}
+\noindent$\Pi_{60}$:
+\begin{ptree}
+\AXC{$\forall a\,(\mathrm{Cauchy}(a) \to \mathrm{SeqBdd}(a))$\lbl{補題6.10}}
+\AXC{$\varphi_{19}$\lbl{A2}}
+\BIC{$\mathrm{Cauchy}(a) \to \mathrm{SeqBdd}(a)$}
+\AXC{$\stackrel{\Pi_{59}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Cauchy}(a) \to \mathrm{SeqBdd}(a)) \to \varphi_{3}$}
+\BIC{$\varphi_{3}$}
+\AXC{$\varphi_{3} \to \varphi_{226}$\lbl{A1}}
+\BIC{$\varphi_{226}$}
+\end{ptree}
+\noindent$\Pi_{61}$:
+\begin{ptree}
+\AXC{$\varphi_{1}$\lbl{A4}}
+\AXC{$\varphi_{50}$\lbl{A3}}
+\AXC{$\forall c\,(\neg \mathrm{Conv}(b,c)) \to \neg \mathrm{Conv}(b,\alpha)$\lbl{A2}}
+\UIC{$\forall \alpha\,(\forall c\,(\neg \mathrm{Conv}(b,c)) \to \neg \mathrm{Conv}(b,\alpha))$}
+\AXC{$\stackrel{\Pi_{58}}{\vdots}$}\noLine
+\UIC{$\varphi_{209}$}
+\BIC{$\varphi_{50} \to \varphi_{1} \to \varphi_{8}$}
+\BIC{$\varphi_{1} \to \varphi_{8}$}
+\BIC{$\varphi_{8}$}
+\AXC{$\varphi_{8} \to \varphi_{12}$\lbl{A1}}
+\BIC{$\varphi_{12}$}
+\UIC{$\forall b\,(\varphi_{12})$}
+\AXC{$\stackrel{\Pi_{60}}{\vdots}$}\noLine
+\UIC{$\varphi_{226}$}
+\BIC{$(\forall b\,(\varphi_{12}) \to \varphi_{21}) \to \varphi_{14} \to \mathrm{Cauchy}(a) \to \mathrm{Cgt}(a)$}
+\end{ptree}
+\noindent$\Pi_{62}$:
+\begin{ptree}
+\AXC{$z = w \to \lvert a_{m} - a_{n} \rvert < z \to \lvert a_{m} - a_{n} \rvert < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to \lvert a_{m} - a_{n} \rvert < z \to \lvert a_{m} - a_{n} \rvert < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to \lvert a_{m} - a_{n} \rvert < z \to \lvert a_{m} - a_{n} \rvert < w)$}
+\AXC{$\varphi_{224}$\lbl{A2}}
+\BIC{$\varphi_{138}$}
+\AXC{$\varphi_{138} \to \varphi_{139}$\lbl{A2}}
+\BIC{$\varphi_{139}$}
+\end{ptree}
+\noindent$\Pi_{63}$:
+\begin{ptree}
+\AXC{$z = w \to z < \varepsilon \cdot 2^{-1} \to w < \varepsilon \cdot 2^{-1}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < \varepsilon \cdot 2^{-1} \to w < \varepsilon \cdot 2^{-1})$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < \varepsilon \cdot 2^{-1} \to w < \varepsilon \cdot 2^{-1})$}
+\AXC{$\forall z\,\forall w\,(z = w \to z < \varepsilon \cdot 2^{-1} \to w < \varepsilon \cdot 2^{-1}) \to \varphi_{73}$\lbl{A2}}
+\BIC{$\varphi_{73}$}
+\AXC{$\varphi_{73} \to \varphi_{124}$\lbl{A2}}
+\BIC{$\varphi_{124}$}
+\end{ptree}
+\noindent$\Pi_{64}$:
+\begin{ptree}
+\AXC{$\varphi_{92} \to \varphi_{85}$\lbl{A2}}
+\AXC{$\mathrm{Cgt}(a) \to \varphi_{246}$\lbl{A1}}
+\AXC{$(\mathrm{Cgt}(a) \to \varphi_{246}) \to \varphi_{245}$\lbl{A1}}
+\BIC{$\varphi_{245}$}
+\AXC{$\varphi_{245} \to (\varphi_{92} \to \varphi_{85}) \to \varphi_{242}$\lbl{A1}}
+\BIC{$(\varphi_{92} \to \varphi_{85}) \to \varphi_{242}$}
+\BIC{$\varphi_{242}$}
+\end{ptree}
+\noindent$\Pi_{65}$:
+\begin{ptree}
+\AXC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{184}$\lbl{A1}}
+\AXC{$\mathrm{Cgt}(a) \to \varphi_{211}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{64}}{\vdots}$}\noLine
+\UIC{$\varphi_{242}$}
+\AXC{$\varphi_{242} \to (\mathrm{Cgt}(a) \to \varphi_{211}) \to \varphi_{335}$\lbl{A1}}
+\BIC{$(\mathrm{Cgt}(a) \to \varphi_{211}) \to \varphi_{335}$}
+\BIC{$\varphi_{335}$}
+\BIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{212}$}
+\end{ptree}
+\noindent$\Pi_{66}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})$\lbl{[C2]}}
+\AXC{$\varphi_{35}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})$}
+\AXC{$\varphi_{28}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}$}
+\AXC{$(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \varphi_{47}$\lbl{A1}}
+\BIC{$\varphi_{47}$}
+\end{ptree}
+\noindent$\Pi_{67}$:
+\begin{ptree}
+\AXC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{66}}{\vdots}$}\noLine
+\UIC{$\varphi_{47}$}
+\BIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{68}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$\lbl{[C1]}}
+\AXC{$\varphi_{25}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$}
+\AXC{$(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \varphi_{37}$\lbl{A1}}
+\BIC{$\varphi_{37}$}
+\end{ptree}
+\noindent$\Pi_{69}$:
+\begin{ptree}
+\AXC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{68}}{\vdots}$}\noLine
+\UIC{$\varphi_{37}$}
+\BIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$}
+\end{ptree}
+\noindent$\Pi_{70}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$\lbl{[S1]}}
+\AXC{$\varphi_{78}$\lbl{A2}}
+\BIC{$\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$}
+\AXC{$\varphi_{68}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}$}
+\AXC{$\varphi_{338}$\lbl{A1}}
+\BIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \varphi_{328}$}
+\end{ptree}
+\noindent$\Pi_{71}$:
+\begin{ptree}
+\AXC{$\mathrm{Cgt}(a) \to \varphi_{211}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{69}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$}
+\AXC{$\stackrel{\Pi_{70}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \varphi_{328}$}
+\BIC{$\varphi_{328}$}
+\BIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{200}$}
+\end{ptree}
+\noindent$\Pi_{72}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x - y \rvert = \lvert y - x \rvert)$\lbl{[A13]}}
+\AXC{$\varphi_{140}$\lbl{A2}}
+\BIC{$\forall y\,(a_{n} \in \mathbb{R} \to y \in \mathbb{R} \to \lvert a_{n} - y \rvert = \lvert y - a_{n} \rvert)$}
+\AXC{$\varphi_{166}$\lbl{A2}}
+\BIC{$a_{n} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \lvert a_{n} - \alpha \rvert = \lvert \alpha - a_{n} \rvert$}
+\end{ptree}
+\noindent$\Pi_{73}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{72}}{\vdots}$}\noLine
+\UIC{$a_{n} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \lvert a_{n} - \alpha \rvert = \lvert \alpha - a_{n} \rvert$}
+\AXC{$(a_{n} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \lvert a_{n} - \alpha \rvert = \lvert \alpha - a_{n} \rvert) \to \varphi_{339}$\lbl{A1}}
+\BIC{$\varphi_{339}$}
+\end{ptree}
+\noindent$\Pi_{74}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{67}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{71}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{200}$}
+\AXC{$\stackrel{\Pi_{73}}{\vdots}$}\noLine
+\UIC{$\varphi_{339}$}
+\BIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \varphi_{235}$}
+\BIC{$\varphi_{235}$}
+\AXC{$\varphi_{235} \to \varphi_{346}$\lbl{A1}}
+\BIC{$\varphi_{346}$}
+\end{ptree}
+\noindent$\Pi_{75}$:
+\begin{ptree}
+\AXC{$z = w \to z < \varepsilon \cdot 2^{-1} \to w < \varepsilon \cdot 2^{-1}$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < \varepsilon \cdot 2^{-1} \to w < \varepsilon \cdot 2^{-1})$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < \varepsilon \cdot 2^{-1} \to w < \varepsilon \cdot 2^{-1})$}
+\AXC{$\forall z\,\forall w\,(z = w \to z < \varepsilon \cdot 2^{-1} \to w < \varepsilon \cdot 2^{-1}) \to \varphi_{74}$\lbl{A2}}
+\BIC{$\varphi_{74}$}
+\AXC{$\varphi_{74} \to \varphi_{125}$\lbl{A2}}
+\BIC{$\varphi_{125}$}
+\end{ptree}
+\noindent$\Pi_{76}$:
+\begin{ptree}
+\AXC{$\varphi_{92} \to \varphi_{86}$\lbl{A2}}
+\AXC{$\mathrm{Cgt}(a) \to \varphi_{246}$\lbl{A1}}
+\AXC{$(\mathrm{Cgt}(a) \to \varphi_{246}) \to \varphi_{245}$\lbl{A1}}
+\BIC{$\varphi_{245}$}
+\AXC{$\varphi_{245} \to (\varphi_{92} \to \varphi_{86}) \to \varphi_{243}$\lbl{A1}}
+\BIC{$(\varphi_{92} \to \varphi_{86}) \to \varphi_{243}$}
+\BIC{$\varphi_{243}$}
+\end{ptree}
+\noindent$\Pi_{77}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$\lbl{[S1]}}
+\AXC{$\varphi_{78}$\lbl{A2}}
+\BIC{$\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$}
+\AXC{$\varphi_{69}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to m \in \mathbb{N} \to a_{m} \in \mathbb{R}$}
+\AXC{$\varphi_{337}$\lbl{A1}}
+\BIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \varphi_{320}$}
+\end{ptree}
+\noindent$\Pi_{78}$:
+\begin{ptree}
+\AXC{$\mathrm{Cgt}(a) \to \varphi_{197}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{69}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$}
+\AXC{$\stackrel{\Pi_{77}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \varphi_{320}$}
+\BIC{$\varphi_{320}$}
+\BIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{201}$}
+\end{ptree}
+\noindent$\Pi_{79}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x - y \rvert = \lvert y - x \rvert)$\lbl{[A13]}}
+\AXC{$\varphi_{141}$\lbl{A2}}
+\BIC{$\forall y\,(a_{m} \in \mathbb{R} \to y \in \mathbb{R} \to \lvert a_{m} - y \rvert = \lvert y - a_{m} \rvert)$}
+\AXC{$\varphi_{167}$\lbl{A2}}
+\BIC{$a_{m} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \lvert a_{m} - \alpha \rvert = \lvert \alpha - a_{m} \rvert$}
+\end{ptree}
+\noindent$\Pi_{80}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{79}}{\vdots}$}\noLine
+\UIC{$a_{m} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \lvert a_{m} - \alpha \rvert = \lvert \alpha - a_{m} \rvert$}
+\AXC{$(a_{m} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \lvert a_{m} - \alpha \rvert = \lvert \alpha - a_{m} \rvert) \to \varphi_{340}$\lbl{A1}}
+\BIC{$\varphi_{340}$}
+\end{ptree}
+\noindent$\Pi_{81}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{67}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{78}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{201}$}
+\AXC{$\stackrel{\Pi_{80}}{\vdots}$}\noLine
+\UIC{$\varphi_{340}$}
+\BIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \varphi_{236}$}
+\BIC{$\varphi_{236}$}
+\AXC{$\varphi_{236} \to \varphi_{347}$\lbl{A1}}
+\BIC{$\varphi_{347}$}
+\end{ptree}
+\noindent$\Pi_{82}$:
+\begin{ptree}
+\AXC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varphi_{193}$\lbl{A1}}
+\AXC{$\mathrm{Cgt}(a) \to \varphi_{197}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{76}}{\vdots}$}\noLine
+\UIC{$\varphi_{243}$}
+\AXC{$\varphi_{243} \to (\mathrm{Cgt}(a) \to \varphi_{197}) \to \varphi_{333}$\lbl{A1}}
+\BIC{$(\mathrm{Cgt}(a) \to \varphi_{197}) \to \varphi_{333}$}
+\BIC{$\varphi_{333}$}
+\BIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{214}$}
+\AXC{$\stackrel{\Pi_{81}}{\vdots}$}\noLine
+\UIC{$\varphi_{347}$}
+\BIC{$\varphi_{125} \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{215}$}
+\end{ptree}
+\noindent$\Pi_{83}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{94}$\lbl{A2}}
+\BIC{$\forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to \varepsilon \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{108}$\lbl{A2}}
+\BIC{$\varepsilon \in \mathbb{R} \to 2^{-1} \in \mathbb{R} \to \varepsilon \cdot 2^{-1} \in \mathbb{R}$}
+\AXC{$\varphi_{291}$\lbl{A1}}
+\BIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{237}$}
+\end{ptree}
+\noindent$\Pi_{84}$:
+\begin{ptree}
+\AXC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{83}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{237}$}
+\BIC{$\varphi_{237}$}
+\end{ptree}
+\noindent$\Pi_{85}$:
+\begin{ptree}
+\AXC{$\varphi_{158}$\lbl{[C10]}}
+\AXC{$\varphi_{158} \to \varphi_{168}$\lbl{A2}}
+\BIC{$\varphi_{168}$}
+\AXC{$\varphi_{168} \to \varphi_{172}$\lbl{A2}}
+\BIC{$\varphi_{172}$}
+\AXC{$\varphi_{172} \to \varphi_{175}$\lbl{A2}}
+\BIC{$\varphi_{175}$}
+\AXC{$\varphi_{175} \to v_{749} \in \mathbb{R} \to \varphi_{153}$\lbl{A2}}
+\BIC{$v_{749} \in \mathbb{R} \to \varphi_{153}$}
+\UIC{$\forall v_{752}\,(v_{749} \in \mathbb{R} \to \varphi_{153})$}
+\UIC{$\forall v_{751}\,\forall v_{752}\,(v_{749} \in \mathbb{R} \to \varphi_{153})$}
+\UIC{$\forall v_{750}\,\forall v_{751}\,\forall v_{752}\,(v_{749} \in \mathbb{R} \to \varphi_{153})$}
+\UIC{$\forall v_{749}\,\forall v_{750}\,\forall v_{751}\,\forall v_{752}\,(v_{749} \in \mathbb{R} \to \varphi_{153})$}
+\end{ptree}
+\noindent$\Pi_{86}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{85}}{\vdots}$}\noLine
+\UIC{$\forall v_{749}\,\forall v_{750}\,\forall v_{751}\,\forall v_{752}\,(v_{749} \in \mathbb{R} \to \varphi_{153})$}
+\AXC{$\forall v_{749}\,\forall v_{750}\,\forall v_{751}\,\forall v_{752}\,(v_{749} \in \mathbb{R} \to \varphi_{153}) \to \varphi_{186}$\lbl{A2}}
+\BIC{$\varphi_{186}$}
+\AXC{$\varphi_{186} \to \varphi_{195}$\lbl{A2}}
+\BIC{$\varphi_{195}$}
+\end{ptree}
+\noindent$\Pi_{87}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{67}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{86}}{\vdots}$}\noLine
+\UIC{$\varphi_{195}$}
+\AXC{$\varphi_{195} \to \varphi_{203}$\lbl{A2}}
+\BIC{$\varphi_{203}$}
+\AXC{$\varphi_{203} \to \alpha \in \mathbb{R} \to \varphi_{221}$\lbl{A2}}
+\BIC{$\alpha \in \mathbb{R} \to \varphi_{221}$}
+\AXC{$\varphi_{369}$\lbl{A1}}
+\BIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \varphi_{366}$}
+\BIC{$\varphi_{366}$}
+\end{ptree}
+\noindent$\Pi_{88}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{71}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{200}$}
+\AXC{$\stackrel{\Pi_{78}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{201}$}
+\AXC{$\stackrel{\Pi_{87}}{\vdots}$}\noLine
+\UIC{$\varphi_{366}$}
+\BIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{200}) \to \varphi_{363}$}
+\BIC{$\varphi_{363}$}
+\end{ptree}
+\noindent$\Pi_{89}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{75}}{\vdots}$}\noLine
+\UIC{$\varphi_{125}$}
+\AXC{$\stackrel{\Pi_{82}}{\vdots}$}\noLine
+\UIC{$\varphi_{125} \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{215}$}
+\BIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{215}$}
+\AXC{$2^{-1} \in \mathbb{R}$\lbl{[F31]}}
+\AXC{$\stackrel{\Pi_{84}}{\vdots}$}\noLine
+\UIC{$\varphi_{237}$}
+\BIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{191}$}
+\AXC{$\stackrel{\Pi_{88}}{\vdots}$}\noLine
+\UIC{$\varphi_{363}$}
+\BIC{$\varphi_{354}$}
+\BIC{$\varphi_{341}$}
+\end{ptree}
+\noindent$\Pi_{90}$:
+\begin{ptree}
+\AXC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$\lbl{A1}}
+\AXC{$\forall e \in \mathbb{R}\,(e \cdot 2^{-1} + e \cdot 2^{-1} = e)$\lbl{[F36]}}
+\AXC{$\varphi_{90}$\lbl{A2}}
+\BIC{$\varepsilon \in \mathbb{R} \to \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} = \varepsilon$}
+\AXC{$\varphi_{284}$\lbl{A1}}
+\BIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{232}$}
+\BIC{$\varphi_{232}$}
+\end{ptree}
+\noindent$\Pi_{91}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{63}}{\vdots}$}\noLine
+\UIC{$\varphi_{124}$}
+\AXC{$\stackrel{\Pi_{65}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{212}$}
+\AXC{$\stackrel{\Pi_{74}}{\vdots}$}\noLine
+\UIC{$\varphi_{346}$}
+\BIC{$\varphi_{124} \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{213}$}
+\BIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{213}$}
+\AXC{$\stackrel{\Pi_{89}}{\vdots}$}\noLine
+\UIC{$\varphi_{341}$}
+\BIC{$\mathrm{Cgt}(a) \to \varphi_{241}$}
+\AXC{$\stackrel{\Pi_{90}}{\vdots}$}\noLine
+\UIC{$\varphi_{232}$}
+\AXC{$\varphi_{232} \to \varphi_{350}$\lbl{A1}}
+\BIC{$\varphi_{350}$}
+\BIC{$\varphi_{139} \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{207}$}
+\end{ptree}
+\noindent$\Pi_{92}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{62}}{\vdots}$}\noLine
+\UIC{$\varphi_{139}$}
+\AXC{$\stackrel{\Pi_{91}}{\vdots}$}\noLine
+\UIC{$\varphi_{139} \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{207}$}
+\BIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{207}$}
+\AXC{$\varphi_{336}$\lbl{A1}}
+\BIC{$\varphi_{179} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - a_{n} \rvert < \varepsilon$}
+\UIC{$\varphi_{233}$}
+\end{ptree}
+\noindent$\Pi_{93}$:
+\begin{ptree}
+\AXC{$\varphi_{179} \to \forall n\,(\varphi_{179})$\lbl{A4}}
+\AXC{$\varphi_{233} \to \forall n\,(\varphi_{179}) \to \varphi_{56}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{92}}{\vdots}$}\noLine
+\UIC{$\varphi_{233}$}
+\AXC{$\varphi_{233} \to (\varphi_{233} \to \forall n\,(\varphi_{179}) \to \varphi_{56}) \to (\varphi_{179} \to \forall n\,(\varphi_{179})) \to \varphi_{234}$\lbl{A1}}
+\BIC{$(\varphi_{233} \to \forall n\,(\varphi_{179}) \to \varphi_{56}) \to (\varphi_{179} \to \forall n\,(\varphi_{179})) \to \varphi_{234}$}
+\BIC{$(\varphi_{179} \to \forall n\,(\varphi_{179})) \to \varphi_{234}$}
+\BIC{$\varphi_{234}$}
+\end{ptree}
+\noindent$\Pi_{94}$:
+\begin{ptree}
+\AXC{$\varphi_{179} \to \forall m\,(\varphi_{179})$\lbl{A4}}
+\AXC{$\forall m\,(\varphi_{179} \to \varphi_{56}) \to \forall m\,(\varphi_{179}) \to \forall m\,(\varphi_{56})$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{93}}{\vdots}$}\noLine
+\UIC{$\varphi_{234}$}
+\AXC{$\varphi_{234} \to \varphi_{179} \to \varphi_{56}$\lbl{A1}}
+\BIC{$\varphi_{179} \to \varphi_{56}$}
+\UIC{$\forall m\,(\varphi_{179} \to \varphi_{56})$}
+\AXC{$\forall m\,(\varphi_{179} \to \varphi_{56}) \to \varphi_{364}$\lbl{A1}}
+\BIC{$\varphi_{364}$}
+\BIC{$(\varphi_{179} \to \forall m\,(\varphi_{179})) \to \mathrm{Cgt}(a) \to \varphi_{230}$}
+\BIC{$\mathrm{Cgt}(a) \to \varphi_{230}$}
+\end{ptree}
+\noindent$\Pi_{95}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{94}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \varphi_{230}$}
+\AXC{$\mathrm{Cgt}(a) \to \varphi_{246}$\lbl{A1}}
+\AXC{$(\mathrm{Cgt}(a) \to \varphi_{246}) \to \varphi_{189}$\lbl{A1}}
+\BIC{$\varphi_{189}$}
+\AXC{$\varphi_{189} \to (\mathrm{Cgt}(a) \to \varphi_{230}) \to \mathrm{Cgt}(a) \to \varphi_{238}$\lbl{A1}}
+\BIC{$(\mathrm{Cgt}(a) \to \varphi_{230}) \to \mathrm{Cgt}(a) \to \varphi_{238}$}
+\BIC{$\mathrm{Cgt}(a) \to \varphi_{238}$}
+\end{ptree}
+\noindent$\Pi_{96}$:
+\begin{ptree}
+\AXC{$\varphi_{208}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{95}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \varphi_{238}$}
+\AXC{$(\mathrm{Cgt}(a) \to \varphi_{238}) \to \varphi_{208} \to \mathrm{Cgt}(a) \to \varphi_{239}$\lbl{A1}}
+\BIC{$\varphi_{208} \to \mathrm{Cgt}(a) \to \varphi_{239}$}
+\BIC{$\mathrm{Cgt}(a) \to \varphi_{239}$}
+\AXC{$(\mathrm{Cgt}(a) \to \varphi_{239}) \to \varphi_{154} \to \neg (N \in \mathbb{N} \land \varphi_{92})$\lbl{A1}}
+\BIC{$\varphi_{154} \to \neg (N \in \mathbb{N} \land \varphi_{92})$}
+\UIC{$\forall N\,(\varphi_{154} \to \neg (N \in \mathbb{N} \land \varphi_{92}))$}
+\end{ptree}
+\noindent$\Pi_{97}$:
+\begin{ptree}
+\AXC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$\lbl{A1}}
+\AXC{$\forall e \in \mathbb{R}\,(0 < e \to 0 < e \cdot 2^{-1})$\lbl{[F35]}}
+\AXC{$\varphi_{79}$\lbl{A2}}
+\BIC{$\varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon \cdot 2^{-1}$}
+\AXC{$\varphi_{229}$\lbl{A1}}
+\BIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{132}$}
+\BIC{$\varphi_{132}$}
+\end{ptree}
+\noindent$\Pi_{98}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{94}$\lbl{A2}}
+\BIC{$\forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to \varepsilon \cdot y \in \mathbb{R})$}
+\AXC{$\varphi_{108}$\lbl{A2}}
+\BIC{$\varepsilon \in \mathbb{R} \to 2^{-1} \in \mathbb{R} \to \varepsilon \cdot 2^{-1} \in \mathbb{R}$}
+\AXC{$(\varepsilon \in \mathbb{R} \to 2^{-1} \in \mathbb{R} \to \varepsilon \cdot 2^{-1} \in \mathbb{R}) \to \varphi_{155}$\lbl{A1}}
+\BIC{$\varphi_{155}$}
+\end{ptree}
+\noindent$\Pi_{99}$:
+\begin{ptree}
+\AXC{$2^{-1} \in \mathbb{R}$\lbl{[F31]}}
+\AXC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{98}}{\vdots}$}\noLine
+\UIC{$\varphi_{155}$}
+\BIC{$2^{-1} \in \mathbb{R} \to \varphi_{52}$}
+\BIC{$\varphi_{52}$}
+\end{ptree}
+\noindent$\Pi_{100}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall \alpha\,(\varphi_{177})$\lbl{[C9]}}
+\AXC{$\forall a\,\forall \alpha\,(\varphi_{177}) \to \forall \alpha\,(\varphi_{177})$\lbl{A2}}
+\BIC{$\forall \alpha\,(\varphi_{177})$}
+\AXC{$\forall \alpha\,(\varphi_{177}) \to \varphi_{177}$\lbl{A2}}
+\BIC{$\varphi_{177}$}
+\AXC{$\varphi_{177} \to \varphi_{174}$\lbl{A2}}
+\BIC{$\varphi_{174}$}
+\AXC{$\varphi_{174} \to \varphi_{164}$\lbl{A2}}
+\BIC{$\varphi_{164}$}
+\end{ptree}
+\noindent$\Pi_{101}$:
+\begin{ptree}
+\AXC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{100}}{\vdots}$}\noLine
+\UIC{$\varphi_{164}$}
+\AXC{$\varphi_{164} \to \mathrm{Conv}(a,\alpha) \to \varphi_{194}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(a,\alpha) \to \varphi_{194}$}
+\AXC{$\varphi_{344}$\lbl{A1}}
+\BIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \varphi_{285}$}
+\BIC{$\varphi_{285}$}
+\end{ptree}
+\noindent$\Pi_{102}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{99}}{\vdots}$}\noLine
+\UIC{$\varphi_{52}$}
+\AXC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{101}}{\vdots}$}\noLine
+\UIC{$\varphi_{285}$}
+\BIC{$\varphi_{52} \to \varphi_{42} \to \varphi_{181}$}
+\BIC{$\varphi_{42} \to \varphi_{181}$}
+\end{ptree}
+\noindent$\Pi_{103}$:
+\begin{ptree}
+\AXC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{97}}{\vdots}$}\noLine
+\UIC{$\varphi_{132}$}
+\BIC{$\varphi_{42}$}
+\AXC{$\stackrel{\Pi_{102}}{\vdots}$}\noLine
+\UIC{$\varphi_{42} \to \varphi_{181}$}
+\BIC{$\varphi_{181}$}
+\AXC{$\varphi_{365}$\lbl{A1}}
+\BIC{$\forall N\,(\varphi_{154} \to \neg (N \in \mathbb{N} \land \varphi_{92})) \to \varphi_{342} \to (\varphi_{154} \to \forall N\,(\varphi_{154})) \to \varphi_{151}$}
+\end{ptree}
+\noindent$\Pi_{104}$:
+\begin{ptree}
+\AXC{$\varphi_{154} \to \forall N\,(\varphi_{154})$\lbl{A4}}
+\AXC{$\varphi_{342}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{96}}{\vdots}$}\noLine
+\UIC{$\forall N\,(\varphi_{154} \to \neg (N \in \mathbb{N} \land \varphi_{92}))$}
+\AXC{$\stackrel{\Pi_{103}}{\vdots}$}\noLine
+\UIC{$\forall N\,(\varphi_{154} \to \neg (N \in \mathbb{N} \land \varphi_{92})) \to \varphi_{342} \to (\varphi_{154} \to \forall N\,(\varphi_{154})) \to \varphi_{151}$}
+\BIC{$\varphi_{342} \to (\varphi_{154} \to \forall N\,(\varphi_{154})) \to \varphi_{151}$}
+\BIC{$(\varphi_{154} \to \forall N\,(\varphi_{154})) \to \varphi_{151}$}
+\BIC{$\varphi_{151}$}
+\end{ptree}
+\noindent$\Pi_{105}$:
+\begin{ptree}
+\AXC{$\varphi_{18}$\lbl{A4}}
+\AXC{$\forall \varepsilon\,(\varphi_{152}) \to \varphi_{163}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{104}}{\vdots}$}\noLine
+\UIC{$\varphi_{151}$}
+\AXC{$\varphi_{151} \to \varphi_{152}$\lbl{A1}}
+\BIC{$\varphi_{152}$}
+\UIC{$\forall \varepsilon\,(\varphi_{152})$}
+\AXC{$\forall \varepsilon\,(\varphi_{152}) \to (\forall \varepsilon\,(\varphi_{152}) \to \varphi_{163}) \to \varphi_{18} \to \mathrm{Cgt}(a) \to \varphi_{146}$\lbl{A1}}
+\BIC{$(\forall \varepsilon\,(\varphi_{152}) \to \varphi_{163}) \to \varphi_{18} \to \mathrm{Cgt}(a) \to \varphi_{146}$}
+\BIC{$\varphi_{18} \to \mathrm{Cgt}(a) \to \varphi_{146}$}
+\BIC{$\mathrm{Cgt}(a) \to \varphi_{146}$}
+\end{ptree}
+\noindent$\Pi_{106}$:
+\begin{ptree}
+\AXC{$\forall a\,(\varphi_{156})$\lbl{DefCauchy}}
+\AXC{$\forall a\,(\varphi_{156}) \to \varphi_{156}$\lbl{A2}}
+\BIC{$\varphi_{156}$}
+\AXC{$\varphi_{156} \to (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \varphi_{202}$\lbl{A1}}
+\BIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \varphi_{202}$}
+\end{ptree}
+\noindent$\Pi_{107}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{105}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \varphi_{146}$}
+\AXC{$\stackrel{\Pi_{69}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$}
+\AXC{$\stackrel{\Pi_{106}}{\vdots}$}\noLine
+\UIC{$(\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \varphi_{202}$}
+\BIC{$\varphi_{202}$}
+\BIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Cauchy}(a)$}
+\end{ptree}
+\noindent$\Pi_{108}$:
+\begin{ptree}
+\AXC{$\mathrm{Cgt}(a) \to \mathrm{Cgt}(a)$\lbl{A1}}
+\AXC{$(\mathrm{Cgt}(a) \to \mathrm{Cgt}(a)) \to \varphi_{20}$\lbl{A1}}
+\BIC{$\varphi_{20}$}
+\end{ptree}
+\noindent$\Pi_{109}$:
+\begin{ptree}
+\AXC{$\forall a\,(\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha)))$\lbl{DefCgt}}
+\AXC{$\varphi_{23}$\lbl{A2}}
+\BIC{$\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha))$}
+\AXC{$\stackrel{\Pi_{108}}{\vdots}$}\noLine
+\UIC{$\varphi_{20}$}
+\BIC{$\mathrm{Cgt}(a) \to \exists \alpha\,(\mathrm{Conv}(a,\alpha))$}
+\AXC{$\varphi_{227}$\lbl{A1}}
+\BIC{$\varphi_{5} \to (\varphi_{5} \to \varphi_{10}) \to \varphi_{16} \to \mathrm{Cgt}(a) \to \mathrm{Cauchy}(a)$}
+\end{ptree}
+\noindent$\Pi_{110}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{107}}{\vdots}$}\noLine
+\UIC{$\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Cauchy}(a)$}
+\AXC{$\varphi_{45}$\lbl{A1}}
+\BIC{$\mathrm{Cgt}(a) \land \neg \mathrm{Cauchy}(a) \to \neg \mathrm{Conv}(a,\alpha)$}
+\UIC{$\varphi_{5}$}
+\AXC{$\stackrel{\Pi_{109}}{\vdots}$}\noLine
+\UIC{$\varphi_{5} \to (\varphi_{5} \to \varphi_{10}) \to \varphi_{16} \to \mathrm{Cgt}(a) \to \mathrm{Cauchy}(a)$}
+\BIC{$(\varphi_{5} \to \varphi_{10}) \to \varphi_{16} \to \mathrm{Cgt}(a) \to \mathrm{Cauchy}(a)$}
+\end{ptree}
+\noindent$\Pi_{111}$:
+\begin{ptree}
+\AXC{$\varphi_{16}$\lbl{A4}}
+\AXC{$\varphi_{5} \to \varphi_{10}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{110}}{\vdots}$}\noLine
+\UIC{$(\varphi_{5} \to \varphi_{10}) \to \varphi_{16} \to \mathrm{Cgt}(a) \to \mathrm{Cauchy}(a)$}
+\BIC{$\varphi_{16} \to \mathrm{Cgt}(a) \to \mathrm{Cauchy}(a)$}
+\BIC{$\mathrm{Cgt}(a) \to \mathrm{Cauchy}(a)$}
+\AXC{$(\mathrm{Cgt}(a) \to \mathrm{Cauchy}(a)) \to \varphi_{7}$\lbl{A1}}
+\BIC{$\varphi_{7}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{14}$\lbl{A4}}
+\AXC{$\forall b\,(\varphi_{12}) \to \varphi_{21}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{61}}{\vdots}$}\noLine
+\UIC{$(\forall b\,(\varphi_{12}) \to \varphi_{21}) \to \varphi_{14} \to \mathrm{Cauchy}(a) \to \mathrm{Cgt}(a)$}
+\BIC{$\varphi_{14} \to \mathrm{Cauchy}(a) \to \mathrm{Cgt}(a)$}
+\BIC{$\mathrm{Cauchy}(a) \to \mathrm{Cgt}(a)$}
+\AXC{$\stackrel{\Pi_{111}}{\vdots}$}\noLine
+\UIC{$\varphi_{7}$}
+\BIC{$\mathrm{Cgt}(a) \leftrightarrow \mathrm{Cauchy}(a)$}
+\UIC{$\forall a\,(\mathrm{Cgt}(a) \leftrightarrow \mathrm{Cauchy}(a))$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall c\,(\neg \mathrm{Conv}(b,c)) \to \forall \alpha\,\forall c\,(\neg \mathrm{Conv}(b,c))$
+\item $\varphi_{2} :\equiv \mathrm{SeqBdd}(a) \to \exists b\,(\mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b))$
+\item $\varphi_{3} :\equiv \mathrm{Cauchy}(a) \to \exists b\,(\mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b))$
+\item $\varphi_{4} :\equiv \forall \alpha\,\forall c\,(\neg \mathrm{Conv}(b,c)) \to \forall \alpha\,(\neg \mathrm{Conv}(b,\alpha))$
+\item $\varphi_{5} :\equiv \forall \alpha\,(\mathrm{Cgt}(a) \land \neg \mathrm{Cauchy}(a) \to \neg \mathrm{Conv}(a,\alpha))$
+\item $\varphi_{6} :\equiv \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \exists \alpha\,(\mathrm{Conv}(b,\alpha))$
+\item $\varphi_{7} :\equiv (\mathrm{Cauchy}(a) \to \mathrm{Cgt}(a)) \to (\mathrm{Cgt}(a) \leftrightarrow \mathrm{Cauchy}(a))$
+\item $\varphi_{8} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Cgt}(a)$
+\item $\varphi_{9} :\equiv \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \mathrm{Cgt}(a)$
+\item $\varphi_{10} :\equiv \forall \alpha\,(\mathrm{Cgt}(a) \land \neg \mathrm{Cauchy}(a)) \to \forall \alpha\,(\neg \mathrm{Conv}(a,\alpha))$
+\item $\varphi_{11} :\equiv \mathrm{Cauchy}(a) \land (\mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b)) \land \neg \mathrm{Cgt}(a)$
+\item $\varphi_{12} :\equiv \mathrm{Cauchy}(a) \land \neg \mathrm{Cgt}(a) \to \neg (\mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b))$
+\item $\varphi_{13} :\equiv \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b)$
+\item $\varphi_{14} :\equiv \mathrm{Cauchy}(a) \land \neg \mathrm{Cgt}(a) \to \forall b\,(\mathrm{Cauchy}(a) \land \neg \mathrm{Cgt}(a))$
+\item $\varphi_{15} :\equiv \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \mathrm{Conv}(b,c)$
+\item $\varphi_{16} :\equiv \mathrm{Cgt}(a) \land \neg \mathrm{Cauchy}(a) \to \forall \alpha\,(\mathrm{Cgt}(a) \land \neg \mathrm{Cauchy}(a))$
+\item $\varphi_{17} :\equiv \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$
+\item $\varphi_{18} :\equiv \mathrm{Cgt}(a) \land \mathrm{Conv}(a,\alpha) \to \forall \varepsilon\,(\mathrm{Cgt}(a) \land \mathrm{Conv}(a,\alpha))$
+\item $\varphi_{19} :\equiv \forall a\,(\mathrm{Cauchy}(a) \to \mathrm{SeqBdd}(a)) \to \mathrm{Cauchy}(a) \to \mathrm{SeqBdd}(a)$
+\item $\varphi_{20} :\equiv (\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha))) \to \mathrm{Cgt}(a) \to \exists \alpha\,(\mathrm{Conv}(a,\alpha))$
+\item $\varphi_{21} :\equiv \forall b\,(\mathrm{Cauchy}(a) \land \neg \mathrm{Cgt}(a)) \to \forall b\,(\neg (\mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b)))$
+\item $\varphi_{22} :\equiv \forall x\,\forall y\,\forall z\,(x \leq y \to y \leq z \to x \leq z) \to \forall y\,\forall z\,(N_{1} \leq y \to y \leq z \to N_{1} \leq z)$
+\item $\varphi_{23} :\equiv \forall a\,(\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha))) \to (\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha)))$
+\item $\varphi_{24} :\equiv \forall a\,(\mathrm{Cgt}(a) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(a,\alpha))) \to (\mathrm{Cgt}(b) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(b,\alpha)))$
+\item $\varphi_{25} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a))$
+\item $\varphi_{26} :\equiv \forall \alpha\,(\mathrm{Conv}(b,\alpha) \to \alpha \in \mathbb{R}) \to \mathrm{Conv}(b,c) \to c \in \mathbb{R}$
+\item $\varphi_{27} :\equiv \mathrm{Cauchy}(a) \land (\mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b)) \land \mathrm{Conv}(b,c) \land \neg \mathrm{Cgt}(a)$
+\item $\varphi_{28} :\equiv \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}$
+\item $\varphi_{29} :\equiv \forall s\,(\neg (\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}})))$
+\item $\varphi_{30} :\equiv \mathrm{SubIdx}(s) \leftrightarrow \mathrm{NSeq}(s) \land \forall k \in \mathbb{N}\,(s_{k} < s_{S(k)})$
+\item $\varphi_{31} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \mathrm{Cgt}(a)$
+\item $\varphi_{32} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \mathrm{NSeq}(s)$
+\item $\varphi_{33} :\equiv \lvert v_{749} - v_{751} \rvert < v_{752} \to \lvert v_{750} - v_{751} \rvert < v_{752} + v_{752}$
+\item $\varphi_{34} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \forall \alpha\,(\mathrm{Conv}(b,\alpha) \to \alpha \in \mathbb{R})$
+\item $\varphi_{35} :\equiv \forall a\,\forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \forall \alpha\,(\mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R})$
+\item $\varphi_{36} :\equiv \forall N\,(\neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \varepsilon)))$
+\item $\varphi_{37} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)$
+\item $\varphi_{38} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \mathrm{SubIdx}(s)$
+\item $\varphi_{39} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \mathrm{Conv}(a,c)$
+\item $\varphi_{40} :\equiv \mathrm{Seq}(b) \land \exists s\,(\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}))$
+\item $\varphi_{41} :\equiv \forall y\,\forall z\,(N_{1} \leq y \to y \leq z \to N_{1} \leq z) \to \forall z\,(N_{1} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq z \to N_{1} \leq z)$
+\item $\varphi_{42} :\equiv \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{43} :\equiv \mathrm{Conv}(b,c) \to \exists s\,(\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}))$
+\item $\varphi_{44} :\equiv N_{1} \leq N_{1} \cup N_{2} \to N_{1} \cup N_{2} \leq s_{N_{1} \cup N_{2}} \to N_{1} \leq s_{N_{1} \cup N_{2}}$
+\item $\varphi_{45} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Cauchy}(a)) \to \mathrm{Cgt}(a) \land \neg \mathrm{Cauchy}(a) \to \neg \mathrm{Conv}(a,\alpha)$
+\item $\varphi_{46} :\equiv \forall w\,(z = w \to \lvert z - c \rvert < \varepsilon \cdot 2^{-1} \to \lvert w - c \rvert < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{47} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}$
+\item $\varphi_{48} :\equiv N_{1} \leq v_{753} \to N_{1} \leq v_{754} \to \lvert a_{v_{753}} - a_{v_{754}} \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{49} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \exists \alpha\,(\mathrm{Conv}(a,\alpha))$
+\item $\varphi_{50} :\equiv \forall \alpha\,(\forall c\,(\neg \mathrm{Conv}(b,c)) \to \neg \mathrm{Conv}(b,\alpha)) \to \varphi_{4}$
+\item $\varphi_{51} :\equiv \neg (N \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}))$
+\item $\varphi_{52} :\equiv \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varepsilon \cdot 2^{-1} \in \mathbb{R}$
+\item $\varphi_{53} :\equiv N_{1} \leq n \to N_{1} \cup N_{2} \in \mathbb{N} \to b_{N_{1} \cup N_{2}} = a_{s_{N_{1} \cup N_{2}}}$
+\item $\varphi_{54} :\equiv m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} = \varepsilon$
+\item $\varphi_{55} :\equiv \neg (N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}))$
+\item $\varphi_{56} :\equiv \forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - a_{n} \rvert < \varepsilon)$
+\item $\varphi_{57} :\equiv (\mathrm{Cgt}(b) \leftrightarrow \exists \alpha\,(\mathrm{Conv}(b,\alpha))) \to \mathrm{Cauchy}(a) \to \varphi_{6}$
+\item $\varphi_{58} :\equiv m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{n} - \alpha \rvert = \lvert \alpha - a_{n} \rvert$
+\item $\varphi_{59} :\equiv m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - \alpha \rvert = \lvert \alpha - a_{m} \rvert$
+\item $\varphi_{60} :\equiv n \in \mathbb{N} \to N_{1} \leq n \to \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{61} :\equiv \mathrm{Conv}(b,c) \to \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to c \in \mathbb{R}$
+\item $\varphi_{62} :\equiv \forall k \in \mathbb{N}\,(k \leq s_{k}) \to N_{1} \cup N_{2} \in \mathbb{N} \to N_{1} \cup N_{2} \leq s_{N_{1} \cup N_{2}}$
+\item $\varphi_{63} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \forall k \in \mathbb{N}\,(k \leq s_{k})$
+\item $\varphi_{64} :\equiv \forall s\,(\mathrm{SubIdx}(s) \to \forall k \in \mathbb{N}\,(k \leq s_{k})) \to \mathrm{SubIdx}(s) \to \forall k \in \mathbb{N}\,(k \leq s_{k})$
+\item $\varphi_{65} :\equiv N_{1} \cup N_{2} \in \mathbb{N} \to N_{2} \leq N_{1} \cup N_{2} \to \lvert b_{N_{1} \cup N_{2}} - c \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{66} :\equiv N_{1} \leq s_{N_{1} \cup N_{2}} \to \lvert a_{n} - a_{s_{N_{1} \cup N_{2}}} \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{67} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}$
+\item $\varphi_{68} :\equiv \forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}$
+\item $\varphi_{69} :\equiv \forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \mathrm{Seq}(a) \to m \in \mathbb{N} \to a_{m} \in \mathbb{R}$
+\item $\varphi_{70} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to N_{2} \in \mathbb{N}$
+\item $\varphi_{71} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to N_{1} \in \mathbb{N}$
+\item $\varphi_{72} :\equiv n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - a_{n} \rvert < \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1}$
+\item $\varphi_{73} :\equiv \forall w\,(\lvert a_{n} - \alpha \rvert = w \to \lvert a_{n} - \alpha \rvert < \varepsilon \cdot 2^{-1} \to w < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{74} :\equiv \forall w\,(\lvert a_{m} - \alpha \rvert = w \to \lvert a_{m} - \alpha \rvert < \varepsilon \cdot 2^{-1} \to w < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{75} :\equiv \forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to N_{1} \leq m \to N_{1} \leq n \to \lvert a_{m} - a_{n} \rvert < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{76} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \varepsilon)$
+\item $\varphi_{77} :\equiv \forall s\,\forall k\,(\mathrm{NSeq}(s) \to k \in \mathbb{N} \to s_{k} \in \mathbb{N}) \to \forall k\,(\mathrm{NSeq}(s) \to k \in \mathbb{N} \to s_{k} \in \mathbb{N})$
+\item $\varphi_{78} :\equiv \forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$
+\item $\varphi_{79} :\equiv \forall e \in \mathbb{R}\,(0 < e \to 0 < e \cdot 2^{-1}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{80} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon$
+\item $\varphi_{81} :\equiv \forall n\,(N_{1} \in \mathbb{N} \to n \in \mathbb{N} \to N_{1} \cup n \in \mathbb{N}) \to N_{1} \in \mathbb{N} \to N_{2} \in \mathbb{N} \to N_{1} \cup N_{2} \in \mathbb{N}$
+\item $\varphi_{82} :\equiv \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \varepsilon))$
+\item $\varphi_{83} :\equiv \forall n\,(v_{753} \in \mathbb{N} \to n \in \mathbb{N} \to N_{1} \leq v_{753} \to N_{1} \leq n \to \lvert a_{v_{753}} - a_{n} \rvert < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{84} :\equiv 0 < \varepsilon \cdot 2^{-1} \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{85} :\equiv n \in \mathbb{N} \to N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \cdot 2^{-1} \land \lvert a_{n} - \alpha \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{86} :\equiv m \in \mathbb{N} \to N \leq m \to \lvert a_{m} - \alpha \rvert < \varepsilon \cdot 2^{-1} \land \lvert a_{m} - \alpha \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{87} :\equiv \forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to m \cup n \in \mathbb{N}) \to \forall n\,(N_{1} \in \mathbb{N} \to n \in \mathbb{N} \to N_{1} \cup n \in \mathbb{N})$
+\item $\varphi_{88} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{89} :\equiv \forall v_{754}\,(n \in \mathbb{N} \to v_{754} \in \mathbb{N} \to N_{1} \leq n \to N_{1} \leq v_{754} \to \lvert a_{n} - a_{v_{754}} \rvert < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{90} :\equiv \forall e \in \mathbb{R}\,(e \cdot 2^{-1} + e \cdot 2^{-1} = e) \to \varepsilon \in \mathbb{R} \to \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} = \varepsilon$
+\item $\varphi_{91} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to N_{1} \leq n$
+\item $\varphi_{92} :\equiv \forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \cdot 2^{-1} \land \lvert a_{n} - \alpha \rvert < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{93} :\equiv \neg (N \in \mathbb{N} \land \forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - a_{n} \rvert < \varepsilon \cdot 2^{-1}))$
+\item $\varphi_{94} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y \in \mathbb{R}) \to \forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to \varepsilon \cdot y \in \mathbb{R})$
+\item $\varphi_{95} :\equiv \mathrm{Cauchy}(a) \land (\mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b)) \land \mathrm{Conv}(b,c) \land (\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}))$
+\item $\varphi_{96} :\equiv \lvert b_{N_{1} \cup N_{2}} - c \rvert < \varepsilon \cdot 2^{-1} \to \lvert a_{s_{N_{1} \cup N_{2}}} - c \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{97} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{98} :\equiv \lvert \alpha - a_{n} \rvert < \varepsilon \cdot 2^{-1} \to \lvert a_{m} - a_{n} \rvert < \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1}$
+\item $\varphi_{99} :\equiv \exists N \in \mathbb{N}\,\forall m\,\forall n\,(m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - a_{n} \rvert < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{100} :\equiv \forall w\,(b_{N_{1} \cup N_{2}} = w \to \lvert b_{N_{1} \cup N_{2}} - c \rvert < \varepsilon \cdot 2^{-1} \to \lvert w - c \rvert < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{101} :\equiv \forall k\,(\mathrm{NSeq}(s) \to k \in \mathbb{N} \to s_{k} \in \mathbb{N}) \to \mathrm{NSeq}(s) \to N_{1} \cup N_{2} \in \mathbb{N} \to s_{N_{1} \cup N_{2}} \in \mathbb{N}$
+\item $\varphi_{102} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varepsilon \cdot 2^{-1} \in \mathbb{R}$
+\item $\varphi_{103} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to N_{1} \cup N_{2} \in \mathbb{N} \to N_{1} \cup N_{2} \leq s_{N_{1} \cup N_{2}}$
+\item $\varphi_{104} :\equiv \forall \varepsilon\,(\mathrm{Conv}(b,c) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert b_{n} - c \rvert < \varepsilon))$
+\item $\varphi_{105} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to \varepsilon \in \mathbb{R}$
+\item $\varphi_{106} :\equiv \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to N_{1} \cup N_{2} \in \mathbb{N} \to b_{N_{1} \cup N_{2}} = a_{s_{N_{1} \cup N_{2}}}$
+\item $\varphi_{107} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}})$
+\item $\varphi_{108} :\equiv \forall y\,(\varepsilon \in \mathbb{R} \to y \in \mathbb{R} \to \varepsilon \cdot y \in \mathbb{R}) \to \varepsilon \in \mathbb{R} \to 2^{-1} \in \mathbb{R} \to \varepsilon \cdot 2^{-1} \in \mathbb{R}$
+\item $\varphi_{109} :\equiv \lvert a_{s_{N_{1} \cup N_{2}}} - c \rvert < \varepsilon \cdot 2^{-1} \to \lvert a_{n} - c \rvert < \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1}$
+\item $\varphi_{110} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{31}$
+\item $\varphi_{111} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{32}$
+\item $\varphi_{112} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to a_{n} \in \mathbb{R}$
+\item $\varphi_{113} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{38}$
+\item $\varphi_{114} :\equiv \forall \alpha\,\forall \varepsilon\,(\mathrm{Conv}(b,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert b_{n} - \alpha \rvert < \varepsilon))$
+\item $\varphi_{115} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{39}$
+\item $\varphi_{116} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to N_{1} \cup N_{2} \in \mathbb{N}$
+\item $\varphi_{117} :\equiv \forall s\,(\varphi_{27} \to \neg (\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}})))$
+\item $\varphi_{118} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to N_{1} \leq s_{N_{1} \cup N_{2}}$
+\item $\varphi_{119} :\equiv \forall a\,\forall \alpha\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon))$
+\item $\varphi_{120} :\equiv \forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \mathrm{Seq}(a) \to s_{N_{1} \cup N_{2}} \in \mathbb{N} \to a_{s_{N_{1} \cup N_{2}}} \in \mathbb{R}$
+\item $\varphi_{121} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{49}$
+\item $\varphi_{122} :\equiv \forall w\,(\varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} = w \to \lvert a_{n} - c \rvert < \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} \to \lvert a_{n} - c \rvert < w)$
+\item $\varphi_{123} :\equiv \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} = \varepsilon \to \lvert a_{n} - c \rvert < \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} \to \lvert a_{n} - c \rvert < \varepsilon$
+\item $\varphi_{124} :\equiv \lvert a_{n} - \alpha \rvert = \lvert \alpha - a_{n} \rvert \to \lvert a_{n} - \alpha \rvert < \varepsilon \cdot 2^{-1} \to \lvert \alpha - a_{n} \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{125} :\equiv \lvert a_{m} - \alpha \rvert = \lvert \alpha - a_{m} \rvert \to \lvert a_{m} - \alpha \rvert < \varepsilon \cdot 2^{-1} \to \lvert \alpha - a_{m} \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{126} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to s_{N_{1} \cup N_{2}} \in \mathbb{N}$
+\item $\varphi_{127} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to \lvert a_{n} - c \rvert < \varepsilon$
+\item $\varphi_{128} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to N_{1} \cup N_{2} \leq s_{N_{1} \cup N_{2}}$
+\item $\varphi_{129} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - c \rvert < \varepsilon)$
+\item $\varphi_{130} :\equiv \forall c\,(\varphi_{11} \to \neg \mathrm{Conv}(b,c)) \to \forall c\,(\varphi_{11}) \to \forall c\,(\neg \mathrm{Conv}(b,c))$
+\item $\varphi_{131} :\equiv \forall x\,\forall y\,\forall z\,\forall e\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert x - y \rvert < e \to \lvert y - z \rvert < e \to \lvert x - z \rvert < e + e)$
+\item $\varphi_{132} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon) \to \varphi_{42}$
+\item $\varphi_{133} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to a_{s_{N_{1} \cup N_{2}}} \in \mathbb{R}$
+\item $\varphi_{134} :\equiv \varphi_{36} \to \neg (N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - c \rvert < \varepsilon))$
+\item $\varphi_{135} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{63}$
+\item $\varphi_{136} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} = \varepsilon$
+\item $\varphi_{137} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{67}$
+\item $\varphi_{138} :\equiv \forall w\,(\varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} = w \to \lvert a_{m} - a_{n} \rvert < \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} \to \lvert a_{m} - a_{n} \rvert < w)$
+\item $\varphi_{139} :\equiv \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} = \varepsilon \to \lvert a_{m} - a_{n} \rvert < \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} \to \lvert a_{m} - a_{n} \rvert < \varepsilon$
+\item $\varphi_{140} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x - y \rvert = \lvert y - x \rvert) \to \forall y\,(a_{n} \in \mathbb{R} \to y \in \mathbb{R} \to \lvert a_{n} - y \rvert = \lvert y - a_{n} \rvert)$
+\item $\varphi_{141} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x - y \rvert = \lvert y - x \rvert) \to \forall y\,(a_{m} \in \mathbb{R} \to y \in \mathbb{R} \to \lvert a_{m} - y \rvert = \lvert y - a_{m} \rvert)$
+\item $\varphi_{142} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}})$
+\item $\varphi_{143} :\equiv \forall \varepsilon\,(\mathrm{Cauchy}(a) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall m\,(\varphi_{56}))$
+\item $\varphi_{144} :\equiv \forall \alpha\,(\mathrm{Conv}(a,\alpha) \leftrightarrow \mathrm{Seq}(a) \land \alpha \in \mathbb{R} \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{145} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to N_{1} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - c \rvert < \varepsilon)$
+\item $\varphi_{146} :\equiv \mathrm{Conv}(a,\alpha) \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall m\,(\varphi_{56}))$
+\item $\varphi_{147} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to b_{N_{1} \cup N_{2}} = a_{s_{N_{1} \cup N_{2}}}$
+\item $\varphi_{148} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \varepsilon)$
+\item $\varphi_{149} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{80}$
+\item $\varphi_{150} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to \lvert b_{N_{1} \cup N_{2}} - c \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{151} :\equiv \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall m\,(\varphi_{56})$
+\item $\varphi_{152} :\equiv \mathrm{Cgt}(a) \land \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall m\,(\varphi_{56})$
+\item $\varphi_{153} :\equiv v_{750} \in \mathbb{R} \to v_{751} \in \mathbb{R} \to v_{752} \in \mathbb{R} \to \lvert v_{749} - v_{750} \rvert < v_{752} \to \varphi_{33}$
+\item $\varphi_{154} :\equiv \mathrm{Cgt}(a) \land \mathrm{Conv}(a,\alpha) \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \exists N \in \mathbb{N}\,\forall m\,(\varphi_{56})$
+\item $\varphi_{155} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to 2^{-1} \in \mathbb{R} \to \varphi_{52}$
+\item $\varphi_{156} :\equiv \mathrm{Cauchy}(a) \leftrightarrow \mathrm{Seq}(a) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall m\,(\varphi_{56}))$
+\item $\varphi_{157} :\equiv \forall y\,\forall z\,\forall e\,(a_{n} \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert a_{n} - y \rvert < e \to \lvert y - z \rvert < e \to \lvert a_{n} - z \rvert < e + e)$
+\item $\varphi_{158} :\equiv \forall x\,\forall \alpha\,\forall \beta\,\forall \varepsilon\,(x \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \lvert x - \alpha \rvert < \varepsilon \to \lvert x - \beta \rvert < \varepsilon \to \lvert \alpha - \beta \rvert < \varepsilon + \varepsilon)$
+\item $\varphi_{159} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{160} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to \lvert a_{s_{N_{1} \cup N_{2}}} - c \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{161} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to \lvert a_{n} - c \rvert < \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1}$
+\item $\varphi_{162} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{97}$
+\item $\varphi_{163} :\equiv \forall \varepsilon\,(\mathrm{Cgt}(a) \land \mathrm{Conv}(a,\alpha)) \to \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall m\,(\varphi_{56}))$
+\item $\varphi_{164} :\equiv \forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert a_{n} - \alpha \rvert < \varepsilon))$
+\item $\varphi_{165} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{102}$
+\item $\varphi_{166} :\equiv \forall y\,(a_{n} \in \mathbb{R} \to y \in \mathbb{R} \to \lvert a_{n} - y \rvert = \lvert y - a_{n} \rvert) \to a_{n} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \lvert a_{n} - \alpha \rvert = \lvert \alpha - a_{n} \rvert$
+\item $\varphi_{167} :\equiv \forall y\,(a_{m} \in \mathbb{R} \to y \in \mathbb{R} \to \lvert a_{m} - y \rvert = \lvert y - a_{m} \rvert) \to a_{m} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \lvert a_{m} - \alpha \rvert = \lvert \alpha - a_{m} \rvert$
+\item $\varphi_{168} :\equiv \forall \alpha\,\forall \beta\,\forall \varepsilon\,(v_{749} \in \mathbb{R} \to \alpha \in \mathbb{R} \to \beta \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \lvert v_{749} - \alpha \rvert < \varepsilon \to \lvert v_{749} - \beta \rvert < \varepsilon \to \lvert \alpha - \beta \rvert < \varepsilon + \varepsilon)$
+\item $\varphi_{169} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to \varphi_{60}$
+\item $\varphi_{170} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{103}$
+\item $\varphi_{171} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to \lvert a_{n} - a_{s_{N_{1} \cup N_{2}}} \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{172} :\equiv \forall \beta\,\forall \varepsilon\,(v_{749} \in \mathbb{R} \to v_{750} \in \mathbb{R} \to \beta \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \lvert v_{749} - v_{750} \rvert < \varepsilon \to \lvert v_{749} - \beta \rvert < \varepsilon \to \lvert v_{750} - \beta \rvert < \varepsilon + \varepsilon)$
+\item $\varphi_{173} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{107}$
+\item $\varphi_{174} :\equiv \forall \beta\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert a_{n} - \beta \rvert < \varepsilon))$
+\item $\varphi_{175} :\equiv \forall \varepsilon\,(v_{749} \in \mathbb{R} \to v_{750} \in \mathbb{R} \to v_{751} \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \lvert v_{749} - v_{750} \rvert < \varepsilon \to \lvert v_{749} - v_{751} \rvert < \varepsilon \to \lvert v_{750} - v_{751} \rvert < \varepsilon + \varepsilon)$
+\item $\varphi_{176} :\equiv \mathrm{Conv}(b,c) \to \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varphi_{76}$
+\item $\varphi_{177} :\equiv \forall b\,\forall \beta\,\forall \varepsilon\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \land \lvert b_{n} - \beta \rvert < \varepsilon))$
+\item $\varphi_{178} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to \varphi_{53}$
+\item $\varphi_{179} :\equiv \mathrm{Cgt}(a) \land \mathrm{Conv}(a,\alpha) \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land (N \in \mathbb{N} \land \varphi_{92})$
+\item $\varphi_{180} :\equiv \mathrm{Conv}(b,c) \to \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varphi_{82}$
+\item $\varphi_{181} :\equiv \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \exists N \in \mathbb{N}\,(\varphi_{92})$
+\item $\varphi_{182} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to \varphi_{75}$
+\item $\varphi_{183} :\equiv \forall a\,(\mathrm{SubSeq}(b,a) \leftrightarrow \varphi_{40}) \to (\mathrm{SubSeq}(b,a) \leftrightarrow \varphi_{40})$
+\item $\varphi_{184} :\equiv 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to N \leq n$
+\item $\varphi_{185} :\equiv N_{1} \in \mathbb{N} \land \varphi_{75} \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \varepsilon)$
+\item $\varphi_{186} :\equiv \forall v_{750}\,\forall v_{751}\,\forall v_{752}\,(\alpha \in \mathbb{R} \to v_{750} \in \mathbb{R} \to v_{751} \in \mathbb{R} \to v_{752} \in \mathbb{R} \to \lvert \alpha - v_{750} \rvert < v_{752} \to \lvert \alpha - v_{751} \rvert < v_{752} \to \lvert v_{750} - v_{751} \rvert < v_{752} + v_{752})$
+\item $\varphi_{187} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to \varphi_{83}$
+\item $\varphi_{188} :\equiv \forall b\,\forall a\,(\mathrm{SubSeq}(b,a) \leftrightarrow \varphi_{40}) \to \forall a\,(\mathrm{SubSeq}(b,a) \leftrightarrow \varphi_{40})$
+\item $\varphi_{189} :\equiv \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to N \in \mathbb{N}$
+\item $\varphi_{190} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to \varphi_{89}$
+\item $\varphi_{191} :\equiv N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \varepsilon \cdot 2^{-1} \in \mathbb{R}$
+\item $\varphi_{192} :\equiv (\mathrm{Cauchy}(a) \to \varphi_{15}) \to \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{61}$
+\item $\varphi_{193} :\equiv \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq m$
+\item $\varphi_{194} :\equiv \mathrm{Conv}(a,\alpha) \to \varepsilon \cdot 2^{-1} \in \mathbb{R} \to 0 < \varepsilon \cdot 2^{-1} \to \exists N \in \mathbb{N}\,(\varphi_{92})$
+\item $\varphi_{195} :\equiv \forall v_{751}\,\forall v_{752}\,(\alpha \in \mathbb{R} \to a_{m} \in \mathbb{R} \to v_{751} \in \mathbb{R} \to v_{752} \in \mathbb{R} \to \lvert \alpha - a_{m} \rvert < v_{752} \to \lvert \alpha - v_{751} \rvert < v_{752} \to \lvert a_{m} - v_{751} \rvert < v_{752} + v_{752})$
+\item $\varphi_{196} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48}$
+\item $\varphi_{197} :\equiv \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to m \in \mathbb{N}$
+\item $\varphi_{198} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to N_{1} \leq n \to \varphi_{65}$
+\item $\varphi_{199} :\equiv N_{1} \in \mathbb{N} \land \varphi_{75} \to \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1})$
+\item $\varphi_{200} :\equiv 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to a_{n} \in \mathbb{R}$
+\item $\varphi_{201} :\equiv 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to a_{m} \in \mathbb{R}$
+\item $\varphi_{202} :\equiv (\mathrm{Cgt}(a) \to \varphi_{146}) \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Cauchy}(a)$
+\item $\varphi_{203} :\equiv \forall v_{752}\,(\alpha \in \mathbb{R} \to a_{m} \in \mathbb{R} \to a_{n} \in \mathbb{R} \to v_{752} \in \mathbb{R} \to \lvert \alpha - a_{m} \rvert < v_{752} \to \lvert \alpha - a_{n} \rvert < v_{752} \to \lvert a_{m} - a_{n} \rvert < v_{752} + v_{752})$
+\item $\varphi_{204} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to \forall v_{754}\,(v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48})$
+\item $\varphi_{205} :\equiv (\mathrm{SubSeq}(b,a) \leftrightarrow \varphi_{40}) \to \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{40}$
+\item $\varphi_{206} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{99}$
+\item $\varphi_{207} :\equiv N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - a_{n} \rvert < \varepsilon$
+\item $\varphi_{208} :\equiv \forall N\,(\neg (N \in \mathbb{N} \land \forall m\,(\varphi_{56}))) \to \neg (N \in \mathbb{N} \land \forall m\,(\varphi_{56}))$
+\item $\varphi_{209} :\equiv \forall \alpha\,(\forall c\,(\neg \mathrm{Conv}(b,c)) \to \neg \mathrm{Conv}(b,\alpha)) \to \varphi_{50} \to \varphi_{1} \to \varphi_{8}$
+\item $\varphi_{210} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to \forall v_{753}\,\forall v_{754}\,(v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48})$
+\item $\varphi_{211} :\equiv \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{212} :\equiv N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{n} - \alpha \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{213} :\equiv N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert \alpha - a_{n} \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{214} :\equiv N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - \alpha \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{215} :\equiv N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert \alpha - a_{m} \rvert < \varepsilon \cdot 2^{-1}$
+\item $\varphi_{216} :\equiv (\mathrm{Cauchy}(a) \to \mathrm{Cauchy}(a)) \to \varphi_{156} \to \mathrm{Cauchy}(a) \to \mathrm{Seq}(a)$
+\item $\varphi_{217} :\equiv \varphi_{95} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land \neg \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \varepsilon)$
+\item $\varphi_{218} :\equiv \varepsilon \cdot 2^{-1} \in \mathbb{R} \to \lvert a_{n} - a_{s_{N_{1} \cup N_{2}}} \rvert < \varepsilon \cdot 2^{-1} \to \varphi_{109}$
+\item $\varphi_{219} :\equiv N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to n \in \mathbb{N} \to s_{N_{1} \cup N_{2}} \in \mathbb{N} \to N_{1} \leq n \to \varphi_{66}$
+\item $\varphi_{220} :\equiv (\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{40}) \to \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{43}$
+\item $\varphi_{221} :\equiv a_{m} \in \mathbb{R} \to a_{n} \in \mathbb{R} \to \varepsilon \cdot 2^{-1} \in \mathbb{R} \to \lvert \alpha - a_{m} \rvert < \varepsilon \cdot 2^{-1} \to \varphi_{98}$
+\item $\varphi_{222} :\equiv \forall e\,(a_{n} \in \mathbb{R} \to a_{s_{N_{1} \cup N_{2}}} \in \mathbb{R} \to c \in \mathbb{R} \to e \in \mathbb{R} \to \lvert a_{n} - a_{s_{N_{1} \cup N_{2}}} \rvert < e \to \lvert a_{s_{N_{1} \cup N_{2}}} - c \rvert < e \to \lvert a_{n} - c \rvert < e + e)$
+\item $\varphi_{223} :\equiv \forall z\,\forall e\,(a_{n} \in \mathbb{R} \to a_{s_{N_{1} \cup N_{2}}} \in \mathbb{R} \to z \in \mathbb{R} \to e \in \mathbb{R} \to \lvert a_{n} - a_{s_{N_{1} \cup N_{2}}} \rvert < e \to \lvert a_{s_{N_{1} \cup N_{2}}} - z \rvert < e \to \lvert a_{n} - z \rvert < e + e)$
+\item $\varphi_{224} :\equiv \forall z\,\forall w\,(z = w \to \lvert a_{m} - a_{n} \rvert < z \to \lvert a_{m} - a_{n} \rvert < w) \to \varphi_{138}$
+\item $\varphi_{225} :\equiv \forall N_{1}\,(\neg (N_{1} \in \mathbb{N} \land \varphi_{75})) \to \forall N\,\forall N_{1}\,(\neg (N_{1} \in \mathbb{N} \land \varphi_{75}))$
+\item $\varphi_{226} :\equiv \forall b\,(\varphi_{12}) \to (\forall b\,(\varphi_{12}) \to \varphi_{21}) \to \varphi_{14} \to \mathrm{Cauchy}(a) \to \mathrm{Cgt}(a)$
+\item $\varphi_{227} :\equiv (\mathrm{Cgt}(a) \to \exists \alpha\,(\mathrm{Conv}(a,\alpha))) \to \varphi_{5} \to (\varphi_{5} \to \varphi_{10}) \to \varphi_{16} \to \mathrm{Cgt}(a) \to \mathrm{Cauchy}(a)$
+\item $\varphi_{228} :\equiv \varphi_{110} \to \varphi_{27} \to \neg (\mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}))$
+\item $\varphi_{229} :\equiv (\varepsilon \in \mathbb{R} \to 0 < \varepsilon \to 0 < \varepsilon \cdot 2^{-1}) \to (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{132}$
+\item $\varphi_{230} :\equiv \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to \forall m\,(\varphi_{56})$
+\item $\varphi_{231} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{206}$
+\item $\varphi_{232} :\equiv \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to \varphi_{54}$
+\item $\varphi_{233} :\equiv \forall n\,(\varphi_{179} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - a_{n} \rvert < \varepsilon)$
+\item $\varphi_{234} :\equiv \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to \varphi_{56}$
+\item $\varphi_{235} :\equiv \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to \varphi_{58}$
+\item $\varphi_{236} :\equiv \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to \varphi_{59}$
+\item $\varphi_{237} :\equiv 2^{-1} \in \mathbb{R} \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{191}$
+\item $\varphi_{238} :\equiv \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to N \in \mathbb{N} \land \forall m\,(\varphi_{56})$
+\item $\varphi_{239} :\equiv \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to \exists N \in \mathbb{N}\,\forall m\,(\varphi_{56})$
+\item $\varphi_{240} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{185}$
+\item $\varphi_{241} :\equiv \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to m \in \mathbb{N} \to \varphi_{72}$
+\item $\varphi_{242} :\equiv \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to \varphi_{85}$
+\item $\varphi_{243} :\equiv \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to \varphi_{86}$
+\item $\varphi_{244} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{199}$
+\item $\varphi_{245} :\equiv \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to \varphi_{92}$
+\item $\varphi_{246} :\equiv \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N \in \mathbb{N} \land \varphi_{92} \to N \in \mathbb{N} \land \varphi_{92}$
+\item $\varphi_{247} :\equiv \varphi_{115} \to (\forall \alpha\,(\neg \mathrm{Conv}(a,\alpha)) \to \neg \mathrm{Conv}(a,c)) \to \varphi_{121}$
+\item $\varphi_{248} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{70}$
+\item $\varphi_{249} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{71}$
+\item $\varphi_{250} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{88}$
+\item $\varphi_{251} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{91}$
+\item $\varphi_{252} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to N_{1} \in \mathbb{N} \land \varphi_{75}$
+\item $\varphi_{253} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{105}$
+\item $\varphi_{254} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{240}$
+\item $\varphi_{255} :\equiv \varphi_{95} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land (N_{1} \in \mathbb{N} \land \varphi_{75}) \land \neg \exists N \in \mathbb{N}\,\forall n \in \mathbb{N}\,(N \leq n \to \lvert a_{n} - c \rvert < \varepsilon)$
+\item $\varphi_{256} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{112}$
+\item $\varphi_{257} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{116}$
+\item $\varphi_{258} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{118}$
+\item $\varphi_{259} :\equiv \varphi_{95} \land \varepsilon \in \mathbb{R} \land 0 < \varepsilon \land (N_{1} \in \mathbb{N} \land \varphi_{75}) \land (N_{2} \in \mathbb{N} \land \forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}))$
+\item $\varphi_{260} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{126}$
+\item $\varphi_{261} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{127}$
+\item $\varphi_{262} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{244}$
+\item $\varphi_{263} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{128}$
+\item $\varphi_{264} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{129}$
+\item $\varphi_{265} :\equiv (\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{180}) \to \varphi_{115}$
+\item $\varphi_{266} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{133}$
+\item $\varphi_{267} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{136}$
+\item $\varphi_{268} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{248}$
+\item $\varphi_{269} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{249}$
+\item $\varphi_{270} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{142}$
+\item $\varphi_{271} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{145}$
+\item $\varphi_{272} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{147}$
+\item $\varphi_{273} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{148}$
+\item $\varphi_{274} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{150}$
+\item $\varphi_{275} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{250}$
+\item $\varphi_{276} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{251}$
+\item $\varphi_{277} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{159}$
+\item $\varphi_{278} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{160}$
+\item $\varphi_{279} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{161}$
+\item $\varphi_{280} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{252}$
+\item $\varphi_{281} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{169}$
+\item $\varphi_{282} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{171}$
+\item $\varphi_{283} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{253}$
+\item $\varphi_{284} :\equiv (\varepsilon \in \mathbb{R} \to \varepsilon \cdot 2^{-1} + \varepsilon \cdot 2^{-1} = \varepsilon) \to (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{232}$
+\item $\varphi_{285} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \varphi_{52} \to \varphi_{42} \to \varphi_{181}$
+\item $\varphi_{286} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{178}$
+\item $\varphi_{287} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{256}$
+\item $\varphi_{288} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{257}$
+\item $\varphi_{289} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{258}$
+\item $\varphi_{290} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{182}$
+\item $\varphi_{291} :\equiv (\varepsilon \in \mathbb{R} \to 2^{-1} \in \mathbb{R} \to \varepsilon \cdot 2^{-1} \in \mathbb{R}) \to (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varepsilon \in \mathbb{R}) \to \varphi_{237}$
+\item $\varphi_{292} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{260}$
+\item $\varphi_{293} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{261}$
+\item $\varphi_{294} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{187}$
+\item $\varphi_{295} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{263}$
+\item $\varphi_{296} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{264}$
+\item $\varphi_{297} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{190}$
+\item $\varphi_{298} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{196}$
+\item $\varphi_{299} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{266}$
+\item $\varphi_{300} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{267}$
+\item $\varphi_{301} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{198}$
+\item $\varphi_{302} :\equiv (\varepsilon \in \mathbb{R} \to 2^{-1} \in \mathbb{R} \to \varepsilon \cdot 2^{-1} \in \mathbb{R}) \to \varphi_{137} \to 2^{-1} \in \mathbb{R} \to \varphi_{165}$
+\item $\varphi_{303} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{204}$
+\item $\varphi_{304} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{270}$
+\item $\varphi_{305} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{271}$
+\item $\varphi_{306} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{272}$
+\item $\varphi_{307} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{273}$
+\item $\varphi_{308} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{274}$
+\item $\varphi_{309} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{210}$
+\item $\varphi_{310} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{277}$
+\item $\varphi_{311} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{278}$
+\item $\varphi_{312} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{279}$
+\item $\varphi_{313} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{281}$
+\item $\varphi_{314} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{282}$
+\item $\varphi_{315} :\equiv (\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{176}) \to \varphi_{95} \to \varphi_{76}$
+\item $\varphi_{316} :\equiv \mathrm{SubIdx}(s) \land \forall k \in \mathbb{N}\,(b_{k} = a_{s_{k}}) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to N_{1} \in \mathbb{N} \land \varphi_{75} \to \varphi_{219}$
+\item $\varphi_{317} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{286}$
+\item $\varphi_{318} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{290}$
+\item $\varphi_{319} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{294}$
+\item $\varphi_{320} :\equiv (\mathrm{Cgt}(a) \to \varphi_{197}) \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{201}$
+\item $\varphi_{321} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{297}$
+\item $\varphi_{322} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{298}$
+\item $\varphi_{323} :\equiv (\varphi_{95} \to \forall \varepsilon\,(\varphi_{95})) \to \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{180}$
+\item $\varphi_{324} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{301}$
+\item $\varphi_{325} :\equiv (\varphi_{117} \to \forall s\,(\varphi_{27}) \to \varphi_{29}) \to (\varphi_{27} \to \forall s\,(\varphi_{27})) \to \mathrm{Cauchy}(a) \to \varphi_{9}$
+\item $\varphi_{326} :\equiv \varphi_{225} \to \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{176}$
+\item $\varphi_{327} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{303}$
+\item $\varphi_{328} :\equiv (\mathrm{Cgt}(a) \to \varphi_{211}) \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{200}$
+\item $\varphi_{329} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{309}$
+\item $\varphi_{330} :\equiv \forall v_{753}\,(\varphi_{259}) \to \forall v_{753}\,\forall v_{754}\,(v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48})$
+\item $\varphi_{331} :\equiv \forall N\,(\forall N_{1}\,(\neg (N_{1} \in \mathbb{N} \land \varphi_{75})) \to \varphi_{93}) \to \forall N\,\forall N_{1}\,(\neg (N_{1} \in \mathbb{N} \land \varphi_{75})) \to \forall N\,(\varphi_{93})$
+\item $\varphi_{332} :\equiv (\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{61}) \to \varphi_{265}$
+\item $\varphi_{333} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varphi_{193}) \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{214}$
+\item $\varphi_{334} :\equiv \mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \mathrm{Conv}(b,c) \to \varphi_{316}$
+\item $\varphi_{335} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{184}) \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{212}$
+\item $\varphi_{336} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{207}) \to \varphi_{179} \to m \in \mathbb{N} \to n \in \mathbb{N} \to N \leq m \to N \leq n \to \lvert a_{m} - a_{n} \rvert < \varepsilon$
+\item $\varphi_{337} :\equiv (\mathrm{Seq}(a) \to m \in \mathbb{N} \to a_{m} \in \mathbb{R}) \to (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \varphi_{320}$
+\item $\varphi_{338} :\equiv (\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Seq}(a)) \to \varphi_{328}$
+\item $\varphi_{339} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{200}) \to (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \varphi_{235}$
+\item $\varphi_{340} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{201}) \to (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \varphi_{236}$
+\item $\varphi_{341} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{213}) \to \mathrm{Cgt}(a) \to \varphi_{241}$
+\item $\varphi_{342} :\equiv \forall N\,(\varphi_{154} \to \neg (N \in \mathbb{N} \land \varphi_{92})) \to \forall N\,(\varphi_{154}) \to \forall N\,(\neg (N \in \mathbb{N} \land \varphi_{92}))$
+\item $\varphi_{343} :\equiv (\mathrm{Cauchy}(a) \to \varphi_{6}) \to \forall c\,(\varphi_{11} \to \neg \mathrm{Conv}(b,c)) \to \varphi_{130} \to (\varphi_{11} \to \forall c\,(\varphi_{11})) \to \varphi_{209}$
+\item $\varphi_{344} :\equiv (\mathrm{Conv}(a,\alpha) \to \varphi_{194}) \to (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(a,\alpha)) \to \varphi_{285}$
+\item $\varphi_{345} :\equiv (\mathrm{Conv}(a,c) \leftrightarrow \mathrm{Seq}(a) \land c \in \mathbb{R} \land \varphi_{82}) \to (\mathrm{Cauchy}(a) \to \mathrm{Seq}(a)) \to \varphi_{332}$
+\item $\varphi_{346} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{212}) \to \varphi_{124} \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{213}$
+\item $\varphi_{347} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{214}) \to \varphi_{125} \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{215}$
+\item $\varphi_{348} :\equiv \forall N_{1}\,(\varphi_{217} \to \neg (N_{1} \in \mathbb{N} \land \varphi_{75})) \to \forall N_{1}\,(\varphi_{217}) \to \forall N_{1}\,(\neg (N_{1} \in \mathbb{N} \land \varphi_{75}))$
+\item $\varphi_{349} :\equiv (\forall v_{753}\,\forall v_{754}\,(v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48}) \to \varphi_{89}) \to \varphi_{321}$
+\item $\varphi_{350} :\equiv (\mathrm{Cgt}(a) \to \varphi_{241}) \to \varphi_{139} \to \mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{207}$
+\item $\varphi_{351} :\equiv (\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{43}) \to \varphi_{117} \to \varphi_{325}$
+\item $\varphi_{352} :\equiv \forall n\,(\varphi_{259} \to n \in \mathbb{N} \to N_{1} \leq n \to \lvert a_{n} - c \rvert < \varepsilon) \to \forall n\,(\varphi_{259}) \to \forall n \in \mathbb{N}\,(N_{1} \leq n \to \lvert a_{n} - c \rvert < \varepsilon)$
+\item $\varphi_{353} :\equiv (\mathrm{Cauchy}(a) \to \varepsilon \cdot 2^{-1} \in \mathbb{R} \to 0 < \varepsilon \cdot 2^{-1} \to \varphi_{99}) \to (\mathrm{Cauchy}(a) \to \mathrm{Cauchy}(a)) \to \varphi_{165} \to \varphi_{162} \to \varphi_{231}$
+\item $\varphi_{354} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{215}) \to \varphi_{341}$
+\item $\varphi_{355} :\equiv (\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to (\mathrm{Cauchy}(a) \to \mathrm{Seq}(a)) \to \varphi_{275} \to \varphi_{287}$
+\item $\varphi_{356} :\equiv (\forall N\,(\forall N_{2}\,(\varphi_{55}) \to \varphi_{51}) \to \forall N\,\forall N_{2}\,(\varphi_{55}) \to \forall N\,(\varphi_{51})) \to (\forall N_{2}\,(\varphi_{55}) \to \forall N\,\forall N_{2}\,(\varphi_{55})) \to \varphi_{254}$
+\item $\varphi_{357} :\equiv (\mathrm{Conv}(b,c) \to \varepsilon \cdot 2^{-1} \in \mathbb{R} \to \varphi_{84}) \to (\mathrm{Cauchy}(a) \to \varphi_{15}) \to \varphi_{165} \to \varphi_{162} \to \varphi_{262}$
+\item $\varphi_{358} :\equiv (\mathrm{Seq}(a) \to s_{N_{1} \cup N_{2}} \in \mathbb{N} \to a_{s_{N_{1} \cup N_{2}}} \in \mathbb{R}) \to (\mathrm{Cauchy}(a) \to \mathrm{Seq}(a)) \to \varphi_{292} \to \varphi_{299}$
+\item $\varphi_{359} :\equiv \forall v_{754}\,(\varphi_{259} \to v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48}) \to \forall v_{754}\,(\varphi_{259}) \to \forall v_{754}\,(v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48})$
+\item $\varphi_{360} :\equiv \forall v_{753}\,(\varphi_{259} \to \forall v_{754}\,(v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48})) \to \varphi_{330}$
+\item $\varphi_{361} :\equiv (\mathrm{NSeq}(s) \to N_{1} \cup N_{2} \in \mathbb{N} \to s_{N_{1} \cup N_{2}} \in \mathbb{N}) \to \varphi_{111} \to \varphi_{288} \to \varphi_{292}$
+\item $\varphi_{362} :\equiv \varphi_{313} \to (\forall n \in \mathbb{N}\,(N_{2} \leq n \to \lvert b_{n} - c \rvert < \varepsilon \cdot 2^{-1}) \to \varphi_{65}) \to \varphi_{324}$
+\item $\varphi_{363} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to 0 < \varepsilon \to \varphi_{191}) \to \varphi_{354}$
+\item $\varphi_{364} :\equiv (\forall m\,(\varphi_{179} \to \varphi_{56}) \to \forall m\,(\varphi_{179}) \to \forall m\,(\varphi_{56})) \to (\varphi_{179} \to \forall m\,(\varphi_{179})) \to \mathrm{Cgt}(a) \to \varphi_{230}$
+\item $\varphi_{365} :\equiv \varphi_{181} \to \forall N\,(\varphi_{154} \to \neg (N \in \mathbb{N} \land \varphi_{92})) \to \varphi_{342} \to (\varphi_{154} \to \forall N\,(\varphi_{154})) \to \varphi_{151}$
+\item $\varphi_{366} :\equiv (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{201}) \to (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \varepsilon \in \mathbb{R} \to \varphi_{200}) \to \varphi_{363}$
+\item $\varphi_{367} :\equiv (\mathrm{Cauchy}(a) \to \mathrm{SubSeq}(b,a) \land \mathrm{Cgt}(b) \to \varphi_{61}) \to \varphi_{165} \to \varphi_{314} \to \varphi_{311} \to \varphi_{312}$
+\item $\varphi_{368} :\equiv (\varphi_{217} \to \forall N_{1}\,(\varphi_{217})) \to \forall N\,(\forall N_{1}\,(\neg (N_{1} \in \mathbb{N} \land \varphi_{75})) \to \varphi_{93}) \to \varphi_{331} \to \varphi_{326}$
+\item $\varphi_{369} :\equiv (\alpha \in \mathbb{R} \to \varphi_{221}) \to (\mathrm{Cgt}(a) \to \mathrm{Conv}(a,\alpha) \to \alpha \in \mathbb{R}) \to \varphi_{366}$
+\item $\varphi_{370} :\equiv \forall n\,(\varphi_{259} \to n \in \mathbb{N} \to N_{1} \leq n \to \lvert a_{n} - c \rvert < \varepsilon) \to \varphi_{352} \to (\varphi_{259} \to \forall n\,(\varphi_{259})) \to \varphi_{296}$
+\item $\varphi_{371} :\equiv \forall v_{754}\,(\varphi_{259} \to v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48}) \to \varphi_{359} \to (\varphi_{259} \to \forall v_{754}\,(\varphi_{259})) \to \varphi_{327}$
+\item $\varphi_{372} :\equiv (\forall N_{2}\,(\varphi_{255} \to \varphi_{55}) \to \forall N_{2}\,(\varphi_{255}) \to \forall N_{2}\,(\varphi_{55})) \to (\varphi_{255} \to \forall N_{2}\,(\varphi_{255})) \to \forall N\,(\forall N_{2}\,(\varphi_{55}) \to \varphi_{51}) \to \varphi_{356}$
+\item $\varphi_{373} :\equiv \forall v_{753}\,(\varphi_{259} \to \forall v_{754}\,(v_{753} \in \mathbb{N} \to v_{754} \in \mathbb{N} \to \varphi_{48})) \to \varphi_{360} \to (\varphi_{259} \to \forall v_{753}\,(\varphi_{259})) \to \varphi_{329}$
+\item $\varphi_{374} :\equiv (a_{n} \in \mathbb{R} \to a_{s_{N_{1} \cup N_{2}}} \in \mathbb{R} \to c \in \mathbb{R} \to \varphi_{218}) \to \varphi_{287} \to \varphi_{299} \to \varphi_{367}$
+\end{abbrevlist}
+\end{fullproof}

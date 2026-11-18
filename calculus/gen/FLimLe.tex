@@ -1,0 +1,1445 @@
+% 自動生成 (prover/build.js): FLimLe  ノード数 574
+\begin{fullproof}{定理1.9}{$\forall f\,\forall g\,\forall c\,\forall \alpha\,\forall \beta\,\forall r\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \forall x \in \mathrm{dom}(f)\,(x \in \mathrm{dom}(g) \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < r \to f(x) \leq g(x)) \to \alpha \leq \beta)$}{574}\phantomsection\label{tree:FLimLe}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z = w \to f \circ a(n) = z \to f \circ a(n) = w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to f \circ a(n) = z \to f \circ a(n) = w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to f \circ a(n) = z \to f \circ a(n) = w)$}
+\AXC{$\forall z\,\forall w\,(z = w \to f \circ a(n) = z \to f \circ a(n) = w) \to \varphi_{32}$\lbl{A2}}
+\BIC{$\varphi_{32}$}
+\AXC{$\varphi_{32} \to \varphi_{62}$\lbl{A2}}
+\BIC{$\varphi_{62}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$z = w \to f \circ a(n) < z \to f \circ a(n) < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to f \circ a(n) < z \to f \circ a(n) < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to f \circ a(n) < z \to f \circ a(n) < w)$}
+\AXC{$\forall z\,\forall w\,(z = w \to f \circ a(n) < z \to f \circ a(n) < w) \to \varphi_{40}$\lbl{A2}}
+\BIC{$\varphi_{40}$}
+\AXC{$\varphi_{40} \to \varphi_{63}$\lbl{A2}}
+\BIC{$\varphi_{63}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$z = w \to z = g(a_{n}) \to w = g(a_{n})$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z = g(a_{n}) \to w = g(a_{n}))$}
+\UIC{$\forall z\,\forall w\,(z = w \to z = g(a_{n}) \to w = g(a_{n}))$}
+\AXC{$\forall z\,\forall w\,(z = w \to z = g(a_{n}) \to w = g(a_{n})) \to \varphi_{26}$\lbl{A2}}
+\BIC{$\varphi_{26}$}
+\AXC{$\varphi_{26} \to \varphi_{56}$\lbl{A2}}
+\BIC{$\varphi_{56}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$z = w \to z < g(a_{n}) \to w < g(a_{n})$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < g(a_{n}) \to w < g(a_{n}))$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < g(a_{n}) \to w < g(a_{n}))$}
+\AXC{$\forall z\,\forall w\,(z = w \to z < g(a_{n}) \to w < g(a_{n})) \to \varphi_{28}$\lbl{A2}}
+\BIC{$\varphi_{28}$}
+\AXC{$\varphi_{28} \to \varphi_{60}$\lbl{A2}}
+\BIC{$\varphi_{60}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$\varphi_{71}$\lbl{A2}}
+\AXC{$\varphi_{205}$\lbl{A1}}
+\AXC{$\varphi_{205} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{202}$\lbl{A1}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{202}$}
+\AXC{$\varphi_{246}$\lbl{A1}}
+\BIC{$\varphi_{71} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{180}$\lbl{A1}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{180}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z)$\lbl{[O3]}}
+\AXC{$\varphi_{46}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(\lvert a_{n} - c \rvert < y \to y \leq z \to \lvert a_{n} - c \rvert < z)$}
+\AXC{$\varphi_{68}$\lbl{A2}}
+\BIC{$\forall z\,(\lvert a_{n} - c \rvert < \rho \to \rho \leq z \to \lvert a_{n} - c \rvert < z)$}
+\AXC{$\varphi_{64}$\lbl{A2}}
+\BIC{$\lvert a_{n} - c \rvert < \rho \to \rho \leq r \to \lvert a_{n} - c \rvert < r$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{180}$}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\lvert a_{n} - c \rvert < \rho \to \rho \leq r \to \lvert a_{n} - c \rvert < r$}
+\AXC{$(\lvert a_{n} - c \rvert < \rho \to \rho \leq r \to \lvert a_{n} - c \rvert < r) \to \varphi_{249}$\lbl{A1}}
+\BIC{$\varphi_{249}$}
+\BIC{$\varphi_{170} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{174}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{154}$\lbl{A1}}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{154}) \to \varphi_{170}$\lbl{A1}}
+\BIC{$\varphi_{170}$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{170} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{174}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{174}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z)$\lbl{[O3]}}
+\AXC{$\varphi_{46}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(\lvert a_{n} - c \rvert < y \to y \leq z \to \lvert a_{n} - c \rvert < z)$}
+\AXC{$\varphi_{68}$\lbl{A2}}
+\BIC{$\forall z\,(\lvert a_{n} - c \rvert < \rho \to \rho \leq z \to \lvert a_{n} - c \rvert < z)$}
+\AXC{$\varphi_{65}$\lbl{A2}}
+\BIC{$\lvert a_{n} - c \rvert < \rho \to \rho \leq d \to \lvert a_{n} - c \rvert < d$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{180}$}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\lvert a_{n} - c \rvert < \rho \to \rho \leq d \to \lvert a_{n} - c \rvert < d$}
+\AXC{$(\lvert a_{n} - c \rvert < \rho \to \rho \leq d \to \lvert a_{n} - c \rvert < d) \to \varphi_{250}$\lbl{A1}}
+\BIC{$\varphi_{250}$}
+\BIC{$\varphi_{171} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{154}$\lbl{A1}}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{154}) \to \varphi_{171}$\lbl{A1}}
+\BIC{$\varphi_{171}$}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\varphi_{171} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$\lbl{[S1]}}
+\AXC{$\varphi_{41}$\lbl{A2}}
+\BIC{$\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$}
+\AXC{$\varphi_{33}$\lbl{A2}}
+\BIC{$\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}$}
+\AXC{$(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \varphi_{165} \to \varphi_{177} \to \varphi_{183}$\lbl{A1}}
+\BIC{$\varphi_{165} \to \varphi_{177} \to \varphi_{183}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\varphi_{177}$\lbl{A1}}
+\AXC{$\varphi_{205}$\lbl{A1}}
+\AXC{$\varphi_{205} \to \varphi_{165}$\lbl{A1}}
+\BIC{$\varphi_{165}$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{165} \to \varphi_{177} \to \varphi_{183}$}
+\BIC{$\varphi_{177} \to \varphi_{183}$}
+\BIC{$\varphi_{183}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \varphi_{158}$\lbl{A1}}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \varphi_{158}) \to \varphi_{206}$\lbl{A1}}
+\BIC{$\varphi_{206}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$\varphi_{31} \to a_{n} \in \mathbb{R} \to \varphi_{45}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{206}$}
+\AXC{$\varphi_{206} \to (\varphi_{31} \to a_{n} \in \mathbb{R} \to \varphi_{45}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{209}$\lbl{A1}}
+\BIC{$(\varphi_{31} \to a_{n} \in \mathbb{R} \to \varphi_{45}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{209}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{209}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{183}$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{209}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{209}) \to \varphi_{183} \to \varphi_{260}$\lbl{A1}}
+\BIC{$\varphi_{183} \to \varphi_{260}$}
+\BIC{$\varphi_{260}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{195}$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\varphi_{42} \to a_{n} \in \mathrm{dom}(f) \to \varphi_{54}$\lbl{A2}}
+\AXC{$\varphi_{122}$\lbl{A1}}
+\AXC{$\varphi_{228}$\lbl{A1}}
+\BIC{$(\varphi_{42} \to a_{n} \in \mathrm{dom}(f) \to \varphi_{54}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{136}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{136}$}
+\AXC{$\varphi_{269}$\lbl{A1}}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{195}) \to \varphi_{259}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{195}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{195}$}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{195}) \to \varphi_{259}$}
+\BIC{$\varphi_{259}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{174}$}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{259}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{174}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{182}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{182}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$\varphi_{71}$\lbl{A2}}
+\AXC{$\varphi_{205}$\lbl{A1}}
+\AXC{$\varphi_{205} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{202}$\lbl{A1}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{202}$}
+\AXC{$\varphi_{246}$\lbl{A1}}
+\BIC{$\varphi_{71} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to c \in \mathbb{R})$\lbl{[D3]}}
+\AXC{$\varphi_{20}$\lbl{A2}}
+\BIC{$\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to c \in \mathbb{R})$}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to c \in \mathbb{R})$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to c \in \mathbb{R}$}
+\AXC{$\varphi_{117}$\lbl{A1}}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \varphi_{82}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \varphi_{82}$}
+\BIC{$\varphi_{82}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{82}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{183}$}
+\AXC{$\forall y\,\forall c\,(y \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert y - c \rvert \to y \neq c)$\lbl{[E37]}}
+\AXC{$\varphi_{70}$\lbl{A2}}
+\BIC{$\forall c\,(a_{n} \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert a_{n} - c \rvert \to a_{n} \neq c)$}
+\AXC{$\varphi_{77}$\lbl{A2}}
+\BIC{$a_{n} \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert a_{n} - c \rvert \to a_{n} \neq c$}
+\AXC{$\varphi_{262}$\lbl{A1}}
+\BIC{$\varphi_{183} \to \varphi_{82} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{176}) \to \varphi_{181}$}
+\BIC{$\varphi_{82} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{176}) \to \varphi_{181}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{176}) \to \varphi_{181}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{176}$\lbl{A1}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{176}$}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{176}) \to \varphi_{181}$}
+\BIC{$\varphi_{181}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z)$\lbl{[O3]}}
+\AXC{$\varphi_{46}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(\lvert a_{n} - c \rvert < y \to y \leq z \to \lvert a_{n} - c \rvert < z)$}
+\AXC{$\varphi_{68}$\lbl{A2}}
+\BIC{$\forall z\,(\lvert a_{n} - c \rvert < \rho \to \rho \leq z \to \lvert a_{n} - c \rvert < z)$}
+\AXC{$\varphi_{65}$\lbl{A2}}
+\BIC{$\lvert a_{n} - c \rvert < \rho \to \rho \leq d \to \lvert a_{n} - c \rvert < d$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\lvert a_{n} - c \rvert < \rho \to \rho \leq d \to \lvert a_{n} - c \rvert < d$}
+\AXC{$(\lvert a_{n} - c \rvert < \rho \to \rho \leq d \to \lvert a_{n} - c \rvert < d) \to \varphi_{250}$\lbl{A1}}
+\BIC{$\varphi_{250}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{180}$\lbl{A1}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{180}$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{250}$}
+\BIC{$\varphi_{171} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{154}$\lbl{A1}}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{154}) \to \varphi_{171}$\lbl{A1}}
+\BIC{$\varphi_{171}$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{171} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \varphi_{158}$\lbl{A1}}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \varphi_{158}) \to \varphi_{206}$\lbl{A1}}
+\BIC{$\varphi_{206}$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\varphi_{31} \to a_{n} \in \mathbb{R} \to \varphi_{45}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\varphi_{206}$}
+\AXC{$\varphi_{206} \to (\varphi_{31} \to a_{n} \in \mathbb{R} \to \varphi_{45}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{209}$\lbl{A1}}
+\BIC{$(\varphi_{31} \to a_{n} \in \mathbb{R} \to \varphi_{45}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{209}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{209}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{183}$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{209}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{209}) \to \varphi_{183} \to \varphi_{260}$\lbl{A1}}
+\BIC{$\varphi_{183} \to \varphi_{260}$}
+\BIC{$\varphi_{260}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{195}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\varphi_{181}$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{195}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{195}$}
+\AXC{$\varphi_{255}$\lbl{A1}}
+\BIC{$\varphi_{181} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{185}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{185}$}
+\AXC{$\varphi_{234}$\lbl{A1}}
+\BIC{$\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c$}
+\UIC{$\forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c)$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\varphi_{162} \to \forall n\,(\varphi_{162})$\lbl{A4}}
+\AXC{$\varphi_{236}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$\forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c)$}
+\AXC{$\varphi_{273}$\lbl{A1}}
+\BIC{$\varphi_{236} \to (\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{192}$}
+\BIC{$(\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{192}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{192}$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\varphi_{231}$\lbl{A3}}
+\AXC{$\varphi_{177}$\lbl{A1}}
+\AXC{$\varphi_{47}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{192}$}
+\AXC{$\varphi_{242}$\lbl{A1}}
+\BIC{$\varphi_{47} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{185}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{185}$}
+\AXC{$\varphi_{252}$\lbl{A1}}
+\BIC{$\varphi_{177} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{168}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{168}$}
+\AXC{$\varphi_{229}$\lbl{A1}}
+\BIC{$\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)$}
+\UIC{$\forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f))$}
+\AXC{$\varphi_{271}$\lbl{A1}}
+\BIC{$\varphi_{231} \to (\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{172}$}
+\BIC{$(\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{172}$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f))$\lbl{[D2]}}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f))$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f))$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f)$}
+\AXC{$\varphi_{114}$\lbl{A1}}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \varphi_{79}$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \varphi_{79}$}
+\BIC{$\varphi_{79}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$\varphi_{205}$\lbl{A1}}
+\AXC{$\varphi_{205} \to \varphi_{165}$\lbl{A1}}
+\BIC{$\varphi_{165}$}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$\varphi_{79}$}
+\AXC{$\forall f\,\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{57})$\lbl{[S8]}}
+\AXC{$\varphi_{144}$\lbl{A2}}
+\BIC{$\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{57})$}
+\AXC{$\varphi_{137}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{57}$}
+\AXC{$\varphi_{264}$\lbl{A1}}
+\BIC{$\varphi_{79} \to \varphi_{165} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{172}) \to \varphi_{203}$}
+\BIC{$\varphi_{165} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{172}) \to \varphi_{203}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{172}) \to \varphi_{203}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\varphi_{162} \to \forall n\,(\varphi_{162})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$(\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{172}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{172}$}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{172}) \to \varphi_{203}$}
+\BIC{$\varphi_{203}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$\varphi_{177}$\lbl{A1}}
+\AXC{$\varphi_{52}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$\varphi_{203}$}
+\AXC{$\varphi_{203} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{199}$\lbl{A1}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{199}$}
+\AXC{$\varphi_{244}$\lbl{A1}}
+\BIC{$\varphi_{52} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{197}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{197}$}
+\AXC{$\varphi_{257}$\lbl{A1}}
+\BIC{$\varphi_{177} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{187}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{187}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\forall y\,(f \circ a(n) = y \to y = f \circ a(n))$}
+\AXC{$\varphi_{66}$\lbl{A2}}
+\BIC{$f \circ a(n) = f(a_{n}) \to f(a_{n}) = f \circ a(n)$}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{187}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{187}) \to \varphi_{210}$\lbl{A1}}
+\BIC{$\varphi_{210}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{188}$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\varphi_{56}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{60}$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{182}$}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{188}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{188}) \to \varphi_{247}$\lbl{A1}}
+\BIC{$\varphi_{247}$}
+\BIC{$\varphi_{60} \to \varphi_{56} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{189}$}
+\BIC{$\varphi_{56} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{189}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{189}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\varphi_{71}$\lbl{A2}}
+\AXC{$\varphi_{205}$\lbl{A1}}
+\AXC{$\varphi_{205} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{202}$\lbl{A1}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{202}$}
+\AXC{$\varphi_{246}$\lbl{A1}}
+\BIC{$\varphi_{71} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{82}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{183}$}
+\AXC{$\forall y\,\forall c\,(y \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert y - c \rvert \to y \neq c)$\lbl{[E37]}}
+\AXC{$\varphi_{70}$\lbl{A2}}
+\BIC{$\forall c\,(a_{n} \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert a_{n} - c \rvert \to a_{n} \neq c)$}
+\AXC{$\varphi_{77}$\lbl{A2}}
+\BIC{$a_{n} \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert a_{n} - c \rvert \to a_{n} \neq c$}
+\AXC{$\varphi_{262}$\lbl{A1}}
+\BIC{$\varphi_{183} \to \varphi_{82} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{176}) \to \varphi_{181}$}
+\BIC{$\varphi_{82} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{176}) \to \varphi_{181}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{176}) \to \varphi_{181}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{176}$\lbl{A1}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{176}$}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{176}) \to \varphi_{181}$}
+\BIC{$\varphi_{181}$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z)$\lbl{[O3]}}
+\AXC{$\varphi_{46}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(\lvert a_{n} - c \rvert < y \to y \leq z \to \lvert a_{n} - c \rvert < z)$}
+\AXC{$\varphi_{68}$\lbl{A2}}
+\BIC{$\forall z\,(\lvert a_{n} - c \rvert < \rho \to \rho \leq z \to \lvert a_{n} - c \rvert < z)$}
+\AXC{$\varphi_{65}$\lbl{A2}}
+\BIC{$\lvert a_{n} - c \rvert < \rho \to \rho \leq d \to \lvert a_{n} - c \rvert < d$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$\lvert a_{n} - c \rvert < \rho \to \rho \leq d \to \lvert a_{n} - c \rvert < d$}
+\AXC{$(\lvert a_{n} - c \rvert < \rho \to \rho \leq d \to \lvert a_{n} - c \rvert < d) \to \varphi_{250}$\lbl{A1}}
+\BIC{$\varphi_{250}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{180}$\lbl{A1}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{180}$}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$\varphi_{250}$}
+\BIC{$\varphi_{171} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{154}$\lbl{A1}}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{154}) \to \varphi_{171}$\lbl{A1}}
+\BIC{$\varphi_{171}$}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$\varphi_{171} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$}
+\end{ptree}
+\noindent$\Pi_{51}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \varphi_{158}$\lbl{A1}}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \varphi_{158}) \to \varphi_{206}$\lbl{A1}}
+\BIC{$\varphi_{206}$}
+\end{ptree}
+\noindent$\Pi_{52}$:
+\begin{ptree}
+\AXC{$\varphi_{31} \to a_{n} \in \mathbb{R} \to \varphi_{45}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{51}}{\vdots}$}\noLine
+\UIC{$\varphi_{206}$}
+\AXC{$\varphi_{206} \to (\varphi_{31} \to a_{n} \in \mathbb{R} \to \varphi_{45}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{209}$\lbl{A1}}
+\BIC{$(\varphi_{31} \to a_{n} \in \mathbb{R} \to \varphi_{45}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{209}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{209}$}
+\end{ptree}
+\noindent$\Pi_{53}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$\varphi_{183}$}
+\AXC{$\stackrel{\Pi_{52}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{209}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{209}) \to \varphi_{183} \to \varphi_{260}$\lbl{A1}}
+\BIC{$\varphi_{183} \to \varphi_{260}$}
+\BIC{$\varphi_{260}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{195}$}
+\end{ptree}
+\noindent$\Pi_{54}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$\varphi_{181}$}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$}
+\AXC{$\stackrel{\Pi_{53}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{195}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{195}$}
+\AXC{$\varphi_{256}$\lbl{A1}}
+\BIC{$\varphi_{181} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{186}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{186}$}
+\AXC{$\varphi_{235}$\lbl{A1}}
+\BIC{$\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c$}
+\UIC{$\forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c)$}
+\end{ptree}
+\noindent$\Pi_{55}$:
+\begin{ptree}
+\AXC{$\varphi_{162} \to \forall n\,(\varphi_{162})$\lbl{A4}}
+\AXC{$\varphi_{237}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{54}}{\vdots}$}\noLine
+\UIC{$\forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c)$}
+\AXC{$\varphi_{274}$\lbl{A1}}
+\BIC{$\varphi_{237} \to (\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{193}$}
+\BIC{$(\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{193}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{193}$}
+\end{ptree}
+\noindent$\Pi_{56}$:
+\begin{ptree}
+\AXC{$\varphi_{232}$\lbl{A3}}
+\AXC{$\varphi_{177}$\lbl{A1}}
+\AXC{$\varphi_{48}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{55}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{193}$}
+\AXC{$\varphi_{243}$\lbl{A1}}
+\BIC{$\varphi_{48} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{186}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{186}$}
+\AXC{$\varphi_{253}$\lbl{A1}}
+\BIC{$\varphi_{177} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{169}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{169}$}
+\AXC{$\varphi_{230}$\lbl{A1}}
+\BIC{$\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g)$}
+\UIC{$\forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g))$}
+\AXC{$\varphi_{272}$\lbl{A1}}
+\BIC{$\varphi_{232} \to (\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{173}$}
+\BIC{$(\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{173}$}
+\end{ptree}
+\noindent$\Pi_{57}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f))$\lbl{[D2]}}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\BIC{$\forall c\,\forall \alpha\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{RFn}(g))$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{RFn}(g))$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\mathrm{FLim}(g,c,\beta) \to \mathrm{RFn}(g)$}
+\end{ptree}
+\noindent$\Pi_{58}$:
+\begin{ptree}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{57}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(g,c,\beta) \to \mathrm{RFn}(g)$}
+\AXC{$(\mathrm{FLim}(g,c,\beta) \to \mathrm{RFn}(g)) \to \varphi_{1} \to \varphi_{80}$\lbl{A1}}
+\BIC{$\varphi_{1} \to \varphi_{80}$}
+\BIC{$\varphi_{80}$}
+\end{ptree}
+\noindent$\Pi_{59}$:
+\begin{ptree}
+\AXC{$\varphi_{205}$\lbl{A1}}
+\AXC{$\varphi_{205} \to \varphi_{165}$\lbl{A1}}
+\BIC{$\varphi_{165}$}
+\AXC{$\stackrel{\Pi_{58}}{\vdots}$}\noLine
+\UIC{$\varphi_{80}$}
+\AXC{$\forall f\,\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{57})$\lbl{[S8]}}
+\AXC{$\varphi_{145}$\lbl{A2}}
+\BIC{$\forall a\,(\mathrm{RFn}(g) \to \mathrm{Seq}(a) \to \varphi_{58})$}
+\AXC{$\varphi_{138}$\lbl{A2}}
+\BIC{$\mathrm{RFn}(g) \to \mathrm{Seq}(a) \to \varphi_{58}$}
+\AXC{$\varphi_{265}$\lbl{A1}}
+\BIC{$\varphi_{80} \to \varphi_{165} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{173}) \to \varphi_{204}$}
+\BIC{$\varphi_{165} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{173}) \to \varphi_{204}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{173}) \to \varphi_{204}$}
+\end{ptree}
+\noindent$\Pi_{60}$:
+\begin{ptree}
+\AXC{$\varphi_{162} \to \forall n\,(\varphi_{162})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{56}}{\vdots}$}\noLine
+\UIC{$(\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{173}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{173}$}
+\AXC{$\stackrel{\Pi_{59}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{173}) \to \varphi_{204}$}
+\BIC{$\varphi_{204}$}
+\end{ptree}
+\noindent$\Pi_{61}$:
+\begin{ptree}
+\AXC{$\varphi_{177}$\lbl{A1}}
+\AXC{$\varphi_{53}$\lbl{A2}}
+\AXC{$\stackrel{\Pi_{60}}{\vdots}$}\noLine
+\UIC{$\varphi_{204}$}
+\AXC{$\varphi_{204} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{200}$\lbl{A1}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{200}$}
+\AXC{$\varphi_{245}$\lbl{A1}}
+\BIC{$\varphi_{53} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{198}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{198}$}
+\AXC{$\varphi_{258}$\lbl{A1}}
+\BIC{$\varphi_{177} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{190}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{190}$}
+\end{ptree}
+\noindent$\Pi_{62}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\varphi_{19}$\lbl{A2}}
+\BIC{$\forall y\,(g \circ a(n) = y \to y = g \circ a(n))$}
+\AXC{$\varphi_{67}$\lbl{A2}}
+\BIC{$g \circ a(n) = g(a_{n}) \to g(a_{n}) = g \circ a(n)$}
+\AXC{$\stackrel{\Pi_{61}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{190}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{190}) \to \varphi_{211}$\lbl{A1}}
+\BIC{$\varphi_{211}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{191}$}
+\end{ptree}
+\noindent$\Pi_{63}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{62}$}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{63}$}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{189}$}
+\AXC{$\stackrel{\Pi_{62}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{191}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{191}) \to \varphi_{248}$\lbl{A1}}
+\BIC{$\varphi_{248}$}
+\BIC{$\varphi_{63} \to \varphi_{62} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{194}$}
+\BIC{$\varphi_{62} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{194}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{194}$}
+\end{ptree}
+\noindent$\Pi_{64}$:
+\begin{ptree}
+\AXC{$\varphi_{162} \to \forall n\,(\varphi_{162})$\lbl{A4}}
+\AXC{$\varphi_{239}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{63}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{194}$}
+\AXC{$\varphi_{238}$\lbl{A1}}
+\BIC{$\varphi_{162} \to n \in \mathbb{N} \to f \circ a(n) \leq g \circ a(n)$}
+\UIC{$\forall n\,(\varphi_{162} \to n \in \mathbb{N} \to f \circ a(n) \leq g \circ a(n))$}
+\AXC{$\varphi_{275}$\lbl{A1}}
+\BIC{$\varphi_{239} \to (\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{196}$}
+\BIC{$(\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{196}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{196}$}
+\end{ptree}
+\noindent$\Pi_{65}$:
+\begin{ptree}
+\AXC{$\forall f\,(\varphi_{59})$\lbl{定理1.7(⇒)}}
+\AXC{$\forall f\,(\varphi_{59}) \to \forall c\,(\varphi_{55})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{55})$}
+\AXC{$\forall c\,(\varphi_{55}) \to \varphi_{55}$\lbl{A2}}
+\BIC{$\varphi_{55}$}
+\AXC{$\varphi_{55} \to \forall a\,(\mathrm{FLim}(g,c,\beta) \to \mathrm{Conv}(a,c) \to \varphi_{24})$\lbl{A2}}
+\BIC{$\forall a\,(\mathrm{FLim}(g,c,\beta) \to \mathrm{Conv}(a,c) \to \varphi_{24})$}
+\end{ptree}
+\noindent$\Pi_{66}$:
+\begin{ptree}
+\AXC{$\varphi_{205}$\lbl{A1}}
+\AXC{$\varphi_{205} \to \varphi_{166}$\lbl{A1}}
+\BIC{$\varphi_{166}$}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{65}}{\vdots}$}\noLine
+\UIC{$\forall a\,(\mathrm{FLim}(g,c,\beta) \to \mathrm{Conv}(a,c) \to \varphi_{24})$}
+\AXC{$\varphi_{115}$\lbl{A2}}
+\BIC{$\mathrm{FLim}(g,c,\beta) \to \mathrm{Conv}(a,c) \to \varphi_{24}$}
+\AXC{$\varphi_{261}$\lbl{A1}}
+\BIC{$\varphi_{1} \to \varphi_{166} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{193}) \to \varphi_{178}$}
+\BIC{$\varphi_{166} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{193}) \to \varphi_{178}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{193}) \to \varphi_{178}$}
+\end{ptree}
+\noindent$\Pi_{67}$:
+\begin{ptree}
+\AXC{$\forall f\,(\varphi_{59})$\lbl{定理1.7(⇒)}}
+\AXC{$\forall f\,(\varphi_{59}) \to \varphi_{59}$\lbl{A2}}
+\BIC{$\varphi_{59}$}
+\AXC{$\varphi_{119}$\lbl{A2}}
+\BIC{$\forall \alpha\,\forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{25})$}
+\AXC{$\varphi_{118}$\lbl{A2}}
+\BIC{$\forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{25})$}
+\AXC{$\varphi_{116}$\lbl{A2}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{25}$}
+\end{ptree}
+\noindent$\Pi_{68}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{67}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{25}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{25}) \to \varphi_{254}$\lbl{A1}}
+\BIC{$\varphi_{254}$}
+\end{ptree}
+\noindent$\Pi_{69}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{192}$}
+\AXC{$\varphi_{205}$\lbl{A1}}
+\AXC{$\varphi_{205} \to \varphi_{166}$\lbl{A1}}
+\BIC{$\varphi_{166}$}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{68}}{\vdots}$}\noLine
+\UIC{$\varphi_{254}$}
+\BIC{$\varphi_{166} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{192}) \to \varphi_{179}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{192}) \to \varphi_{179}$}
+\BIC{$\varphi_{179}$}
+\end{ptree}
+\noindent$\Pi_{70}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{69}}{\vdots}$}\noLine
+\UIC{$\varphi_{179}$}
+\AXC{$\varphi_{29}$\lbl{定理2.5}}
+\AXC{$\varphi_{29} \to \varphi_{51}$\lbl{A2}}
+\BIC{$\varphi_{51}$}
+\AXC{$\varphi_{51} \to \forall \alpha\,\forall \beta\,(\mathrm{Conv}(f \circ a,\alpha) \to \varphi_{38})$\lbl{A2}}
+\BIC{$\forall \alpha\,\forall \beta\,(\mathrm{Conv}(f \circ a,\alpha) \to \varphi_{38})$}
+\AXC{$\varphi_{124}$\lbl{A2}}
+\BIC{$\forall \beta\,(\mathrm{Conv}(f \circ a,\alpha) \to \varphi_{38})$}
+\AXC{$\varphi_{121}$\lbl{A2}}
+\BIC{$\mathrm{Conv}(f \circ a,\alpha) \to \varphi_{38}$}
+\AXC{$\varphi_{267}$\lbl{A1}}
+\BIC{$\varphi_{179} \to \varphi_{178} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{196}) \to \varphi_{164}$}
+\BIC{$\varphi_{178} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{196}) \to \varphi_{164}$}
+\end{ptree}
+\noindent$\Pi_{71}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{55}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{193}$}
+\AXC{$\stackrel{\Pi_{66}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{193}) \to \varphi_{178}$}
+\BIC{$\varphi_{178}$}
+\AXC{$\stackrel{\Pi_{70}}{\vdots}$}\noLine
+\UIC{$\varphi_{178} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{196}) \to \varphi_{164}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{196}) \to \varphi_{164}$}
+\end{ptree}
+\noindent$\Pi_{72}$:
+\begin{ptree}
+\AXC{$\forall c\,(\varphi_{69})$\lbl{[H1]}}
+\AXC{$\forall c\,(\varphi_{69}) \to \varphi_{69}$\lbl{A2}}
+\BIC{$\varphi_{69}$}
+\AXC{$\varphi_{69} \to c \in \mathbb{R} \to \rho \in \mathbb{R} \to 0 < \rho \to \exists a\,(\varphi_{39})$\lbl{A2}}
+\BIC{$c \in \mathbb{R} \to \rho \in \mathbb{R} \to 0 < \rho \to \exists a\,(\varphi_{39})$}
+\end{ptree}
+\noindent$\Pi_{73}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{82}$}
+\AXC{$\stackrel{\Pi_{72}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \rho \in \mathbb{R} \to 0 < \rho \to \exists a\,(\varphi_{39})$}
+\AXC{$(c \in \mathbb{R} \to \rho \in \mathbb{R} \to 0 < \rho \to \exists a\,(\varphi_{39})) \to \varphi_{82} \to \varphi_{153} \to \varphi_{152} \to \varphi_{163}$\lbl{A1}}
+\BIC{$\varphi_{82} \to \varphi_{153} \to \varphi_{152} \to \varphi_{163}$}
+\BIC{$\varphi_{153} \to \varphi_{152} \to \varphi_{163}$}
+\end{ptree}
+\noindent$\Pi_{74}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{154}$\lbl{A1}}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{154}) \to \varphi_{153}$\lbl{A1}}
+\BIC{$\varphi_{153}$}
+\AXC{$\stackrel{\Pi_{73}}{\vdots}$}\noLine
+\UIC{$\varphi_{153} \to \varphi_{152} \to \varphi_{163}$}
+\BIC{$\varphi_{152} \to \varphi_{163}$}
+\end{ptree}
+\noindent$\Pi_{75}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{154}$\lbl{A1}}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{154}) \to \varphi_{152}$\lbl{A1}}
+\BIC{$\varphi_{152}$}
+\AXC{$\stackrel{\Pi_{74}}{\vdots}$}\noLine
+\UIC{$\varphi_{152} \to \varphi_{163}$}
+\BIC{$\varphi_{163}$}
+\AXC{$\varphi_{163} \to \forall a\,(\varphi_{151} \to \neg \varphi_{39}) \to \varphi_{266}$\lbl{A1}}
+\BIC{$\forall a\,(\varphi_{151} \to \neg \varphi_{39}) \to \varphi_{266}$}
+\end{ptree}
+\noindent$\Pi_{76}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{64}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{196}$}
+\AXC{$\stackrel{\Pi_{71}}{\vdots}$}\noLine
+\UIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{196}) \to \varphi_{164}$}
+\BIC{$\varphi_{164}$}
+\AXC{$\varphi_{164} \to \varphi_{151} \to \neg \varphi_{39}$\lbl{A1}}
+\BIC{$\varphi_{151} \to \neg \varphi_{39}$}
+\UIC{$\forall a\,(\varphi_{151} \to \neg \varphi_{39})$}
+\AXC{$\stackrel{\Pi_{75}}{\vdots}$}\noLine
+\UIC{$\forall a\,(\varphi_{151} \to \neg \varphi_{39}) \to \varphi_{266}$}
+\BIC{$\varphi_{266}$}
+\end{ptree}
+\noindent$\Pi_{77}$:
+\begin{ptree}
+\AXC{$\varphi_{151} \to \forall a\,(\varphi_{151})$\lbl{A4}}
+\AXC{$\forall a\,(\varphi_{151} \to \neg \varphi_{39}) \to \forall a\,(\varphi_{151}) \to \forall a\,(\neg \varphi_{39})$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{76}}{\vdots}$}\noLine
+\UIC{$\varphi_{266}$}
+\BIC{$(\varphi_{151} \to \forall a\,(\varphi_{151})) \to \varphi_{150}$}
+\BIC{$\varphi_{150}$}
+\AXC{$\varphi_{150} \to \varphi_{133} \to \neg (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r)$\lbl{A1}}
+\BIC{$\varphi_{133} \to \neg (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r)$}
+\UIC{$\forall \rho\,(\varphi_{133} \to \neg (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r))$}
+\end{ptree}
+\noindent$\Pi_{78}$:
+\begin{ptree}
+\AXC{$\forall d\,(\forall u_{5}\,(\varphi_{27}) \to \varphi_{23}) \to \forall d\,\forall u_{5}\,(\varphi_{27}) \to \forall d\,(\varphi_{23})$\lbl{A3}}
+\AXC{$\forall u_{5}\,(\varphi_{27}) \to \varphi_{23}$\lbl{A2}}
+\UIC{$\forall d\,(\forall u_{5}\,(\varphi_{27}) \to \varphi_{23})$}
+\AXC{$\forall d\,(\forall u_{5}\,(\varphi_{27}) \to \varphi_{23}) \to \varphi_{227}$\lbl{A1}}
+\BIC{$\varphi_{227}$}
+\BIC{$(\forall u_{5}\,(\varphi_{27}) \to \forall d\,\forall u_{5}\,(\varphi_{27})) \to \forall u_{5}\,(\varphi_{27}) \to \forall d\,(\varphi_{23})$}
+\end{ptree}
+\noindent$\Pi_{79}$:
+\begin{ptree}
+\AXC{$\forall u_{5}\,(\varphi_{27}) \to \forall d\,\forall u_{5}\,(\varphi_{27})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{78}}{\vdots}$}\noLine
+\UIC{$(\forall u_{5}\,(\varphi_{27}) \to \forall d\,\forall u_{5}\,(\varphi_{27})) \to \forall u_{5}\,(\varphi_{27}) \to \forall d\,(\varphi_{23})$}
+\BIC{$\forall u_{5}\,(\varphi_{27}) \to \forall d\,(\varphi_{23})$}
+\end{ptree}
+\noindent$\Pi_{80}$:
+\begin{ptree}
+\AXC{$\forall u_{5}\,(\forall d\,(\varphi_{23}) \to \varphi_{27}) \to \forall u_{5}\,\forall d\,(\varphi_{23}) \to \forall u_{5}\,(\varphi_{27})$\lbl{A3}}
+\AXC{$\forall d\,(\varphi_{23}) \to \varphi_{27}$\lbl{A2}}
+\UIC{$\forall u_{5}\,(\forall d\,(\varphi_{23}) \to \varphi_{27})$}
+\AXC{$\forall u_{5}\,(\forall d\,(\varphi_{23}) \to \varphi_{27}) \to \varphi_{226}$\lbl{A1}}
+\BIC{$\varphi_{226}$}
+\BIC{$(\forall d\,(\varphi_{23}) \to \forall u_{5}\,\forall d\,(\varphi_{23})) \to \forall d\,(\varphi_{23}) \to \forall u_{5}\,(\varphi_{27})$}
+\end{ptree}
+\noindent$\Pi_{81}$:
+\begin{ptree}
+\AXC{$\forall d\,(\varphi_{23}) \to \forall u_{5}\,\forall d\,(\varphi_{23})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{80}}{\vdots}$}\noLine
+\UIC{$(\forall d\,(\varphi_{23}) \to \forall u_{5}\,\forall d\,(\varphi_{23})) \to \forall d\,(\varphi_{23}) \to \forall u_{5}\,(\varphi_{27})$}
+\BIC{$\forall d\,(\varphi_{23}) \to \forall u_{5}\,(\varphi_{27})$}
+\end{ptree}
+\noindent$\Pi_{82}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{81}}{\vdots}$}\noLine
+\UIC{$\forall d\,(\varphi_{23}) \to \forall u_{5}\,(\varphi_{27})$}
+\AXC{$\forall d\,(\varphi_{23}) \leftrightarrow \forall d\,(\varphi_{23})$\lbl{A1}}
+\AXC{$(\forall d\,(\varphi_{23}) \leftrightarrow \forall d\,(\varphi_{23})) \to \varphi_{207}$\lbl{A1}}
+\BIC{$\varphi_{207}$}
+\BIC{$(\forall u_{5}\,(\varphi_{27}) \to \forall d\,(\varphi_{23})) \to (\forall d\,(\varphi_{23}) \leftrightarrow \forall u_{5}\,(\varphi_{27}))$}
+\end{ptree}
+\noindent$\Pi_{83}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{79}}{\vdots}$}\noLine
+\UIC{$\forall u_{5}\,(\varphi_{27}) \to \forall d\,(\varphi_{23})$}
+\AXC{$\stackrel{\Pi_{82}}{\vdots}$}\noLine
+\UIC{$(\forall u_{5}\,(\varphi_{27}) \to \forall d\,(\varphi_{23})) \to (\forall d\,(\varphi_{23}) \leftrightarrow \forall u_{5}\,(\varphi_{27}))$}
+\BIC{$\forall d\,(\varphi_{23}) \leftrightarrow \forall u_{5}\,(\varphi_{27})$}
+\AXC{$\varphi_{155}$\lbl{A1}}
+\BIC{$\neg \forall d\,(\varphi_{23}) \leftrightarrow \neg \forall u_{5}\,(\varphi_{27})$}
+\end{ptree}
+\noindent$\Pi_{84}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{83}}{\vdots}$}\noLine
+\UIC{$\neg \forall d\,(\varphi_{23}) \leftrightarrow \neg \forall u_{5}\,(\varphi_{27})$}
+\AXC{$0 < v_{769} \leftrightarrow 0 < v_{769}$\lbl{A1}}
+\AXC{$(0 < v_{769} \leftrightarrow 0 < v_{769}) \to \varphi_{161}$\lbl{A1}}
+\BIC{$\varphi_{161}$}
+\BIC{$0 < v_{769} \to \neg \forall d\,(\varphi_{23}) \leftrightarrow 0 < v_{769} \to \neg \forall u_{5}\,(\varphi_{27})$}
+\end{ptree}
+\noindent$\Pi_{85}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{84}}{\vdots}$}\noLine
+\UIC{$0 < v_{769} \to \neg \forall d\,(\varphi_{23}) \leftrightarrow 0 < v_{769} \to \neg \forall u_{5}\,(\varphi_{27})$}
+\AXC{$0 < v_{768} \leftrightarrow 0 < v_{768}$\lbl{A1}}
+\AXC{$(0 < v_{768} \leftrightarrow 0 < v_{768}) \to \varphi_{167}$\lbl{A1}}
+\BIC{$\varphi_{167}$}
+\BIC{$\varphi_{17} \leftrightarrow 0 < v_{768} \to 0 < v_{769} \to \neg \forall u_{5}\,(\varphi_{27})$}
+\end{ptree}
+\noindent$\Pi_{86}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{85}}{\vdots}$}\noLine
+\UIC{$\varphi_{17} \leftrightarrow 0 < v_{768} \to 0 < v_{769} \to \neg \forall u_{5}\,(\varphi_{27})$}
+\AXC{$v_{769} \in \mathbb{R} \leftrightarrow v_{769} \in \mathbb{R}$\lbl{A1}}
+\AXC{$\varphi_{208}$\lbl{A1}}
+\BIC{$(\varphi_{17} \leftrightarrow 0 < v_{768} \to 0 < v_{769} \to \neg \forall u_{5}\,(\varphi_{27})) \to \varphi_{125}$}
+\BIC{$\varphi_{125}$}
+\end{ptree}
+\noindent$\Pi_{87}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{86}}{\vdots}$}\noLine
+\UIC{$\varphi_{125}$}
+\AXC{$v_{768} \in \mathbb{R} \leftrightarrow v_{768} \in \mathbb{R}$\lbl{A1}}
+\AXC{$\varphi_{214}$\lbl{A1}}
+\BIC{$\varphi_{125} \to (v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17} \leftrightarrow \varphi_{73})$}
+\BIC{$v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17} \leftrightarrow \varphi_{73}$}
+\end{ptree}
+\noindent$\Pi_{88}$:
+\begin{ptree}
+\AXC{$\varphi_{218}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{87}}{\vdots}$}\noLine
+\UIC{$v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17} \leftrightarrow \varphi_{73}$}
+\AXC{$\varphi_{215}$\lbl{A1}}
+\BIC{$\varphi_{73} \to v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}$}
+\UIC{$\forall v_{769}\,(\varphi_{73} \to v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17})$}
+\AXC{$\stackrel{\Pi_{87}}{\vdots}$}\noLine
+\UIC{$v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17} \leftrightarrow \varphi_{73}$}
+\AXC{$\varphi_{216}$\lbl{A1}}
+\BIC{$(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \varphi_{73}$}
+\UIC{$\forall v_{769}\,((v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \varphi_{73})$}
+\AXC{$\varphi_{268}$\lbl{A1}}
+\BIC{$\forall v_{769}\,(\varphi_{73} \to v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \varphi_{218} \to \varphi_{233}$}
+\BIC{$\varphi_{218} \to \varphi_{233}$}
+\BIC{$\varphi_{233}$}
+\end{ptree}
+\noindent$\Pi_{89}$:
+\begin{ptree}
+\AXC{$\varphi_{217}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{88}}{\vdots}$}\noLine
+\UIC{$\varphi_{233}$}
+\BIC{$\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \leftrightarrow \forall v_{769}\,(\varphi_{73})$}
+\end{ptree}
+\noindent$\Pi_{90}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{89}}{\vdots}$}\noLine
+\UIC{$\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \leftrightarrow \forall v_{769}\,(\varphi_{73})$}
+\AXC{$\varphi_{221}$\lbl{A1}}
+\BIC{$\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \forall v_{769}\,(\varphi_{73})$}
+\UIC{$\varphi_{148}$}
+\AXC{$\varphi_{148} \to \varphi_{147} \to \varphi_{263}$\lbl{A1}}
+\BIC{$\varphi_{147} \to \varphi_{263}$}
+\end{ptree}
+\noindent$\Pi_{91}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{89}}{\vdots}$}\noLine
+\UIC{$\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \leftrightarrow \forall v_{769}\,(\varphi_{73})$}
+\AXC{$\varphi_{220}$\lbl{A1}}
+\BIC{$\forall v_{769}\,(\varphi_{73}) \to \forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17})$}
+\UIC{$\varphi_{147}$}
+\AXC{$\stackrel{\Pi_{90}}{\vdots}$}\noLine
+\UIC{$\varphi_{147} \to \varphi_{263}$}
+\BIC{$\varphi_{263}$}
+\end{ptree}
+\noindent$\Pi_{92}$:
+\begin{ptree}
+\AXC{$\varphi_{147} \to \varphi_{61} \to \forall v_{768}\,\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17})$\lbl{A3}}
+\AXC{$\varphi_{148} \to \forall v_{768}\,\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \varphi_{61}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{91}}{\vdots}$}\noLine
+\UIC{$\varphi_{263}$}
+\BIC{$\varphi_{240}$}
+\BIC{$\forall v_{768}\,\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \leftrightarrow \varphi_{61}$}
+\end{ptree}
+\noindent$\Pi_{93}$:
+\begin{ptree}
+\AXC{$\varphi_{37}$\lbl{[D8]}}
+\AXC{$\varphi_{37} \to \varphi_{43}$\lbl{A2}}
+\BIC{$\varphi_{43}$}
+\AXC{$\varphi_{43} \to v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}$\lbl{A2}}
+\BIC{$v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}$}
+\UIC{$\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17})$}
+\UIC{$\forall v_{768}\,\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17})$}
+\AXC{$\forall v_{768}\,\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \varphi_{184}$\lbl{A1}}
+\BIC{$\varphi_{184}$}
+\end{ptree}
+\noindent$\Pi_{94}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{92}}{\vdots}$}\noLine
+\UIC{$\forall v_{768}\,\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \leftrightarrow \varphi_{61}$}
+\AXC{$\stackrel{\Pi_{93}}{\vdots}$}\noLine
+\UIC{$\varphi_{184}$}
+\BIC{$\varphi_{61}$}
+\AXC{$\varphi_{61} \to \varphi_{50}$\lbl{A2}}
+\BIC{$\varphi_{50}$}
+\AXC{$\varphi_{50} \to d \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{10}$\lbl{A2}}
+\BIC{$d \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{10}$}
+\end{ptree}
+\noindent$\Pi_{95}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \varphi_{158}$\lbl{A1}}
+\AXC{$\varphi_{224}$\lbl{A1}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{131}$}
+\AXC{$\stackrel{\Pi_{94}}{\vdots}$}\noLine
+\UIC{$d \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{10}$}
+\AXC{$(d \in \mathbb{R} \to r \in \mathbb{R} \to \varphi_{10}) \to \varphi_{241}$\lbl{A1}}
+\BIC{$\varphi_{241}$}
+\BIC{$\varphi_{4} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{128}) \to \varphi_{11} \to \varphi_{149}$}
+\end{ptree}
+\noindent$\Pi_{96}$:
+\begin{ptree}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \varphi_{158}$\lbl{A1}}
+\AXC{$\varphi_{222}$\lbl{A1}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{128}$}
+\AXC{$\varphi_{4}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{95}}{\vdots}$}\noLine
+\UIC{$\varphi_{4} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{128}) \to \varphi_{11} \to \varphi_{149}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{128}) \to \varphi_{11} \to \varphi_{149}$}
+\BIC{$\varphi_{11} \to \varphi_{149}$}
+\end{ptree}
+\noindent$\Pi_{97}$:
+\begin{ptree}
+\AXC{$\varphi_{223}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{77}}{\vdots}$}\noLine
+\UIC{$\forall \rho\,(\varphi_{133} \to \neg (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r))$}
+\AXC{$\varphi_{11}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{96}}{\vdots}$}\noLine
+\UIC{$\varphi_{11} \to \varphi_{149}$}
+\BIC{$\varphi_{149}$}
+\AXC{$\varphi_{149} \to \varphi_{270}$\lbl{A1}}
+\BIC{$\varphi_{270}$}
+\BIC{$\varphi_{223} \to (\varphi_{133} \to \forall \rho\,(\varphi_{133})) \to \varphi_{225}$}
+\BIC{$(\varphi_{133} \to \forall \rho\,(\varphi_{133})) \to \varphi_{225}$}
+\end{ptree}
+\noindent$\Pi_{98}$:
+\begin{ptree}
+\AXC{$\varphi_{49}$\lbl{A4}}
+\AXC{$\forall u_{5}\,(\varphi_{36}) \to \varphi_{44}$\lbl{A3}}
+\AXC{$\varphi_{36}$\lbl{A2}}
+\UIC{$\forall u_{5}\,(\varphi_{36})$}
+\AXC{$\varphi_{133} \to \forall \rho\,(\varphi_{133})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{97}}{\vdots}$}\noLine
+\UIC{$(\varphi_{133} \to \forall \rho\,(\varphi_{133})) \to \varphi_{225}$}
+\BIC{$\varphi_{225}$}
+\BIC{$(\forall u_{5}\,(\varphi_{36}) \to \varphi_{44}) \to \varphi_{49} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{127}$}
+\BIC{$\varphi_{49} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{127}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{127}$}
+\AXC{$\varphi_{212}$\lbl{A1}}
+\BIC{$\varphi_{81} \to \neg (d \in \mathbb{R} \land 0 < d \land \varphi_{31})$}
+\UIC{$\forall d\,(\varphi_{81} \to \neg (d \in \mathbb{R} \land 0 < d \land \varphi_{31}))$}
+\end{ptree}
+\noindent$\Pi_{99}$:
+\begin{ptree}
+\AXC{$\varphi_{1}$\lbl{A1}}
+\AXC{$\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c))$\lbl{[D5]}}
+\AXC{$\varphi_{21}$\lbl{A2}}
+\BIC{$\forall c\,\forall \alpha\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{PNbhd}(g,c))$}
+\AXC{$\varphi_{15}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{PNbhd}(g,c))$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$\mathrm{FLim}(g,c,\beta) \to \mathrm{PNbhd}(g,c)$}
+\AXC{$\varphi_{120}$\lbl{A1}}
+\BIC{$\varphi_{1} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{74}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{74}$}
+\end{ptree}
+\noindent$\Pi_{100}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c))$\lbl{[D5]}}
+\AXC{$\varphi_{22}$\lbl{A2}}
+\BIC{$\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c))$}
+\AXC{$\varphi_{16}$\lbl{A2}}
+\BIC{$\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c))$}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c)$}
+\end{ptree}
+\noindent$\Pi_{101}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{100}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c)$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c)) \to \varphi_{104}$\lbl{A1}}
+\BIC{$\varphi_{104}$}
+\end{ptree}
+\noindent$\Pi_{102}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall g\,\forall c\,(\varphi_{72})$\lbl{[H2]}}
+\AXC{$\forall f\,\forall g\,\forall c\,(\varphi_{72}) \to \forall g\,\forall c\,(\varphi_{72})$\lbl{A2}}
+\BIC{$\forall g\,\forall c\,(\varphi_{72})$}
+\AXC{$\forall g\,\forall c\,(\varphi_{72}) \to \forall c\,(\varphi_{72})$\lbl{A2}}
+\BIC{$\forall c\,(\varphi_{72})$}
+\AXC{$\forall c\,(\varphi_{72}) \to \varphi_{72}$\lbl{A2}}
+\BIC{$\varphi_{72}$}
+\end{ptree}
+\noindent$\Pi_{103}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{99}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{74}$}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{101}}{\vdots}$}\noLine
+\UIC{$\varphi_{104}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{75}$}
+\AXC{$\stackrel{\Pi_{102}}{\vdots}$}\noLine
+\UIC{$\varphi_{72}$}
+\AXC{$\varphi_{72} \to \varphi_{219}$\lbl{A1}}
+\BIC{$\varphi_{219}$}
+\BIC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{74}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{123}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{123}$}
+\end{ptree}
+\noindent$\Pi_{104}$:
+\begin{ptree}
+\AXC{$\varphi_{213}$\lbl{A3}}
+\AXC{$\stackrel{\Pi_{98}}{\vdots}$}\noLine
+\UIC{$\forall d\,(\varphi_{81} \to \neg (d \in \mathbb{R} \land 0 < d \land \varphi_{31}))$}
+\AXC{$\stackrel{\Pi_{103}}{\vdots}$}\noLine
+\UIC{$\mathrm{FLim}(f,c,\alpha) \to \varphi_{123}$}
+\AXC{$(\mathrm{FLim}(f,c,\alpha) \to \varphi_{123}) \to \varphi_{251}$\lbl{A1}}
+\BIC{$\varphi_{251}$}
+\BIC{$\varphi_{213} \to (\varphi_{81} \to \forall d\,(\varphi_{81})) \to \varphi_{78}$}
+\BIC{$(\varphi_{81} \to \forall d\,(\varphi_{81})) \to \varphi_{78}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\varphi_{81} \to \forall d\,(\varphi_{81})$\lbl{A4}}
+\AXC{$\stackrel{\Pi_{104}}{\vdots}$}\noLine
+\UIC{$(\varphi_{81} \to \forall d\,(\varphi_{81})) \to \varphi_{78}$}
+\BIC{$\varphi_{78}$}
+\UIC{$\forall r\,(\varphi_{78})$}
+\UIC{$\forall \beta\,\forall r\,(\varphi_{78})$}
+\UIC{$\forall \alpha\,\forall \beta\,\forall r\,(\varphi_{78})$}
+\UIC{$\forall c\,\forall \alpha\,\forall \beta\,\forall r\,(\varphi_{78})$}
+\UIC{$\forall g\,\forall c\,\forall \alpha\,\forall \beta\,\forall r\,(\varphi_{78})$}
+\UIC{$\forall f\,\forall g\,\forall c\,\forall \alpha\,\forall \beta\,\forall r\,(\varphi_{78})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \mathrm{FLim}(g,c,\beta)$
+\item $\varphi_{2} :\equiv \forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f)) \to \mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f)$
+\item $\varphi_{3} :\equiv \forall \alpha\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{RFn}(g)) \to \mathrm{FLim}(g,c,\beta) \to \mathrm{RFn}(g)$
+\item $\varphi_{4} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to r \in \mathbb{R}$
+\item $\varphi_{5} :\equiv \forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f)) \to \forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f))$
+\item $\varphi_{6} :\equiv \forall c\,\forall \alpha\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{RFn}(g)) \to \forall \alpha\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{RFn}(g))$
+\item $\varphi_{7} :\equiv \forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to c \in \mathbb{R}) \to \mathrm{FLim}(f,c,\alpha) \to c \in \mathbb{R}$
+\item $\varphi_{8} :\equiv \forall \alpha\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{PNbhd}(g,c)) \to \mathrm{FLim}(g,c,\beta) \to \mathrm{PNbhd}(g,c)$
+\item $\varphi_{9} :\equiv \forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c)) \to \mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c)$
+\item $\varphi_{10} :\equiv 0 < d \to 0 < r \to \exists u_{5}\,(u_{5} \in \mathbb{R} \land 0 < u_{5} \land u_{5} \leq d \land u_{5} \leq r)$
+\item $\varphi_{11} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to 0 < r$
+\item $\varphi_{12} :\equiv \forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f)) \to \forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f))$
+\item $\varphi_{13} :\equiv \forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f)) \to \forall c\,\forall \alpha\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{RFn}(g))$
+\item $\varphi_{14} :\equiv \forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to c \in \mathbb{R}) \to \forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to c \in \mathbb{R})$
+\item $\varphi_{15} :\equiv \forall c\,\forall \alpha\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{PNbhd}(g,c)) \to \forall \alpha\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{PNbhd}(g,c))$
+\item $\varphi_{16} :\equiv \forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c)) \to \forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c))$
+\item $\varphi_{17} :\equiv 0 < v_{768} \to 0 < v_{769} \to \exists d\,(d \in \mathbb{R} \land 0 < d \land d \leq v_{768} \land d \leq v_{769})$
+\item $\varphi_{18} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(f \circ a(n) = y \to y = f \circ a(n))$
+\item $\varphi_{19} :\equiv \forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(g \circ a(n) = y \to y = g \circ a(n))$
+\item $\varphi_{20} :\equiv \forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to c \in \mathbb{R}) \to \forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to c \in \mathbb{R})$
+\item $\varphi_{21} :\equiv \forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c)) \to \forall c\,\forall \alpha\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{PNbhd}(g,c))$
+\item $\varphi_{22} :\equiv \forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c)) \to \forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{PNbhd}(f,c))$
+\item $\varphi_{23} :\equiv \neg \neg (\neg (\neg (d \in \mathbb{R} \to \neg 0 < d) \to \neg (\neg d < v_{768} \to d = v_{768})) \to \neg (\neg d < v_{769} \to d = v_{769}))$
+\item $\varphi_{24} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c) \to \mathrm{Conv}(g \circ a,\beta)$
+\item $\varphi_{25} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c) \to \mathrm{Conv}(f \circ a,\alpha)$
+\item $\varphi_{26} :\equiv \forall w\,(f(a_{n}) = w \to f(a_{n}) = g(a_{n}) \to w = g(a_{n}))$
+\item $\varphi_{27} :\equiv \neg \neg (\neg (\neg (u_{5} \in \mathbb{R} \to \neg 0 < u_{5}) \to \neg (\neg u_{5} < v_{768} \to u_{5} = v_{768})) \to \neg (\neg u_{5} < v_{769} \to u_{5} = v_{769}))$
+\item $\varphi_{28} :\equiv \forall w\,(f(a_{n}) = w \to f(a_{n}) < g(a_{n}) \to w < g(a_{n}))$
+\item $\varphi_{29} :\equiv \forall a\,\forall b\,\forall \alpha\,\forall \beta\,(\mathrm{Conv}(a,\alpha) \to \mathrm{Conv}(b,\beta) \to \forall n \in \mathbb{N}\,(a_{n} \leq b_{n}) \to \alpha \leq \beta)$
+\item $\varphi_{30} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r$
+\item $\varphi_{31} :\equiv \forall x \in \mathbb{R}\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < d \to x \in \mathrm{dom}(f) \land x \in \mathrm{dom}(g))$
+\item $\varphi_{32} :\equiv \forall w\,(g(a_{n}) = w \to f \circ a(n) = g(a_{n}) \to f \circ a(n) = w)$
+\item $\varphi_{33} :\equiv \forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}$
+\item $\varphi_{34} :\equiv n \in \mathbb{N} \to \mathrm{Seq}(f \circ a) \land \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n}))$
+\item $\varphi_{35} :\equiv n \in \mathbb{N} \to \mathrm{Seq}(g \circ a) \land \forall n \in \mathbb{N}\,(g \circ a(n) = g(a_{n}))$
+\item $\varphi_{36} :\equiv \forall \rho\,(\neg (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r)) \to \neg (u_{5} \in \mathbb{R} \land 0 < u_{5} \land u_{5} \leq d \land u_{5} \leq r)$
+\item $\varphi_{37} :\equiv \forall p\,\forall q\,(p \in \mathbb{R} \to q \in \mathbb{R} \to 0 < p \to 0 < q \to \exists d\,(d \in \mathbb{R} \land 0 < d \land d \leq p \land d \leq q))$
+\item $\varphi_{38} :\equiv \mathrm{Conv}(g \circ a,\beta) \to \forall n \in \mathbb{N}\,(f \circ a(n) \leq g \circ a(n)) \to \alpha \leq \beta$
+\item $\varphi_{39} :\equiv \mathrm{Seq}(a) \land \mathrm{Conv}(a,c) \land \forall n \in \mathbb{N}\,(0 < \lvert a_{n} - c \rvert \land \lvert a_{n} - c \rvert < \rho)$
+\item $\varphi_{40} :\equiv \forall w\,(g(a_{n}) = w \to f \circ a(n) < g(a_{n}) \to f \circ a(n) < w)$
+\item $\varphi_{41} :\equiv \forall a\,\forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}) \to \forall n\,(\mathrm{Seq}(a) \to n \in \mathbb{N} \to a_{n} \in \mathbb{R})$
+\item $\varphi_{42} :\equiv \forall x \in \mathrm{dom}(f)\,(x \in \mathrm{dom}(g) \to 0 < \lvert x - c \rvert \to \lvert x - c \rvert < r \to f(x) \leq g(x))$
+\item $\varphi_{43} :\equiv \forall q\,(v_{768} \in \mathbb{R} \to q \in \mathbb{R} \to 0 < v_{768} \to 0 < q \to \exists d\,(d \in \mathbb{R} \land 0 < d \land d \leq v_{768} \land d \leq q))$
+\item $\varphi_{44} :\equiv \forall u_{5}\,\forall \rho\,(\neg (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r)) \to \forall u_{5}\,(\neg (u_{5} \in \mathbb{R} \land 0 < u_{5} \land u_{5} \leq d \land u_{5} \leq r))$
+\item $\varphi_{45} :\equiv 0 < \lvert a_{n} - c \rvert \to \lvert a_{n} - c \rvert < d \to a_{n} \in \mathrm{dom}(f) \land a_{n} \in \mathrm{dom}(g)$
+\item $\varphi_{46} :\equiv \forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z) \to \forall y\,\forall z\,(\lvert a_{n} - c \rvert < y \to y \leq z \to \lvert a_{n} - c \rvert < z)$
+\item $\varphi_{47} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c) \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c$
+\item $\varphi_{48} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c) \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c$
+\item $\varphi_{49} :\equiv \forall \rho\,(\neg (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r)) \to \forall u_{5}\,\forall \rho\,(\neg (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r))$
+\item $\varphi_{50} :\equiv \forall v_{769}\,(d \in \mathbb{R} \to v_{769} \in \mathbb{R} \to 0 < d \to 0 < v_{769} \to \exists u_{5}\,(u_{5} \in \mathbb{R} \land 0 < u_{5} \land u_{5} \leq d \land u_{5} \leq v_{769}))$
+\item $\varphi_{51} :\equiv \forall b\,\forall \alpha\,\forall \beta\,(\mathrm{Conv}(f \circ a,\alpha) \to \mathrm{Conv}(b,\beta) \to \forall n \in \mathbb{N}\,(f \circ a(n) \leq b_{n}) \to \alpha \leq \beta)$
+\item $\varphi_{52} :\equiv \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n})) \to n \in \mathbb{N} \to f \circ a(n) = f(a_{n})$
+\item $\varphi_{53} :\equiv \forall n \in \mathbb{N}\,(g \circ a(n) = g(a_{n})) \to n \in \mathbb{N} \to g \circ a(n) = g(a_{n})$
+\item $\varphi_{54} :\equiv a_{n} \in \mathrm{dom}(g) \to 0 < \lvert a_{n} - c \rvert \to \lvert a_{n} - c \rvert < r \to f(a_{n}) \leq g(a_{n})$
+\item $\varphi_{55} :\equiv \forall \alpha\,\forall a\,(\mathrm{FLim}(g,c,\alpha) \to \mathrm{Conv}(a,c) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c) \to \mathrm{Conv}(g \circ a,\alpha))$
+\item $\varphi_{56} :\equiv f(a_{n}) = f \circ a(n) \to f(a_{n}) = g(a_{n}) \to f \circ a(n) = g(a_{n})$
+\item $\varphi_{57} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f)) \to \mathrm{Seq}(f \circ a) \land \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n}))$
+\item $\varphi_{58} :\equiv \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(g)) \to \mathrm{Seq}(g \circ a) \land \forall n \in \mathbb{N}\,(g \circ a(n) = g(a_{n}))$
+\item $\varphi_{59} :\equiv \forall c\,\forall \alpha\,\forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{25})$
+\item $\varphi_{60} :\equiv f(a_{n}) = f \circ a(n) \to f(a_{n}) < g(a_{n}) \to f \circ a(n) < g(a_{n})$
+\item $\varphi_{61} :\equiv \forall v_{768}\,\forall v_{769}\,(\varphi_{73})$
+\item $\varphi_{62} :\equiv g(a_{n}) = g \circ a(n) \to f \circ a(n) = g(a_{n}) \to f \circ a(n) = g \circ a(n)$
+\item $\varphi_{63} :\equiv g(a_{n}) = g \circ a(n) \to f \circ a(n) < g(a_{n}) \to f \circ a(n) < g \circ a(n)$
+\item $\varphi_{64} :\equiv \forall z\,(\lvert a_{n} - c \rvert < \rho \to \rho \leq z \to \lvert a_{n} - c \rvert < z) \to \lvert a_{n} - c \rvert < \rho \to \rho \leq r \to \lvert a_{n} - c \rvert < r$
+\item $\varphi_{65} :\equiv \forall z\,(\lvert a_{n} - c \rvert < \rho \to \rho \leq z \to \lvert a_{n} - c \rvert < z) \to \lvert a_{n} - c \rvert < \rho \to \rho \leq d \to \lvert a_{n} - c \rvert < d$
+\item $\varphi_{66} :\equiv \forall y\,(f \circ a(n) = y \to y = f \circ a(n)) \to f \circ a(n) = f(a_{n}) \to f(a_{n}) = f \circ a(n)$
+\item $\varphi_{67} :\equiv \forall y\,(g \circ a(n) = y \to y = g \circ a(n)) \to g \circ a(n) = g(a_{n}) \to g(a_{n}) = g \circ a(n)$
+\item $\varphi_{68} :\equiv \forall y\,\forall z\,(\lvert a_{n} - c \rvert < y \to y \leq z \to \lvert a_{n} - c \rvert < z) \to \forall z\,(\lvert a_{n} - c \rvert < \rho \to \rho \leq z \to \lvert a_{n} - c \rvert < z)$
+\item $\varphi_{69} :\equiv \forall r\,(c \in \mathbb{R} \to r \in \mathbb{R} \to 0 < r \to \exists a\,(\mathrm{Seq}(a) \land \mathrm{Conv}(a,c) \land \forall n \in \mathbb{N}\,(0 < \lvert a_{n} - c \rvert \land \lvert a_{n} - c \rvert < r)))$
+\item $\varphi_{70} :\equiv \forall y\,\forall c\,(y \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert y - c \rvert \to y \neq c) \to \forall c\,(a_{n} \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert a_{n} - c \rvert \to a_{n} \neq c)$
+\item $\varphi_{71} :\equiv \forall n \in \mathbb{N}\,(0 < \lvert a_{n} - c \rvert \land \lvert a_{n} - c \rvert < \rho) \to n \in \mathbb{N} \to 0 < \lvert a_{n} - c \rvert \land \lvert a_{n} - c \rvert < \rho$
+\item $\varphi_{72} :\equiv \mathrm{PNbhd}(f,c) \to \mathrm{PNbhd}(g,c) \to \exists d\,(d \in \mathbb{R} \land 0 < d \land \varphi_{31})$
+\item $\varphi_{73} :\equiv v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to 0 < v_{768} \to 0 < v_{769} \to \neg \forall u_{5}\,(\varphi_{27})$
+\item $\varphi_{74} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \mathrm{PNbhd}(g,c)$
+\item $\varphi_{75} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \mathrm{PNbhd}(f,c)$
+\item $\varphi_{76} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \exists u_{5}\,(u_{5} \in \mathbb{R} \land 0 < u_{5} \land u_{5} \leq d \land u_{5} \leq r)$
+\item $\varphi_{77} :\equiv \forall c\,(a_{n} \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert a_{n} - c \rvert \to a_{n} \neq c) \to a_{n} \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert a_{n} - c \rvert \to a_{n} \neq c$
+\item $\varphi_{78} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \alpha \leq \beta$
+\item $\varphi_{79} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \mathrm{RFn}(f)$
+\item $\varphi_{80} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \mathrm{RFn}(g)$
+\item $\varphi_{81} :\equiv \mathrm{FLim}(f,c,\alpha) \land \mathrm{FLim}(g,c,\beta) \land r \in \mathbb{R} \land 0 < r \land \varphi_{42} \land \neg \alpha \leq \beta$
+\item $\varphi_{82} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to c \in \mathbb{R}$
+\item $\varphi_{83} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \alpha \leq \beta$
+\item $\varphi_{84} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to 0 < \rho$
+\item $\varphi_{85} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \rho \in \mathbb{R}$
+\item $\varphi_{86} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)$
+\item $\varphi_{87} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g)$
+\item $\varphi_{88} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f))$
+\item $\varphi_{89} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(g))$
+\item $\varphi_{90} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to \lvert a_{n} - c \rvert < r$
+\item $\varphi_{91} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to \lvert a_{n} - c \rvert < d$
+\item $\varphi_{92} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to 0 < \lvert a_{n} - c \rvert$
+\item $\varphi_{93} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to \lvert a_{n} - c \rvert < \rho$
+\item $\varphi_{94} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to f(a_{n}) \leq g(a_{n})$
+\item $\varphi_{95} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c$
+\item $\varphi_{96} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c$
+\item $\varphi_{97} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to f \circ a(n) = f(a_{n})$
+\item $\varphi_{98} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to f(a_{n}) = f \circ a(n)$
+\item $\varphi_{99} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to f \circ a(n) \leq g(a_{n})$
+\item $\varphi_{100} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to g \circ a(n) = g(a_{n})$
+\item $\varphi_{101} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to g(a_{n}) = g \circ a(n)$
+\item $\varphi_{102} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c)$
+\item $\varphi_{103} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c)$
+\item $\varphi_{104} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{75}$
+\item $\varphi_{105} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to f \circ a(n) \leq g \circ a(n)$
+\item $\varphi_{106} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f) \land a_{n} \in \mathrm{dom}(g)$
+\item $\varphi_{107} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \forall n \in \mathbb{N}\,(f \circ a(n) \leq g \circ a(n))$
+\item $\varphi_{108} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to n \in \mathbb{N} \to f \circ a(n) = f(a_{n})$
+\item $\varphi_{109} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to n \in \mathbb{N} \to g \circ a(n) = g(a_{n})$
+\item $\varphi_{110} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to \forall n \in \mathbb{N}\,(f \circ a(n) = f(a_{n}))$
+\item $\varphi_{111} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to \forall n \in \mathbb{N}\,(g \circ a(n) = g(a_{n}))$
+\item $\varphi_{112} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to 0 < \lvert a_{n} - c \rvert \land \lvert a_{n} - c \rvert < \rho$
+\item $\varphi_{113} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \forall n \in \mathbb{N}\,(0 < \lvert a_{n} - c \rvert \land \lvert a_{n} - c \rvert < \rho)$
+\item $\varphi_{114} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \mathrm{RFn}(f)) \to (\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \varphi_{79}$
+\item $\varphi_{115} :\equiv \forall a\,(\mathrm{FLim}(g,c,\beta) \to \mathrm{Conv}(a,c) \to \varphi_{24}) \to \mathrm{FLim}(g,c,\beta) \to \mathrm{Conv}(a,c) \to \varphi_{24}$
+\item $\varphi_{116} :\equiv \forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{25}) \to \mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{25}$
+\item $\varphi_{117} :\equiv (\mathrm{FLim}(f,c,\alpha) \to c \in \mathbb{R}) \to (\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \varphi_{82}$
+\item $\varphi_{118} :\equiv \forall \alpha\,\forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{25}) \to \forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{25})$
+\item $\varphi_{119} :\equiv \varphi_{59} \to \forall \alpha\,\forall a\,(\mathrm{FLim}(f,c,\alpha) \to \mathrm{Conv}(a,c) \to \varphi_{25})$
+\item $\varphi_{120} :\equiv (\mathrm{FLim}(g,c,\beta) \to \mathrm{PNbhd}(g,c)) \to \varphi_{1} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{74}$
+\item $\varphi_{121} :\equiv \forall \beta\,(\mathrm{Conv}(f \circ a,\alpha) \to \varphi_{38}) \to \mathrm{Conv}(f \circ a,\alpha) \to \varphi_{38}$
+\item $\varphi_{122} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{42}$
+\item $\varphi_{123} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \exists d\,(d \in \mathbb{R} \land 0 < d \land \varphi_{31})$
+\item $\varphi_{124} :\equiv \forall \alpha\,\forall \beta\,(\mathrm{Conv}(f \circ a,\alpha) \to \varphi_{38}) \to \forall \beta\,(\mathrm{Conv}(f \circ a,\alpha) \to \varphi_{38})$
+\item $\varphi_{125} :\equiv v_{769} \in \mathbb{R} \to \varphi_{17} \leftrightarrow v_{769} \in \mathbb{R} \to 0 < v_{768} \to 0 < v_{769} \to \neg \forall u_{5}\,(\varphi_{27})$
+\item $\varphi_{126} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \exists a\,(\varphi_{39})$
+\item $\varphi_{127} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \alpha \leq \beta$
+\item $\varphi_{128} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to 0 < d$
+\item $\varphi_{129} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \alpha \leq \beta$
+\item $\varphi_{130} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \mathrm{Seq}(a)$
+\item $\varphi_{131} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to d \in \mathbb{R}$
+\item $\varphi_{132} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \mathrm{Conv}(a,c)$
+\item $\varphi_{133} :\equiv \mathrm{FLim}(f,c,\alpha) \land \mathrm{FLim}(g,c,\beta) \land r \in \mathbb{R} \land 0 < r \land \varphi_{42} \land (d \in \mathbb{R} \land 0 < d \land \varphi_{31}) \land \neg \alpha \leq \beta$
+\item $\varphi_{134} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to \rho \leq r$
+\item $\varphi_{135} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to \rho \leq d$
+\item $\varphi_{136} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to a_{n} \in \mathrm{dom}(f) \to \varphi_{54}$
+\item $\varphi_{137} :\equiv \forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{57}) \to \mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{57}$
+\item $\varphi_{138} :\equiv \forall a\,(\mathrm{RFn}(g) \to \mathrm{Seq}(a) \to \varphi_{58}) \to \mathrm{RFn}(g) \to \mathrm{Seq}(a) \to \varphi_{58}$
+\item $\varphi_{139} :\equiv \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to a_{n} \in \mathbb{R} \to \varphi_{45}$
+\item $\varphi_{140} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to n \in \mathbb{N}$
+\item $\varphi_{141} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \mathrm{Conv}(g \circ a,\beta)$
+\item $\varphi_{142} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \mathrm{Conv}(f \circ a,\alpha)$
+\item $\varphi_{143} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to a_{n} \neq c$
+\item $\varphi_{144} :\equiv \forall f\,\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{57}) \to \forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{57})$
+\item $\varphi_{145} :\equiv \forall f\,\forall a\,(\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{57}) \to \forall a\,(\mathrm{RFn}(g) \to \mathrm{Seq}(a) \to \varphi_{58})$
+\item $\varphi_{146} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to a_{n} \in \mathbb{R}$
+\item $\varphi_{147} :\equiv \forall v_{768}\,(\forall v_{769}\,(\varphi_{73}) \to \forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}))$
+\item $\varphi_{148} :\equiv \forall v_{768}\,(\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \forall v_{769}\,(\varphi_{73}))$
+\item $\varphi_{149} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{76}$
+\item $\varphi_{150} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{83}$
+\item $\varphi_{151} :\equiv \mathrm{FLim}(f,c,\alpha) \land \mathrm{FLim}(g,c,\beta) \land r \in \mathbb{R} \land 0 < r \land \varphi_{42} \land (d \in \mathbb{R} \land 0 < d \land \varphi_{31}) \land (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r) \land \neg \alpha \leq \beta$
+\item $\varphi_{152} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{84}$
+\item $\varphi_{153} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{85}$
+\item $\varphi_{154} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{30}$
+\item $\varphi_{155} :\equiv (\forall d\,(\varphi_{23}) \leftrightarrow \forall u_{5}\,(\varphi_{27})) \to (\neg \forall d\,(\varphi_{23}) \leftrightarrow \neg \forall u_{5}\,(\varphi_{27}))$
+\item $\varphi_{156} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \varphi_{34}$
+\item $\varphi_{157} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \varphi_{35}$
+\item $\varphi_{158} :\equiv r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31}$
+\item $\varphi_{159} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to \varphi_{39}$
+\item $\varphi_{160} :\equiv d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r \to \varphi_{39} \to n \in \mathbb{N} \to \varphi_{31}$
+\item $\varphi_{161} :\equiv (\neg \forall d\,(\varphi_{23}) \leftrightarrow \neg \forall u_{5}\,(\varphi_{27})) \to (0 < v_{769} \to \neg \forall d\,(\varphi_{23}) \leftrightarrow 0 < v_{769} \to \neg \forall u_{5}\,(\varphi_{27}))$
+\item $\varphi_{162} :\equiv \mathrm{FLim}(f,c,\alpha) \land \mathrm{FLim}(g,c,\beta) \land r \in \mathbb{R} \land 0 < r \land \varphi_{42} \land (d \in \mathbb{R} \land 0 < d \land \varphi_{31}) \land (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r) \land \varphi_{39}$
+\item $\varphi_{163} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{126}$
+\item $\varphi_{164} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{129}$
+\item $\varphi_{165} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{130}$
+\item $\varphi_{166} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{132}$
+\item $\varphi_{167} :\equiv (0 < v_{769} \to \neg \forall d\,(\varphi_{23}) \leftrightarrow 0 < v_{769} \to \neg \forall u_{5}\,(\varphi_{27})) \to (\varphi_{17} \leftrightarrow 0 < v_{768} \to 0 < v_{769} \to \neg \forall u_{5}\,(\varphi_{27}))$
+\item $\varphi_{168} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{86}$
+\item $\varphi_{169} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{87}$
+\item $\varphi_{170} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{134}$
+\item $\varphi_{171} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{135}$
+\item $\varphi_{172} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{88}$
+\item $\varphi_{173} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{89}$
+\item $\varphi_{174} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{90}$
+\item $\varphi_{175} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{91}$
+\item $\varphi_{176} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{92}$
+\item $\varphi_{177} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{140}$
+\item $\varphi_{178} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{141}$
+\item $\varphi_{179} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{142}$
+\item $\varphi_{180} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{93}$
+\item $\varphi_{181} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{143}$
+\item $\varphi_{182} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{94}$
+\item $\varphi_{183} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{146}$
+\item $\varphi_{184} :\equiv (\forall v_{768}\,\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \leftrightarrow \varphi_{61}) \to \varphi_{61}$
+\item $\varphi_{185} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{95}$
+\item $\varphi_{186} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{96}$
+\item $\varphi_{187} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{97}$
+\item $\varphi_{188} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{98}$
+\item $\varphi_{189} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{99}$
+\item $\varphi_{190} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{100}$
+\item $\varphi_{191} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{101}$
+\item $\varphi_{192} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{102}$
+\item $\varphi_{193} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{103}$
+\item $\varphi_{194} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{105}$
+\item $\varphi_{195} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{106}$
+\item $\varphi_{196} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{107}$
+\item $\varphi_{197} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{108}$
+\item $\varphi_{198} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{109}$
+\item $\varphi_{199} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{110}$
+\item $\varphi_{200} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{111}$
+\item $\varphi_{201} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{112}$
+\item $\varphi_{202} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{113}$
+\item $\varphi_{203} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{156}$
+\item $\varphi_{204} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{157}$
+\item $\varphi_{205} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{159}$
+\item $\varphi_{206} :\equiv \mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to \varphi_{160}$
+\item $\varphi_{207} :\equiv (\forall d\,(\varphi_{23}) \to \forall u_{5}\,(\varphi_{27})) \to (\forall u_{5}\,(\varphi_{27}) \to \forall d\,(\varphi_{23})) \to (\forall d\,(\varphi_{23}) \leftrightarrow \forall u_{5}\,(\varphi_{27}))$
+\item $\varphi_{208} :\equiv (v_{769} \in \mathbb{R} \leftrightarrow v_{769} \in \mathbb{R}) \to (\varphi_{17} \leftrightarrow 0 < v_{768} \to 0 < v_{769} \to \neg \forall u_{5}\,(\varphi_{27})) \to \varphi_{125}$
+\item $\varphi_{209} :\equiv \mathrm{FLim}(g,c,\beta) \to r \in \mathbb{R} \to 0 < r \to \varphi_{42} \to d \in \mathbb{R} \land 0 < d \land \varphi_{31} \to \varphi_{139}$
+\item $\varphi_{210} :\equiv (f \circ a(n) = f(a_{n}) \to f(a_{n}) = f \circ a(n)) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{188}$
+\item $\varphi_{211} :\equiv (g \circ a(n) = g(a_{n}) \to g(a_{n}) = g \circ a(n)) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{191}$
+\item $\varphi_{212} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{127}) \to \varphi_{81} \to \neg (d \in \mathbb{R} \land 0 < d \land \varphi_{31})$
+\item $\varphi_{213} :\equiv \forall d\,(\varphi_{81} \to \neg (d \in \mathbb{R} \land 0 < d \land \varphi_{31})) \to \forall d\,(\varphi_{81}) \to \forall d\,(\neg (d \in \mathbb{R} \land 0 < d \land \varphi_{31}))$
+\item $\varphi_{214} :\equiv (v_{768} \in \mathbb{R} \leftrightarrow v_{768} \in \mathbb{R}) \to \varphi_{125} \to (v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17} \leftrightarrow \varphi_{73})$
+\item $\varphi_{215} :\equiv (v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17} \leftrightarrow \varphi_{73}) \to \varphi_{73} \to v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}$
+\item $\varphi_{216} :\equiv (v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17} \leftrightarrow \varphi_{73}) \to (v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \varphi_{73}$
+\item $\varphi_{217} :\equiv \forall v_{769}\,(\varphi_{73} \to v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \forall v_{769}\,(\varphi_{73}) \to \forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17})$
+\item $\varphi_{218} :\equiv \forall v_{769}\,((v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \varphi_{73}) \to \forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \forall v_{769}\,(\varphi_{73})$
+\item $\varphi_{219} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{75}) \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{74}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{123}$
+\item $\varphi_{220} :\equiv (\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \leftrightarrow \forall v_{769}\,(\varphi_{73})) \to \forall v_{769}\,(\varphi_{73}) \to \forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17})$
+\item $\varphi_{221} :\equiv (\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \leftrightarrow \forall v_{769}\,(\varphi_{73})) \to \forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \forall v_{769}\,(\varphi_{73})$
+\item $\varphi_{222} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \varphi_{158}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{128}$
+\item $\varphi_{223} :\equiv \forall \rho\,(\varphi_{133} \to \neg (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r)) \to \forall \rho\,(\varphi_{133}) \to \forall \rho\,(\neg (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r))$
+\item $\varphi_{224} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(g,c,\beta) \to \varphi_{158}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{131}$
+\item $\varphi_{225} :\equiv \forall u_{5}\,(\varphi_{36}) \to (\forall u_{5}\,(\varphi_{36}) \to \varphi_{44}) \to \varphi_{49} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{127}$
+\item $\varphi_{226} :\equiv (\forall u_{5}\,(\forall d\,(\varphi_{23}) \to \varphi_{27}) \to \forall u_{5}\,\forall d\,(\varphi_{23}) \to \forall u_{5}\,(\varphi_{27})) \to (\forall d\,(\varphi_{23}) \to \forall u_{5}\,\forall d\,(\varphi_{23})) \to \forall d\,(\varphi_{23}) \to \forall u_{5}\,(\varphi_{27})$
+\item $\varphi_{227} :\equiv (\forall d\,(\forall u_{5}\,(\varphi_{27}) \to \varphi_{23}) \to \forall d\,\forall u_{5}\,(\varphi_{27}) \to \forall d\,(\varphi_{23})) \to (\forall u_{5}\,(\varphi_{27}) \to \forall d\,\forall u_{5}\,(\varphi_{27})) \to \forall u_{5}\,(\varphi_{27}) \to \forall d\,(\varphi_{23})$
+\item $\varphi_{228} :\equiv \varphi_{122} \to (\varphi_{42} \to a_{n} \in \mathrm{dom}(f) \to \varphi_{54}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{136}$
+\item $\varphi_{229} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{168}) \to \varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)$
+\item $\varphi_{230} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{169}) \to \varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g)$
+\item $\varphi_{231} :\equiv \forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)) \to \forall n\,(\varphi_{162}) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f))$
+\item $\varphi_{232} :\equiv \forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g)) \to \forall n\,(\varphi_{162}) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(g))$
+\item $\varphi_{233} :\equiv \varphi_{217} \to (\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \leftrightarrow \forall v_{769}\,(\varphi_{73}))$
+\item $\varphi_{234} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{185}) \to \varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c$
+\item $\varphi_{235} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{186}) \to \varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c$
+\item $\varphi_{236} :\equiv \forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c) \to \forall n\,(\varphi_{162}) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c)$
+\item $\varphi_{237} :\equiv \forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c) \to \forall n\,(\varphi_{162}) \to \forall n \in \mathbb{N}\,(a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c)$
+\item $\varphi_{238} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{194}) \to \varphi_{162} \to n \in \mathbb{N} \to f \circ a(n) \leq g \circ a(n)$
+\item $\varphi_{239} :\equiv \forall n\,(\varphi_{162} \to n \in \mathbb{N} \to f \circ a(n) \leq g \circ a(n)) \to \forall n\,(\varphi_{162}) \to \forall n \in \mathbb{N}\,(f \circ a(n) \leq g \circ a(n))$
+\item $\varphi_{240} :\equiv (\varphi_{147} \to \varphi_{61} \to \forall v_{768}\,\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17})) \to (\forall v_{768}\,\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \leftrightarrow \varphi_{61})$
+\item $\varphi_{241} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{131}) \to \varphi_{4} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{128}) \to \varphi_{11} \to \varphi_{149}$
+\item $\varphi_{242} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{192}) \to \varphi_{47} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{185}$
+\item $\varphi_{243} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{193}) \to \varphi_{48} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{186}$
+\item $\varphi_{244} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{199}) \to \varphi_{52} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{197}$
+\item $\varphi_{245} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{200}) \to \varphi_{53} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{198}$
+\item $\varphi_{246} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{202}) \to \varphi_{71} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{201}$
+\item $\varphi_{247} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{182}) \to \varphi_{60} \to \varphi_{56} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{189}$
+\item $\varphi_{248} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{189}) \to \varphi_{63} \to \varphi_{62} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{194}$
+\item $\varphi_{249} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{180}) \to \varphi_{170} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{174}$
+\item $\varphi_{250} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{180}) \to \varphi_{171} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{175}$
+\item $\varphi_{251} :\equiv \forall d\,(\varphi_{81} \to \neg (d \in \mathbb{R} \land 0 < d \land \varphi_{31})) \to \varphi_{213} \to (\varphi_{81} \to \forall d\,(\varphi_{81})) \to \varphi_{78}$
+\item $\varphi_{252} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{185}) \to \varphi_{177} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{168}$
+\item $\varphi_{253} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{186}) \to \varphi_{177} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{169}$
+\item $\varphi_{254} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \varphi_{166} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{192}) \to \varphi_{179}$
+\item $\varphi_{255} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{195}) \to \varphi_{181} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{185}$
+\item $\varphi_{256} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{195}) \to \varphi_{181} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{186}$
+\item $\varphi_{257} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{197}) \to \varphi_{177} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{187}$
+\item $\varphi_{258} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{198}) \to \varphi_{177} \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{190}$
+\item $\varphi_{259} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}) \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{174}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{182}$
+\item $\varphi_{260} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{201}) \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{175}) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{195}$
+\item $\varphi_{261} :\equiv (\mathrm{FLim}(g,c,\beta) \to \mathrm{Conv}(a,c) \to \varphi_{24}) \to \varphi_{1} \to \varphi_{166} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{193}) \to \varphi_{178}$
+\item $\varphi_{262} :\equiv (a_{n} \in \mathbb{R} \to c \in \mathbb{R} \to 0 < \lvert a_{n} - c \rvert \to a_{n} \neq c) \to \varphi_{183} \to \varphi_{82} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{176}) \to \varphi_{181}$
+\item $\varphi_{263} :\equiv (\varphi_{148} \to \forall v_{768}\,\forall v_{769}\,(v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \varphi_{61}) \to \varphi_{240}$
+\item $\varphi_{264} :\equiv (\mathrm{RFn}(f) \to \mathrm{Seq}(a) \to \varphi_{57}) \to \varphi_{79} \to \varphi_{165} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{172}) \to \varphi_{203}$
+\item $\varphi_{265} :\equiv (\mathrm{RFn}(g) \to \mathrm{Seq}(a) \to \varphi_{58}) \to \varphi_{80} \to \varphi_{165} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{173}) \to \varphi_{204}$
+\item $\varphi_{266} :\equiv (\forall a\,(\varphi_{151} \to \neg \varphi_{39}) \to \forall a\,(\varphi_{151}) \to \forall a\,(\neg \varphi_{39})) \to (\varphi_{151} \to \forall a\,(\varphi_{151})) \to \varphi_{150}$
+\item $\varphi_{267} :\equiv (\mathrm{Conv}(f \circ a,\alpha) \to \varphi_{38}) \to \varphi_{179} \to \varphi_{178} \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{196}) \to \varphi_{164}$
+\item $\varphi_{268} :\equiv \forall v_{769}\,((v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \varphi_{73}) \to \forall v_{769}\,(\varphi_{73} \to v_{768} \in \mathbb{R} \to v_{769} \in \mathbb{R} \to \varphi_{17}) \to \varphi_{218} \to \varphi_{233}$
+\item $\varphi_{269} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \varphi_{136}) \to (\mathrm{FLim}(f,c,\alpha) \to \varphi_{195}) \to \varphi_{259}$
+\item $\varphi_{270} :\equiv \forall \rho\,(\varphi_{133} \to \neg (\rho \in \mathbb{R} \land 0 < \rho \land \rho \leq d \land \rho \leq r)) \to \varphi_{223} \to (\varphi_{133} \to \forall \rho\,(\varphi_{133})) \to \varphi_{225}$
+\item $\varphi_{271} :\equiv \forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f)) \to \varphi_{231} \to (\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{172}$
+\item $\varphi_{272} :\equiv \forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g)) \to \varphi_{232} \to (\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{173}$
+\item $\varphi_{273} :\equiv \forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(f) \land a_{n} \neq c) \to \varphi_{236} \to (\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{192}$
+\item $\varphi_{274} :\equiv \forall n\,(\varphi_{162} \to n \in \mathbb{N} \to a_{n} \in \mathrm{dom}(g) \land a_{n} \neq c) \to \varphi_{237} \to (\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{193}$
+\item $\varphi_{275} :\equiv \forall n\,(\varphi_{162} \to n \in \mathbb{N} \to f \circ a(n) \leq g \circ a(n)) \to \varphi_{239} \to (\varphi_{162} \to \forall n\,(\varphi_{162})) \to \mathrm{FLim}(f,c,\alpha) \to \varphi_{196}$
+\end{abbrevlist}
+\end{fullproof}

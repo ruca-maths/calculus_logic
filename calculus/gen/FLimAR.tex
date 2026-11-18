@@ -1,0 +1,29 @@
+% 自動生成 (prover/build.js): FLimAR  ノード数 14
+\begin{fullproof}{[D4]}{$\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \alpha \in \mathbb{R})$}{14}\phantomsection\label{tree:FLimAR}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall f\,\forall c\,\forall \alpha\,(\varphi_{1})$\lbl{DefFLim}}
+\AXC{$\forall f\,\forall c\,\forall \alpha\,(\varphi_{1}) \to \forall c\,\forall \alpha\,(\varphi_{1})$\lbl{A2}}
+\BIC{$\forall c\,\forall \alpha\,(\varphi_{1})$}
+\AXC{$\forall c\,\forall \alpha\,(\varphi_{1}) \to \forall \alpha\,(\varphi_{1})$\lbl{A2}}
+\BIC{$\forall \alpha\,(\varphi_{1})$}
+\AXC{$\forall \alpha\,(\varphi_{1}) \to \varphi_{1}$\lbl{A2}}
+\BIC{$\varphi_{1}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{1}$}
+\AXC{$\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)$\lbl{A1}}
+\AXC{$\varphi_{2}$\lbl{A1}}
+\BIC{$\varphi_{1} \to \mathrm{FLim}(f,c,\alpha) \to \alpha \in \mathbb{R}$}
+\BIC{$\mathrm{FLim}(f,c,\alpha) \to \alpha \in \mathbb{R}$}
+\UIC{$\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \alpha \in \mathbb{R})$}
+\UIC{$\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \alpha \in \mathbb{R})$}
+\UIC{$\forall f\,\forall c\,\forall \alpha\,(\mathrm{FLim}(f,c,\alpha) \to \alpha \in \mathbb{R})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \mathrm{FLim}(f,c,\alpha) \leftrightarrow \mathrm{RFn}(f) \land c \in \mathbb{R} \land \alpha \in \mathbb{R} \land \mathrm{PNbhd}(f,c) \land \forall \varepsilon \in \mathbb{R}\,(0 < \varepsilon \to \exists \delta\,(\delta \in \mathbb{R} \land 0 < \delta \land \forall x \in \mathrm{dom}(f)\,(0 < \lvert x - c \rvert \to \lvert x - c \rvert < \delta \to \lvert f(x) - \alpha \rvert < \varepsilon)))$
+\item $\varphi_{2} :\equiv (\mathrm{FLim}(f,c,\alpha) \to \mathrm{FLim}(f,c,\alpha)) \to \varphi_{1} \to \mathrm{FLim}(f,c,\alpha) \to \alpha \in \mathbb{R}$
+\end{abbrevlist}
+\end{fullproof}

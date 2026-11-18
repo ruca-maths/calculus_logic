@@ -1,0 +1,137 @@
+% 自動生成 (prover/build.js): MulLtPosL  ノード数 60
+\begin{fullproof}{[E8]}{$\forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \cdot x < z \cdot y)$}{60}\phantomsection\label{tree:MulLtPosL}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(\varphi_{2})$\lbl{[F32]}}
+\AXC{$\forall x\,\forall y\,(\varphi_{2}) \to \forall y\,(\varphi_{2})$\lbl{A2}}
+\BIC{$\forall y\,(\varphi_{2})$}
+\AXC{$\forall y\,(\varphi_{2}) \to \varphi_{2}$\lbl{A2}}
+\BIC{$\varphi_{2}$}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \cdot z < y \cdot z$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)$\lbl{(R7)}}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)$}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to z \in \mathbb{R} \to x \cdot z = z \cdot x$}
+\AXC{$(x \in \mathbb{R} \to z \in \mathbb{R} \to x \cdot z = z \cdot x) \to \varphi_{21}$\lbl{A1}}
+\BIC{$\varphi_{21}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{21}$}
+\BIC{$\varphi_{16}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \cdot z = z \cdot x$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \cdot z < y \cdot z$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \cdot z = z \cdot x$}
+\AXC{$\varphi_{23}$\lbl{A1}}
+\BIC{$\varphi_{19}$}
+\BIC{$\varphi_{14}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to z_{1} < y \cdot z \to w < y \cdot z$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z_{1} < y \cdot z \to w < y \cdot z)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} < y \cdot z \to w < y \cdot z)$}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\forall w\,(x \cdot z = w \to x \cdot z < y \cdot z \to w < y \cdot z)$}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\BIC{$x \cdot z = z \cdot x \to x \cdot z < y \cdot z \to z \cdot x < y \cdot z$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{14}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \cdot x < y \cdot z$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)$\lbl{(R7)}}
+\AXC{$\varphi_{11}$\lbl{A2}}
+\BIC{$\forall y\,(v_{449} \in \mathbb{R} \to y \in \mathbb{R} \to v_{449} \cdot y = y \cdot v_{449})$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$v_{449} \in \mathbb{R} \to v_{450} \in \mathbb{R} \to v_{449} \cdot v_{450} = v_{450} \cdot v_{449}$}
+\UIC{$\varphi_{1}$}
+\UIC{$\forall v_{449}\,(\varphi_{1})$}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\BIC{$\forall v_{450}\,(y \in \mathbb{R} \to v_{450} \in \mathbb{R} \to y \cdot v_{450} = v_{450} \cdot y)$}
+\AXC{$\varphi_{8}$\lbl{A2}}
+\BIC{$y \in \mathbb{R} \to z \in \mathbb{R} \to y \cdot z = z \cdot y$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$y \in \mathbb{R} \to z \in \mathbb{R} \to y \cdot z = z \cdot y$}
+\AXC{$(y \in \mathbb{R} \to z \in \mathbb{R} \to y \cdot z = z \cdot y) \to \varphi_{22}$\lbl{A1}}
+\BIC{$\varphi_{22}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \in \mathbb{R}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to y \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$\varphi_{22}$}
+\BIC{$\varphi_{17}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to y \cdot z = z \cdot y$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \cdot x < y \cdot z$}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to y \cdot z = z \cdot y$}
+\AXC{$\varphi_{24}$\lbl{A1}}
+\BIC{$\varphi_{20}$}
+\BIC{$\varphi_{15}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$z_{1} = w \to z \cdot x < z_{1} \to z \cdot x < w$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z \cdot x < z_{1} \to z \cdot x < w)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z \cdot x < z_{1} \to z \cdot x < w)$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$\forall w\,(y \cdot z = w \to z \cdot x < y \cdot z \to z \cdot x < w)$}
+\AXC{$\varphi_{9}$\lbl{A2}}
+\BIC{$y \cdot z = z \cdot y \to z \cdot x < y \cdot z \to z \cdot x < z \cdot y$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{15}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \cdot x < z \cdot y$}
+\UIC{$\varphi_{3}$}
+\UIC{$\forall y\,(\varphi_{3})$}
+\UIC{$\forall x\,\forall y\,(\varphi_{3})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall v_{450}\,(v_{449} \in \mathbb{R} \to v_{450} \in \mathbb{R} \to v_{449} \cdot v_{450} = v_{450} \cdot v_{449})$
+\item $\varphi_{2} :\equiv \forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \cdot z < y \cdot z)$
+\item $\varphi_{3} :\equiv \forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \cdot x < z \cdot y)$
+\item $\varphi_{4} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x) \to x \in \mathbb{R} \to z \in \mathbb{R} \to x \cdot z = z \cdot x$
+\item $\varphi_{5} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z \cdot x < z_{1} \to z \cdot x < w) \to \forall w\,(y \cdot z = w \to z \cdot x < y \cdot z \to z \cdot x < w)$
+\item $\varphi_{6} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} < y \cdot z \to w < y \cdot z) \to \forall w\,(x \cdot z = w \to x \cdot z < y \cdot z \to w < y \cdot z)$
+\item $\varphi_{7} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x)$
+\item $\varphi_{8} :\equiv \forall v_{450}\,(y \in \mathbb{R} \to v_{450} \in \mathbb{R} \to y \cdot v_{450} = v_{450} \cdot y) \to y \in \mathbb{R} \to z \in \mathbb{R} \to y \cdot z = z \cdot y$
+\item $\varphi_{9} :\equiv \forall w\,(y \cdot z = w \to z \cdot x < y \cdot z \to z \cdot x < w) \to y \cdot z = z \cdot y \to z \cdot x < y \cdot z \to z \cdot x < z \cdot y$
+\item $\varphi_{10} :\equiv \forall w\,(x \cdot z = w \to x \cdot z < y \cdot z \to w < y \cdot z) \to x \cdot z = z \cdot x \to x \cdot z < y \cdot z \to z \cdot x < y \cdot z$
+\item $\varphi_{11} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x \cdot y = y \cdot x) \to \forall y\,(v_{449} \in \mathbb{R} \to y \in \mathbb{R} \to v_{449} \cdot y = y \cdot v_{449})$
+\item $\varphi_{12} :\equiv \forall y\,(v_{449} \in \mathbb{R} \to y \in \mathbb{R} \to v_{449} \cdot y = y \cdot v_{449}) \to v_{449} \in \mathbb{R} \to v_{450} \in \mathbb{R} \to v_{449} \cdot v_{450} = v_{450} \cdot v_{449}$
+\item $\varphi_{13} :\equiv \forall v_{449}\,(\varphi_{1}) \to \forall v_{450}\,(y \in \mathbb{R} \to v_{450} \in \mathbb{R} \to y \cdot v_{450} = v_{450} \cdot y)$
+\item $\varphi_{14} :\equiv (x \cdot z = z \cdot x \to x \cdot z < y \cdot z \to z \cdot x < y \cdot z) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \cdot x < y \cdot z$
+\item $\varphi_{15} :\equiv (y \cdot z = z \cdot y \to z \cdot x < y \cdot z \to z \cdot x < z \cdot y) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \cdot x < z \cdot y$
+\item $\varphi_{16} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \cdot z = z \cdot x$
+\item $\varphi_{17} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \in \mathbb{R}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to y \cdot z = z \cdot y$
+\item $\varphi_{18} :\equiv \varphi_{2} \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \cdot z < y \cdot z$
+\item $\varphi_{19} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \cdot z < y \cdot z) \to \varphi_{14}$
+\item $\varphi_{20} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to z \cdot x < y \cdot z) \to \varphi_{15}$
+\item $\varphi_{21} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \in \mathbb{R}) \to \varphi_{16}$
+\item $\varphi_{22} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to y \in \mathbb{R}) \to \varphi_{17}$
+\item $\varphi_{23} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to x \cdot z = z \cdot x) \to \varphi_{19}$
+\item $\varphi_{24} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to 0 < z \to x < y \to y \cdot z = z \cdot y) \to \varphi_{20}$
+\end{abbrevlist}
+\end{fullproof}

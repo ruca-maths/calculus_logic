@@ -1,0 +1,105 @@
+\chapter{はじめに}\label{ch:intro}
+
+\section{目的}
+
+本ノートの目的は, 黒田『微分積分学入門』\cite{kuroda}(以下「テキスト」)の第1章から第4章(関数の極限)までの内容を,
+\begin{enumerate}[label=(\arabic*)]
+  \item 一階述語論理の上の公理的集合論 $\ZFC$ の中で展開し,
+  \item テキストの定義をすべて集合論の言語(とその定義による拡大)の論理式として書き表し,
+  \item テキストの定理に対して, ヒルベルト流証明体系における証明を与え, それを\textbf{完全に展開した証明木}として書き下す
+\end{enumerate}
+ことである. テキストは実数の連続性(上限定理)を公理 3.1 として「認める」立場をとるが, 本ノートでは $\ZFC$ の中で実数体 $\R$ を構成し, 上限定理を $\ZFC$ の定理として証明する(第\ref{ch:reals}章).
+
+\section{本ノートの構成と読み方}
+
+本ノートは3部からなる.
+
+\medskip\noindent\textbf{第\ref{part:formal}部 形式的体系.}\quad
+証明体系 $\mathbf{H}$, 定義による拡大, $\ZFC$ の公理, 自然数と再帰的定義, 実数の構成, 順序体の基本性質を述べる. テキストの議論の前提となる部分であり, 定理は通常の数学の文章で証明する.
+
+\medskip\noindent\textbf{第\ref{part:text}部 微分積分学.}\quad
+テキストの第1章から第4章を, テキストの節の順に述べる. 各定理について
+\begin{itemize}
+  \item テキストと同じ形の主張(テキストの番号を付す),
+  \item 通常の数学の文章による証明(多くはテキストの証明と同じ. 異なる場合はその旨を記す),
+  \item 「形式化」欄: 定理の形式的な主張(集合論の言語の論理式)と, 第\ref{part:trees}部の完全展開した証明木の頁
+\end{itemize}
+を与える. 証明に用いる補助的な補題は [C9] のようなラベルを付けて一覧(ラベル, 形式的な主張, 証明木の頁)にまとめた. 第\ref{part:text}部だけで, 通常の教科書として読めるように書いてある.
+
+\medskip\noindent\textbf{第\ref{part:trees}部 完全展開した証明木.}\quad
+第\ref{part:formal}部・第\ref{part:text}部のすべての定理・補題の証明木を, テキストの章の順に収める.
+
+\medskip\noindent\textbf{付録\ref{app:registry}.}\quad
+証明木の葉となる $\ZFC$ の公理, 定義公理, 基礎定理(後述)の一覧.
+
+\begin{center}\small
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llll}
+  \toprule
+  部 & 章 & 内容 & テキスト \\
+  \midrule
+  I & 第\ref{ch:logic}章 & ヒルベルト流証明体系 $\mathbf{H}$, 証明木, 生成器 & --- \\
+   & 第\ref{ch:definitions}章 & 定義による拡大 & --- \\
+   & 第\ref{ch:zfc}章 & $\ZFC$ の公理, 空集合・順序・関数 & 第1章 1.6節 \\
+   & 第\ref{ch:naturals}章 & 自然数 $\omega$, 数学的帰納法, 再帰的定義 & 第1章 1.7節 \\
+   & 第\ref{ch:reals}章 & $\Z$, $\Q$, Dedekind 切断による $\R$, 上限定理 & 第2章 公理3.1 \\
+   & 第\ref{ch:ofield}章 & 順序体の基本性質, 自然数の埋め込み & --- \\
+  \midrule
+  II & 第\ref{ch:text1}章 & 絶対値と三角不等式 & 第1章 1.1節 \\
+   & 第\ref{ch:text2}章 & 区間・上限・下限・アルキメデスの公理 & 第2章 \\
+   & 第\ref{ch:text3}章 & 数列の極限, 等比数列, 級数, 単調数列, Bolzano--Weierstrass, Cauchy 列 & 第3章 \\
+   & 第\ref{ch:text4}章 & 関数の極限, 連続関数, 中間値の定理, 最大値の定理, 逆関数, 対数関数, 一様連続性 & 第4章 \\
+  \midrule
+  III & & 完全展開した証明木 (定理数 \ThmCount, ノード数の合計 \NodeCount) & \\
+  \bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}
+
+\section{形式化の水準}\label{sec:level}
+
+\medskip\noindent\textbf{証明体系.}\quad
+対象言語は $\mathcal{L}_\in = \{\in\}$ とその定義による拡大である. 証明体系 $\mathbf{H}$ は Enderton \cite{enderton} \S 2.4 の論理的公理 (A1)--(A6) と, 推論規則 MP・Gen からなる(第\ref{ch:logic}章).
+
+\medskip\noindent\textbf{完全展開した証明木.}\quad
+本ノートの証明木は\textbf{導出規則を一切用いない}. 木のノードは
+\begin{itemize}
+  \item 葉: 論理的公理 (A1)--(A6), $\ZFC$ の公理, 定義公理, 既に完全展開した定理, 付録の基礎定理,
+  \item 内部ノード: MP(二分岐)または Gen(一分岐)
+\end{itemize}
+のいずれかである. 命題論理の推論は, トートロジー(A1)の葉と MP の列として木の中に現れる. 演繹定理・存在除去・等号による書き換え・数学的帰納法などのメタ定理は, 木を\emph{作る手続き}としてのみ用い, 木の中には残さない.
+
+\medskip\noindent\textbf{証明木の生成と検査.}\quad
+このような木は大きく(三角不等式で約 150 ノード, 中間値の定理で約 1300 ノード), 人手で正確に書くことは難しい. そこで木を生成し, 各ノードが公理・MP・Gen のいずれかであることを機械的に検査するプログラムを作成した(第\ref{sec:generator}節). 本ノートに印刷された証明木はすべてこのプログラムが出力し, 検査を通過したものである.
+
+\medskip\noindent\textbf{定義の扱い.}\quad
+テキストの「$\sim$ を … と定める」はすべて第\ref{ch:definitions}章の定義による拡大として扱い, 定義公理を葉として用いる(定義公理は \DefCount 個). 定義による拡大は保存的なので, 拡大された理論で証明した定理は $\ZFC$ の定理である.
+
+\medskip\noindent\textbf{基礎定理.}\quad
+$\R$ の構成から得られる完備順序体の公理 (R1)--(R16), $\omega$ の順序と再帰的定義, 関数の基本性質, 可算選択のインスタンスなど(合計 \FCount 個)は, 第\ref{part:formal}部および本文中で通常の数学の証明を与え, 証明木の葉として用いる(付録\ref{app:found}). 従って第\ref{part:trees}部の証明木が示しているのは「$\ZFC$ とこれらの基礎定理から, 公理・MP・Gen のみで各定理が導かれる」ことである. 基礎定理自身の完全展開は今後の課題である.
+
+\section{進捗状況}
+
+\begin{center}\small
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lll}
+  \toprule
+  テキストの範囲 & 状態 & 備考 \\
+  \midrule
+  第1章 1.1節 絶対値, 三角不等式 & 完全展開 & [A1]--[A17], 命題1.2 \\
+  第2章 上限・下限, 実数の連続性, アルキメデスの公理 & 完全展開 & 公理3.1 は第\ref{ch:reals}章で証明 \\
+  第3章 1--2節 数列の極限の定義と性質 & 完全展開 & 命題1.1, 1.3, 定理2.1--2.18 \\
+  第3章 3節 等比数列 & 完全展開 & 命題3.1 ($r \leq -1$ の場合を除く) \\
+  第3章 4節 級数 & 完全展開 & 定義4.1, 命題4.3, 定理4.4, 4.7 \\
+  第3章 5--6節 単調数列, 部分列, BW, Cauchy 列 & 完全展開 & 定理5.3, 5.10, 6.7, 6.8, 補題6.10, 定理6.11 \\
+  第4章 1節 関数の極限 & 完全展開 & 定理1.7--1.13, 1.19 \\
+  第4章 2節 連続関数, 中間値・最大値の定理, 逆関数 & 完全展開 & 定理2.3--2.21 \\
+  第4章 3節 初等関数 & 一部 & 指数関数の存在を基礎定理とし, 対数関数の性質を完全展開 \\
+  第4章 4節 一様連続性 & 完全展開 & 定理4.3, 4.6 \\
+  計算例, $\pm\infty$ への発散(関数), 三角関数, 章末問題 & 未形式化 & 各章末の節を参照 \\
+  第1章 1.2--1.5節(和の公式, 二項定理, ガウス記号, 不等式), 2節(三角関数) & 未形式化 & \\
+  $\R$ の構成, $\omega$ の性質, 関数の性質(基礎定理) & 通常の証明 & 完全展開は今後 \\
+  \bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{center}

@@ -1,0 +1,28 @@
+\chapter{公理・定義公理・基礎定理の一覧}\label{app:registry}
+
+以下は, 証明生成器(\texttt{prover/theory.js}, \texttt{prover/found.js})に登録され, 証明木の葉として用いられる論理式の一覧である. 略記は第\ref{ch:logic}章の通り.
+
+\section{ZFC の公理}
+
+外延性公理 \textsf{Ext} と, 分出公理の図式 \textsf{Sep} の各インスタンス(第\ref{ch:zfc}章)を用いる. \textsf{Sep} のインスタンスであることは, 生成器が「$\forall z_1 \cdots \forall a\,\exists y\,\forall x\,(x \in y \leftrightarrow x \in a \land \varphi)$ で $y$ は $\varphi$ に自由に現れない」という形を検査して確かめる.
+\input{gen/registry_Ax}
+
+\section{定義公理}
+
+それぞれ第\ref{ch:definitions}章の意味での定義による拡大の定義公理である. 関数記号の定義公理については, 対応する $\exists !$ の証明を本文の該当箇所で与えた.
+\input{gen/registry_Def}
+
+\section{基礎定理}\label{app:found}
+
+次は, 本文(主に第\ref{part:formal}部)で\textbf{通常の数学の証明}を与えた $\ZFC$ の定理であり, 完全展開した証明木はまだ作成していない. 本ノートの完全展開した証明木はすべて, これらを葉として用いる. 従って, 本ノートの証明木が示しているのは「$\ZFC$ とこれらの基礎定理から, 公理・MP・Gen のみで各定理が導かれる」ことである. これらの完全展開は今後の課題である.
+\begin{itemize}
+  \item (R1)--(R16): $\R$ が完備順序体であること(第\ref{ch:reals}章 定理\ref{thm:complete-ordered-field}. ただし (R11)(R12) は [O1][O2] として完全展開済み).
+  \item [N3]--[N6], [N9]--[N11], [N17], [N18]: 自然数 $\omega$, $\N$ の順序と埋め込み $\iota$ の性質(第\ref{ch:naturals}章 定理\ref{thm:omega-order}, 第\ref{ch:ofield}章).
+  \item [S1]--[S23]: 関数値と, 定義 $(x \in A \mapsto t)$ で作った数列・関数(項ごとの演算, 部分列, 関数の和・積・商・合成など)の性質(第\ref{ch:zfc}章). [S15] は偶数番目・奇数番目の添字列の性質(第\ref{ch:naturals}章の $\omega$ の演算から).
+  \item [S24], [S25]: 累乗の列 $r^\bullet$ と部分和の列 $\Sigma a$ の存在と再帰式(第\ref{ch:naturals}章 定理\ref{thm:recursion-omega}).
+  \item [S26]: 単射の逆関数の性質(第\ref{ch:zfc}章の関数の基本性質から).
+  \item [S27]: 指数関数の存在(第\ref{ch:text4}章 初等関数の節. 冪級数による構成).
+  \item [S28]: 部分列の抽出($\omega$ の整列性と再帰定理による. 第\ref{ch:text3}章).
+  \item [CC1]--[CC6]: 可算選択の図式「$\forall k \in \N\,\exists x \in \R\,\psi(k, x) \to \exists q\,(\Seq(q) \land \forall k \in \N\,\psi(k, q_k))$」のインスタンス(選択公理による. 第\ref{ch:text4}章 定理1.7 の前の説明).
+\end{itemize}
+\input{gen/registry_F}

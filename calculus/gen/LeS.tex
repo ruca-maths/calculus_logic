@@ -1,0 +1,48 @@
+% 自動生成 (prover/build.js): LeS  ノード数 23
+\begin{fullproof}{[N8]}{$\forall n\,(n \leq S(n))$}{23}\phantomsection\label{tree:LeS}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall u\,(u \in S(x) \leftrightarrow u \in x \lor u = x)$\lbl{Def$S$}}
+\AXC{$\varphi_{4}$\lbl{A2}}
+\BIC{$\forall u\,(u \in S(n) \leftrightarrow u \in n \lor u = n)$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$u \in S(n) \leftrightarrow u \in n \lor u = n$}
+\AXC{$(u \in S(n) \leftrightarrow u \in n \lor u = n) \to u \in n \to u \in S(n)$\lbl{A1}}
+\BIC{$u \in n \to u \in S(n)$}
+\UIC{$\forall u \in n\,(u \in S(n))$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y)$\lbl{Def$<$}}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$\forall y\,(n < y \leftrightarrow n \subseteq y \land n \neq y)$}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$n < S(n) \leftrightarrow n \subseteq S(n) \land n \neq S(n)$}
+\AXC{$(n < S(n) \leftrightarrow n \subseteq S(n) \land n \neq S(n)) \to \varphi_{5}$\lbl{A1}}
+\BIC{$\varphi_{5}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall u \in n\,(u \in S(n))$}
+\AXC{$\forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y))$\lbl{Def$\subseteq$}}
+\AXC{$\varphi_{6}$\lbl{A2}}
+\BIC{$\forall y\,(n \subseteq y \leftrightarrow \forall u \in n\,(u \in y))$}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$n \subseteq S(n) \leftrightarrow \forall u \in n\,(u \in S(n))$}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{5}$}
+\BIC{$\forall u \in n\,(u \in S(n)) \to n \leq S(n)$}
+\BIC{$n \leq S(n)$}
+\UIC{$\forall n\,(n \leq S(n))$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall u\,(u \in S(n) \leftrightarrow u \in n \lor u = n) \to (u \in S(n) \leftrightarrow u \in n \lor u = n)$
+\item $\varphi_{2} :\equiv \forall x\,\forall y\,(x < y \leftrightarrow x \subseteq y \land x \neq y) \to \forall y\,(n < y \leftrightarrow n \subseteq y \land n \neq y)$
+\item $\varphi_{3} :\equiv \forall y\,(n < y \leftrightarrow n \subseteq y \land n \neq y) \to (n < S(n) \leftrightarrow n \subseteq S(n) \land n \neq S(n))$
+\item $\varphi_{4} :\equiv \forall x\,\forall u\,(u \in S(x) \leftrightarrow u \in x \lor u = x) \to \forall u\,(u \in S(n) \leftrightarrow u \in n \lor u = n)$
+\item $\varphi_{5} :\equiv (n \subseteq S(n) \leftrightarrow \forall u \in n\,(u \in S(n))) \to \forall u \in n\,(u \in S(n)) \to n \leq S(n)$
+\item $\varphi_{6} :\equiv \forall x\,\forall y\,(x \subseteq y \leftrightarrow \forall u \in x\,(u \in y)) \to \forall y\,(n \subseteq y \leftrightarrow \forall u \in n\,(u \in y))$
+\item $\varphi_{7} :\equiv \forall y\,(n \subseteq y \leftrightarrow \forall u \in n\,(u \in y)) \to (n \subseteq S(n) \leftrightarrow \forall u \in n\,(u \in S(n)))$
+\end{abbrevlist}
+\end{fullproof}

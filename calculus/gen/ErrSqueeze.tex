@@ -1,0 +1,723 @@
+% 自動生成 (prover/build.js): ErrSqueeze  ノード数 321
+\begin{fullproof}{[C12]}{$\forall x\,\forall y\,\forall z\,\forall \alpha\,\forall \varepsilon\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to \lvert z - \alpha \rvert < \varepsilon)$}{321}\phantomsection\label{tree:ErrSqueeze}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{71}$\lbl{A2}}
+\BIC{$\forall y\,(v_{391} \in \mathbb{R} \to y \in \mathbb{R} \to v_{391} - y \in \mathbb{R})$}
+\AXC{$\varphi_{75}$\lbl{A2}}
+\BIC{$v_{391} \in \mathbb{R} \to v_{392} \in \mathbb{R} \to v_{391} - v_{392} \in \mathbb{R}$}
+\UIC{$\forall v_{392}\,(v_{391} \in \mathbb{R} \to v_{392} \in \mathbb{R} \to v_{391} - v_{392} \in \mathbb{R})$}
+\UIC{$\varphi_{6}$}
+\AXC{$\varphi_{6} \to \forall v_{392}\,(y \in \mathbb{R} \to v_{392} \in \mathbb{R} \to y - v_{392} \in \mathbb{R})$\lbl{A2}}
+\BIC{$\forall v_{392}\,(y \in \mathbb{R} \to v_{392} \in \mathbb{R} \to y - v_{392} \in \mathbb{R})$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{36}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\forall v_{392}\,(y \in \mathbb{R} \to v_{392} \in \mathbb{R} \to y - v_{392} \in \mathbb{R})$}
+\AXC{$\varphi_{70}$\lbl{A2}}
+\BIC{$y \in \mathbb{R} \to \alpha \in \mathbb{R} \to y - \alpha \in \mathbb{R}$}
+\AXC{$\varphi_{118}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{36}) \to \varphi_{101}$}
+\BIC{$\varphi_{101}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert < y \to -y < x \land x < y)$\lbl{[A11]}}
+\AXC{$\varphi_{89}$\lbl{A2}}
+\BIC{$\varphi_{25}$}
+\AXC{$\varphi_{25} \to v_{389} \in \mathbb{R} \to \varphi_{9}$\lbl{A2}}
+\BIC{$v_{389} \in \mathbb{R} \to \varphi_{9}$}
+\UIC{$\forall v_{390}\,(v_{389} \in \mathbb{R} \to \varphi_{9})$}
+\UIC{$\forall v_{389}\,\forall v_{390}\,(v_{389} \in \mathbb{R} \to \varphi_{9})$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$\forall v_{389}\,\forall v_{390}\,(v_{389} \in \mathbb{R} \to \varphi_{9})$}
+\AXC{$\forall v_{389}\,\forall v_{390}\,(v_{389} \in \mathbb{R} \to \varphi_{9}) \to \varphi_{72}$\lbl{A2}}
+\BIC{$\varphi_{72}$}
+\AXC{$\varphi_{72} \to \varphi_{64}$\lbl{A2}}
+\BIC{$\varphi_{64}$}
+\AXC{$\varphi_{64} \to \varphi_{128}$\lbl{A1}}
+\BIC{$\varphi_{128}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{42}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{41}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{101}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{49}$}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$\varphi_{128}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{42}) \to \varphi_{113}$}
+\BIC{$\varphi_{113}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R}) \to \alpha \in \mathbb{R} \to -\alpha \in \mathbb{R}$\lbl{A2}}
+\BIC{$\alpha \in \mathbb{R} \to -\alpha \in \mathbb{R}$}
+\AXC{$(\alpha \in \mathbb{R} \to -\alpha \in \mathbb{R}) \to \varphi_{102}$\lbl{A1}}
+\BIC{$\varphi_{102}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{41}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{102}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{50}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$\varphi_{8}$\lbl{[F19]}}
+\AXC{$\varphi_{8} \to \varphi_{18}$\lbl{A2}}
+\BIC{$\varphi_{18}$}
+\AXC{$\varphi_{18} \to \varphi_{33}$\lbl{A2}}
+\BIC{$\varphi_{33}$}
+\AXC{$\varphi_{33} \to v_{396} \in \mathbb{R} \to \varphi_{11}$\lbl{A2}}
+\BIC{$v_{396} \in \mathbb{R} \to \varphi_{11}$}
+\UIC{$\forall v_{398}\,(v_{396} \in \mathbb{R} \to \varphi_{11})$}
+\UIC{$\forall v_{397}\,\forall v_{398}\,(v_{396} \in \mathbb{R} \to \varphi_{11})$}
+\UIC{$\forall v_{396}\,\forall v_{397}\,\forall v_{398}\,(v_{396} \in \mathbb{R} \to \varphi_{11})$}
+\AXC{$\forall v_{396}\,\forall v_{397}\,\forall v_{398}\,(v_{396} \in \mathbb{R} \to \varphi_{11}) \to \varphi_{53}$\lbl{A2}}
+\BIC{$\varphi_{53}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{37}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{53}$}
+\AXC{$\varphi_{53} \to \varphi_{19}$\lbl{A2}}
+\BIC{$\varphi_{19}$}
+\AXC{$\varphi_{92}$\lbl{A2}}
+\BIC{$z \in \mathbb{R} \to y \in \mathbb{R} \to -\alpha \in \mathbb{R} \to z \leq y \to z + -\alpha \leq y + -\alpha$}
+\AXC{$\varphi_{130}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{37}) \to \varphi_{125}$}
+\BIC{$\varphi_{125}$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{50}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{36}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$\varphi_{125}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{50}) \to \varphi_{105}$}
+\BIC{$\varphi_{105}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(z - \alpha = y \to y = z - \alpha)$\lbl{A2}}
+\BIC{$\forall y\,(z - \alpha = y \to y = z - \alpha)$}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\BIC{$z - \alpha = z + -\alpha \to z + -\alpha = z - \alpha$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y)$\lbl{Def$-$}}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y) \to \forall y\,(z - y = z + -y)$\lbl{A2}}
+\BIC{$\forall y\,(z - y = z + -y)$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$z - \alpha = z + -\alpha \to z + -\alpha = z - \alpha$}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\forall y\,(z - y = z + -y)$}
+\AXC{$\forall y\,(z - y = z + -y) \to z - \alpha = z + -\alpha$\lbl{A2}}
+\BIC{$z - \alpha = z + -\alpha$}
+\AXC{$\varphi_{55}$\lbl{A1}}
+\BIC{$(z - \alpha = z + -\alpha \to z + -\alpha = z - \alpha) \to z + -\alpha = z - \alpha$}
+\BIC{$z + -\alpha = z - \alpha$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{23}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{105}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{38}$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$z + -\alpha = z - \alpha$}
+\AXC{$\varphi_{121}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{38}) \to \varphi_{110}$}
+\BIC{$\varphi_{110}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to z_{1} < y + -\alpha \to w < y + -\alpha$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z_{1} < y + -\alpha \to w < y + -\alpha)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} < y + -\alpha \to w < y + -\alpha)$}
+\AXC{$\varphi_{83}$\lbl{A2}}
+\BIC{$\forall w\,(z + -\alpha = w \to z + -\alpha < y + -\alpha \to w < y + -\alpha)$}
+\AXC{$\varphi_{90}$\lbl{A2}}
+\BIC{$z + -\alpha = z - \alpha \to z + -\alpha < y + -\alpha \to z - \alpha < y + -\alpha$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{110}$}
+\BIC{$\varphi_{99}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(v_{401} = y \to y = v_{401})$\lbl{A2}}
+\BIC{$\forall y\,(v_{401} = y \to y = v_{401})$}
+\AXC{$\varphi_{1}$\lbl{A2}}
+\BIC{$v_{401} = v_{402} \to v_{402} = v_{401}$}
+\UIC{$\forall v_{402}\,(v_{401} = v_{402} \to v_{402} = v_{401})$}
+\UIC{$\forall v_{401}\,\forall v_{402}\,(v_{401} = v_{402} \to v_{402} = v_{401})$}
+\AXC{$\varphi_{10}$\lbl{A2}}
+\BIC{$\forall v_{402}\,(y - \alpha = v_{402} \to v_{402} = y - \alpha)$}
+\AXC{$\varphi_{34}$\lbl{A2}}
+\BIC{$y - \alpha = y + -\alpha \to y + -\alpha = y - \alpha$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y)$\lbl{Def$-$}}
+\AXC{$\varphi_{3}$\lbl{A2}}
+\BIC{$\forall y\,(v_{399} - y = v_{399} + -y)$}
+\AXC{$\varphi_{5}$\lbl{A2}}
+\BIC{$v_{399} - v_{400} = v_{399} + -v_{400}$}
+\UIC{$\forall v_{400}\,(v_{399} - v_{400} = v_{399} + -v_{400})$}
+\UIC{$\forall v_{399}\,\forall v_{400}\,(v_{399} - v_{400} = v_{399} + -v_{400})$}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\BIC{$\forall v_{400}\,(y - v_{400} = y + -v_{400})$}
+\AXC{$\forall v_{400}\,(y - v_{400} = y + -v_{400}) \to y - \alpha = y + -\alpha$\lbl{A2}}
+\BIC{$y - \alpha = y + -\alpha$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$y - \alpha = y + -\alpha \to y + -\alpha = y - \alpha$}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$y - \alpha = y + -\alpha$}
+\AXC{$\varphi_{56}$\lbl{A1}}
+\BIC{$(y - \alpha = y + -\alpha \to y + -\alpha = y - \alpha) \to y + -\alpha = y - \alpha$}
+\BIC{$y + -\alpha = y - \alpha$}
+\AXC{$y + -\alpha = y - \alpha \to \varphi_{116}$\lbl{A1}}
+\BIC{$\varphi_{116}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to z_{1} = y + -\alpha \to w = y + -\alpha$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z_{1} = y + -\alpha \to w = y + -\alpha)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} = y + -\alpha \to w = y + -\alpha)$}
+\AXC{$\varphi_{77}$\lbl{A2}}
+\BIC{$\forall w\,(z + -\alpha = w \to z + -\alpha = y + -\alpha \to w = y + -\alpha)$}
+\AXC{$\varphi_{87}$\lbl{A2}}
+\BIC{$z + -\alpha = z - \alpha \to z + -\alpha = y + -\alpha \to z - \alpha = y + -\alpha$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{99}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{30}$}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{116}$}
+\BIC{$(y + -\alpha = y - \alpha \to z - \alpha < y + -\alpha \to z - \alpha < y - \alpha) \to \varphi_{97}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to z - \alpha < z_{1} \to z - \alpha < w$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z - \alpha < z_{1} \to z - \alpha < w)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z - \alpha < z_{1} \to z - \alpha < w)$}
+\AXC{$\varphi_{73}$\lbl{A2}}
+\BIC{$\forall w\,(y + -\alpha = w \to z - \alpha < y + -\alpha \to z - \alpha < w)$}
+\AXC{$\varphi_{85}$\lbl{A2}}
+\BIC{$y + -\alpha = y - \alpha \to z - \alpha < y + -\alpha \to z - \alpha < y - \alpha$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$(y + -\alpha = y - \alpha \to z - \alpha < y + -\alpha \to z - \alpha < y - \alpha) \to \varphi_{97}$}
+\BIC{$\varphi_{97}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to z - \alpha = z_{1} \to z - \alpha = w$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z - \alpha = z_{1} \to z - \alpha = w)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z - \alpha = z_{1} \to z - \alpha = w)$}
+\AXC{$\varphi_{62}$\lbl{A2}}
+\BIC{$\forall w\,(y + -\alpha = w \to z - \alpha = y + -\alpha \to z - \alpha = w)$}
+\AXC{$\varphi_{80}$\lbl{A2}}
+\BIC{$y + -\alpha = y - \alpha \to z - \alpha = y + -\alpha \to z - \alpha = y - \alpha$}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$\varphi_{97}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{15}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x \leq y \to y < z \to x < z)$\lbl{[O4]}}
+\AXC{$\varphi_{7}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(v_{403} \leq y \to y < z \to v_{403} < z)$}
+\AXC{$\varphi_{17}$\lbl{A2}}
+\BIC{$\forall z\,(v_{403} \leq v_{404} \to v_{404} < z \to v_{403} < z)$}
+\AXC{$\varphi_{32}$\lbl{A2}}
+\BIC{$v_{403} \leq v_{404} \to v_{404} < v_{405} \to v_{403} < v_{405}$}
+\UIC{$\forall v_{405}\,(v_{403} \leq v_{404} \to v_{404} < v_{405} \to v_{403} < v_{405})$}
+\UIC{$\varphi_{2}$}
+\UIC{$\forall v_{403}\,(\varphi_{2})$}
+\AXC{$\forall v_{403}\,(\varphi_{2}) \to \varphi_{4}$\lbl{A2}}
+\BIC{$\varphi_{4}$}
+\AXC{$\varphi_{82}$\lbl{A2}}
+\BIC{$\forall v_{405}\,(z - \alpha \leq y - \alpha \to y - \alpha < v_{405} \to z - \alpha < v_{405})$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$\forall v_{405}\,(z - \alpha \leq y - \alpha \to y - \alpha < v_{405} \to z - \alpha < v_{405})$}
+\AXC{$\varphi_{76}$\lbl{A2}}
+\BIC{$z - \alpha \leq y - \alpha \to y - \alpha < \varepsilon \to z - \alpha < \varepsilon$}
+\AXC{$\varphi_{122}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{15}) \to \varphi_{106}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{15}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{15}) \to \varphi_{106}$}
+\BIC{$\varphi_{106}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\varphi_{8}$\lbl{[F19]}}
+\AXC{$\varphi_{8} \to \varphi_{20}$\lbl{A2}}
+\BIC{$\varphi_{20}$}
+\AXC{$\varphi_{20} \to \varphi_{35}$\lbl{A2}}
+\BIC{$\varphi_{35}$}
+\AXC{$\varphi_{35} \to v_{393} \in \mathbb{R} \to \varphi_{12}$\lbl{A2}}
+\BIC{$v_{393} \in \mathbb{R} \to \varphi_{12}$}
+\UIC{$\forall v_{395}\,(v_{393} \in \mathbb{R} \to \varphi_{12})$}
+\UIC{$\forall v_{394}\,\forall v_{395}\,(v_{393} \in \mathbb{R} \to \varphi_{12})$}
+\UIC{$\forall v_{393}\,\forall v_{394}\,\forall v_{395}\,(v_{393} \in \mathbb{R} \to \varphi_{12})$}
+\AXC{$\forall v_{393}\,\forall v_{394}\,\forall v_{395}\,(v_{393} \in \mathbb{R} \to \varphi_{12}) \to \varphi_{54}$\lbl{A2}}
+\BIC{$\varphi_{54}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{39}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$\varphi_{54}$}
+\AXC{$\varphi_{54} \to \varphi_{21}$\lbl{A2}}
+\BIC{$\varphi_{21}$}
+\AXC{$\varphi_{93}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to z \in \mathbb{R} \to -\alpha \in \mathbb{R} \to x \leq z \to x + -\alpha \leq z + -\alpha$}
+\AXC{$\varphi_{131}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{39}) \to \varphi_{126}$}
+\BIC{$\varphi_{126}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{50}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{37}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$\varphi_{126}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{50}) \to \varphi_{107}$}
+\BIC{$\varphi_{107}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(x - \alpha = y \to y = x - \alpha)$\lbl{A2}}
+\BIC{$\forall y\,(x - \alpha = y \to y = x - \alpha)$}
+\AXC{$\varphi_{14}$\lbl{A2}}
+\BIC{$x - \alpha = x + -\alpha \to x + -\alpha = x - \alpha$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y)$\lbl{Def$-$}}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y) \to \forall y\,(x - y = x + -y)$\lbl{A2}}
+\BIC{$\forall y\,(x - y = x + -y)$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$x - \alpha = x + -\alpha \to x + -\alpha = x - \alpha$}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$\forall y\,(x - y = x + -y)$}
+\AXC{$\forall y\,(x - y = x + -y) \to x - \alpha = x + -\alpha$\lbl{A2}}
+\BIC{$x - \alpha = x + -\alpha$}
+\AXC{$\varphi_{57}$\lbl{A1}}
+\BIC{$(x - \alpha = x + -\alpha \to x + -\alpha = x - \alpha) \to x + -\alpha = x - \alpha$}
+\BIC{$x + -\alpha = x - \alpha$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{24}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{107}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{40}$}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$x + -\alpha = x - \alpha$}
+\AXC{$\varphi_{123}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{40}) \to \varphi_{111}$}
+\BIC{$\varphi_{111}$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to z_{1} < z + -\alpha \to w < z + -\alpha$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z_{1} < z + -\alpha \to w < z + -\alpha)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} < z + -\alpha \to w < z + -\alpha)$}
+\AXC{$\varphi_{84}$\lbl{A2}}
+\BIC{$\forall w\,(x + -\alpha = w \to x + -\alpha < z + -\alpha \to w < z + -\alpha)$}
+\AXC{$\varphi_{91}$\lbl{A2}}
+\BIC{$x + -\alpha = x - \alpha \to x + -\alpha < z + -\alpha \to x - \alpha < z + -\alpha$}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$\varphi_{111}$}
+\BIC{$\varphi_{100}$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to z_{1} = z + -\alpha \to w = z + -\alpha$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to z_{1} = z + -\alpha \to w = z + -\alpha)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} = z + -\alpha \to w = z + -\alpha)$}
+\AXC{$\varphi_{78}$\lbl{A2}}
+\BIC{$\forall w\,(x + -\alpha = w \to x + -\alpha = z + -\alpha \to w = z + -\alpha)$}
+\AXC{$\varphi_{88}$\lbl{A2}}
+\BIC{$x + -\alpha = x - \alpha \to x + -\alpha = z + -\alpha \to x - \alpha = z + -\alpha$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\varphi_{100}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{31}$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(z - \alpha = y \to y = z - \alpha)$\lbl{A2}}
+\BIC{$\forall y\,(z - \alpha = y \to y = z - \alpha)$}
+\AXC{$\varphi_{13}$\lbl{A2}}
+\BIC{$z - \alpha = z + -\alpha \to z + -\alpha = z - \alpha$}
+\end{ptree}
+\noindent$\Pi_{36}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y)$\lbl{Def$-$}}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y) \to \forall y\,(z - y = z + -y)$\lbl{A2}}
+\BIC{$\forall y\,(z - y = z + -y)$}
+\end{ptree}
+\noindent$\Pi_{37}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$z - \alpha = z + -\alpha \to z + -\alpha = z - \alpha$}
+\AXC{$\stackrel{\Pi_{36}}{\vdots}$}\noLine
+\UIC{$\forall y\,(z - y = z + -y)$}
+\AXC{$\forall y\,(z - y = z + -y) \to z - \alpha = z + -\alpha$\lbl{A2}}
+\BIC{$z - \alpha = z + -\alpha$}
+\AXC{$\varphi_{55}$\lbl{A1}}
+\BIC{$(z - \alpha = z + -\alpha \to z + -\alpha = z - \alpha) \to z + -\alpha = z - \alpha$}
+\BIC{$z + -\alpha = z - \alpha$}
+\end{ptree}
+\noindent$\Pi_{38}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{31}$}
+\AXC{$\stackrel{\Pi_{37}}{\vdots}$}\noLine
+\UIC{$z + -\alpha = z - \alpha$}
+\AXC{$z + -\alpha = z - \alpha \to \varphi_{117}$\lbl{A1}}
+\BIC{$\varphi_{117}$}
+\BIC{$(z + -\alpha = z - \alpha \to x - \alpha < z + -\alpha \to x - \alpha < z - \alpha) \to \varphi_{98}$}
+\end{ptree}
+\noindent$\Pi_{39}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to x - \alpha < z_{1} \to x - \alpha < w$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to x - \alpha < z_{1} \to x - \alpha < w)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to x - \alpha < z_{1} \to x - \alpha < w)$}
+\AXC{$\varphi_{74}$\lbl{A2}}
+\BIC{$\forall w\,(z + -\alpha = w \to x - \alpha < z + -\alpha \to x - \alpha < w)$}
+\AXC{$\varphi_{86}$\lbl{A2}}
+\BIC{$z + -\alpha = z - \alpha \to x - \alpha < z + -\alpha \to x - \alpha < z - \alpha$}
+\AXC{$\stackrel{\Pi_{38}}{\vdots}$}\noLine
+\UIC{$(z + -\alpha = z - \alpha \to x - \alpha < z + -\alpha \to x - \alpha < z - \alpha) \to \varphi_{98}$}
+\BIC{$\varphi_{98}$}
+\end{ptree}
+\noindent$\Pi_{40}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{67}$\lbl{A2}}
+\BIC{$\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$}
+\AXC{$\varphi_{58}$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to \alpha \in \mathbb{R} \to x - \alpha \in \mathbb{R}$}
+\AXC{$\varphi_{119}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{39}) \to \varphi_{103}$}
+\end{ptree}
+\noindent$\Pi_{41}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{39}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{40}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{39}) \to \varphi_{103}$}
+\BIC{$\varphi_{103}$}
+\end{ptree}
+\noindent$\Pi_{42}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert < y \to -y < x \land x < y)$\lbl{[A11]}}
+\AXC{$\varphi_{95}$\lbl{A2}}
+\BIC{$\varphi_{47}$}
+\AXC{$\varphi_{47} \to \varphi_{65}$\lbl{A2}}
+\BIC{$\varphi_{65}$}
+\AXC{$\varphi_{65} \to \varphi_{129}$\lbl{A1}}
+\BIC{$\varphi_{129}$}
+\end{ptree}
+\noindent$\Pi_{43}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{42}$\lbl{A1}}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{41}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{41}}{\vdots}$}\noLine
+\UIC{$\varphi_{103}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{51}$}
+\AXC{$\stackrel{\Pi_{42}}{\vdots}$}\noLine
+\UIC{$\varphi_{129}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{42}) \to \varphi_{114}$}
+\BIC{$\varphi_{114}$}
+\end{ptree}
+\noindent$\Pi_{44}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z)$\lbl{[O3]}}
+\AXC{$\varphi_{22}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(-\varepsilon < y \to y \leq z \to -\varepsilon < z)$}
+\AXC{$\varphi_{68}$\lbl{A2}}
+\BIC{$\forall z\,(-\varepsilon < x - \alpha \to x - \alpha \leq z \to -\varepsilon < z)$}
+\AXC{$\varphi_{79}$\lbl{A2}}
+\BIC{$-\varepsilon < x - \alpha \to x - \alpha \leq z - \alpha \to -\varepsilon < z - \alpha$}
+\AXC{$\varphi_{124}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{60}) \to \varphi_{109}$}
+\end{ptree}
+\noindent$\Pi_{45}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{28}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{43}}{\vdots}$}\noLine
+\UIC{$\varphi_{114}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to x \leq z \to \varphi_{46}$}
+\AXC{$\varphi_{115}$\lbl{A1}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{60}$}
+\AXC{$\stackrel{\Pi_{44}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{60}) \to \varphi_{109}$}
+\BIC{$\varphi_{109}$}
+\end{ptree}
+\noindent$\Pi_{46}$:
+\begin{ptree}
+\AXC{$z_{1} = w \to x - \alpha = z_{1} \to x - \alpha = w$\lbl{A6}}
+\UIC{$\forall w\,(z_{1} = w \to x - \alpha = z_{1} \to x - \alpha = w)$}
+\UIC{$\forall z_{1}\,\forall w\,(z_{1} = w \to x - \alpha = z_{1} \to x - \alpha = w)$}
+\AXC{$\varphi_{63}$\lbl{A2}}
+\BIC{$\forall w\,(z + -\alpha = w \to x - \alpha = z + -\alpha \to x - \alpha = w)$}
+\AXC{$\varphi_{81}$\lbl{A2}}
+\BIC{$z + -\alpha = z - \alpha \to x - \alpha = z + -\alpha \to x - \alpha = z - \alpha$}
+\AXC{$\stackrel{\Pi_{39}}{\vdots}$}\noLine
+\UIC{$\varphi_{98}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{16}$}
+\AXC{$\stackrel{\Pi_{45}}{\vdots}$}\noLine
+\UIC{$\varphi_{109}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{61}$}
+\end{ptree}
+\noindent$\Pi_{47}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$\lbl{[F1]}}
+\AXC{$\varphi_{69}$\lbl{A2}}
+\BIC{$\forall y\,(z \in \mathbb{R} \to y \in \mathbb{R} \to z - y \in \mathbb{R})$}
+\AXC{$\varphi_{59}$\lbl{A2}}
+\BIC{$z \in \mathbb{R} \to \alpha \in \mathbb{R} \to z - \alpha \in \mathbb{R}$}
+\AXC{$\varphi_{120}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{37}) \to \varphi_{104}$}
+\end{ptree}
+\noindent$\Pi_{48}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{37}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{47}}{\vdots}$}\noLine
+\UIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{37}) \to \varphi_{104}$}
+\BIC{$\varphi_{104}$}
+\end{ptree}
+\noindent$\Pi_{49}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -y < x \to x < y \to \lvert x \rvert < y)$\lbl{[A12]}}
+\AXC{$\varphi_{96}$\lbl{A2}}
+\BIC{$\varphi_{48}$}
+\AXC{$\varphi_{48} \to \varphi_{66}$\lbl{A2}}
+\BIC{$\varphi_{66}$}
+\end{ptree}
+\noindent$\Pi_{50}$:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{41}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{48}}{\vdots}$}\noLine
+\UIC{$\varphi_{104}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{52}$}
+\AXC{$\stackrel{\Pi_{49}}{\vdots}$}\noLine
+\UIC{$\varphi_{66}$}
+\AXC{$\varphi_{66} \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{52}) \to \varphi_{127}$\lbl{A1}}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{52}) \to \varphi_{127}$}
+\BIC{$\varphi_{127}$}
+\end{ptree}
+\noindent$\Pi_{51}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{46}}{\vdots}$}\noLine
+\UIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{61}$}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{42}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{50}}{\vdots}$}\noLine
+\UIC{$\varphi_{127}$}
+\BIC{$(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{61}) \to \varphi_{108}$}
+\BIC{$\varphi_{108}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{27}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{113}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to x \leq z \to \varphi_{45}$}
+\AXC{$\varphi_{112}$\lbl{A1}}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{43}$}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{106}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{44}$}
+\AXC{$\stackrel{\Pi_{51}}{\vdots}$}\noLine
+\UIC{$\varphi_{108}$}
+\BIC{$x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{29}$}
+\UIC{$\forall \varepsilon\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{29})$}
+\UIC{$\varphi_{94}$}
+\UIC{$\forall z\,(\varphi_{94})$}
+\UIC{$\forall y\,\forall z\,(\varphi_{94})$}
+\UIC{$\forall x\,\forall y\,\forall z\,(\varphi_{94})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall y\,(v_{401} = y \to y = v_{401}) \to v_{401} = v_{402} \to v_{402} = v_{401}$
+\item $\varphi_{2} :\equiv \forall v_{404}\,\forall v_{405}\,(v_{403} \leq v_{404} \to v_{404} < v_{405} \to v_{403} < v_{405})$
+\item $\varphi_{3} :\equiv \forall x\,\forall y\,(x - y = x + -y) \to \forall y\,(v_{399} - y = v_{399} + -y)$
+\item $\varphi_{4} :\equiv \forall v_{404}\,\forall v_{405}\,(z - \alpha \leq v_{404} \to v_{404} < v_{405} \to z - \alpha < v_{405})$
+\item $\varphi_{5} :\equiv \forall y\,(v_{399} - y = v_{399} + -y) \to v_{399} - v_{400} = v_{399} + -v_{400}$
+\item $\varphi_{6} :\equiv \forall v_{391}\,\forall v_{392}\,(v_{391} \in \mathbb{R} \to v_{392} \in \mathbb{R} \to v_{391} - v_{392} \in \mathbb{R})$
+\item $\varphi_{7} :\equiv \forall x\,\forall y\,\forall z\,(x \leq y \to y < z \to x < z) \to \forall y\,\forall z\,(v_{403} \leq y \to y < z \to v_{403} < z)$
+\item $\varphi_{8} :\equiv \forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x \leq y \to x + z \leq y + z)$
+\item $\varphi_{9} :\equiv v_{390} \in \mathbb{R} \to \lvert v_{389} \rvert < v_{390} \to -v_{390} < v_{389} \land v_{389} < v_{390}$
+\item $\varphi_{10} :\equiv \forall v_{401}\,\forall v_{402}\,(v_{401} = v_{402} \to v_{402} = v_{401}) \to \forall v_{402}\,(y - \alpha = v_{402} \to v_{402} = y - \alpha)$
+\item $\varphi_{11} :\equiv v_{397} \in \mathbb{R} \to v_{398} \in \mathbb{R} \to v_{396} \leq v_{397} \to v_{396} + v_{398} \leq v_{397} + v_{398}$
+\item $\varphi_{12} :\equiv v_{394} \in \mathbb{R} \to v_{395} \in \mathbb{R} \to v_{393} \leq v_{394} \to v_{393} + v_{395} \leq v_{394} + v_{395}$
+\item $\varphi_{13} :\equiv \forall y\,(z - \alpha = y \to y = z - \alpha) \to z - \alpha = z + -\alpha \to z + -\alpha = z - \alpha$
+\item $\varphi_{14} :\equiv \forall y\,(x - \alpha = y \to y = x - \alpha) \to x - \alpha = x + -\alpha \to x + -\alpha = x - \alpha$
+\item $\varphi_{15} :\equiv x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to z - \alpha \leq y - \alpha$
+\item $\varphi_{16} :\equiv x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to x - \alpha \leq z - \alpha$
+\item $\varphi_{17} :\equiv \forall y\,\forall z\,(v_{403} \leq y \to y < z \to v_{403} < z) \to \forall z\,(v_{403} \leq v_{404} \to v_{404} < z \to v_{403} < z)$
+\item $\varphi_{18} :\equiv \forall y\,\forall z\,(v_{396} \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to v_{396} \leq y \to v_{396} + z \leq y + z)$
+\item $\varphi_{19} :\equiv \forall v_{398}\,(z \in \mathbb{R} \to y \in \mathbb{R} \to v_{398} \in \mathbb{R} \to z \leq y \to z + v_{398} \leq y + v_{398})$
+\item $\varphi_{20} :\equiv \forall y\,\forall z\,(v_{393} \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to v_{393} \leq y \to v_{393} + z \leq y + z)$
+\item $\varphi_{21} :\equiv \forall v_{395}\,(x \in \mathbb{R} \to z \in \mathbb{R} \to v_{395} \in \mathbb{R} \to x \leq z \to x + v_{395} \leq z + v_{395})$
+\item $\varphi_{22} :\equiv \forall x\,\forall y\,\forall z\,(x < y \to y \leq z \to x < z) \to \forall y\,\forall z\,(-\varepsilon < y \to y \leq z \to -\varepsilon < z)$
+\item $\varphi_{23} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to z \leq y$
+\item $\varphi_{24} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to x \leq z$
+\item $\varphi_{25} :\equiv \forall y\,(v_{389} \in \mathbb{R} \to y \in \mathbb{R} \to \lvert v_{389} \rvert < y \to -y < v_{389} \land v_{389} < y)$
+\item $\varphi_{26} :\equiv \forall v_{399}\,\forall v_{400}\,(v_{399} - v_{400} = v_{399} + -v_{400}) \to \forall v_{400}\,(y - v_{400} = y + -v_{400})$
+\item $\varphi_{27} :\equiv x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon$
+\item $\varphi_{28} :\equiv x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to \lvert x - \alpha \rvert < \varepsilon$
+\item $\varphi_{29} :\equiv x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to \lvert z - \alpha \rvert < \varepsilon$
+\item $\varphi_{30} :\equiv x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to z - \alpha \leq y + -\alpha$
+\item $\varphi_{31} :\equiv x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to x - \alpha \leq z + -\alpha$
+\item $\varphi_{32} :\equiv \forall z\,(v_{403} \leq v_{404} \to v_{404} < z \to v_{403} < z) \to v_{403} \leq v_{404} \to v_{404} < v_{405} \to v_{403} < v_{405}$
+\item $\varphi_{33} :\equiv \forall z\,(v_{396} \in \mathbb{R} \to v_{397} \in \mathbb{R} \to z \in \mathbb{R} \to v_{396} \leq v_{397} \to v_{396} + z \leq v_{397} + z)$
+\item $\varphi_{34} :\equiv \forall v_{402}\,(y - \alpha = v_{402} \to v_{402} = y - \alpha) \to y - \alpha = y + -\alpha \to y + -\alpha = y - \alpha$
+\item $\varphi_{35} :\equiv \forall z\,(v_{393} \in \mathbb{R} \to v_{394} \in \mathbb{R} \to z \in \mathbb{R} \to v_{393} \leq v_{394} \to v_{393} + z \leq v_{394} + z)$
+\item $\varphi_{36} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to y \in \mathbb{R}$
+\item $\varphi_{37} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to z \in \mathbb{R}$
+\item $\varphi_{38} :\equiv x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to z + -\alpha \leq y + -\alpha$
+\item $\varphi_{39} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to x \in \mathbb{R}$
+\item $\varphi_{40} :\equiv x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to x + -\alpha \leq z + -\alpha$
+\item $\varphi_{41} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to \alpha \in \mathbb{R}$
+\item $\varphi_{42} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to \varepsilon \in \mathbb{R}$
+\item $\varphi_{43} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to y - \alpha < \varepsilon$
+\item $\varphi_{44} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to z - \alpha < \varepsilon$
+\item $\varphi_{45} :\equiv z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to -\varepsilon < y - \alpha \land y - \alpha < \varepsilon$
+\item $\varphi_{46} :\equiv z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to -\varepsilon < x - \alpha \land x - \alpha < \varepsilon$
+\item $\varphi_{47} :\equiv \forall y\,(x - \alpha \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x - \alpha \rvert < y \to -y < x - \alpha \land x - \alpha < y)$
+\item $\varphi_{48} :\equiv \forall y\,(z - \alpha \in \mathbb{R} \to y \in \mathbb{R} \to -y < z - \alpha \to z - \alpha < y \to \lvert z - \alpha \rvert < y)$
+\item $\varphi_{49} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to y - \alpha \in \mathbb{R}$
+\item $\varphi_{50} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to -\alpha \in \mathbb{R}$
+\item $\varphi_{51} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to x - \alpha \in \mathbb{R}$
+\item $\varphi_{52} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to z - \alpha \in \mathbb{R}$
+\item $\varphi_{53} :\equiv \forall v_{397}\,\forall v_{398}\,(z \in \mathbb{R} \to v_{397} \in \mathbb{R} \to v_{398} \in \mathbb{R} \to z \leq v_{397} \to z + v_{398} \leq v_{397} + v_{398})$
+\item $\varphi_{54} :\equiv \forall v_{394}\,\forall v_{395}\,(x \in \mathbb{R} \to v_{394} \in \mathbb{R} \to v_{395} \in \mathbb{R} \to x \leq v_{394} \to x + v_{395} \leq v_{394} + v_{395})$
+\item $\varphi_{55} :\equiv z - \alpha = z + -\alpha \to (z - \alpha = z + -\alpha \to z + -\alpha = z - \alpha) \to z + -\alpha = z - \alpha$
+\item $\varphi_{56} :\equiv y - \alpha = y + -\alpha \to (y - \alpha = y + -\alpha \to y + -\alpha = y - \alpha) \to y + -\alpha = y - \alpha$
+\item $\varphi_{57} :\equiv x - \alpha = x + -\alpha \to (x - \alpha = x + -\alpha \to x + -\alpha = x - \alpha) \to x + -\alpha = x - \alpha$
+\item $\varphi_{58} :\equiv \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to x \in \mathbb{R} \to \alpha \in \mathbb{R} \to x - \alpha \in \mathbb{R}$
+\item $\varphi_{59} :\equiv \forall y\,(z \in \mathbb{R} \to y \in \mathbb{R} \to z - y \in \mathbb{R}) \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to z - \alpha \in \mathbb{R}$
+\item $\varphi_{60} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to -\varepsilon < x - \alpha$
+\item $\varphi_{61} :\equiv \varepsilon \in \mathbb{R} \to x \leq z \to z \leq y \to \lvert x - \alpha \rvert < \varepsilon \to \lvert y - \alpha \rvert < \varepsilon \to -\varepsilon < z - \alpha$
+\item $\varphi_{62} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z - \alpha = z_{1} \to z - \alpha = w) \to \forall w\,(y + -\alpha = w \to z - \alpha = y + -\alpha \to z - \alpha = w)$
+\item $\varphi_{63} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to x - \alpha = z_{1} \to x - \alpha = w) \to \forall w\,(z + -\alpha = w \to x - \alpha = z + -\alpha \to x - \alpha = w)$
+\item $\varphi_{64} :\equiv y - \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \lvert y - \alpha \rvert < \varepsilon \to -\varepsilon < y - \alpha \land y - \alpha < \varepsilon$
+\item $\varphi_{65} :\equiv x - \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \lvert x - \alpha \rvert < \varepsilon \to -\varepsilon < x - \alpha \land x - \alpha < \varepsilon$
+\item $\varphi_{66} :\equiv z - \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to -\varepsilon < z - \alpha \to z - \alpha < \varepsilon \to \lvert z - \alpha \rvert < \varepsilon$
+\item $\varphi_{67} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R})$
+\item $\varphi_{68} :\equiv \forall y\,\forall z\,(-\varepsilon < y \to y \leq z \to -\varepsilon < z) \to \forall z\,(-\varepsilon < x - \alpha \to x - \alpha \leq z \to -\varepsilon < z)$
+\item $\varphi_{69} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(z \in \mathbb{R} \to y \in \mathbb{R} \to z - y \in \mathbb{R})$
+\item $\varphi_{70} :\equiv \forall v_{392}\,(y \in \mathbb{R} \to v_{392} \in \mathbb{R} \to y - v_{392} \in \mathbb{R}) \to y \in \mathbb{R} \to \alpha \in \mathbb{R} \to y - \alpha \in \mathbb{R}$
+\item $\varphi_{71} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x - y \in \mathbb{R}) \to \forall y\,(v_{391} \in \mathbb{R} \to y \in \mathbb{R} \to v_{391} - y \in \mathbb{R})$
+\item $\varphi_{72} :\equiv \forall v_{390}\,(y - \alpha \in \mathbb{R} \to v_{390} \in \mathbb{R} \to \lvert y - \alpha \rvert < v_{390} \to -v_{390} < y - \alpha \land y - \alpha < v_{390})$
+\item $\varphi_{73} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z - \alpha < z_{1} \to z - \alpha < w) \to \forall w\,(y + -\alpha = w \to z - \alpha < y + -\alpha \to z - \alpha < w)$
+\item $\varphi_{74} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to x - \alpha < z_{1} \to x - \alpha < w) \to \forall w\,(z + -\alpha = w \to x - \alpha < z + -\alpha \to x - \alpha < w)$
+\item $\varphi_{75} :\equiv \forall y\,(v_{391} \in \mathbb{R} \to y \in \mathbb{R} \to v_{391} - y \in \mathbb{R}) \to v_{391} \in \mathbb{R} \to v_{392} \in \mathbb{R} \to v_{391} - v_{392} \in \mathbb{R}$
+\item $\varphi_{76} :\equiv \forall v_{405}\,(z - \alpha \leq y - \alpha \to y - \alpha < v_{405} \to z - \alpha < v_{405}) \to z - \alpha \leq y - \alpha \to y - \alpha < \varepsilon \to z - \alpha < \varepsilon$
+\item $\varphi_{77} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} = y + -\alpha \to w = y + -\alpha) \to \forall w\,(z + -\alpha = w \to z + -\alpha = y + -\alpha \to w = y + -\alpha)$
+\item $\varphi_{78} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} = z + -\alpha \to w = z + -\alpha) \to \forall w\,(x + -\alpha = w \to x + -\alpha = z + -\alpha \to w = z + -\alpha)$
+\item $\varphi_{79} :\equiv \forall z\,(-\varepsilon < x - \alpha \to x - \alpha \leq z \to -\varepsilon < z) \to -\varepsilon < x - \alpha \to x - \alpha \leq z - \alpha \to -\varepsilon < z - \alpha$
+\item $\varphi_{80} :\equiv \forall w\,(y + -\alpha = w \to z - \alpha = y + -\alpha \to z - \alpha = w) \to y + -\alpha = y - \alpha \to z - \alpha = y + -\alpha \to z - \alpha = y - \alpha$
+\item $\varphi_{81} :\equiv \forall w\,(z + -\alpha = w \to x - \alpha = z + -\alpha \to x - \alpha = w) \to z + -\alpha = z - \alpha \to x - \alpha = z + -\alpha \to x - \alpha = z - \alpha$
+\item $\varphi_{82} :\equiv \varphi_{4} \to \forall v_{405}\,(z - \alpha \leq y - \alpha \to y - \alpha < v_{405} \to z - \alpha < v_{405})$
+\item $\varphi_{83} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} < y + -\alpha \to w < y + -\alpha) \to \forall w\,(z + -\alpha = w \to z + -\alpha < y + -\alpha \to w < y + -\alpha)$
+\item $\varphi_{84} :\equiv \forall z_{1}\,\forall w\,(z_{1} = w \to z_{1} < z + -\alpha \to w < z + -\alpha) \to \forall w\,(x + -\alpha = w \to x + -\alpha < z + -\alpha \to w < z + -\alpha)$
+\item $\varphi_{85} :\equiv \forall w\,(y + -\alpha = w \to z - \alpha < y + -\alpha \to z - \alpha < w) \to y + -\alpha = y - \alpha \to z - \alpha < y + -\alpha \to z - \alpha < y - \alpha$
+\item $\varphi_{86} :\equiv \forall w\,(z + -\alpha = w \to x - \alpha < z + -\alpha \to x - \alpha < w) \to z + -\alpha = z - \alpha \to x - \alpha < z + -\alpha \to x - \alpha < z - \alpha$
+\item $\varphi_{87} :\equiv \forall w\,(z + -\alpha = w \to z + -\alpha = y + -\alpha \to w = y + -\alpha) \to z + -\alpha = z - \alpha \to z + -\alpha = y + -\alpha \to z - \alpha = y + -\alpha$
+\item $\varphi_{88} :\equiv \forall w\,(x + -\alpha = w \to x + -\alpha = z + -\alpha \to w = z + -\alpha) \to x + -\alpha = x - \alpha \to x + -\alpha = z + -\alpha \to x - \alpha = z + -\alpha$
+\item $\varphi_{89} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert < y \to -y < x \land x < y) \to \varphi_{25}$
+\item $\varphi_{90} :\equiv \forall w\,(z + -\alpha = w \to z + -\alpha < y + -\alpha \to w < y + -\alpha) \to z + -\alpha = z - \alpha \to z + -\alpha < y + -\alpha \to z - \alpha < y + -\alpha$
+\item $\varphi_{91} :\equiv \forall w\,(x + -\alpha = w \to x + -\alpha < z + -\alpha \to w < z + -\alpha) \to x + -\alpha = x - \alpha \to x + -\alpha < z + -\alpha \to x - \alpha < z + -\alpha$
+\item $\varphi_{92} :\equiv \varphi_{19} \to z \in \mathbb{R} \to y \in \mathbb{R} \to -\alpha \in \mathbb{R} \to z \leq y \to z + -\alpha \leq y + -\alpha$
+\item $\varphi_{93} :\equiv \varphi_{21} \to x \in \mathbb{R} \to z \in \mathbb{R} \to -\alpha \in \mathbb{R} \to x \leq z \to x + -\alpha \leq z + -\alpha$
+\item $\varphi_{94} :\equiv \forall \alpha\,\forall \varepsilon\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{29})$
+\item $\varphi_{95} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to \lvert x \rvert < y \to -y < x \land x < y) \to \varphi_{47}$
+\item $\varphi_{96} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to -y < x \to x < y \to \lvert x \rvert < y) \to \varphi_{48}$
+\item $\varphi_{97} :\equiv (y + -\alpha = y - \alpha \to z - \alpha = y + -\alpha \to z - \alpha = y - \alpha) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{15}$
+\item $\varphi_{98} :\equiv (z + -\alpha = z - \alpha \to x - \alpha = z + -\alpha \to x - \alpha = z - \alpha) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{16}$
+\item $\varphi_{99} :\equiv (z + -\alpha = z - \alpha \to z + -\alpha = y + -\alpha \to z - \alpha = y + -\alpha) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{30}$
+\item $\varphi_{100} :\equiv (x + -\alpha = x - \alpha \to x + -\alpha = z + -\alpha \to x - \alpha = z + -\alpha) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{31}$
+\item $\varphi_{101} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{41}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{49}$
+\item $\varphi_{102} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{41}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{50}$
+\item $\varphi_{103} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{41}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{51}$
+\item $\varphi_{104} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{41}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{52}$
+\item $\varphi_{105} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{23}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{38}$
+\item $\varphi_{106} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{43}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{44}$
+\item $\varphi_{107} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{24}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{40}$
+\item $\varphi_{108} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{44}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{29}$
+\item $\varphi_{109} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{16}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{61}$
+\item $\varphi_{110} :\equiv (z + -\alpha = z - \alpha \to z + -\alpha < y + -\alpha \to z - \alpha < y + -\alpha) \to \varphi_{99}$
+\item $\varphi_{111} :\equiv (x + -\alpha = x - \alpha \to x + -\alpha < z + -\alpha \to x - \alpha < z + -\alpha) \to \varphi_{100}$
+\item $\varphi_{112} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to x \leq z \to \varphi_{45}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{43}$
+\item $\varphi_{113} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{27}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to x \leq z \to \varphi_{45}$
+\item $\varphi_{114} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{28}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to x \leq z \to \varphi_{46}$
+\item $\varphi_{115} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to x \leq z \to \varphi_{46}) \to x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{60}$
+\item $\varphi_{116} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{30}) \to (y + -\alpha = y - \alpha \to z - \alpha < y + -\alpha \to z - \alpha < y - \alpha) \to \varphi_{97}$
+\item $\varphi_{117} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{31}) \to (z + -\alpha = z - \alpha \to x - \alpha < z + -\alpha \to x - \alpha < z - \alpha) \to \varphi_{98}$
+\item $\varphi_{118} :\equiv (y \in \mathbb{R} \to \alpha \in \mathbb{R} \to y - \alpha \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{36}) \to \varphi_{101}$
+\item $\varphi_{119} :\equiv (x \in \mathbb{R} \to \alpha \in \mathbb{R} \to x - \alpha \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{39}) \to \varphi_{103}$
+\item $\varphi_{120} :\equiv (z \in \mathbb{R} \to \alpha \in \mathbb{R} \to z - \alpha \in \mathbb{R}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{37}) \to \varphi_{104}$
+\item $\varphi_{121} :\equiv z + -\alpha = z - \alpha \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{38}) \to \varphi_{110}$
+\item $\varphi_{122} :\equiv (z - \alpha \leq y - \alpha \to y - \alpha < \varepsilon \to z - \alpha < \varepsilon) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{15}) \to \varphi_{106}$
+\item $\varphi_{123} :\equiv x + -\alpha = x - \alpha \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varepsilon \in \mathbb{R} \to \varphi_{40}) \to \varphi_{111}$
+\item $\varphi_{124} :\equiv (-\varepsilon < x - \alpha \to x - \alpha \leq z - \alpha \to -\varepsilon < z - \alpha) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{60}) \to \varphi_{109}$
+\item $\varphi_{125} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{36}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{50}) \to \varphi_{105}$
+\item $\varphi_{126} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{37}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{50}) \to \varphi_{107}$
+\item $\varphi_{127} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{42}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{61}) \to \varphi_{108}$
+\item $\varphi_{128} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{49}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{42}) \to \varphi_{113}$
+\item $\varphi_{129} :\equiv (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{51}) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{42}) \to \varphi_{114}$
+\item $\varphi_{130} :\equiv (z \in \mathbb{R} \to y \in \mathbb{R} \to -\alpha \in \mathbb{R} \to z \leq y \to z + -\alpha \leq y + -\alpha) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{37}) \to \varphi_{125}$
+\item $\varphi_{131} :\equiv (x \in \mathbb{R} \to z \in \mathbb{R} \to -\alpha \in \mathbb{R} \to x \leq z \to x + -\alpha \leq z + -\alpha) \to (x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to \alpha \in \mathbb{R} \to \varphi_{39}) \to \varphi_{126}$
+\end{abbrevlist}
+\end{fullproof}

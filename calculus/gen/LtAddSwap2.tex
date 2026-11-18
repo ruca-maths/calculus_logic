@@ -1,0 +1,436 @@
+% 自動生成 (prover/build.js): LtAddSwap2  ノード数 180
+\begin{fullproof}{[H4]}{$\forall c\,\forall d\,\forall x\,(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c - d < x)$}{180}\phantomsection\label{tree:LtAddSwap2}
+\noindent$\Pi_{1}$:
+\begin{ptree}
+\AXC{$z = w \to c + -d < z \to c + -d < w$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to c + -d < z \to c + -d < w)$}
+\UIC{$\forall z\,\forall w\,(z = w \to c + -d < z \to c + -d < w)$}
+\AXC{$\forall z\,\forall w\,(z = w \to c + -d < z \to c + -d < w) \to \varphi_{13}$\lbl{A2}}
+\BIC{$\varphi_{13}$}
+\end{ptree}
+\noindent$\Pi_{2}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\forall x \in \mathbb{R}\,(-x \in \mathbb{R}) \to d \in \mathbb{R} \to -d \in \mathbb{R}$\lbl{A2}}
+\BIC{$d \in \mathbb{R} \to -d \in \mathbb{R}$}
+\AXC{$(d \in \mathbb{R} \to -d \in \mathbb{R}) \to \varphi_{42}$\lbl{A1}}
+\BIC{$\varphi_{42}$}
+\end{ptree}
+\noindent$\Pi_{3}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{2}}{\vdots}$}\noLine
+\UIC{$\varphi_{42}$}
+\BIC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to -d \in \mathbb{R}$}
+\end{ptree}
+\noindent$\Pi_{4}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y \in \mathbb{R})$\lbl{(R1)}}
+\AXC{$\varphi_{32}$\lbl{A2}}
+\BIC{$\forall y\,(d \in \mathbb{R} \to y \in \mathbb{R} \to d + y \in \mathbb{R})$}
+\AXC{$\varphi_{30}$\lbl{A2}}
+\BIC{$d \in \mathbb{R} \to x \in \mathbb{R} \to d + x \in \mathbb{R}$}
+\AXC{$\varphi_{49}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}) \to \varphi_{43}$}
+\end{ptree}
+\noindent$\Pi_{5}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{4}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}) \to \varphi_{43}$}
+\BIC{$\varphi_{43}$}
+\end{ptree}
+\noindent$\Pi_{6}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c \in \mathbb{R}$\lbl{A1}}
+\AXC{$\varphi_{9}$\lbl{(R14)}}
+\AXC{$\varphi_{9} \to \varphi_{7}$\lbl{A2}}
+\BIC{$\varphi_{7}$}
+\AXC{$\varphi_{7} \to \varphi_{24}$\lbl{A2}}
+\BIC{$\varphi_{24}$}
+\AXC{$\varphi_{24} \to \varphi_{33}$\lbl{A2}}
+\BIC{$\varphi_{33}$}
+\AXC{$\varphi_{57}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c \in \mathbb{R}) \to \varphi_{55}$}
+\BIC{$\varphi_{55}$}
+\end{ptree}
+\noindent$\Pi_{7}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to -d \in \mathbb{R}$}
+\AXC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{5}}{\vdots}$}\noLine
+\UIC{$\varphi_{43}$}
+\BIC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + x \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{6}}{\vdots}$}\noLine
+\UIC{$\varphi_{55}$}
+\BIC{$\varphi_{47}$}
+\BIC{$(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c < d + x) \to \varphi_{25}$}
+\end{ptree}
+\noindent$\Pi_{8}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c < d + x$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{7}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c < d + x) \to \varphi_{25}$}
+\BIC{$\varphi_{25}$}
+\end{ptree}
+\noindent$\Pi_{9}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(d + x + -d = y \to y = z \to d + x + -d = z)$}
+\AXC{$\varphi_{35}$\lbl{A2}}
+\BIC{$\forall z\,(d + x + -d = x + 0 \to x + 0 = z \to d + x + -d = z)$}
+\AXC{$\varphi_{36}$\lbl{A2}}
+\BIC{$d + x + -d = x + 0 \to x + 0 = x \to d + x + -d = x$}
+\end{ptree}
+\noindent$\Pi_{10}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x + 0 = x)$\lbl{(R4)}}
+\AXC{$\forall x \in \mathbb{R}\,(x + 0 = x) \to x \in \mathbb{R} \to x + 0 = x$\lbl{A2}}
+\BIC{$x \in \mathbb{R} \to x + 0 = x$}
+\AXC{$(x \in \mathbb{R} \to x + 0 = x) \to \varphi_{38}$\lbl{A1}}
+\BIC{$\varphi_{38}$}
+\end{ptree}
+\noindent$\Pi_{11}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(d + x + -d = y \to y = z \to d + x + -d = z)$}
+\end{ptree}
+\noindent$\Pi_{12}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{11}}{\vdots}$}\noLine
+\UIC{$\forall y\,\forall z\,(d + x + -d = y \to y = z \to d + x + -d = z)$}
+\AXC{$\forall y\,\forall z\,(d + x + -d = y \to y = z \to d + x + -d = z) \to \varphi_{19}$\lbl{A2}}
+\BIC{$\varphi_{19}$}
+\AXC{$\varphi_{19} \to \varphi_{27}$\lbl{A2}}
+\BIC{$\varphi_{27}$}
+\end{ptree}
+\noindent$\Pi_{13}$:
+\begin{ptree}
+\AXC{$\forall x \in \mathbb{R}\,(x + -x = 0)$\lbl{(R5)}}
+\AXC{$\forall x \in \mathbb{R}\,(x + -x = 0) \to d \in \mathbb{R} \to d + -d = 0$\lbl{A2}}
+\BIC{$d \in \mathbb{R} \to d + -d = 0$}
+\AXC{$(d \in \mathbb{R} \to d + -d = 0) \to \varphi_{40}$\lbl{A1}}
+\BIC{$\varphi_{40}$}
+\end{ptree}
+\noindent$\Pi_{14}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{13}}{\vdots}$}\noLine
+\UIC{$\varphi_{40}$}
+\BIC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + -d = 0$}
+\AXC{$\varphi_{50}$\lbl{A1}}
+\BIC{$x + (d + -d) = x + (d + -d) \to \varphi_{14} \to \varphi_{15}$}
+\end{ptree}
+\noindent$\Pi_{15}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to x + (d + -d) = x + (d + -d)$\lbl{A2}}
+\BIC{$x + (d + -d) = x + (d + -d)$}
+\AXC{$\stackrel{\Pi_{14}}{\vdots}$}\noLine
+\UIC{$x + (d + -d) = x + (d + -d) \to \varphi_{14} \to \varphi_{15}$}
+\BIC{$\varphi_{14} \to \varphi_{15}$}
+\end{ptree}
+\noindent$\Pi_{16}$:
+\begin{ptree}
+\AXC{$z = w \to x + (d + -d) = x + z \to x + (d + -d) = x + w$\lbl{A6}}
+\UIC{$\varphi_{1}$}
+\UIC{$\forall z\,(\varphi_{1})$}
+\AXC{$\forall z\,(\varphi_{1}) \to \varphi_{20}$\lbl{A2}}
+\BIC{$\varphi_{20}$}
+\AXC{$\varphi_{20} \to \varphi_{14}$\lbl{A2}}
+\BIC{$\varphi_{14}$}
+\AXC{$\stackrel{\Pi_{15}}{\vdots}$}\noLine
+\UIC{$\varphi_{14} \to \varphi_{15}$}
+\BIC{$\varphi_{15}$}
+\end{ptree}
+\noindent$\Pi_{17}$:
+\begin{ptree}
+\AXC{$y = z \to x = y \to x = z$\lbl{A6}}
+\AXC{$(y = z \to x = y \to x = z) \to x = y \to y = z \to x = z$\lbl{A1}}
+\BIC{$x = y \to y = z \to x = z$}
+\UIC{$\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\UIC{$\forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z)$}
+\AXC{$\varphi_{18}$\lbl{A2}}
+\BIC{$\forall y\,\forall z\,(d + x + -d = y \to y = z \to d + x + -d = z)$}
+\end{ptree}
+\noindent$\Pi_{18}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{17}}{\vdots}$}\noLine
+\UIC{$\forall y\,\forall z\,(d + x + -d = y \to y = z \to d + x + -d = z)$}
+\AXC{$\forall y\,\forall z\,(d + x + -d = y \to y = z \to d + x + -d = z) \to \varphi_{21}$\lbl{A2}}
+\BIC{$\varphi_{21}$}
+\end{ptree}
+\noindent$\Pi_{19}$:
+\begin{ptree}
+\AXC{$\forall x\,(\varphi_{4})$\lbl{(R2)}}
+\AXC{$\forall x\,(\varphi_{4}) \to \varphi_{4}$\lbl{A2}}
+\BIC{$\varphi_{4}$}
+\AXC{$\varphi_{4} \to \varphi_{3}$\lbl{A2}}
+\BIC{$\varphi_{3}$}
+\AXC{$\varphi_{3} \to \varphi_{17}$\lbl{A2}}
+\BIC{$\varphi_{17}$}
+\AXC{$\varphi_{17} \to \varphi_{54}$\lbl{A1}}
+\BIC{$\varphi_{54}$}
+\end{ptree}
+\noindent$\Pi_{20}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}$\lbl{A1}}
+\AXC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{19}}{\vdots}$}\noLine
+\UIC{$\varphi_{54}$}
+\BIC{$(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}) \to \varphi_{45}$}
+\BIC{$\varphi_{45}$}
+\end{ptree}
+\noindent$\Pi_{21}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x)$\lbl{(R3)}}
+\AXC{$\varphi_{31}$\lbl{A2}}
+\BIC{$\forall y\,(d \in \mathbb{R} \to y \in \mathbb{R} \to d + y = y + d)$}
+\AXC{$\varphi_{26}$\lbl{A2}}
+\BIC{$d \in \mathbb{R} \to x \in \mathbb{R} \to d + x = x + d$}
+\AXC{$\varphi_{48}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}) \to \varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{22}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{21}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}) \to \varphi_{41}$}
+\BIC{$\varphi_{41}$}
+\end{ptree}
+\noindent$\Pi_{23}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{22}}{\vdots}$}\noLine
+\UIC{$\varphi_{41}$}
+\BIC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + x = x + d$}
+\AXC{$\varphi_{52}$\lbl{A1}}
+\BIC{$d + x + -d = d + x + -d \to \varphi_{28} \to \varphi_{29}$}
+\end{ptree}
+\noindent$\Pi_{24}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\UIC{$\forall x\,(x = x)$}
+\AXC{$\forall x\,(x = x) \to d + x + -d = d + x + -d$\lbl{A2}}
+\BIC{$d + x + -d = d + x + -d$}
+\AXC{$\stackrel{\Pi_{23}}{\vdots}$}\noLine
+\UIC{$d + x + -d = d + x + -d \to \varphi_{28} \to \varphi_{29}$}
+\BIC{$\varphi_{28} \to \varphi_{29}$}
+\end{ptree}
+\noindent$\Pi_{25}$:
+\begin{ptree}
+\AXC{$z = w \to d + x + -d = z + -d \to d + x + -d = w + -d$\lbl{A6}}
+\UIC{$\varphi_{5}$}
+\UIC{$\forall z\,(\varphi_{5})$}
+\AXC{$\forall z\,(\varphi_{5}) \to \varphi_{22}$\lbl{A2}}
+\BIC{$\varphi_{22}$}
+\AXC{$\varphi_{22} \to \varphi_{28}$\lbl{A2}}
+\BIC{$\varphi_{28}$}
+\AXC{$\stackrel{\Pi_{24}}{\vdots}$}\noLine
+\UIC{$\varphi_{28} \to \varphi_{29}$}
+\BIC{$\varphi_{29}$}
+\AXC{$\varphi_{29} \to \varphi_{53}$\lbl{A1}}
+\BIC{$\varphi_{53}$}
+\end{ptree}
+\noindent$\Pi_{26}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{18}}{\vdots}$}\noLine
+\UIC{$\varphi_{21}$}
+\AXC{$\varphi_{21} \to d + x + -d = x + d + -d \to \varphi_{6}$\lbl{A2}}
+\BIC{$d + x + -d = x + d + -d \to \varphi_{6}$}
+\AXC{$\stackrel{\Pi_{3}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to -d \in \mathbb{R}$}
+\AXC{$\stackrel{\Pi_{20}}{\vdots}$}\noLine
+\UIC{$\varphi_{45}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{10}$}
+\AXC{$\stackrel{\Pi_{25}}{\vdots}$}\noLine
+\UIC{$\varphi_{53}$}
+\BIC{$(d + x + -d = x + d + -d \to \varphi_{6}) \to c \in \mathbb{R} \to \varphi_{11}$}
+\BIC{$c \in \mathbb{R} \to \varphi_{11}$}
+\end{ptree}
+\noindent$\Pi_{27}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{12}}{\vdots}$}\noLine
+\UIC{$\varphi_{27}$}
+\AXC{$\stackrel{\Pi_{16}}{\vdots}$}\noLine
+\UIC{$\varphi_{15}$}
+\AXC{$\stackrel{\Pi_{26}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to \varphi_{11}$}
+\AXC{$(c \in \mathbb{R} \to \varphi_{11}) \to \varphi_{15} \to \varphi_{27} \to \varphi_{16}$\lbl{A1}}
+\BIC{$\varphi_{15} \to \varphi_{27} \to \varphi_{16}$}
+\BIC{$\varphi_{27} \to \varphi_{16}$}
+\BIC{$\varphi_{16}$}
+\AXC{$\varphi_{51}$\lbl{A1}}
+\BIC{$(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x + 0 = x) \to \varphi_{39}$}
+\end{ptree}
+\noindent$\Pi_{28}$:
+\begin{ptree}
+\AXC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x \in \mathbb{R}$\lbl{A1}}
+\AXC{$\stackrel{\Pi_{10}}{\vdots}$}\noLine
+\UIC{$\varphi_{38}$}
+\BIC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x + 0 = x$}
+\AXC{$\stackrel{\Pi_{27}}{\vdots}$}\noLine
+\UIC{$(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x + 0 = x) \to \varphi_{39}$}
+\BIC{$\varphi_{39}$}
+\end{ptree}
+\noindent$\Pi_{29}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{8}}{\vdots}$}\noLine
+\UIC{$\varphi_{25}$}
+\AXC{$\stackrel{\Pi_{9}}{\vdots}$}\noLine
+\UIC{$d + x + -d = x + 0 \to x + 0 = x \to d + x + -d = x$}
+\AXC{$\stackrel{\Pi_{28}}{\vdots}$}\noLine
+\UIC{$\varphi_{39}$}
+\BIC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + x + -d = x$}
+\AXC{$\varphi_{56}$\lbl{A1}}
+\BIC{$\varphi_{25} \to \varphi_{44}$}
+\BIC{$\varphi_{44}$}
+\end{ptree}
+\noindent$\Pi_{30}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{1}}{\vdots}$}\noLine
+\UIC{$\varphi_{13}$}
+\AXC{$\varphi_{13} \to d + x + -d = x \to c + -d < d + x + -d \to c + -d < x$\lbl{A2}}
+\BIC{$d + x + -d = x \to c + -d < d + x + -d \to c + -d < x$}
+\AXC{$\stackrel{\Pi_{29}}{\vdots}$}\noLine
+\UIC{$\varphi_{44}$}
+\BIC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c + -d < x$}
+\end{ptree}
+\noindent$\Pi_{31}$:
+\begin{ptree}
+\AXC{$x = x$\lbl{A5}}
+\AXC{$x = y \to x = x \to y = x$\lbl{A6}}
+\AXC{$(x = y \to x = x \to y = x) \to x = x \to x = y \to y = x$\lbl{A1}}
+\BIC{$x = x \to x = y \to y = x$}
+\BIC{$x = y \to y = x$}
+\UIC{$\forall y\,(x = y \to y = x)$}
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\end{ptree}
+\noindent$\Pi_{32}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{31}}{\vdots}$}\noLine
+\UIC{$\forall x\,\forall y\,(x = y \to y = x)$}
+\AXC{$\forall x\,\forall y\,(x = y \to y = x) \to \forall y\,(c - d = y \to y = c - d)$\lbl{A2}}
+\BIC{$\forall y\,(c - d = y \to y = c - d)$}
+\AXC{$\varphi_{2}$\lbl{A2}}
+\BIC{$c - d = c + -d \to c + -d = c - d$}
+\end{ptree}
+\noindent$\Pi_{33}$:
+\begin{ptree}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y)$\lbl{Def$-$}}
+\AXC{$\forall x\,\forall y\,(x - y = x + -y) \to \forall y\,(c - y = c + -y)$\lbl{A2}}
+\BIC{$\forall y\,(c - y = c + -y)$}
+\end{ptree}
+\noindent$\Pi_{34}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{32}}{\vdots}$}\noLine
+\UIC{$c - d = c + -d \to c + -d = c - d$}
+\AXC{$\stackrel{\Pi_{33}}{\vdots}$}\noLine
+\UIC{$\forall y\,(c - y = c + -y)$}
+\AXC{$\forall y\,(c - y = c + -y) \to c - d = c + -d$\lbl{A2}}
+\BIC{$c - d = c + -d$}
+\AXC{$\varphi_{23}$\lbl{A1}}
+\BIC{$(c - d = c + -d \to c + -d = c - d) \to c + -d = c - d$}
+\BIC{$c + -d = c - d$}
+\end{ptree}
+\noindent$\Pi_{35}$:
+\begin{ptree}
+\AXC{$\stackrel{\Pi_{30}}{\vdots}$}\noLine
+\UIC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c + -d < x$}
+\AXC{$\stackrel{\Pi_{34}}{\vdots}$}\noLine
+\UIC{$c + -d = c - d$}
+\AXC{$c + -d = c - d \to \varphi_{46}$\lbl{A1}}
+\BIC{$\varphi_{46}$}
+\BIC{$\varphi_{37}$}
+\end{ptree}
+\noindent 主木:
+\begin{ptree}
+\AXC{$z = w \to z < x \to w < x$\lbl{A6}}
+\UIC{$\forall w\,(z = w \to z < x \to w < x)$}
+\UIC{$\forall z\,\forall w\,(z = w \to z < x \to w < x)$}
+\AXC{$\varphi_{12}$\lbl{A2}}
+\BIC{$\forall w\,(c + -d = w \to c + -d < x \to w < x)$}
+\AXC{$\varphi_{34}$\lbl{A2}}
+\BIC{$c + -d = c - d \to c + -d < x \to c - d < x$}
+\AXC{$\stackrel{\Pi_{35}}{\vdots}$}\noLine
+\UIC{$\varphi_{37}$}
+\BIC{$c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c - d < x$}
+\UIC{$\forall x\,(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c - d < x)$}
+\UIC{$\varphi_{8}$}
+\UIC{$\forall c\,(\varphi_{8})$}
+\end{ptree}
+\begin{abbrevlist}
+\item $\varphi_{1} :\equiv \forall w\,(z = w \to x + (d + -d) = x + z \to x + (d + -d) = x + w)$
+\item $\varphi_{2} :\equiv \forall y\,(c - d = y \to y = c - d) \to c - d = c + -d \to c + -d = c - d$
+\item $\varphi_{3} :\equiv \forall z\,(x \in \mathbb{R} \to d \in \mathbb{R} \to z \in \mathbb{R} \to x + d + z = x + (d + z))$
+\item $\varphi_{4} :\equiv \forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x + y + z = x + (y + z))$
+\item $\varphi_{5} :\equiv \forall w\,(z = w \to d + x + -d = z + -d \to d + x + -d = w + -d)$
+\item $\varphi_{6} :\equiv x + d + -d = x + (d + -d) \to d + x + -d = x + (d + -d)$
+\item $\varphi_{7} :\equiv \forall y\,\forall z\,(c \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to c < y \to c + z < y + z)$
+\item $\varphi_{8} :\equiv \forall d\,\forall x\,(c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c - d < x)$
+\item $\varphi_{9} :\equiv \forall x\,\forall y\,\forall z\,(x \in \mathbb{R} \to y \in \mathbb{R} \to z \in \mathbb{R} \to x < y \to x + z < y + z)$
+\item $\varphi_{10} :\equiv d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x + d + -d = x + (d + -d)$
+\item $\varphi_{11} :\equiv d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + x + -d = x + (d + -d)$
+\item $\varphi_{12} :\equiv \forall z\,\forall w\,(z = w \to z < x \to w < x) \to \forall w\,(c + -d = w \to c + -d < x \to w < x)$
+\item $\varphi_{13} :\equiv \forall w\,(d + x + -d = w \to c + -d < d + x + -d \to c + -d < w)$
+\item $\varphi_{14} :\equiv d + -d = 0 \to x + (d + -d) = x + (d + -d) \to x + (d + -d) = x + 0$
+\item $\varphi_{15} :\equiv c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x + (d + -d) = x + 0$
+\item $\varphi_{16} :\equiv c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + x + -d = x + 0$
+\item $\varphi_{17} :\equiv x \in \mathbb{R} \to d \in \mathbb{R} \to -d \in \mathbb{R} \to x + d + -d = x + (d + -d)$
+\item $\varphi_{18} :\equiv \forall x\,\forall y\,\forall z\,(x = y \to y = z \to x = z) \to \forall y\,\forall z\,(d + x + -d = y \to y = z \to d + x + -d = z)$
+\item $\varphi_{19} :\equiv \forall z\,(d + x + -d = x + (d + -d) \to x + (d + -d) = z \to d + x + -d = z)$
+\item $\varphi_{20} :\equiv \forall w\,(d + -d = w \to x + (d + -d) = x + (d + -d) \to x + (d + -d) = x + w)$
+\item $\varphi_{21} :\equiv \forall z\,(d + x + -d = x + d + -d \to x + d + -d = z \to d + x + -d = z)$
+\item $\varphi_{22} :\equiv \forall w\,(d + x = w \to d + x + -d = d + x + -d \to d + x + -d = w + -d)$
+\item $\varphi_{23} :\equiv c - d = c + -d \to (c - d = c + -d \to c + -d = c - d) \to c + -d = c - d$
+\item $\varphi_{24} :\equiv \forall z\,(c \in \mathbb{R} \to d + x \in \mathbb{R} \to z \in \mathbb{R} \to c < d + x \to c + z < d + x + z)$
+\item $\varphi_{25} :\equiv c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c + -d < d + x + -d$
+\item $\varphi_{26} :\equiv \forall y\,(d \in \mathbb{R} \to y \in \mathbb{R} \to d + y = y + d) \to d \in \mathbb{R} \to x \in \mathbb{R} \to d + x = x + d$
+\item $\varphi_{27} :\equiv d + x + -d = x + (d + -d) \to x + (d + -d) = x + 0 \to d + x + -d = x + 0$
+\item $\varphi_{28} :\equiv d + x = x + d \to d + x + -d = d + x + -d \to d + x + -d = x + d + -d$
+\item $\varphi_{29} :\equiv c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + x + -d = x + d + -d$
+\item $\varphi_{30} :\equiv \forall y\,(d \in \mathbb{R} \to y \in \mathbb{R} \to d + y \in \mathbb{R}) \to d \in \mathbb{R} \to x \in \mathbb{R} \to d + x \in \mathbb{R}$
+\item $\varphi_{31} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y = y + x) \to \forall y\,(d \in \mathbb{R} \to y \in \mathbb{R} \to d + y = y + d)$
+\item $\varphi_{32} :\equiv \forall x\,\forall y\,(x \in \mathbb{R} \to y \in \mathbb{R} \to x + y \in \mathbb{R}) \to \forall y\,(d \in \mathbb{R} \to y \in \mathbb{R} \to d + y \in \mathbb{R})$
+\item $\varphi_{33} :\equiv c \in \mathbb{R} \to d + x \in \mathbb{R} \to -d \in \mathbb{R} \to c < d + x \to c + -d < d + x + -d$
+\item $\varphi_{34} :\equiv \forall w\,(c + -d = w \to c + -d < x \to w < x) \to c + -d = c - d \to c + -d < x \to c - d < x$
+\item $\varphi_{35} :\equiv \forall y\,\forall z\,(d + x + -d = y \to y = z \to d + x + -d = z) \to \forall z\,(d + x + -d = x + 0 \to x + 0 = z \to d + x + -d = z)$
+\item $\varphi_{36} :\equiv \forall z\,(d + x + -d = x + 0 \to x + 0 = z \to d + x + -d = z) \to d + x + -d = x + 0 \to x + 0 = x \to d + x + -d = x$
+\item $\varphi_{37} :\equiv (c + -d = c - d \to c + -d < x \to c - d < x) \to c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c - d < x$
+\item $\varphi_{38} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x \in \mathbb{R}) \to c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x + 0 = x$
+\item $\varphi_{39} :\equiv (d + x + -d = x + 0 \to x + 0 = x \to d + x + -d = x) \to c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + x + -d = x$
+\item $\varphi_{40} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}) \to c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + -d = 0$
+\item $\varphi_{41} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x \in \mathbb{R}) \to c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + x = x + d$
+\item $\varphi_{42} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}) \to c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to -d \in \mathbb{R}$
+\item $\varphi_{43} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x \in \mathbb{R}) \to c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + x \in \mathbb{R}$
+\item $\varphi_{44} :\equiv (d + x + -d = x \to c + -d < d + x + -d \to c + -d < x) \to c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c + -d < x$
+\item $\varphi_{45} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to -d \in \mathbb{R}) \to c \in \mathbb{R} \to \varphi_{10}$
+\item $\varphi_{46} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c + -d < x) \to \varphi_{37}$
+\item $\varphi_{47} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to -d \in \mathbb{R}) \to (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c < d + x) \to \varphi_{25}$
+\item $\varphi_{48} :\equiv (d \in \mathbb{R} \to x \in \mathbb{R} \to d + x = x + d) \to (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}) \to \varphi_{41}$
+\item $\varphi_{49} :\equiv (d \in \mathbb{R} \to x \in \mathbb{R} \to d + x \in \mathbb{R}) \to (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}) \to \varphi_{43}$
+\item $\varphi_{50} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + -d = 0) \to x + (d + -d) = x + (d + -d) \to \varphi_{14} \to \varphi_{15}$
+\item $\varphi_{51} :\equiv \varphi_{16} \to (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x + 0 = x) \to \varphi_{39}$
+\item $\varphi_{52} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + x = x + d) \to d + x + -d = d + x + -d \to \varphi_{28} \to \varphi_{29}$
+\item $\varphi_{53} :\equiv (c \in \mathbb{R} \to \varphi_{10}) \to (d + x + -d = x + d + -d \to \varphi_{6}) \to c \in \mathbb{R} \to \varphi_{11}$
+\item $\varphi_{54} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to x \in \mathbb{R}) \to (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d \in \mathbb{R}) \to \varphi_{45}$
+\item $\varphi_{55} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + x \in \mathbb{R}) \to \varphi_{47}$
+\item $\varphi_{56} :\equiv (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to d + x + -d = x) \to \varphi_{25} \to \varphi_{44}$
+\item $\varphi_{57} :\equiv \varphi_{33} \to (c \in \mathbb{R} \to d \in \mathbb{R} \to x \in \mathbb{R} \to c < d + x \to c \in \mathbb{R}) \to \varphi_{55}$
+\end{abbrevlist}
+\end{fullproof}
